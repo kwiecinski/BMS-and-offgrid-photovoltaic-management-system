@@ -672,6 +672,44 @@
 		)
 	)
 	(sheet
+		(at 146.05 20.32)
+		(size 27.432 18.288)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6")
+		(property "Sheetname" "Shift register for 4x40 display"
+			(at 146.05 19.6084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "shift_register_display.kicad_sch"
+			(at 146.05 39.1926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 109.855 19.685)
 		(size 24.765 17.145)
 		(fields_autoplaced yes)

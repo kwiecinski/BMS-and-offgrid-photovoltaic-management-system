@@ -491,7 +491,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "dc-line-display.kicad_pro",
+    "filename": "Balancer+ESP.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -637,6 +637,14 @@
     [
       "555ba40f-9abb-4b99-82c6-07e888fda9fd",
       "Root"
+    ],
+    [
+      "a8064d67-baba-4afe-84af-1260f43bc5ee",
+      "ESP32_Measurment_Board"
+    ],
+    [
+      "082c19de-9087-42ca-b6f1-cdab78bf87aa",
+      "BMS"
     ]
   ],
   "text_variables": {}
