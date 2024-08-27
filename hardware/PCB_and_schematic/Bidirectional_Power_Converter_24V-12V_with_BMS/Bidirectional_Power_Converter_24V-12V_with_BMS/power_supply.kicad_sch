@@ -5092,7 +5092,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 55.88) (xy 233.68 55.88)
+			(xy 224.79 55.88) (xy 231.14 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5329,7 +5329,7 @@
 	)
 	(global_label "BOOST_OUT_VOLT_FB"
 		(shape input)
-		(at 233.68 55.88 0)
+		(at 231.14 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5340,7 +5340,7 @@
 		)
 		(uuid "ea8d67ee-15f4-4f01-b8f4-af499feb51ac")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 256.5541 55.88 0)
+			(at 254.0141 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6640,7 +6640,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LM358")
-		(at 238.76 137.16 180)
+		(at 281.94 90.17 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6649,25 +6649,27 @@
 		(fields_autoplaced yes)
 		(uuid "73683957-d54c-4b5c-a2aa-cdea9a11a477")
 		(property "Reference" "U5"
-			(at 242.57 135.8899 0)
+			(at 278.13 91.4401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Value" "LM358"
-			(at 242.57 138.4299 0)
+			(at 278.13 88.9001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 137.16 0)
+			(at 281.94 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6676,7 +6678,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
-			(at 238.76 137.16 0)
+			(at 281.94 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6685,7 +6687,7 @@
 			)
 		)
 		(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
-			(at 238.76 137.16 0)
+			(at 281.94 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7733,28 +7735,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "75377a73-aa1b-4cf2-b0fb-13bcfc5c75b8")
+			(uuid "75377a73-aa1b-4cf2-b0fb-13bcfc5c75b9")
 		)
 		(pin "8"
-			(uuid "75b1ea03-a443-4345-b2a9-2ed16c6e065f")
+			(uuid "75b1ea03-a443-4345-b2a9-2ed16c6e0660")
 		)
 		(pin "1"
-			(uuid "fa832bb4-a3bc-4460-bfd3-3f3fa289f86e")
+			(uuid "fa832bb4-a3bc-4460-bfd3-3f3fa289f86f")
 		)
 		(pin "5"
-			(uuid "de242b37-265b-48a6-8e0b-56fab9b679b6")
+			(uuid "de242b37-265b-48a6-8e0b-56fab9b679b7")
 		)
 		(pin "2"
-			(uuid "d3f59893-c0b5-4808-b883-b6aecfbd8e99")
+			(uuid "d3f59893-c0b5-4808-b883-b6aecfbd8e9a")
 		)
 		(pin "3"
-			(uuid "be309bb1-c747-41a2-aa06-56182c027326")
+			(uuid "be309bb1-c747-41a2-aa06-56182c027327")
 		)
 		(pin "4"
-			(uuid "11b55b20-e6cf-4246-b256-ff9709d65b03")
+			(uuid "11b55b20-e6cf-4246-b256-ff9709d65b04")
 		)
 		(pin "7"
-			(uuid "dc72903d-4499-498e-9162-43022da3bdf7")
+			(uuid "dc72903d-4499-498e-9162-43022da3bdf8")
 		)
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
@@ -7767,7 +7769,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LM358")
-		(at 209.55 139.7 180)
+		(at 279.4 90.17 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7776,7 +7778,7 @@
 		(fields_autoplaced yes)
 		(uuid "bef1859c-3861-4b36-b0f4-92674cba08bd")
 		(property "Reference" "U5"
-			(at 209.55 129.54 0)
+			(at 279.4 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7784,7 +7786,7 @@
 			)
 		)
 		(property "Value" "LM358"
-			(at 209.55 132.08 0)
+			(at 279.4 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7792,7 +7794,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 209.55 139.7 0)
+			(at 279.4 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7801,7 +7803,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf"
-			(at 209.55 139.7 0)
+			(at 279.4 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7810,7 +7812,7 @@
 			)
 		)
 		(property "Description" "Low-Power, Dual Operational Amplifiers, DIP-8/SOIC-8/TO-99-8"
-			(at 209.55 139.7 0)
+			(at 279.4 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7819,28 +7821,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "75377a73-aa1b-4cf2-b0fb-13bcfc5c75b8")
+			(uuid "75377a73-aa1b-4cf2-b0fb-13bcfc5c75ba")
 		)
 		(pin "8"
-			(uuid "75b1ea03-a443-4345-b2a9-2ed16c6e065f")
+			(uuid "75b1ea03-a443-4345-b2a9-2ed16c6e0661")
 		)
 		(pin "1"
-			(uuid "fa832bb4-a3bc-4460-bfd3-3f3fa289f86e")
+			(uuid "fa832bb4-a3bc-4460-bfd3-3f3fa289f870")
 		)
 		(pin "5"
-			(uuid "de242b37-265b-48a6-8e0b-56fab9b679b6")
+			(uuid "de242b37-265b-48a6-8e0b-56fab9b679b8")
 		)
 		(pin "2"
-			(uuid "d3f59893-c0b5-4808-b883-b6aecfbd8e99")
+			(uuid "d3f59893-c0b5-4808-b883-b6aecfbd8e9b")
 		)
 		(pin "3"
-			(uuid "be309bb1-c747-41a2-aa06-56182c027326")
+			(uuid "be309bb1-c747-41a2-aa06-56182c027328")
 		)
 		(pin "4"
-			(uuid "11b55b20-e6cf-4246-b256-ff9709d65b03")
+			(uuid "11b55b20-e6cf-4246-b256-ff9709d65b05")
 		)
 		(pin "7"
-			(uuid "dc72903d-4499-498e-9162-43022da3bdf7")
+			(uuid "dc72903d-4499-498e-9162-43022da3bdf9")
 		)
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
