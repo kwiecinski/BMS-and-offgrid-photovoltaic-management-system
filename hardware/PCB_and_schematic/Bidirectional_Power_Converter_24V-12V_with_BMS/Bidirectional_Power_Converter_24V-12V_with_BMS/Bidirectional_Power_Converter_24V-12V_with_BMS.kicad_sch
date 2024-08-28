@@ -427,18 +427,6 @@
 		(uuid b1d2615c-e0d3-493a-8ac5-1f9557a46df2)
 	)
 	(rectangle
-		(start 104.14 83.058)
-		(end 146.558 110.49)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid f6dc029a-4561-49ec-b403-df04ac44c193)
-	)
-	(rectangle
 		(start 242.824 102.87)
 		(end 244.856 104.394)
 		(stroke
@@ -710,8 +698,8 @@
 		)
 	)
 	(sheet
-		(at 109.855 19.685)
-		(size 24.765 17.145)
+		(at 105.029 79.883)
+		(size 40.513 23.749)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -722,7 +710,7 @@
 		)
 		(uuid "81802b0c-d137-483c-9072-3d8784bb4773")
 		(property "Sheetname" "Bidirectional Power Supply"
-			(at 109.855 18.9734 0)
+			(at 105.029 79.1714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -731,7 +719,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 109.855 37.4146 0)
+			(at 105.029 104.2166 0)
 			(effects
 				(font
 					(size 1.27 1.27)
