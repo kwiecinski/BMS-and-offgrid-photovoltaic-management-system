@@ -1,0 +1,38 @@
+.subckt ncell_leadacid_sepgnd in+ in- soc params:
++ a=1.33e-01 b=8.79e-01 c=8.99e-07 d=8.95e-01 e=-1.02 f=-1.10e-03 g=1.68
++ capah=2.78u
++ Rsoc=1Meg
++ soc=80
++ Rdis=6m Rchg=200m
++ vclip=2.38
++ n=6 
+
+* Models
+.model Db D(Ron=1m Roff=1G Vfwd=1m  epsilon=1u revepsilon=1u N=0.001)
+
+* Functions
+.func vcell(x)  {(a*log(b*x) + c*d**(e*x) + f*x +g)*n}
+
+*internal parameters
+.param Capa_soc={3600*{CAPAH}/(-{Rsoc}*log(1-100/{Rsoc}))}
+.param nvclip={n*vclip}
+
+* Subcircuit Body
+Db1 0 SOC Db
+Db2 SOC N005 Db
+Csoc SOC 0 {Capa_soc}
+Rsoc SOC 0 {Rsoc}
+Vsoc N005 0 110
+B1 N004 in- V=vcell(V(SOC))
+V1 N001 N004 0
+Ddischg N001 N002 Db
+Dchg N003 N001 Db
+Db3 in- N001 Db
+Rdischg in+ N002 {Rdis}
+Rchg in+ N003 {Rchg}
+Db4 N001 N006 Db
+Voverchg N006 in- {nvclip}
+B2 0 SOC I=I(V1)
+.ends ncell_leadacid_sepgnd
+
+

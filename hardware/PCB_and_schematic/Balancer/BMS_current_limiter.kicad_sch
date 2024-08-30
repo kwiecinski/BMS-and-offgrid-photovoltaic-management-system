@@ -2308,6 +2308,12 @@
 		(uuid "0156bd02-ff65-4d13-a9c7-34a62984f2a0")
 	)
 	(junction
+		(at 190.5 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0210a601-fda3-42c7-a1f4-da3f8cc3259d")
+	)
+	(junction
 		(at 149.86 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2320,10 +2326,22 @@
 		(uuid "0dc574c8-7408-44e6-b373-9b3cbfba54f2")
 	)
 	(junction
+		(at 107.95 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f65d4b4-6d06-45a9-8a3c-20e4807fa00e")
+	)
+	(junction
 		(at 77.47 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "24836b38-6a0d-4c17-9adb-0404e962b6af")
+	)
+	(junction
+		(at 181.61 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28aaae63-aa24-4c10-9c2b-7720cf22dee6")
 	)
 	(junction
 		(at 54.61 105.41)
@@ -2350,7 +2368,7 @@
 		(uuid "37cc8f09-a0cc-4af7-a3f6-b3440975946b")
 	)
 	(junction
-		(at 236.22 121.92)
+		(at 236.22 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ab81521-10c2-42c3-9175-46ce76017a30")
@@ -2360,6 +2378,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d5f4108-0fc2-41af-a649-835cc70e81a5")
+	)
+	(junction
+		(at 181.61 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f27df4b-6db7-4115-9e84-7e7e8d884a03")
+	)
+	(junction
+		(at 198.12 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3fbd4c88-52ba-4ad8-a231-20a79769336d")
 	)
 	(junction
 		(at 245.11 110.49)
@@ -2416,16 +2446,10 @@
 		(uuid "94290ad4-4ddb-4f94-ac4c-ae8f05e0021b")
 	)
 	(junction
-		(at 198.12 57.15)
+		(at 208.28 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "95bed2b9-834c-4e72-b49a-7ddb16367ae8")
-	)
-	(junction
-		(at 182.88 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "99c79d8b-5a0f-4985-b6bb-73637145dec9")
+		(uuid "96b74780-4321-4107-a593-e4431739264e")
 	)
 	(junction
 		(at 68.58 110.49)
@@ -2476,22 +2500,32 @@
 		(uuid "d827ce94-4e2b-4867-aeb2-5d3520bb7ccb")
 	)
 	(junction
-		(at 182.88 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "db89a6f0-37f8-4452-93c7-1f44ebbd6047")
-	)
-	(junction
 		(at 227.33 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea4a063b-c78f-44b5-9288-af22db6768f5")
 	)
 	(junction
+		(at 118.11 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f7469d94-c161-414b-8b22-5b4b4bfb3260")
+	)
+	(junction
 		(at 259.08 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbf05786-fea1-42ff-9fe0-8907f486025f")
+	)
+	(wire
+		(pts
+			(xy 198.12 87.63) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "092dab5e-2c9e-42e0-83ad-881e2a3427c1")
 	)
 	(wire
 		(pts
@@ -2525,6 +2559,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 82.55) (xy 199.39 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "150d8c27-ee54-433c-9025-e5769c6293cc")
+	)
+	(wire
+		(pts
 			(xy 95.25 68.58) (xy 110.49 68.58)
 		)
 		(stroke
@@ -2555,13 +2599,23 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 57.15) (xy 198.12 57.15)
+			(xy 116.84 88.9) (xy 118.11 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1f2c5ecf-5d54-476f-89c0-30305003a36b")
+		(uuid "1ef6df2c-081b-471c-b89b-145084630a4e")
+	)
+	(wire
+		(pts
+			(xy 190.5 57.15) (xy 218.44 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f0437e2-14e3-447e-8d37-09293f338a33")
 	)
 	(wire
 		(pts
@@ -2595,13 +2649,13 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 82.55) (xy 199.39 82.55)
+			(xy 207.01 87.63) (xy 208.28 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "27c9bff1-a2b7-4da6-b5e7-cd6ef8db18e9")
+		(uuid "27c62b8b-96bc-4110-84b6-ede2ee4282f7")
 	)
 	(wire
 		(pts
@@ -2612,6 +2666,16 @@
 			(type default)
 		)
 		(uuid "2824c3f3-8e0b-442c-b757-774792207cb0")
+	)
+	(wire
+		(pts
+			(xy 107.95 82.55) (xy 107.95 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cfdf780-f41f-4e83-837a-e5887837d4a6")
 	)
 	(wire
 		(pts
@@ -2655,7 +2719,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 82.55) (xy 207.01 82.55)
+			(xy 218.44 82.55) (xy 208.28 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2705,7 +2769,7 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 57.15) (xy 198.12 68.58)
+			(xy 190.5 57.15) (xy 190.5 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2815,7 +2879,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 101.6) (xy 95.25 124.46)
+			(xy 95.25 93.98) (xy 95.25 124.46)
 		)
 		(stroke
 			(width 0)
@@ -2825,7 +2889,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 82.55) (xy 106.68 82.55)
+			(xy 95.25 82.55) (xy 107.95 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2835,7 +2899,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 82.55) (xy 132.08 82.55)
+			(xy 116.84 82.55) (xy 118.11 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2885,6 +2949,26 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 82.55) (xy 109.22 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d5e51f4-9095-4618-b670-c92a4fd17c83")
+	)
+	(wire
+		(pts
+			(xy 109.22 88.9) (xy 107.95 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ff7616a-474a-434c-9b99-d6cff169b0a9")
+	)
+	(wire
+		(pts
 			(xy 110.49 57.15) (xy 125.73 57.15)
 		)
 		(stroke
@@ -2905,7 +2989,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 110.49) (xy 245.11 113.03)
+			(xy 245.11 110.49) (xy 245.11 111.76)
 		)
 		(stroke
 			(width 0)
@@ -2935,7 +3019,17 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 57.15) (xy 182.88 67.31)
+			(xy 208.28 82.55) (xy 207.01 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c9fe340-5af5-408c-95bd-b7177e12bc96")
+	)
+	(wire
+		(pts
+			(xy 181.61 57.15) (xy 181.61 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2945,7 +3039,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 90.17) (xy 198.12 90.17)
+			(xy 163.83 90.17) (xy 190.5 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3035,6 +3129,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 82.55) (xy 198.12 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95f19963-a35f-4c02-99f2-03d2eb8f9d8d")
+	)
+	(wire
+		(pts
 			(xy 54.61 110.49) (xy 54.61 105.41)
 		)
 		(stroke
@@ -3045,7 +3149,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 121.92) (xy 236.22 124.46)
+			(xy 236.22 120.65) (xy 236.22 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3055,7 +3159,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 121.92) (xy 245.11 120.65)
+			(xy 245.11 120.65) (xy 245.11 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3095,7 +3199,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 57.15) (xy 182.88 57.15)
+			(xy 180.34 57.15) (xy 181.61 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3135,7 +3239,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 121.92) (xy 245.11 121.92)
+			(xy 236.22 120.65) (xy 245.11 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3215,7 +3319,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 74.93) (xy 182.88 82.55)
+			(xy 181.61 74.93) (xy 181.61 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3245,7 +3349,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 101.6) (xy 218.44 102.87)
+			(xy 218.44 93.98) (xy 218.44 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3265,7 +3369,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 110.49) (xy 236.22 121.92)
+			(xy 236.22 110.49) (xy 236.22 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3285,13 +3389,23 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 82.55) (xy 182.88 82.55)
+			(xy 175.26 82.55) (xy 181.61 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c7250e64-fb43-4201-b921-2d9bff553e83")
+	)
+	(wire
+		(pts
+			(xy 118.11 82.55) (xy 118.11 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cccb0e22-2cee-4262-8348-815b2498e4b4")
 	)
 	(wire
 		(pts
@@ -3335,6 +3449,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 57.15) (xy 190.5 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d805e954-f006-4fe6-991e-c0e788d3544c")
+	)
+	(wire
+		(pts
 			(xy 218.44 71.12) (xy 218.44 72.39)
 		)
 		(stroke
@@ -3362,6 +3486,16 @@
 			(type default)
 		)
 		(uuid "dd275796-4845-4fbe-a7da-40f77e18d1d8")
+	)
+	(wire
+		(pts
+			(xy 118.11 82.55) (xy 132.08 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "debb2d26-914b-4f8a-9360-e4ebc954658c")
 	)
 	(wire
 		(pts
@@ -3395,17 +3529,17 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 57.15) (xy 218.44 57.15)
+			(xy 208.28 87.63) (xy 208.28 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f1bc2563-27e1-47ac-bb48-34f646ae4afa")
+		(uuid "f179eca4-c5f8-46f5-aee8-51651444f5ff")
 	)
 	(wire
 		(pts
-			(xy 198.12 90.17) (xy 198.12 76.2)
+			(xy 190.5 90.17) (xy 190.5 76.2)
 		)
 		(stroke
 			(width 0)
@@ -3462,6 +3596,16 @@
 			(type default)
 		)
 		(uuid "fe46375c-8962-477e-94c6-b3c98abaa246")
+	)
+	(wire
+		(pts
+			(xy 199.39 87.63) (xy 198.12 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff5a8038-03db-4f1e-a7c9-5eafeb27c488")
 	)
 	(global_label "PWM_OUT_CHRG"
 		(shape input)
@@ -3562,7 +3706,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0005ffaf-e780-4324-bf30-fbf7905142d7")
-		(property "Reference" "D20"
+		(property "Reference" "D4"
 			(at 144.78 73.3424 90)
 			(effects
 				(font
@@ -3580,7 +3724,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 149.86 76.2 0)
 			(effects
 				(font
@@ -3608,18 +3752,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "7d01b537-fed9-490e-a7bc-d86647a28de7")
+			(uuid "aea91111-5e72-40e5-ad55-e43f4b8566ea")
 		)
 		(pin "3"
-			(uuid "4b70ecc4-d188-4d7d-8c53-08b5449c84a3")
+			(uuid "5e2193d9-2a58-447b-95c8-b23be07f5240")
 		)
 		(pin "1"
-			(uuid "8fe42234-66f9-4d80-93a1-be0acbc7e549")
+			(uuid "f17a7293-13ec-4940-8006-43d1ab54c024")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D20")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -3635,7 +3779,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "018cc32a-ecf3-4065-af29-11dc76c9bb08")
-		(property "Reference" "R95"
+		(property "Reference" "R2"
 			(at 71.12 115.5699 0)
 			(effects
 				(font
@@ -3653,7 +3797,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 70.358 116.84 90)
 			(effects
 				(font
@@ -3681,15 +3825,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "23fa3e45-3285-41da-9aeb-9a6decb99cd7")
+			(uuid "f2900292-aff6-40c6-ae4f-70674e8c74c1")
 		)
 		(pin "2"
-			(uuid "306985b3-ad11-46aa-a983-0d59d766291e")
+			(uuid "17778b9c-d613-443e-8503-3f2d735dbf26")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R95")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -3721,7 +3865,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_THT:L_Axial_L26.0mm_D11.0mm_P30.48mm_Horizontal_Fastron_77A"
 			(at 156.21 57.15 0)
 			(effects
 				(font
@@ -3749,14 +3893,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "47c7e94b-9fe7-4d2f-a58d-b150f626d3c3")
+			(uuid "2c90cdd8-8ace-4113-8281-21d5ced881bc")
 		)
 		(pin "1"
-			(uuid "855a51f5-c5f6-4b02-9afa-446864215f34")
+			(uuid "5c470353-e6ea-4b00-b233-a82bc3a14c54")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
 					(reference "L1")
 					(unit 1)
 				)
@@ -3772,7 +3916,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1c00e860-ad46-4382-87d2-e32147f95ed9")
-		(property "Reference" "Q25"
+		(property "Reference" "Q7"
 			(at 215.9 90.1701 0)
 			(effects
 				(font
@@ -3821,18 +3965,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "d6995902-fd2a-4916-a2e4-30497d11c8cf")
+			(uuid "d5e317bb-7096-4cc2-9fd7-67014c9b8346")
 		)
 		(pin "1"
-			(uuid "11cd73ab-7bc9-4279-be22-beefbc7fedab")
+			(uuid "a80c6388-1b5b-4dc5-b89f-7fd6812c7931")
 		)
 		(pin "3"
-			(uuid "61665977-1f2a-454f-a05d-b3c8987d9a13")
+			(uuid "f068892c-69f8-43bb-9e8e-61a0a84f434e")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q25")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q7")
 					(unit 1)
 				)
 			)
@@ -3849,7 +3993,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1caf596d-180f-4c1a-8fd9-9523f0b7609e")
-		(property "Reference" "R101"
+		(property "Reference" "R7"
 			(at 203.2 76.2 90)
 			(effects
 				(font
@@ -3865,7 +4009,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 203.2 84.328 90)
 			(effects
 				(font
@@ -3893,15 +4037,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "05597bf9-0c91-41b8-ae56-5102d9db85fd")
+			(uuid "92c110cb-3e62-4283-89d0-06fc9b7640df")
 		)
 		(pin "2"
-			(uuid "385882e9-b5bc-4ee7-b9e8-ab53d4f9aac2")
+			(uuid "e948be73-2733-4c97-b550-e7e2f3eebaab")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R101")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -3909,7 +4053,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDA")
-		(at 236.22 124.46 0)
+		(at 236.22 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3917,8 +4061,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a5c69a5-24d2-428b-b4a5-38989f6b8b90")
-		(property "Reference" "#PWR0166"
-			(at 236.22 130.81 0)
+		(property "Reference" "#PWR06"
+			(at 236.22 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3927,7 +4071,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 236.22 129.54 0)
+			(at 236.22 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3935,7 +4079,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.22 124.46 0)
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3944,7 +4088,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.22 124.46 0)
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3953,7 +4097,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 236.22 124.46 0)
+			(at 236.22 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3962,12 +4106,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "838fbfa3-e922-463e-86d6-6a7e42f17c6a")
+			(uuid "38d72046-96c6-41fd-93c2-5582de0629a5")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR0166")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -3983,7 +4127,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a71d45f-59a9-40cc-9919-f8e214dda7ec")
-		(property "Reference" "#PWR0162"
+		(property "Reference" "#PWR02"
 			(at 85.09 43.18 0)
 			(effects
 				(font
@@ -4028,12 +4172,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "06d8a486-30a7-4947-b180-ee872a73371c")
+			(uuid "e41eee0d-581b-4661-9afa-d13cf4883363")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR0162")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -4049,7 +4193,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2af218c7-e0b2-4009-af5e-e6298c70c723")
-		(property "Reference" "#PWR0172"
+		(property "Reference" "#PWR05"
 			(at 218.44 109.22 0)
 			(effects
 				(font
@@ -4094,12 +4238,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "bfd54a8f-6946-48d2-94dd-08ff2ead3244")
+			(uuid "d9180631-13c9-42ba-9ee5-5e4dc2ce6d31")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR0172")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -4115,7 +4259,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3626feaa-b2f6-4e0f-a788-d1f4fd31e0b9")
-		(property "Reference" "R96"
+		(property "Reference" "R4"
 			(at 80.01 87.6299 0)
 			(effects
 				(font
@@ -4133,7 +4277,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 79.248 88.9 90)
 			(effects
 				(font
@@ -4161,85 +4305,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a38e91a0-715b-4067-80a8-3dfcb87c8ca8")
+			(uuid "0683589f-3c43-4792-b2b6-55eb744bf440")
 		)
 		(pin "2"
-			(uuid "ca7584de-1060-4a04-a61c-4eafe8024a88")
+			(uuid "e309d876-fc44-4d00-a4bb-db3c14ea20a5")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R96")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Zener")
-		(at 95.25 97.79 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3648ea14-2fb7-4031-8091-a3e738780f0f")
-		(property "Reference" "D34"
-			(at 97.79 96.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "11V"
-			(at 97.79 99.0599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 95.25 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Zener diode"
-			(at 95.25 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8afee27b-f936-474f-9232-f4de78bc3bf1")
-		)
-		(pin "2"
-			(uuid "38effee7-3e9b-44e1-84ca-7af0323cfabd")
-		)
-		(instances
-			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D34")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -4247,7 +4321,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 245.11 116.84 0)
+		(at 245.11 115.57 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4256,8 +4330,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "425f56b8-cf31-4f1e-942a-41530a927336")
-		(property "Reference" "R98"
-			(at 242.57 115.5699 0)
+		(property "Reference" "R10"
+			(at 242.57 114.2999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4266,7 +4340,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 242.57 118.1099 0)
+			(at 242.57 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4274,8 +4348,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 243.332 116.84 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 243.332 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4284,7 +4358,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 116.84 0)
+			(at 245.11 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4293,7 +4367,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 245.11 116.84 0)
+			(at 245.11 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4302,15 +4376,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ee4cb35-101a-442a-8f2b-2a0d0270f353")
+			(uuid "687df629-54ee-411c-bb0e-a11c4a955069")
 		)
 		(pin "2"
-			(uuid "dc682517-fa4a-40bf-9cd6-2b8aa219061b")
+			(uuid "1b548b76-daa3-4e89-9aa5-aaf9f7cbb8e3")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R98")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -4327,7 +4401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44b8c233-0959-4a23-b7b0-f06a3aa96b88")
-		(property "Reference" "C42"
+		(property "Reference" "C1"
 			(at 121.92 70.2309 0)
 			(effects
 				(font
@@ -4373,15 +4447,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "3560a2d3-b82e-4475-909d-535437e2143a")
+			(uuid "fadc7827-734d-424a-8080-765aa3c69b4e")
 		)
 		(pin "2"
-			(uuid "086705a3-dab6-439d-ada5-354dc4de8860")
+			(uuid "dcb77461-1626-4f66-a75f-eccb478cc328")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "C42")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4389,16 +4463,15 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 182.88 71.12 270)
+		(at 181.61 71.12 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "4e72d166-d9a3-4ae9-8b98-ea1878bcd648")
-		(property "Reference" "D31"
-			(at 185.42 69.8499 90)
+		(property "Reference" "D6"
+			(at 183.388 70.358 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4407,7 +4480,7 @@
 			)
 		)
 		(property "Value" "18V"
-			(at 185.42 72.3899 90)
+			(at 183.388 72.898 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4415,8 +4488,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 182.88 71.12 0)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 181.61 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4425,7 +4498,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 182.88 71.12 0)
+			(at 181.61 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4434,7 +4507,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 182.88 71.12 0)
+			(at 181.61 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4443,15 +4516,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a1f68731-e76f-4de8-a567-66e9f0ea6d04")
+			(uuid "c4210f87-49d3-4603-bf0f-2108b8d740de")
 		)
 		(pin "2"
-			(uuid "2580d7d2-f24f-42e5-a0cd-696b5926a567")
+			(uuid "bc867593-72b7-457d-9563-b1a1c02470d1")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D31")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -4467,7 +4540,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "519492ac-3111-40c2-a437-5dc857e08f46")
-		(property "Reference" "Q10"
+		(property "Reference" "Q5"
 			(at 175.26 50.8 90)
 			(effects
 				(font
@@ -4483,7 +4556,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 172.72 54.61 0)
 			(effects
 				(font
@@ -4538,18 +4611,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "9e451526-f284-472c-b12e-d5d7fc61f89b")
+			(uuid "3747b069-4b66-47a3-8fd4-b7c93e82b7ad")
 		)
 		(pin "2"
-			(uuid "f1dd33c0-5a66-472f-83d3-13a29c6713e5")
+			(uuid "7b649618-0f44-46f1-967a-8af71dd0fd7e")
 		)
 		(pin "3"
-			(uuid "913a8bd2-6443-438e-af5c-1843386c4ae7")
+			(uuid "7b5d93cb-af77-465b-aeb0-cc0a2281d859")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q10")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -4565,7 +4638,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5770ac7d-8bf7-4086-bb07-d3d754c96de9")
-		(property "Reference" "Q11"
+		(property "Reference" "Q3"
 			(at 97.79 90.1701 0)
 			(effects
 				(font
@@ -4614,18 +4687,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "741be89e-f164-4ef6-a5f4-d2418c570cd0")
+			(uuid "c8022897-8f82-4f44-9aff-733846d3511e")
 		)
 		(pin "1"
-			(uuid "8ff41778-b070-4b6a-8a27-48f63ed39ea4")
+			(uuid "3f4c9b8b-fb17-4060-b37f-f957e51a4e68")
 		)
 		(pin "3"
-			(uuid "64c19d25-0a99-4b79-b8dd-ec35fe705f0b")
+			(uuid "19cac88e-2dd9-448d-aca2-33574dd8a8a4")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q11")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -4640,7 +4713,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5781eaa7-6815-4fae-937a-64c9d0483dce")
-		(property "Reference" "R80"
+		(property "Reference" "R5"
 			(at 97.79 49.022 90)
 			(effects
 				(font
@@ -4656,7 +4729,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_Power_L38.0mm_W9.0mm_P40.64mm"
 			(at 97.79 58.928 90)
 			(effects
 				(font
@@ -4692,15 +4765,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "eaf22afe-1605-4493-a7de-a18d00d572ba")
+			(uuid "7feaa961-5af9-4a7a-a022-de19e850aa3c")
 		)
 		(pin "2"
-			(uuid "759eee33-373e-428d-8c2d-dbaca2a21f48")
+			(uuid "f34c91c5-03fa-4de2-9473-cd4295760ea9")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R80")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -4715,7 +4788,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68a2afc5-b483-4103-a6b7-82f0af3c36c4")
-		(property "Reference" "F4"
+		(property "Reference" "F2"
 			(at 88.9 44.45 90)
 			(effects
 				(font
@@ -4759,15 +4832,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "84f886a6-7aa6-4144-8c7a-29779af658b4")
+			(uuid "1b345ae1-c683-4dc4-9142-7ccebe0b0b07")
 		)
 		(pin "2"
-			(uuid "b2357614-22b4-40a5-a85a-46be144b456d")
+			(uuid "0369291d-e84e-4526-a0aa-0592790aec70")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "F4")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "F2")
 					(unit 1)
 				)
 			)
@@ -4775,17 +4848,16 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 198.12 72.39 0)
+		(at 190.5 72.39 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "723db9c4-2dda-4b27-b607-d4da0ca3e9b3")
-		(property "Reference" "C43"
-			(at 194.31 70.2309 0)
+		(property "Reference" "C2"
+			(at 196.088 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4794,7 +4866,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 194.31 72.7709 0)
+			(at 196.85 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4803,7 +4875,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B"
-			(at 197.1548 76.2 0)
+			(at 189.5348 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4812,7 +4884,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 72.39 0)
+			(at 190.5 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4821,7 +4893,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 198.12 72.39 0)
+			(at 190.5 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4830,15 +4902,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e5d6168c-e925-4078-a322-43fe05c2506f")
+			(uuid "42b8b7d8-aa1e-4bf5-9c21-19ee6d171cef")
 		)
 		(pin "2"
-			(uuid "ce5bdbfe-a8a6-474c-862c-f82756b68c7d")
+			(uuid "c40cd12c-8f09-4b13-9fd6-7d4388c18403")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "C43")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -4855,7 +4927,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73747bb4-d4f4-4708-90b9-e4d911f627d7")
-		(property "Reference" "R99"
+		(property "Reference" "R8"
 			(at 233.68 76.1999 0)
 			(effects
 				(font
@@ -4873,7 +4945,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 234.442 77.47 90)
 			(effects
 				(font
@@ -4901,15 +4973,101 @@
 			)
 		)
 		(pin "1"
-			(uuid "9983b813-08cd-4385-9140-f71c83de3f1f")
+			(uuid "142ea878-96e3-4d69-b6ad-4b4567bb9f90")
 		)
 		(pin "2"
-			(uuid "b386e358-e3ab-435d-8b4b-09344b4b35a4")
+			(uuid "13147624-d1bf-4751-a950-078bd9e3225a")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R99")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:LL4148")
+		(at 113.03 88.9 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "75a4d104-a1fa-444f-814c-eef44dde9424")
+		(property "Reference" "D7"
+			(at 113.538 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LL4148"
+			(at 114.046 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 113.03 93.345 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/85557/ll4148.pdf"
+			(at 113.03 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, MiniMELF"
+			(at 113.03 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 113.03 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 113.03 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad9b6aa2-b922-46f7-acf2-a92af2fbf8ef")
+		)
+		(pin "2"
+			(uuid "9809e6ff-727e-445c-94c4-e359c1257ae4")
+		)
+		(instances
+			(project "Balancer+ESP"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -4925,7 +5083,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77edfd6a-b385-4882-b43e-9e4f97a19f14")
-		(property "Reference" "Q12"
+		(property "Reference" "Q2"
 			(at 97.79 76.1999 0)
 			(effects
 				(font
@@ -4974,18 +5132,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "4bed34e5-7d3f-48b9-8e32-cb7b9ebba231")
+			(uuid "cd6b823f-e6dd-4487-8a72-6b7b63df9357")
 		)
 		(pin "3"
-			(uuid "ff6bd3a7-a46f-456b-8304-64c21d743062")
+			(uuid "597c3048-03f9-43ea-8b40-019945216acc")
 		)
 		(pin "2"
-			(uuid "b0c6ae67-d3ff-466a-8e0e-b45f1e2d71e3")
+			(uuid "02376ffa-c03f-42ac-aac8-1e72910f25f1")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q12")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5000,7 +5158,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83db53e3-96e6-4abf-9b22-1a720718b1da")
-		(property "Reference" "F7"
+		(property "Reference" "F1"
 			(at 64.77 53.34 90)
 			(effects
 				(font
@@ -5044,15 +5202,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc5dcfcb-6ba2-4a9c-9d8a-a37668c37129")
+			(uuid "1f328f6a-7ab8-4be4-9689-aeedd797383a")
 		)
 		(pin "2"
-			(uuid "ddfc0f47-655c-4d29-9dfb-e8905e0336c7")
+			(uuid "ad05f6c1-1296-4a3d-981e-8f11f2e357c1")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "F7")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -5067,7 +5225,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8aa3af7b-5524-4f62-8a10-81d190d19aa2")
-		(property "Reference" "D32"
+		(property "Reference" "D1"
 			(at 62.23 113.284 0)
 			(effects
 				(font
@@ -5129,15 +5287,101 @@
 			)
 		)
 		(pin "1"
-			(uuid "1a5042a8-9656-4559-a873-ff4f8a3b7b4b")
+			(uuid "03b2e425-b298-4c9d-b592-05bc93d1b01e")
 		)
 		(pin "2"
-			(uuid "4088d200-30ec-44c1-a9d8-a1a4631dcaa3")
+			(uuid "413f687b-7aa0-4c6e-9626-20918f1f1803")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D32")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:LL4148")
+		(at 203.2 87.63 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8bc5fb6b-1541-4395-a254-c4037c14d7a0")
+		(property "Reference" "D2"
+			(at 203.2 90.678 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LL4148"
+			(at 203.454 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 203.2 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/85557/ll4148.pdf"
+			(at 203.2 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, MiniMELF"
+			(at 203.2 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 203.2 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 203.2 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c943f52d-21c8-4347-b5b4-b2a738ce762f")
+		)
+		(pin "2"
+			(uuid "1a6b5d95-f67d-4de8-bb5c-18c251a6c68c")
+		)
+		(instances
+			(project "Balancer+ESP"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -5154,7 +5398,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c366c85-02e0-4df9-8438-caddc3c10f0c")
-		(property "Reference" "Q23"
+		(property "Reference" "Q8"
 			(at 233.68 104.1399 0)
 			(effects
 				(font
@@ -5203,89 +5447,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "56b49a13-8a66-4c81-8728-81098a7714e9")
+			(uuid "4d1dd3b5-5b60-4de1-99df-1623bb224436")
 		)
 		(pin "3"
-			(uuid "fc5afbb8-9b60-415c-ad6e-29789dfdca60")
+			(uuid "05f1878f-ee1e-4c9e-baf4-d3c5aa2e16ed")
 		)
 		(pin "1"
-			(uuid "6e9c44a5-fa27-46c0-a262-3bca4ae068aa")
+			(uuid "033d3eea-80d4-4cc7-8fb6-1e6f820ada32")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Zener")
-		(at 218.44 97.79 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8d3ad6a4-9ef1-4a50-b79a-75df3d9194c6")
-		(property "Reference" "D36"
-			(at 215.9 96.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "11V"
-			(at 215.9 99.0599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 218.44 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 218.44 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Zener diode"
-			(at 218.44 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "34ea6d24-b151-4ba7-b799-582f0f01773e")
-		)
-		(pin "2"
-			(uuid "7c277320-fc09-494c-97dd-c64476d8f9e9")
-		)
-		(instances
-			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D36")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -5301,7 +5474,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92c6adb1-ba67-4486-8e4e-79ae5a359d76")
-		(property "Reference" "#PWR0174"
+		(property "Reference" "#PWR01"
 			(at 77.47 130.81 0)
 			(effects
 				(font
@@ -5346,12 +5519,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0112162d-052f-4d1f-a65f-1cca961e12bc")
+			(uuid "57cf72c2-7ba0-441f-a31c-bdcf13bccc8b")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR0174")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -5367,7 +5540,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ab5290e4-5562-4e14-9d19-cea097b57549")
-		(property "Reference" "Q9"
+		(property "Reference" "Q4"
 			(at 142.24 50.8 90)
 			(effects
 				(font
@@ -5383,7 +5556,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 144.78 54.61 0)
 			(effects
 				(font
@@ -5438,18 +5611,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "944d6ab9-7d64-467e-887c-3e7eaca093d6")
+			(uuid "9f058726-df84-4cd7-9a41-ac7ef83172e0")
 		)
 		(pin "2"
-			(uuid "d2af5111-1b33-499b-b5a5-858bec00e301")
+			(uuid "37eccee2-5e4b-4bc9-92de-400c115daa67")
 		)
 		(pin "3"
-			(uuid "ee01b8f9-8ab4-4f88-9357-18ffc0f1fdf0")
+			(uuid "593f41e3-36cd-4533-9ee7-cb20f8c2e323")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q9")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -5465,7 +5638,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb0cf195-37ec-4522-a0ec-00f17cc43219")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR03"
 			(at 95.25 130.81 0)
 			(effects
 				(font
@@ -5510,12 +5683,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "cc14b6e6-9228-44ec-8aea-75643a92f083")
+			(uuid "9b26e2ed-5089-44f6-8e07-2bb4db3e6ad6")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR085")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -5523,7 +5696,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 110.49 82.55 90)
+		(at 113.03 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5531,24 +5704,24 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5917966-f294-42d5-9b57-29ea6324f242")
-		(property "Reference" "R92"
-			(at 110.49 76.2 90)
+		(property "Reference" "R6"
+			(at 113.03 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "100R"
-			(at 110.49 78.74 90)
+		(property "Value" "1k"
+			(at 113.03 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 110.49 84.328 90)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 113.03 84.328 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5557,7 +5730,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 110.49 82.55 0)
+			(at 113.03 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5566,7 +5739,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 110.49 82.55 0)
+			(at 113.03 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5575,15 +5748,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "388e5d52-73a7-4784-bcbe-fddb6fba0b30")
+			(uuid "c327c34c-a8e2-4644-af51-ac885725e2d6")
 		)
 		(pin "2"
-			(uuid "f9ea8c9c-1caf-4662-b1f4-8e7d042f439b")
+			(uuid "d2a7db5d-392b-4652-ba52-da300b7f5451")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R92")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -5599,7 +5772,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cae1fb61-6168-47b0-81c0-7a979af2e07b")
-		(property "Reference" "Q22"
+		(property "Reference" "Q1"
 			(at 80.01 104.1399 0)
 			(effects
 				(font
@@ -5648,18 +5821,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "95f30fc0-c034-4ba3-9171-e75fc30fe52f")
+			(uuid "4bd30ff4-ef2f-4fef-bb99-cb159a94ab80")
 		)
 		(pin "3"
-			(uuid "96289505-1bcd-4f0a-a493-f13c5d54f834")
+			(uuid "5b2c61fc-6070-4c82-a1c4-41561fbb90e2")
 		)
 		(pin "1"
-			(uuid "cf5f547c-54ba-477e-905a-3605157663c1")
+			(uuid "790a20a7-3720-41ee-aa62-dc16409cc9a8")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q22")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -5676,7 +5849,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ce3c6c16-7eed-4120-b4af-6ee27c5f231b")
-		(property "Reference" "Q24"
+		(property "Reference" "Q6"
 			(at 215.9 76.1999 0)
 			(effects
 				(font
@@ -5725,18 +5898,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "fa4fa0b4-ce05-4f0b-b0dc-f2f178629d2a")
+			(uuid "71e522ce-bd68-460b-b9a5-e7950342f4d3")
 		)
 		(pin "3"
-			(uuid "4fa6cf27-4401-4813-a7d6-c8b7acbccad2")
+			(uuid "551c5e3e-5571-45cb-921b-2a2f44ee3eba")
 		)
 		(pin "2"
-			(uuid "1b1f3345-4286-4383-b053-12096a702d11")
+			(uuid "787084c1-ae4c-4968-b5bf-3aa904147efe")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "Q24")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -5751,7 +5924,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ce4987b3-4354-4ee9-9475-617a54438170")
-		(property "Reference" "J21"
+		(property "Reference" "J1"
 			(at 54.61 54.61 0)
 			(effects
 				(font
@@ -5795,12 +5968,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "189139cb-618b-47fd-a805-1661d9e3ddfa")
+			(uuid "f46aea5c-468b-43c2-bea2-ce7c06820ef0")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "J21")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -5817,7 +5990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf776bb2-d4c0-4989-8be6-078288a762ce")
-		(property "Reference" "D18"
+		(property "Reference" "D5"
 			(at 158.75 73.3424 90)
 			(effects
 				(font
@@ -5835,7 +6008,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 163.83 76.2 0)
 			(effects
 				(font
@@ -5863,18 +6036,18 @@
 			)
 		)
 		(pin "2"
-			(uuid "6df60522-e877-42f3-89d7-74dcebf0fb8b")
+			(uuid "ded69fed-4a15-4242-a45f-3ec20e98f6f5")
 		)
 		(pin "3"
-			(uuid "3cf35ba6-0286-4630-bb50-da821a58183a")
+			(uuid "9dd726fd-7e26-4442-960f-67299a4eb58a")
 		)
 		(pin "1"
-			(uuid "4ae42a95-0032-40c0-9115-0ea3e8679ae3")
+			(uuid "706e14a7-6ec0-4bcb-be77-4e937b6c1ec8")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D18")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -5890,7 +6063,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d71f7cff-5a09-431b-a03e-5f5f9f856a14")
-		(property "Reference" "#PWR0165"
+		(property "Reference" "#PWR04"
 			(at 163.83 99.06 0)
 			(effects
 				(font
@@ -5935,12 +6108,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f1516e3d-539a-4d7a-8432-109ef694c040")
+			(uuid "58c89f10-b2e4-409b-9de4-452c123ee504")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "#PWR0165")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -5956,7 +6129,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dffd3c5c-c3e1-4ecf-92d4-5ebaccb1dbab")
-		(property "Reference" "D33"
+		(property "Reference" "D3"
 			(at 134.62 67.3099 90)
 			(effects
 				(font
@@ -5974,7 +6147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 132.08 68.58 0)
 			(effects
 				(font
@@ -6002,15 +6175,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "bbf04b83-b0ba-4b42-a256-9726e76e1874")
+			(uuid "ed92df07-f6e3-4b55-9d67-3bdd63d140e8")
 		)
 		(pin "2"
-			(uuid "d37533ca-bd9e-44a5-a89f-bcf4983db46e")
+			(uuid "ad66d586-ae45-462a-a7a9-e663bec92ad4")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D33")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -6026,7 +6199,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e5eec3c8-82e8-4e3c-a49d-e92f659abb3b")
-		(property "Reference" "R94"
+		(property "Reference" "R1"
 			(at 62.23 99.06 90)
 			(effects
 				(font
@@ -6042,7 +6215,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 62.23 107.188 90)
 			(effects
 				(font
@@ -6070,15 +6243,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "4744f158-19a5-4e09-b322-74b432eaffdd")
+			(uuid "78d505e1-9c8d-4e9d-bbc1-5a63e7468ad6")
 		)
 		(pin "2"
-			(uuid "99b32eee-aa85-4235-aeee-bd18133bcd7c")
+			(uuid "dffcc32a-d9e0-4b66-b8ac-020035657fc8")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R94")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -6095,7 +6268,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e63fd4e0-3f32-4fab-bb25-1dcd8d24c47e")
-		(property "Reference" "R97"
+		(property "Reference" "R11"
 			(at 251.46 99.06 90)
 			(effects
 				(font
@@ -6111,7 +6284,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 251.46 107.188 90)
 			(effects
 				(font
@@ -6139,15 +6312,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "e1ad348d-07b7-47b5-b168-1fba37e1e1a3")
+			(uuid "5c0bb055-d291-48bb-ad42-5fc50a4675ef")
 		)
 		(pin "2"
-			(uuid "7efbc04d-25b4-4a25-a64b-963d5241e8ab")
+			(uuid "98367757-75af-48ab-bcee-42ced301c2ea")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R97")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -6163,7 +6336,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ecac333c-2c25-4fb7-a00c-ee2ebc6e4cc0")
-		(property "Reference" "R93"
+		(property "Reference" "R3"
 			(at 80.01 76.1999 0)
 			(effects
 				(font
@@ -6181,7 +6354,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 79.248 77.47 90)
 			(effects
 				(font
@@ -6209,15 +6382,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "1066f922-29ae-4e0a-bd95-ba16074beef6")
+			(uuid "e5fdee2a-05d0-4248-9e9b-285c0d007f51")
 		)
 		(pin "2"
-			(uuid "cbd84ca7-a8c7-4481-9188-ffc34f6a7977")
+			(uuid "608d649a-dbe9-4a86-bda2-4ec9be592aa4")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R93")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -6233,7 +6406,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef1d0ab4-83b0-4e35-a728-fb19aaa495a6")
-		(property "Reference" "D35"
+		(property "Reference" "D8"
 			(at 251.46 113.284 0)
 			(effects
 				(font
@@ -6295,15 +6468,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c5a7cef8-f74f-4398-a327-45977a3a2c69")
+			(uuid "d8da8215-d251-44d4-a4ba-428cecd1388d")
 		)
 		(pin "2"
-			(uuid "2d28a009-01ab-4fec-bd15-e7b31de703c4")
+			(uuid "511429b9-bc47-4223-9895-1e441a5de9f2")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "D35")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -6320,7 +6493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0164f5f-25ef-4861-950e-8ee7beee0a3e")
-		(property "Reference" "R100"
+		(property "Reference" "R9"
 			(at 233.68 87.6299 0)
 			(effects
 				(font
@@ -6338,7 +6511,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 234.442 88.9 90)
 			(effects
 				(font
@@ -6366,15 +6539,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "efec6617-ba00-4b82-bc41-883bcfbee7b8")
+			(uuid "ec3f4fec-a513-47e9-8b9a-bb3ef35fc0fc")
 		)
 		(pin "2"
-			(uuid "4daf9c33-1b7a-493f-b9c1-b85a38a0be37")
+			(uuid "8c48dc54-9fbf-49ca-bfc8-80df4c8079b4")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "R100")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -6390,7 +6563,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f03f3324-60b9-4695-827a-0e52629db7db")
-		(property "Reference" "J22"
+		(property "Reference" "J2"
 			(at 238.252 55.9378 0)
 			(effects
 				(font
@@ -6436,12 +6609,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d565e0ac-2f3a-4470-923a-248e70739578")
+			(uuid "eaf1504d-84db-4620-a6cf-3084a05dd9df")
 		)
 		(instances
 			(project "Balancer+ESP"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/082c19de-9087-42ca-b6f1-cdab78bf87aa/4b291f9d-bc36-4f21-9f3b-00690d06c010"
-					(reference "J22")
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "J2")
 					(unit 1)
 				)
 			)
