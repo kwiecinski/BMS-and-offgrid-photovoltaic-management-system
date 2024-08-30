@@ -2961,6 +2961,12 @@
 		(uuid "53f6f7f3-43df-43db-adb5-f7eb69eade6e")
 	)
 	(junction
+		(at 227.33 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5787d4b7-19d6-45fb-ad40-6efb7a96c6be")
+	)
+	(junction
 		(at 218.44 146.05)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3093,12 +3099,6 @@
 		(uuid "b8ca0ff7-fa7a-4cb0-ab53-a56030e04ce8")
 	)
 	(junction
-		(at 227.33 212.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c4f53689-236d-4391-aefa-8c385c2e4fca")
-	)
-	(junction
 		(at 74.93 260.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3204,7 +3204,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 203.2) (xy 243.84 203.2)
+			(xy 240.03 203.2) (xy 243.84 203.2)
 		)
 		(stroke
 			(width 0)
@@ -3634,7 +3634,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 212.09) (xy 232.41 210.82)
+			(xy 234.95 212.09) (xy 234.95 210.82)
 		)
 		(stroke
 			(width 0)
@@ -4874,7 +4874,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 203.2) (xy 219.71 203.2)
+			(xy 229.87 203.2) (xy 219.71 203.2)
 		)
 		(stroke
 			(width 0)
@@ -5081,16 +5081,6 @@
 			(type default)
 		)
 		(uuid "dd2a27d9-95b6-4c1b-a0d2-8c003948ae60")
-	)
-	(wire
-		(pts
-			(xy 227.33 212.09) (xy 232.41 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e084394b-cab7-42b9-b029-8c6702329bf5")
 	)
 	(wire
 		(pts
@@ -5451,6 +5441,26 @@
 			(type default)
 		)
 		(uuid "ffd545e1-c527-4269-9793-42157555eebf")
+	)
+	(text "PWM_freq=10kHz"
+		(exclude_from_sim no)
+		(at 168.402 216.154 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "025f0d12-9986-4df0-b1ce-04ea7a0d72f4")
+	)
+	(text "PWM_freq=10kHz"
+		(exclude_from_sim no)
+		(at 165.608 282.956 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "71bf0cbd-be7e-45f6-9fe4-5cd4ab3ca75e")
 	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
@@ -6931,7 +6941,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "15k"
+		(property "Value" "150k"
 			(at 77.47 267.9699 0)
 			(effects
 				(font
@@ -7134,7 +7144,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1u"
 			(at 193.04 216.916 0)
 			(effects
 				(font
@@ -7204,7 +7214,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "15k"
+		(property "Value" "150k"
 			(at 87.63 267.9699 0)
 			(effects
 				(font
@@ -7949,6 +7959,73 @@
 			(project "Balancer+ESP"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 231.14 212.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4b726a13-5961-407f-ab3b-dbf1f1533c77")
+		(property "Reference" "R63"
+			(at 230.886 208.026 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 231.394 210.058 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 231.14 210.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 231.14 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "77486b66-dab2-4edb-ba68-5ec17e45a192")
+		)
+		(pin "1"
+			(uuid "939fa8ff-df94-49f7-b0d4-8d9fbc5e5fd9")
+		)
+		(instances
+			(project "Balancer+ESP"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
+					(reference "R63")
 					(unit 1)
 				)
 			)
@@ -8824,7 +8901,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "15k"
+		(property "Value" "150k"
 			(at 76.2 201.9299 0)
 			(effects
 				(font
@@ -10025,7 +10102,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k2"
 			(at 184.15 207.01 90)
 			(effects
 				(font
@@ -10085,7 +10162,7 @@
 		(dnp no)
 		(uuid "8a896f07-6bc7-4fc9-8d88-8290abbd2cf2")
 		(property "Reference" "U3"
-			(at 220.218 214.376 0)
+			(at 216.154 206.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10093,7 +10170,7 @@
 			)
 		)
 		(property "Value" "LM358"
-			(at 220.726 216.662 0)
+			(at 217.424 208.534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10899,7 +10976,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1u"
 			(at 191.77 284.226 0)
 			(effects
 				(font
@@ -11106,7 +11183,7 @@
 				)
 			)
 		)
-		(property "Value" "3k"
+		(property "Value" "6k2"
 			(at 241.3 233.68 90)
 			(effects
 				(font
@@ -12291,7 +12368,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "15k"
+		(property "Value" "150k"
 			(at 86.36 201.9299 0)
 			(effects
 				(font
@@ -12907,7 +12984,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "100k"
 			(at 185.674 284.226 0)
 			(effects
 				(font
@@ -13353,7 +13430,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "100k"
 			(at 186.944 216.916 0)
 			(effects
 				(font
@@ -14041,7 +14118,7 @@
 		(dnp yes)
 		(uuid "d9c0d60e-3637-4957-891a-967d3687ad56")
 		(property "Reference" "C13"
-			(at 221.742 216.154 0)
+			(at 219.71 216.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14253,7 +14330,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "2k2"
 			(at 182.88 274.32 90)
 			(effects
 				(font
@@ -14386,7 +14463,7 @@
 				)
 			)
 		)
-		(property "Value" "3K"
+		(property "Value" "6k2"
 			(at 239.522 299.466 0)
 			(effects
 				(font
@@ -14438,7 +14515,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BD238")
-		(at 232.41 205.74 90)
+		(at 234.95 205.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14447,7 +14524,7 @@
 		(fields_autoplaced yes)
 		(uuid "f3b4a04a-ac76-4c1f-b6bf-fd97257ec9f2")
 		(property "Reference" "Q14"
-			(at 232.41 198.12 90)
+			(at 234.95 198.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14455,7 +14532,7 @@
 			)
 		)
 		(property "Value" "BD238"
-			(at 232.41 200.66 90)
+			(at 234.95 200.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14463,7 +14540,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-126-3_Vertical"
-			(at 234.315 200.66 0)
+			(at 236.855 200.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14474,7 +14551,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.electronica-pt.com/datasheets/bd/BD234.pdf"
-			(at 232.41 205.74 0)
+			(at 234.95 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14484,7 +14561,7 @@
 			)
 		)
 		(property "Description" "2A Ic, 80V Vce, Low Voltage Transistor, TO-126"
-			(at 232.41 205.74 0)
+			(at 234.95 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)

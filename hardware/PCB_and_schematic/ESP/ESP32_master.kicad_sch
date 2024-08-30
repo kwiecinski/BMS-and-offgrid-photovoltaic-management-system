@@ -6,8 +6,8 @@
 	(paper "A4" portrait)
 	(lib_symbols)
 	(sheet
-		(at 24.13 80.01)
-		(size 36.195 27.305)
+		(at 25.654 79.248)
+		(size 33.782 25.654)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -16,9 +16,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "082c19de-9087-42ca-b6f1-cdab78bf87aa")
-		(property "Sheetname" "BMS"
-			(at 24.13 77.4334 0)
+		(uuid "a355b28e-a0b7-47f7-8ee2-6d66f79ca758")
+		(property "Sheetname" "Energy_meters_probes"
+			(at 25.654 76.6714 0)
 			(effects
 				(font
 					(size 5 5)
@@ -27,17 +27,17 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "bms.kicad_sch"
-			(at 24.13 108.5916 0)
+		(property "Sheetfile" "ESP_32_energy_meters_probe.kicad_sch"
+			(at 25.654 105.4866 0)
 			(effects
 				(font
-					(size 3 3)
+					(size 1.27 1.27)
 				)
 				(justify left top)
 			)
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "ESP32_master"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
 					(page "3")
 				)
@@ -76,7 +76,7 @@
 			)
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "ESP32_master"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
 					(page "2")
 				)

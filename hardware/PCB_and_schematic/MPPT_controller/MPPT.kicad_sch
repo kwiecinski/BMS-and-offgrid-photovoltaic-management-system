@@ -1,0 +1,51 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "555ba40f-9abb-4b99-82c6-07e888fda9fd")
+	(paper "A4" portrait)
+	(lib_symbols)
+	(sheet
+		(at 68.834 59.944)
+		(size 58.674 45.212)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3b90ff07-e5cb-404b-939d-de320e975ba1")
+		(property "Sheetname" "BMS_microcontroller"
+			(at 68.834 59.2324 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LT3652_MPPT.kicad_sch"
+			(at 68.834 105.7406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "MPPT"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
