@@ -5695,7 +5695,7 @@
 			(uuid "bff3bb24-799e-4c39-821d-30b19ac65ae6")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR023")
 					(unit 1)
@@ -5763,7 +5763,7 @@
 			(uuid "683be964-d565-4b7a-96c8-660aa0c7b2bf")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R21")
 					(unit 1)
@@ -5829,7 +5829,7 @@
 			(uuid "8e756ba2-95f8-4be2-98b5-c8bed7f6b129")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR050")
 					(unit 1)
@@ -5897,7 +5897,7 @@
 			(uuid "42228d4c-a1b2-473c-a636-a8e3d39a5561")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R12")
 					(unit 1)
@@ -5963,7 +5963,7 @@
 			(uuid "dba9977b-6f04-4f1e-950b-f2c948e4634a")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR018")
 					(unit 1)
@@ -6033,7 +6033,7 @@
 			(uuid "ead5fa47-2858-450f-93aa-528b7b4d9551")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J7")
 					(unit 1)
@@ -6050,7 +6050,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "092021e5-9af9-4f1c-893d-ba0802dead42")
-		(property "Reference" "R42"
+		(property "Reference" "R43"
 			(at 239.014 278.638 0)
 			(effects
 				(font
@@ -6100,9 +6100,9 @@
 			(uuid "e91f239d-0307-43a8-bc13-d1861250c1f8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R42")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -6169,7 +6169,7 @@
 			(uuid "ae00dd52-2577-478f-a296-295c80128bbf")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C4")
 					(unit 1)
@@ -6235,7 +6235,7 @@
 			(uuid "8477a6e2-d3fa-4603-b144-2d4f2fabca3c")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR044")
 					(unit 1)
@@ -6301,7 +6301,7 @@
 			(uuid "c27dce96-fd7c-4a69-996d-8f418febfed1")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR07")
 					(unit 1)
@@ -6366,7 +6366,7 @@
 			(uuid "ac2e41ef-2e72-4ea5-82bb-01dc1d81be5f")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR048")
 					(unit 1)
@@ -6470,7 +6470,7 @@
 			(uuid "3b92ba04-3830-4a60-aa89-08921201dcc8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U2")
 					(unit 1)
@@ -6541,7 +6541,7 @@
 			(uuid "1fba133c-55d8-43e1-b305-6b216b0f1a87")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J4")
 					(unit 1)
@@ -6645,7 +6645,7 @@
 			(uuid "fd179f42-0998-4d93-b4a1-d8036b257ba5")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U1")
 					(unit 2)
@@ -6714,7 +6714,7 @@
 			(uuid "2fc1112a-78a8-44a6-8b4b-9b00c9d20fe3")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R18")
 					(unit 1)
@@ -6782,7 +6782,7 @@
 			(uuid "4c1f22a3-f6b9-4d55-9fcb-16ab302d1d10")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R24")
 					(unit 1)
@@ -6848,7 +6848,7 @@
 			(uuid "777ad50b-a1be-42ee-8643-c30857857cae")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR043")
 					(unit 1)
@@ -6914,7 +6914,7 @@
 			(uuid "35386453-edad-4a99-a5b6-4cc536cda537")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR030")
 					(unit 1)
@@ -6984,7 +6984,7 @@
 			(uuid "5f44a321-0904-4009-9857-6272fd3b3dff")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R14")
 					(unit 1)
@@ -7053,7 +7053,7 @@
 			(uuid "18c58bff-632a-4dbb-93d8-720f5b8d5ee1")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C5")
 					(unit 1)
@@ -7118,7 +7118,7 @@
 			(uuid "9098979b-d2a9-4a20-93c1-3b2cf38ae1ad")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR020")
 					(unit 1)
@@ -7187,7 +7187,7 @@
 			(uuid "ffd4b471-0a67-40f0-b074-5a8a0f7b1d71")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C9")
 					(unit 1)
@@ -7257,7 +7257,7 @@
 			(uuid "96aea947-9b97-4454-8e77-bc4c43e7230a")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R17")
 					(unit 1)
@@ -7275,7 +7275,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "368fd900-6976-4f51-b91b-51ad25c9b76a")
-		(property "Reference" "Q15"
+		(property "Reference" "Q14"
 			(at 240.03 82.5499 0)
 			(effects
 				(font
@@ -7357,9 +7357,9 @@
 			(uuid "9fb80cd0-1ba4-46bb-9c4b-0a8b1dcea968")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "Q15")
+					(reference "Q14")
 					(unit 1)
 				)
 			)
@@ -7375,7 +7375,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3752b7a9-1224-44a6-8b7b-45ed1d20ed13")
-		(property "Reference" "R40"
+		(property "Reference" "R41"
 			(at 240.03 97.7899 0)
 			(effects
 				(font
@@ -7427,9 +7427,9 @@
 			(uuid "98057806-b503-443d-9543-0f1addf0bbb5")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R40")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -7493,7 +7493,7 @@
 			(uuid "78f701d4-6cdd-4e4c-8817-c11cca06e407")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR015")
 					(unit 1)
@@ -7559,7 +7559,7 @@
 			(uuid "0a49b93a-9d86-4572-b3e4-0bd1ac5f516d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR049")
 					(unit 1)
@@ -7627,7 +7627,7 @@
 			(uuid "023fb81b-157b-4700-b6da-0104c4eb233a")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R36")
 					(unit 1)
@@ -7693,7 +7693,7 @@
 			(uuid "13c102a1-2b88-426e-a76e-6302f9da4df5")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR041")
 					(unit 1)
@@ -7759,7 +7759,7 @@
 			(uuid "b3ad82c2-d852-4c3d-a97b-fbc8d7f8bd56")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR039")
 					(unit 1)
@@ -7825,7 +7825,7 @@
 			(uuid "8023ee2f-df22-4716-9d44-868661f35860")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR016")
 					(unit 1)
@@ -7891,7 +7891,7 @@
 			(uuid "b4cb22e9-6509-4ab3-b13e-e3fc7c69f1a1")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR025")
 					(unit 1)
@@ -7956,7 +7956,7 @@
 			(uuid "dbcf9383-1601-44d6-aea9-fda2e384808a")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR047")
 					(unit 1)
@@ -7973,7 +7973,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4b726a13-5961-407f-ab3b-dbf1f1533c77")
-		(property "Reference" "R63"
+		(property "Reference" "R38"
 			(at 230.886 208.026 90)
 			(effects
 				(font
@@ -8023,9 +8023,9 @@
 			(uuid "939fa8ff-df94-49f7-b0d4-8d9fbc5e5fd9")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R63")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -8092,7 +8092,7 @@
 			(uuid "d7f237b6-ed85-4126-8a81-ef05e990ba83")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C14")
 					(unit 1)
@@ -8163,7 +8163,7 @@
 			(uuid "bc256f1e-6588-4e91-83ea-c133a31d3434")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D11")
 					(unit 1)
@@ -8181,7 +8181,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "514621b1-d2b0-430b-bbf9-40d8205c7b42")
-		(property "Reference" "R39"
+		(property "Reference" "R40"
 			(at 236.22 215.9 90)
 			(effects
 				(font
@@ -8231,9 +8231,9 @@
 			(uuid "a2616c8d-f7f1-4e05-90a4-1fb66078be00")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R39")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -8339,7 +8339,7 @@
 			(uuid "fd179f42-0998-4d93-b4a1-d8036b257ba4")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U1")
 					(unit 5)
@@ -8372,7 +8372,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_2512_6332Metric_Pad1.52x3.35mm_HandSolder"
+		(property "Footprint" "Fuse:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
 			(at 304.8 84.328 90)
 			(effects
 				(font
@@ -8406,7 +8406,7 @@
 			(uuid "a9fd2b93-812a-4066-8385-f8b6831bdf2e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "F3")
 					(unit 1)
@@ -8472,7 +8472,7 @@
 			(uuid "9e2adcd0-27fd-4f02-bb9d-3ab055755349")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR08")
 					(unit 1)
@@ -8538,7 +8538,7 @@
 			(uuid "0e8b56ea-d9bf-4941-9859-49e603cc4b83")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR010")
 					(unit 1)
@@ -8603,7 +8603,7 @@
 			(uuid "5c9c112c-6241-4373-88b3-4376e0824f44")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR040")
 					(unit 1)
@@ -8669,7 +8669,7 @@
 			(uuid "f4b79f9b-cc4d-4b0f-8a07-a84eee967596")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR027")
 					(unit 1)
@@ -8735,7 +8735,7 @@
 			(uuid "76b21379-b30f-40f6-933d-80e290469ea4")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR051")
 					(unit 1)
@@ -8800,7 +8800,7 @@
 			(uuid "e68fa238-9b1c-4dfc-8729-dc0838fb355b")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR019")
 					(unit 1)
@@ -8874,7 +8874,7 @@
 			(uuid "54269926-dfc1-41a1-b80a-0a9a99ba5eb0")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "Q13")
 					(unit 1)
@@ -8944,7 +8944,7 @@
 			(uuid "c907ed77-4ad2-4ce2-921d-f30238f83f78")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R13")
 					(unit 1)
@@ -9013,7 +9013,7 @@
 			(uuid "f1a1f333-583b-40ea-8eb2-ce84bea2f091")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D14")
 					(unit 1)
@@ -9078,7 +9078,7 @@
 			(uuid "3bb89042-0ee5-479e-b5dc-926a86ade032")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR036")
 					(unit 1)
@@ -9144,7 +9144,7 @@
 			(uuid "7afa0458-d104-47de-a280-8e1094b957db")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR042")
 					(unit 1)
@@ -9212,7 +9212,7 @@
 			(uuid "9449be3b-5bf7-4f22-a284-fd296419b636")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R28")
 					(unit 1)
@@ -9280,7 +9280,7 @@
 			(uuid "65ea93b0-c640-419f-99b1-c0cb0eb0d8f3")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R37")
 					(unit 1)
@@ -9346,7 +9346,7 @@
 			(uuid "22e166d1-4a4d-42a4-b5b3-0cd208f9877e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR046")
 					(unit 1)
@@ -9432,7 +9432,7 @@
 			(uuid "dcb1e647-98ae-43bd-9ed3-29e69d494013")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U3")
 					(unit 1)
@@ -9498,7 +9498,7 @@
 			(uuid "d628b123-3c4d-4730-961f-e21c6a99f059")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR028")
 					(unit 1)
@@ -9569,7 +9569,7 @@
 			(uuid "c251b408-8812-4eb5-8333-0a2d2df15687")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D10")
 					(unit 1)
@@ -9639,7 +9639,7 @@
 			(uuid "67076c4c-db05-44d4-8f18-df96ebd3745e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J5")
 					(unit 1)
@@ -9657,7 +9657,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cfd8b79-fae8-44bc-a163-d4bac49d1e4f")
-		(property "Reference" "Q16"
+		(property "Reference" "Q15"
 			(at 240.03 144.7799 0)
 			(effects
 				(font
@@ -9739,9 +9739,9 @@
 			(uuid "b6581507-1f04-4caf-ab51-312a042cfc90")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "Q16")
+					(reference "Q15")
 					(unit 1)
 				)
 			)
@@ -9808,7 +9808,7 @@
 			(uuid "9ae01296-5235-49df-aaed-b44cc2e5cd09")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C7")
 					(unit 1)
@@ -9873,7 +9873,7 @@
 			(uuid "be2c6f18-a626-4221-a407-c9f1e506952d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR021")
 					(unit 1)
@@ -9943,7 +9943,7 @@
 			(uuid "68983516-014a-4880-89c5-c6d7c3940b0e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J6")
 					(unit 1)
@@ -10011,7 +10011,7 @@
 			(uuid "2119f153-fb48-47b1-9710-25627505e4d5")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R22")
 					(unit 1)
@@ -10077,7 +10077,7 @@
 			(uuid "8a85ff1a-1402-443a-b163-faa08b003523")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR052")
 					(unit 1)
@@ -10144,7 +10144,7 @@
 			(uuid "f5c14ec1-7081-419c-a05c-89b7ca5da953")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R30")
 					(unit 1)
@@ -10229,7 +10229,7 @@
 			(uuid "dcb1e647-98ae-43bd-9ed3-29e69d494014")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U3")
 					(unit 2)
@@ -10337,7 +10337,7 @@
 			(uuid "3b92ba04-3830-4a60-aa89-08921201dccb")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U2")
 					(unit 5)
@@ -10406,7 +10406,7 @@
 			(uuid "4edd908f-572b-4e2c-9d85-c6f63e67048e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C11")
 					(unit 1)
@@ -10510,7 +10510,7 @@
 			(uuid "fd179f42-0998-4d93-b4a1-d8036b257ba6")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U1")
 					(unit 4)
@@ -10576,7 +10576,7 @@
 			(uuid "af01a0b9-717c-470b-a490-df573eacc8ae")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR024")
 					(unit 1)
@@ -10642,7 +10642,7 @@
 			(uuid "354ae3c5-414d-49e7-88a9-591b0bc5a20d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR014")
 					(unit 1)
@@ -10746,7 +10746,7 @@
 			(uuid "3b92ba04-3830-4a60-aa89-08921201dcca")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U2")
 					(unit 4)
@@ -10812,7 +10812,7 @@
 			(uuid "12907f6a-feb3-4406-a406-ce838802854d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR029")
 					(unit 1)
@@ -10881,7 +10881,7 @@
 			(uuid "45a39f13-eeaf-44d6-a3fd-6d55f39c62c8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R35")
 					(unit 1)
@@ -10950,7 +10950,7 @@
 			(uuid "011636bc-2ee0-4317-b636-358361f28867")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R19")
 					(unit 1)
@@ -11019,7 +11019,7 @@
 			(uuid "7d1262c7-6846-44b8-894f-6a783c1c5558")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C8")
 					(unit 1)
@@ -11088,7 +11088,7 @@
 			(uuid "45834a83-19bc-47b3-a222-c7c25b7255f7")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C3")
 					(unit 1)
@@ -11106,7 +11106,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d34cf9a-a95c-4448-942c-254d910767a6")
-		(property "Reference" "R41"
+		(property "Reference" "R42"
 			(at 240.03 160.0199 0)
 			(effects
 				(font
@@ -11158,9 +11158,9 @@
 			(uuid "90925e26-a3e2-4fb5-82d0-4316c7cd1fc6")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R41")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -11175,7 +11175,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d5b5f7e-7549-4a8f-9ae2-dd49b76d445f")
-		(property "Reference" "R45"
+		(property "Reference" "R46"
 			(at 238.76 233.68 90)
 			(effects
 				(font
@@ -11225,9 +11225,9 @@
 			(uuid "4fa11472-ad13-4c08-b161-88033a6fdf85")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R45")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -11294,7 +11294,7 @@
 			(uuid "5616189c-3a4e-417c-8efa-12f7425dd4bc")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C10")
 					(unit 1)
@@ -11311,7 +11311,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a0bef9ce-33c0-40b3-8ea2-b789837aa034")
-		(property "Reference" "R44"
+		(property "Reference" "R45"
 			(at 238.76 210.82 90)
 			(effects
 				(font
@@ -11361,9 +11361,9 @@
 			(uuid "4c385732-4ce6-4366-9b97-555b0a3ebe0f")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R44")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -11427,7 +11427,7 @@
 			(uuid "97b74ba3-6807-44c9-881f-959bf24ad0f1")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR045")
 					(unit 1)
@@ -11492,7 +11492,7 @@
 			(uuid "afdb7b55-a218-40ae-a84a-4972861d80f4")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR022")
 					(unit 1)
@@ -11595,7 +11595,7 @@
 			(uuid "3b92ba04-3830-4a60-aa89-08921201dcc9")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U2")
 					(unit 3)
@@ -11661,7 +11661,7 @@
 			(uuid "625a45aa-626f-4fee-86ca-1a1301c9a9ed")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR038")
 					(unit 1)
@@ -11727,7 +11727,7 @@
 			(uuid "6db304a1-09c2-4445-85df-55ea5ddedbe9")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR031")
 					(unit 1)
@@ -11796,7 +11796,7 @@
 			(uuid "ee3a18c2-23f4-45d1-86cb-ad558b37b996")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R15")
 					(unit 1)
@@ -11867,7 +11867,7 @@
 			(uuid "1e2ea746-cde1-49c8-97bd-5e6ce68957eb")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D13")
 					(unit 1)
@@ -11932,7 +11932,7 @@
 			(uuid "c6b3ddd7-18e5-4f30-b178-ccb8c7b53b08")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR035")
 					(unit 1)
@@ -12002,7 +12002,7 @@
 			(uuid "6832f1ad-2948-4c76-a104-f7e995d55845")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R26")
 					(unit 1)
@@ -12072,7 +12072,7 @@
 			(uuid "dce6b602-02ab-4475-ac59-7b9cf0b4e1f3")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R27")
 					(unit 1)
@@ -12141,7 +12141,7 @@
 			(uuid "540343cc-1b86-496b-a663-4092903af0fc")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R34")
 					(unit 1)
@@ -12206,7 +12206,7 @@
 			(uuid "543fc2ba-4737-4703-99d6-df9bbf168d0d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR034")
 					(unit 1)
@@ -12275,7 +12275,7 @@
 			(uuid "e233dd61-903d-4e6f-8ed4-9c5b17f9bae8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C12")
 					(unit 1)
@@ -12341,7 +12341,7 @@
 			(uuid "96e8811a-f3b7-49e7-b396-b18d8d12e5e4")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR026")
 					(unit 1)
@@ -12411,7 +12411,7 @@
 			(uuid "f5b2e3dc-59ab-4b7e-a979-7d8ad2d70c19")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R16")
 					(unit 1)
@@ -12511,7 +12511,7 @@
 			(uuid "11c991b3-72ba-43ed-8696-5b73f6632a93")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "Q11")
 					(unit 1)
@@ -12586,7 +12586,7 @@
 			(uuid "22eaa6e2-3457-4908-8c23-954483d1e2de")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "Q12")
 					(unit 1)
@@ -12604,7 +12604,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba7c797f-3912-4a5d-ab00-1207788073d1")
-		(property "Reference" "R38"
+		(property "Reference" "R39"
 			(at 234.95 281.94 90)
 			(effects
 				(font
@@ -12654,9 +12654,9 @@
 			(uuid "0964f9b0-18f7-45a2-9dd3-5c6a2a757658")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R38")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -12720,7 +12720,7 @@
 			(uuid "782d115a-ae57-47ad-aa75-aacefb2f30c8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR032")
 					(unit 1)
@@ -12788,7 +12788,7 @@
 			(uuid "0f6410b0-1863-426a-a776-21f139d644ff")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R20")
 					(unit 1)
@@ -12859,7 +12859,7 @@
 			(uuid "71952ece-5895-46df-a092-50961b38c37d")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D12")
 					(unit 1)
@@ -12959,7 +12959,7 @@
 			(uuid "f3b0778e-d813-4469-b850-71b34d08841c")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "Q10")
 					(unit 1)
@@ -13026,7 +13026,7 @@
 			(uuid "9f7e35cf-9397-40f6-b20a-8a924e9f3b92")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R32")
 					(unit 1)
@@ -13130,7 +13130,7 @@
 			(uuid "cdcc8688-3768-4d86-9c28-347ac841fe05")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U1")
 					(unit 1)
@@ -13196,7 +13196,7 @@
 			(uuid "da529fc2-ff48-460a-8bf8-324ab4290f6b")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR011")
 					(unit 1)
@@ -13265,7 +13265,7 @@
 			(uuid "6c11be83-43ef-49a8-aa0e-c2707c71f8fd")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "D9")
 					(unit 1)
@@ -13334,7 +13334,7 @@
 			(uuid "ab2a7fc0-0d99-4c97-8364-2ef809225d31")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R31")
 					(unit 1)
@@ -13405,7 +13405,7 @@
 			(uuid "4e612a09-d194-44fb-b6fd-6fc92e6692f8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J3")
 					(unit 1)
@@ -13472,7 +13472,7 @@
 			(uuid "7f30e08e-4038-425c-ad0f-0bb2cfe8a80e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R33")
 					(unit 1)
@@ -13538,7 +13538,7 @@
 			(uuid "e79f4619-4e25-4e29-a619-6eeaee97bc23")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR013")
 					(unit 1)
@@ -13604,7 +13604,7 @@
 			(uuid "4dd29840-7f63-46c0-b67a-70c034044f68")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR017")
 					(unit 1)
@@ -13708,7 +13708,7 @@
 			(uuid "fd179f42-0998-4d93-b4a1-d8036b257ba3")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U1")
 					(unit 3)
@@ -13774,7 +13774,7 @@
 			(uuid "bbace167-6c12-4714-a09a-d07ee28c8dd1")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR037")
 					(unit 1)
@@ -13878,7 +13878,7 @@
 			(uuid "da154690-378f-4fae-a812-cb994b2c9c06")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U2")
 					(unit 2)
@@ -13944,7 +13944,7 @@
 			(uuid "65a68f50-ce91-4c7a-812a-6e5fec364acf")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR09")
 					(unit 1)
@@ -14009,7 +14009,7 @@
 			(uuid "f6f3489b-5227-493f-bf09-2f96cdd20ea8")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR033")
 					(unit 1)
@@ -14100,7 +14100,7 @@
 			(uuid "7af6cb95-116f-4674-8487-3bbcfaa38f25")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U3")
 					(unit 3)
@@ -14169,7 +14169,7 @@
 			(uuid "734f652d-eec3-4c24-b5f8-0d231017ea03")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C13")
 					(unit 1)
@@ -14237,7 +14237,7 @@
 			(uuid "51628f5e-96d1-4745-8431-f8ab57429e57")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R23")
 					(unit 1)
@@ -14305,7 +14305,7 @@
 			(uuid "87ad7110-f1e4-4106-90fa-a05950f89c51")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "JP1")
 					(unit 1)
@@ -14372,7 +14372,7 @@
 			(uuid "033ad29c-086c-453f-9278-e0daf0d0dc8e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R29")
 					(unit 1)
@@ -14438,7 +14438,7 @@
 			(uuid "598364f2-e1fe-4118-91f5-65b31961f72f")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "#PWR012")
 					(unit 1)
@@ -14455,7 +14455,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f08cb03e-9bfd-40d7-83b1-ec44290e10ca")
-		(property "Reference" "R43"
+		(property "Reference" "R44"
 			(at 239.014 297.434 0)
 			(effects
 				(font
@@ -14505,9 +14505,9 @@
 			(uuid "ac9be5dc-a6ec-4aad-b7bf-2ec37af8df2f")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "R43")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -14523,7 +14523,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3b4a04a-ac76-4c1f-b6bf-fd97257ec9f2")
-		(property "Reference" "Q14"
+		(property "Reference" "Q16"
 			(at 234.95 198.12 90)
 			(effects
 				(font
@@ -14579,9 +14579,9 @@
 			(uuid "424ab526-61e1-41ad-b0b7-6e4e95e24a30")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "Q14")
+					(reference "Q16")
 					(unit 1)
 				)
 			)
@@ -14648,7 +14648,7 @@
 			(uuid "e0936503-9545-45b8-b92a-ddf5f4bfc722")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C15")
 					(unit 1)
@@ -14716,7 +14716,7 @@
 			(uuid "52f2c6a2-93b8-4503-a9ff-bd91a2b8031b")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "R25")
 					(unit 1)
@@ -14791,7 +14791,7 @@
 			(uuid "287ba9ac-bc44-4e20-ac12-64d23503d23e")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "Q9")
 					(unit 1)
@@ -14860,7 +14860,7 @@
 			(uuid "3135b943-a5be-4fa7-be9b-498465f56a5c")
 		)
 		(instances
-			(project "Balancer+ESP"
+			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "C6")
 					(unit 1)
