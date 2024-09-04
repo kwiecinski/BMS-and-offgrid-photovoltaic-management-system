@@ -10,7 +10,7 @@ WINDOW 0 0 -56 Bottom 2
 WINDOW 3 0 56 Top 2
 SYMATTR Prefix X
 SYMATTR Value LM358
-SYMATTR ModelFile D:\BMS-and-offgrid-photovoltaic-management-system\simulation\models\LM358 SPICE MODEL.MOD
+SYMATTR ModelFile LM358 SPICE MODEL.MOD
 PIN -32 -32 NONE 8
 PINATTR PinName 1
 PINATTR SpiceOrder 1
