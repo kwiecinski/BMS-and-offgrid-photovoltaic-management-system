@@ -6,7 +6,7 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 106.68 152.4)
+		(at 30.48 64.262)
 		(size 30.48 21.59)
 		(fields_autoplaced yes)
 		(stroke
@@ -18,7 +18,7 @@
 		)
 		(uuid "3750173b-f667-437e-8d19-741cd8c0d09f")
 		(property "Sheetname" "Router and Camera Power Supply"
-			(at 106.68 150.3234 0)
+			(at 30.48 62.1854 0)
 			(effects
 				(font
 					(size 4 4)
@@ -27,7 +27,7 @@
 			)
 		)
 		(property "Sheetfile" "router_camera_power_supply.kicad_sch"
-			(at 106.68 174.5746 0)
+			(at 30.48 86.4366 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44,7 +44,7 @@
 		)
 	)
 	(sheet
-		(at 66.04 148.59)
+		(at 32.766 27.94)
 		(size 25.4 19.05)
 		(fields_autoplaced yes)
 		(stroke
@@ -56,7 +56,7 @@
 		)
 		(uuid "fa193ee4-ad8b-446c-a743-1f65da52715e")
 		(property "Sheetname" "Probe Splitter"
-			(at 66.04 146.5134 0)
+			(at 32.766 25.8634 0)
 			(effects
 				(font
 					(size 4 4)
@@ -65,7 +65,7 @@
 			)
 		)
 		(property "Sheetfile" "probe_splitter.kicad_sch"
-			(at 66.04 168.2246 0)
+			(at 32.766 47.5746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
