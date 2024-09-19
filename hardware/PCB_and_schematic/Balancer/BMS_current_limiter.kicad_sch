@@ -5,116 +5,6 @@
 	(uuid "5eeb61c7-adbd-4348-a8b7-59e8d5d5de61")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x01"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x01"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x01_1_1"
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -1.27)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
 				(offset 1.016) hide)
@@ -245,6 +135,203 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -412,7 +499,7 @@
 				)
 			)
 		)
-		(symbol "Device:D_Schottky_Dual_CommonAnode_AKK_Parallel"
+		(symbol "Device:D_Schottky_Dual_CommonAnode_KAK_Parallel"
 			(pin_names
 				(offset 0.762) hide)
 			(exclude_from_sim no)
@@ -426,7 +513,7 @@
 					)
 				)
 			)
-			(property "Value" "D_Schottky_Dual_CommonAnode_AKK_Parallel"
+			(property "Value" "D_Schottky_Dual_CommonAnode_KAK_Parallel"
 				(at 0 -5.08 0)
 				(effects
 					(font
@@ -470,7 +557,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "D_Schottky_Dual_CommonAnode_AKK_Parallel_0_1"
+			(symbol "D_Schottky_Dual_CommonAnode_KAK_Parallel_0_1"
 				(circle
 					(center -1.27 0)
 					(radius 0.254)
@@ -555,9 +642,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 2.54 180)
 					(length 2.54)
-					(name "A"
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -573,9 +660,9 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "K"
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2459,6 +2546,12 @@
 		(uuid "09004353-a6f9-4576-a4cc-6532fb51028f")
 	)
 	(junction
+		(at 77.47 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c367849-4ef1-4aba-8d6f-53d8c55cf70c")
+	)
+	(junction
 		(at 87.63 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2505,6 +2598,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "37cc8f09-a0cc-4af7-a3f6-b3440975946b")
+	)
+	(junction
+		(at 59.69 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a0bccbd-fadf-4ae9-87bb-bf6209400a85")
 	)
 	(junction
 		(at 236.22 120.65)
@@ -2561,12 +2660,6 @@
 		(uuid "5ab29616-8a36-4dca-b66c-60f01ed535cf")
 	)
 	(junction
-		(at 92.71 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5d2f9d68-6b76-48de-81ac-6c9834c8d328")
-	)
-	(junction
 		(at 106.68 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2577,6 +2670,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "64e8ff7d-00d8-4927-9cba-4751098ba4af")
+	)
+	(junction
+		(at 59.69 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69c1fc1e-5a11-4ba8-addb-a1e95e6e7798")
 	)
 	(junction
 		(at 88.9 57.15)
@@ -2591,16 +2690,16 @@
 		(uuid "79ff11cb-ee36-4d5a-b883-a1f6172844ad")
 	)
 	(junction
-		(at 100.33 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a55d4ca-ac70-43fa-a34d-f2eed7032572")
-	)
-	(junction
 		(at 100.33 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cee3149-1f2a-4fa4-a839-5de0668de611")
+	)
+	(junction
+		(at 247.65 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e1289f9-4177-4dfc-9b04-550a7c5892ad")
 	)
 	(junction
 		(at 236.22 85.09)
@@ -2663,12 +2762,6 @@
 		(uuid "c767758b-515b-42de-9b95-69a346ed3b22")
 	)
 	(junction
-		(at 77.47 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c960057b-b748-4d31-8fdd-80285f9e41d1")
-	)
-	(junction
 		(at 163.83 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2691,6 +2784,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d827ce94-4e2b-4867-aeb2-5d3520bb7ccb")
+	)
+	(junction
+		(at 247.65 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e83f5e93-f60d-46ee-9931-e738c6c52d9e")
 	)
 	(junction
 		(at 227.33 57.15)
@@ -2772,16 +2871,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 27.94) (xy 100.33 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14823b7d-cd4d-421b-9a6f-fd0981258cdc")
-	)
-	(wire
-		(pts
 			(xy 198.12 82.55) (xy 199.39 82.55)
 		)
 		(stroke
@@ -2799,16 +2888,6 @@
 			(type default)
 		)
 		(uuid "15c469fe-9cbc-4dfb-8b29-e5e8649ea8ef")
-	)
-	(wire
-		(pts
-			(xy 92.71 34.29) (xy 92.71 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18359cbf-b18c-429b-9cfd-624a9c804739")
 	)
 	(wire
 		(pts
@@ -2892,6 +2971,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 62.23) (xy 247.65 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "260265ca-23dc-4398-a8df-b37322a49794")
+	)
+	(wire
+		(pts
 			(xy 207.01 87.63) (xy 208.28 87.63)
 		)
 		(stroke
@@ -2909,16 +2998,6 @@
 			(type default)
 		)
 		(uuid "2824c3f3-8e0b-442c-b757-774792207cb0")
-	)
-	(wire
-		(pts
-			(xy 77.47 48.26) (xy 77.47 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c16cdca-3a92-4263-883d-3240c337d5ed")
 	)
 	(wire
 		(pts
@@ -3162,6 +3241,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 48.26) (xy 110.49 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a88c286-83ac-46f7-a614-eb10e6cc1f93")
+	)
+	(wire
+		(pts
 			(xy 95.25 93.98) (xy 95.25 124.46)
 		)
 		(stroke
@@ -3189,6 +3278,16 @@
 			(type default)
 		)
 		(uuid "5d2e9103-b693-403a-9621-40bb10b145fa")
+	)
+	(wire
+		(pts
+			(xy 77.47 57.15) (xy 85.09 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60880050-82b4-4f21-aad0-1068f15693ec")
 	)
 	(wire
 		(pts
@@ -3372,16 +3471,6 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 48.26) (xy 110.49 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "887e9f8a-117d-45b2-9646-7f6103f883e1")
-	)
-	(wire
-		(pts
 			(xy 85.09 49.53) (xy 85.09 57.15)
 		)
 		(stroke
@@ -3492,7 +3581,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 57.15) (xy 231.14 57.15)
+			(xy 227.33 57.15) (xy 247.65 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3502,23 +3591,13 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 57.15) (xy 85.09 57.15)
+			(xy 59.69 62.23) (xy 59.69 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a43d2275-8b65-49fe-8764-2f3d8930d2d7")
-	)
-	(wire
-		(pts
-			(xy 97.79 27.94) (xy 100.33 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5b692d3-f7bf-4190-9343-ebe3bf9e4932")
+		(uuid "a2a427fe-f19d-4932-94cd-ec995af6cf3f")
 	)
 	(wire
 		(pts
@@ -3642,6 +3721,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 57.15) (xy 247.65 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b84fbe0a-0dbc-4a45-aec8-6a9485e4faf2")
+	)
+	(wire
+		(pts
 			(xy 66.04 105.41) (xy 68.58 105.41)
 		)
 		(stroke
@@ -3732,6 +3821,16 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 48.26) (xy 77.47 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c951abdd-7478-4fab-b25a-a16e5f7e0265")
+	)
+	(wire
+		(pts
 			(xy 118.11 82.55) (xy 118.11 88.9)
 		)
 		(stroke
@@ -3782,6 +3881,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 64.77) (xy 59.69 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5e82f7a-c5eb-40b7-bdfb-b88f5ab00c47")
+	)
+	(wire
+		(pts
 			(xy 50.8 105.41) (xy 54.61 105.41)
 		)
 		(stroke
@@ -3822,6 +3931,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 57.15) (xy 59.69 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9841cda-69c5-445d-a731-882a1dc044e8")
+	)
+	(wire
+		(pts
 			(xy 77.47 92.71) (xy 77.47 100.33)
 		)
 		(stroke
@@ -3842,16 +3961,6 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 27.94) (xy 95.25 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ddfbb986-a686-4bd5-8710-63326f12d52f")
-	)
-	(wire
-		(pts
 			(xy 118.11 82.55) (xy 132.08 82.55)
 		)
 		(stroke
@@ -3859,6 +3968,16 @@
 			(type default)
 		)
 		(uuid "debb2d26-914b-4f8a-9360-e4ebc954658c")
+	)
+	(wire
+		(pts
+			(xy 247.65 64.77) (xy 247.65 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e49f3dfb-884d-43a0-ace6-425938fb9adf")
 	)
 	(wire
 		(pts
@@ -3980,6 +4099,28 @@
 		)
 		(uuid "ff5a8038-03db-4f1e-a7c9-5eafeb27c488")
 	)
+	(global_label "R_shunt_L"
+		(shape input)
+		(at 54.61 25.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "17c8d6ef-bbe1-4846-8d9b-a0fc54331e73")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 67.0293 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PWM_OUT_CHRG"
 		(shape input)
 		(at 262.89 105.41 0)
@@ -4046,6 +4187,28 @@
 			)
 		)
 	)
+	(global_label "R_shunt_H"
+		(shape input)
+		(at 54.61 22.86 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e09d376d-0242-4f33-bd51-6fd5d1b4b9f7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 67.3317 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "PWM_OUT_DISCH"
 		(shape input)
 		(at 50.8 105.41 180)
@@ -4087,80 +4250,6 @@
 				)
 				(justify left)
 				(hide yes)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky_Dual_CommonAnode_AKK_Parallel")
-		(at 149.86 74.93 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0005ffaf-e780-4324-bf30-fbf7905142d7")
-		(property "Reference" "D4"
-			(at 144.78 73.3424 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "D_Schottk"
-			(at 144.78 75.8824 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "My-Footprints:TO-220-3_V_Thick_Pads"
-			(at 149.86 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 149.86 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual Schottky diode, common anode on pin 1"
-			(at 149.86 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "aea91111-5e72-40e5-ad55-e43f4b8566ea")
-		)
-		(pin "3"
-			(uuid "5e2193d9-2a58-447b-95c8-b23be07f5240")
-		)
-		(pin "1"
-			(uuid "f17a7293-13ec-4940-8006-43d1ab54c024")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
-					(reference "D4")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -4857,6 +4946,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 252.73 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4adbbba8-eebb-422d-9280-887ab2b5af1d")
+		(property "Reference" "J1"
+			(at 255.27 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BATT_OUT"
+			(at 255.27 62.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "My-Footprints-connectors:Flat-6,3mm-connector-4P"
+			(at 252.73 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 252.73 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 252.73 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e1746d2-4c3f-4e34-9e60-61806550c595")
+		)
+		(pin "4"
+			(uuid "4f3e0d7e-faeb-4bc9-bf33-f67fa1a5ce84")
+		)
+		(pin "3"
+			(uuid "b88df103-ad4b-47c9-ad29-19325299ffc9")
+		)
+		(pin "2"
+			(uuid "b9c819ed-0414-4a7a-950a-3cc27cdefcff")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Zener")
 		(at 181.61 71.12 270)
 		(unit 1)
@@ -5018,6 +5183,79 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
 					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky_Dual_CommonAnode_KAK_Parallel")
+		(at 163.83 74.93 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5646d8fa-ec9e-4ac2-9dc1-72872358cd5b")
+		(property "Reference" "D4"
+			(at 168.91 73.3424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_Schottky_Dual_CommonAnode_KAK_Parallel"
+			(at 168.91 75.8824 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "My-Footprints:TO-220-3_V_Thick_Pads"
+			(at 163.83 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Schottky diode, common anode on pin 1"
+			(at 163.83 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59cf63ac-40a1-4607-9c5e-c08e09eb81a3")
+		)
+		(pin "3"
+			(uuid "d5d67417-6acc-4735-9150-c283843ebd4c")
+		)
+		(pin "2"
+			(uuid "dff2b0e8-6b71-446e-872a-46f9b8834687")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -5199,7 +5437,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_Blade_ATO_directSolder"
+		(property "Footprint" "My-Footprints:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
 			(at 83.312 45.72 90)
 			(effects
 				(font
@@ -5545,6 +5783,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 77.47 53.34 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82728ad5-54b7-4de8-8f39-264b44739b13")
+		(property "Reference" "R75"
+			(at 80.01 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0R"
+			(at 80.01 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 79.248 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 77.47 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 77.47 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96cd7685-eec6-4eb9-8443-ab139e67a296")
+		)
+		(pin "2"
+			(uuid "605da007-5344-4e3a-8701-9ba6169e9cc5")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R75")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Fuse")
 		(at 66.04 57.15 90)
 		(unit 1)
@@ -5569,7 +5877,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_Blade_ATO_directSolder"
+		(property "Footprint" "My-Footprints:Fuse_Blade_ATO_directSolder"
 			(at 66.04 58.928 90)
 			(effects
 				(font
@@ -5606,6 +5914,72 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
 					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDA")
+		(at 247.65 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "83e65b04-35ee-46c6-a4be-a17eebe944f5")
+		(property "Reference" "#PWR071"
+			(at 247.65 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 247.65 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 247.65 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da8ac179-58a1-4ca4-87cb-1589f8ffc459")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -5926,6 +6300,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GNDA")
+		(at 59.69 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9674ed42-a599-42e0-96bb-5a1e7a9c7d2b")
+		(property "Reference" "#PWR010"
+			(at 59.69 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 59.69 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
+			(at 59.69 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b9cbabca-61ca-4ce2-b729-0896618588af")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Simulation_SPICE:PMOS")
 		(at 142.24 59.69 270)
 		(mirror x)
@@ -6025,7 +6465,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 95.25 22.86 90)
+		(at 49.53 25.4 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6033,7 +6473,7 @@
 		(dnp no)
 		(uuid "ae8e45d7-8af9-4b59-b925-4541b714a3c5")
 		(property "Reference" "J12"
-			(at 93.726 17.78 90)
+			(at 44.45 26.924 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6042,7 +6482,7 @@
 			)
 		)
 		(property "Value" "External Current Shunt"
-			(at 86.106 20.066 90)
+			(at 46.736 34.544 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6051,7 +6491,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Hirose:Hirose_DF63M-2P-3.96DSA_1x02_P3.96mm_Vertical"
-			(at 95.25 22.86 0)
+			(at 49.53 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6060,7 +6500,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 95.25 22.86 0)
+			(at 49.53 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6069,7 +6509,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 95.25 22.86 0)
+			(at 49.53 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6087,6 +6527,76 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
 					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 110.49 53.34 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b492306b-15a4-4749-96fb-cacaaa490a86")
+		(property "Reference" "R76"
+			(at 113.03 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0R"
+			(at 113.03 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 112.268 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 110.49 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6206aa8b-4e7a-48c9-b6d6-62144bd92c53")
+		)
+		(pin "2"
+			(uuid "f84f5762-9e41-4456-8c1f-b51b9968142a")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R76")
 					(unit 1)
 				)
 			)
@@ -6380,100 +6890,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x01")
-		(at 54.61 57.15 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ce4987b3-4354-4ee9-9475-617a54438170")
-		(property "Reference" "J1"
-			(at 54.61 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BATT"
-			(at 50.546 57.404 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Pin:Pin_D1.4mm_L8.5mm_W2.8mm_FlatFork"
-			(at 54.61 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 54.61 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f46aea5c-468b-43c2-bea2-ce7c06820ef0")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky_Dual_CommonAnode_AKK_Parallel")
-		(at 163.83 74.93 270)
-		(mirror x)
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 54.61 62.23 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "cf776bb2-d4c0-4989-8be6-078288a762ce")
-		(property "Reference" "D5"
-			(at 158.75 73.3424 90)
+		(uuid "d09cc60b-b7f6-4535-b741-13ae4b740802")
+		(property "Reference" "J13"
+			(at 54.61 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "D_Schottk"
-			(at 158.75 75.8824 90)
+		(property "Value" "BATT_IN"
+			(at 54.61 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "My-Footprints:TO-220-3_V_Thick_Pads"
-			(at 163.83 76.2 0)
+		(property "Footprint" "My-Footprints-connectors:Flat-6,3mm-connector-4P"
+			(at 54.61 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6482,7 +6925,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 163.83 76.2 0)
+			(at 54.61 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6490,28 +6933,31 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Dual Schottky diode, common anode on pin 1"
-			(at 163.83 74.93 0)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 54.61 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "ded69fed-4a15-4242-a45f-3ec20e98f6f5")
-		)
-		(pin "3"
-			(uuid "9dd726fd-7e26-4442-960f-67299a4eb58a")
 		)
 		(pin "1"
-			(uuid "706e14a7-6ec0-4bcb-be77-4e937b6c1ec8")
+			(uuid "db50715c-337f-41d4-ae2f-08447e5c3d6f")
+		)
+		(pin "4"
+			(uuid "034c0647-573c-4846-bc93-20bd156e9561")
+		)
+		(pin "3"
+			(uuid "02ea774c-6232-4f2f-ba34-367f38d6374f")
+		)
+		(pin "2"
+			(uuid "e6135f74-c688-4307-90c4-ca052ec5a5b9")
 		)
 		(instances
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
-					(reference "D5")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -7249,35 +7695,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x01")
-		(at 236.22 57.15 0)
+		(lib_id "Device:D_Schottky_Dual_CommonAnode_KAK_Parallel")
+		(at 149.86 74.93 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f03f3324-60b9-4695-827a-0e52629db7db")
-		(property "Reference" "J2"
-			(at 238.252 55.9378 0)
+		(uuid "fb53f7ca-70e5-44cb-b5f4-dfeb7b811d5b")
+		(property "Reference" "D22"
+			(at 154.94 73.3424 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "OUT"
-			(at 238.252 58.3621 0)
+		(property "Value" "D_Schottky_Dual_CommonAnode_KAK_Parallel"
+			(at 154.94 75.8824 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_Pin:Pin_D1.4mm_L8.5mm_W2.8mm_FlatFork"
-			(at 236.22 57.15 0)
+		(property "Footprint" "My-Footprints:TO-220-3_V_Thick_Pads"
+			(at 149.86 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7286,7 +7732,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 236.22 57.15 0)
+			(at 149.86 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7294,8 +7740,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 236.22 57.15 0)
+		(property "Description" "Dual Schottky diode, common anode on pin 1"
+			(at 149.86 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7304,12 +7750,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "eaf1504d-84db-4620-a6cf-3084a05dd9df")
+			(uuid "d69c1043-bc93-468e-a71c-8300858b4bbe")
+		)
+		(pin "3"
+			(uuid "145219e1-a081-4494-92cf-c58a8703e4a7")
+		)
+		(pin "2"
+			(uuid "90b034be-ebb1-459c-bebb-bf81becfd600")
 		)
 		(instances
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
-					(reference "J2")
+					(reference "D22")
 					(unit 1)
 				)
 			)

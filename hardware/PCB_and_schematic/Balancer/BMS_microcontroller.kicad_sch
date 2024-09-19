@@ -3619,6 +3619,12 @@
 		(uuid "316f1bfd-f46a-4663-bf4a-801c23a73d8b")
 	)
 	(junction
+		(at 156.21 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "52601aa3-7fa8-4106-8f08-421b6c15e658")
+	)
+	(junction
 		(at 248.92 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3647,12 +3653,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "85a02e8e-5def-4d57-84ab-caf1298878c3")
-	)
-	(junction
-		(at 143.51 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8698c8a5-e7b6-4e8f-9dc8-a3a4d44e1855")
 	)
 	(junction
 		(at 248.92 64.77)
@@ -4228,7 +4228,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 165.1) (xy 156.21 158.75)
+			(xy 156.21 165.1) (xy 156.21 161.29)
 		)
 		(stroke
 			(width 0)
@@ -4745,6 +4745,16 @@
 			(type default)
 		)
 		(uuid "7582f26f-33d6-4d87-b4b2-41e8ffb08318")
+	)
+	(wire
+		(pts
+			(xy 143.51 161.29) (xy 156.21 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "764204ff-3f91-4aff-84fb-09eb40e393ef")
 	)
 	(polyline
 		(pts
@@ -5268,6 +5278,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 161.29) (xy 156.21 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3fa6534-651b-460e-9632-af64793ec000")
+	)
+	(wire
+		(pts
 			(xy 106.68 111.76) (xy 106.68 114.3)
 		)
 		(stroke
@@ -5466,16 +5486,6 @@
 		)
 		(uuid "dd73521a-b55a-48a1-ab49-99a475759a63")
 	)
-	(wire
-		(pts
-			(xy 143.51 161.29) (xy 143.51 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e055496a-a767-42e6-bdc4-1be0a1046ba2")
-	)
 	(polyline
 		(pts
 			(xy 24.13 144.78) (xy 160.02 144.78)
@@ -5578,7 +5588,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 165.1) (xy 143.51 165.1)
+			(xy 140.97 165.1) (xy 144.78 165.1)
 		)
 		(stroke
 			(width 0)
@@ -5625,16 +5635,6 @@
 			(type default)
 		)
 		(uuid "fc3cd07b-4649-4da2-af32-3b729797b430")
-	)
-	(wire
-		(pts
-			(xy 143.51 165.1) (xy 144.78 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fdbebb04-5c59-4298-9865-9816986be93c")
 	)
 	(wire
 		(pts
@@ -5848,7 +5848,7 @@
 	)
 	(global_label "TEMP_AKU_12V"
 		(shape input)
-		(at 135.89 64.77 0)
+		(at 135.89 54.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5858,7 +5858,7 @@
 		)
 		(uuid "10dbe325-038a-46e9-96e5-618e5a1f04e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.8451 64.77 0)
+			(at 152.8451 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6002,7 +6002,7 @@
 	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
-		(at 135.89 67.31 0)
+		(at 135.89 57.15 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6012,7 +6012,7 @@
 		)
 		(uuid "3bfae411-ca5a-4c8b-bf68-c51f5e5db045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 152.8451 67.31 0)
+			(at 152.8451 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6084,28 +6084,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "IDEAL_DIODE_DISABLE"
-		(shape input)
-		(at 135.89 69.85 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "44050be1-56b2-480a-9a0c-f6d65de69663")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.1952 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6332,7 +6310,7 @@
 	)
 	(global_label "TEMP_HEAT_SINK_12V"
 		(shape input)
-		(at 135.89 54.61 0)
+		(at 135.89 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6342,7 +6320,7 @@
 		)
 		(uuid "9557f1dd-3c02-4327-b90a-d9cc745a300c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.0741 54.61 0)
+			(at 159.0741 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6640,7 +6618,7 @@
 	)
 	(global_label "TEMP_HEAT_SINK_24V"
 		(shape input)
-		(at 135.89 57.15 0)
+		(at 135.89 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6650,7 +6628,7 @@
 		)
 		(uuid "e7fe1883-ff89-4180-8cbe-cc277cb49d97")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.0741 57.15 0)
+			(at 159.0741 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6797,7 +6775,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D"
 			(at 144.4752 161.29 0)
 			(effects
 				(font
@@ -8808,7 +8786,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMC"
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 245.11 143.51 0)
 			(effects
 				(font
@@ -10263,7 +10241,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMC"
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 240.03 143.51 0)
 			(effects
 				(font

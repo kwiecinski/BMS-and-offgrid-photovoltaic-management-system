@@ -3051,6 +3051,12 @@
 		(uuid "714ab93d-114f-4129-91ef-03d8f313232e")
 	)
 	(junction
+		(at 312.42 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7529ebb4-251a-4724-9af2-49e281b14d10")
+	)
+	(junction
 		(at 237.49 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4232,16 +4238,6 @@
 	)
 	(wire
 		(pts
-			(xy 312.42 85.09) (xy 307.34 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ca6db89-2fa3-4c62-a063-a00f70598ba4")
-	)
-	(wire
-		(pts
 			(xy 250.19 238.76) (xy 250.19 223.52)
 		)
 		(stroke
@@ -4849,16 +4845,6 @@
 			(type default)
 		)
 		(uuid "9e58c8b4-dea2-48b9-91ac-181bfdaeadae")
-	)
-	(wire
-		(pts
-			(xy 307.34 85.09) (xy 307.34 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9eecf30f-4723-4003-a132-d62dfd5a3371")
 	)
 	(wire
 		(pts
@@ -5922,6 +5908,16 @@
 	)
 	(wire
 		(pts
+			(xy 312.42 82.55) (xy 312.42 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffcb60ee-19f3-4fc9-a38d-2066b9729b1a")
+	)
+	(wire
+		(pts
 			(xy 73.66 204.47) (xy 73.66 217.17)
 		)
 		(stroke
@@ -6260,72 +6256,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GNDA")
-		(at 307.34 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0242c863-6026-4e7c-9ba7-e5860af425ed")
-		(property "Reference" "#PWR050"
-			(at 307.34 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 307.34 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 307.34 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 307.34 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDA\" , analog ground"
-			(at 307.34 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e756ba2-95f8-4be2-98b5-c8bed7f6b129")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "#PWR050")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 59.69 90.17 270)
 		(unit 1)
@@ -6478,7 +6408,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Batt"
+		(property "Value" "BATT_12V"
 			(at 320.04 85.0899 0)
 			(effects
 				(font
@@ -6487,7 +6417,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "My-Footprints-connectors:Flat-6,3mm-connector-2P"
 			(at 317.5 82.55 0)
 			(effects
 				(font
@@ -8921,7 +8851,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_Blade_ATO_directSolder"
+		(property "Footprint" "My-Footprints:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
 			(at 304.8 84.328 90)
 			(effects
 				(font
