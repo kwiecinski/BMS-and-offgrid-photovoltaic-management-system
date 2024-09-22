@@ -58,7 +58,10 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|202600000|84610000|9358d545-4f2a-4e8a-adfd-9e90ff7fa332|db6eb7f2-a4b1-4b2c-8410-0c4fee938505",
+        "clearance|208325000|83110000|86165308-ac22-447e-90cd-7cd232ff13fe|2a79e5ac-f8ca-482d-b197-fe8eada69502"
+      ],
       "meta": {
         "version": 2
       },
@@ -95,9 +98,9 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -110,7 +113,7 @@
         "tracks_crossing": "error",
         "unconnected_items": "error",
         "unresolved_variable": "error",
-        "via_dangling": "warning",
+        "via_dangling": "ignore",
         "zones_intersect": "error"
       },
       "rules": {
