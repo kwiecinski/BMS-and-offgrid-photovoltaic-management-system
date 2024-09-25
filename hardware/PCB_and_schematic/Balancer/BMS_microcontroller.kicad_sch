@@ -3481,6 +3481,12 @@
 		(uuid "74be366d-2b6f-4b35-a2c3-137d18b8631a")
 	)
 	(junction
+		(at 318.77 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7eb0c024-0c04-4528-952b-cbcfeccacd41")
+	)
+	(junction
 		(at 104.14 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3770,6 +3776,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 157.48) (xy 311.15 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12b11353-4de2-4662-9372-ed4378845952")
+	)
+	(wire
+		(pts
 			(xy 82.55 226.06) (xy 82.55 229.87)
 		)
 		(stroke
@@ -3797,6 +3813,16 @@
 			(type default)
 		)
 		(uuid "14448d64-6f38-4aaf-94d9-312086437e95")
+	)
+	(wire
+		(pts
+			(xy 327.66 135.89) (xy 327.66 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16bcecb3-b6c0-4876-8b8a-5d9d477b253e")
 	)
 	(polyline
 		(pts
@@ -4720,6 +4746,16 @@
 	)
 	(wire
 		(pts
+			(xy 311.15 125.73) (xy 311.15 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d1f1c86-f9ce-4480-923f-047974afba5b")
+	)
+	(wire
+		(pts
 			(xy 58.42 226.06) (xy 58.42 222.25)
 		)
 		(stroke
@@ -4740,6 +4776,16 @@
 	)
 	(wire
 		(pts
+			(xy 318.77 157.48) (xy 320.04 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8def2433-2399-486c-a044-2d0d76f58ff0")
+	)
+	(wire
+		(pts
 			(xy 359.41 55.88) (xy 359.41 57.15)
 		)
 		(stroke
@@ -4757,6 +4803,16 @@
 			(type default)
 		)
 		(uuid "8e8ec6bb-95b6-45af-9b55-a3ebe06f147b")
+	)
+	(wire
+		(pts
+			(xy 327.66 125.73) (xy 327.66 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ec2a687-1ac6-48f6-8113-4d3eaa69d684")
 	)
 	(wire
 		(pts
@@ -4830,6 +4886,16 @@
 	)
 	(wire
 		(pts
+			(xy 293.37 142.24) (xy 294.64 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "997a99a8-8a64-436b-907c-1bf0d4bbdf7f")
+	)
+	(wire
+		(pts
 			(xy 248.92 46.99) (xy 256.54 46.99)
 		)
 		(stroke
@@ -4857,6 +4923,16 @@
 			(type default)
 		)
 		(uuid "9cb6ce38-be56-46ca-941b-93d452084628")
+	)
+	(wire
+		(pts
+			(xy 318.77 114.3) (xy 327.66 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d5d1bf5-ca7b-4fce-b815-a7fc63f58c77")
 	)
 	(wire
 		(pts
@@ -4910,6 +4986,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 165.1) (xy 118.11 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a724e3bc-4a3b-4e59-83df-1c9cfddfd022")
+	)
+	(wire
+		(pts
 			(xy 204.47 67.31) (xy 215.9 67.31)
 		)
 		(stroke
@@ -4940,16 +5026,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 165.1) (xy 120.65 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa9f8d38-cdfc-4bc7-88df-17851e71ea3c")
-	)
-	(wire
-		(pts
 			(xy 52.07 90.17) (xy 60.96 90.17)
 		)
 		(stroke
@@ -4957,6 +5033,16 @@
 			(type default)
 		)
 		(uuid "ac1f8f42-8272-48dc-afca-04a8bc5bc524")
+	)
+	(wire
+		(pts
+			(xy 118.11 165.1) (xy 118.11 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad86deaf-7861-4165-82f8-988ecfa3558d")
 	)
 	(wire
 		(pts
@@ -5060,6 +5146,16 @@
 	)
 	(wire
 		(pts
+			(xy 311.15 114.3) (xy 318.77 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb8527c8-ad82-4b15-bf9e-3e299a809761")
+	)
+	(wire
+		(pts
 			(xy 58.42 210.82) (xy 76.2 210.82)
 		)
 		(stroke
@@ -5107,6 +5203,16 @@
 			(type default)
 		)
 		(uuid "c2475be0-9335-4a77-85de-b1170ae52d61")
+	)
+	(wire
+		(pts
+			(xy 311.15 134.62) (xy 311.15 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3479cfb-2ee1-4e6d-b170-604783e2c23a")
 	)
 	(polyline
 		(pts
@@ -5160,6 +5266,16 @@
 	)
 	(wire
 		(pts
+			(xy 311.15 114.3) (xy 311.15 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce88637d-6604-4e0f-bc29-811548dc59dc")
+	)
+	(wire
+		(pts
 			(xy 256.54 67.31) (xy 261.62 67.31)
 		)
 		(stroke
@@ -5190,16 +5306,6 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 165.1) (xy 113.03 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d144efe4-cb06-46fb-8ae8-4fba02ce4a76")
-	)
-	(wire
-		(pts
 			(xy 245.11 149.86) (xy 240.03 149.86)
 		)
 		(stroke
@@ -5217,6 +5323,16 @@
 			(type default)
 		)
 		(uuid "d3517a2b-ddf6-4c97-9635-274cb10808d1")
+	)
+	(wire
+		(pts
+			(xy 327.66 114.3) (xy 327.66 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5e6110d-64b0-48fa-b372-591bd62e2b30")
 	)
 	(wire
 		(pts
@@ -5340,6 +5456,16 @@
 	)
 	(wire
 		(pts
+			(xy 302.26 142.24) (xy 303.53 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5c0fe15-a030-4ef6-b5bc-c08ca84e30cd")
+	)
+	(wire
+		(pts
 			(xy 82.55 195.58) (xy 82.55 199.39)
 		)
 		(stroke
@@ -5357,6 +5483,16 @@
 			(type default)
 		)
 		(uuid "ecf98c46-d46f-4bf1-86a9-7003dc5ea883")
+	)
+	(wire
+		(pts
+			(xy 318.77 110.49) (xy 318.77 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f07993cf-2642-4b89-a6fa-f9ac4ca1bfde")
 	)
 	(wire
 		(pts
@@ -5537,6 +5673,16 @@
 			)
 		)
 		(uuid "5117b95b-d991-422e-9d42-0ed5d072cefb")
+	)
+	(text "STATUS DIODES"
+		(exclude_from_sim no)
+		(at 343.662 104.648 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "5c01011b-5acc-414c-a364-ec175386b192")
 	)
 	(text "ST485"
 		(exclude_from_sim no)
@@ -5811,6 +5957,28 @@
 		(uuid "2cf22dfb-e2e9-4c67-8836-1eef3d31c178")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 334.8348 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RA6"
+		(shape input)
+		(at 293.37 142.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3650f9b0-e0bd-4ab6-b696-e7dada8068ce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 286.8167 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6436,6 +6604,28 @@
 			)
 		)
 	)
+	(global_label "RC0"
+		(shape input)
+		(at 309.88 157.48 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cec60189-6c1f-4d00-9e31-8d0db688f681")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 303.1453 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "DBG_UART"
 		(shape input)
 		(at 39.37 132.08 180)
@@ -6970,6 +7160,75 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 327.66 132.08 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "180f3bb3-04f9-40e3-a5d8-683f8bdf32c7")
+		(property "Reference" "R80"
+			(at 329.184 131.064 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "220R"
+			(at 329.184 132.842 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 329.438 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 327.66 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 327.66 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1c22ba35-bfad-4bb4-b60b-d1c75ad2977a")
+		)
+		(pin "1"
+			(uuid "5c1772d8-feb1-43b8-a308-e21956adfde5")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "R80")
 					(unit 1)
 				)
 			)
@@ -7749,6 +8008,220 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 298.45 142.24 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3bd93fed-7d15-46a1-b089-8c44ebe4f3a2")
+		(property "Reference" "R77"
+			(at 300.228 144.526 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 300.482 146.304 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 298.45 140.462 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 298.45 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 298.45 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "93594c42-5ed3-4757-8bc1-11c0c0e8ee9b")
+		)
+		(pin "1"
+			(uuid "da418e0e-bcb1-4283-a599-e2f4995b70e3")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "R77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 327.66 121.92 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f186d82-a6bf-4970-bb27-91baf6ab5169")
+		(property "Reference" "D23"
+			(at 330.2 119.0624 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 330.2 121.6024 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 327.66 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 327.66 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 327.66 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d12b08f-8b90-476d-bd3f-675c1b03fddb")
+		)
+		(pin "2"
+			(uuid "7f11c999-cf51-427f-ae66-9286ac737b18")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC817")
+		(at 308.61 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "401df8b6-7f32-48fd-831a-667bba6f1281")
+		(property "Reference" "Q21"
+			(at 304.546 136.398 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817"
+			(at 302.26 138.684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 313.69 144.145 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.fairchildsemi.com/ds/BC/BC817.pdf"
+			(at 308.61 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 308.61 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "588de3fc-e7d1-43a0-8d72-201414ac64be")
+		)
+		(pin "2"
+			(uuid "90693489-5ebb-4b02-bee5-8c465b9b656a")
+		)
+		(pin "1"
+			(uuid "462f3e28-bffd-43b4-aa1f-b90dd758b0a5")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "Q21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 82.55 218.44 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8229,6 +8702,150 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 314.96 157.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d0eb31d-c17e-436e-8dde-3bd23ef66c75")
+		(property "Reference" "R79"
+			(at 316.738 159.512 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 316.992 161.544 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 314.96 155.702 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 314.96 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 314.96 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "71817afb-e726-4934-9793-b1faf22e9459")
+		)
+		(pin "1"
+			(uuid "9946f3e5-4bf7-42b2-94e6-e13e60508f39")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "R79")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC817")
+		(at 325.12 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d3affdc-4bcc-4434-9913-34114d47ac78")
+		(property "Reference" "Q22"
+			(at 321.056 151.638 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817"
+			(at 318.77 153.924 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 330.2 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.fairchildsemi.com/ds/BC/BC817.pdf"
+			(at 325.12 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 325.12 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "36803d25-d0ea-44c7-a5e7-9c647dae122d")
+		)
+		(pin "2"
+			(uuid "9fd9d0cb-010d-4a89-9fbf-909f4ecfba42")
+		)
+		(pin "1"
+			(uuid "3ee7800c-31b2-40f2-b538-4b9cdfbeab5a")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "Q22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 234.95 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8497,6 +9114,75 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "R47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 311.15 130.81 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "63b99989-9334-49c4-bb5f-15f443fb67c6")
+		(property "Reference" "R78"
+			(at 312.674 129.794 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "220R"
+			(at 312.674 131.572 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 312.928 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 311.15 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 311.15 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b3381d55-5c15-46bc-a433-834fb0884417")
+		)
+		(pin "1"
+			(uuid "27145bd2-4a30-4268-9837-9dc0dea3be1f")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "R78")
 					(unit 1)
 				)
 			)
@@ -9330,6 +10016,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 311.15 121.92 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9132d7cd-8aef-4780-bb4d-5c20893a9021")
+		(property "Reference" "D5"
+			(at 313.69 119.0624 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 313.69 121.6024 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 311.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 311.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 311.15 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "df019641-209b-40d7-9af7-4bc7d7c1773e")
+		)
+		(pin "2"
+			(uuid "d685cea3-b360-4f37-bcd1-ec7fdaea2086")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 82.55 229.87 0)
 		(unit 1)
@@ -9919,7 +10675,7 @@
 				)
 			)
 		)
-		(property "Footprint" "My-Footprints-converters-modules:MP1584_Mini_3A_Step_Down_Conv"
+		(property "Footprint" "My-Footprints-converters-modules:LM2596-Step-Down-Conv"
 			(at 130.81 158.75 0)
 			(effects
 				(font
@@ -10097,6 +10853,72 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 311.15 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aee4f977-a35b-4d6b-a8bd-1d48e4e25ea3")
+		(property "Reference" "#PWR050"
+			(at 311.15 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 311.15 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 311.15 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 311.15 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 311.15 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f4c7bcc-ca0d-4b2f-8016-76c972d7ce4b")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -11276,6 +12098,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 327.66 162.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9356aa7-8e0d-4e32-a51a-6c35f0203c89")
+		(property "Reference" "#PWR089"
+			(at 327.66 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 327.66 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 327.66 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 327.66 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 327.66 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15d535a4-4975-4378-8d4e-f62e38cd1868")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 220.98 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11714,7 +12602,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 113.03 160.02 0)
+		(at 118.11 161.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11723,7 +12611,7 @@
 		(fields_autoplaced yes)
 		(uuid "f75a4aca-2945-454e-a886-3f8b120026f8")
 		(property "Reference" "#PWR065"
-			(at 113.03 163.83 0)
+			(at 118.11 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11732,7 +12620,7 @@
 			)
 		)
 		(property "Value" "+BATT_24V"
-			(at 113.03 154.94 0)
+			(at 118.11 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11740,7 +12628,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 160.02 0)
+			(at 118.11 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11749,7 +12637,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 160.02 0)
+			(at 118.11 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11758,7 +12646,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 113.03 160.02 0)
+			(at 118.11 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11773,6 +12661,72 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 318.77 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f79254b1-75de-4a39-8c99-1bb2567ae7e9")
+		(property "Reference" "#PWR088"
+			(at 318.77 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 318.77 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 318.77 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 318.77 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 318.77 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f7674fa-18f1-4d65-8150-0b471c10b6bb")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
