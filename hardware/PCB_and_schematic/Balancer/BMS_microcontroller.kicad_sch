@@ -6842,8 +6842,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 137.668 154.686 0)
+		(property "Value" "100u/6,3V"
+			(at 132.334 154.686 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6851,7 +6851,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D"
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B"
 			(at 144.4752 161.29 0)
 			(effects
 				(font
@@ -6869,7 +6869,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "VISHAY TMCU SMD CODE JA8"
 			(at 143.51 157.48 0)
 			(effects
 				(font
@@ -8103,7 +8103,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "LED_SMD:LED_PLCC-2_3.4x3.0mm_KA"
 			(at 327.66 121.92 0)
 			(effects
 				(font
@@ -10043,7 +10043,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "LED_SMD:LED_PLCC-2_3.4x3.0mm_KA"
 			(at 311.15 121.92 0)
 			(effects
 				(font

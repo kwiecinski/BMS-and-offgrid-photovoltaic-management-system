@@ -2654,12 +2654,6 @@
 		(uuid "59fda882-7b85-4c43-a45a-09f34484639b")
 	)
 	(junction
-		(at 100.33 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5ab29616-8a36-4dca-b66c-60f01ed535cf")
-	)
-	(junction
 		(at 106.68 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2732,12 +2726,6 @@
 		(uuid "9ceaf578-bd41-458d-964b-b3cedb3f019e")
 	)
 	(junction
-		(at 92.71 41.91)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a19481ac-0122-4316-8d7f-f50672e23053")
-	)
-	(junction
 		(at 92.71 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2786,6 +2774,12 @@
 		(uuid "d827ce94-4e2b-4867-aeb2-5d3520bb7ccb")
 	)
 	(junction
+		(at 100.33 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc8c50b6-5d0b-4a06-83a7-e13b6bc9a97c")
+	)
+	(junction
 		(at 247.65 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2808,6 +2802,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbf05786-fea1-42ff-9fe0-8907f486025f")
+	)
+	(junction
+		(at 92.71 41.91)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc71d65e-7eab-468c-a1ed-09e00331042f")
 	)
 	(wire
 		(pts
@@ -3078,16 +3078,6 @@
 			(type default)
 		)
 		(uuid "3d133767-f51f-4584-b691-97386b564f8b")
-	)
-	(wire
-		(pts
-			(xy 92.71 48.26) (xy 92.71 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dbf2ba2-d416-4cf8-8913-4c91c2d03425")
 	)
 	(wire
 		(pts
@@ -3521,16 +3511,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 48.26) (xy 100.33 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "964806b6-eea5-4f65-b838-141cb6f58934")
-	)
-	(wire
-		(pts
 			(xy 54.61 110.49) (xy 54.61 105.41)
 		)
 		(stroke
@@ -3728,6 +3708,16 @@
 			(type default)
 		)
 		(uuid "b84fbe0a-0dbc-4a45-aec8-6a9485e4faf2")
+	)
+	(wire
+		(pts
+			(xy 100.33 41.91) (xy 100.33 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b919e547-80c3-4269-932f-07ace9a02d5f")
 	)
 	(wire
 		(pts
@@ -4038,6 +4028,16 @@
 			(type default)
 		)
 		(uuid "f6d5acbd-659f-43d6-8e11-68dd90e13b9a")
+	)
+	(wire
+		(pts
+			(xy 92.71 41.91) (xy 92.71 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f90c2535-e40c-4fc1-a17a-051267c2c423")
 	)
 	(wire
 		(pts
@@ -4735,6 +4735,83 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 96.52 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b68e35e-d16d-434f-87b4-1663c0da04f7")
+		(property "Reference" "R74"
+			(at 96.774 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20A/75mV"
+			(at 96.52 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal"
+			(at 96.52 43.688 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 96.52 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SHUNT RESISTOR"
+			(at 96.774 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field5" ""
+			(at 96.52 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "558fe74f-392e-45e9-993e-a168267cab57")
+		)
+		(pin "2"
+			(uuid "6a9e41cd-b11f-49dd-a6c8-7e725b887e63")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
+					(reference "R74")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 77.47 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4894,7 +4971,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "100u/35V"
 			(at 121.92 72.7709 0)
 			(effects
 				(font
@@ -4903,7 +4980,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x4.9"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
 			(at 124.7648 76.2 0)
 			(effects
 				(font
@@ -5498,8 +5575,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 196.85 73.66 0)
+		(property "Value" "100u/35V"
+			(at 203.2 73.406 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5507,7 +5584,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x4.9"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
 			(at 189.5348 76.2 0)
 			(effects
 				(font
@@ -6958,83 +7035,6 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
 					(reference "J13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 96.52 41.91 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d0bd8b9a-c96b-493e-ac9f-b5737ab8deee")
-		(property "Reference" "R74"
-			(at 96.52 41.656 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 96.52 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal"
-			(at 96.52 43.688 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 96.52 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "SHUNT RESISTOR"
-			(at 96.774 39.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field5" ""
-			(at 96.52 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9693a272-643e-4c05-a882-eb21c9e21d1c")
-		)
-		(pin "2"
-			(uuid "8e291aee-04f3-4444-87c4-b41c087a550e")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/f65ef685-3e95-4f8a-97fe-0688761539e6"
-					(reference "R74")
 					(unit 1)
 				)
 			)
