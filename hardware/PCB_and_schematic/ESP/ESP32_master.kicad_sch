@@ -6,6 +6,44 @@
 	(paper "A4" portrait)
 	(lib_symbols)
 	(sheet
+		(at 46.482 86.868)
+		(size 23.622 20.828)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8e097fd6-54e8-4c39-b60f-16b9a98546bb")
+		(property "Sheetname" "ESP32_METERS_PROBE"
+			(at 46.482 86.1564 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP_32_energy_meters_probe.kicad_sch"
+			(at 46.482 108.2806 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ESP32_master"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 24.13 34.29)
 		(size 35.56 23.495)
 		(fields_autoplaced yes)
