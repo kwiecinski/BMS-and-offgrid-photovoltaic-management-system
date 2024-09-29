@@ -487,7 +487,13 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "My-Footprints-orw-els",
+      "My-Footprints-converters-modules",
+      "My-Footprints",
+      "My-Footprints-connectors",
+      "My-Footprints-displays"
+    ],
     "pinned_symbol_libs": []
   },
   "meta": {
