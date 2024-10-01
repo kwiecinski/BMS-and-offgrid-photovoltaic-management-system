@@ -13097,7 +13097,7 @@
 	)
 	(global_label "CO_SENSOR_SWITCH_VOLTAGES"
 		(shape input)
-		(at 101.6 266.7 0)
+		(at 101.6 261.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13107,7 +13107,7 @@
 		)
 		(uuid "6d4c4e0c-0a2f-498a-90b2-96dd15b1e412")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.5532 266.7 0)
+			(at 133.5532 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13119,7 +13119,7 @@
 	)
 	(global_label "BUZZER"
 		(shape input)
-		(at 101.6 261.62 0)
+		(at 101.6 266.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13129,7 +13129,7 @@
 		)
 		(uuid "6f4185ab-cf30-4ed3-8ebb-5466fd2fa563")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 112.0237 261.62 0)
+			(at 112.0237 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
