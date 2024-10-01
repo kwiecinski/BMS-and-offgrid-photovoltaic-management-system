@@ -12611,7 +12611,7 @@
 	)
 	(global_label "METER_GRID_RX"
 		(shape input)
-		(at 316.23 152.4 0)
+		(at 316.23 195.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12621,7 +12621,7 @@
 		)
 		(uuid "144e04b1-70f8-4f0e-902c-a93e42c83b9a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 334.0317 152.4 0)
+			(at 334.0317 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12655,7 +12655,7 @@
 	)
 	(global_label "INVERTER_RX"
 		(shape input)
-		(at 316.23 187.96 0)
+		(at 316.23 157.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12665,7 +12665,7 @@
 		)
 		(uuid "19f8afb1-c45b-4f26-b8df-c8a315812f1a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 331.4918 187.96 0)
+			(at 331.4918 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12721,7 +12721,7 @@
 	)
 	(global_label "LCD_DISP_DATA"
 		(shape input)
-		(at 316.23 193.04 0)
+		(at 316.23 187.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12731,7 +12731,7 @@
 		)
 		(uuid "244e4204-a0a9-4d17-adf4-63e17de3c166")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 333.4876 193.04 0)
+			(at 333.4876 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12809,7 +12809,7 @@
 	)
 	(global_label "SMOKE_DETECTOR_RESET"
 		(shape input)
-		(at 316.23 160.02 0)
+		(at 101.6 259.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12819,7 +12819,7 @@
 		)
 		(uuid "364b1774-faf9-40b6-a5c5-8cee55849cfb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 342.6796 160.02 0)
+			(at 128.0496 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12898,7 +12898,7 @@
 	)
 	(global_label "METER_GRID_TX"
 		(shape input)
-		(at 316.23 147.32 0)
+		(at 316.23 198.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12908,7 +12908,7 @@
 		)
 		(uuid "49f1d5fc-e442-47d8-9a16-1842246b00ac")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 333.7293 147.32 0)
+			(at 333.7293 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13009,7 +13009,7 @@
 	)
 	(global_label "H2_SENSOR"
 		(shape input)
-		(at 316.23 175.26 0)
+		(at 316.23 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13019,7 +13019,7 @@
 		)
 		(uuid "5d03a263-4559-40d3-baf5-1090e81f8bca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 330.2218 175.26 0)
+			(at 330.2218 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13031,7 +13031,7 @@
 	)
 	(global_label "RS485_OUTPUT_ENABLE_ESP"
 		(shape input)
-		(at 316.23 185.42 0)
+		(at 316.23 175.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13041,7 +13041,7 @@
 		)
 		(uuid "5ddf7afa-50c3-4dd3-8893-1629e6a072bf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 346.0664 185.42 0)
+			(at 346.0664 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13053,7 +13053,7 @@
 	)
 	(global_label "CO2_SENSOR"
 		(shape input)
-		(at 316.23 177.8 0)
+		(at 316.23 147.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13063,7 +13063,7 @@
 		)
 		(uuid "6644c0a1-ed79-4ac7-b4d9-a35ac74c1c6e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 331.4918 177.8 0)
+			(at 331.4918 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13139,7 +13139,7 @@
 			)
 		)
 	)
-	(global_label "RS232_RX_ESP"
+	(global_label "RS485_RX_ESP"
 		(shape input)
 		(at 144.78 165.1 180)
 		(fields_autoplaced yes)
@@ -13163,7 +13163,7 @@
 	)
 	(global_label "INVERTER_TX"
 		(shape input)
-		(at 316.23 190.5 0)
+		(at 316.23 154.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13173,7 +13173,7 @@
 		)
 		(uuid "7a0c6a77-75c4-4c8a-8460-a3e135aea42c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 331.1894 190.5 0)
+			(at 331.1894 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13185,7 +13185,7 @@
 	)
 	(global_label "DHT22"
 		(shape input)
-		(at 101.6 259.08 0)
+		(at 316.23 177.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13196,7 +13196,7 @@
 		)
 		(uuid "7a379fb1-4888-47fe-b14f-1492507301f7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 111.0483 259.08 0)
+			(at 325.6783 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13294,7 +13294,7 @@
 			)
 		)
 	)
-	(global_label "RS232_TX_ESP"
+	(global_label "RS485_TX_ESP"
 		(shape input)
 		(at 148.59 194.31 180)
 		(fields_autoplaced yes)
@@ -13406,7 +13406,7 @@
 	)
 	(global_label "SMOKE_DETECTOR_OUTPUT"
 		(shape input)
-		(at 316.23 157.48 0)
+		(at 316.23 185.42 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13416,7 +13416,7 @@
 		)
 		(uuid "a4590f4d-b10c-4c44-b566-9a4bd3364318")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 344.1312 157.48 0)
+			(at 344.1312 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13472,7 +13472,7 @@
 	)
 	(global_label "METER_MAIN_RX"
 		(shape input)
-		(at 316.23 154.94 0)
+		(at 316.23 149.86 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13482,7 +13482,7 @@
 		)
 		(uuid "b29957f7-9e09-4b26-9710-60a778278bad")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 334.0922 154.94 0)
+			(at 334.0922 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13516,7 +13516,7 @@
 	)
 	(global_label "METER_MAIN_TX"
 		(shape input)
-		(at 316.23 149.86 0)
+		(at 316.23 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13526,7 +13526,7 @@
 		)
 		(uuid "b92ee03c-de77-49c3-b3b0-43f6371d575b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 333.7898 149.86 0)
+			(at 333.7898 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13604,7 +13604,7 @@
 	)
 	(global_label "LCD_DISP_LATCH"
 		(shape input)
-		(at 316.23 198.12 0)
+		(at 316.23 193.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13614,7 +13614,7 @@
 		)
 		(uuid "c67c6292-9cca-4679-bbe5-c4a7d6cb160f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 334.7576 198.12 0)
+			(at 334.7576 193.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13693,7 +13693,7 @@
 	)
 	(global_label "7_SEG_DISP_LATCH"
 		(shape input)
-		(at 316.23 167.64 0)
+		(at 316.23 165.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13703,7 +13703,7 @@
 		)
 		(uuid "d0d799b3-0baf-4249-b30f-9a32c3a31308")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 336.9951 167.64 0)
+			(at 336.9951 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13715,7 +13715,7 @@
 	)
 	(global_label "7_SEG_DISP_CLOCK"
 		(shape input)
-		(at 316.23 165.1 0)
+		(at 316.23 160.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13725,7 +13725,7 @@
 		)
 		(uuid "d4d1cfc0-d425-49ca-9362-dfe00417e7ea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 337.4789 165.1 0)
+			(at 337.4789 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13782,7 +13782,7 @@
 	)
 	(global_label "LCD_DISP_CLOCK"
 		(shape input)
-		(at 316.23 195.58 0)
+		(at 316.23 190.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13792,7 +13792,7 @@
 		)
 		(uuid "dbdff486-4894-4a00-a550-d5b26f079a84")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 335.2414 195.58 0)
+			(at 335.2414 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14191,10 +14191,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "08c3035c-8c30-4fc2-9129-2d501e51e868")
 		(property "Reference" "D1"
-			(at 201.93 200.6599 90)
+			(at 200.914 205.232 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14202,8 +14201,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D_TVS"
-			(at 201.93 203.1999 90)
+		(property "Value" "LESD5D5.0CT1G-MS"
+			(at 200.66 207.264 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14211,7 +14210,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMC"
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 199.39 201.93 0)
 			(effects
 				(font
@@ -21351,10 +21350,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9b2ce5e9-1a70-4a84-a475-8fcf529e87e6")
 		(property "Reference" "D2"
-			(at 207.01 200.6599 90)
+			(at 206.502 201.676 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21362,8 +21360,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D_TVS"
-			(at 207.01 203.1999 90)
+		(property "Value" "LESD5D5.0CT1G-MS"
+			(at 206.502 203.708 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21371,7 +21369,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMC"
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 204.47 201.93 0)
 			(effects
 				(font

@@ -2458,16 +2458,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 140.97) (xy 226.06 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1baaa689-b590-4348-99af-29176859225b")
-	)
-	(wire
-		(pts
 			(xy 236.22 45.72) (xy 227.33 45.72)
 		)
 		(stroke
@@ -2498,7 +2488,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 133.35) (xy 226.06 133.35)
+			(xy 205.74 133.35) (xy 226.06 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2668,16 +2658,6 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 138.43) (xy 226.06 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4dc88634-dd15-49bc-b797-ec65e0e22e8c")
-	)
-	(wire
-		(pts
 			(xy 58.42 58.42) (xy 58.42 60.96)
 		)
 		(stroke
@@ -2698,7 +2678,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 140.97) (xy 208.28 140.97)
+			(xy 196.85 135.89) (xy 198.12 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2778,7 +2758,7 @@
 	)
 	(polyline
 		(pts
-			(xy 206.502 142.748) (xy 209.55 139.446)
+			(xy 196.342 137.668) (xy 199.39 134.366)
 		)
 		(stroke
 			(width 0)
@@ -2978,7 +2958,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 138.43) (xy 208.28 138.43)
+			(xy 196.85 133.35) (xy 198.12 133.35)
 		)
 		(stroke
 			(width 0)
@@ -3048,7 +3028,7 @@
 	)
 	(polyline
 		(pts
-			(xy 206.756 142.748) (xy 206.502 142.748)
+			(xy 196.596 137.668) (xy 196.342 137.668)
 		)
 		(stroke
 			(width 0)
@@ -3258,7 +3238,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 135.89) (xy 226.06 135.89)
+			(xy 205.74 135.89) (xy 226.06 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3637,8 +3617,8 @@
 		(uuid "ffc1d450-fa70-45b4-906d-e019b2bcee6a")
 	)
 	(rectangle
-		(start 201.168 142.748)
-		(end 206.502 147.066)
+		(start 191.008 137.668)
+		(end 196.342 141.986)
 		(stroke
 			(width 0)
 			(type default)
@@ -3750,7 +3730,7 @@
 	)
 	(global_label "GAMA_METER_LED_ACTIVE_ENERGY_INPUT"
 		(shape input)
-		(at 215.9 133.35 180)
+		(at 226.06 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3760,7 +3740,7 @@
 		)
 		(uuid "3f980252-62a0-4dfe-9b3a-b44e06e76c7a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 174.815 133.35 0)
+			(at 184.975 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3838,7 +3818,7 @@
 	)
 	(global_label "GAMA_METER_LED_REACTIVE_INPUT"
 		(shape input)
-		(at 215.9 135.89 180)
+		(at 226.06 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3848,7 +3828,7 @@
 		)
 		(uuid "5103b9fe-9885-4dea-8691-87f474f334aa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 180.6207 135.89 0)
+			(at 190.7807 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3970,7 +3950,7 @@
 	)
 	(global_label "P7_UNCONNECTED"
 		(shape input)
-		(at 207.01 138.43 180)
+		(at 196.85 133.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3980,7 +3960,7 @@
 		)
 		(uuid "c501da2e-1d8e-44ba-bfb3-479eae8be07d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 186.8496 138.43 0)
+			(at 176.6896 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4014,7 +3994,7 @@
 	)
 	(global_label "P6_UNCONNECTED"
 		(shape input)
-		(at 207.01 140.97 180)
+		(at 196.85 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4024,7 +4004,7 @@
 		)
 		(uuid "d9a1869c-295d-4d32-8d3a-63b18049bcb1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 186.8496 140.97 0)
+			(at 176.6896 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5551,7 +5531,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 219.71 85.09 180)
+		(at 105.41 166.37 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5560,7 +5540,7 @@
 		(fields_autoplaced yes)
 		(uuid "64a44f60-89c5-4330-bbc3-a8dc9d34bed3")
 		(property "Reference" "U6"
-			(at 219.71 77.47 0)
+			(at 105.41 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5568,7 +5548,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 219.71 80.01 0)
+			(at 105.41 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5576,7 +5556,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 219.71 85.09 0)
+			(at 105.41 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5585,7 +5565,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 219.71 85.09 0)
+			(at 105.41 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5594,7 +5574,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 219.71 85.09 0)
+			(at 105.41 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6325,7 +6305,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 107.95 139.7 0)
+		(at 219.71 67.31 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6334,7 +6314,7 @@
 		(fields_autoplaced yes)
 		(uuid "8950c44c-1757-4630-b32e-d407afa17018")
 		(property "Reference" "U6"
-			(at 107.95 132.08 0)
+			(at 219.71 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6342,7 +6322,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 107.95 134.62 0)
+			(at 219.71 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6350,7 +6330,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 107.95 139.7 0)
+			(at 219.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6359,7 +6339,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 107.95 139.7 0)
+			(at 219.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6368,7 +6348,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 107.95 139.7 0)
+			(at 219.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7251,7 +7231,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 105.41 166.37 0)
+		(at 219.71 85.09 180)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7260,7 +7240,7 @@
 		(fields_autoplaced yes)
 		(uuid "b70e30fa-42b9-4161-a3be-afbfcb2deb89")
 		(property "Reference" "U6"
-			(at 105.41 158.75 0)
+			(at 219.71 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7268,7 +7248,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 105.41 161.29 0)
+			(at 219.71 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7276,7 +7256,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 105.41 166.37 0)
+			(at 219.71 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7285,7 +7265,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 105.41 166.37 0)
+			(at 219.71 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7294,7 +7274,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 105.41 166.37 0)
+			(at 219.71 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7355,7 +7335,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 212.09 138.43 90)
+		(at 201.93 133.35 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7363,7 +7343,7 @@
 		(dnp no)
 		(uuid "b80cdf29-caa8-4b58-9cc8-d08396bba278")
 		(property "Reference" "R35"
-			(at 203.962 144.272 90)
+			(at 193.802 139.192 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7371,7 +7351,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 203.962 146.05 90)
+			(at 193.802 140.97 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7379,7 +7359,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 212.09 140.208 90)
+			(at 201.93 135.128 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7388,7 +7368,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 212.09 138.43 0)
+			(at 201.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7397,7 +7377,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 212.09 138.43 0)
+			(at 201.93 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8059,7 +8039,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 219.71 67.31 0)
+		(at 107.95 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8068,7 +8048,7 @@
 		(fields_autoplaced yes)
 		(uuid "d16e80f0-093c-4a49-9cf1-086e567d133c")
 		(property "Reference" "U6"
-			(at 219.71 59.69 0)
+			(at 107.95 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8076,7 +8056,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 219.71 62.23 0)
+			(at 107.95 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8084,7 +8064,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 219.71 67.31 0)
+			(at 107.95 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8093,7 +8073,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 219.71 67.31 0)
+			(at 107.95 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8102,7 +8082,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 219.71 67.31 0)
+			(at 107.95 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8605,7 +8585,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 212.09 140.97 90)
+		(at 201.93 135.89 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8613,7 +8593,7 @@
 		(dnp no)
 		(uuid "fbf0f727-2343-4fe6-97ae-80ec73c46102")
 		(property "Reference" "R36"
-			(at 211.836 143.256 90)
+			(at 201.676 138.176 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8621,7 +8601,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 212.09 145.034 90)
+			(at 201.93 139.954 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8629,7 +8609,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 212.09 142.748 90)
+			(at 201.93 137.668 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8638,7 +8618,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 212.09 140.97 0)
+			(at 201.93 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8647,7 +8627,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 212.09 140.97 0)
+			(at 201.93 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
