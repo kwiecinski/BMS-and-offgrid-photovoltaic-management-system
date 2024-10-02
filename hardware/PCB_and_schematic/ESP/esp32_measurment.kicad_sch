@@ -2981,6 +2981,168 @@
 				)
 			)
 		)
+		(symbol "Diode:LL4148"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LL4148"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_MiniMELF"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.vishay.com/docs/85557/ll4148.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "100V 0.15A standard switching diode, MiniMELF"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*MiniMELF*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LL4148_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LL4148_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Interface_Expansion:PCF8574"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -7865,6 +8027,12 @@
 		(uuid "6fd4b62a-ed09-4569-9a58-310e25581350")
 	)
 	(junction
+		(at 219.71 248.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "723b0634-7aee-4b1e-adb0-19bae777cac9")
+	)
+	(junction
 		(at 288.29 250.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7977,6 +8145,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bbb4644e-5e79-43af-9ef4-05181ec7c250")
+	)
+	(junction
+		(at 219.71 266.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bda542c0-f277-4db8-80c1-fe270ff90be0")
 	)
 	(junction
 		(at 199.39 194.31)
@@ -8695,6 +8869,16 @@
 			(type default)
 		)
 		(uuid "1fb50948-7d0f-405d-b902-a351166ab86f")
+	)
+	(wire
+		(pts
+			(xy 208.28 254) (xy 208.28 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21a08cb6-47a4-4a08-9b12-c8af03de7484")
 	)
 	(wire
 		(pts
@@ -9848,7 +10032,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 237.49) (xy 219.71 250.19)
+			(xy 219.71 237.49) (xy 219.71 248.92)
 		)
 		(stroke
 			(width 0)
@@ -9928,7 +10112,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 265.43) (xy 219.71 271.78)
+			(xy 219.71 265.43) (xy 219.71 266.7)
 		)
 		(stroke
 			(width 0)
@@ -10118,6 +10302,16 @@
 	)
 	(wire
 		(pts
+			(xy 219.71 266.7) (xy 219.71 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83489ef6-b64d-4ed4-b6d9-6952eefe6993")
+	)
+	(wire
+		(pts
 			(xy 232.41 101.6) (xy 232.41 91.44)
 		)
 		(stroke
@@ -10175,6 +10369,16 @@
 			(type default)
 		)
 		(uuid "87989cb9-29db-42fb-8123-db1576c6d9a2")
+	)
+	(wire
+		(pts
+			(xy 208.28 266.7) (xy 208.28 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "880a98b4-09c1-43c7-95fe-0b550923e0c2")
 	)
 	(wire
 		(pts
@@ -10398,6 +10602,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 248.92) (xy 219.71 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92b3a633-6510-4a2a-b0bb-0c65b394321b")
+	)
+	(wire
+		(pts
 			(xy 397.51 207.01) (xy 402.59 207.01)
 		)
 		(stroke
@@ -10495,6 +10709,16 @@
 			(type default)
 		)
 		(uuid "98d055e3-aed9-401e-b98f-10efd2c2f0b8")
+	)
+	(wire
+		(pts
+			(xy 219.71 266.7) (xy 208.28 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99429e3e-8133-4fcc-9d0a-f43bcb888760")
 	)
 	(wire
 		(pts
@@ -11345,6 +11569,16 @@
 			(type default)
 		)
 		(uuid "d2bdf991-4297-41b0-a0b1-0c305600fc05")
+	)
+	(wire
+		(pts
+			(xy 219.71 248.92) (xy 219.71 250.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2f0b074-bbdc-467d-b914-96166bcbc8b2")
 	)
 	(wire
 		(pts
@@ -12809,7 +13043,7 @@
 	)
 	(global_label "SMOKE_DETECTOR_RESET"
 		(shape input)
-		(at 101.6 259.08 0)
+		(at 101.6 264.16 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12819,7 +13053,7 @@
 		)
 		(uuid "364b1774-faf9-40b6-a5c5-8cee55849cfb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 128.0496 259.08 0)
+			(at 128.0496 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13097,7 +13331,7 @@
 	)
 	(global_label "CO_SENSOR_SWITCH_VOLTAGES"
 		(shape input)
-		(at 101.6 261.62 0)
+		(at 101.6 259.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13107,7 +13341,7 @@
 		)
 		(uuid "6d4c4e0c-0a2f-498a-90b2-96dd15b1e412")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.5532 261.62 0)
+			(at 133.5532 259.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13826,7 +14060,7 @@
 	)
 	(global_label "CO_SENSOR_EN"
 		(shape input)
-		(at 101.6 264.16 0)
+		(at 101.6 261.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13836,7 +14070,7 @@
 		)
 		(uuid "e423d925-4694-4ec6-804f-07950bd175ef")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.0994 264.16 0)
+			(at 119.0994 261.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24794,7 +25028,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
+		(property "Footprint" "My-Footprints:TO-92_Inline_Wide"
 			(at 280.67 276.86 0)
 			(effects
 				(font
@@ -25884,6 +26118,94 @@
 			(project "ESP32_master"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/a8064d67-baba-4afe-84af-1260f43bc5ee"
 					(reference "JE1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:LL4148")
+		(at 208.28 257.81 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb01924a-95a5-40bc-9858-369a02bd83eb")
+		(property "Reference" "D6"
+			(at 210.82 256.5399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LL4148"
+			(at 210.82 259.0799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
+			(at 203.835 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/85557/ll4148.pdf"
+			(at 208.28 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, MiniMELF"
+			(at 208.28 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 208.28 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 208.28 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ec86613-eea7-4314-be24-906db876d38f")
+		)
+		(pin "2"
+			(uuid "410434ce-52f6-4378-86ba-6170e3030723")
+		)
+		(instances
+			(project "ESP32_master"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/a8064d67-baba-4afe-84af-1260f43bc5ee"
+					(reference "D6")
 					(unit 1)
 				)
 			)
