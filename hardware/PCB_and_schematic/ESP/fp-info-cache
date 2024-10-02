@@ -1,4 +1,53 @@
-23178682713118681
+23202003419981958
+ATI-ONE
+BMP280 3D
+
+
+0
+8
+8
+ATI-ONE
+HDR1X5_1.27MMP
+
+
+0
+5
+5
+ATI-ONE
+LD-BZEL-PB39-1717
+
+
+0
+2
+2
+ATI-ONE
+SOP8-SST25VF512A
+
+
+0
+8
+8
+ATI-ONE
+SW-TACT-67NSMD - 3D
+
+
+0
+4
+2
+ATI-ONE
+XF2M-FPC-20-LCD-only-con
+
+
+0
+22
+21
+ATI-ONE
+XF2M-FPC-20-LCD-only-lcd-lay
+
+
+0
+4
+3
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -66192,13 +66241,6 @@ push_button_12mm
 4
 4
 My-Footprints-connectors
-CDDC-1,5-5-PV-3,5
-
-
-0
-10
-10
-My-Footprints-connectors
 Conn-01x04-N25-W4P
 
 
@@ -66339,12 +66381,26 @@ Mount-Hole-3mm
 1
 1
 My-Footprints-connectors
+Pin_Header_Straight_1x02_Pitch2.54mm
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+2
+2
+My-Footprints-connectors
 Pin_Header_Straight_1x06_Pitch2.54mm
 Through hole straight pin header, 1x06, 2.54mm pitch, single row
 Through hole pin header THT 1x06 2.54mm single row
 0
 6
 6
+My-Footprints-connectors
+SOL-18
+
+
+0
+18
+18
 My-Footprints-connectors
 Screw-Terminal-5.00mm-2pin
 
@@ -66380,6 +66436,13 @@ Screw-Terminal-5.00mm-10pin
 0
 10
 10
+My-Footprints-connectors
+Screw-Terminal-P2-rast-5mm-6,7x30
+
+
+0
+2
+2
 My-Footprints-connectors
 Screw-Terminal-P6-rast-5mm-6,7x30
 
@@ -66507,6 +66570,13 @@ FTR-B3-Relay-5.08
 8
 8
 My-Footprints-orw-els
+MINI-FLAT
+
+
+0
+4
+4
+My-Footprints-orw-els
 SO-8
 
 
@@ -66521,6 +66591,20 @@ SO-8-mediana-front
 8
 8
 My-Footprints-orw-els
+SO-14
+
+
+0
+14
+14
+My-Footprints-orw-els
+SO-16
+
+
+0
+16
+16
+My-Footprints-orw-els
 SOD-80
 
 
@@ -66534,6 +66618,13 @@ SOD-80_1-mediana
 0
 2
 2
+My-Footprints-orw-els
+SOL-20
+
+
+0
+20
+20
 My-Footprints-orw-els
 SOT23-JLCPCB-Oriented
 SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
