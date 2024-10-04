@@ -1,0 +1,168 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "7b59bc46-701c-4caa-9db8-f0eec290561d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 86.36 26.67)
+		(size 40.386 22.098)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "65162db6-2f34-42a9-bfd8-f206554b7fcf")
+		(property "Sheetname" "Ideal Bridge"
+			(at 86.36 25.3434 0)
+			(effects
+				(font
+					(size 2.5 2.5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/ideal_bridge.kicad_sch"
+			(at 86.36 49.6446 0)
+			(effects
+				(font
+					(size 2 2)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 19.05 26.416)
+		(size 35.052 22.606)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6babc747-648a-483d-982b-7a5f4e06013a")
+		(property "Sheetname" "Diode Probe for Gamma Meter"
+			(at 19.05 25.0894 0)
+			(effects
+				(font
+					(size 2.5 2.5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/diode_probe.kicad_sch"
+			(at 19.05 49.8986 0)
+			(effects
+				(font
+					(size 2 2)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 153.162 27.432)
+		(size 37.592 22.098)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c1486e23-7518-492e-81fc-70742dd392eb")
+		(property "Sheetname" "Shift Register for LCD Display"
+			(at 153.162 26.1054 0)
+			(effects
+				(font
+					(size 2.5 2.5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/shift_register_display.kicad_sch"
+			(at 153.162 50.4066 0)
+			(effects
+				(font
+					(size 2 2)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 18.796 59.944)
+		(size 55.626 36.576)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c73ec5f1-63a7-4e2b-9bc2-b6a7e29308b2")
+		(property "Sheetname" "SD Card Switcher"
+			(at 18.796 59.2324 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/sd_card_switcher_sch.kicad_sch"
+			(at 18.796 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

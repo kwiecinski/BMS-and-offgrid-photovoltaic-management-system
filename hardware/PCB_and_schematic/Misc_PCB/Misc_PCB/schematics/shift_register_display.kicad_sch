@@ -374,22 +374,22 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x07"
+		(symbol "Connector_Generic:Conn_01x05"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 0 10.16 0)
+				(at 0 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_01x07"
-				(at 0 -10.16 0)
+			(property "Value" "Conn_01x05"
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -414,7 +414,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -441,18 +441,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x07_1_1"
-				(rectangle
-					(start -1.27 -7.493)
-					(end 0 -7.747)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "Conn_01x05_1_1"
 				(rectangle
 					(start -1.27 -4.953)
 					(end 0 -5.207)
@@ -509,19 +498,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 7.747)
-					(end 0 7.493)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 8.89)
-					(end 1.27 -8.89)
+					(start -1.27 6.35)
+					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -531,7 +509,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 7.62 0)
+					(at -5.08 5.08 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -549,7 +527,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 2.54 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -567,7 +545,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -585,7 +563,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -603,7 +581,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -613,42 +591,6 @@
 						)
 					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -7.62 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2257,10 +2199,10 @@
 		)
 	)
 	(junction
-		(at 41.91 41.91)
+		(at 190.5 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "171287e1-a4b6-44b8-8d08-6ef2893e66ae")
+		(uuid "19f70cad-4421-45fa-a9eb-94e827eb455b")
 	)
 	(junction
 		(at 41.91 39.37)
@@ -2279,6 +2221,24 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b97a7bb-1a3b-47eb-b00a-26a137c7e8a2")
+	)
+	(junction
+		(at 248.92 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4a2ba227-5051-43f0-898a-bfb69ddc97db")
+	)
+	(junction
+		(at 190.5 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "58892b9e-1be5-41ff-9296-88a85fe838a9")
+	)
+	(junction
+		(at 248.92 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cb6a131-6445-4ff9-943f-09c7f66dc990")
 	)
 	(junction
 		(at 41.91 49.53)
@@ -2305,6 +2265,12 @@
 		(uuid "8e9683ff-833a-4664-b37d-291ba8c7711c")
 	)
 	(junction
+		(at 48.26 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b106b266-9783-4c74-9e51-466497cf7397")
+	)
+	(junction
 		(at 182.88 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2315,6 +2281,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf15e12a-0421-4736-84cf-f18b5ba383eb")
+	)
+	(junction
+		(at 48.26 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f580edeb-cf0e-4a3b-a2bf-3525c480d366")
 	)
 	(no_connect
 		(at 213.36 53.34)
@@ -2329,6 +2301,16 @@
 			(type default)
 		)
 		(uuid "01ead127-aaf5-48a8-8c7a-cb19aee5ce7d")
+	)
+	(wire
+		(pts
+			(xy 41.91 46.99) (xy 34.29 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "035363d1-bba1-4bff-89bc-d102b2e5fa08")
 	)
 	(wire
 		(pts
@@ -2352,6 +2334,26 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 76.2) (xy 195.58 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08b66a0f-dc39-44da-9dcf-a0eff66559a2")
+	)
+	(wire
+		(pts
+			(xy 54.61 49.53) (xy 48.26 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c98decc-67e0-4a3c-8ed8-c1f82296b8b6")
+	)
+	(wire
+		(pts
 			(xy 198.12 59.69) (xy 198.12 50.8)
 		)
 		(stroke
@@ -2359,6 +2361,16 @@
 			(type default)
 		)
 		(uuid "1506dde9-3dd9-4266-86b4-92091d4093b9")
+	)
+	(wire
+		(pts
+			(xy 195.58 74.93) (xy 195.58 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15787fa3-e145-4698-aff9-e424aab64701")
 	)
 	(wire
 		(pts
@@ -2412,6 +2424,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 39.37) (xy 48.26 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c593a4b-5e37-43ef-94de-3572b40f1768")
+	)
+	(wire
+		(pts
 			(xy 83.82 24.13) (xy 83.82 26.67)
 		)
 		(stroke
@@ -2419,6 +2441,16 @@
 			(type default)
 		)
 		(uuid "1d8776a2-fdb0-4066-8ce1-d4b1a9c438bd")
+	)
+	(wire
+		(pts
+			(xy 54.61 48.26) (xy 54.61 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "211a37bf-94ac-44c1-b1c3-eeb6dfc23e6f")
 	)
 	(wire
 		(pts
@@ -2449,6 +2481,16 @@
 			(type default)
 		)
 		(uuid "2a66e817-747d-4160-a2b2-a56ec6ddc0f3")
+	)
+	(wire
+		(pts
+			(xy 54.61 40.64) (xy 54.61 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ed98a9a-7bd3-400e-941e-2480ac086dd5")
 	)
 	(wire
 		(pts
@@ -2522,6 +2564,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 44.45) (xy 259.08 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48a7a4cc-4ca3-4f7d-acca-29937d41824a")
+	)
+	(wire
+		(pts
 			(xy 73.66 52.07) (xy 68.58 52.07)
 		)
 		(stroke
@@ -2559,6 +2611,16 @@
 			(type default)
 		)
 		(uuid "5c57aba7-3f5e-42b4-9161-951864b6e92f")
+	)
+	(wire
+		(pts
+			(xy 248.92 54.61) (xy 248.92 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cf9a51e-d4bb-4d05-8dad-c881d87d5666")
 	)
 	(wire
 		(pts
@@ -2622,6 +2684,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 76.2) (xy 190.5 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "722f977a-2f44-4eeb-901a-db97dec2a498")
+	)
+	(wire
+		(pts
 			(xy 182.88 55.88) (xy 182.88 66.04)
 		)
 		(stroke
@@ -2649,16 +2721,6 @@
 			(type default)
 		)
 		(uuid "7c8282b7-3e7d-44db-86d4-2ff4f30169f5")
-	)
-	(wire
-		(pts
-			(xy 34.29 44.45) (xy 41.91 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fc26fd8-3318-4639-9c86-c582de0efed0")
 	)
 	(wire
 		(pts
@@ -2709,6 +2771,16 @@
 			(type default)
 		)
 		(uuid "8618154b-e2ec-4c5b-b2b6-aa52a956f14e")
+	)
+	(wire
+		(pts
+			(xy 248.92 40.64) (xy 248.92 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "892b86cd-0f5f-4ebe-a186-6cb33d4dc872")
 	)
 	(wire
 		(pts
@@ -2782,13 +2854,23 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 39.37) (xy 41.91 41.91)
+			(xy 41.91 39.37) (xy 41.91 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a03f39cc-1991-4f23-9344-9332d8af39c9")
+	)
+	(wire
+		(pts
+			(xy 195.58 66.04) (xy 195.58 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2218482-e5a2-4376-9e3a-017987c0cb87")
 	)
 	(wire
 		(pts
@@ -2822,6 +2904,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 66.04) (xy 190.5 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ea65dc-c9b3-4d43-8791-8b89da973efd")
+	)
+	(wire
+		(pts
 			(xy 41.91 49.53) (xy 48.26 49.53)
 		)
 		(stroke
@@ -2829,6 +2921,16 @@
 			(type default)
 		)
 		(uuid "b3ab6df8-cd19-4f3d-9cdd-e1a407891671")
+	)
+	(wire
+		(pts
+			(xy 190.5 74.93) (xy 190.5 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bad880b9-9ff0-4290-b2fa-b24c872283ab")
 	)
 	(wire
 		(pts
@@ -2842,6 +2944,26 @@
 	)
 	(wire
 		(pts
+			(xy 190.5 66.04) (xy 195.58 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c02bb16f-e615-4935-ba9f-ee12b78e01bd")
+	)
+	(wire
+		(pts
+			(xy 190.5 66.04) (xy 190.5 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c10bf6f6-ff06-45ce-baef-70c0f5c982f0")
+	)
+	(wire
+		(pts
 			(xy 198.12 59.69) (xy 218.44 59.69)
 		)
 		(stroke
@@ -2849,16 +2971,6 @@
 			(type default)
 		)
 		(uuid "c1439dc1-6552-4787-8acb-3e185a3cb44f")
-	)
-	(wire
-		(pts
-			(xy 41.91 46.99) (xy 41.91 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4d69a75-2279-4fb4-a743-032116c01934")
 	)
 	(wire
 		(pts
@@ -2902,6 +3014,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 40.64) (xy 248.92 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3e676db-ffbc-4fee-9179-ea7ac5c8362b")
+	)
+	(wire
+		(pts
 			(xy 193.04 43.18) (xy 200.66 43.18)
 		)
 		(stroke
@@ -2932,6 +3054,16 @@
 	)
 	(wire
 		(pts
+			(xy 259.08 54.61) (xy 248.92 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1249e4-f04d-479b-96e0-dac284386e4e")
+	)
+	(wire
+		(pts
 			(xy 193.04 38.1) (xy 200.66 38.1)
 		)
 		(stroke
@@ -2952,7 +3084,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 52.07) (xy 248.92 57.15)
+			(xy 248.92 52.07) (xy 248.92 54.61)
 		)
 		(stroke
 			(width 0)
@@ -3022,16 +3154,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 46.99) (xy 41.91 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec1ece45-42c5-4b8e-9219-f9b610cc75ca")
-	)
-	(wire
-		(pts
 			(xy 193.04 45.72) (xy 200.66 45.72)
 		)
 		(stroke
@@ -3052,7 +3174,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 33.02) (xy 248.92 44.45)
+			(xy 248.92 33.02) (xy 248.92 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3062,23 +3184,13 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 41.91) (xy 41.91 41.91)
+			(xy 259.08 52.07) (xy 259.08 54.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fa82c488-e1f6-4301-862b-36e806a56dae")
-	)
-	(wire
-		(pts
-			(xy 41.91 44.45) (xy 41.91 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fadd4d8e-3897-4937-b4dc-8f8b045956d0")
+		(uuid "ff4cd2bc-ae56-4073-a2cb-ba3af69dd170")
 	)
 	(label "DATA"
 		(at 35.56 52.07 0)
@@ -3617,6 +3729,81 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 54.61 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0fe06f07-a7cb-47fc-9043-3e602b4a47e7")
+		(property "Reference" "C1"
+			(at 57.658 43.434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470u/6,3V"
+			(at 57.404 45.466 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B"
+			(at 55.5752 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.61 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 54.61 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "45b483ea-a037-4cd4-9ee7-4f07a9273669")
+		)
+		(pin "1"
+			(uuid "dedb7396-158b-476a-bd5a-bf1079454238")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "C1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3683,6 +3870,81 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 195.58 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29278f6c-20ee-4447-80f9-906bb16813eb")
+		(property "Reference" "R2"
+			(at 197.358 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 197.358 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 193.802 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46941eef-54a0-4c84-aa7a-94d168b97170")
+		)
+		(pin "2"
+			(uuid "8a55c9a1-e113-4404-85ba-3748d389df2b")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3712,7 +3974,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm"
 			(at 83.82 54.61 0)
 			(effects
 				(font
@@ -3794,6 +4056,81 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 190.5 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "343a13fd-7a9f-4e8b-b22b-393764c944d7")
+		(property "Reference" "R1"
+			(at 192.278 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 192.278 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 188.722 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 190.5 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 190.5 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d51c475c-1ea8-4c32-b32a-035973d3caaa")
+		)
+		(pin "2"
+			(uuid "8687ef3f-89ee-4b95-9f06-7ae179856dd2")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3822,7 +4159,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical"
 			(at 205.74 45.72 0)
 			(effects
 				(font
@@ -3910,6 +4247,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "J6")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3976,6 +4319,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4006,7 +4355,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_ACP_CA9-V10_Vertical"
 			(at 248.92 48.26 0)
 			(effects
 				(font
@@ -4045,6 +4394,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "RV1")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "RV1")
 					(unit 1)
 				)
@@ -4111,6 +4466,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "#PWR08")
 					(unit 1)
 				)
@@ -4191,6 +4552,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4253,6 +4620,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "#PWR011")
 					(unit 1)
 				)
@@ -4325,6 +4698,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R14")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4387,6 +4766,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "#PWR013")
 					(unit 1)
 				)
@@ -4457,6 +4842,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4486,7 +4877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 181.102 71.12 90)
 			(effects
 				(font
@@ -4526,6 +4917,89 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 29.21 52.07 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d728d29-4aee-4ddb-8058-5ed9b5825e63")
+		(property "Reference" "J3"
+			(at 29.21 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LCD_CONN"
+			(at 29.21 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XA_B05B-XASK-1_1x05_P2.50mm_Vertical"
+			(at 29.21 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 29.21 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 29.21 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c8e6942d-9367-4ace-9b5c-3d58bd22fc8a")
+		)
+		(pin "3"
+			(uuid "b3af7f91-46e9-451f-abfe-b908dddd99cc")
+		)
+		(pin "4"
+			(uuid "82814d67-9d19-4980-a3af-1ed8dc7ff13a")
+		)
+		(pin "5"
+			(uuid "3b8c602d-df7f-4720-986e-a4231f0fdd06")
+		)
+		(pin "2"
+			(uuid "4fb71696-bb28-46f9-bfa4-4b5903084db2")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "J3")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4555,7 +5029,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 178.562 71.12 90)
 			(effects
 				(font
@@ -4595,6 +5069,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R17")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4625,7 +5105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 94.9452 36.83 0)
 			(effects
 				(font
@@ -4661,6 +5141,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "C3")
 					(unit 1)
 				)
@@ -4731,6 +5217,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4792,6 +5284,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "#PWR017")
 					(unit 1)
 				)
@@ -4866,6 +5364,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R15")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -4895,7 +5399,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B"
 			(at 49.2252 48.26 0)
 			(effects
 				(font
@@ -4931,6 +5435,12 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
 					(reference "C2")
 					(unit 1)
 				)
@@ -5001,36 +5511,44 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x07")
-		(at 29.21 49.53 180)
+		(lib_id "Device:R")
+		(at 259.08 48.26 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f7f9b002-a430-4adf-84e3-a84b33e5992f")
-		(property "Reference" "J5"
-			(at 29.21 35.56 0)
+		(uuid "f3b798e4-5486-424d-9145-ee1ce7bd66f6")
+		(property "Reference" "R3"
+			(at 261.62 46.9899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LCD_CONN"
-			(at 29.21 38.1 0)
+		(property "Value" "10k"
+			(at 261.62 49.5299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 29.21 49.53 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 260.858 48.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5039,7 +5557,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 29.21 49.53 0)
+			(at 259.08 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5047,40 +5565,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 29.21 49.53 0)
+		(property "Description" "Resistor"
+			(at 259.08 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "83a40b24-4c12-4466-901b-0538b59c8d92")
-		)
-		(pin "7"
-			(uuid "32f94bbd-f975-4875-b4e4-8eb331fc223c")
-		)
-		(pin "3"
-			(uuid "afb1cf95-b7f1-4979-af27-2f11aa87eae2")
-		)
-		(pin "5"
-			(uuid "d2c76c90-941b-400d-9e8d-1ca769695f36")
-		)
-		(pin "4"
-			(uuid "2e0fe264-e7a0-478a-bf92-e5f28d3e7ce7")
 		)
 		(pin "1"
-			(uuid "073850e1-9796-4c9b-a00c-2853e61806e7")
+			(uuid "b9cf783f-6f2a-4eba-a457-131760539f2f")
 		)
-		(pin "6"
-			(uuid "ee4d54a1-3882-46b7-9083-1a0725280d51")
+		(pin "2"
+			(uuid "5ac33192-c11d-48ff-b9b5-4f51dadcee1a")
 		)
 		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f/3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6"
-					(reference "J5")
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
+					(reference "R3")
 					(unit 1)
 				)
 			)

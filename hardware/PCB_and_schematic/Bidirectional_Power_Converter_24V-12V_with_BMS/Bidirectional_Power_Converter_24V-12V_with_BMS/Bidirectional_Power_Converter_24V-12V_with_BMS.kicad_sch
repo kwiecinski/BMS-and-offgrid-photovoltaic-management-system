@@ -622,82 +622,6 @@
 		)
 	)
 	(sheet
-		(at 74.295 20.955)
-		(size 20.955 15.24)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "35ac2cba-a26f-48a2-8147-cc3c85b06bc6")
-		(property "Sheetname" "Diode probe"
-			(at 74.295 20.2434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "diode_probe.kicad_sch"
-			(at 74.295 36.7796 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 146.05 20.32)
-		(size 27.432 18.288)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "3cac3ccb-7d01-4620-ac5d-16a4b21b7ad6")
-		(property "Sheetname" "Shift register for 4x40 display"
-			(at 146.05 19.6084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "shift_register_display.kicad_sch"
-			(at 146.05 39.1926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 105.029 79.883)
 		(size 40.513 23.749)
 		(fields_autoplaced yes)
@@ -731,44 +655,6 @@
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
 					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 36.83 20.32)
-		(size 23.495 15.875)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "d04bbebb-217c-4a7b-8a7f-79213f28a4d6")
-		(property "Sheetname" "Ideal Bridge Controller"
-			(at 36.83 19.6084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "ideal_bridge.kicad_sch"
-			(at 36.83 36.7796 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
-					(page "2")
 				)
 			)
 		)
