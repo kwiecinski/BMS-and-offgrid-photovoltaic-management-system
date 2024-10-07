@@ -6,8 +6,8 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 20.32 67.31)
-		(size 38.1 27.94)
+		(at 88.9 63.5)
+		(size 35.56 24.13)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -16,9 +16,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "39a4b5c0-0f0a-4221-baae-1fbe8eff417e")
-		(property "Sheetname" "Router and camera power suppy"
-			(at 20.32 66.5984 0)
+		(uuid "5708feb1-aa6a-4b62-bc86-35f6572d752c")
+		(property "Sheetname" "Heater with solar power tracking"
+			(at 88.9 62.7884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26,8 +26,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "schematics/router_camera_power_supply.kicad_sch"
-			(at 20.32 95.8346 0)
+		(property "Sheetfile" "power_tracking_heater.kicad_sch"
+			(at 88.9 88.2146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -38,13 +38,13 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
-					(page "5")
+					(page "6")
 				)
 			)
 		)
 	)
 	(sheet
-		(at 85.09 69.85)
+		(at 20.32 60.96)
 		(size 36.83 26.67)
 		(fields_autoplaced yes)
 		(stroke
@@ -56,7 +56,7 @@
 		)
 		(uuid "597d6a57-53dc-4721-891a-2c0af328a07b")
 		(property "Sheetname" "LT3652 MPPT"
-			(at 85.09 69.1384 0)
+			(at 20.32 60.2484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -65,7 +65,7 @@
 			)
 		)
 		(property "Sheetfile" "schematics/LT3652_MPPT.kicad_sch"
-			(at 85.09 97.1046 0)
+			(at 20.32 88.2146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
