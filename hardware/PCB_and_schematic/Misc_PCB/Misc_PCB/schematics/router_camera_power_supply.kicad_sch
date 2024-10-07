@@ -1554,13 +1554,13 @@
 		(uuid "3cf9749b-63ea-47de-b99c-63ddda0a81e8")
 	)
 	(junction
-		(at 111.76 44.45)
+		(at 127 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6995ab93-4bf7-40b1-8364-0ff9bbd1ae6d")
 	)
 	(junction
-		(at 100.33 44.45)
+		(at 115.57 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9924cb54-0fb8-413f-a1c8-8a4cd3c14bfd")
@@ -1572,7 +1572,7 @@
 		(uuid "b53f1378-5ce7-46c7-b9bb-c9ec2d15d72b")
 	)
 	(junction
-		(at 100.33 57.15)
+		(at 115.57 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c79717b0-dbbd-47ea-8126-f05024cac374")
@@ -1591,7 +1591,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 44.45) (xy 111.76 45.72)
+			(xy 127 44.45) (xy 127 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1611,23 +1611,13 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 64.77) (xy 167.64 80.01)
+			(xy 167.64 68.58) (xy 167.64 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0ce05602-0fbf-4a1c-80dc-08cbeedf7174")
-	)
-	(wire
-		(pts
-			(xy 194.31 54.61) (xy 200.66 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12b909a7-e846-4b6a-b32d-d3e0de86f32f")
 	)
 	(wire
 		(pts
@@ -1641,7 +1631,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 44.45) (xy 100.33 45.72)
+			(xy 115.57 44.45) (xy 115.57 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1651,23 +1641,13 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 53.34) (xy 111.76 57.15)
+			(xy 127 53.34) (xy 127 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2e74e4fa-7235-4af8-a0a9-d1b2fb954b40")
-	)
-	(wire
-		(pts
-			(xy 181.61 54.61) (xy 194.31 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35a1ff3d-e4f4-45c0-9d21-42caaa1f495e")
 	)
 	(wire
 		(pts
@@ -1721,6 +1701,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 57.15) (xy 209.55 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d2337b1-9c6d-4b9a-a5f0-ad0040cbff8b")
+	)
+	(wire
+		(pts
 			(xy 162.56 46.99) (xy 162.56 49.53)
 		)
 		(stroke
@@ -1741,7 +1731,17 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 44.45) (xy 100.33 44.45)
+			(xy 181.61 54.61) (xy 194.31 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7594b583-19ac-4af1-8121-88d784298a7e")
+	)
+	(wire
+		(pts
+			(xy 113.03 44.45) (xy 115.57 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1761,7 +1761,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 54.61) (xy 167.64 57.15)
+			(xy 167.64 54.61) (xy 167.64 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1771,7 +1771,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 46.99) (xy 44.45 53.34)
+			(xy 95.25 46.99) (xy 95.25 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1801,6 +1801,16 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 54.61) (xy 209.55 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a00021d3-fb84-4ceb-a135-cbf43852e981")
+	)
+	(wire
+		(pts
 			(xy 162.56 71.12) (xy 181.61 71.12)
 		)
 		(stroke
@@ -1821,7 +1831,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 57.15) (xy 100.33 57.15)
+			(xy 127 57.15) (xy 115.57 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1831,7 +1841,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 44.45) (xy 54.61 44.45)
+			(xy 102.87 44.45) (xy 105.41 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1841,7 +1851,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 44.45) (xy 140.97 44.45)
+			(xy 127 44.45) (xy 140.97 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1861,7 +1871,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 57.15) (xy 100.33 53.34)
+			(xy 115.57 57.15) (xy 115.57 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1901,7 +1911,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 44.45) (xy 111.76 44.45)
+			(xy 115.57 44.45) (xy 127 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1919,9 +1929,32 @@
 		)
 		(uuid "f70418a2-431b-4baa-9aa2-c57f7e1f759e")
 	)
+	(text "Divider Imin = 100uA"
+		(exclude_from_sim no)
+		(at 182.118 86.614 0)
+		(effects
+			(font
+				(size 0.8 0.8)
+			)
+		)
+		(uuid "f08095bc-0afc-425d-a003-5b76ff14b0e5")
+	)
+	(label "12V{slash}600mA"
+		(at 186.69 54.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "ec42be7d-abb7-46f6-9113-7323704a58f9")
+	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 167.64 60.96 270)
+		(at 167.64 64.77 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1930,7 +1963,7 @@
 		(fields_autoplaced yes)
 		(uuid "01dfc003-0869-41fb-8bab-419be349b461")
 		(property "Reference" "D3"
-			(at 169.672 59.4303 90)
+			(at 169.672 63.2403 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1939,7 +1972,7 @@
 			)
 		)
 		(property "Value" "D_Schottky"
-			(at 169.672 61.8546 90)
+			(at 169.672 65.6646 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1948,7 +1981,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 60.96 0)
+			(at 167.64 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1957,7 +1990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 60.96 0)
+			(at 167.64 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1966,7 +1999,7 @@
 			)
 		)
 		(property "Description" "Schottky diode"
-			(at 167.64 60.96 0)
+			(at 167.64 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1987,11 +2020,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "D4")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 39.37 46.99 180)
+		(at 90.17 46.99 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1999,7 +2038,7 @@
 		(dnp no)
 		(uuid "06461731-d847-4fd1-9cb1-36b6e0ba6576")
 		(property "Reference" "J1"
-			(at 34.544 46.99 0)
+			(at 85.344 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2008,7 +2047,7 @@
 			)
 		)
 		(property "Value" "DC_POWER_SUPPLY"
-			(at 18.796 44.196 0)
+			(at 69.596 44.196 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2017,7 +2056,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
-			(at 39.37 46.99 0)
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2026,7 +2065,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 39.37 46.99 0)
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2035,7 +2074,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 39.37 46.99 0)
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2053,6 +2092,12 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -2077,7 +2122,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "39k"
 			(at 183.388 67.2521 0)
 			(effects
 				(font
@@ -2126,11 +2171,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "R13")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Diode:1N4007")
-		(at 48.26 44.45 180)
+		(at 99.06 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2138,7 +2189,7 @@
 		(dnp no)
 		(uuid "26c3e444-7c37-41fc-824d-856df7043320")
 		(property "Reference" "D2"
-			(at 49.276 41.91 0)
+			(at 100.076 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2147,7 +2198,7 @@
 			)
 		)
 		(property "Value" "1N4007"
-			(at 52.578 46.99 0)
+			(at 103.378 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2156,7 +2207,7 @@
 			)
 		)
 		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 48.26 40.005 0)
+			(at 99.06 40.005 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2165,7 +2216,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 48.26 44.45 0)
+			(at 99.06 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2174,7 +2225,7 @@
 			)
 		)
 		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 48.26 44.45 0)
+			(at 99.06 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2183,7 +2234,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 48.26 44.45 0)
+			(at 99.06 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2192,7 +2243,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 48.26 44.45 0)
+			(at 99.06 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2213,11 +2264,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "D3")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 111.76 49.53 0)
+		(at 127 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2226,7 +2283,7 @@
 		(fields_autoplaced yes)
 		(uuid "319a3248-2c95-4933-a306-e49ccfbf7df2")
 		(property "Reference" "C5"
-			(at 114.681 47.4288 0)
+			(at 129.921 47.4288 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2234,8 +2291,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C_Polarized"
-			(at 114.681 49.8531 0)
+		(property "Value" "1000u/35V"
+			(at 129.921 49.8531 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2244,7 +2301,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 112.7252 53.34 0)
+			(at 127.9652 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2253,7 +2310,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 49.53 0)
+			(at 127 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2262,7 +2319,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 111.76 49.53 0)
+			(at 127 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2279,6 +2336,12 @@
 		(instances
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
 					(reference "C5")
 					(unit 1)
 				)
@@ -2304,7 +2367,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "220p"
 			(at 141.351 63.4421 0)
 			(effects
 				(font
@@ -2353,6 +2416,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "C6")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2373,7 +2442,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "250m"
 			(at 152.4 29.0138 90)
 			(effects
 				(font
@@ -2421,6 +2490,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "R12")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2441,7 +2516,7 @@
 				)
 			)
 		)
-		(property "Value" "L"
+		(property "Value" "75uH"
 			(at 175.26 52.3845 90)
 			(effects
 				(font
@@ -2489,11 +2564,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "L1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 100.33 57.15 0)
+		(at 115.57 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2502,7 +2583,7 @@
 		(fields_autoplaced yes)
 		(uuid "63c8d8a8-6174-4b62-b204-3fefc76d096a")
 		(property "Reference" "#PWR012"
-			(at 100.33 63.5 0)
+			(at 115.57 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2511,7 +2592,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 100.33 61.2831 0)
+			(at 115.57 61.2831 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2519,7 +2600,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 100.33 57.15 0)
+			(at 115.57 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2528,7 +2609,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 57.15 0)
+			(at 115.57 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2537,7 +2618,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 100.33 57.15 0)
+			(at 115.57 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2552,6 +2633,12 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -2621,11 +2708,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 58.42 44.45 90)
+		(at 109.22 44.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2634,7 +2727,7 @@
 		(fields_autoplaced yes)
 		(uuid "6dac6199-1d2d-447a-b19e-eaf9fcacf9fa")
 		(property "Reference" "F2"
-			(at 58.42 39.5435 90)
+			(at 109.22 39.5435 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2642,7 +2735,7 @@
 			)
 		)
 		(property "Value" "Fuse"
-			(at 58.42 41.9678 90)
+			(at 109.22 41.9678 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2650,7 +2743,7 @@
 			)
 		)
 		(property "Footprint" "Fuse:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
-			(at 58.42 46.228 90)
+			(at 109.22 46.228 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2659,7 +2752,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 44.45 0)
+			(at 109.22 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2668,7 +2761,7 @@
 			)
 		)
 		(property "Description" "Fuse"
-			(at 58.42 44.45 0)
+			(at 109.22 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,6 +2779,12 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "F2")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -2755,6 +2854,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2821,6 +2926,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2842,7 +2953,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C_Polarized"
+		(property "Value" "100u/16V"
 			(at 197.231 67.6331 0)
 			(effects
 				(font
@@ -2891,6 +3002,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "C7")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -2912,7 +3029,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "4k7"
 			(at 183.388 77.4121 0)
 			(effects
 				(font
@@ -2961,11 +3078,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "R14")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 255.27 58.42 0)
+		(at 214.63 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2973,7 +3096,7 @@
 		(dnp no)
 		(uuid "bbfa2aed-3baf-4f6b-a71f-cb3240a6ab1c")
 		(property "Reference" "J9"
-			(at 260.096 58.42 0)
+			(at 219.456 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2981,8 +3104,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "DC_POWER_SUPPLY"
-			(at 275.844 61.214 0)
+		(property "Value" "12V_DC_POWER_SUPPLY"
+			(at 235.204 57.404 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2991,7 +3114,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
-			(at 255.27 58.42 0)
+			(at 214.63 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3000,7 +3123,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 255.27 58.42 0)
+			(at 214.63 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3009,7 +3132,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 255.27 58.42 0)
+			(at 214.63 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3030,72 +3153,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 255.27 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "be5a3373-5b1d-41e3-8fe3-eb5a5a462512")
-		(property "Reference" "J10"
-			(at 260.096 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "DC_POWER_SUPPLY"
-			(at 275.844 73.914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm"
-			(at 255.27 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 255.27 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 255.27 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dcc69e5a-82ed-4d8d-9bb0-5d2d36758da4")
-		)
-		(pin "2"
-			(uuid "f4a61b66-5801-4534-a73b-4e5d85711251")
-		)
-		(instances
-			(project "splitter"
-				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
-					(reference "J10")
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -3103,7 +3163,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 100.33 49.53 0)
+		(at 115.57 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3112,7 +3172,7 @@
 		(fields_autoplaced yes)
 		(uuid "c60c6f93-0f22-40b7-86ef-5d3d810ccaa2")
 		(property "Reference" "C6"
-			(at 103.251 48.3178 0)
+			(at 118.491 48.3178 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3120,8 +3180,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 103.251 50.7421 0)
+		(property "Value" "100n"
+			(at 118.491 50.7421 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3130,7 +3190,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.2952 53.34 0)
+			(at 116.5352 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3139,7 +3199,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.33 49.53 0)
+			(at 115.57 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3148,7 +3208,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 100.33 49.53 0)
+			(at 115.57 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3166,6 +3226,78 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 209.55 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8f30999-28e8-4e9b-9a92-41b0e697eb4e")
+		(property "Reference" "#PWR029"
+			(at 209.55 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 209.55 84.1431 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 209.55 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 209.55 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 209.55 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6087ea4a-8707-4bbd-8bee-91d12c664ea4")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -3256,6 +3388,12 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "U3")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -3319,6 +3457,12 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -3388,11 +3532,17 @@
 					(unit 1)
 				)
 			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 44.45 53.34 0)
+		(at 95.25 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3401,7 +3551,7 @@
 		(fields_autoplaced yes)
 		(uuid "fd2dfc53-701d-47d0-9ee9-f11e9e0af96a")
 		(property "Reference" "#PWR013"
-			(at 44.45 59.69 0)
+			(at 95.25 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3410,7 +3560,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 57.4731 0)
+			(at 95.25 57.4731 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3418,7 +3568,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 53.34 0)
+			(at 95.25 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3427,7 +3577,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 53.34 0)
+			(at 95.25 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3436,7 +3586,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 53.34 0)
+			(at 95.25 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3451,6 +3601,12 @@
 			(project "splitter"
 				(path "/0286cab7-ab30-426b-8345-1f03e11d2c7c/3750173b-f667-437e-8d19-741cd8c0d09f"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/39a4b5c0-0f0a-4221-baae-1fbe8eff417e"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)

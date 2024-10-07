@@ -6,6 +6,82 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
+		(at 20.32 67.31)
+		(size 38.1 27.94)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "39a4b5c0-0f0a-4221-baae-1fbe8eff417e")
+		(property "Sheetname" "Router and camera power suppy"
+			(at 20.32 66.5984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/router_camera_power_supply.kicad_sch"
+			(at 20.32 95.8346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85.09 69.85)
+		(size 36.83 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "597d6a57-53dc-4721-891a-2c0af328a07b")
+		(property "Sheetname" "LT3652 MPPT"
+			(at 85.09 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/LT3652_MPPT.kicad_sch"
+			(at 85.09 97.1046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 86.36 26.67)
 		(size 40.386 22.098)
 		(fields_autoplaced yes)
@@ -118,45 +194,6 @@
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
 					(page "4")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 18.796 64.389)
-		(size 44.069 27.686)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "c73ec5f1-63a7-4e2b-9bc2-b6a7e29308b2")
-		(property "Sheetname" "SD Card Switcher"
-			(at 18.796 63.3124 0)
-			(effects
-				(font
-					(size 2 2)
-					(bold yes)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "schematics/sd_card_switcher_sch.kicad_sch"
-			(at 18.796 92.6596 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
-					(page "5")
 				)
 			)
 		)
