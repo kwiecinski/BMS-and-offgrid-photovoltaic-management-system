@@ -6,7 +6,7 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 88.9 63.5)
+		(at 82.55 63.5)
 		(size 35.56 24.13)
 		(fields_autoplaced yes)
 		(stroke
@@ -18,16 +18,17 @@
 		)
 		(uuid "5708feb1-aa6a-4b62-bc86-35f6572d752c")
 		(property "Sheetname" "Heater with solar power tracking"
-			(at 88.9 62.7884 0)
+			(at 82.55 62.1734 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 2.5 2.5)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "power_tracking_heater.kicad_sch"
-			(at 88.9 88.2146 0)
+			(at 82.55 88.2146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -82,9 +83,47 @@
 		)
 	)
 	(sheet
-		(at 86.36 26.67)
-		(size 40.386 22.098)
+		(at 152.4 63.5)
+		(size 38.1 24.13)
 		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6436e512-c247-470c-9775-a9b90aba82b0")
+		(property "Sheetname" "Shift Register for 16x2 LCD Display"
+			(at 152.4 62.1734 0)
+			(effects
+				(font
+					(size 2.5 2.5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "schematics/shift_register_display_2x16.kicad_sch"
+			(at 152.4 88.5066 0)
+			(effects
+				(font
+					(size 2 2)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 82.55 26.67)
+		(size 40.386 22.098)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -94,7 +133,7 @@
 		)
 		(uuid "65162db6-2f34-42a9-bfd8-f206554b7fcf")
 		(property "Sheetname" "Ideal Bridge"
-			(at 86.36 25.3434 0)
+			(at 81.788 25.4 0)
 			(effects
 				(font
 					(size 2.5 2.5)
@@ -104,7 +143,7 @@
 			)
 		)
 		(property "Sheetfile" "schematics/ideal_bridge.kicad_sch"
-			(at 86.36 49.6446 0)
+			(at 82.55 49.6446 0)
 			(effects
 				(font
 					(size 2 2)
@@ -123,7 +162,6 @@
 	(sheet
 		(at 19.05 26.416)
 		(size 35.052 22.606)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -133,7 +171,7 @@
 		)
 		(uuid "6babc747-648a-483d-982b-7a5f4e06013a")
 		(property "Sheetname" "Diode Probe for Gamma Meter"
-			(at 19.05 25.0894 0)
+			(at 18.542 25.146 0)
 			(effects
 				(font
 					(size 2.5 2.5)
@@ -162,7 +200,6 @@
 	(sheet
 		(at 153.162 27.432)
 		(size 37.592 22.098)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -171,8 +208,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "c1486e23-7518-492e-81fc-70742dd392eb")
-		(property "Sheetname" "Shift Register for LCD Display"
-			(at 153.162 26.1054 0)
+		(property "Sheetname" "Shift Register for 40x4 LCD Display"
+			(at 152.4 26.162 0)
 			(effects
 				(font
 					(size 2.5 2.5)
