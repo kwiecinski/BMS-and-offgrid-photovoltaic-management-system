@@ -1518,6 +1518,194 @@
 				)
 			)
 		)
+		(symbol "Device:Varistor"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RV"
+				(at 3.175 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Varistor"
+				(at -3.175 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Voltage dependent resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Name" "kicad_builtin_varistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "SUBCKT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=A 2=B"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Params" "threshold=1k"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "VDR resistance"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "RV_* Varistor*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Varistor_0_0"
+				(text "U"
+					(at -1.778 -2.032 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "Varistor_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 2.54) (xy -1.905 1.27) (xy 1.905 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Varistor_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "RF_Module:ESP-07"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3108,16 +3296,22 @@
 		(uuid "3807a21a-a9cb-4b75-a894-9fe4e0bb2e9f")
 	)
 	(junction
-		(at 254 96.52)
+		(at 269.24 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "45b689c3-21c7-409a-ba0d-433144356025")
+		(uuid "4fd52bf4-9998-4375-b3e4-2cdd33df360c")
 	)
 	(junction
 		(at 228.6 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "58510885-59c0-4980-80b1-014a92d63813")
+	)
+	(junction
+		(at 255.27 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7129e163-7e7d-4fbb-bf33-28410ccc82fb")
 	)
 	(junction
 		(at 78.74 24.13)
@@ -3156,16 +3350,16 @@
 		(uuid "cf8129ea-cf4e-41d0-b7e1-54ab86040111")
 	)
 	(junction
+		(at 255.27 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1e3e4ca-e072-4634-be2b-844263d7e525")
+	)
+	(junction
 		(at 189.23 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d32e11ef-2770-45dc-8138-495f944623ed")
-	)
-	(junction
-		(at 254 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d7479186-7c25-4a91-9b6b-3ad9416cf12f")
 	)
 	(junction
 		(at 196.85 34.29)
@@ -3202,6 +3396,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f15d08b9-de46-4ab6-a0f5-ccb1c23eee25")
+	)
+	(junction
+		(at 269.24 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6f92259-e115-4eb1-96ce-f8ce783e64f0")
 	)
 	(junction
 		(at 237.49 110.49)
@@ -3247,6 +3447,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 91.44) (xy 269.24 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04cfcc20-a60b-487a-ab80-d6283630d132")
+	)
+	(wire
+		(pts
 			(xy 168.91 39.37) (xy 168.91 44.45)
 		)
 		(stroke
@@ -3264,6 +3474,16 @@
 			(type default)
 		)
 		(uuid "08f7d242-8c3b-48cf-84f1-6acc912c603d")
+	)
+	(wire
+		(pts
+			(xy 255.27 91.44) (xy 255.27 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0980537d-a4f7-48f1-bf28-998d288de1cd")
 	)
 	(wire
 		(pts
@@ -3847,7 +4067,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 91.44) (xy 254 91.44)
+			(xy 237.49 91.44) (xy 255.27 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3997,7 +4217,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 104.14) (xy 254 110.49)
+			(xy 269.24 104.14) (xy 269.24 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4014,6 +4234,16 @@
 			(type default)
 		)
 		(uuid "b788a860-99f8-4b82-a2f9-d266382a6f3a")
+	)
+	(wire
+		(pts
+			(xy 255.27 110.49) (xy 237.49 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8ca1744-629e-45da-93ad-825412d62a0a")
 	)
 	(wire
 		(pts
@@ -4057,7 +4287,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 110.49) (xy 237.49 110.49)
+			(xy 269.24 110.49) (xy 255.27 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4087,7 +4317,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 91.44) (xy 254 96.52)
+			(xy 269.24 91.44) (xy 269.24 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4184,6 +4414,16 @@
 			(type default)
 		)
 		(uuid "cc43097f-67be-4cfe-96bd-279eacbd015d")
+	)
+	(wire
+		(pts
+			(xy 255.27 105.41) (xy 255.27 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd9b9e6a-2e50-4138-a8d0-0a0e7880044e")
 	)
 	(wire
 		(pts
@@ -4397,7 +4637,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 101.6) (xy 254 104.14)
+			(xy 269.24 101.6) (xy 269.24 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4407,7 +4647,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 96.52) (xy 254 99.06)
+			(xy 269.24 96.52) (xy 269.24 99.06)
 		)
 		(stroke
 			(width 0)
@@ -5302,7 +5542,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 99.568 68.58 90)
 			(effects
 				(font
@@ -5575,7 +5815,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XA_B03B-XASK-1_1x03_P2.50mm_Vertical"
 			(at 101.6 99.06 0)
 			(effects
 				(font
@@ -5714,7 +5954,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 159.258 57.15 90)
 			(effects
 				(font
@@ -5852,7 +6092,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XA_B05B-XASK-1_1x05_P2.50mm_Vertical"
 			(at 64.77 100.33 0)
 			(effects
 				(font
@@ -6064,7 +6304,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 241.3 33.02 0)
 			(effects
 				(font
@@ -6265,7 +6505,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23_Handsoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 			(at 166.37 55.245 0)
 			(effects
 				(font
@@ -6634,7 +6874,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 241.3 49.53 0)
 			(effects
 				(font
@@ -6704,7 +6944,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Rect_L16.5mm_W6.0mm_P15.00mm_MKT"
 			(at 216.8652 100.33 0)
 			(effects
 				(font
@@ -6774,7 +7014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 181.61 32.512 90)
 			(effects
 				(font
@@ -6843,7 +7083,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" "My-Footprints:TO-220-3_V_Wide_Legs"
 			(at 242.57 100.965 0)
 			(effects
 				(font
@@ -7062,7 +7302,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 55.372 90)
 			(effects
 				(font
@@ -7337,7 +7577,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23_Handsoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 			(at 182.88 118.745 0)
 			(effects
 				(font
@@ -7478,7 +7718,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints-connectors:Conn-01x06"
 			(at 276.86 34.29 0)
 			(effects
 				(font
@@ -7599,6 +7839,120 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Varistor")
+		(at 255.27 101.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "822f5fc4-aca0-474e-8976-0312a55c4692")
+		(property "Reference" "RV3"
+			(at 258.4594 100.1944 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "S10K275"
+			(at 258.4594 102.6187 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Varistor:RV_Disc_D7mm_W3.5mm_P5mm"
+			(at 257.048 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Voltage dependent resistor"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_varistor"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=A 2=B"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "threshold=1k"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c697d34b-0435-42c1-be38-cf442ef80d8f")
+		)
+		(pin "2"
+			(uuid "c69ac2a6-58c5-443c-9647-7becf1cd5a70")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "RV3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 114.3 95.25 0)
 		(mirror y)
@@ -7626,7 +7980,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 116.078 95.25 90)
 			(effects
 				(font
@@ -7696,7 +8050,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 181.61 55.372 90)
 			(effects
 				(font
@@ -7835,7 +8189,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 248.92 27.432 90)
 			(effects
 				(font
@@ -7905,7 +8259,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 163.83 115.062 90)
 			(effects
 				(font
@@ -7976,7 +8330,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 196.85 60.96 0)
 			(effects
 				(font
@@ -8116,7 +8470,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 196.85 38.1 0)
 			(effects
 				(font
@@ -8645,7 +8999,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 182.118 106.68 90)
 			(effects
 				(font
@@ -8715,7 +9069,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 248.92 43.942 90)
 			(effects
 				(font
@@ -8983,7 +9337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 112.522 35.56 90)
 			(effects
 				(font
@@ -9027,7 +9381,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 259.08 99.06 0)
+		(at 274.32 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9036,7 +9390,7 @@
 		(fields_autoplaced yes)
 		(uuid "e08892dd-97df-409a-b071-f0ae5ec97dc6")
 		(property "Reference" "J13"
-			(at 261.62 99.0599 0)
+			(at 276.86 99.0599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9045,7 +9399,7 @@
 			)
 		)
 		(property "Value" "230V AC"
-			(at 261.62 101.5999 0)
+			(at 276.86 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9054,7 +9408,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 99.06 0)
+			(at 274.32 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9063,7 +9417,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 259.08 99.06 0)
+			(at 274.32 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9072,7 +9426,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 259.08 99.06 0)
+			(at 274.32 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9129,7 +9483,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 168.402 123.19 90)
 			(effects
 				(font
@@ -9265,7 +9619,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TO_SOT_Packages_SMD:SOT-23_Handsoldering"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
 			(at 166.37 36.195 0)
 			(effects
 				(font
@@ -9341,7 +9695,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 59.182 30.48 90)
 			(effects
 				(font
@@ -9477,7 +9831,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistors_SMD:R_0805_HandSoldering"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 32.512 90)
 			(effects
 				(font
