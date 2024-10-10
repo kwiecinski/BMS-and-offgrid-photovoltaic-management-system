@@ -9475,7 +9475,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR067")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -9550,7 +9550,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C9")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -9622,7 +9622,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR060")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -9638,7 +9638,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "035e3889-bf97-4379-9190-cd115c8e0786")
-		(property "Reference" "R36"
+		(property "Reference" "R40"
 			(at 328.168 279.4578 0)
 			(effects
 				(font
@@ -9692,7 +9692,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R36")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -9767,7 +9767,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R42")
+					(reference "R46")
 					(unit 1)
 				)
 			)
@@ -9839,7 +9839,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR047")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -9955,7 +9955,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0580ceeb-d141-4eb1-95fb-559d3d5ca6da")
-		(property "Reference" "C15"
+		(property "Reference" "C16"
 			(at 286.131 275.6478 0)
 			(effects
 				(font
@@ -10009,7 +10009,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C15")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -10084,7 +10084,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R26")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -10100,7 +10100,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "086bd8ca-a385-4bbe-8418-b7e4644bac4e")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR070"
 			(at 312.42 300.99 0)
 			(effects
 				(font
@@ -10150,7 +10150,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR069")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -10222,7 +10222,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR062")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -10254,7 +10254,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 88.9 83.82 0)
 			(effects
 				(font
@@ -10312,7 +10312,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a434ce0-1ae8-4c67-8261-34abe62fdc86")
-		(property "Reference" "R34"
+		(property "Reference" "R38"
 			(at 297.18 241.2195 90)
 			(effects
 				(font
@@ -10364,7 +10364,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R34")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -10436,7 +10436,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR055")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -10508,7 +10508,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR029")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -10580,7 +10580,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR078")
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
@@ -10614,7 +10614,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm"
 			(at 308.61 66.04 0)
 			(effects
 				(font
@@ -10847,7 +10847,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR053")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -10919,7 +10919,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR054")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -11088,7 +11088,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R24")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -11160,7 +11160,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR034")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -11194,7 +11194,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 166.37 81.28 0)
 			(effects
 				(font
@@ -11246,7 +11246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "24f62506-8c0e-4f03-a830-1d85ea4ee88a")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR071"
 			(at 326.39 300.99 0)
 			(effects
 				(font
@@ -11296,7 +11296,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR070")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -11479,7 +11479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2757b583-9178-4fd3-98cf-0b0397434d49")
-		(property "Reference" "C13"
+		(property "Reference" "C14"
 			(at 274.701 262.0588 0)
 			(effects
 				(font
@@ -11533,7 +11533,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C13")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -11605,7 +11605,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR038")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -11680,7 +11680,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C14")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -11755,7 +11755,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R20")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -11939,7 +11939,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c588ea4-41b1-4e04-b313-357d8c0b8e19")
-		(property "Reference" "R37"
+		(property "Reference" "R41"
 			(at 328.168 289.6178 0)
 			(effects
 				(font
@@ -11993,7 +11993,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R37")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -12133,7 +12133,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR028")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -12295,7 +12295,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R33")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -12446,7 +12446,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R18")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -12518,7 +12518,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR052")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -12594,7 +12594,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R35")
+					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -12666,7 +12666,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR040")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -12741,7 +12741,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R13")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -12813,7 +12813,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR024")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -12971,7 +12971,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R21")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -13046,7 +13046,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R22")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -13118,7 +13118,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR035")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -13190,7 +13190,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR079")
+					(reference "#PWR080")
 					(unit 1)
 				)
 			)
@@ -13265,7 +13265,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R17")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -13281,7 +13281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5e309a49-8e91-4b00-9a0c-19c314935479")
-		(property "Reference" "C16"
+		(property "Reference" "C17"
 			(at 342.011 279.8388 0)
 			(effects
 				(font
@@ -13335,7 +13335,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C16")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -13407,7 +13407,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR041")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -13482,7 +13482,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R16")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -13558,7 +13558,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R15")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -13630,7 +13630,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -13706,7 +13706,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R29")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -13778,7 +13778,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR066")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -14051,7 +14051,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b8952c4-8412-4849-a4d2-8003b20310a5")
-		(property "Reference" "#PWR064"
+		(property "Reference" "#PWR065"
 			(at 297.18 283.21 0)
 			(effects
 				(font
@@ -14101,7 +14101,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR064")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -14173,7 +14173,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR048")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -14248,7 +14248,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R38")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -14399,7 +14399,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R41")
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -14415,7 +14415,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "70dda0b9-1679-42eb-98e7-03ebaf597797")
-		(property "Reference" "C12"
+		(property "Reference" "C13"
 			(at 263.271 262.9478 0)
 			(effects
 				(font
@@ -14469,7 +14469,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C12")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -14544,7 +14544,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R43")
+					(reference "R47")
 					(unit 1)
 				)
 			)
@@ -14619,7 +14619,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R32")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -14691,7 +14691,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR080")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -14839,7 +14839,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR072")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -14914,7 +14914,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R25")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -14990,7 +14990,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R27")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -15065,7 +15065,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C7")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -15213,7 +15213,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR022")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -15285,7 +15285,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR076")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -15438,7 +15438,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR025")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -15682,7 +15682,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -15757,7 +15757,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R23")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -15773,7 +15773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ff21bb0-7d84-4de5-9ff8-00f7db70558b")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR072"
 			(at 339.09 300.99 0)
 			(effects
 				(font
@@ -15823,7 +15823,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR071")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -15895,7 +15895,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR073")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -15967,7 +15967,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -16039,7 +16039,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR032")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -16111,7 +16111,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR050")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -16183,7 +16183,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR030")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -16258,7 +16258,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C4")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -16274,7 +16274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a8d40460-6182-4fe4-b0f3-7d2534690fae")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR062"
 			(at 283.21 287.02 0)
 			(effects
 				(font
@@ -16324,7 +16324,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR061")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -16396,7 +16396,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -16471,7 +16471,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C8")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -16546,7 +16546,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C5")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -16786,7 +16786,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR058")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -16820,7 +16820,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SMB"
 			(at 312.42 279.4 0)
 			(effects
 				(font
@@ -16928,7 +16928,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR031")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -17000,7 +17000,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR051")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -17072,7 +17072,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR056")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -17147,7 +17147,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R39")
+					(reference "R43")
 					(unit 1)
 				)
 			)
@@ -17222,7 +17222,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R12")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -17297,7 +17297,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R19")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -17369,7 +17369,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR075")
+					(reference "#PWR076")
 					(unit 1)
 				)
 			)
@@ -17441,7 +17441,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR049")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -17457,7 +17457,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf45f1f8-fb70-4a61-a4c8-021e35751d73")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR043"
 			(at 160.02 85.09 0)
 			(effects
 				(font
@@ -17507,7 +17507,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR042")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -17652,7 +17652,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR059")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -17727,7 +17727,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -17743,7 +17743,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c69694dc-4a28-49b5-8795-7330ea0400b4")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR058"
 			(at 260.35 278.13 0)
 			(effects
 				(font
@@ -17793,7 +17793,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR057")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -17865,7 +17865,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR077")
+					(reference "#PWR078")
 					(unit 1)
 				)
 			)
@@ -17937,7 +17937,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR065")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -18009,7 +18009,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR068")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -18081,7 +18081,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR036")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -18153,7 +18153,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR033")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -18225,7 +18225,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR046")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -18301,7 +18301,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R28")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -18421,7 +18421,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Bourns_SRR1208_12.7x12.7mm"
 			(at 175.26 88.9 0)
 			(effects
 				(font
@@ -18538,7 +18538,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R31")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -18613,7 +18613,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R40")
+					(reference "R44")
 					(unit 1)
 				)
 			)
@@ -18758,7 +18758,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -18833,7 +18833,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R30")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -18979,7 +18979,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR026")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -19218,7 +19218,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "R14")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -19290,7 +19290,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR074")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -19362,7 +19362,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR045")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -19438,7 +19438,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C10")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -19513,7 +19513,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "C11")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -19694,7 +19694,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR063")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -19766,7 +19766,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/597d6a57-53dc-4721-891a-2c0af328a07b"
-					(reference "#PWR027")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)

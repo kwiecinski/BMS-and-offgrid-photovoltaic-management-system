@@ -3973,7 +3973,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "C3")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -4208,7 +4208,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2900785c-51ff-4a73-8a7c-107c3e70602a")
-		(property "Reference" "R8"
+		(property "Reference" "R12"
 			(at 192.278 69.85 0)
 			(effects
 				(font
@@ -4262,7 +4262,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R8")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -4277,7 +4277,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "38bf8469-f176-4e1c-acfe-12a33aa9c79c")
-		(property "Reference" "C21"
+		(property "Reference" "C3"
 			(at 54.356 42.164 0)
 			(effects
 				(font
@@ -4331,7 +4331,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "C21")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -4475,7 +4475,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR017")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -4692,7 +4692,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60df1cf0-25f4-474e-a91b-285cabb9a1d9")
-		(property "Reference" "R73"
+		(property "Reference" "R7"
 			(at 158.75 30.48 90)
 			(effects
 				(font
@@ -4744,7 +4744,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R73")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -4759,7 +4759,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "618ef7aa-a8a7-423b-8f18-55c2ddfedbae")
-		(property "Reference" "R9"
+		(property "Reference" "R13"
 			(at 197.358 69.85 0)
 			(effects
 				(font
@@ -4813,7 +4813,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R9")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -4885,7 +4885,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR018")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -4901,7 +4901,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "686eaf4e-d40e-4236-9d25-d5ed8b50bc44")
-		(property "Reference" "R74"
+		(property "Reference" "R8"
 			(at 158.75 33.02 90)
 			(effects
 				(font
@@ -4953,7 +4953,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R74")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -5028,7 +5028,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R6")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5178,7 +5178,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R7")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -5322,7 +5322,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR021")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -5396,7 +5396,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R5")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -5412,7 +5412,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "888b1452-b57b-4503-b34e-80ff309a30a9")
-		(property "Reference" "R72"
+		(property "Reference" "R6"
 			(at 158.75 27.94 90)
 			(effects
 				(font
@@ -5464,7 +5464,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R72")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -5480,7 +5480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "945654eb-5c75-4cb7-9a61-c9bdba08fa99")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR017"
 			(at 166.37 58.42 0)
 			(effects
 				(font
@@ -5530,7 +5530,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR0101")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -5602,7 +5602,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR019")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -5678,7 +5678,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R10")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -5811,7 +5811,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b88ee4b7-90c8-4b7e-a5e8-8d6b893a8faa")
-		(property "Reference" "R11"
+		(property "Reference" "R15"
 			(at 261.62 46.9899 0)
 			(effects
 				(font
@@ -5865,7 +5865,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R11")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -6019,7 +6019,7 @@
 			)
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "#PWR020")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -6176,7 +6176,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eedb281d-149b-4cd3-a60f-e80790088ce7")
-		(property "Reference" "R71"
+		(property "Reference" "R5"
 			(at 158.75 25.4 90)
 			(effects
 				(font
@@ -6228,7 +6228,7 @@
 		(instances
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/c1486e23-7518-492e-81fc-70742dd392eb"
-					(reference "R71")
+					(reference "R5")
 					(unit 1)
 				)
 			)
