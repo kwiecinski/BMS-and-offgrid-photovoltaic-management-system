@@ -916,6 +916,18 @@
 		)
 	)
 	(junction
+		(at 87.63 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "047ae95c-eb5a-4a3f-9716-69edfc492790")
+	)
+	(junction
+		(at 86.36 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "06a3a6df-d8e4-4dd6-96f0-a50e4be8d401")
+	)
+	(junction
 		(at 97.79 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -991,7 +1003,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 128.27) (xy 86.36 118.11)
+			(xy 86.36 128.27) (xy 86.36 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1011,7 +1023,17 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 72.39) (xy 87.63 62.23)
+			(xy 87.63 64.77) (xy 73.66 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4972d1da-ae9e-427a-b3dc-420c8ed8eae5")
+	)
+	(wire
+		(pts
+			(xy 87.63 72.39) (xy 87.63 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1028,6 +1050,16 @@
 			(type default)
 		)
 		(uuid "4dc0ea82-0eda-4a1b-a79e-b2079f3a2bd5")
+	)
+	(wire
+		(pts
+			(xy 86.36 121.92) (xy 73.66 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de2731c-d051-4a3d-ae66-a59e5234c8e0")
 	)
 	(wire
 		(pts
@@ -1078,6 +1110,16 @@
 			(type default)
 		)
 		(uuid "5c91ae0a-a3ff-483c-bc43-61e91b168b98")
+	)
+	(wire
+		(pts
+			(xy 73.66 121.92) (xy 73.66 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d632814-01e1-43a2-864e-dcc6a509a01f")
 	)
 	(wire
 		(pts
@@ -1141,6 +1183,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 64.77) (xy 87.63 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b495757c-dcb2-49cf-9bad-01fe4b935727")
+	)
+	(wire
+		(pts
 			(xy 137.16 107.95) (xy 129.54 107.95)
 		)
 		(stroke
@@ -1148,6 +1200,16 @@
 			(type default)
 		)
 		(uuid "c37ed224-40e7-431d-abb4-3e02c7cd25b0")
+	)
+	(wire
+		(pts
+			(xy 86.36 121.92) (xy 86.36 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7c7269b-961b-4c61-8486-69c31ebf585c")
 	)
 	(wire
 		(pts
@@ -1188,6 +1250,16 @@
 			(type default)
 		)
 		(uuid "ee35e8f2-08c4-45b0-b877-90bb9052411c")
+	)
+	(wire
+		(pts
+			(xy 73.66 64.77) (xy 73.66 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5e1f7d6-af88-47ce-90eb-f1e1fc9f4836")
 	)
 	(wire
 		(pts
@@ -2628,7 +2700,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Optical:BP104")
-		(at 73.66 134.62 270)
+		(at 73.66 133.35 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2636,7 +2708,7 @@
 		(dnp no)
 		(uuid "fcfa4d94-6696-4265-944a-f3c6ef36ce41")
 		(property "Reference" "D21"
-			(at 68.58 132.08 90)
+			(at 68.58 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2645,7 +2717,7 @@
 			)
 		)
 		(property "Value" "BPV10"
-			(at 64.77 134.62 90)
+			(at 64.77 133.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2654,7 +2726,7 @@
 			)
 		)
 		(property "Footprint" "LED_THT:LED_D5.0mm"
-			(at 78.105 134.62 0)
+			(at 78.105 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2663,7 +2735,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.vishay.com/docs/81502/bpv10.pdf"
-			(at 73.66 133.35 0)
+			(at 73.66 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2672,7 +2744,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 73.66 134.62 0)
+			(at 73.66 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)

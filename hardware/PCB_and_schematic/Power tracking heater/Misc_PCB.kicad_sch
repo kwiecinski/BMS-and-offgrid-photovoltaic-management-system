@@ -1,0 +1,52 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "7b59bc46-701c-4caa-9db8-f0eec290561d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 82.55 63.5)
+		(size 35.56 24.13)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5708feb1-aa6a-4b62-bc86-35f6572d752c")
+		(property "Sheetname" "Heater with solar power tracking"
+			(at 82.55 62.1734 0)
+			(effects
+				(font
+					(size 2.5 2.5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_tracking_heater.kicad_sch"
+			(at 82.55 88.2146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
