@@ -1,4 +1,4 @@
-23169919048095694
+23206334659039527
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -66003,6 +66003,13 @@ Buzzer
 2
 2
 My-Footprints
+CP_Radial_D6.3mm_P2.50mm
+CP, Radial series, Radial, pin pitch=2.50mm, , diameter=6.3mm, Electrolytic Capacitor
+CP Radial series Radial pin pitch 2.50mm  diameter 6.3mm Electrolytic Capacitor
+0
+2
+2
+My-Footprints
 CR2032H
 
 
@@ -66051,6 +66058,13 @@ fuse clip open
 0
 4
 2
+My-Footprints
+G5G-1A-DT1
+
+
+0
+3
+3
 My-Footprints
 HF3FD
 
@@ -66122,6 +66136,13 @@ ShortWire
 2
 2
 My-Footprints
+TO-92_Inline_LITTLE_BIGGER
+TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)
+to-92 sc-43 sc-43a sot54 PA33 transistor
+0
+3
+3
+My-Footprints
 TO-92_Inline_Wide
 TO-92 leads in-line, wide, drill 0.8mm (see NXP sot054_po.pdf)
 to-92 sc-43 sc-43a sot54 PA33 transistor
@@ -66144,6 +66165,13 @@ TO-220-3 Vertical RM 2.54mm
 3
 My-Footprints
 TO-220-3_Vertical
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
+My-Footprints
+TO-220-3_Vertical-little-bigger pads
 TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
 TO-220-3 Vertical RM 2.54mm
 0
@@ -66185,12 +66213,26 @@ connector screw
 4
 4
 My-Footprints
+microSD-card-PCB-plug
+
+
+0
+8
+8
+My-Footprints
 push_button_12mm
 
 
 0
 4
 4
+My-Footprints-connectors
+CDDC-1,5-5-PV-3,5
+
+
+0
+10
+10
 My-Footprints-connectors
 Conn-01x04-N25-W4P
 
@@ -66276,6 +66318,13 @@ Conn_2x13
 26
 26
 My-Footprints-connectors
+DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm
+9-pin D-Sub connector, horizontal/angled (90 deg), THT-mount, female, pitch 2.77x2.84mm, pin-PCB-offset 7.699999999999999mm, distance of mounting holes 25mm, distance of mounting holes to PCB edge 9.12mm, see https://disti-assets.s3.amazonaws.com/tonar/files/datasheets/16730.pdf
+9-pin D-Sub connector horizontal angled 90deg THT female pitch 2.77x2.84mm pin-PCB-offset 7.699999999999999mm mounting-holes-distance 25mm mounting-hole-offset 25mm
+0
+11
+9
+My-Footprints-connectors
 Flat-6,3mm-connector-2P
 
 
@@ -66325,12 +66374,33 @@ Mount-Hole-3mm
 1
 1
 My-Footprints-connectors
+PinSocket_1x16_P2.54mm_Vertical
+Through hole straight socket strip, 1x16, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x16 2.54mm single row
+0
+16
+16
+My-Footprints-connectors
+Pin_Header_Straight_1x02_Pitch2.54mm
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+2
+2
+My-Footprints-connectors
 Pin_Header_Straight_1x06_Pitch2.54mm
 Through hole straight pin header, 1x06, 2.54mm pitch, single row
 Through hole pin header THT 1x06 2.54mm single row
 0
 6
 6
+My-Footprints-connectors
+SOL-18
+
+
+0
+18
+18
 My-Footprints-connectors
 Screw-Terminal-5.00mm-2pin
 
@@ -66366,6 +66436,13 @@ Screw-Terminal-5.00mm-10pin
 0
 10
 10
+My-Footprints-connectors
+Screw-Terminal-P2-rast-5mm-6,7x30
+
+
+0
+2
+2
 My-Footprints-connectors
 Screw-Terminal-P6-rast-5mm-6,7x30
 
@@ -66451,6 +66528,13 @@ My-Footprints-orw-els
 2
 2
 My-Footprints-orw-els
+3528
+
+
+0
+2
+2
+My-Footprints-orw-els
 6032-mediana-plyta
 
 
@@ -66459,6 +66543,13 @@ My-Footprints-orw-els
 2
 My-Footprints-orw-els
 Couter_Inductor
+
+
+0
+8
+8
+My-Footprints-orw-els
+DIP8
 
 
 0
@@ -66486,6 +66577,20 @@ FTR-B3-Relay-5.08
 8
 8
 My-Footprints-orw-els
+MINI-FLAT
+
+
+0
+4
+4
+My-Footprints-orw-els
+SO-8
+
+
+0
+8
+8
+My-Footprints-orw-els
 SO-8-mediana-front
 
 
@@ -66493,12 +66598,54 @@ SO-8-mediana-front
 8
 8
 My-Footprints-orw-els
+SO-14
+
+
+0
+14
+14
+My-Footprints-orw-els
+SO-16
+
+
+0
+16
+16
+My-Footprints-orw-els
+SOD-80
+
+
+0
+2
+2
+My-Footprints-orw-els
 SOD-80_1-mediana
 
 
 0
 2
 2
+My-Footprints-orw-els
+SOL-20
+
+
+0
+20
+20
+My-Footprints-orw-els
+SOL-24
+
+
+0
+24
+24
+My-Footprints-orw-els
+SOL-28W
+
+
+0
+28
+28
 My-Footprints-orw-els
 SOT23-JLCPCB-Oriented
 SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py

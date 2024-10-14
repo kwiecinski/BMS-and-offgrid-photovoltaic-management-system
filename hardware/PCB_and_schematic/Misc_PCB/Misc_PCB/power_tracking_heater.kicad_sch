@@ -6307,7 +6307,7 @@
 			)
 		)
 	)
-	(global_label "MISO"
+	(global_label "ZERO_CROSSING_SIGNAL"
 		(shape input)
 		(at 101.6 52.07 0)
 		(fields_autoplaced yes)
@@ -6319,7 +6319,7 @@
 		)
 		(uuid "c93d7609-878d-423f-a42c-07bb61dcd832")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 109.1814 52.07 0)
+			(at 127.5057 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)

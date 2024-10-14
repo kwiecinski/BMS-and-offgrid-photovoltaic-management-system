@@ -1367,6 +1367,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Sensor_Optical:BP104")
+		(at 73.66 77.47 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3f7d991a-32df-4102-aacd-5b5ef6ee7f25")
+		(property "Reference" "D20"
+			(at 68.58 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BPV10"
+			(at 64.77 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 78.105 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/81502/bpv10.pdf"
+			(at 73.66 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33b3b9a4-4d88-4fab-baca-85ea92fb1551")
+		)
+		(pin "2"
+			(uuid "68d1314f-bead-4d43-8d67-0f9b3a0dbce4")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/6babc747-648a-483d-982b-7a5f4e06013a"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
 		(at 142.24 107.95 0)
 		(unit 1)
@@ -2552,6 +2621,75 @@
 			(project "Misc_PCB"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/6babc747-648a-483d-982b-7a5f4e06013a"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Optical:BP104")
+		(at 73.66 134.62 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fcfa4d94-6696-4265-944a-f3c6ef36ce41")
+		(property "Reference" "D21"
+			(at 68.58 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BPV10"
+			(at 64.77 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D5.0mm"
+			(at 78.105 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/81502/bpv10.pdf"
+			(at 73.66 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "451c57d2-45cb-4678-b300-6029f86b13fd")
+		)
+		(pin "2"
+			(uuid "7fd7870b-9824-4aaa-b589-fcee818d6661")
+		)
+		(instances
+			(project "Misc_PCB"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/6babc747-648a-483d-982b-7a5f4e06013a"
+					(reference "D21")
 					(unit 1)
 				)
 			)
