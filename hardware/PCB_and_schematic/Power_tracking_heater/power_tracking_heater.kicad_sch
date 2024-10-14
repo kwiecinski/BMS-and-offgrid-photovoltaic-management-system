@@ -1849,175 +1849,6 @@
 				)
 			)
 		)
-		(symbol "Device:LED"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:Polyfuse"
 			(pin_numbers hide)
 			(pin_names
@@ -2291,8 +2122,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "T"
-				(at 0 6.35 0)
+			(property "Reference" "T1"
+				(at 0.0127 10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2300,14 +2131,14 @@
 				)
 			)
 			(property "Value" "Transformer_1P_1S"
-				(at 0 -7.62 0)
+				(at 0.0127 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "My-Footprints:Transformer TS2-14"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2590,7 +2421,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2608,7 +2439,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2626,7 +2457,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5126,6 +4957,12 @@
 		(uuid "12fab068-10a5-4eb4-a466-54188811a3c9")
 	)
 	(junction
+		(at 118.11 223.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1bd48604-6ecf-4a1b-b10d-0dc04f625b0a")
+	)
+	(junction
 		(at 88.9 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5154,6 +4991,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2aca695a-f87c-4e5f-9162-3e12f958f47c")
+	)
+	(junction
+		(at 86.36 222.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b5760ac-1b69-4e0f-8668-4aa03f4dca6c")
 	)
 	(junction
 		(at 83.82 210.82)
@@ -5216,16 +5059,10 @@
 		(uuid "87a5ed94-399b-437f-81de-3f9c2420c57c")
 	)
 	(junction
-		(at 35.56 100.33)
+		(at 194.31 168.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9c5ace06-339d-454d-bc61-4a780c07d224")
-	)
-	(junction
-		(at 66.04 227.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3fdf5a1-e78e-4098-b96c-1aba4175edc9")
 	)
 	(junction
 		(at 114.3 99.06)
@@ -5238,12 +5075,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af385ad5-24d0-44f7-9697-5fcc0afe791d")
-	)
-	(junction
-		(at 83.82 227.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b092f59d-297f-461c-932d-009c5b389340")
 	)
 	(junction
 		(at 215.9 91.44)
@@ -5298,6 +5129,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d67cbdde-1ee5-4e02-bc32-b7985c686b48")
+	)
+	(junction
+		(at 66.04 224.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc44ef4f-8a8b-46c9-a71b-b22f395f1117")
 	)
 	(junction
 		(at 196.85 34.29)
@@ -5371,7 +5208,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 176.53) (xy 54.61 179.07)
+			(xy 54.61 176.53) (xy 54.61 182.88)
 		)
 		(stroke
 			(width 0)
@@ -5391,7 +5228,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 100.33) (xy 38.1 100.33)
+			(xy 194.31 168.91) (xy 196.85 168.91)
 		)
 		(stroke
 			(width 0)
@@ -5418,6 +5255,16 @@
 			(type default)
 		)
 		(uuid "04758cc9-3db1-4f0f-9f18-bf9e5469c808")
+	)
+	(wire
+		(pts
+			(xy 118.11 223.52) (xy 118.11 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05a82d25-7703-4457-80a5-561b778ef69f")
 	)
 	(wire
 		(pts
@@ -5561,6 +5408,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 180.34) (xy 38.1 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "162939b3-60e2-415a-a749-4ef3e8b3a9af")
+	)
+	(wire
+		(pts
 			(xy 60.96 24.13) (xy 78.74 24.13)
 		)
 		(stroke
@@ -5691,16 +5548,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 227.33) (xy 66.04 227.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2760623c-ee5e-41f1-a283-e24a868e84ab")
-	)
-	(wire
-		(pts
 			(xy 78.74 72.39) (xy 78.74 69.85)
 		)
 		(stroke
@@ -5788,16 +5635,6 @@
 			(type default)
 		)
 		(uuid "34f35815-97c0-44fb-963f-5e29baec2d03")
-	)
-	(wire
-		(pts
-			(xy 38.1 187.96) (xy 38.1 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36a0f36e-2f98-4135-bf0b-2cfd3b02352d")
 	)
 	(wire
 		(pts
@@ -5961,7 +5798,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 102.87) (xy 34.29 102.87)
+			(xy 186.69 176.53) (xy 193.04 176.53)
 		)
 		(stroke
 			(width 0)
@@ -6008,6 +5845,16 @@
 			(type default)
 		)
 		(uuid "53aaaa84-c1fa-466b-9931-95a4eb51390e")
+	)
+	(wire
+		(pts
+			(xy 86.36 222.25) (xy 66.04 222.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "543992c7-5154-4154-b106-84aedb1d0a68")
 	)
 	(wire
 		(pts
@@ -6101,7 +5948,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 100.33) (xy 35.56 100.33)
+			(xy 186.69 168.91) (xy 194.31 168.91)
 		)
 		(stroke
 			(width 0)
@@ -6128,6 +5975,16 @@
 			(type default)
 		)
 		(uuid "60cec0b3-6888-40f6-a35e-b38506775a1a")
+	)
+	(wire
+		(pts
+			(xy 186.69 171.45) (xy 196.85 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "630ce510-6786-4f30-b791-b59fdac15d9c")
 	)
 	(wire
 		(pts
@@ -6311,6 +6168,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 173.99) (xy 196.85 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7992034c-5721-4813-8daf-78bcaf882f47")
+	)
+	(wire
+		(pts
 			(xy 45.72 148.59) (xy 54.61 148.59)
 		)
 		(stroke
@@ -6461,6 +6328,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 182.88) (xy 54.61 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "910f5bbf-0b75-4e0e-b7ba-3ea5e06c944b")
+	)
+	(wire
+		(pts
 			(xy 39.37 73.66) (xy 39.37 69.85)
 		)
 		(stroke
@@ -6498,16 +6375,6 @@
 			(type default)
 		)
 		(uuid "950b22d9-23c5-46ec-8a8f-ddb77c6a39b2")
-	)
-	(wire
-		(pts
-			(xy 54.61 186.69) (xy 54.61 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "98f716d8-ff77-4ed4-8fd2-49ff06b442dc")
 	)
 	(wire
 		(pts
@@ -6651,7 +6518,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 97.79) (xy 38.1 97.79)
+			(xy 186.69 166.37) (xy 196.85 166.37)
 		)
 		(stroke
 			(width 0)
@@ -6738,16 +6605,6 @@
 			(type default)
 		)
 		(uuid "b9a188a0-2f67-45f4-827b-b4fad49a5166")
-	)
-	(wire
-		(pts
-			(xy 66.04 227.33) (xy 66.04 224.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba10b5f6-5e28-4964-9559-00c24f3953ff")
 	)
 	(wire
 		(pts
@@ -7171,6 +7028,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 222.25) (xy 66.04 224.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb6abbd6-a644-40ad-8e8b-840d2133a89c")
+	)
+	(wire
+		(pts
 			(xy 271.78 31.75) (xy 256.54 31.75)
 		)
 		(stroke
@@ -7181,7 +7048,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 233.68) (xy 66.04 227.33)
+			(xy 66.04 224.79) (xy 66.04 233.68)
 		)
 		(stroke
 			(width 0)
@@ -7241,7 +7108,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 93.98) (xy 35.56 100.33)
+			(xy 194.31 162.56) (xy 194.31 168.91)
 		)
 		(stroke
 			(width 0)
@@ -7281,7 +7148,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 102.87) (xy 34.29 106.68)
+			(xy 193.04 176.53) (xy 193.04 180.34)
 		)
 		(stroke
 			(width 0)
@@ -7572,7 +7439,7 @@
 	)
 	(global_label "PUSH_BUTTON_2"
 		(shape input)
-		(at 38.1 100.33 0)
+		(at 196.85 168.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7582,7 +7449,29 @@
 		)
 		(uuid "13f691e6-351f-403f-bfe1-356835740cca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 56.5671 100.33 0)
+			(at 215.3171 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_2"
+		(shape input)
+		(at 196.85 171.45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1d8ed9da-a584-42d6-8324-3064d1c78d3d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 205.4594 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7632,6 +7521,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LED_2"
+		(shape input)
+		(at 33.02 182.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "25cbad22-a3af-4708-a338-7a188d8ad636")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.4106 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -7770,7 +7681,7 @@
 	)
 	(global_label "PUSH_BUTTON_1"
 		(shape input)
-		(at 38.1 97.79 0)
+		(at 196.85 166.37 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7780,7 +7691,7 @@
 		)
 		(uuid "59d49035-4b76-4e00-bbed-5bf92e51b3bb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 56.5671 97.79 0)
+			(at 215.3171 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8230,6 +8141,28 @@
 			)
 		)
 	)
+	(global_label "LED_1"
+		(shape input)
+		(at 196.85 173.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cd317e2b-9a56-43cc-8316-bc41fc5cdff2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 205.4594 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RXD"
 		(shape input)
 		(at 20.32 166.37 180)
@@ -8362,6 +8295,28 @@
 			)
 		)
 	)
+	(global_label "LED_1"
+		(shape input)
+		(at 33.02 180.34 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f2d681fa-0f7c-4a41-9b99-2d9609301014")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.4106 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "power:GND")
 		(at 139.7 228.6 0)
@@ -8420,7 +8375,7 @@
 			(uuid "c33134f8-c61c-489f-825e-2d1e4dd316d3")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR017")
 					(unit 1)
@@ -8490,7 +8445,7 @@
 			(uuid "e111060c-436e-4e57-b1fa-ba2f96acb37a")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R8")
 					(unit 1)
@@ -8560,7 +8515,7 @@
 			(uuid "3b72461c-2173-4709-bfd6-b435a5b0aba1")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R27")
 					(unit 1)
@@ -8626,7 +8581,7 @@
 			(uuid "07e47303-a1d6-44ff-bdd7-9eea5815ef98")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR027")
 					(unit 1)
@@ -8695,7 +8650,7 @@
 			(uuid "fc20439a-6452-4708-a060-59684e6fb092")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R1")
 					(unit 1)
@@ -8766,7 +8721,7 @@
 			(uuid "5fb9c6ce-6063-420b-9d79-c1d1ce123cc2")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "J3")
 					(unit 1)
@@ -8837,7 +8792,7 @@
 			(uuid "3ac1d2d7-4ff3-43a9-b308-324e4170f070")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U3")
 					(unit 1)
@@ -8903,7 +8858,7 @@
 			(uuid "3bbd7d2c-94cc-42af-9d39-6dd193eb1bc2")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR012")
 					(unit 1)
@@ -8969,7 +8924,7 @@
 			(uuid "7f4cff8b-d0c3-4f2b-8fb9-2852069ab8f6")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR011")
 					(unit 1)
@@ -9038,7 +8993,7 @@
 			(uuid "b1ea90ca-1fb1-4643-add7-ffbe971e7517")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R13")
 					(unit 1)
@@ -9048,7 +9003,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 35.56 90.17 0)
+		(at 194.31 158.75 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9057,7 +9012,7 @@
 		(dnp no)
 		(uuid "2a4758a7-1127-4c58-9540-55af11dcb78b")
 		(property "Reference" "R3"
-			(at 37.338 91.3384 0)
+			(at 196.088 159.9184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9066,7 +9021,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 37.338 89.027 0)
+			(at 196.088 157.607 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9075,7 +9030,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 33.782 90.17 90)
+			(at 192.532 158.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9084,7 +9039,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 35.56 90.17 0)
+			(at 194.31 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9093,7 +9048,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 35.56 90.17 0)
+			(at 194.31 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9108,7 +9063,7 @@
 			(uuid "a421b573-5fa0-41b1-bf46-0c762ae4490c")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R3")
 					(unit 1)
@@ -9178,7 +9133,7 @@
 			(uuid "01b266e8-8f49-4dd7-8508-9db52f62a147")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R15")
 					(unit 1)
@@ -9244,7 +9199,7 @@
 			(uuid "22704f51-d217-4550-806e-59609eae40c1")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR019")
 					(unit 1)
@@ -9314,7 +9269,7 @@
 			(uuid "3bc5d0c8-b50d-4f38-9dd2-3d92ae6bc4dd")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R24")
 					(unit 1)
@@ -9391,7 +9346,7 @@
 			(uuid "923738e4-f995-4f97-a48a-e2386af7c960")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "J2")
 					(unit 1)
@@ -9457,7 +9412,7 @@
 			(uuid "72d30d67-65c2-4853-99cb-db0bd43d956d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR014")
 					(unit 1)
@@ -9523,7 +9478,7 @@
 			(uuid "1528b878-3411-4dae-bc44-a58e20713c31")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR030")
 					(unit 1)
@@ -9594,7 +9549,7 @@
 			(uuid "3aed8db2-07a8-4452-890f-2cbf20b2cd9d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D11")
 					(unit 1)
@@ -9679,7 +9634,7 @@
 			(uuid "c2684792-b7b5-41ca-b8d3-dad06f022037")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U2")
 					(unit 2)
@@ -9745,7 +9700,7 @@
 			(uuid "59593c8f-509d-418e-814c-c2b1c8c3e57b")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR031")
 					(unit 1)
@@ -9819,7 +9774,7 @@
 			(uuid "bc8caeea-1714-4088-86b3-1a4e9c2bba18")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "MOD1")
 					(unit 1)
@@ -9888,7 +9843,7 @@
 			(uuid "e4cbfa29-5fc8-4c1c-a81a-8b967beb926f")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R7")
 					(unit 1)
@@ -9954,7 +9909,7 @@
 			(uuid "ac2d2783-137e-4430-842c-77f634567a4b")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR024")
 					(unit 1)
@@ -10029,75 +9984,9 @@
 			(uuid "179cbb0b-e6d4-4676-bc42-0e86d7e41471")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 38.1 190.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "476bbbff-b8e7-4813-b1dc-d6de84aa1a5e")
-		(property "Reference" "#PWR03"
-			(at 38.1 196.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 38.1 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 38.1 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.1 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "49bd492d-3332-43de-9280-2337219b419e")
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -10178,7 +10067,7 @@
 			(uuid "45e9300f-ce6a-41ad-a1b7-7f1f212a7f21")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U4")
 					(unit 1)
@@ -10268,7 +10157,7 @@
 			(uuid "c2684792-b7b5-41ca-b8d3-dad06f022038")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U2")
 					(unit 3)
@@ -10347,7 +10236,7 @@
 			(uuid "a2d2ea74-2518-4d85-b917-4e4eef6e2441")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "J5")
 					(unit 1)
@@ -10381,7 +10270,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "My-Footprints-orw-els:DO-213AB_1-mediana"
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
 			(at 90.17 226.695 0)
 			(effects
 				(font
@@ -10433,7 +10322,7 @@
 			(uuid "6e1e7a35-2dc3-45b1-bad0-61d8e31bd77a")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D7")
 					(unit 1)
@@ -10499,7 +10388,7 @@
 			(uuid "835d5745-ce1b-472f-9609-779b7d6f15e2")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR010")
 					(unit 1)
@@ -10576,7 +10465,7 @@
 			(uuid "c9da67ff-fabb-4170-ae84-6d513fb1959d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q2")
 					(unit 1)
@@ -10645,7 +10534,7 @@
 			(uuid "c51c8454-2ce5-450d-bb73-f13267c63454")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R12")
 					(unit 1)
@@ -10655,7 +10544,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 35.56 86.36 0)
+		(at 194.31 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10664,7 +10553,7 @@
 		(fields_autoplaced yes)
 		(uuid "53d26d24-220c-4107-a59c-e79030cab6f2")
 		(property "Reference" "#PWR02"
-			(at 35.56 90.17 0)
+			(at 194.31 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10673,7 +10562,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 35.56 82.2269 0)
+			(at 194.31 150.8069 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10681,7 +10570,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 86.36 0)
+			(at 194.31 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10690,7 +10579,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 86.36 0)
+			(at 194.31 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10699,7 +10588,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 35.56 86.36 0)
+			(at 194.31 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10711,7 +10600,7 @@
 			(uuid "699b9428-4ba7-46e1-acb1-1df3bd28789f")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR02")
 					(unit 1)
@@ -10782,7 +10671,7 @@
 			(uuid "b7f849fd-a0b2-4c48-bcd7-a8ae9a5eb24f")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D12")
 					(unit 1)
@@ -10852,7 +10741,7 @@
 			(uuid "363dc472-35d0-4f93-92e5-985e365b5c30")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "C4")
 					(unit 1)
@@ -10922,7 +10811,7 @@
 			(uuid "dfb6de38-bf35-4410-9fb9-44dc730691f7")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R19")
 					(unit 1)
@@ -10997,7 +10886,7 @@
 			(uuid "1a8bfc37-dd14-4106-bfd4-a834c43ee7b9")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q6")
 					(unit 1)
@@ -11074,7 +10963,7 @@
 			(uuid "ef125cd7-afc9-4a4b-a580-5feeddafbc02")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q1")
 					(unit 1)
@@ -11140,7 +11029,7 @@
 			(uuid "7650a7f2-860d-4613-b036-7123dd0d6fbf")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR013")
 					(unit 1)
@@ -11210,7 +11099,7 @@
 			(uuid "12d595e1-3651-4d64-ab6b-77d5884dc336")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R23")
 					(unit 1)
@@ -11276,79 +11165,9 @@
 			(uuid "842613e9-06f8-458b-80a6-8bc872dcc646")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 54.61 172.72 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6d90f4c4-c0ba-41d9-acc9-81676d7b0e8b")
-		(property "Reference" "D2"
-			(at 58.42 173.0374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 58.42 175.5774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2_3.4x3.0mm_KA"
-			(at 54.61 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.61 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 54.61 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d5c847f7-46aa-49f7-8cbb-a140d9e9b999")
-		)
-		(pin "2"
-			(uuid "206eab4d-9916-4e03-8167-f1b37232a270")
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -11416,7 +11235,7 @@
 			(uuid "73c354eb-85fc-458f-87ae-76b7875c0c63")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R21")
 					(unit 1)
@@ -11485,7 +11304,7 @@
 			(uuid "30b2e8bf-5dc3-4e85-867d-0d3464e3e8b5")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R14")
 					(unit 1)
@@ -11495,7 +11314,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 34.29 106.68 0)
+		(at 193.04 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11504,7 +11323,7 @@
 		(fields_autoplaced yes)
 		(uuid "6e633f6a-f2d9-4aca-bf25-bd8cb8e43ce3")
 		(property "Reference" "#PWR01"
-			(at 34.29 113.03 0)
+			(at 193.04 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11513,7 +11332,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.29 110.8131 0)
+			(at 193.04 184.4731 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11521,7 +11340,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 106.68 0)
+			(at 193.04 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11530,7 +11349,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 106.68 0)
+			(at 193.04 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11539,7 +11358,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 34.29 106.68 0)
+			(at 193.04 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11551,7 +11370,7 @@
 			(uuid "0e6bfaa1-de04-453c-b410-251c561153f1")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR01")
 					(unit 1)
@@ -11626,75 +11445,9 @@
 			(uuid "16b8cb0a-3bc8-44d2-80fc-83130cede05e")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 54.61 190.5 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "73376f18-1b73-44db-86ee-3c86e71b5a7f")
-		(property "Reference" "#PWR07"
-			(at 54.61 196.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 54.61 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 54.61 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 54.61 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "27bb56e8-3e26-4a9e-be60-c92b9bac32ff")
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -11773,7 +11526,7 @@
 			(uuid "865ddc53-f9d7-4885-bf99-cac8ff5948ed")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "J4")
 					(unit 1)
@@ -11839,9 +11592,86 @@
 			(uuid "3bf09e2b-47dd-4d83-b41b-36febc23a29c")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x05")
+		(at 181.61 171.45 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c2acb58-d7b9-4b8c-807e-2cc77768f19c")
+		(property "Reference" "J6"
+			(at 181.61 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USER_PANEL"
+			(at 181.61 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XA_B05B-XASK-1_1x05_P2.50mm_Vertical"
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "af0996c5-4204-488d-8e07-ab869ae6d743")
+		)
+		(pin "1"
+			(uuid "649db834-d124-4445-803e-edb8b7f7c4d1")
+		)
+		(pin "3"
+			(uuid "f1e69429-257c-47c8-8459-e86b3b3c681d")
+		)
+		(pin "2"
+			(uuid "d798d457-5cec-45f2-90bc-de53882808cc")
+		)
+		(pin "4"
+			(uuid "234bb30c-bf56-42b2-87e1-df03e39b5afd")
+		)
+		(instances
+			(project "Power_tracking_heaterP"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -11905,7 +11735,7 @@
 			(uuid "869e7e43-483c-4734-8b69-8b92ea372925")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR023")
 					(unit 1)
@@ -12019,7 +11849,7 @@
 			(uuid "c69ac2a6-58c5-443c-9647-7becf1cd5a70")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "RV1")
 					(unit 1)
@@ -12089,7 +11919,7 @@
 			(uuid "f0d0e6ff-97a3-4c6e-9f21-da4db09a66e6")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R11")
 					(unit 1)
@@ -12123,7 +11953,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "My-Footprints-orw-els:DO-213AB_1-mediana"
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
 			(at 90.17 206.375 0)
 			(effects
 				(font
@@ -12175,7 +12005,7 @@
 			(uuid "f27ef58c-26ea-4e27-86e6-95647427db7a")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D5")
 					(unit 1)
@@ -12245,7 +12075,7 @@
 			(uuid "1d63b59d-d49b-45d1-9996-d96b23e413aa")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R20")
 					(unit 1)
@@ -12280,7 +12110,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.7"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
 			(at 101.2952 223.52 0)
 			(effects
 				(font
@@ -12314,7 +12144,7 @@
 			(uuid "81887b3c-08e0-49f0-be17-4f02a8be1bf3")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "C3")
 					(unit 1)
@@ -12324,7 +12154,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 54.61 182.88 180)
+		(at 54.61 172.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12332,7 +12162,7 @@
 		(dnp no)
 		(uuid "90d1c463-3afe-4e11-851b-9b796f03de0c")
 		(property "Reference" "R5"
-			(at 56.134 181.864 0)
+			(at 56.134 171.704 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12341,7 +12171,7 @@
 			)
 		)
 		(property "Value" "220R"
-			(at 56.134 183.642 0)
+			(at 56.134 173.482 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12350,7 +12180,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 56.388 182.88 90)
+			(at 56.388 172.72 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12359,7 +12189,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.61 182.88 0)
+			(at 54.61 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12368,7 +12198,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 54.61 182.88 0)
+			(at 54.61 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12383,7 +12213,7 @@
 			(uuid "11daed1e-b148-4ad4-a27d-b735d4739cfc")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R5")
 					(unit 1)
@@ -12453,7 +12283,7 @@
 			(uuid "abbe8e50-4071-4559-9496-77928e6669aa")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R28")
 					(unit 1)
@@ -12487,7 +12317,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "My-Footprints-orw-els:DO-213AB_1-mediana"
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
 			(at 90.17 231.775 0)
 			(effects
 				(font
@@ -12539,7 +12369,7 @@
 			(uuid "f7f2de08-f2e6-4b03-a18d-5220d7da2d5b")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D8")
 					(unit 1)
@@ -12605,7 +12435,7 @@
 			(uuid "fcfa2cb3-ceb0-4e88-8f3f-d638b1f1e4bd")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR018")
 					(unit 1)
@@ -12675,7 +12505,7 @@
 			(uuid "ad0a19f7-0ad4-4faf-80fb-4c74345dc7b5")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R16")
 					(unit 1)
@@ -12746,7 +12576,7 @@
 			(uuid "6681b2fe-c94c-4700-8d0f-c84a9166d502")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D10")
 					(unit 1)
@@ -12812,7 +12642,7 @@
 			(uuid "af297fa1-7fdd-45a3-b3b9-8eebdd7ab582")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR015")
 					(unit 1)
@@ -12822,7 +12652,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 38.1 184.15 180)
+		(at 38.1 175.26 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12830,7 +12660,7 @@
 		(dnp no)
 		(uuid "9b20fe76-98a4-43aa-9b32-c7dbfbb08199")
 		(property "Reference" "R4"
-			(at 39.624 183.134 0)
+			(at 39.624 174.244 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12839,7 +12669,7 @@
 			)
 		)
 		(property "Value" "220R"
-			(at 39.624 184.912 0)
+			(at 39.624 176.022 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12848,7 +12678,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 39.878 184.15 90)
+			(at 39.878 175.26 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12857,7 +12687,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 38.1 184.15 0)
+			(at 38.1 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12866,7 +12696,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 38.1 184.15 0)
+			(at 38.1 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12881,7 +12711,7 @@
 			(uuid "b624759d-3780-47fb-9345-5334ec88f6e8")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R4")
 					(unit 1)
@@ -12952,9 +12782,75 @@
 			(uuid "c8636857-905b-4e81-8c48-f4eb99048c9c")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 118.11 226.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e6346a0-52e8-4da7-b35a-2ae6d67e6562")
+		(property "Reference" "#PWR032"
+			(at 118.11 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.11 230.1931 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 118.11 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "430ff3ee-c4b9-43f6-9f2f-97c733ca44bc")
+		)
+		(instances
+			(project "Power_tracking_heaterP"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -13022,7 +12918,7 @@
 			(uuid "41111a17-6481-4a33-b1ca-8e78d7f08036")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R25")
 					(unit 1)
@@ -13088,150 +12984,9 @@
 			(uuid "06ccff73-cbe9-4d0d-8ec2-c067c9beb6ae")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 22.86 100.33 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a408a733-4691-4dae-aee4-0c1e2653f33f")
-		(property "Reference" "J1"
-			(at 22.86 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PUSH_BUTTON"
-			(at 22.86 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
-			(at 22.86 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 22.86 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "ce0bf634-1661-40cd-af32-14a2ba3ee234")
-		)
-		(pin "2"
-			(uuid "39f0b64c-c60c-4795-abaf-29d53e80e4bd")
-		)
-		(pin "1"
-			(uuid "353bda78-7cde-4bce-a803-a97f7a634926")
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 38.1 175.26 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a5b8abdb-2f0d-4484-82c6-2f2b164327c2")
-		(property "Reference" "D1"
-			(at 41.91 175.5774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 41.91 178.1174 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2_3.4x3.0mm_KA"
-			(at 38.1 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 38.1 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 38.1 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "78ab744d-a634-42e4-9a9c-151e05a3a12f")
-		)
-		(pin "2"
-			(uuid "945b048e-ff82-4889-b4b4-7485b206ddff")
-		)
-		(instances
-			(project "Misc_PCB"
-				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -13295,7 +13050,7 @@
 			(uuid "3e33ee35-1e42-4407-82be-ce93c0531463")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR020")
 					(unit 1)
@@ -13365,7 +13120,7 @@
 			(uuid "1659ca75-f550-495b-b649-d8848f36f1bb")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R26")
 					(unit 1)
@@ -13431,7 +13186,7 @@
 			(uuid "0e22a3ac-cd7c-4cd8-995d-e1da764d6131")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR04")
 					(unit 1)
@@ -13464,7 +13219,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal"
 			(at 85.09 167.64 0)
 			(effects
 				(font
@@ -13516,7 +13271,7 @@
 			(uuid "ac39ea29-5d54-407b-8363-a32d37e6b89c")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D4")
 					(unit 1)
@@ -13585,7 +13340,7 @@
 			(uuid "0d897dff-7e24-4e85-a80a-c6082ddb4026")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "F2")
 					(unit 1)
@@ -13653,7 +13408,7 @@
 			(uuid "07aa277f-6a0d-48f9-939b-9fc3d9605b53")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "F3")
 					(unit 1)
@@ -13765,7 +13520,7 @@
 			(uuid "9507212f-b33e-4ce7-a6ea-f1b9cf5e91cf")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U1")
 					(unit 1)
@@ -13831,7 +13586,7 @@
 			(uuid "4cb859b5-5666-4074-9d8c-5f84389bfad7")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR022")
 					(unit 1)
@@ -13901,7 +13656,7 @@
 			(uuid "5702cbcb-0290-4d9d-90dc-362382d02ac1")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R18")
 					(unit 1)
@@ -13971,7 +13726,7 @@
 			(uuid "5e51fdc4-62ba-43a7-aa41-4f517bfa72f4")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R29")
 					(unit 1)
@@ -14037,7 +13792,7 @@
 			(uuid "da23069e-06bb-4364-ad38-5230fa711282")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR029")
 					(unit 1)
@@ -14122,7 +13877,7 @@
 			(uuid "c2684792-b7b5-41ca-b8d3-dad06f022039")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "U2")
 					(unit 1)
@@ -14188,7 +13943,7 @@
 			(uuid "39d2d501-4509-41d2-b8e4-5f8fd5a997a4")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR025")
 					(unit 1)
@@ -14257,7 +14012,7 @@
 			(uuid "1b7e1ada-e409-42a2-833c-0f84681e7abb")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "C1")
 					(unit 1)
@@ -14325,7 +14080,7 @@
 			(uuid "dfcf61f0-e622-4939-8f6a-6c6ebcb7f62f")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "F1")
 					(unit 1)
@@ -14391,7 +14146,7 @@
 			(uuid "bd484840-80fe-44bb-ac91-30ec0d58f08d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR021")
 					(unit 1)
@@ -14460,7 +14215,7 @@
 			(uuid "1118766c-709d-4096-810f-462ae7e19e8d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R9")
 					(unit 1)
@@ -14526,7 +14281,7 @@
 			(uuid "6f9c1b1c-2b29-498b-b71d-ccba16bd1146")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR05")
 					(unit 1)
@@ -14596,7 +14351,7 @@
 			(uuid "6fba7ca7-94af-4f0d-aa08-5db6a7eb9fad")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R10")
 					(unit 1)
@@ -14666,7 +14421,7 @@
 			(uuid "e8cd86bb-b319-47dc-8736-971cb1fa34a9")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R17")
 					(unit 1)
@@ -14736,7 +14491,7 @@
 			(uuid "3ab74598-c416-4983-a04c-6b2c964884b1")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "C2")
 					(unit 1)
@@ -14797,10 +14552,10 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
+		(pin "8"
 			(uuid "2229af59-ea8c-445c-a380-457c0a4b9435")
 		)
-		(pin "3"
+		(pin "7"
 			(uuid "7c68d85b-343d-497d-8dda-397ed7530f8e")
 		)
 		(pin "1"
@@ -14810,7 +14565,7 @@
 			(uuid "84fa280c-18e3-4f61-b93b-6e45a3696254")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "T1")
 					(unit 1)
@@ -14886,7 +14641,7 @@
 			(uuid "b6ba215a-15fd-4e39-b33e-1c508bda1f91")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "Q3")
 					(unit 1)
@@ -14956,7 +14711,7 @@
 			(uuid "c7e87182-dfe7-4d7f-bd48-e36a43363ae0")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R6")
 					(unit 1)
@@ -15022,7 +14777,7 @@
 			(uuid "02dfd76e-a03c-48b6-8774-5a985ff2dc00")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR06")
 					(unit 1)
@@ -15092,7 +14847,7 @@
 			(uuid "de726855-a5f9-4df1-864b-6aa444e2307f")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R22")
 					(unit 1)
@@ -15125,7 +14880,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal"
 			(at 85.09 161.29 0)
 			(effects
 				(font
@@ -15177,7 +14932,7 @@
 			(uuid "cd71f776-ffe4-4304-9b36-21fef01d6bf2")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D3")
 					(unit 1)
@@ -15243,7 +14998,7 @@
 			(uuid "918b266c-bb5d-4d91-823f-ab386d789491")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR026")
 					(unit 1)
@@ -15309,7 +15064,7 @@
 			(uuid "15c8bc27-2d99-4e33-913c-d4cdfaf6cd62")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR016")
 					(unit 1)
@@ -15378,7 +15133,7 @@
 			(uuid "e9fb0bd0-f30f-48ce-a4e7-4996ad37447d")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "R2")
 					(unit 1)
@@ -15412,7 +15167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "My-Footprints-orw-els:DO-213AB_1-mediana"
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
 			(at 90.17 211.455 0)
 			(effects
 				(font
@@ -15464,7 +15219,7 @@
 			(uuid "82c05d5c-9d0c-4539-8fd3-6a599d3f6e71")
 		)
 		(instances
-			(project "Misc_PCB"
+			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "D6")
 					(unit 1)
