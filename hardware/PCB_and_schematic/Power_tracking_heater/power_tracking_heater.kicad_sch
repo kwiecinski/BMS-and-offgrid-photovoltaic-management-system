@@ -4975,13 +4975,19 @@
 		(uuid "1f521842-16eb-4836-be30-4271c23cbf38")
 	)
 	(junction
+		(at 275.59 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22f9db13-437b-4f55-97fb-d985092afd4b")
+	)
+	(junction
 		(at 44.45 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "24827848-6bbe-46fe-894d-ff5aafc74419")
 	)
 	(junction
-		(at 266.7 110.49)
+		(at 285.75 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29e86aa9-0389-4f97-9278-0cb5b411e6b2")
@@ -5065,6 +5071,12 @@
 		(uuid "9c5ace06-339d-454d-bc61-4a780c07d224")
 	)
 	(junction
+		(at 270.51 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6934c2c-1998-43ae-82f3-2ecd45bafe7a")
+	)
+	(junction
 		(at 114.3 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5089,7 +5101,7 @@
 		(uuid "bf64d27f-85c4-48bc-9ef4-bf45b69a3d13")
 	)
 	(junction
-		(at 273.05 102.87)
+		(at 292.1 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5c0ad29-c615-44d5-b7ce-4730094e62ad")
@@ -5125,7 +5137,7 @@
 		(uuid "d4676904-ef70-42d1-9dec-c9f196233c23")
 	)
 	(junction
-		(at 269.24 91.44)
+		(at 288.29 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d67cbdde-1ee5-4e02-bc32-b7985c686b48")
@@ -5488,7 +5500,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 102.87) (xy 269.24 102.87)
+			(xy 292.1 102.87) (xy 288.29 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5498,7 +5510,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 91.44) (xy 259.08 91.44)
+			(xy 255.27 91.44) (xy 270.51 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5598,7 +5610,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 110.49) (xy 273.05 110.49)
+			(xy 285.75 110.49) (xy 292.1 110.49)
 		)
 		(stroke
 			(width 0)
@@ -5608,7 +5620,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 110.49) (xy 266.7 113.03)
+			(xy 285.75 110.49) (xy 285.75 113.03)
 		)
 		(stroke
 			(width 0)
@@ -5658,7 +5670,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 91.44) (xy 271.78 91.44)
+			(xy 288.29 91.44) (xy 290.83 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5705,6 +5717,26 @@
 			(type default)
 		)
 		(uuid "43686439-c40a-437c-b564-b54ea3589967")
+	)
+	(wire
+		(pts
+			(xy 273.05 93.98) (xy 273.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "443e8c73-e94e-4567-8c8b-39bce7a4ae04")
+	)
+	(wire
+		(pts
+			(xy 275.59 101.6) (xy 275.59 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45a3fff8-e953-493d-88c7-bfcf796da43e")
 	)
 	(wire
 		(pts
@@ -5968,6 +6000,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 101.6) (xy 273.05 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60974575-db61-4474-87d5-e84d097e3e36")
+	)
+	(wire
+		(pts
 			(xy 168.91 26.67) (xy 152.4 26.67)
 		)
 		(stroke
@@ -6058,7 +6100,7 @@
 	)
 	(wire
 		(pts
-			(xy 273.05 105.41) (xy 273.05 102.87)
+			(xy 292.1 105.41) (xy 292.1 102.87)
 		)
 		(stroke
 			(width 0)
@@ -6135,6 +6177,16 @@
 			(type default)
 		)
 		(uuid "747bce69-a930-478c-8b24-f50d734b0332")
+	)
+	(wire
+		(pts
+			(xy 275.59 110.49) (xy 285.75 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74c71565-a49f-45de-b5cc-35f758317f85")
 	)
 	(wire
 		(pts
@@ -6328,6 +6380,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 91.44) (xy 278.13 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90277f1d-c71b-424b-9e19-09120ec5e261")
+	)
+	(wire
+		(pts
 			(xy 33.02 182.88) (xy 54.61 182.88)
 		)
 		(stroke
@@ -6388,7 +6450,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 110.49) (xy 266.7 110.49)
+			(xy 255.27 110.49) (xy 275.59 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6405,6 +6467,16 @@
 			(type default)
 		)
 		(uuid "a069c3ab-92b3-4af9-8ec4-918772b60e60")
+	)
+	(wire
+		(pts
+			(xy 275.59 93.98) (xy 273.05 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0ac8fce-1797-4c7c-afb8-a2c45a6e7a38")
 	)
 	(wire
 		(pts
@@ -6438,7 +6510,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 91.44) (xy 269.24 91.44)
+			(xy 285.75 91.44) (xy 288.29 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6448,7 +6520,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 113.03) (xy 273.05 113.03)
+			(xy 285.75 113.03) (xy 292.1 113.03)
 		)
 		(stroke
 			(width 0)
@@ -6648,7 +6720,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 91.44) (xy 269.24 102.87)
+			(xy 288.29 91.44) (xy 288.29 102.87)
 		)
 		(stroke
 			(width 0)
@@ -7078,6 +7150,16 @@
 	)
 	(wire
 		(pts
+			(xy 270.51 91.44) (xy 270.51 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f009c115-db4d-41fa-b3ad-a1038962dbd5")
+	)
+	(wire
+		(pts
 			(xy 66.04 204.47) (xy 66.04 210.82)
 		)
 		(stroke
@@ -7311,18 +7393,6 @@
 			(type none)
 		)
 		(uuid ed5b1e90-8566-4156-b23e-444fa3722b9b)
-	)
-	(rectangle
-		(start 15.24 80.01)
-		(end 57.15 118.11)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(uuid f27fe313-0afc-426d-81c7-e0c4e40be589)
 	)
 	(text "ESP-07 (ESP8266MOD)"
 		(exclude_from_sim no)
@@ -7637,7 +7707,7 @@
 	)
 	(global_label "230V_N"
 		(shape input)
-		(at 273.05 107.95 180)
+		(at 292.1 107.95 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7647,7 +7717,7 @@
 		)
 		(uuid "4ab265b5-30f9-4d85-acc6-1208cced25ed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 263.0496 107.95 0)
+			(at 282.0996 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8055,7 +8125,7 @@
 	)
 	(global_label "230V_L"
 		(shape input)
-		(at 271.78 91.44 0)
+		(at 290.83 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8065,7 +8135,7 @@
 		)
 		(uuid "b7ed59f2-38fb-4e9c-84ed-a8b209bcf11a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 281.478 91.44 0)
+			(at 300.528 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8472,7 +8542,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "390R"
+		(property "Value" ""
 			(at 235.204 106.934 0)
 			(effects
 				(font
@@ -8481,7 +8551,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 230.378 105.41 90)
 			(effects
 				(font
@@ -9235,7 +9305,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 210.82 93.218 90)
 			(effects
 				(font
@@ -10167,7 +10237,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x05")
-		(at 278.13 107.95 0)
+		(at 297.18 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10176,7 +10246,7 @@
 		(fields_autoplaced yes)
 		(uuid "4c21f08c-0c8e-4539-bfd3-2e645c24fcf8")
 		(property "Reference" "J5"
-			(at 280.67 106.6799 0)
+			(at 299.72 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10185,7 +10255,7 @@
 			)
 		)
 		(property "Value" "Screw_Terminal_01x05"
-			(at 280.67 109.2199 0)
+			(at 299.72 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10194,7 +10264,7 @@
 			)
 		)
 		(property "Footprint" "My-Footprints-connectors:Screw-Terminal-5.00mm-5pin"
-			(at 278.13 107.95 0)
+			(at 297.18 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10203,7 +10273,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 278.13 107.95 0)
+			(at 297.18 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10212,7 +10282,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 278.13 107.95 0)
+			(at 297.18 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11201,7 +11271,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 203.2 93.218 90)
 			(effects
 				(font
@@ -11535,6 +11605,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 270.51 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "755f4dd9-a772-41ec-b600-c4125d933fac")
+		(property "Reference" "R30"
+			(at 269.24 97.155 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "50R"
+			(at 269.24 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 268.732 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 270.51 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 270.51 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "84ceaded-fb56-41a8-bb8f-a07fb6bcf97a")
+		)
+		(pin "2"
+			(uuid "40459e6d-53f2-4c2e-9210-6e0593ad84c0")
+		)
+		(instances
+			(project "Power_tracking_heaterP"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 72.39 109.22 0)
 		(unit 1)
@@ -11753,7 +11892,7 @@
 		(dnp no)
 		(uuid "822f5fc4-aca0-474e-8976-0312a55c4692")
 		(property "Reference" "RV1"
-			(at 258.4594 100.1944 0)
+			(at 260.096 100.076 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11762,7 +11901,7 @@
 			)
 		)
 		(property "Value" "S10K275"
-			(at 258.4594 102.6187 0)
+			(at 260.096 102.5003 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12884,7 +13023,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 220.98 93.218 90)
 			(effects
 				(font
@@ -13086,7 +13225,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 228.6 93.218 90)
 			(effects
 				(font
@@ -13219,7 +13358,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 85.09 167.64 0)
 			(effects
 				(font
@@ -13350,7 +13489,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 262.89 91.44 90)
+		(at 281.94 91.44 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13359,7 +13498,7 @@
 		(fields_autoplaced yes)
 		(uuid "b0dd8eef-cf09-45a4-b63d-6e59cba35a6f")
 		(property "Reference" "F3"
-			(at 262.89 85.09 90)
+			(at 281.94 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13367,7 +13506,7 @@
 			)
 		)
 		(property "Value" "Fuse"
-			(at 262.89 87.63 90)
+			(at 281.94 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13375,7 +13514,7 @@
 			)
 		)
 		(property "Footprint" "My-Footprints:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
-			(at 262.89 93.218 90)
+			(at 281.94 93.218 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13384,7 +13523,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 262.89 91.44 0)
+			(at 281.94 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13393,7 +13532,7 @@
 			)
 		)
 		(property "Description" "Fuse"
-			(at 262.89 91.44 0)
+			(at 281.94 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13411,6 +13550,75 @@
 			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 275.59 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b26ebddb-8167-4d06-98c0-47569e7044b4")
+		(property "Reference" "C5"
+			(at 278.511 105.5116 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10n/250V"
+			(at 278.511 107.823 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Rect_L16.5mm_W6.0mm_P15.00mm_MKT"
+			(at 276.5552 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 275.59 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 275.59 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e82ff00d-b558-482b-8a79-61bcc160a591")
+		)
+		(pin "2"
+			(uuid "9f805170-d95a-43b6-890b-85e25d865a0b")
+		)
+		(instances
+			(project "Power_tracking_heaterP"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -13946,6 +14154,75 @@
 			(project "Power_tracking_heaterP"
 				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
 					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 275.59 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c4594ece-bdfd-4d59-904d-5d59583f9ef0")
+		(property "Reference" "R31"
+			(at 279.4 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "50R"
+			(at 281.94 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 273.812 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 275.59 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 275.59 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c64f9e01-649d-4eee-8132-2855b5979e9a")
+		)
+		(pin "2"
+			(uuid "48f1e056-25cc-4343-a5a8-2017349552b5")
+		)
+		(instances
+			(project "Power_tracking_heaterP"
+				(path "/7b59bc46-701c-4caa-9db8-f0eec290561d/5708feb1-aa6a-4b62-bc86-35f6572d752c"
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -14880,7 +15157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P10.16mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 85.09 161.29 0)
 			(effects
 				(font
