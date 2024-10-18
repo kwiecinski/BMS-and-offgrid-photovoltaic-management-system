@@ -1,4 +1,4 @@
-23224471639230932
+23236575662060545
 ATI-ONE
 AMPHENOL_10132798-011100LF
 
@@ -66080,6 +66080,13 @@ DLG-504
 2
 2
 My-Footprints
+DO-41_SOD81_P10.16mm_Horizontal
+Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf
+Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm
+0
+2
+2
+My-Footprints
 D_DO-35_SOD27_P7.62mm_Horizontal
 D, DO-35_SOD27 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=4*2mm^2, , http://www.diodes.com/_files/packages/DO-35.pdf
 D DO-35_SOD27 series Axial Horizontal pin pitch 7.62mm  length 4mm diameter 2mm
@@ -66129,6 +66136,13 @@ HF3FD
 5
 5
 My-Footprints
+JST_XA_1x05_P2.50mm_Vertical
+JST XA series connector, B05B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+5
+5
+My-Footprints
 JZC-40F_Relay
 
 
@@ -66164,6 +66178,13 @@ Mount-Hole-3mm
 1
 1
 My-Footprints
+R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
+0
+2
+2
+My-Footprints
 Relay_29mm
 
 
@@ -66184,6 +66205,13 @@ SO-8 Surface Mount Small Outline 150mil 8pin Package
 0
 8
 8
+My-Footprints
+SW_PUSH_6mm
+https://www.omron.com/ecb/products/pdf/en-b3f.pdf
+tact sw push 6mm
+0
+4
+2
 My-Footprints
 ShortWire
 
@@ -66261,6 +66289,13 @@ fuse-1812
 0
 2
 2
+My-Footprints
+high-voltage
+
+
+0
+0
+0
 My-Footprints
 kf301-5.0-2p_P5.08mm
 Terminal block, pitch 5.08mm
@@ -66429,6 +66464,20 @@ Through hole vertical IDC box header THT 2x07 2.54mm double row
 0
 14
 14
+My-Footprints-connectors
+JST_XA_1x03_P2.54mm_Vertical
+JST XA series connector, B03B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+3
+3
+My-Footprints-connectors
+JST_XH_1x06_P2.54mm_Vertical
+JST XA series connector, B06B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+6
+6
 My-Footprints-connectors
 Mount-Hole-3mm
 
