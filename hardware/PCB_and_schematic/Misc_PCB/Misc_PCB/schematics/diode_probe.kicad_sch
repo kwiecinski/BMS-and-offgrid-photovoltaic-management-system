@@ -2230,7 +2230,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DIODE_BLINK_METER"
+		(property "Value" "DIODE_BLINK_METER_OUT"
 			(at 177.8 102.8701 0)
 			(effects
 				(font
@@ -2239,7 +2239,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 180.34 105.41 0)
 			(effects
 				(font
