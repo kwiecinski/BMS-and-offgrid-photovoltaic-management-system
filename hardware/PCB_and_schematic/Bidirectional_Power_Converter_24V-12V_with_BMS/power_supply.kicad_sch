@@ -45,6 +45,45 @@
 		)
 	)
 	(sheet
+		(at 212.09 24.13)
+		(size 61.468 27.94)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262")
+		(property "Sheetname" "Power Input-Output"
+			(at 212.09 21.5534 0)
+			(effects
+				(font
+					(size 5 5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_input_output.kicad_sch"
+			(at 212.09 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 134.112 22.606)
 		(size 61.722 26.67)
 		(fields_autoplaced yes)
