@@ -1,0 +1,164 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "644fe1f4-d07d-42a2-bee7-c6f33838e399")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 50.038 24.384)
+		(size 61.468 27.94)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "96a5bfbb-4e4c-40da-9fc9-d9cf949c3b95")
+		(property "Sheetname" "Boost Converter"
+			(at 50.038 21.8074 0)
+			(effects
+				(font
+					(size 5 5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "boost.kicad_sch"
+			(at 50.038 52.9086 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 212.09 24.13)
+		(size 61.468 27.94)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262")
+		(property "Sheetname" "Power Input-Output"
+			(at 212.09 21.5534 0)
+			(effects
+				(font
+					(size 5 5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_input_output.kicad_sch"
+			(at 212.09 52.6546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 134.112 22.606)
+		(size 61.722 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ebfaa78a-1358-458a-b207-86dd3b22cb8b")
+		(property "Sheetname" "Buck Converter"
+			(at 134.112 20.0294 0)
+			(effects
+				(font
+					(size 5 5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "buck.kicad_sch"
+			(at 134.112 49.8606 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 53.086 86.868)
+		(size 59.182 30.48)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f87999f5-112b-4026-89ab-8eff644965f1")
+		(property "Sheetname" "Microcontroller"
+			(at 53.086 84.2914 0)
+			(effects
+				(font
+					(size 5 5)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "microcontroller.kicad_sch"
+			(at 53.086 117.9326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773"
+					(page "8")
+				)
+			)
+		)
+	)
+)

@@ -1,0 +1,667 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "57ff2453-26d1-489b-aa83-9af273df178f")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(polyline
+		(pts
+			(xy 250.698 102.362) (xy 250.698 99.822)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 25 36 255 1)
+		)
+		(uuid "06862b84-0f0c-4ce4-b36a-cbb372cf3513")
+	)
+	(polyline
+		(pts
+			(xy 146.558 93.726) (xy 190.5 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d5121c2-ddf1-4e54-8a1b-af5d6ac8e8bb")
+	)
+	(polyline
+		(pts
+			(xy 30.226 85.598) (xy 30.226 107.188)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15123aca-1550-4f80-b9b6-fe5e45598842")
+	)
+	(polyline
+		(pts
+			(xy 190.5 95.504) (xy 217.17 95.504)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1696bc47-2432-4527-a605-9c674d2a1e06")
+	)
+	(polyline
+		(pts
+			(xy 243.84 99.822) (xy 243.84 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 25 36 255 1)
+		)
+		(uuid "36112bfc-a686-4560-a72f-d0ab85c57b23")
+	)
+	(polyline
+		(pts
+			(xy 204.216 85.852) (xy 204.216 92.964)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a2eb10e-6c2e-4abc-83a2-9782c384b8b5")
+	)
+	(polyline
+		(pts
+			(xy 268.224 102.616) (xy 268.224 92.964)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ba147f0-33a5-458d-825b-2637a22dcb29")
+	)
+	(polyline
+		(pts
+			(xy 243.84 102.87) (xy 244.094 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42bdbe22-277f-444e-a486-7ea88332c786")
+	)
+	(polyline
+		(pts
+			(xy 47.752 94.234) (xy 46.99 94.234)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a0b5c0e-a41d-4d77-8197-90321f713e96")
+	)
+	(polyline
+		(pts
+			(xy 204.216 92.964) (xy 216.916 92.964)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a85a93b-a42e-4352-87d0-06db097321b7")
+	)
+	(polyline
+		(pts
+			(xy 46.99 101.6) (xy 46.99 107.188)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77739912-6c12-4af5-b447-6feb5df1b613")
+	)
+	(polyline
+		(pts
+			(xy 46.99 93.98) (xy 46.99 94.234)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d1f2a6-6974-478a-b34a-81f4cc3b0e80")
+	)
+	(polyline
+		(pts
+			(xy 226.314 102.87) (xy 226.314 95.504)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a09153d8-5c25-4c6a-aa79-11912bc32ee6")
+	)
+	(polyline
+		(pts
+			(xy 104.14 94.234) (xy 47.752 94.234)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4388bbb-c0f3-4990-abc5-c4968a10cfc6")
+	)
+	(polyline
+		(pts
+			(xy 104.14 85.598) (xy 30.226 85.598)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4ed9411-8062-4b50-a469-5aace9a3475e")
+	)
+	(polyline
+		(pts
+			(xy 190.5 95.504) (xy 190.5 93.726)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5441510-fb7c-43f6-9ba6-20ee54e74262")
+	)
+	(polyline
+		(pts
+			(xy 216.916 92.964) (xy 268.224 92.964)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6571cb9-687f-447c-bee3-dc58a41bf384")
+	)
+	(polyline
+		(pts
+			(xy 146.812 85.852) (xy 204.216 85.852)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f15c67b7-2ff1-481f-92ae-58e2fb955b8b")
+	)
+	(polyline
+		(pts
+			(xy 217.17 95.504) (xy 226.314 95.504)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f581b218-2f7b-49e6-8e5e-ca71f8a8dfa2")
+	)
+	(polyline
+		(pts
+			(xy 250.698 99.822) (xy 243.84 99.822)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 25 36 255 1)
+		)
+		(uuid "f697161a-8c51-4118-ba93-91e097b3d81f")
+	)
+	(rectangle
+		(start 29.21 107.188)
+		(end 31.242 108.712)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 18855923-1306-457c-b779-e099da54cf9a)
+	)
+	(rectangle
+		(start 223.266 104.394)
+		(end 247.142 128.016)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 190a7950-0778-42c6-8559-ba4056167673)
+	)
+	(rectangle
+		(start 267.208 102.616)
+		(end 269.24 104.14)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2034ab4d-b096-48fd-b4a1-b33542fdd2a6)
+	)
+	(rectangle
+		(start 225.298 102.87)
+		(end 227.33 104.394)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 27fc092d-8973-45eb-ae0d-25a1ba174643)
+	)
+	(rectangle
+		(start 46.736 107.188)
+		(end 48.768 108.712)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2bd37225-a7ec-4048-9bd7-fe3d7b6e5476)
+	)
+	(rectangle
+		(start 249.682 102.616)
+		(end 251.714 104.14)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5252ad96-e262-4465-b5e8-5184b11d42be)
+	)
+	(rectangle
+		(start 27.178 108.712)
+		(end 51.054 132.334)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 82efab6d-55ae-462e-870f-a1d662a2d06b)
+	)
+	(rectangle
+		(start 247.65 104.14)
+		(end 271.526 127.762)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b1d2615c-e0d3-493a-8ac5-1f9557a46df2)
+	)
+	(rectangle
+		(start 242.824 102.87)
+		(end 244.856 104.394)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid fe468fb7-6bae-4b55-9e95-43fd3fc883db)
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 48.006 111.506 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "03b3c9d2-2e02-4c98-aa39-8a5f0ef09b29")
+	)
+	(text "12V"
+		(exclude_from_sim no)
+		(at 38.354 119.634 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "0bef6165-015d-4b03-a3f7-34e2654b9ace")
+	)
+	(text "24V"
+		(exclude_from_sim no)
+		(at 221.234 89.408 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "1ba27d13-a317-48c5-ba72-8e11201247c1")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 29.972 111.76 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "1f49d897-890f-444f-8625-7e0a21eda616")
+	)
+	(text "12V"
+		(exclude_from_sim no)
+		(at 258.826 116.586 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "2835a993-77db-4d4f-b1ed-6b5502abfc0b")
+	)
+	(text "12V"
+		(exclude_from_sim no)
+		(at 234.95 117.094 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "682d635c-6d2d-4148-b713-b03fa1d50994")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 250.698 106.68 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "8e4b27b9-87e0-47e9-bd35-a61ce508985c")
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 268.478 106.68 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "df5f3f7f-c567-49a1-8589-f07acc8ae80c")
+	)
+	(text "Bidirectional Buck-boost\nDC-DC converter\n"
+		(exclude_from_sim no)
+		(at 104.902 88.646 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "e3e2b18a-e53c-4027-be75-765551d25dd4")
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 243.84 106.934 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "efe15f34-f7f2-4733-bf5d-1c8b3cc7f9b8")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 225.806 106.68 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "f7b363f8-459e-401b-8772-09165bf66d5d")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 46.99 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9e3bc0d-7c2a-474e-bcf7-6e49f7264c29")
+		(property "Reference" "R1"
+			(at 49.53 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "R"
+			(at 49.53 99.0599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.212 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 46.99 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6422018f-c751-4e2d-b214-acf2050957eb")
+		)
+		(pin "1"
+			(uuid "4b2e8f47-9425-4607-84fa-f552d4e31822")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 105.029 79.883)
+		(size 40.513 23.749)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "81802b0c-d137-483c-9072-3d8784bb4773")
+		(property "Sheetname" "Bidirectional Power Supply"
+			(at 105.029 79.1714 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_supply.kicad_sch"
+			(at 105.029 104.2166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

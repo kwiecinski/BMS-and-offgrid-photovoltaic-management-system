@@ -2833,6 +2833,12 @@
 		(uuid "0a9a6930-2d1b-4d9f-831f-806ae243bafb")
 	)
 	(junction
+		(at 148.59 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15196c73-7634-48a5-a915-ed6d064b4645")
+	)
+	(junction
 		(at 129.54 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2851,12 +2857,6 @@
 		(uuid "3020f151-ad22-4354-af2d-8dba95c9e858")
 	)
 	(junction
-		(at 63.5 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "32c0780a-199c-4893-8cc7-ad88f1298c20")
-	)
-	(junction
 		(at 95.25 144.78)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2869,16 +2869,22 @@
 		(uuid "39be65c4-baee-4515-ab21-3935ada6bd08")
 	)
 	(junction
+		(at 74.93 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "42e6cea3-c9e5-4821-bcd6-1b71d965d1ba")
+	)
+	(junction
 		(at 54.61 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "49fa7870-cde2-4959-8041-7aae6a15a74f")
 	)
 	(junction
-		(at 114.3 82.55)
+		(at 85.09 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "53274234-873d-4092-a57c-075c8e0e2153")
+		(uuid "4c01bcb8-905a-42d7-9971-cd6bde6a0cfd")
 	)
 	(junction
 		(at 113.03 85.09)
@@ -2917,6 +2923,12 @@
 		(uuid "7fd523e5-c470-4d6a-ae04-245c37f7f6c8")
 	)
 	(junction
+		(at 156.21 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "859d8b63-6391-4081-91ac-81fbd81b99bc")
+	)
+	(junction
 		(at 173.99 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2927,12 +2939,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8f114339-8b93-477e-9082-c5b5b9d6c76c")
-	)
-	(junction
-		(at 246.38 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8fbbf33e-1247-4665-812d-b71b2a01baca")
 	)
 	(junction
 		(at 129.54 115.57)
@@ -2963,6 +2969,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ad67201c-8300-4ade-b266-f93ff14f1d9f")
+	)
+	(junction
+		(at 97.79 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5a9b96a-1334-4f59-88fd-f69255c25d8d")
 	)
 	(junction
 		(at 246.38 53.34)
@@ -3036,6 +3048,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 102.87) (xy 97.79 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03c51ad1-d84e-477e-85f0-cd1fe303456f")
+	)
+	(wire
+		(pts
 			(xy 129.54 92.71) (xy 129.54 102.87)
 		)
 		(stroke
@@ -3053,6 +3075,16 @@
 			(type default)
 		)
 		(uuid "07da8912-d3e7-4d18-a73b-fc6cad43ef9c")
+	)
+	(wire
+		(pts
+			(xy 76.2 85.09) (xy 74.93 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07f52efa-b221-4439-9db0-73e3dc013776")
 	)
 	(wire
 		(pts
@@ -3123,16 +3155,6 @@
 			(type default)
 		)
 		(uuid "0bd23fe6-dfc3-4443-a5fc-88957713e9c4")
-	)
-	(wire
-		(pts
-			(xy 116.84 80.01) (xy 114.3 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d56a3ef-cadd-47f6-a74e-e42e6312c76c")
 	)
 	(wire
 		(pts
@@ -3263,26 +3285,6 @@
 			(type default)
 		)
 		(uuid "26c7f25d-e728-4df7-ada3-d1128bd7b608")
-	)
-	(wire
-		(pts
-			(xy 116.84 82.55) (xy 114.3 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29af5b03-deac-4eb9-ad3b-224fb1470d8f")
-	)
-	(wire
-		(pts
-			(xy 114.3 80.01) (xy 114.3 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29d05f49-c93c-49f5-82a7-5de4c58d0781")
 	)
 	(wire
 		(pts
@@ -3596,6 +3598,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 72.39) (xy 156.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "642e2773-1457-4a24-afae-fc21c61256bb")
+	)
+	(wire
+		(pts
 			(xy 74.93 77.47) (xy 116.84 77.47)
 		)
 		(stroke
@@ -3616,6 +3628,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 80.01) (xy 116.84 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69540b93-5bd7-4d2b-8594-4c91f48d4277")
+	)
+	(wire
+		(pts
 			(xy 233.68 53.34) (xy 246.38 53.34)
 		)
 		(stroke
@@ -3623,6 +3645,16 @@
 			(type default)
 		)
 		(uuid "6a9887aa-2ba8-45cb-8af8-43057830736a")
+	)
+	(wire
+		(pts
+			(xy 85.09 85.09) (xy 85.09 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f58a3a8-febe-44c9-87d4-e246e7ec456d")
 	)
 	(wire
 		(pts
@@ -3686,26 +3718,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 115.57) (xy 63.5 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a609bea-4ada-4100-8029-d5198a75f18f")
-	)
-	(wire
-		(pts
-			(xy 246.38 115.57) (xy 255.27 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a639af2-1468-4b73-8d3c-f455e3309ef8")
-	)
-	(wire
-		(pts
 			(xy 173.99 76.2) (xy 173.99 71.12)
 		)
 		(stroke
@@ -3736,7 +3748,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 77.47) (xy 156.21 66.04)
+			(xy 156.21 77.47) (xy 156.21 72.39)
 		)
 		(stroke
 			(width 0)
@@ -3796,6 +3808,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 101.6) (xy 85.09 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "980c0205-aede-4960-adde-c91ac369ecc5")
+	)
+	(wire
+		(pts
 			(xy 246.38 53.34) (xy 246.38 77.47)
 		)
 		(stroke
@@ -3846,6 +3868,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 85.09) (xy 74.93 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b44df437-87d5-4bd6-aa9c-782eb7346afb")
+	)
+	(wire
+		(pts
 			(xy 227.33 53.34) (xy 233.68 53.34)
 		)
 		(stroke
@@ -3873,6 +3905,26 @@
 			(type default)
 		)
 		(uuid "b9b53a78-048a-48de-847b-49f772b03208")
+	)
+	(wire
+		(pts
+			(xy 69.85 96.52) (xy 57.15 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be9522ec-529f-4a55-a70d-dde35f866187")
+	)
+	(wire
+		(pts
+			(xy 85.09 80.01) (xy 85.09 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf4831ee-00d8-41c5-b4e1-49b54453aaf0")
 	)
 	(wire
 		(pts
@@ -3933,6 +3985,16 @@
 			(type default)
 		)
 		(uuid "cd6e9793-8569-4336-be96-a270131a12cb")
+	)
+	(wire
+		(pts
+			(xy 95.25 144.78) (xy 102.87 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf74c7ce-173d-46c6-b1a3-c219c816722c")
 	)
 	(wire
 		(pts
@@ -4086,6 +4148,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 85.09) (xy 85.09 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2fb0b0d-248d-4c6d-af7c-e95a57ba32bf")
+	)
+	(wire
+		(pts
 			(xy 144.78 115.57) (xy 156.21 115.57)
 		)
 		(stroke
@@ -4106,7 +4178,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 82.55) (xy 97.79 82.55)
+			(xy 97.79 82.55) (xy 116.84 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4214,9 +4286,9 @@
 		)
 		(uuid "f8f6600b-07f0-4d44-9534-1dab29af9d60")
 	)
-	(global_label "PV_VOLTAGE_NEGATIVE"
+	(global_label "BUCK_CURRENT_FB"
 		(shape input)
-		(at 255.27 115.57 0)
+		(at 102.87 144.78 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4224,9 +4296,9 @@
 			)
 			(justify left)
 		)
-		(uuid "0ba20d6a-b63c-4e92-9a7a-7a2e1f9b7eb1")
+		(uuid "0297ae9e-942b-4637-8750-d3f763fffc04")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 279.1195 115.57 0)
+			(at 123.8771 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4260,40 +4332,17 @@
 	)
 	(global_label "PV_VOLTAGE_POSITIVE"
 		(shape input)
-		(at 255.27 53.34 0)
+		(at 49.53 53.34 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5761c10a-0b38-4572-9c6d-f3e386203faa")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 278.6962 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "INPUT_CURRENT_FB"
-		(shape input)
-		(at 41.91 142.24 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(bold yes)
 			)
 			(justify right)
 		)
-		(uuid "5d28b11f-fb07-4d59-a8a1-ed770f8e1974")
+		(uuid "5761c10a-0b38-4572-9c6d-f3e386203faa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 20.064 142.24 0)
+			(at 26.1038 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4303,9 +4352,9 @@
 			)
 		)
 	)
-	(global_label "BATT_VOLTAGE_NEGATIVE"
+	(global_label "BATT_CURRENT_SHUNT_FB"
 		(shape input)
-		(at 49.53 115.57 180)
+		(at 41.91 142.24 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4313,9 +4362,31 @@
 			)
 			(justify right)
 		)
-		(uuid "d2266e93-28db-489e-bf51-d5392994913c")
+		(uuid "5d28b11f-fb07-4d59-a8a1-ed770f8e1974")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 23.7453 115.57 0)
+			(at 14.6134 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ENABLE_BUCK"
+		(shape input)
+		(at 57.15 96.52 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cb4d61bb-292c-4369-b357-5fe9f29760b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 41.0415 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4327,22 +4398,22 @@
 	)
 	(global_label "BATT_VOLTAGE_POSITIVE"
 		(shape input)
-		(at 50.8 53.34 180)
+		(at 255.27 53.34 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "f57c2431-b98b-4b5d-af16-7a2952818a8d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 25.4386 53.34 0)
+			(at 280.6314 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5492,6 +5563,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 80.01 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9fc636fb-5da4-48c1-b99b-f6ac708b02f6")
+		(property "Reference" "R50"
+			(at 81.788 88.646 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.55 90.424 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 80.01 86.868 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 80.01 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ecd056e2-0607-4a69-ae50-21ec848aa684")
+		)
+		(pin "2"
+			(uuid "00c7fa16-78c8-44c1-a24f-2e4fbab61781")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 95.25 158.75 0)
 		(unit 1)
@@ -5844,6 +5984,144 @@
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
 					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 72.39 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b4477e98-6599-4dee-9883-f467e11980c1")
+		(property "Reference" "R43"
+			(at 150.622 70.358 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 150.368 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 152.4 70.612 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5cba8f48-db46-4123-b1bc-15cd866622c6")
+		)
+		(pin "2"
+			(uuid "19fa7cb2-9ebf-414e-bb98-e9997edd7325")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
+					(reference "R43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 73.66 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bdd9a8bb-8f97-4a63-992d-4b0f48656d16")
+		(property "Reference" "R52"
+			(at 75.438 100.076 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 76.2 101.854 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 73.66 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 73.66 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 73.66 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1be94cdd-9e69-45d9-9055-c102c88b2f05")
+		)
+		(pin "2"
+			(uuid "6014944e-558c-4544-9023-c4edaac2ad61")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -6598,6 +6876,81 @@
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
 					(reference "R51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC337")
+		(at 82.55 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ffe8ecba-95ea-4444-89f0-2fdb6e1f83c0")
+		(property "Reference" "Q13"
+			(at 86.868 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC337"
+			(at 86.868 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 87.63 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf"
+			(at 82.55 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.8A Ic, 45V Vce, NPN Transistor, TO-92"
+			(at 82.55 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "309bd16c-9383-46bd-b4ba-d63fce474bd6")
+		)
+		(pin "1"
+			(uuid "a32c8982-846f-40ef-9e9a-a0a4a848d4ba")
+		)
+		(pin "2"
+			(uuid "8c4552dd-576a-4ba0-a3bc-3d07e2f7293a")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
+					(reference "Q13")
 					(unit 1)
 				)
 			)
