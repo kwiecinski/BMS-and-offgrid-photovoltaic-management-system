@@ -4,132 +4,10 @@
 	(generator_version "8.0")
 	(uuid "57ff2453-26d1-489b-aa83-9af273df178f")
 	(paper "A4")
-	(lib_symbols
-		(symbol "Device:R"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-	)
+	(lib_symbols)
 	(polyline
 		(pts
-			(xy 250.698 102.362) (xy 250.698 99.822)
+			(xy 199.39 73.66) (xy 199.39 71.12)
 		)
 		(stroke
 			(width 0)
@@ -140,7 +18,7 @@
 	)
 	(polyline
 		(pts
-			(xy 146.558 93.726) (xy 190.5 93.726)
+			(xy 146.05 60.96) (xy 166.37 60.96)
 		)
 		(stroke
 			(width 0)
@@ -150,7 +28,7 @@
 	)
 	(polyline
 		(pts
-			(xy 30.226 85.598) (xy 30.226 107.188)
+			(xy 55.88 52.07) (xy 55.88 73.66)
 		)
 		(stroke
 			(width 0)
@@ -160,7 +38,7 @@
 	)
 	(polyline
 		(pts
-			(xy 190.5 95.504) (xy 217.17 95.504)
+			(xy 166.37 60.96) (xy 166.37 60.96)
 		)
 		(stroke
 			(width 0)
@@ -170,7 +48,7 @@
 	)
 	(polyline
 		(pts
-			(xy 243.84 99.822) (xy 243.84 102.87)
+			(xy 193.04 71.12) (xy 193.04 73.66)
 		)
 		(stroke
 			(width 0)
@@ -181,17 +59,7 @@
 	)
 	(polyline
 		(pts
-			(xy 204.216 85.852) (xy 204.216 92.964)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a2eb10e-6c2e-4abc-83a2-9782c384b8b5")
-	)
-	(polyline
-		(pts
-			(xy 268.224 102.616) (xy 268.224 92.964)
+			(xy 217.17 73.66) (xy 217.17 53.34)
 		)
 		(stroke
 			(width 0)
@@ -201,7 +69,7 @@
 	)
 	(polyline
 		(pts
-			(xy 243.84 102.87) (xy 244.094 102.87)
+			(xy 193.04 73.66) (xy 193.04 73.66)
 		)
 		(stroke
 			(width 0)
@@ -211,7 +79,7 @@
 	)
 	(polyline
 		(pts
-			(xy 47.752 94.234) (xy 46.99 94.234)
+			(xy 72.39 60.96) (xy 71.12 60.96)
 		)
 		(stroke
 			(width 0)
@@ -221,7 +89,7 @@
 	)
 	(polyline
 		(pts
-			(xy 204.216 92.964) (xy 216.916 92.964)
+			(xy 161.29 53.34) (xy 166.37 53.34)
 		)
 		(stroke
 			(width 0)
@@ -231,7 +99,7 @@
 	)
 	(polyline
 		(pts
-			(xy 46.99 101.6) (xy 46.99 107.188)
+			(xy 71.12 68.58) (xy 71.12 73.66)
 		)
 		(stroke
 			(width 0)
@@ -241,7 +109,7 @@
 	)
 	(polyline
 		(pts
-			(xy 46.99 93.98) (xy 46.99 94.234)
+			(xy 71.12 60.96) (xy 71.12 60.96)
 		)
 		(stroke
 			(width 0)
@@ -251,7 +119,7 @@
 	)
 	(polyline
 		(pts
-			(xy 226.314 102.87) (xy 226.314 95.504)
+			(xy 175.26 73.66) (xy 175.26 60.96)
 		)
 		(stroke
 			(width 0)
@@ -261,7 +129,7 @@
 	)
 	(polyline
 		(pts
-			(xy 104.14 94.234) (xy 47.752 94.234)
+			(xy 105.41 60.96) (xy 72.39 60.96)
 		)
 		(stroke
 			(width 0)
@@ -271,7 +139,7 @@
 	)
 	(polyline
 		(pts
-			(xy 104.14 85.598) (xy 30.226 85.598)
+			(xy 105.41 52.07) (xy 55.88 52.07)
 		)
 		(stroke
 			(width 0)
@@ -281,7 +149,7 @@
 	)
 	(polyline
 		(pts
-			(xy 190.5 95.504) (xy 190.5 93.726)
+			(xy 166.37 60.96) (xy 166.37 60.96)
 		)
 		(stroke
 			(width 0)
@@ -291,7 +159,7 @@
 	)
 	(polyline
 		(pts
-			(xy 216.916 92.964) (xy 268.224 92.964)
+			(xy 166.37 53.34) (xy 217.17 53.34)
 		)
 		(stroke
 			(width 0)
@@ -301,7 +169,7 @@
 	)
 	(polyline
 		(pts
-			(xy 146.812 85.852) (xy 204.216 85.852)
+			(xy 147.32 53.34) (xy 161.29 53.34)
 		)
 		(stroke
 			(width 0)
@@ -311,7 +179,7 @@
 	)
 	(polyline
 		(pts
-			(xy 217.17 95.504) (xy 226.314 95.504)
+			(xy 166.37 60.96) (xy 175.26 60.96)
 		)
 		(stroke
 			(width 0)
@@ -321,7 +189,7 @@
 	)
 	(polyline
 		(pts
-			(xy 250.698 99.822) (xy 243.84 99.822)
+			(xy 199.39 71.12) (xy 193.04 71.12)
 		)
 		(stroke
 			(width 0)
@@ -330,9 +198,19 @@
 		)
 		(uuid "f697161a-8c51-4118-ba93-91e097b3d81f")
 	)
+	(polyline
+		(pts
+			(xy 71.12 60.96) (xy 71.12 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe89e3cd-7e79-4d16-a311-dd340aaed3a1")
+	)
 	(rectangle
-		(start 29.21 107.188)
-		(end 31.242 108.712)
+		(start 53.34 74.168)
+		(end 55.372 75.692)
 		(stroke
 			(width 0)
 			(type default)
@@ -343,8 +221,8 @@
 		(uuid 18855923-1306-457c-b779-e099da54cf9a)
 	)
 	(rectangle
-		(start 223.266 104.394)
-		(end 247.142 128.016)
+		(start 172.466 75.184)
+		(end 196.342 98.806)
 		(stroke
 			(width 0)
 			(type default)
@@ -355,8 +233,8 @@
 		(uuid 190a7950-0778-42c6-8559-ba4056167673)
 	)
 	(rectangle
-		(start 267.208 102.616)
-		(end 269.24 104.14)
+		(start 216.408 73.406)
+		(end 218.44 74.93)
 		(stroke
 			(width 0)
 			(type default)
@@ -367,8 +245,8 @@
 		(uuid 2034ab4d-b096-48fd-b4a1-b33542fdd2a6)
 	)
 	(rectangle
-		(start 225.298 102.87)
-		(end 227.33 104.394)
+		(start 174.498 73.66)
+		(end 176.53 75.184)
 		(stroke
 			(width 0)
 			(type default)
@@ -379,8 +257,8 @@
 		(uuid 27fc092d-8973-45eb-ae0d-25a1ba174643)
 	)
 	(rectangle
-		(start 46.736 107.188)
-		(end 48.768 108.712)
+		(start 70.866 74.168)
+		(end 72.898 75.692)
 		(stroke
 			(width 0)
 			(type default)
@@ -391,8 +269,8 @@
 		(uuid 2bd37225-a7ec-4048-9bd7-fe3d7b6e5476)
 	)
 	(rectangle
-		(start 249.682 102.616)
-		(end 251.714 104.14)
+		(start 198.882 73.406)
+		(end 200.914 74.93)
 		(stroke
 			(width 0)
 			(type default)
@@ -403,8 +281,8 @@
 		(uuid 5252ad96-e262-4465-b5e8-5184b11d42be)
 	)
 	(rectangle
-		(start 27.178 108.712)
-		(end 51.054 132.334)
+		(start 51.308 75.692)
+		(end 75.184 99.314)
 		(stroke
 			(width 0)
 			(type default)
@@ -415,8 +293,8 @@
 		(uuid 82efab6d-55ae-462e-870f-a1d662a2d06b)
 	)
 	(rectangle
-		(start 247.65 104.14)
-		(end 271.526 127.762)
+		(start 196.85 74.93)
+		(end 220.726 98.552)
 		(stroke
 			(width 0)
 			(type default)
@@ -427,8 +305,8 @@
 		(uuid b1d2615c-e0d3-493a-8ac5-1f9557a46df2)
 	)
 	(rectangle
-		(start 242.824 102.87)
-		(end 244.856 104.394)
+		(start 192.024 73.66)
+		(end 194.056 75.184)
 		(stroke
 			(width 0)
 			(type default)
@@ -440,7 +318,7 @@
 	)
 	(text "-"
 		(exclude_from_sim no)
-		(at 48.006 111.506 0)
+		(at 72.39 78.74 0)
 		(effects
 			(font
 				(size 2 2)
@@ -450,7 +328,7 @@
 	)
 	(text "12V"
 		(exclude_from_sim no)
-		(at 38.354 119.634 0)
+		(at 62.23 86.36 0)
 		(effects
 			(font
 				(size 3 3)
@@ -458,19 +336,9 @@
 		)
 		(uuid "0bef6165-015d-4b03-a3f7-34e2654b9ace")
 	)
-	(text "24V"
-		(exclude_from_sim no)
-		(at 221.234 89.408 0)
-		(effects
-			(font
-				(size 3 3)
-			)
-		)
-		(uuid "1ba27d13-a317-48c5-ba72-8e11201247c1")
-	)
 	(text "+"
 		(exclude_from_sim no)
-		(at 29.972 111.76 0)
+		(at 54.61 78.74 0)
 		(effects
 			(font
 				(size 2 2)
@@ -480,7 +348,7 @@
 	)
 	(text "12V"
 		(exclude_from_sim no)
-		(at 258.826 116.586 0)
+		(at 208.28 87.63 0)
 		(effects
 			(font
 				(size 3 3)
@@ -490,7 +358,7 @@
 	)
 	(text "12V"
 		(exclude_from_sim no)
-		(at 234.95 117.094 0)
+		(at 184.15 87.63 0)
 		(effects
 			(font
 				(size 3 3)
@@ -500,7 +368,7 @@
 	)
 	(text "+"
 		(exclude_from_sim no)
-		(at 250.698 106.68 0)
+		(at 199.39 77.47 0)
 		(effects
 			(font
 				(size 2 2)
@@ -508,9 +376,21 @@
 		)
 		(uuid "8e4b27b9-87e0-47e9-bd35-a61ce508985c")
 	)
+	(text "PV BATTERY"
+		(exclude_from_sim no)
+		(at 191.262 48.006 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+			)
+		)
+		(uuid "bda6803c-7bcb-4d90-8167-186b26659d1d")
+	)
 	(text "-"
 		(exclude_from_sim no)
-		(at 268.478 106.68 0)
+		(at 217.17 77.47 0)
 		(effects
 			(font
 				(size 2 2)
@@ -520,7 +400,7 @@
 	)
 	(text "Bidirectional Buck-boost\nDC-DC converter\n"
 		(exclude_from_sim no)
-		(at 104.902 88.646 0)
+		(at 105.41 55.88 0)
 		(effects
 			(font
 				(size 2 2)
@@ -531,7 +411,7 @@
 	)
 	(text "-"
 		(exclude_from_sim no)
-		(at 243.84 106.934 0)
+		(at 193.04 77.47 0)
 		(effects
 			(font
 				(size 2 2)
@@ -541,7 +421,7 @@
 	)
 	(text "+"
 		(exclude_from_sim no)
-		(at 225.806 106.68 0)
+		(at 175.26 77.47 0)
 		(effects
 			(font
 				(size 2 2)
@@ -549,81 +429,9 @@
 		)
 		(uuid "f7b363f8-459e-401b-8772-09165bf66d5d")
 	)
-	(symbol
-		(lib_id "Device:R")
-		(at 46.99 97.79 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a9e3bc0d-7c2a-474e-bcf7-6e49f7264c29")
-		(property "Reference" "R1"
-			(at 49.53 96.5199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "R"
-			(at 49.53 99.0599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.212 97.79 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 46.99 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 46.99 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "6422018f-c751-4e2d-b214-acf2050957eb")
-		)
-		(pin "1"
-			(uuid "4b2e8f47-9425-4607-84fa-f552d4e31822")
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(sheet
-		(at 105.029 79.883)
-		(size 40.513 23.749)
+		(at 105.41 46.99)
+		(size 40.64 24.13)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -634,7 +442,7 @@
 		)
 		(uuid "81802b0c-d137-483c-9072-3d8784bb4773")
 		(property "Sheetname" "Bidirectional Power Supply"
-			(at 105.029 79.1714 0)
+			(at 105.41 46.2784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -643,7 +451,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 105.029 104.2166 0)
+			(at 105.41 71.3236 0)
 			(effects
 				(font
 					(size 1.27 1.27)

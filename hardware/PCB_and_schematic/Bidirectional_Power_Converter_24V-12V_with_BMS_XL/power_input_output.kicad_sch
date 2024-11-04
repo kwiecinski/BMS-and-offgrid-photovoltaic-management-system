@@ -1835,7 +1835,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "068830c9-69fa-417d-828a-98bfc2577ef8")
-		(property "Reference" "R4"
+		(property "Reference" "R3"
 			(at 79.502 80.01 90)
 			(effects
 				(font
@@ -1890,7 +1890,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R4")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -1972,7 +1972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29764b71-da87-4f8d-9eac-c015c90bea8f")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR06"
 			(at 234.95 100.33 0)
 			(effects
 				(font
@@ -2022,7 +2022,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "#PWR05")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -2037,7 +2037,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "349f24e7-1e68-41fd-b0c3-2261c3f23680")
-		(property "Reference" "R46"
+		(property "Reference" "R9"
 			(at 196.342 50.8 90)
 			(effects
 				(font
@@ -2092,7 +2092,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R46")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -2190,7 +2190,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
 			(at 219.71 52.578 90)
 			(effects
 				(font
@@ -2326,7 +2326,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints-connectors:Flat-6,3mm-connector-4P"
 			(at 241.3 74.93 0)
 			(effects
 				(font
@@ -2400,7 +2400,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints-connectors:Flat-6,3mm-connector-4P"
 			(at 53.34 64.77 0)
 			(effects
 				(font
@@ -2457,7 +2457,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5ec62a1d-7e4b-4535-aa45-52f03364d87a")
-		(property "Reference" "R5"
+		(property "Reference" "R4"
 			(at 79.502 83.82 90)
 			(effects
 				(font
@@ -2512,7 +2512,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R5")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -2528,7 +2528,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "61e7cbaf-40c3-4e81-b304-eff75d400065")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR03"
 			(at 90.17 38.1 0)
 			(effects
 				(font
@@ -2578,7 +2578,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "#PWR061")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2594,7 +2594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d5c5b2e-a8cd-40a8-b1eb-438e1a3a7bfa")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR05"
 			(at 189.23 44.45 0)
 			(effects
 				(font
@@ -2644,7 +2644,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "#PWR03")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2676,7 +2676,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints:Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal"
 			(at 71.12 44.958 90)
 			(effects
 				(font
@@ -2728,7 +2728,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c056a7f-3ed4-4fcf-a46f-21e5053468d0")
-		(property "Reference" "R9"
+		(property "Reference" "R12"
 			(at 212.09 74.9299 0)
 			(effects
 				(font
@@ -2782,7 +2782,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R9")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -2798,7 +2798,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f489681-c0cf-4a24-a895-ae5182778c7d")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 80.01 59.6899 0)
 			(effects
 				(font
@@ -2852,7 +2852,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R3")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -2886,7 +2886,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_MiniMELF"
 			(at 88.9 60.96 0)
 			(effects
 				(font
@@ -2937,7 +2937,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b288b44b-624d-4be3-a519-863e94872119")
-		(property "Reference" "R6"
+		(property "Reference" "R5"
 			(at 79.502 87.63 90)
 			(effects
 				(font
@@ -2992,7 +2992,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -3007,7 +3007,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bc666185-aa5f-4947-a65a-2fe09967b771")
-		(property "Reference" "R45"
+		(property "Reference" "R8"
 			(at 196.342 46.99 90)
 			(effects
 				(font
@@ -3062,7 +3062,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R45")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -3077,7 +3077,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c102cb07-8856-4f50-a44b-55a4ce88cc49")
-		(property "Reference" "R7"
+		(property "Reference" "R6"
 			(at 79.756 91.694 90)
 			(effects
 				(font
@@ -3132,7 +3132,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -3147,7 +3147,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dc42108b-9f8d-4b0e-a127-71b16a89ae73")
-		(property "Reference" "R44"
+		(property "Reference" "R7"
 			(at 196.342 43.18 90)
 			(effects
 				(font
@@ -3202,7 +3202,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R44")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -3218,7 +3218,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1ebcc87-f900-4cc7-aea9-75b900841d04")
-		(property "Reference" "R2"
+		(property "Reference" "R1"
 			(at 80.01 48.2599 0)
 			(effects
 				(font
@@ -3272,7 +3272,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R2")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -3288,7 +3288,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4a7f3c5-50a3-492c-beca-870e20fb55bb")
-		(property "Reference" "R8"
+		(property "Reference" "R11"
 			(at 212.09 63.4999 0)
 			(effects
 				(font
@@ -3342,7 +3342,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R8")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -3357,7 +3357,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fc9d6c0f-0176-4006-ae0c-8658ab96e6df")
-		(property "Reference" "R47"
+		(property "Reference" "R10"
 			(at 196.596 54.864 90)
 			(effects
 				(font
@@ -3412,7 +3412,7 @@
 		(instances
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R47")
+					(reference "R10")
 					(unit 1)
 				)
 			)

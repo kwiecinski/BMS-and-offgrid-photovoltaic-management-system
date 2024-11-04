@@ -6,7 +6,7 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 50.038 24.384)
+		(at 39.878 40.894)
 		(size 61.468 27.94)
 		(fields_autoplaced yes)
 		(stroke
@@ -18,7 +18,7 @@
 		)
 		(uuid "96a5bfbb-4e4c-40da-9fc9-d9cf949c3b95")
 		(property "Sheetname" "Boost Converter"
-			(at 50.038 21.8074 0)
+			(at 39.878 38.3174 0)
 			(effects
 				(font
 					(size 5 5)
@@ -28,7 +28,7 @@
 			)
 		)
 		(property "Sheetfile" "boost.kicad_sch"
-			(at 50.038 52.9086 0)
+			(at 39.878 69.4186 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		)
 	)
 	(sheet
-		(at 212.09 24.13)
+		(at 201.93 40.64)
 		(size 61.468 27.94)
 		(fields_autoplaced yes)
 		(stroke
@@ -57,7 +57,7 @@
 		)
 		(uuid "cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262")
 		(property "Sheetname" "Power Input-Output"
-			(at 212.09 21.5534 0)
+			(at 201.93 38.0634 0)
 			(effects
 				(font
 					(size 5 5)
@@ -67,7 +67,7 @@
 			)
 		)
 		(property "Sheetfile" "power_input_output.kicad_sch"
-			(at 212.09 52.6546 0)
+			(at 201.93 69.1646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -84,7 +84,7 @@
 		)
 	)
 	(sheet
-		(at 134.112 22.606)
+		(at 123.952 39.116)
 		(size 61.722 26.67)
 		(fields_autoplaced yes)
 		(stroke
@@ -96,7 +96,7 @@
 		)
 		(uuid "ebfaa78a-1358-458a-b207-86dd3b22cb8b")
 		(property "Sheetname" "Buck Converter"
-			(at 134.112 20.0294 0)
+			(at 123.952 36.5394 0)
 			(effects
 				(font
 					(size 5 5)
@@ -106,7 +106,7 @@
 			)
 		)
 		(property "Sheetfile" "buck.kicad_sch"
-			(at 134.112 49.8606 0)
+			(at 123.952 66.3706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -123,7 +123,7 @@
 		)
 	)
 	(sheet
-		(at 53.086 86.868)
+		(at 40.386 89.408)
 		(size 59.182 30.48)
 		(fields_autoplaced yes)
 		(stroke
@@ -135,7 +135,7 @@
 		)
 		(uuid "f87999f5-112b-4026-89ab-8eff644965f1")
 		(property "Sheetname" "Microcontroller"
-			(at 53.086 84.2914 0)
+			(at 40.386 86.8314 0)
 			(effects
 				(font
 					(size 5 5)
@@ -145,7 +145,7 @@
 			)
 		)
 		(property "Sheetfile" "microcontroller.kicad_sch"
-			(at 53.086 117.9326 0)
+			(at 40.386 120.4726 0)
 			(effects
 				(font
 					(size 1.27 1.27)
