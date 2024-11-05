@@ -1692,6 +1692,16 @@
 		)
 		(uuid "140ade74-df2f-4125-9a74-454349ea9623")
 	)
+	(text "50m/4=12,5mR"
+		(exclude_from_sim no)
+		(at 80.772 77.978 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "66421d60-4e1c-418c-9f42-8fd57bcdb5b0")
+	)
 	(global_label "PV_CURRENT_SHUNT_FB"
 		(shape input)
 		(at 214.63 36.83 0)
@@ -1844,7 +1854,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100mR"
+		(property "Value" "50mR"
 			(at 80.0101 82.55 0)
 			(effects
 				(font
@@ -2466,7 +2476,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "50m"
 			(at 80.0101 86.36 0)
 			(effects
 				(font
@@ -2946,7 +2956,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "50m"
 			(at 80.0101 90.17 0)
 			(effects
 				(font
@@ -3086,7 +3096,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100mR"
+		(property "Value" "50m"
 			(at 80.0101 93.98 0)
 			(effects
 				(font
