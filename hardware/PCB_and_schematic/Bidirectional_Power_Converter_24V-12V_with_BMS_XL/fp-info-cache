@@ -1,4 +1,81 @@
-23251306326295718
+23409794447366020
+ATI-ONE
+AMPHENOL_10132798-011100LF
+
+
+0
+12
+12
+ATI-ONE
+BMP180
+
+
+0
+7
+7
+ATI-ONE
+BMP280 3D
+
+
+0
+8
+8
+ATI-ONE
+DEM-128064P-FGH-PW
+
+
+0
+2
+2
+ATI-ONE
+HDR1X5_1.27MMP
+
+
+0
+5
+5
+ATI-ONE
+LD-BZEL-PB39-1717
+
+
+0
+2
+2
+ATI-ONE
+LFXTAL055663REEL
+
+
+0
+4
+4
+ATI-ONE
+SMTU2450N
+
+
+0
+2
+2
+ATI-ONE
+SOP8-SST25VF512A
+
+
+0
+8
+8
+ATI-ONE
+SW-TACT-67NSMD - 3D
+
+
+0
+4
+2
+ATI-ONE
+XF2M-FPC-20-LCD-only-con
+
+
+0
+22
+21
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -66059,26 +66136,26 @@ Mounting 4.5mm 9774100982
 8
 1
 My-Footprints
-2DIG-7SEG-DISP
-
-
-0
-18
-18
-My-Footprints
-4-digit-7-segment-display
-4 digit 7 segment green LED, http://www.kingbright.com/attachments/file/psearch/000/00/00/CA56-12CGKWA(Ver.9A).pdf
-4 digit 7 segment green LED
-0
-12
-12
-My-Footprints
 433MHz-Trasmitter
 
 
 0
 3
 3
+My-Footprints
+Buzzer
+
+
+0
+2
+2
+My-Footprints
+CP_Radial_D6.3mm_P2.50mm
+CP, Radial series, Radial, pin pitch=2.50mm, , diameter=6.3mm, Electrolytic Capacitor
+CP Radial series Radial pin pitch 2.50mm  diameter 6.3mm Electrolytic Capacitor
+0
+2
+2
 My-Footprints
 CR2032H
 
@@ -66087,33 +66164,26 @@ CR2032H
 2
 2
 My-Footprints
-Conn-01x20
-
-
-0
-20
-20
-My-Footprints
-Conn_1x2_wire
+DLG-504
 
 
 0
 2
 2
 My-Footprints
-Conn_2x10
-
-
+DO-41_SOD81_P10.16mm_Horizontal
+Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=10.16mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf
+Diode DO-41_SOD81 series Axial Horizontal pin pitch 10.16mm  length 5.2mm diameter 2.7mm
 0
-20
-20
+2
+2
 My-Footprints
-Conn_2x13
-
-
+D_DO-35_SOD27_P7.62mm_Horizontal
+D, DO-35_SOD27 series, Axial, Horizontal, pin pitch=7.62mm, , length*diameter=4*2mm^2, , http://www.diodes.com/_files/packages/DO-35.pdf
+D DO-35_SOD27 series Axial Horizontal pin pitch 7.62mm  length 4mm diameter 2mm
 0
-26
-26
+2
+2
 My-Footprints
 ESP32-DOIT-DEVKIT
 
@@ -66129,33 +66199,61 @@ FSK100a-Receiver
 4
 3
 My-Footprints
-Goldpin-1x17_Pitch2.54mm
-Through hole straight pin header, 1x17, 2.54mm pitch, single row
-Through hole pin header THT 1x17 2.54mm single row
+Fuse_Blade_ATO_directSolder
+car blade fuse direct solder
+car blade fuse
 0
-17
-17
+2
+2
 My-Footprints
-JZG_E5627BRG-1_7_SEGMENT_DISPLAY
+Fuseholder_Clip-5x20mm_Eaton_1A5601-01_Inline_P20.80x6.76mm_D1.70mm_Horizontal
+Fuseholder Clips, 5x20mm Cylinder Fuse, Pins Inline, Horizontal, Eaton 1A5601-01, https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/data-sheet/eaton-1axxxx-pcb-fuse-clips-atc-atm-blade-data-sheet.pdf
+fuse clip open
+0
+4
+2
+My-Footprints
+G5G-1A-DT1
 
 
 0
-15
-15
+3
+3
 My-Footprints
-LM2596-Step-Down-Conv
+HF3FD
+
+
+0
+5
+5
+My-Footprints
+JST_XA_1x05_P2.50mm_Vertical
+JST XA series connector, B05B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+5
+5
+My-Footprints
+JZC-40F_Relay
 
 
 0
 4
 4
 My-Footprints
-MP1504_Mini_3A_Step_Down_Conv
+LED-3mm-holder
 
 
 0
-8
-4
+2
+2
+My-Footprints
+MTS-1-SPST-Switch
+
+
+0
+2
+2
 My-Footprints
 Micro-Switch-5mm-2pin
 
@@ -66171,12 +66269,12 @@ Mount-Hole-3mm
 1
 1
 My-Footprints
-Pin_Header_Straight_1x06_Pitch2.54mm
-Through hole straight pin header, 1x06, 2.54mm pitch, single row
-Through hole pin header THT 1x06 2.54mm single row
+R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
 0
-6
-6
+2
+2
 My-Footprints
 Relay_29mm
 
@@ -66185,6 +66283,13 @@ Relay_29mm
 8
 8
 My-Footprints
+Resistor-Power-5W-L22-W10
+
+
+0
+2
+2
+My-Footprints
 SOT176-1
 SO-8 Surface Mount Small Outline 150mil 8pin Package
 
@@ -66192,16 +66297,44 @@ SO-8 Surface Mount Small Outline 150mil 8pin Package
 8
 8
 My-Footprints
-Screw-Terminal-5.00mm-10pin
+SW_PUSH_6mm
+https://www.omron.com/ecb/products/pdf/en-b3f.pdf
+tact sw push 6mm
+0
+4
+2
+My-Footprints
+ShortWire
 
 
 0
-10
-10
+2
+2
+My-Footprints
+TO-92_Inline_LITTLE_BIGGER
+TO-92 leads in-line, narrow, oval pads, drill 0.75mm (see NXP sot054_po.pdf)
+to-92 sc-43 sc-43a sot54 PA33 transistor
+0
+3
+3
 My-Footprints
 TO-92_Inline_Wide
 TO-92 leads in-line, wide, drill 0.8mm (see NXP sot054_po.pdf)
 to-92 sc-43 sc-43a sot54 PA33 transistor
+0
+3
+3
+My-Footprints
+TO-220-3_V_Thick_Pads
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
+My-Footprints
+TO-220-3_V_Wide_Legs
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
 0
 3
 3
@@ -66213,6 +66346,20 @@ TO-220-3 Vertical RM 2.54mm
 3
 3
 My-Footprints
+TO-220-3_Vertical-little-bigger pads
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
+My-Footprints
+Transformer TS2-14
+
+
+0
+8
+8
+My-Footprints
 USB-AB-MICRO-SMD
 USB TYPE AB - SMT
 USB TYPE AB - SMT
@@ -66220,33 +66367,26 @@ USB TYPE AB - SMT
 8
 6
 My-Footprints
-WIRE_PAD_1,3mm
-
-
-0
-1
-1
-My-Footprints
-aht10_breakout
-
-
-0
-4
-4
-My-Footprints
-am312_breakout
-
-
-0
-3
-3
-My-Footprints
 esp32_devkit_v1_doit
 ESPWROOM32, ESP32, 30 GPIOs version
 
 0
 30
 30
+My-Footprints
+fuse-1812
+
+
+0
+2
+2
+My-Footprints
+high-voltage
+
+
+0
+0
+0
 My-Footprints
 kf301-5.0-2p_P5.08mm
 Terminal block, pitch 5.08mm
@@ -66261,6 +66401,517 @@ connector screw
 0
 4
 4
+My-Footprints
+microSD-card-PCB-plug
+
+
+0
+8
+8
+My-Footprints
+push_button_12mm
+
+
+0
+4
+4
+My-Footprints-connectors
+CDDC-1,5-5-PV-3,5
+
+
+0
+10
+10
+My-Footprints-connectors
+Conn-01x04-N25-W4P
+
+
+0
+4
+4
+My-Footprints-connectors
+Conn-01x05-N25-W5P
+
+
+0
+5
+5
+My-Footprints-connectors
+Conn-01x06
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+6
+6
+My-Footprints-connectors
+Conn-01x06-N25-W6P
+
+
+0
+6
+6
+My-Footprints-connectors
+Conn-01x10
+
+
+0
+10
+10
+My-Footprints-connectors
+Conn-01x11
+
+
+0
+11
+11
+My-Footprints-connectors
+Conn-01x14
+
+
+0
+14
+14
+My-Footprints-connectors
+Conn-01x14-IDC
+
+
+0
+14
+14
+My-Footprints-connectors
+Conn-01x20
+
+
+0
+20
+20
+My-Footprints-connectors
+Conn_1x2_wire
+
+
+0
+2
+2
+My-Footprints-connectors
+Conn_2x10
+
+
+0
+20
+20
+My-Footprints-connectors
+Conn_2x13
+
+
+0
+26
+26
+My-Footprints-connectors
+DSUB-9_Female_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm
+9-pin D-Sub connector, horizontal/angled (90 deg), THT-mount, female, pitch 2.77x2.84mm, pin-PCB-offset 7.699999999999999mm, distance of mounting holes 25mm, distance of mounting holes to PCB edge 9.12mm, see https://disti-assets.s3.amazonaws.com/tonar/files/datasheets/16730.pdf
+9-pin D-Sub connector horizontal angled 90deg THT female pitch 2.77x2.84mm pin-PCB-offset 7.699999999999999mm mounting-holes-distance 25mm mounting-hole-offset 25mm
+0
+11
+9
+My-Footprints-connectors
+Flat-6,3mm-connector-2P
+
+
+0
+4
+2
+My-Footprints-connectors
+Flat-6,3mm-connector-4P
+
+
+0
+8
+4
+My-Footprints-connectors
+Goldpin-1x17_Pitch2.54mm
+Through hole straight pin header, 1x17, 2.54mm pitch, single row
+Through hole pin header THT 1x17 2.54mm single row
+0
+17
+17
+My-Footprints-connectors
+HDQ-250-6P
+
+
+0
+6
+6
+My-Footprints-connectors
+IDC-Header_2x05_P2.54mm_Vertical
+Through hole IDC box header, 2x05, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x05 2.54mm double row
+0
+10
+10
+My-Footprints-connectors
+IDC-Header_2x07_P2.54mm_Vertical
+Through hole IDC box header, 2x07, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x07 2.54mm double row
+0
+14
+14
+My-Footprints-connectors
+JST_XA_1x03_P2.54mm_Vertical
+JST XA series connector, B03B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+3
+3
+My-Footprints-connectors
+JST_XH_1x06_P2.54mm_Vertical
+JST XA series connector, B06B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
+connector JST XA vertical
+0
+6
+6
+My-Footprints-connectors
+JST_XH_B5B-XH-A_1x05_P2.54mm_Vertical
+JST XH series connector, B5B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH vertical
+0
+5
+5
+My-Footprints-connectors
+Mount-Hole-3mm
+
+
+0
+1
+1
+My-Footprints-connectors
+PinHeader_1x04_P2.54mm_Vertical
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+My-Footprints-connectors
+PinHeader_1x06_P2.54mm_Vertical
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+6
+6
+My-Footprints-connectors
+PinHeader_2x09_P2.54mm_Vertical
+Through hole straight pin header, 2x09, 2.54mm pitch, double rows
+Through hole pin header THT 2x09 2.54mm double row
+0
+18
+18
+My-Footprints-connectors
+PinSocket_1x06_P1.27mm_Vertical
+Through hole straight socket strip, 1x06, 1.27mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x06 1.27mm single row
+0
+6
+6
+My-Footprints-connectors
+PinSocket_1x16_P2.54mm_Vertical
+Through hole straight socket strip, 1x16, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x16 2.54mm single row
+0
+16
+16
+My-Footprints-connectors
+Pin_Header_Straight_1x02_Pitch2.54mm
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+2
+2
+My-Footprints-connectors
+Pin_Header_Straight_1x06_Pitch2.54mm
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+6
+6
+My-Footprints-connectors
+SOL-18
+
+
+0
+18
+18
+My-Footprints-connectors
+Screw-Terminal-5.00mm-2pin
+
+
+0
+2
+2
+My-Footprints-connectors
+Screw-Terminal-5.00mm-3pin
+
+
+0
+3
+3
+My-Footprints-connectors
+Screw-Terminal-5.00mm-4pin
+
+
+0
+0
+0
+My-Footprints-connectors
+Screw-Terminal-5.00mm-5pin
+
+
+0
+5
+5
+My-Footprints-connectors
+Screw-Terminal-5.00mm-10pin
+
+
+0
+10
+10
+My-Footprints-connectors
+Screw-Terminal-P2-rast-5mm-6,7x30
+
+
+0
+2
+2
+My-Footprints-connectors
+Screw-Terminal-P6-rast-5mm-6,7x30
+
+
+0
+6
+6
+My-Footprints-connectors
+WAGO-255-8P
+
+
+0
+20
+8
+My-Footprints-connectors
+WAGO-739-4P
+
+
+0
+4
+4
+My-Footprints-connectors
+WIRE_PAD_1,3mm
+
+
+0
+1
+1
+My-Footprints-converters-modules
+LM2596-Step-Down-Conv
+
+
+0
+4
+4
+My-Footprints-converters-modules
+MP1504_Mini_3A_Step_Down_Conv
+
+
+0
+8
+4
+My-Footprints-converters-modules
+MP1584_Mini_3A_Step_Down_Conv
+
+
+0
+8
+4
+My-Footprints-displays
+2DIG-7SEG-DISP
+
+
+0
+18
+18
+My-Footprints-displays
+3-digit-7-segment-display
+
+
+0
+12
+12
+My-Footprints-displays
+4-digit-7-segment-display
+4 digit 7 segment green LED, http://www.kingbright.com/attachments/file/psearch/000/00/00/CA56-12CGKWA(Ver.9A).pdf
+4 digit 7 segment green LED
+0
+12
+12
+My-Footprints-displays
+JZG_E5627BRG-1_7_SEGMENT_DISPLAY
+
+
+0
+15
+15
+My-Footprints-orw-els
+1206-mediana
+
+
+0
+2
+2
+My-Footprints-orw-els
+3528
+
+
+0
+2
+2
+My-Footprints-orw-els
+6032-mediana-plyta
+
+
+0
+2
+2
+My-Footprints-orw-els
+Couter_Inductor
+
+
+0
+8
+8
+My-Footprints-orw-els
+DIP8
+
+
+0
+8
+8
+My-Footprints-orw-els
+DO-213AB_1-mediana
+
+
+0
+2
+2
+My-Footprints-orw-els
+Discharge_counter_outline
+
+
+0
+0
+0
+My-Footprints-orw-els
+FTR-B3-Relay-5.08
+
+
+0
+8
+8
+My-Footprints-orw-els
+MINI-FLAT
+
+
+0
+4
+4
+My-Footprints-orw-els
+SO-8
+
+
+0
+8
+8
+My-Footprints-orw-els
+SO-8-mediana-front
+
+
+0
+8
+8
+My-Footprints-orw-els
+SO-14
+
+
+0
+14
+14
+My-Footprints-orw-els
+SO-16
+
+
+0
+16
+16
+My-Footprints-orw-els
+SOD-80
+
+
+0
+2
+2
+My-Footprints-orw-els
+SOD-80_1-mediana
+
+
+0
+2
+2
+My-Footprints-orw-els
+SOL-20
+
+
+0
+20
+20
+My-Footprints-orw-els
+SOL-24
+
+
+0
+24
+24
+My-Footprints-orw-els
+SOL-28W
+
+
+0
+28
+28
+My-Footprints-orw-els
+SOT23-JLCPCB-Oriented
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
+0
+3
+3
+My-Footprints-orw-els
+TACTILE_SWITCH_PTH_12MM
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 12MM SQUARE
+MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 12MM SQUARE
+0
+4
+2
+My-Footprints-orw-els
+drill-0.6mm
+
+
+0
+0
+0
+My-Footprints-orw-els
+drill-LED_SMD-mediana
+
+
+0
+2
+2
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -95238,20 +95889,6 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
-0
-2
-2
-altione
-6X1 - 3D
-
-
-0
-6
-6
-altione
-BAT-CR2550
-
-
 0
 2
 2

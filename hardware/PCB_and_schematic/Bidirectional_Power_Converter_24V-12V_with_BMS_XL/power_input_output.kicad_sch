@@ -963,12 +963,6 @@
 		(uuid "313868cc-1b2b-4642-827d-d0518f1f6c98")
 	)
 	(junction
-		(at 234.95 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3321e274-266c-4e14-8c54-ec9a457f635b")
-	)
-	(junction
 		(at 194.31 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1033,12 +1027,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d5e58228-0710-41d8-a48f-593dbecf6b85")
-	)
-	(junction
-		(at 209.55 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eeea1736-2069-4bb6-bd51-d17086d453c3")
 	)
 	(junction
 		(at 90.17 43.18)
@@ -1126,16 +1114,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 71.12) (xy 209.55 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27ff97db-aa2d-476d-9b39-5df25c4cb414")
-	)
-	(wire
-		(pts
 			(xy 85.09 91.44) (xy 85.09 87.63)
 		)
 		(stroke
@@ -1176,16 +1154,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 50.8) (xy 209.55 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c27b5b7-1d35-41f8-b959-9dd5e093e18b")
-	)
-	(wire
-		(pts
 			(xy 58.42 62.23) (xy 58.42 59.69)
 		)
 		(stroke
@@ -1213,16 +1181,6 @@
 			(type default)
 		)
 		(uuid "414f0569-b573-4c04-a1fb-45d545062f9f")
-	)
-	(wire
-		(pts
-			(xy 209.55 71.12) (xy 184.15 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42cc0ebb-5914-4351-90ad-20517a66f250")
 	)
 	(wire
 		(pts
@@ -1316,16 +1274,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 93.98) (xy 234.95 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65f8197f-940e-459f-bb2d-73be84cfb8df")
-	)
-	(wire
-		(pts
 			(xy 201.93 46.99) (xy 201.93 43.18)
 		)
 		(stroke
@@ -1333,16 +1281,6 @@
 			(type default)
 		)
 		(uuid "66e6ac5a-dfc5-494b-8c92-ce81ad29d562")
-	)
-	(wire
-		(pts
-			(xy 209.55 80.01) (xy 209.55 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "67744526-caeb-4645-a5e1-dba922673d14")
 	)
 	(wire
 		(pts
@@ -1546,7 +1484,7 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 80.01) (xy 234.95 85.09)
+			(xy 234.95 80.01) (xy 234.95 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1573,26 +1511,6 @@
 			(type default)
 		)
 		(uuid "e2f1b575-315f-44a6-8f11-33496abfa93c")
-	)
-	(wire
-		(pts
-			(xy 209.55 72.39) (xy 209.55 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e478408a-06ad-4c84-a8da-8e01e84c81b4")
-	)
-	(wire
-		(pts
-			(xy 209.55 85.09) (xy 234.95 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9fb4deb-72f7-4af5-96f4-74be4bec9936")
 	)
 	(wire
 		(pts
@@ -1813,29 +1731,6 @@
 			)
 		)
 	)
-	(global_label "PV_VOLTAGE_FB"
-		(shape input)
-		(at 184.15 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(bold yes)
-			)
-			(justify right)
-		)
-		(uuid "921eb610-f035-4958-890c-f6d11941601d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.114 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:R")
 		(at 81.28 80.01 90)
@@ -1864,7 +1759,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 81.28 81.788 90)
 			(effects
 				(font
@@ -2066,7 +1961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 198.12 52.578 90)
 			(effects
 				(font
@@ -2486,7 +2381,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 81.28 85.598 90)
 			(effects
 				(font
@@ -2730,76 +2625,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 209.55 76.2 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9c056a7f-3ed4-4fcf-a46f-21e5053468d0")
-		(property "Reference" "R12"
-			(at 212.09 74.9299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "R"
-			(at 212.09 77.4699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 211.328 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 209.55 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 209.55 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1d52a40e-d746-4927-96d9-5626bcc3a8ff")
-		)
-		(pin "2"
-			(uuid "b66a7170-09c5-4257-a650-484e6c5a8c18")
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 77.47 60.96 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2966,7 +2791,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 81.28 89.408 90)
 			(effects
 				(font
@@ -3036,7 +2861,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 198.12 48.768 90)
 			(effects
 				(font
@@ -3106,7 +2931,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 81.28 93.218 90)
 			(effects
 				(font
@@ -3176,7 +3001,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 198.12 44.958 90)
 			(effects
 				(font
@@ -3290,76 +3115,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 209.55 64.77 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f4a7f3c5-50a3-492c-beca-870e20fb55bb")
-		(property "Reference" "R11"
-			(at 212.09 63.4999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "R"
-			(at 212.09 66.0399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 211.328 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 209.55 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 209.55 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bafc320d-cd77-41f1-bdb3-9a85df2877da")
-		)
-		(pin "2"
-			(uuid "3c5be2d6-aee2-4dfb-b754-e4558d985d37")
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/cbcfb458-b7e0-4da8-b5fd-1bc28b9dc262"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 198.12 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3386,7 +3141,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder"
 			(at 198.12 56.388 90)
 			(effects
 				(font

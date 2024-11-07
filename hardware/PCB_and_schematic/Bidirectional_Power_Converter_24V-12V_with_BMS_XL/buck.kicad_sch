@@ -552,7 +552,7 @@
 				)
 			)
 		)
-		(symbol "Device:D_Schottky_Dual_CommonAnode_AKK_Parallel"
+		(symbol "Device:D_Schottky_Dual_CommonAnode_KAK_Parallel"
 			(pin_names
 				(offset 0.762) hide)
 			(exclude_from_sim no)
@@ -566,7 +566,7 @@
 					)
 				)
 			)
-			(property "Value" "D_Schottky_Dual_CommonAnode_AKK_Parallel"
+			(property "Value" "D_Schottky_Dual_CommonAnode_KAK_Parallel"
 				(at 0 -5.08 0)
 				(effects
 					(font
@@ -610,7 +610,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "D_Schottky_Dual_CommonAnode_AKK_Parallel_0_1"
+			(symbol "D_Schottky_Dual_CommonAnode_KAK_Parallel_0_1"
 				(circle
 					(center -1.27 0)
 					(radius 0.254)
@@ -695,9 +695,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 2.54 180)
 					(length 2.54)
-					(name "A"
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -713,9 +713,9 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 2.54 180)
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "K"
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4531,79 +4531,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Schottky_Dual_CommonAnode_AKK_Parallel")
-		(at 158.75 77.47 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5db781e1-d383-4a16-a403-6cf9446583a3")
-		(property "Reference" "D9"
-			(at 138.938 74.676 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Value" "D_Schottky_Dua"
-			(at 141.986 79.756 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "My-Footprints:TO-220-3_Vertical-little-bigger pads"
-			(at 158.75 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 158.75 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Dual Schottky diode, common anode on pin 1"
-			(at 158.75 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d249cdbb-e93c-47d7-9b7f-10a3e2289a65")
-		)
-		(pin "1"
-			(uuid "649fab57-0038-4b78-be22-0616411acbdf")
-		)
-		(pin "3"
-			(uuid "31abe0e6-c1bd-4234-a3c9-c4237ca6ceb7")
-		)
-		(instances
-			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
-				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
-					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 72.39 148.59 90)
 		(mirror x)
@@ -5297,6 +5224,79 @@
 			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
 				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky_Dual_CommonAnode_KAK_Parallel")
+		(at 158.75 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d4ae552-a887-4b61-bf6c-7151b264166f")
+		(property "Reference" "D28"
+			(at 163.83 75.8824 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_Schottky_Dual"
+			(at 163.83 78.4224 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "My-Footprints:TO-220-3_Vertical-little-bigger pads"
+			(at 158.75 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Schottky diode, common anode on pin 1"
+			(at 158.75 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9aaabd68-bd68-48fc-9ca7-d36e95f713ce")
+		)
+		(pin "2"
+			(uuid "fec3471c-dffe-4c63-be2c-41a53a9dc391")
+		)
+		(pin "1"
+			(uuid "c8fcc83b-5c34-403b-bd10-8aa02b31bbe8")
+		)
+		(instances
+			(project "Bidirectional_Power_Converter_24V-12V_with_BMS"
+				(path "/57ff2453-26d1-489b-aa83-9af273df178f/81802b0c-d137-483c-9072-3d8784bb4773/ebfaa78a-1358-458a-b207-86dd3b22cb8b"
+					(reference "D28")
 					(unit 1)
 				)
 			)
