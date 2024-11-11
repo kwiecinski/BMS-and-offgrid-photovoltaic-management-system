@@ -1,0 +1,560 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 0 ]
+"48 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\main.c
+[e E1419 . `c
+OK 0
+FAIL -1
+INA226_TI_ID_MISMATCH -2
+INA226_DIE_ID_MISMATCH -3
+CONFIG_ERROR -4
+I2C_TRANSMISSION_ERROR -5
+BAD_PARAMETER -6
+NOT_INITIALIZED -7
+INVALID_I2C_ADDRESS -8
+]
+"108 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\ina226.c
+[e E1802 . `c
+OK 0
+FAIL -1
+INA226_TI_ID_MISMATCH -2
+INA226_DIE_ID_MISMATCH -3
+CONFIG_ERROR -4
+I2C_TRANSMISSION_ERROR -5
+BAD_PARAMETER -6
+NOT_INITIALIZED -7
+INVALID_I2C_ADDRESS -8
+]
+"312
+[e E1821 eOperatingMode `uc
+ShuntVoltageTriggered 1
+BusVoltageTriggered 2
+ShuntAndBusTriggered 3
+Shutdown 4
+ShuntVoltageContinuous 5
+BusVoltageContinuous 6
+ShuntAndBusVoltageContinuous 7
+]
+"333
+[e E1829 eAlertTrigger `ui
+ClearTriggers 0
+ShuntVoltageOverLimit -32768
+ShuntVoltageUnderLimit 16384
+BusVoltageOverLimit 8192
+BusVoltageUnderLimit 4096
+PowerOverLimit 2048
+ConversionReady 1024
+]
+"396
+[e E1837 eAlertTriggerCause `uc
+Unknown 0
+AlertFunctionFlag 16
+ConversionReadyFlag 8
+MathOverflowFlag 4
+AlertPolarityBit 2
+]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"18 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\hw_i2c.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"60
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+"76
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"90
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+"104
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+"118
+[v _I2C_Master_Read I2C_Master_Read `(uc  1 e 1 0 ]
+"18 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\hw_uart.c
+[v _SendUART SendUART `(v  1 e 1 0 ]
+"26
+[v _DigitToString DigitToString `(uc  1 e 1 0 ]
+"185 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\ina226.c
+[v _AutoFox_INA226_CheckI2cAddress AutoFox_INA226_CheckI2cAddress `(E1802  1 e 1 0 ]
+"208
+[v _AutoFox_INA226_ReadRegister AutoFox_INA226_ReadRegister `(E1419  1 e 1 0 ]
+"230
+[v _AutoFox_INA226_WriteRegister AutoFox_INA226_WriteRegister `(E1802  1 e 1 0 ]
+"267
+[v _AutoFox_INA226_GetBusVoltage_uV AutoFox_INA226_GetBusVoltage_uV `(l  1 e 4 0 ]
+"466
+[v _SendErrorStatus SendErrorStatus `(v  1 e 1 0 ]
+"5 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\inits.c
+[v _Global_Init Global_Init `(v  1 e 1 0 ]
+"7 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\interrupts.c
+[v _Interrupt_Init Interrupt_Init `(v  1 e 1 0 ]
+"29
+[v _ISR ISR `II(v  1 e 1 0 ]
+"29 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"20 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\sw_uart.c
+[v _SendUART_debug SendUART_debug `(v  1 e 1 0 ]
+"76
+[v _itoa itoa `(v  1 e 1 0 ]
+"112
+[v _SendInt32ToUART SendInt32ToUART `(v  1 e 1 0 ]
+[s S93 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"183 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
+[u S102 . 1 `S93 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES102  1 e 1 @5 ]
+[s S51 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"245
+[u S60 . 1 `S51 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES60  1 e 1 @6 ]
+[s S72 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"307
+[u S81 . 1 `S72 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES81  1 e 1 @7 ]
+[s S278 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"403
+[s S287 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S292 . 1 `S278 1 . 1 0 `S287 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES292  1 e 1 @11 ]
+[s S310 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1GE 1 0 :1:6 
+`uc 1 T1GINV 1 0 :1:7 
+]
+"621
+[s S318 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T1GIV 1 0 :1:7 
+]
+[s S326 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+]
+[u S329 . 1 `S310 1 . 1 0 `S318 1 . 1 0 `S326 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES329  1 e 1 @16 ]
+"764
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+[s S396 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"791
+[s S402 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S407 . 1 `S396 1 . 1 0 `S402 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES407  1 e 1 @20 ]
+[s S570 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"989
+[s S579 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S583 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S586 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S589 . 1 `S570 1 . 1 0 `S579 1 . 1 0 `S583 1 . 1 0 `S586 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES589  1 e 1 @24 ]
+"1054
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+[s S252 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1287
+[s S259 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S263 . 1 `S252 1 . 1 0 `S259 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES263  1 e 1 @129 ]
+[s S182 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1724
+[s S188 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S193 . 1 `S182 1 . 1 0 `S188 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES193  1 e 1 @143 ]
+"1821
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+[s S425 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"1838
+[u S434 . 1 `S425 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES434  1 e 1 @145 ]
+"1890
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"2019
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S446 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2073
+[s S455 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S460 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S466 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S471 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S476 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S481 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S486 . 1 `S446 1 . 1 0 `S455 1 . 1 0 `S460 1 . 1 0 `S466 1 . 1 0 `S471 1 . 1 0 `S476 1 . 1 0 `S481 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES486  1 e 1 @148 ]
+[s S614 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2424
+[s S623 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S627 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S630 . 1 `S614 1 . 1 0 `S623 1 . 1 0 `S627 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES630  1 e 1 @152 ]
+"2484
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"3229
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3273
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3391
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"3394
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"3397
+[v _ACKSTAT ACKSTAT `VEb  1 e 0 @1166 ]
+"3985
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"4144
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"4147
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"4186
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"4189
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"4192
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"4195
+[v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
+"4198
+[v _TRISA4 TRISA4 `VEb  1 e 0 @1068 ]
+"4201
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1069 ]
+"4204
+[v _TRISA6 TRISA6 `VEb  1 e 0 @1070 ]
+"4207
+[v _TRISA7 TRISA7 `VEb  1 e 0 @1071 ]
+"4210
+[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
+"4213
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"4216
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"4219
+[v _TRISB3 TRISB3 `VEb  1 e 0 @1075 ]
+"4222
+[v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
+"4225
+[v _TRISB5 TRISB5 `VEb  1 e 0 @1077 ]
+"4228
+[v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
+"4231
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1079 ]
+"4234
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
+"4237
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"4240
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"4243
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4246
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"4249
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
+"4252
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"4255
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"4261
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"26 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\interrupts.c
+[v _g_timer_led_blink g_timer_led_blink `VEui  1 e 2 0 ]
+[v _g_flag g_flag `VEui  1 e 2 0 ]
+[s S22 AutoFox_INA226 14 `a 1 mInitialized 1 0 `uc 1 mI2C_Address 1 1 `us 1 mConfigRegister 2 2 `us 1 mCalibrationValue 2 4 `l 1 mCurrentMicroAmpsPerBit 4 6 `l 1 mPowerMicroWattPerBit 4 10 ]
+"19 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\main.c
+[v _device device `S22  1 e 14 0 ]
+"29
+[v _main main `(v  1 e 1 0 ]
+{
+"47
+[v main@theINA226_ID theINA226_ID `us  1 a 2 57 ]
+"53
+} 0
+"112 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\sw_uart.c
+[v _SendInt32ToUART SendInt32ToUART `(v  1 e 1 0 ]
+{
+"120
+[v SendInt32ToUART@i i `i  1 a 2 52 ]
+"114
+[v SendInt32ToUART@buffer buffer `[12]uc  1 a 12 40 ]
+"112
+[v SendInt32ToUART@value value `l  1 p 4 36 ]
+"123
+} 0
+"76
+[v _itoa itoa `(v  1 e 1 0 ]
+{
+"104
+[v itoa@temp temp `uc  1 a 1 23 ]
+"78
+[v itoa@i i `l  1 a 4 32 ]
+"102
+[v itoa@end end `l  1 a 4 28 ]
+"101
+[v itoa@start start `l  1 a 4 24 ]
+"79
+[v itoa@isNegative isNegative `l  1 a 4 19 ]
+"76
+[v itoa@value value `l  1 p 4 8 ]
+[v itoa@str str `*.4uc  1 p 1 12 ]
+[v itoa@numeral_base numeral_base `i  1 p 2 13 ]
+"110
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+{
+"10
+[v ___almod@sign sign `uc  1 a 1 4 ]
+[v ___almod@counter counter `uc  1 a 1 3 ]
+"5
+[v ___almod@divisor divisor `l  1 p 4 0 ]
+[v ___almod@dividend dividend `l  1 p 4 4 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 5 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 4 ]
+[v ___aldiv@counter counter `uc  1 a 1 3 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"466 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\ina226.c
+[v _SendErrorStatus SendErrorStatus `(v  1 e 1 0 ]
+{
+[v SendErrorStatus@err err `E1802  1 p 1 wreg ]
+"468
+[v SendErrorStatus@errorMsg errorMsg `*.24uc  1 a 1 8 ]
+"466
+[v SendErrorStatus@err err `E1802  1 p 1 wreg ]
+[v SendErrorStatus@err err `E1802  1 p 1 7 ]
+"511
+} 0
+"20 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\sw_uart.c
+[v _SendUART_debug SendUART_debug `(v  1 e 1 0 ]
+{
+[v SendUART_debug@data data `uc  1 p 1 wreg ]
+"26
+[v SendUART_debug@i i `uc  1 a 1 4 ]
+"20
+[v SendUART_debug@data data `uc  1 p 1 wreg ]
+"22
+[v SendUART_debug@data data `uc  1 p 1 3 ]
+"41
+} 0
+"7 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\interrupts.c
+[v _Interrupt_Init Interrupt_Init `(v  1 e 1 0 ]
+{
+"24
+} 0
+"18 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\hw_i2c.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"51
+} 0
+"5 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\inits.c
+[v _Global_Init Global_Init `(v  1 e 1 0 ]
+{
+"49
+} 0
+"208 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\ina226.c
+[v _AutoFox_INA226_ReadRegister AutoFox_INA226_ReadRegister `(E1419  1 e 1 0 ]
+{
+[s S22 AutoFox_INA226 14 `a 1 mInitialized 1 0 `uc 1 mI2C_Address 1 1 `us 1 mConfigRegister 2 2 `us 1 mCalibrationValue 2 4 `l 1 mCurrentMicroAmpsPerBit 4 6 `l 1 mPowerMicroWattPerBit 4 10 ]
+[v AutoFox_INA226_ReadRegister@this this `*.39S22  1 p 2 0 ]
+[v AutoFox_INA226_ReadRegister@aRegister aRegister `uc  1 p 1 2 ]
+[v AutoFox_INA226_ReadRegister@aValue_p aValue_p `*.4us  1 p 1 3 ]
+"227
+} 0
+"104 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\hw_i2c.c
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@data data `ui  1 p 2 2 ]
+"108
+} 0
+"90
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"94
+} 0
+"76
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"80
+} 0
+"118
+[v _I2C_Master_Read I2C_Master_Read `(uc  1 e 1 0 ]
+{
+[v I2C_Master_Read@ack ack `uc  1 p 1 wreg ]
+"120
+[v I2C_Master_Read@data data `us  1 a 2 4 ]
+"118
+[v I2C_Master_Read@ack ack `uc  1 p 1 wreg ]
+"121
+[v I2C_Master_Read@ack ack `uc  1 p 1 6 ]
+"129
+} 0
+"60
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"66
+} 0
+"29 D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer\Balancer.X\interrupts.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"64
+} 0

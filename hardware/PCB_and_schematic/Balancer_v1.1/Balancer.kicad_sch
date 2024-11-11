@@ -1,0 +1,542 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "555ba40f-9abb-4b99-82c6-07e888fda9fd")
+	(paper "A4" portrait)
+	(lib_symbols)
+	(polyline
+		(pts
+			(xy 102.362 166.751) (xy 115.697 166.751)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "036244c0-1450-4729-9223-f6160e799cd4")
+	)
+	(polyline
+		(pts
+			(xy 25.146 176.657) (xy 58.674 176.657)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e1d3b31-b1c9-4f96-a649-95c4fc8b3154")
+	)
+	(polyline
+		(pts
+			(xy 58.674 171.069) (xy 63.5 171.069)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1986ff6f-994b-49a6-9111-b017e07c5d89")
+	)
+	(polyline
+		(pts
+			(xy 25.146 179.451) (xy 52.324 179.451)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c25c516-484a-4796-96cd-564887dae342")
+	)
+	(polyline
+		(pts
+			(xy 102.362 168.656) (xy 116.332 168.656)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d567b4d-af11-41a2-867d-82f01d27642a")
+	)
+	(polyline
+		(pts
+			(xy 74.422 173.736) (xy 74.422 168.656)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "323a1a9b-414a-4562-9302-4f261c452f62")
+	)
+	(polyline
+		(pts
+			(xy 107.696 168.783) (xy 107.696 198.755)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32f6ec70-4b03-414d-a9b7-06b717ab1247")
+	)
+	(polyline
+		(pts
+			(xy 74.422 168.656) (xy 91.567 168.656)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41f1fe44-54e7-4901-814a-cab34f69f532")
+	)
+	(polyline
+		(pts
+			(xy 82.55 168.783) (xy 82.55 196.977)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42de3d3a-082a-40b4-a6f1-443bb31b64c3")
+	)
+	(polyline
+		(pts
+			(xy 102.362 173.736) (xy 102.362 168.656)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46ae3541-3efe-452c-a84b-11516976ded6")
+	)
+	(polyline
+		(pts
+			(xy 102.362 161.036) (xy 102.362 166.751)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f353e70-4b91-404b-9acb-4bcab9052c9d")
+	)
+	(polyline
+		(pts
+			(xy 24.892 184.531) (xy 50.546 184.531)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a0b8c3b-4d3d-413b-9562-0b4dabcca899")
+	)
+	(polyline
+		(pts
+			(xy 52.324 179.451) (xy 52.324 196.977)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7515827-1a63-45b1-b25b-c6645d0705fb")
+	)
+	(polyline
+		(pts
+			(xy 50.546 198.755) (xy 107.696 198.755)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9708cdb-d4bc-4da4-9e09-8043444be99c")
+	)
+	(polyline
+		(pts
+			(xy 63.627 161.036) (xy 102.362 161.036)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1dbf9d0-41a3-4829-9e24-41a86095a1b9")
+	)
+	(polyline
+		(pts
+			(xy 58.674 176.657) (xy 58.674 171.069)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e986d426-5c67-4082-9b3f-873c3de0e5fc")
+	)
+	(polyline
+		(pts
+			(xy 52.324 196.977) (xy 82.55 196.977)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edf9b23a-b307-4816-85dd-27994268f369")
+	)
+	(polyline
+		(pts
+			(xy 24.638 161.163) (xy 63.5 161.163)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f56ba620-c538-4feb-9015-43488fcbf8a9")
+	)
+	(polyline
+		(pts
+			(xy 91.567 168.656) (xy 91.567 173.736)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f978ce8d-6721-4c06-823f-37976864a8e9")
+	)
+	(polyline
+		(pts
+			(xy 50.546 184.531) (xy 50.546 198.755)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff6a71f2-a656-4c46-9c34-6767b7b44841")
+	)
+	(rectangle
+		(start 61.722 175.006)
+		(end 76.327 188.341)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 0a3cce5a-ff48-4be9-95e5-f367f310bd0a)
+	)
+	(circle
+		(center 63.5 161.163)
+		(radius 0.568)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid 285244c2-569a-40a1-b774-4a65ec65e2e2)
+	)
+	(rectangle
+		(start 101.727 173.736)
+		(end 102.997 175.006)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2c20b3d8-dd7d-4c1d-a850-eead89811d97)
+	)
+	(circle
+		(center 82.55 168.783)
+		(radius 0.508)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid 51ad0023-33c2-45f4-aeec-58a39fdfc2c0)
+	)
+	(rectangle
+		(start 62.992 173.736)
+		(end 64.262 175.006)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5fd2886c-5575-4abb-a277-f74495463e09)
+	)
+	(rectangle
+		(start 90.932 173.736)
+		(end 92.202 175.006)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 7dcd2bd4-6288-4a8d-8d4f-37bef0c6d930)
+	)
+	(rectangle
+		(start 89.662 175.006)
+		(end 104.267 188.976)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 82b0cf90-8614-4ce0-aa8b-b0c1443a133c)
+	)
+	(rectangle
+		(start 73.787 173.736)
+		(end 75.057 175.006)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 931660a4-16ba-4f61-9c4b-85c0a292ca06)
+	)
+	(circle
+		(center 63.5 171.069)
+		(radius 0.568)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid 98e6eb8b-13e7-4625-8572-83a6c03f8583)
+	)
+	(circle
+		(center 107.696 168.783)
+		(radius 0.508)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type color)
+			(color 0 0 0 0)
+		)
+		(uuid a072c202-9af7-4613-9644-32294692a847)
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 101.6 177.419 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "0e0ca85b-cf52-4273-8ae5-ad306712e2b1")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 92.202 177.165 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "1bbbe571-f865-4932-a0ba-44734b278eb7")
+	)
+	(text "24V"
+		(exclude_from_sim no)
+		(at 65.786 172.085 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "817f52e6-53c7-4000-8949-62d29a4f6f57")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 63.5 177.165 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "9eafe8d9-1dd8-4c2a-b512-eec8ffdf13f1")
+	)
+	(text "DC_RAIL"
+		(exclude_from_sim no)
+		(at 112.522 168.021 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 10 23 1)
+			)
+		)
+		(uuid "ac8f8fde-390d-4b1e-bb4a-eae9d8300bd3")
+	)
+	(text "12V"
+		(exclude_from_sim no)
+		(at 77.724 172.085 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c70bb36e-eda4-403e-91bb-502399161be8")
+	)
+	(text "24V"
+		(exclude_from_sim no)
+		(at 114.554 165.735 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d156d068-6b31-4e73-80db-459b6ca68800")
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 73.66 177.419 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+		)
+		(uuid "f085b7d3-c905-4218-aef5-b92f9b4a7938")
+	)
+	(text "GND"
+		(exclude_from_sim no)
+		(at 114.554 170.307 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ff3a808b-e89f-4f63-a2dd-0ba27d3d71f4")
+	)
+	(sheet
+		(at 16.51 25.4)
+		(size 42.926 32.258)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3b90ff07-e5cb-404b-939d-de320e975ba1")
+		(property "Sheetname" "BMS_microcontroller"
+			(at 16.51 22.8234 0)
+			(effects
+				(font
+					(size 5 5)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BMS_microcontroller.kicad_sch"
+			(at 16.51 58.2426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.018 71.12)
+		(size 41.656 27.432)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "918b88dd-8c9a-4153-9aaf-3fa336d7bf39")
+		(property "Sheetname" "BMS_current_sources_and_fans"
+			(at 17.018 68.5434 0)
+			(effects
+				(font
+					(size 5 5)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BMS_current_sources_and_fans.kicad_sch"
+			(at 17.018 99.1366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.018 112.522)
+		(size 42.672 26.924)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f65ef685-3e95-4f8a-97fe-0688761539e6")
+		(property "Sheetname" "BMS_current_limiter"
+			(at 17.018 109.9454 0)
+			(effects
+				(font
+					(size 5 5)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BMS_current_limiter.kicad_sch"
+			(at 17.018 140.0306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
