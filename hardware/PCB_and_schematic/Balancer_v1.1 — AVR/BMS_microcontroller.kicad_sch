@@ -5750,7 +5750,7 @@
 	)
 	(global_label "TEMP_AKU_12V"
 		(shape input)
-		(at 72.39 76.2 180)
+		(at 72.39 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5760,7 +5760,7 @@
 		)
 		(uuid "10dbe325-038a-46e9-96e5-618e5a1f04e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4349 76.2 0)
+			(at 55.4349 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5880,7 +5880,7 @@
 			)
 		)
 	)
-	(global_label "LED3_RA6"
+	(global_label "LED3_PA6"
 		(shape input)
 		(at 293.37 142.24 180)
 		(fields_autoplaced yes)
@@ -5926,7 +5926,7 @@
 	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
-		(at 72.39 73.66 180)
+		(at 72.39 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5936,7 +5936,7 @@
 		)
 		(uuid "3bfae411-ca5a-4c8b-bf68-c51f5e5db045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4349 73.66 0)
+			(at 55.4349 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6058,7 +6058,7 @@
 	)
 	(global_label "BALANCE_ON_12V"
 		(shape input)
-		(at 114.3 63.5 0)
+		(at 114.3 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6068,7 +6068,7 @@
 		)
 		(uuid "51f8d003-42a8-4b76-9ef7-c9227a97f0d5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.6138 63.5 0)
+			(at 133.6138 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6144,7 +6144,7 @@
 			)
 		)
 	)
-	(global_label "RA6"
+	(global_label "LED3_PA6"
 		(shape input)
 		(at 129.54 123.19 180)
 		(fields_autoplaced yes)
@@ -6156,7 +6156,7 @@
 		)
 		(uuid "77f6327f-4e01-43c7-8c32-8578103dfc5f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.9867 123.19 0)
+			(at 117.3625 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6320,7 +6320,7 @@
 			)
 		)
 	)
-	(global_label "RC0"
+	(global_label "LED4_PA5"
 		(shape input)
 		(at 129.54 125.73 180)
 		(fields_autoplaced yes)
@@ -6332,7 +6332,7 @@
 		)
 		(uuid "b43a23d1-1919-4d29-9748-c0e6f655474c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.8053 125.73 0)
+			(at 117.3625 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6410,7 +6410,7 @@
 	)
 	(global_label "BALANCE_ON_24V"
 		(shape input)
-		(at 114.3 66.04 0)
+		(at 114.3 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6420,7 +6420,7 @@
 		)
 		(uuid "c942a150-de90-4aee-81b0-56927b59baa0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 133.6138 66.04 0)
+			(at 133.6138 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8021,7 +8021,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k3"
+		(property "Value" "1k5"
 			(at 85.09 219.7099 0)
 			(effects
 				(font
