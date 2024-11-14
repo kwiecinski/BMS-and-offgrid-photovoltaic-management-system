@@ -1,86 +1,51 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"66 ./ina226.h
-[; ;./ina226.h: 66: typedef struct AutoFox_INA226{
-[s S145 `a 1 `uc 1 `us 1 `us 1 `l 1 `l 1 ]
-[n S145 AutoFox_INA226 mInitialized mI2C_Address mConfigRegister mCalibrationValue mCurrentMicroAmpsPerBit mPowerMicroWattPerBit ]
-"103
-[; ;./ina226.h: 103: void AutoFox_INA226_Constructor(AutoFox_INA226*);
-[v _AutoFox_INA226_Constructor `(v ~T0 @X0 0 ef1`*S145 ]
-"11 ./inits.h
-[; ;./inits.h: 11: void Global_Init(void);
-[v _Global_Init `(v ~T0 @X0 0 ef ]
-"18 ./interrupts.h
-[; ;./interrupts.h: 18: void Interrupt_Init(void);
-[v _Interrupt_Init `(v ~T0 @X0 0 ef ]
-"11 ./hw_i2c.h
-[; ;./hw_i2c.h: 11: void I2C_Init(void);
-[v _I2C_Init `(v ~T0 @X0 0 ef ]
-"234 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 234:     struct {
-[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S12 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"233
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 233: typedef union {
-[u S11 `S12 1 ]
-[n S11 . . ]
-"245
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
-[v _PORTBbits `VS11 ~T0 @X0 0 e@6 ]
-"296
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 296:     struct {
-[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S14 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"295
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 295: typedef union {
-[u S13 `S14 1 ]
-[n S13 . . ]
-"307
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
-[v _PORTCbits `VS13 ~T0 @X0 0 e@7 ]
-"172
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 172:     struct {
-[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S10 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"171
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 171: typedef union {
-[u S9 `S10 1 ]
-[n S9 . . ]
-"183
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
-[v _PORTAbits `VS9 ~T0 @X0 0 e@5 ]
-"33 main.c
-[; ;main.c: 33:     SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
-[c E1727 0 -1 -2 -3 -4 -5 -6 -7 -8 .. ]
-[n E1727 . OK FAIL INA226_TI_ID_MISMATCH INA226_DIE_ID_MISMATCH CONFIG_ERROR I2C_TRANSMISSION_ERROR BAD_PARAMETER NOT_INITIALIZED INVALID_I2C_ADDRESS  ]
-"135 ./ina226.h
-[; ;./ina226.h: 135: void SendErrorStatus(status err);
-[v _SendErrorStatus `(v ~T0 @X0 0 ef1`E1727 ]
-"108
-[; ;./ina226.h: 108: status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
-[v _AutoFox_INA226_Init `(E1727 ~T0 @X0 0 ef4`*S145`uc`us`ul ]
-"126
-[; ;./ina226.h: 126: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226*,int aIndexToConversionTimeTable);
-[v _AutoFox_INA226_ConfigureVoltageConversionTime `(E1727 ~T0 @X0 0 ef2`*S145`i ]
-"127
-[; ;./ina226.h: 127: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226*,int aIndexToSampleAverageTable);
-[v _AutoFox_INA226_ConfigureNumSampleAveraging `(E1727 ~T0 @X0 0 ef2`*S145`i ]
-"7 ./adc.h
-[; ;./adc.h: 7: void ADC_Init(void);
-[v _ADC_Init `(v ~T0 @X0 0 ef ]
-"111 ./ina226.h
-[; ;./ina226.h: 111: uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
-[v _AutoFox_INA226_GetBusVoltage_V `(us ~T0 @X0 0 ef1`*S145 ]
-"117 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h
-[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"9 ./adc.h
-[; ;./adc.h: 9: void DisplayVoltage(void) ;
-[v _DisplayVoltage `(v ~T0 @X0 0 ef ]
+"1172 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1172:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S47 . ADON GO_nDONE CHS ADCS ]
+"1178
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1178:     struct {
+[s S48 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S48 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1188
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1188:     struct {
+[s S49 :1 `uc 1 :1 `uc 1 ]
+[n S49 . . nDONE ]
+"1192
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1192:     struct {
+[s S50 :1 `uc 1 :1 `uc 1 ]
+[n S50 . . GO_DONE ]
+"1171
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1171: typedef union {
+[u S46 `S47 1 `S48 1 `S49 1 `S50 1 ]
+[n S46 . . . . . ]
+"1197
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1197: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+[v _ADCON0bits `VS46 ~T0 @X0 0 e@31 ]
+"2825
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 2825:     struct {
+[s S116 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S116 . . VCFG0 VCFG1 . ADFM ]
+"2824
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 2824: typedef union {
+[u S115 `S116 1 ]
+[n S115 . . ]
+"2833
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 2833: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
+[v _ADCON1bits `VS115 ~T0 @X0 0 e@159 ]
 [v F164 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
 [v __delay `JF164 ~T0 @X0 0 e ]
 [p i __delay ]
+"1159 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 1159: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"2812
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 2812: extern volatile unsigned char ADRESL __attribute__((address(0x09E)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
+"117 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -333,118 +298,212 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V  =  BOR40V    ]
 "26
 [p x WRT  =  OFF         ]
-"46 ./ina226.h
-[; ;./ina226.h: 46: static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
-[v _INA226_DEFAULT_I2C_ADDRESS `Cuc ~T0 @X0 1 s ]
-[i _INA226_DEFAULT_I2C_ADDRESS
--> -> 64 `i `uc
-]
-"54
-[; ;./ina226.h: 54: static const int INA226_I2C_TIMEOUT = 1000;
-[v _INA226_I2C_TIMEOUT `Ci ~T0 @X0 1 s ]
-[i _INA226_I2C_TIMEOUT
--> 1000 `i
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"20 main.c
-[; ;main.c: 20: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"21
-[; ;main.c: 21: {
+"13 adc.c
+[; ;adc.c: 13: void ADC_Init(void)
+[v _ADC_Init `(v ~T0 @X0 1 ef ]
+"14
+[; ;adc.c: 14: {
 {
-[e :U _main ]
+[e :U _ADC_Init ]
 [f ]
-"22
-[; ;main.c: 22:     AutoFox_INA226 ina226;
-[v _ina226 `S145 ~T0 @X0 1 a ]
+"16
+[; ;adc.c: 16:     ADCON0bits.ADCS = 0b10;
+[e = . . _ADCON0bits 0 3 -> -> 2 `i `uc ]
+"19
+[; ;adc.c: 19:     ADCON1bits.VCFG0 = 1;
+[e = . . _ADCON1bits 0 1 -> -> 1 `i `uc ]
+"20
+[; ;adc.c: 20:     ADCON1bits.VCFG1 = 0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+"23
+[; ;adc.c: 23:     ADCON0bits.CHS = 0b0000;
+[e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
 "24
-[; ;main.c: 24:     AutoFox_INA226_Constructor(&ina226);
-[e ( _AutoFox_INA226_Constructor (1 &U _ina226 ]
-"25
-[; ;main.c: 25:     Global_Init();
-[e ( _Global_Init ..  ]
-"26
-[; ;main.c: 26:     Interrupt_Init();
-[e ( _Interrupt_Init ..  ]
-"27
-[; ;main.c: 27:     I2C_Init();
-[e ( _I2C_Init ..  ]
+[; ;adc.c: 24:    _delay((unsigned long)((2)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "28
-[; ;main.c: 28:     PORTBbits.RB7=0;
-[e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
-"29
-[; ;main.c: 29:     PORTBbits.RB6=0;
-[e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
-"30
-[; ;main.c: 30:     PORTCbits.RC0=1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;adc.c: 28:     ADCON1bits.ADFM = 1;
+[e = . . _ADCON1bits 0 4 -> -> 1 `i `uc ]
 "31
-[; ;main.c: 31:     PORTAbits.RA6=1;
-[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
-"33
-[; ;main.c: 33:     SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
-[e ( _SendErrorStatus (1 ( _AutoFox_INA226_Init (4 , , , &U _ina226 _INA226_DEFAULT_I2C_ADDRESS -> -> 2 `i `us -> -> -> 50 `i `l `ul ]
+[; ;adc.c: 31:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"32
+[; ;adc.c: 32: }
+[e :UE 140 ]
+}
 "34
-[; ;main.c: 34:     SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111));
-[e ( _SendErrorStatus (1 ( _AutoFox_INA226_ConfigureVoltageConversionTime (2 , &U _ina226 -> 7 `i ]
+[; ;adc.c: 34: unsigned int ADC_Read_ADC_Result(void)
+[v _ADC_Read_ADC_Result `(ui ~T0 @X0 1 ef ]
 "35
-[; ;main.c: 35:     SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
-[e ( _SendErrorStatus (1 ( _AutoFox_INA226_ConfigureNumSampleAveraging (2 , &U _ina226 -> 2 `i ]
-"37
-[; ;main.c: 37:     uint16_t bus_voltage;
-[v _bus_voltage `us ~T0 @X0 1 a ]
-"38
-[; ;main.c: 38:     ADC_Init();
-[e ( _ADC_Init ..  ]
+[; ;adc.c: 35: {
+{
+[e :U _ADC_Read_ADC_Result ]
+[f ]
+"36
+[; ;adc.c: 36:     unsigned int adcResult;
+[v _adcResult `ui ~T0 @X0 1 a ]
 "40
-[; ;main.c: 40:     while(1)
-[e :U 148 ]
-"41
-[; ;main.c: 41:     {
-{
+[; ;adc.c: 40:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "43
-[; ;main.c: 43:         bus_voltage=AutoFox_INA226_GetBusVoltage_V(&ina226);
-[e = _bus_voltage ( _AutoFox_INA226_GetBusVoltage_V (1 &U _ina226 ]
-"45
-[; ;main.c: 45:         if (bus_voltage%100 < 10)
-[e $ ! < % -> _bus_voltage `ui -> -> 100 `i `ui -> -> 10 `i `ui 150  ]
+[; ;adc.c: 43:     while(ADCON0bits.GO_nDONE);
+[e $U 142  ]
+[e :U 143 ]
+[e :U 142 ]
+[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 143  ]
+[e :U 144 ]
 "46
-[; ;main.c: 46:         {
+[; ;adc.c: 46:     adcResult = ((ADRESH << 8) + ADRESL);
+[e = _adcResult -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+"52
+[; ;adc.c: 52:     return (unsigned int)adcResult;
+[e ) _adcResult ]
+[e $UE 141  ]
+"53
+[; ;adc.c: 53: }
+[e :UE 141 ]
+}
+"56
+[; ;adc.c: 56: uint16_t ReadVoltageAverage() {
+[v _ReadVoltageAverage `(us ~T0 @X0 1 ef ]
 {
-"47
-[; ;main.c: 47:             printf("24V Batt Voltage: %d.0%dV \r\n", bus_voltage / 100, bus_voltage % 100);
-[e ( _printf , , (. :s 1C / -> _bus_voltage `ui -> -> 100 `i `ui % -> _bus_voltage `ui -> -> 100 `i `ui ]
-"48
-[; ;main.c: 48:         } else
+[e :U _ReadVoltageAverage ]
+[f ]
+"57
+[; ;adc.c: 57:     uint32_t sum = 0;
+[v _sum `ul ~T0 @X0 1 a ]
+[e = _sum -> -> -> 0 `i `l `ul ]
+"58
+[; ;adc.c: 58:     uint16_t sample;
+[v _sample `us ~T0 @X0 1 a ]
+"60
+[; ;adc.c: 60:     uint32_t R1 = 6960;
+[v _R1 `ul ~T0 @X0 1 a ]
+[e = _R1 -> -> -> 6960 `i `l `ul ]
+"61
+[; ;adc.c: 61:     uint32_t R2 = 1000;
+[v _R2 `ul ~T0 @X0 1 a ]
+[e = _R2 -> -> -> 1000 `i `l `ul ]
+"64
+[; ;adc.c: 64:     const unsigned long vref=2500;
+[v F1689 `Cul ~T0 @X0 1 s vref ]
+[i F1689
+-> -> -> 2500 `i `l `ul
+]
+"66
+[; ;adc.c: 66:     const uint8_t num_samples = 20;
+[v F1690 `Cuc ~T0 @X0 1 s num_samples ]
+[i F1690
+-> -> 20 `i `uc
+]
+"68
+[; ;adc.c: 68:     for (uint8_t i = 0; i < num_samples; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> F1690 `i 146  ]
+[e $U 147  ]
+[e :U 146 ]
+{
+"69
+[; ;adc.c: 69:         sample = ADC_Read_ADC_Result();
+[e = _sample -> ( _ADC_Read_ADC_Result ..  `us ]
+"70
+[; ;adc.c: 70:         sum += sample;
+[e =+ _sum -> _sample `ul ]
+"72
+[; ;adc.c: 72:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"73
+[; ;adc.c: 73:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> F1690 `i 146  ]
+[e :U 147 ]
+}
+"75
+[; ;adc.c: 75:     uint32_t average = (uint16_t)(sum / num_samples);
+[v _average `ul ~T0 @X0 1 a ]
+[e = _average -> -> / _sum -> F1690 `ul `us `ul ]
+"77
+[; ;adc.c: 77:    average = average*10000;
+[e = _average * _average -> -> -> 10000 `i `l `ul ]
+"78
+[; ;adc.c: 78:    average = average/1023;
+[e = _average / _average -> -> -> 1023 `i `l `ul ]
+"79
+[; ;adc.c: 79:    average = average * vref;
+[e = _average * _average F1689 ]
+"80
+[; ;adc.c: 80:    average = average/10000;
+[e = _average / _average -> -> -> 10000 `i `l `ul ]
+"84
+[; ;adc.c: 84:    R1=R1*1000;
+[e = _R1 * _R1 -> -> -> 1000 `i `l `ul ]
+"85
+[; ;adc.c: 85:    R1=1000000+R1;
+[e = _R1 + -> -> 1000000 `l `ul _R1 ]
+"86
+[; ;adc.c: 86:    R1=R1/R2;
+[e = _R1 / _R1 _R2 ]
+"88
+[; ;adc.c: 88:    average = average * R1;
+[e = _average * _average _R1 ]
+"89
+[; ;adc.c: 89:    average = average/10000;
+[e = _average / _average -> -> -> 10000 `i `l `ul ]
+"93
+[; ;adc.c: 93:     return average;
+[e ) -> _average `us ]
+[e $UE 145  ]
+"94
+[; ;adc.c: 94: }
+[e :UE 145 ]
+}
+"97
+[; ;adc.c: 97: unsigned int DisplayVoltage(void)
+[v _DisplayVoltage `(ui ~T0 @X0 1 ef ]
+"98
+[; ;adc.c: 98: {
+{
+[e :U _DisplayVoltage ]
+[f ]
+"99
+[; ;adc.c: 99:     unsigned int voltage = ReadVoltageAverage() ;
+[v _voltage `ui ~T0 @X0 1 a ]
+[e = _voltage -> ( _ReadVoltageAverage ..  `ui ]
+"101
+[; ;adc.c: 101:     if (voltage%100 < 10)
+[e $ ! < % _voltage -> -> 100 `i `ui -> -> 10 `i `ui 150  ]
+"102
+[; ;adc.c: 102:     {
+{
+"103
+[; ;adc.c: 103:         printf("12V Batt Voltage: %d.0%dV \r\n", voltage / 100, voltage % 100);
+[e ( _printf , , (. :s 1C / _voltage -> -> 100 `i `ui % _voltage -> -> 100 `i `ui ]
+"104
+[; ;adc.c: 104:     } else
 }
 [e $U 151  ]
 [e :U 150 ]
-"49
-[; ;main.c: 49:         {
+"105
+[; ;adc.c: 105:     {
 {
-"50
-[; ;main.c: 50:             printf("24V Batt voltage  Voltage: %d.%dV \r\n", bus_voltage / 100, bus_voltage % 100);
-[e ( _printf , , (. :s 2C / -> _bus_voltage `ui -> -> 100 `i `ui % -> _bus_voltage `ui -> -> 100 `i `ui ]
-"51
-[; ;main.c: 51:         }
+"106
+[; ;adc.c: 106:         printf("12V Batt voltage  Voltage: %d.%dV \r\n", voltage / 100, voltage % 100);
+[e ( _printf , , (. :s 2C / _voltage -> -> 100 `i `ui % _voltage -> -> 100 `i `ui ]
+"107
+[; ;adc.c: 107:     }
 }
 [e :U 151 ]
-"52
-[; ;main.c: 52:         DisplayVoltage() ;
-[e ( _DisplayVoltage ..  ]
-"55
-[; ;main.c: 55:         _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"56
-[; ;main.c: 56:     }
-}
-[e :U 147 ]
-[e $U 148  ]
-[e :U 149 ]
-"57
-[; ;main.c: 57: }
-[e :UE 146 ]
+"109
+[; ;adc.c: 109:     return voltage;
+[e ) _voltage ]
+[e $UE 149  ]
+"119
+[; ;adc.c: 119: }
+[e :UE 149 ]
 }
 [p f _printf 8388736 ]
-[a 1C 50 52 86 32 66 97 116 116 32 86 111 108 116 97 103 101 58 32 37 100 46 48 37 100 86 32 13 10 0 ]
-[a 2C 50 52 86 32 66 97 116 116 32 118 111 108 116 97 103 101 32 32 86 111 108 116 97 103 101 58 32 37 100 46 37 100 86 32 13 10 0 ]
+[a 1C 49 50 86 32 66 97 116 116 32 86 111 108 116 97 103 101 58 32 37 100 46 48 37 100 86 32 13 10 0 ]
+[a 2C 49 50 86 32 66 97 116 116 32 118 111 108 116 97 103 101 32 32 86 111 108 116 97 103 101 58 32 37 100 46 37 100 86 32 13 10 0 ]

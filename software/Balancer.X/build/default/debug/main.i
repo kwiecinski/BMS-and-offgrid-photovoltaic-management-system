@@ -2873,42 +2873,18 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 void SendErrorStatus(status err);
 # 16 "main.c" 2
 
-# 1 "./tinyprintf.h" 1
-# 104 "./tinyprintf.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdarg.h" 1 3
+# 1 "./adc.h" 1
 
 
 
 
 
 
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 9 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdarg.h" 2 3
-
-#pragma intrinsic(__va_start)
-#pragma intrinsic(__va_arg)
-
-extern void * __va_start(void);
-extern void * __va_arg(void *, ...);
-# 105 "./tinyprintf.h" 2
-# 129 "./tinyprintf.h"
-typedef unsigned int size_t;
-# 145 "./tinyprintf.h"
-typedef void (*putcf) (void *, char);
-# 157 "./tinyprintf.h"
-void tfp_format(void *putp, putcf putf, const char *fmt, va_list va);
-
-
-int tfp_vsnprintf(char *str, size_t size, const char *fmt, va_list ap);
-int tfp_snprintf(char *str, size_t size, const char *fmt, ...) ;
-
-int tfp_vsprintf(char *str, const char *fmt, va_list ap);
-int tfp_sprintf(char *str, const char *fmt, ...) ;
-# 175 "./tinyprintf.h"
-void init_printf(void *putp, putcf putf);
-void tfp_printf(char *fmt, ...) ;
+void ADC_Init(void);
+unsigned int ADC_ReadVoltage(void);
+void DisplayVoltage(void) ;
 # 17 "main.c" 2
+
 
 
 void main(void)
@@ -2929,14 +2905,21 @@ void main(void)
     SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
 
     uint16_t bus_voltage;
+    ADC_Init();
 
     while(1)
     {
 
         bus_voltage=AutoFox_INA226_GetBusVoltage_V(&ina226);
 
-
-
+        if (bus_voltage%100 < 10)
+        {
+            printf("24V Batt Voltage: %d.0%dV \r\n", bus_voltage / 100, bus_voltage % 100);
+        } else
+        {
+            printf("24V Batt voltage  Voltage: %d.%dV \r\n", bus_voltage / 100, bus_voltage % 100);
+        }
+        DisplayVoltage() ;
 
 
         _delay((unsigned long)((1000)*(8000000/4000.0)));

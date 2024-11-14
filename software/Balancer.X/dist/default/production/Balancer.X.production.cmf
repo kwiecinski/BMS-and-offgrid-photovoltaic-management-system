@@ -11,51 +11,58 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-reset_vec CODE 0 0 0 3 2 1
-end_init CODE 0 C C 3 2 1
-config CONFIG 4 2007 2007 2 2 1
 $dist/default/production\Balancer.X.production.o
 cinit CODE 0 F F 18 2 1
-text1 CODE 0 C7F C7F 11 2 1
-text2 CODE 0 CAB CAB 25 2 1
-text3 CODE 0 41F 41F F0 2 1
-text4 CODE 0 E8B E8B 57 2 1
-text5 CODE 0 C35 C35 8 2 1
-text6 CODE 0 D7F D7F 38 2 1
-text7 CODE 0 DB7 DB7 42 2 1
-text8 CODE 0 174 174 85 2 1
-text9 CODE 0 C6F C6F 10 2 1
-text10 CODE 0 C61 C61 E 2 1
-text11 CODE 0 D21 D21 2A 2 1
-text12 CODE 0 317 317 108 2 1
-text13 CODE 0 DF9 DF9 44 2 1
-text14 CODE 0 27 27 14D 2 1
-text15 CODE 0 CD0 CD0 27 2 1
-text16 CODE 0 E3D E3D 4E 2 1
-text17 CODE 0 7B5 7B5 48 2 1
-text18 CODE 0 F9A F9A 66 2 1
-text19 CODE 0 F3C F3C 5E 2 1
-text20 CODE 0 68C 68C 9E 2 1
-text21 CODE 0 72A 72A 8B 2 1
-text22 CODE 0 EE2 EE2 5A 2 1
-text23 CODE 0 5E3 5E3 A9 2 1
-text24 CODE 0 C57 C57 A 2 1
-text25 CODE 0 C4E C4E 9 2 1
-text26 CODE 0 C45 C45 9 2 1
-text27 CODE 0 CF7 CF7 2A 2 1
-text28 CODE 0 C90 C90 1B 2 1
-text29 CODE 0 D4B D4B 34 2 1
-maintext CODE 0 50F 50F D4 2 1
+text1 CODE 0 C4B C4B 85 2 1
+text2 CODE 0 179F 179F 10 2 1
+text3 CODE 0 1791 1791 E 2 1
+text4 CODE 0 D0 D0 2A 2 1
+text5 CODE 0 D5B D5B 8B 2 1
+text6 CODE 0 17AF 17AF 11 2 1
+text7 CODE 0 81E 81E 25 2 1
+text8 CODE 0 EEE EEE 112 2 1
+text9 CODE 0 A73 A73 57 2 1
+text10 CODE 0 176D 176D 8 2 1
+text11 CODE 0 17D2 17D2 13 2 1
+text12 CODE 0 A1C A1C 57 2 1
+text13 CODE 0 B82 B82 63 2 1
+text14 CODE 0 8C8 8C8 38 2 1
+text15 CODE 0 900 900 42 2 1
+text16 CODE 0 47A 47A 193 2 1
+text17 CODE 0 17C0 17C0 12 2 1
+text18 CODE 0 DE6 DE6 108 2 1
+text19 CODE 0 942 942 44 2 1
+text20 CODE 0 60D 60D 14D 2 1
+text21 CODE 0 843 843 27 2 1
+text22 CODE 0 9CE 9CE 4E 2 1
+text23 CODE 0 986 986 48 2 1
+text24 CODE 0 BE5 BE5 66 2 1
+text25 CODE 0 B24 B24 5E 2 1
+text26 CODE 0 75A 75A 9E 2 1
+text27 CODE 0 CD0 CD0 8B 2 1
+text28 CODE 0 ACA ACA 5A 2 1
+text29 CODE 0 27 27 A9 2 1
+text30 CODE 0 1787 1787 A 2 1
+text31 CODE 0 177E 177E 9 2 1
+text32 CODE 0 1775 1775 9 2 1
+text33 CODE 0 86A 86A 2A 2 1
+text34 CODE 0 17E5 17E5 1B 2 1
+text35 CODE 0 800 800 1E 2 1
+text36 CODE 0 894 894 34 2 1
+maintext CODE 0 2D9 2D9 1A1 2 1
 cstackCOMMON COMMON 1 70 70 A 1 1
 cstackBANK0 BANK0 1 20 20 44 1 1
 cstackBANK1 BANK1 1 C0 C0 14 1 1
 intentry CODE 0 4 4 8 2 1
 bssBANK0 BANK0 1 64 64 7 1 1
 bssBANK1 BANK1 1 A0 A0 20 1 1
-stringtext STRCODE 0 200 200 117 2 256
-clrtext CODE 0 C3D C3D 8 2 1
+stringtext STRCODE 0 100 100 1D9 2 256
+clrtext CODE 0 7F8 7F8 8 2 1
 bssCOMMON COMMON 1 7A 7A 2 1 1
+config CONFIG 4 2007 2007 2 2 1
+$C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 C C 3 2 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -72,18 +79,18 @@ BANK1 D4-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 1F9-1FF 2
-CONST 7FD-C34 2
-CONST 1000-1FFF 2
+CONST FA-FF 2
+CONST 1000-176C 2
+CONST 1800-1FFF 2
 ENTRY 3-3 2
-ENTRY 1F9-1FF 2
-ENTRY 7FD-C34 2
-ENTRY 1000-1FFF 2
+ENTRY FA-FF 2
+ENTRY 1000-176C 2
+ENTRY 1800-1FFF 2
 IDLOC 2000-2003 2
 CODE 3-3 2
-CODE 1F9-1FF 2
-CODE 7FD-C34 2
-CODE 1000-1FFF 2
+CODE FA-FF 2
+CODE 1000-176C 2
+CODE 1800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -91,13 +98,13 @@ SFR3 180-18F 1
 COMMON 7C-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 1F9-1FF 2
-STRCODE 7FD-C34 2
-STRCODE 1000-1FFF 2
+STRCODE FA-FF 2
+STRCODE 1000-176C 2
+STRCODE 1800-1FFF 2
 STRING 3-3 2
-STRING 1F9-1FF 2
-STRING 7FD-C34 2
-STRING 1000-1FFF 2
+STRING FA-FF 2
+STRING 1000-176C 2
+STRING 1800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -112,499 +119,657 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Balancer.X.production.o
-F cinit CODE >2021:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-F cinit CODE >2024:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-F cinit CODE >2071:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-10 cinit CODE >2072:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-11 cinit CODE >2075:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-12 cinit CODE >2076:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-13 cinit CODE >2077:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-14 cinit CODE >2078:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-15 cinit CODE >2079:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-16 cinit CODE >2080:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-17 cinit CODE >2081:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-18 cinit CODE >2082:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-19 cinit CODE >2083:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-1A cinit CODE >2086:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-1B cinit CODE >2087:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-1C cinit CODE >2088:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-1D cinit CODE >2089:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-1E cinit CODE >2090:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-23 cinit CODE >2096:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-23 cinit CODE >2098:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-24 cinit CODE >2099:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
+F cinit CODE >2419:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+F cinit CODE >2422:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+F cinit CODE >2469:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+10 cinit CODE >2470:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+11 cinit CODE >2473:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+12 cinit CODE >2474:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+13 cinit CODE >2475:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+14 cinit CODE >2476:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+15 cinit CODE >2477:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+16 cinit CODE >2478:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+17 cinit CODE >2479:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+18 cinit CODE >2480:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+19 cinit CODE >2481:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+1A cinit CODE >2484:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+1B cinit CODE >2485:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+1C cinit CODE >2486:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+1D cinit CODE >2487:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+1E cinit CODE >2488:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+23 cinit CODE >2494:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+23 cinit CODE >2496:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+24 cinit CODE >2497:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
 4 intentry CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D4B text29 CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D4B text29 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D53 text29 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D55 text29 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D59 text29 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D5C text29 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D5E text29 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D62 text29 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D6A text29 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D6B text29 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D6C text29 CODE >47:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D6E text29 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D6F text29 CODE >51:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D70 text29 CODE >52:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D71 text29 CODE >53:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D75 text29 CODE >56:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D77 text29 CODE >59:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-D78 text29 CODE >64:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C90 text28 CODE >61:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C90 text28 CODE >63:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C90 text28 CODE >66:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-CAA text28 CODE >67:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-CF7 text27 CODE >119:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-CF8 text27 CODE >122:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-CFD text27 CODE >123:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D00 text27 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D05 text27 CODE >125:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D0E text27 CODE >126:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D13 text27 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D1E text27 CODE >128:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D1F text27 CODE >129:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-D20 text27 CODE >130:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C45 text26 CODE >77:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C45 text26 CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C4A text26 CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C4D text26 CODE >81:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C4E text25 CODE >91:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C4E text25 CODE >93:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C53 text25 CODE >94:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C56 text25 CODE >95:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C57 text24 CODE >105:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C57 text24 CODE >107:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C5C text24 CODE >108:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C60 text24 CODE >109:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-5E3 text23 CODE >193:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-5E3 text23 CODE >195:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-5ED text23 CODE >196:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-5F2 text23 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-5F8 text23 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-604 text23 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-60E text23 CODE >198:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-61C text23 CODE >199:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-621 text23 CODE >200:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-626 text23 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-62C text23 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-638 text23 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-646 text23 CODE >203:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-65A text23 CODE >204:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-671 text23 CODE >205:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-685 text23 CODE >207:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-68A text23 CODE >209:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-68B text23 CODE >210:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EE2 text22 CODE >213:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EE2 text22 CODE >216:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EE6 text22 CODE >217:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EE8 text22 CODE >218:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EEA text22 CODE >221:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EEF text22 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-EF5 text22 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F01 text22 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F0B text22 CODE >224:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F19 text22 CODE >225:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F27 text22 CODE >226:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F35 text22 CODE >228:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F3A text22 CODE >230:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F3B text22 CODE >231:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-72A text21 CODE >421:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-72A text21 CODE >423:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-738 text21 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-741 text21 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-745 text21 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-749 text21 CODE >426:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-74B text21 CODE >430:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-756 text21 CODE >430:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-767 text21 CODE >432:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-76D text21 CODE >432:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-77B text21 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-781 text21 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-78A text21 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-798 text21 CODE >436:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-7A1 text21 CODE >436:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-7B4 text21 CODE >437:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-68C text20 CODE >399:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-68C text20 CODE >401:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-69A text20 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6A3 text20 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6A7 text20 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6AB text20 CODE >404:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6AD text20 CODE >408:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6B8 text20 CODE >408:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6CB text20 CODE >410:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6CF text20 CODE >410:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6DD text20 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6E1 text20 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6E4 text20 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6E7 text20 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6F0 text20 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6FB text20 CODE >416:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-6FF text20 CODE >416:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-70D text20 CODE >418:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-716 text20 CODE >418:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-729 text20 CODE >419:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F3C text19 CODE >97:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F3C text19 CODE >99:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F42 text19 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X/ina226.h
-F46 text19 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X/ina226.h
-F51 text19 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F55 text19 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F61 text19 CODE >102:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F65 text19 CODE >102:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F71 text19 CODE >103:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F75 text19 CODE >103:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F85 text19 CODE >104:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F89 text19 CODE >104:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F99 text19 CODE >105:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F9A text18 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-F9A text18 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FA4 text18 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FA8 text18 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FAC text18 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FAE text18 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FAF text18 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FB1 text18 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FB8 text18 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FBA text18 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FBE text18 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FC0 text18 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FC7 text18 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FC9 text18 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FCD text18 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FD1 text18 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FD5 text18 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FD9 text18 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FDC text18 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FE0 text18 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FE4 text18 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FE7 text18 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FE8 text18 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FE9 text18 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FEF text18 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FF1 text18 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FF7 text18 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-FFF text18 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-7B5 text17 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7B5 text17 CODE >119:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7BF text17 CODE >121:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7C3 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7C6 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7C7 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7C9 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7CD text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7CE text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7D0 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7D4 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7D5 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7D7 text17 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7DA text17 CODE >123:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7DC text17 CODE >123:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7E3 text17 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7E4 text17 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7EA text17 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7EC text17 CODE >125:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7F0 text17 CODE >125:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7F4 text17 CODE >128:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-7FC text17 CODE >129:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
-E3D text16 CODE >248:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-E3D text16 CODE >250:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-E47 text16 CODE >251:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-E56 text16 CODE >252:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-E8A text16 CODE >253:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CD0 text15 CODE >172:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CD1 text15 CODE >174:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CD6 text15 CODE >177:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CD9 text15 CODE >177:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CE3 text15 CODE >179:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CE9 text15 CODE >181:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CEE text15 CODE >182:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CF0 text15 CODE >186:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CF5 text15 CODE >187:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CF6 text15 CODE >189:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-27 text14 CODE >147:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-27 text14 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-53 text14 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-59 text14 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-5F text14 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-79 text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-BC text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-C2 text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-C7 text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-CD text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-D3 text14 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-ED text14 CODE >161:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-F1 text14 CODE >161:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-105 text14 CODE >162:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-109 text14 CODE >162:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-117 text14 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-11B text14 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-142 text14 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-156 text14 CODE >166:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-160 text14 CODE >166:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-173 text14 CODE >167:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-DF9 text13 CODE >20:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-DFA text13 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-DFB text13 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-DFE text13 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E07 text13 CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E08 text13 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E0C text13 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E0F text13 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E17 text13 CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E1A text13 CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E1B text13 CODE >33:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E1E text13 CODE >35:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E27 text13 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E2B text13 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E2F text13 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E32 text13 CODE >39:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E3B text13 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E3C text13 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-317 text12 CODE >108:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-317 text12 CODE >110:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-31F text12 CODE >113:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-32F text12 CODE >114:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-335 text12 CODE >119:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-350 text12 CODE >120:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-353 text12 CODE >120:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-359 text12 CODE >121:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-35B text12 CODE >123:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-374 text12 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-377 text12 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-37D text12 CODE >125:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-37F text12 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-383 text12 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-38E text12 CODE >82:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-39F text12 CODE >130:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3A6 text12 CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3B7 text12 CODE >132:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3BE text12 CODE >134:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3C7 text12 CODE >134:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3DA text12 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3DE text12 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3EF text12 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3F5 text12 CODE >136:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-3F7 text12 CODE >139:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-416 text12 CODE >141:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-41D text12 CODE >142:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-41E text12 CODE >143:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-D21 text11 CODE >5:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D21 text11 CODE >8:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D25 text11 CODE >9:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D26 text11 CODE >10:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D27 text11 CODE >17:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D2B text11 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D2C text11 CODE >20:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D2F text11 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D30 text11 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D31 text11 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D32 text11 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D33 text11 CODE >25:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D34 text11 CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D35 text11 CODE >27:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D36 text11 CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D37 text11 CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D38 text11 CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D39 text11 CODE >32:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3A text11 CODE >33:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3B text11 CODE >34:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3C text11 CODE >35:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3D text11 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3E text11 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D3F text11 CODE >39:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D40 text11 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D41 text11 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D42 text11 CODE >42:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D43 text11 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D44 text11 CODE >44:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D45 text11 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D46 text11 CODE >47:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D49 text11 CODE >48:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-D4A text11 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
-C61 text10 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C61 text10 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C64 text10 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C68 text10 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C6C text10 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C6D text10 CODE >51:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C6E text10 CODE >52:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
-C6F text9 CODE >7:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C6F text9 CODE >10:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C72 text9 CODE >11:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C73 text9 CODE >12:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C75 text9 CODE >13:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C76 text9 CODE >16:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C79 text9 CODE >17:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C7A text9 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C7C text9 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C7D text9 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-C7E text9 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
-174 text8 CODE >450:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-175 text8 CODE >455:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-176 text8 CODE >458:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-17A text8 CODE >459:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-17B text8 CODE >461:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-17F text8 CODE >462:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-180 text8 CODE >464:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-184 text8 CODE >465:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-185 text8 CODE >467:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-189 text8 CODE >468:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-18A text8 CODE >470:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-18E text8 CODE >471:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-18F text8 CODE >473:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-193 text8 CODE >474:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-194 text8 CODE >476:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-198 text8 CODE >477:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-199 text8 CODE >479:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-19D text8 CODE >480:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-19E text8 CODE >482:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1A2 text8 CODE >483:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1A3 text8 CODE >485:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1A7 text8 CODE >486:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1A8 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1AF text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1B2 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1B7 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1BC text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1BF text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1C2 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1C5 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1C8 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1CB text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1CE text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1D1 text8 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1D4 text8 CODE >492:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1E2 text8 CODE >493:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1E4 text8 CODE >493:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1E8 text8 CODE >490:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1F4 text8 CODE >490:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-1F8 text8 CODE >495:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
-DB7 text7 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DB7 text7 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DB9 text7 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DBF text7 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DC1 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DC2 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DC3 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DC7 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DC9 text7 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DCB text7 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DCF text7 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DD0 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DD4 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DD6 text7 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DD8 text7 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DDC text7 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DE0 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DE3 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DE6 text7 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DE7 text7 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DE8 text7 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DEC text7 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DEE text7 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DF4 text7 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-DF8 text7 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-D7F text6 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D7F text6 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D85 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D87 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D88 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D89 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D8D text6 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D8F text6 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D91 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D95 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D97 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D9B text6 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-D9F text6 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DA2 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DA5 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DA6 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DAA text6 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DAC text6 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DB2 text6 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-DB6 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
-C35 text5 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-C36 text5 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-C3C text5 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
-E8B text4 CODE >8:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-E8B text4 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-E95 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-E9B text4 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-E9C text4 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-EC2 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-EC6 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-ECA text4 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-EDA text4 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-EDF text4 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-EE1 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
-41F text3 CODE >1177:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-41F text3 CODE >1201:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-433 text3 CODE >1201:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-437 text3 CODE >1202:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-43D text3 CODE >1202:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-43F text3 CODE >1204:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-443 text3 CODE >1205:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-447 text3 CODE >1291:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-44F text3 CODE >1439:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-459 text3 CODE >1439:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-45D text3 CODE >1495:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-46B text3 CODE >1497:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-472 text3 CODE >1497:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-480 text3 CODE >1498:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-481 text3 CODE >1523:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-481 text3 CODE >1525:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-483 text3 CODE >1527:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-499 text3 CODE >1528:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4AE text3 CODE >1532:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4BA text3 CODE >1534:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4D0 text3 CODE >1533:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4D7 text3 CODE >1589:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4E1 text3 CODE >1589:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4E4 text3 CODE >1806:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4EC text3 CODE >1806:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-4EF text3 CODE >1811:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-50E text3 CODE >1814:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CAB text2 CODE >1817:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CAB text2 CODE >1822:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CB1 text2 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CB2 text2 CODE >1830:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CBD text2 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CC9 text2 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CCD text2 CODE >1835:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-CCF text2 CODE >1840:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
-C7F text1 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
-C7F text1 CODE >9:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
-C81 text1 CODE >10:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
-C8F text1 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
-50F maintext CODE >19:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-50F maintext CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-518 maintext CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-51D maintext CODE >25:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-522 maintext CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-527 maintext CODE >27:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-52A maintext CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-52B maintext CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-52C maintext CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-52D maintext CODE >32:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-549 maintext CODE >33:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-55D maintext CODE >34:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-571 maintext CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-588 maintext CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-5D1 maintext CODE >47:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
-C3D clrtext CODE >2058:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C3D clrtext CODE >2059:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C3E clrtext CODE >2060:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C3E clrtext CODE >2061:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C3F clrtext CODE >2062:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C40 clrtext CODE >2063:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C41 clrtext CODE >2064:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C42 clrtext CODE >2065:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C43 clrtext CODE >2066:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
-C44 clrtext CODE >2067:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
+894 text36 CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+894 text36 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+89C text36 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+89E text36 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8A2 text36 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8A5 text36 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8A7 text36 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8AB text36 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B3 text36 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B4 text36 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B5 text36 CODE >47:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B7 text36 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B8 text36 CODE >51:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8B9 text36 CODE >52:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8BA text36 CODE >53:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8BE text36 CODE >56:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8C0 text36 CODE >59:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+8C1 text36 CODE >64:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+800 text35 CODE >13:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+800 text35 CODE >16:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+806 text35 CODE >19:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+809 text35 CODE >20:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+80A text35 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+80E text35 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+817 text35 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+81A text35 CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+81D text35 CODE >32:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17E5 text34 CODE >61:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+17E5 text34 CODE >63:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+17E5 text34 CODE >66:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+17FF text34 CODE >67:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+86A text33 CODE >119:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+86B text33 CODE >122:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+870 text33 CODE >123:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+873 text33 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+878 text33 CODE >125:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+881 text33 CODE >126:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+886 text33 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+891 text33 CODE >128:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+892 text33 CODE >129:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+893 text33 CODE >130:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1775 text32 CODE >77:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1775 text32 CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+177A text32 CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+177D text32 CODE >81:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+177E text31 CODE >91:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+177E text31 CODE >93:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1783 text31 CODE >94:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1786 text31 CODE >95:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1787 text30 CODE >105:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1787 text30 CODE >107:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+178C text30 CODE >108:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1790 text30 CODE >109:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+27 text29 CODE >193:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+27 text29 CODE >195:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+31 text29 CODE >196:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+36 text29 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+3C text29 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+48 text29 CODE >197:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+52 text29 CODE >198:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+60 text29 CODE >199:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+65 text29 CODE >200:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6A text29 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+70 text29 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7C text29 CODE >201:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+8A text29 CODE >203:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+9E text29 CODE >204:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B5 text29 CODE >205:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C9 text29 CODE >207:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CE text29 CODE >209:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CF text29 CODE >210:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+ACA text28 CODE >213:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+ACA text28 CODE >216:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+ACE text28 CODE >217:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+AD0 text28 CODE >218:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+AD2 text28 CODE >221:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+AD7 text28 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+ADD text28 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+AE9 text28 CODE >222:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+AF3 text28 CODE >224:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B01 text28 CODE >225:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B0F text28 CODE >226:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B1D text28 CODE >228:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B22 text28 CODE >230:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B23 text28 CODE >231:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CD0 text27 CODE >421:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CD0 text27 CODE >423:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CDE text27 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CE7 text27 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CEB text27 CODE >425:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CEF text27 CODE >426:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CF1 text27 CODE >430:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CFC text27 CODE >430:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D0D text27 CODE >432:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D13 text27 CODE >432:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D21 text27 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D27 text27 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D30 text27 CODE >434:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D3E text27 CODE >436:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D47 text27 CODE >436:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+D5A text27 CODE >437:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+75A text26 CODE >399:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+75A text26 CODE >401:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+768 text26 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+771 text26 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+775 text26 CODE >403:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+779 text26 CODE >404:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+77B text26 CODE >408:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+786 text26 CODE >408:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+799 text26 CODE >410:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+79D text26 CODE >410:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7AB text26 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7AF text26 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7B2 text26 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7B5 text26 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7BE text26 CODE >92:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7C9 text26 CODE >416:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7CD text26 CODE >416:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7DB text26 CODE >418:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7E4 text26 CODE >418:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+7F7 text26 CODE >419:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B24 text25 CODE >97:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B24 text25 CODE >99:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B2A text25 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X/ina226.h
+B2E text25 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X/ina226.h
+B39 text25 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B3D text25 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B49 text25 CODE >102:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B4D text25 CODE >102:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B59 text25 CODE >103:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B5D text25 CODE >103:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B6D text25 CODE >104:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B71 text25 CODE >104:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+B81 text25 CODE >105:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+BE5 text24 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BE5 text24 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BEF text24 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BF3 text24 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BF7 text24 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BF9 text24 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BFA text24 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+BFC text24 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C03 text24 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C05 text24 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C09 text24 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C0B text24 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C12 text24 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C14 text24 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C18 text24 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C1C text24 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C20 text24 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C24 text24 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C27 text24 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C2B text24 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C2F text24 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C32 text24 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C33 text24 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C34 text24 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C3A text24 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C3C text24 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C42 text24 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+C4A text24 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+986 text23 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+986 text23 CODE >119:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+990 text23 CODE >121:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+994 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+997 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+998 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+99A text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+99E text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+99F text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9A1 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9A5 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9A6 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9A8 text23 CODE >122:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9AB text23 CODE >123:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9AD text23 CODE >123:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9B4 text23 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9B5 text23 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9BB text23 CODE >124:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9BD text23 CODE >125:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9C1 text23 CODE >125:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9C5 text23 CODE >128:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9CD text23 CODE >129:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul32.c
+9CE text22 CODE >248:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+9CE text22 CODE >250:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+9D8 text22 CODE >251:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+9E7 text22 CODE >252:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+A1B text22 CODE >253:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+843 text21 CODE >172:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+844 text21 CODE >174:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+849 text21 CODE >177:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+84C text21 CODE >177:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+856 text21 CODE >179:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+85C text21 CODE >181:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+861 text21 CODE >182:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+863 text21 CODE >186:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+868 text21 CODE >187:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+869 text21 CODE >189:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+60D text20 CODE >147:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+60D text20 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+639 text20 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+63F text20 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+645 text20 CODE >152:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+65F text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6A2 text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6A8 text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6AD text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6B3 text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6B9 text20 CODE >157:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6D3 text20 CODE >161:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6D7 text20 CODE >161:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6EB text20 CODE >162:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6EF text20 CODE >162:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+6FD text20 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+701 text20 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+728 text20 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+73C text20 CODE >166:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+746 text20 CODE >166:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+759 text20 CODE >167:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+942 text19 CODE >20:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+943 text19 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+944 text19 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+947 text19 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+950 text19 CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+951 text19 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+955 text19 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+958 text19 CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+960 text19 CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+963 text19 CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+964 text19 CODE >33:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+967 text19 CODE >35:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+970 text19 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+974 text19 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+978 text19 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+97B text19 CODE >39:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+984 text19 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+985 text19 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+DE6 text18 CODE >108:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+DE6 text18 CODE >110:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+DEE text18 CODE >113:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+DFE text18 CODE >114:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E04 text18 CODE >119:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E1F text18 CODE >120:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E22 text18 CODE >120:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E28 text18 CODE >121:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E2A text18 CODE >123:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E43 text18 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E46 text18 CODE >124:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E4C text18 CODE >125:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E4E text18 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E52 text18 CODE >127:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E5D text18 CODE >82:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E6E text18 CODE >130:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E75 text18 CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E86 text18 CODE >132:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E8D text18 CODE >134:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+E96 text18 CODE >134:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EA9 text18 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EAD text18 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EBE text18 CODE >135:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EC4 text18 CODE >136:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EC6 text18 CODE >139:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EE5 text18 CODE >141:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EEC text18 CODE >142:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+EED text18 CODE >143:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+17C0 text17 CODE >34:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17C0 text17 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17C3 text17 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17C7 text17 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17CD text17 CODE >52:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+17D1 text17 CODE >53:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+47A text16 CODE >56:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+47A text16 CODE >57:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+484 text16 CODE >60:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+48C text16 CODE >61:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+494 text16 CODE >68:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+495 text16 CODE >69:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4A0 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4A9 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4AA text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4AC text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4B0 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4B1 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4B3 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4B7 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4B8 text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4BA text16 CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4BD text16 CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4C7 text16 CODE >73:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4CD text16 CODE >73:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4D1 text16 CODE >75:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+4EE text16 CODE >77:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+50D text16 CODE >78:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+52C text16 CODE >64:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+54B text16 CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+56A text16 CODE >84:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+589 text16 CODE >85:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+594 text16 CODE >85:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+59A text16 CODE >85:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+5A0 text16 CODE >85:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+5AB text16 CODE >86:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+5CA text16 CODE >88:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+5E9 text16 CODE >89:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+608 text16 CODE >93:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+60C text16 CODE >94:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+900 text15 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+900 text15 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+902 text15 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+908 text15 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+90A text15 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+90B text15 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+90C text15 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+910 text15 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+912 text15 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+914 text15 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+918 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+919 text15 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+91D text15 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+91F text15 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+921 text15 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+925 text15 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+929 text15 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+92C text15 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+92F text15 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+930 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+931 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+935 text15 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+937 text15 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+93D text15 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+941 text15 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+8C8 text14 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8C8 text14 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8CE text14 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8D0 text14 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8D1 text14 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8D2 text14 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8D6 text14 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8D8 text14 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8DA text14 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8DE text14 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8E0 text14 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8E4 text14 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8E8 text14 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8EB text14 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8EE text14 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8EF text14 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8F3 text14 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8F5 text14 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8FB text14 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+8FF text14 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+B82 text13 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B82 text13 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B83 text13 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B87 text13 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B8A text13 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B8C text13 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B8E text13 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B92 text13 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B95 text13 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B97 text13 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B99 text13 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+B9B text13 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BA1 text13 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BA3 text13 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BA4 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BA5 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BA9 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BAB text13 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BAD text13 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BB1 text13 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BB2 text13 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BB6 text13 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BB8 text13 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BBA text13 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BBE text13 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BC2 text13 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BC5 text13 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BC8 text13 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BC9 text13 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BCA text13 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BCE text13 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BD0 text13 CODE >36:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BD6 text13 CODE >38:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BDB text13 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BDE text13 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BE0 text13 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+BE4 text13 CODE >41:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+A1C text12 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A1C text12 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A1D text12 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A21 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A24 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A26 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A28 text12 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A2C text12 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A2F text12 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A31 text12 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A37 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A39 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A3A text12 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A3B text12 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A3F text12 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A41 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A43 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A47 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A49 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A4D text12 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A51 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A54 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A57 text12 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A58 text12 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A5C text12 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A5E text12 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A64 text12 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A69 text12 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A6C text12 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A6E text12 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+A72 text12 CODE >34:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+17D2 text11 CODE >1:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\abs.c
+17D2 text11 CODE >3:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\abs.c
+17DE text11 CODE >3:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\abs.c
+17E4 text11 CODE >4:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\abs.c
+176D text10 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+176E text10 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+1774 text10 CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\sw_uart.c
+A73 text9 CODE >8:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+A73 text9 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+A7D text9 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+A83 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+A84 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AAA text9 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AAE text9 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AB2 text9 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AC2 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AC7 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+AC9 text9 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+EEE text8 CODE >1177:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+EEE text8 CODE >1201:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F02 text8 CODE >1201:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F06 text8 CODE >1202:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F0C text8 CODE >1202:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F0E text8 CODE >1204:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F12 text8 CODE >1205:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F16 text8 CODE >1291:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F1E text8 CODE >1361:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F28 text8 CODE >1361:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F36 text8 CODE >1361:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F3A text8 CODE >1404:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F48 text8 CODE >1406:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F4F text8 CODE >1406:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F5D text8 CODE >1408:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F5F text8 CODE >1409:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F66 text8 CODE >1411:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F85 text8 CODE >1412:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+F9A text8 CODE >1416:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FA5 text8 CODE >1417:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FAF text8 CODE >1418:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FB8 text8 CODE >1424:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FCE text8 CODE >1423:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FD5 text8 CODE >1806:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FDD text8 CODE >1806:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FE0 text8 CODE >1811:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+FFF text8 CODE >1814:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+81E text7 CODE >1817:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+81E text7 CODE >1822:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+824 text7 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+825 text7 CODE >1830:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+830 text7 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+83C text7 CODE >1826:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+840 text7 CODE >1835:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+842 text7 CODE >1840:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+17AF text6 CODE >5:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+17AF text6 CODE >9:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+17B3 text6 CODE >10:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+17BF text6 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+D5B text5 CODE >97:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D5B text5 CODE >99:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D66 text5 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D76 text5 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D78 text5 CODE >101:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D7C text5 CODE >103:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+DAD text5 CODE >104:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+DAE text5 CODE >106:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+DDF text5 CODE >109:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+DE5 text5 CODE >119:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\adc.c
+D0 text4 CODE >5:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+D0 text4 CODE >8:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+D4 text4 CODE >9:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+D5 text4 CODE >10:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+D6 text4 CODE >17:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+DA text4 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+DB text4 CODE >20:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+DE text4 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+DF text4 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E0 text4 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E1 text4 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E2 text4 CODE >25:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E3 text4 CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E4 text4 CODE >27:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E5 text4 CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E6 text4 CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E7 text4 CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E8 text4 CODE >32:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+E9 text4 CODE >33:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+EA text4 CODE >34:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+EB text4 CODE >35:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+EC text4 CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+ED text4 CODE >38:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+EE text4 CODE >39:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+EF text4 CODE >40:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F0 text4 CODE >41:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F1 text4 CODE >42:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F2 text4 CODE >43:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F3 text4 CODE >44:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F4 text4 CODE >45:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F5 text4 CODE >47:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F8 text4 CODE >48:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+F9 text4 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\inits.c
+1791 text3 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1791 text3 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1794 text3 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+1798 text3 CODE >23:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+179C text3 CODE >49:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+179D text3 CODE >51:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+179E text3 CODE >52:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\hw_i2c.c
+179F text2 CODE >7:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+179F text2 CODE >10:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17A2 text2 CODE >11:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17A3 text2 CODE >12:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17A5 text2 CODE >13:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17A6 text2 CODE >16:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17A9 text2 CODE >17:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17AA text2 CODE >18:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17AC text2 CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17AD text2 CODE >22:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+17AE text2 CODE >24:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\interrupts.c
+C4B text1 CODE >450:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C4C text1 CODE >455:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C4D text1 CODE >458:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C51 text1 CODE >459:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C52 text1 CODE >461:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C56 text1 CODE >462:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C57 text1 CODE >464:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C5B text1 CODE >465:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C5C text1 CODE >467:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C60 text1 CODE >468:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C61 text1 CODE >470:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C65 text1 CODE >471:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C66 text1 CODE >473:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C6A text1 CODE >474:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C6B text1 CODE >476:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C6F text1 CODE >477:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C70 text1 CODE >479:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C74 text1 CODE >480:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C75 text1 CODE >482:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C79 text1 CODE >483:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C7A text1 CODE >485:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C7E text1 CODE >486:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C7F text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C86 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C89 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C8E text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C93 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C96 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C99 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C9C text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+C9F text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CA2 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CA5 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CA8 text1 CODE >487:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CAB text1 CODE >492:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CB9 text1 CODE >493:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CBB text1 CODE >493:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CBF text1 CODE >490:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CCB text1 CODE >490:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+CCF text1 CODE >495:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\ina226.c
+2D9 maintext CODE >21:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2D9 maintext CODE >25:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2E2 maintext CODE >26:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2E7 maintext CODE >27:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2EC maintext CODE >28:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2F1 maintext CODE >29:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2F4 maintext CODE >30:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2F5 maintext CODE >31:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2F6 maintext CODE >32:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+2F7 maintext CODE >34:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+313 maintext CODE >35:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+327 maintext CODE >36:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+33B maintext CODE >39:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+340 maintext CODE >44:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+357 maintext CODE >46:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+364 maintext CODE >55:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+373 maintext CODE >55:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+379 maintext CODE >58:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+389 maintext CODE >58:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+38B maintext CODE >58:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+38F maintext CODE >60:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+3C4 maintext CODE >61:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+3C5 maintext CODE >63:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+3FA maintext CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+404 maintext CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+410 maintext CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+418 maintext CODE >70:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+41C maintext CODE >71:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+41D maintext CODE >72:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+426 maintext CODE >73:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+427 maintext CODE >74:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+428 maintext CODE >75:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+431 maintext CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+43B maintext CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+447 maintext CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+44F maintext CODE >79:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+453 maintext CODE >80:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+454 maintext CODE >81:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+45D maintext CODE >82:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+45E maintext CODE >83:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+45F maintext CODE >84:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+468 maintext CODE >88:D:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer.X\main.c
+7F8 clrtext CODE >2456:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7F8 clrtext CODE >2457:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7F9 clrtext CODE >2458:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7F9 clrtext CODE >2459:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FA clrtext CODE >2460:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FB clrtext CODE >2461:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FC clrtext CODE >2462:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FD clrtext CODE >2463:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FE clrtext CODE >2464:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
+7FF clrtext CODE >2465:C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -618,12 +783,16 @@ C44 clrtext CODE >2067:C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_1.s
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Balancer.X.production.o
+___awdiv@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ___lwmod@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__Hspace_0 1000 0 ABS 0 - -
+main@voltage_12V C0 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
+__end_of_ReadVoltageAverage C1A 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
+__Hspace_0 1800 0 ABS 0 - -
 __Hspace_1 D4 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
+_ADC_Read_ADC_Result 2F80 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ConfigureVoltageConversionTime@theMergedBusAndShuntConvTimeIndicies 31 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 AutoFox_INA226_setupCalibration@this 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
@@ -631,85 +800,103 @@ _T1CONbits 10 0 ABS 0 - dist/default/production\Balancer.X.production.o
 ?_AutoFox_INA226_GetBusVoltage_V 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Lstringtext 0 0 ABS 0 stringtext -
+?_abs 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-?_vfprintf 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__end_of_cSampleAvgMask 454 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+?_vfprintf 34 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_cSampleAvgMask 25C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 _RCEN 48B 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _TRMT 4C1 0 ABS 0 - dist/default/production\Balancer.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+___sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 _dbuf A0 0 BANK1 1 bssBANK1 dist/default/production\Balancer.X.production.o
-_main A1E 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
+_main 5B2 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
 _prec 66 0 BANK0 1 bssBANK0 dist/default/production\Balancer.X.production.o
+abs@a 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@aI2C_Address 4D 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-___stack_lo 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-__end_of_cShuntVoltConvTimeIdxShift 440 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-start 18 0 CODE 0 init C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+___stack_hi 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+___stack_lo 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+__end_of_cShuntVoltConvTimeIdxShift 248 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+start 18 0 CODE 0 init C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 AutoFox_INA226_ConfigureNumSampleAveraging@this 29 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 ?___lmul 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Balancer.X.production.o
+_ReadVoltageAverage 8F4 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
 I2C_Master_Read@ack 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_Constructor 1F34 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_Constructor 1704 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_vfpfcnvrt A1E 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_CheckI2cAddress 19EE 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
-__end_of_INA226_ALERT_LIMIT 482 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+__end_of_vfpfcnvrt 2000 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
+___awmod@sign 77 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_CheckI2cAddress 10D4 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
+__end_of_INA226_ALERT_LIMIT 28C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Balancer.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ConfigureVoltageConversionTime@s 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 I2C_Master_Read@data 75 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+___awdiv@sign 77 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt 83E 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_ReadRegister BC6 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
+_vfpfcnvrt 1DDC 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_ReadRegister 4E 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_WriteRegister@aRegister 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ReadRegister@aRegister 22 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__end_of_INA226_MASK_ENABLE 484 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_MASK_ENABLE 28E 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_ADRESH 1E 0 ABS 0 - dist/default/production\Balancer.X.production.o
+_ADRESL 9E 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_Init 62E 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
+___awdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_Init 1BCC 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Balancer.X.production.o
 AutoFox_INA226_setupCalibration@theCurrentLSB_uA 47 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-_I2C_Init 18C2 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_ConfigureVoltageConversionTime E54 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
-__end_of_cOperatingModeMask 464 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_I2C_Init 2F22 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_ConfigureVoltageConversionTime FF0 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
+__end_of_cOperatingModeMask 26C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@theINA226_ID 5F 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__end_of___lmul FFA 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
-__end_of_cBusVoltageConvTimeMask 450 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of___lmul 139C 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
+__end_of_ADC_Read_ADC_Result 2FA4 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
+__end_of_cBusVoltageConvTimeMask 258 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_DisplayVoltage 1AB6 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-?_printf 39 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__end_of_I2C_Init 18DE 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
-__end_of_INA226_I2C_TIMEOUT@ina226$F800 478 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+?_printf 3A 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_I2C_Init 2F3E 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
+_ADC_Init 1000 0 CODE 0 text35 dist/default/production\Balancer.X.production.o
+___awdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+__end_of_INA226_I2C_TIMEOUT@ina226$F815 280 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 ___lwmod@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of___lldiv 2000 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
-__end_of___lwdiv 1BF2 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
-__end_of___lwmod 1B6E 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-___stacklo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+__end_of___awdiv 17CA 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
+__end_of___awmod 14E6 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
+__end_of___lldiv 1896 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
+__end_of___lwdiv 1284 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
+__end_of___lwmod 1200 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
+__end_ofReadVoltageAverage@vref 22C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_ADC_Init 103C 0 CODE 0 text35 dist/default/production\Balancer.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+___stacklo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 SendErrorStatus@err 77 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-___lwdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_INA226_CONFIG 490 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_INA226_DIE_ID 47E 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+ReadVoltageAverage@average 48 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+___lwdiv@quotient 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+__end_of_INA226_CONFIG 29A 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_DIE_ID 288 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_GetBusVoltage_V@this 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 ___lwmod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ___lldiv@counter 32 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Balancer.X.production.o
-__end_of_cResetCommand 468 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-_Global_Init 1A42 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
+__end_of_cResetCommand 270 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_Global_Init 1A0 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
 _ACKSTAT 48E 0 ABS 0 - dist/default/production\Balancer.X.production.o
 ___lldiv@dividend 29 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_CheckI2cAddress 19A0 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
-__end_of_INA226_CALIBRATION 486 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_CheckI2cAddress 1086 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
+__end_of_INA226_CALIBRATION 290 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_WriteRegister@this 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-clear_ram0 187A 0 CODE 0 clrtext dist/default/production\Balancer.X.production.o
+__end_of_DisplayVoltage 1BCC 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
+clear_ram0 FF0 0 CODE 0 clrtext dist/default/production\Balancer.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __pcstackBANK1 C0 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Balancer.X.production.o
@@ -740,35 +927,35 @@ _TRISC4 43C 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _TRISC5 43D 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _TRISC6 43E 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _TRISC7 43F 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_printf 1920 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
+?_DisplayVoltage 4C 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_printf 2F80 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
 fputc@fp 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-_Interrupt_Init 18DE 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-__end_of_AutoFox_INA226_Init 83E 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_setupCalibration 2E8 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
+_Interrupt_Init 2F3E 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+__end_of_AutoFox_INA226_Init 1DDC 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_setupCalibration EB4 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
+vfpfcnvrt@done 2C 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 4E 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-_main$1762 C0 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
-_main$1763 C2 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
-__stringbase 424 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-___lwdiv@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+__stringbase 224 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+___lwdiv@counter 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
-__end_of_cMaxConvTimeTblIdx 438 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_cMaxConvTimeTblIdx 240 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1E 0 CODE 0 cinit -
-__end_of_cSampleAvgIdxShift 448 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_ConfigureVoltageConversionTime D18 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
+__end_of_cSampleAvgIdxShift 250 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_ConfigureVoltageConversionTime EB4 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
 __Lstack 0 0 STACK 2 stack -
-__end_of_INA226_MANUFACTURER_ID_K 474 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_MANUFACTURER_ID_K 27C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@this 4B 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 _PORTAbits 5 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\Balancer.X.production.o
@@ -795,159 +982,187 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Lsivt 18 0 CODE 0 sivt -
 __Ltext 0 0 ABS 0 text -
-___lmul F6A 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
+___lmul 130C 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
-__end_of_AutoFox_INA226_ConfigureNumSampleAveraging F6A 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
-__end_of_cShuntVoltageConvTimeMask 44C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_ConfigureNumSampleAveraging 1AB6 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
+__end_of_cShuntVoltageConvTimeMask 254 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_AutoFox_INA226_Constructor 1E78 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
-_ISR 1A96 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
-__S0 1000 0 ABS 0 - -
+_AutoFox_INA226_Constructor 1648 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
+_ISR 1128 0 CODE 0 text36 dist/default/production\Balancer.X.production.o
+__S0 1800 0 ABS 0 - -
 __S1 D4 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+_abs 2FA4 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_Interrupt_Init 18FE 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
-_I2C_Master_Start 188A 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
+__end_of_Interrupt_Init 2F5E 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
+_I2C_Master_Start 2EEA 0 CODE 0 text32 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@aShuntResistor_mOhms 4E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-_I2C_Master_Write 18AE 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
-__end_of_INA226_DEFAULT_I2C_ADDRESS@ina226$F799 492 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_ISR 1AFE 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
-__end_of_INA226_DEFAULT_I2C_ADDRESS 494 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_I2C_Master_Write 2F0E 0 CODE 0 text30 dist/default/production\Balancer.X.production.o
+__end_ofReadVoltageAverage@num_samples 286 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_DEFAULT_I2C_ADDRESS@ina226$F814 29C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_ISR 1190 0 CODE 0 text36 dist/default/production\Balancer.X.production.o
+__end_of_abs 2FCA 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
+__end_of_INA226_DEFAULT_I2C_ADDRESS 29E 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 _g_flag 68 0 BANK0 1 bssBANK0 dist/default/production\Balancer.X.production.o
-__end_of_cAlertLatchingMode 458 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_cAlertLatchingMode 260 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 25 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__stringtab 400 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__stringtab 200 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 I2C_Master_Write@data 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 AutoFox_INA226_ReadRegister@aValue_p 23 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ConfigureVoltageConversionTime@aIndexToConversionTimeTable 2B 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-__end_of_INA226_SHUNT_VOLTAGE 48E 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_SHUNT_VOLTAGE 298 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 vfpfcnvrt@fmt 26 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-_SendUART_debug 1BF2 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
+_SendUART_debug 1284 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
+___awmod@counter 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_INA226_BUS_VOLTAGE_LSB 434 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__ptext10 18C2 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
-__ptext11 1A42 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
-__ptext12 62E 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
-__ptext13 1BF2 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
-__ptext14 4E 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
-__ptext15 19A0 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
-__ptext16 1C7A 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
-__ptext17 F6A 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
-__ptext18 1F34 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
-__ptext19 1E78 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
-__ptext20 D18 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
-__ptext21 E54 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
-__ptext22 1DC4 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
-__ptext23 BC6 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
-__ptext24 18AE 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
-__ptext25 189C 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
-__ptext26 188A 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
-__ptext27 19EE 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
-__ptext28 1920 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
-__ptext29 1A96 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
+__end_of_INA226_BUS_VOLTAGE_LSB 23C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__ptext10 2EDA 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
+__ptext11 2FA4 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
+__ptext12 1438 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
+__ptext13 1704 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
+__ptext14 1190 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
+__ptext15 1200 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
+__ptext16 8F4 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
+__ptext17 2F80 0 CODE 0 text17 dist/default/production\Balancer.X.production.o
+__ptext18 1BCC 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
+__ptext19 1284 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
+__ptext20 C1A 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
+__ptext21 1086 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
+__ptext22 139C 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
+__ptext23 130C 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
+__ptext24 17CA 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
+__ptext25 1648 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
+__ptext26 EB4 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
+__ptext27 19A0 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
+__ptext28 1594 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
+__ptext29 4E 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
+__ptext30 2F0E 0 CODE 0 text30 dist/default/production\Balancer.X.production.o
+__ptext31 2EFC 0 CODE 0 text31 dist/default/production\Balancer.X.production.o
+__ptext32 2EEA 0 CODE 0 text32 dist/default/production\Balancer.X.production.o
+__ptext33 10D4 0 CODE 0 text33 dist/default/production\Balancer.X.production.o
+__ptext34 2FCA 0 CODE 0 text34 dist/default/production\Balancer.X.production.o
+__ptext35 1000 0 CODE 0 text35 dist/default/production\Balancer.X.production.o
+__ptext36 1128 0 CODE 0 text36 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Constructor@this 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_WriteRegister 1DC4 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
-__end_of_INA226_BUS_VOLTAGE 48C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-___lldiv 1F34 0 CODE 0 text18 dist/default/production\Balancer.X.production.o
-___lwdiv 1B6E 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
-___lwmod 1AFE 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
-__pmaintext A1E 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
-__end_of_cAlertCauseMask 45C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_WriteRegister 1594 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
+ADC_Read_ADC_Result@adcResult 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+___awdiv 1704 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
+___awmod 1438 0 CODE 0 text12 dist/default/production\Balancer.X.production.o
+__end_of_INA226_BUS_VOLTAGE 296 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+___lldiv 17CA 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
+___lwdiv 1200 0 CODE 0 text15 dist/default/production\Balancer.X.production.o
+___lwmod 1190 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
+__pmaintext 5B2 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
+__end_of_cAlertCauseMask 264 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 ___lmul@multiplier 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 18FE 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
+_printf 2F5E 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@s 58 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+ReadVoltageAverage@sample 3D 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 ___lwdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_cMaxSampleAvgTblIdx 43C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_INA226_POWER 48A 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_cMaxSampleAvgTblIdx 244 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_POWER 294 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_CheckI2cAddress@aI2C_Address 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_I2C_Master_Read 1A42 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
-__end_of_I2C_Master_Stop 18AE 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
-__end_of_I2C_Master_Wait 1956 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
-__end_of__stringtab 424 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_I2C_Master_Read 1128 0 CODE 0 text33 dist/default/production\Balancer.X.production.o
+__end_of_I2C_Master_Stop 2F0E 0 CODE 0 text31 dist/default/production\Balancer.X.production.o
+__end_of_I2C_Master_Wait 3000 0 CODE 0 text34 dist/default/production\Balancer.X.production.o
+_ADCON0bits 1F 0 ABS 0 - dist/default/production\Balancer.X.production.o
+_ADCON1bits 9F 0 ABS 0 - dist/default/production\Balancer.X.production.o
+__end_of__stringtab 224 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 SendUART_debug@data 73 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+?_ADC_Read_ADC_Result 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 AutoFox_INA226_setupCalibration@theCal 43 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_Init@aMaxCurrent_Amps 50 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__end_of_I2C_Master_Start 189C 0 CODE 0 text26 dist/default/production\Balancer.X.production.o
+__end_of_I2C_Master_Start 2EFC 0 CODE 0 text32 dist/default/production\Balancer.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write 18C2 0 CODE 0 text24 dist/default/production\Balancer.X.production.o
+__end_of_I2C_Master_Write 2F22 0 CODE 0 text30 dist/default/production\Balancer.X.production.o
 __pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Balancer.X.production.o
-__end_of_SendUART_debug 1C7A 0 CODE 0 text13 dist/default/production\Balancer.X.production.o
+__end_of_SendUART_debug 130C 0 CODE 0 text19 dist/default/production\Balancer.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __Lend_init 18 0 CODE 0 end_init -
-__end_of_AutoFox_INA226_GetBusVoltage_V 1D16 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
-vfpfcnvrt@convarg 2E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_GetBusVoltage_V 1438 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
+vfpfcnvrt@convarg 2F 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-printf@ap 79 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_ReadRegister D18 0 CODE 0 text23 dist/default/production\Balancer.X.production.o
+printf@ap 40 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_ReadRegister 1A0 0 CODE 0 text29 dist/default/production\Balancer.X.production.o
 end_of_initialization 46 0 CODE 0 cinit dist/default/production\Balancer.X.production.o
-__end_of_Global_Init 1A96 0 CODE 0 text11 dist/default/production\Balancer.X.production.o
+__end_of_Global_Init 1F4 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 fputc@c 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __Lstrings 0 0 ABS 0 strings -
+___awdiv@quotient 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+?___awdiv 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+?___awmod 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ___lwdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ?___lldiv 25 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 ?___lwdiv 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ?___lwmod 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-vfprintf@fmt 34 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+vfprintf@fmt 35 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
+ReadVoltageAverage@R1 44 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+ReadVoltageAverage@R2 39 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_WriteRegister@aValue 77 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 main@ina226 C6 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
+___awmod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 AutoFox_INA226_setupCalibration@aMaxCurrent_Amps 37 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 SendErrorStatus@errorMsg 78 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_ConfigureNumSampleAveraging E54 0 CODE 0 text21 dist/default/production\Balancer.X.production.o
-__end_of_INA226_I2C_TIMEOUT 47C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_ConfigureNumSampleAveraging 19A0 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
+__end_of_INA226_I2C_TIMEOUT 284 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_WriteRegister@buffer 24 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Balancer.X.production.o
 vfpfcnvrt@ap 27 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-vfpfcnvrt@cp 2C 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+vfpfcnvrt@cp 2D 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 vfpfcnvrt@fp 25 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-__ptext1 18FE 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
-__ptext2 1956 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
-__ptext3 83E 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
-__ptext4 1D16 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
-__ptext5 186A 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
-__ptext6 1AFE 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
-__ptext7 1B6E 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
-__ptext8 2E8 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
-__ptext9 18DE 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
-__end_of_cBusVoltConvTimeIdxShift 444 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-vfprintf@ap 36 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-vfprintf@fp 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-vfprintf@cfmt 37 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_setupCalibration 4E 0 CODE 0 text14 dist/default/production\Balancer.X.production.o
-_vfprintf 1956 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
+__ptext1 1896 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
+__ptext2 2F3E 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
+__ptext3 2F22 0 CODE 0 text3 dist/default/production\Balancer.X.production.o
+__ptext4 1A0 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
+__ptext5 1AB6 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
+__ptext6 2F5E 0 CODE 0 text6 dist/default/production\Balancer.X.production.o
+__ptext7 103C 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
+__ptext8 1DDC 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
+__ptext9 14E6 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
+__end_of_cBusVoltConvTimeIdxShift 24C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+vfprintf@ap 37 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+vfprintf@fp 34 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+?_ReadVoltageAverage 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+vfprintf@cfmt 38 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_setupCalibration C1A 0 CODE 0 text20 dist/default/production\Balancer.X.production.o
+main@voltage_24V_diff C4 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
+_vfprintf 103C 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__pstringtext 400 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-_I2C_Master_Read 19EE 0 CODE 0 text27 dist/default/production\Balancer.X.production.o
-_I2C_Master_Stop 189C 0 CODE 0 text25 dist/default/production\Balancer.X.production.o
-_I2C_Master_Wait 1920 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
+__pstringtext 200 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+_I2C_Master_Read 10D4 0 CODE 0 text33 dist/default/production\Balancer.X.production.o
+_I2C_Master_Stop 2EFC 0 CODE 0 text31 dist/default/production\Balancer.X.production.o
+_I2C_Master_Wait 2FCA 0 CODE 0 text34 dist/default/production\Balancer.X.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of_SendErrorStatus 3F2 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
-__end_of_vfprintf 19A0 0 CODE 0 text2 dist/default/production\Balancer.X.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-___heap_lo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+__end_of_SendErrorStatus 19A0 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
+__end_of_vfprintf 1086 0 CODE 0 text7 dist/default/production\Balancer.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+___heap_lo 0 0 ABS 0 - C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 __end_of__initialization 46 0 CODE 0 cinit dist/default/production\Balancer.X.production.o
-__end_of_INA226_CURRENT 488 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+___awmod@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
+__end_of_INA226_CURRENT 292 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
+DisplayVoltage@voltage 4E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 ___lmul@product 21 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-main@bus_voltage C4 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
+main@bus_voltage C2 0 BANK1 1 cstackBANK1 dist/default/production\Balancer.X.production.o
 ___lmul@multiplicand 76 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ConfigureNumSampleAveraging@s 79 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 ___lldiv@quotient 2E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
@@ -956,51 +1171,53 @@ AutoFox_INA226_ConfigureNumSampleAveraging@aIndexToSampleAverageTable 2B 0 BANK0
 _TXSTAbits 98 0 ABS 0 - dist/default/production\Balancer.X.production.o
 AutoFox_INA226_GetBusVoltage_V@theRegisterValue 35 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_INA226_POWER_LSB_FACTOR 42C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_POWER_LSB_FACTOR 234 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-vfpfcnvrt@c 32 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+vfpfcnvrt@c 33 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 SendUART_debug@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
 putch@txData 75 0 COMMON 1 cstackCOMMON dist/default/production\Balancer.X.production.o
-__end_of_main BC6 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
-printf@fmt 39 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_main 8F4 0 CODE 0 maintext dist/default/production\Balancer.X.production.o
+printf@fmt 3A 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 _ACKDT 48D 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _ACKEN 48C 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_fputc 1DC4 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
+__end_of_fputc 1594 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Balancer.X.production.o
-__end_of_putch 187A 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
+__end_of_putch 2EEA 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Balancer.X.production.o
 _flags 6A 0 BANK0 1 bssBANK0 dist/default/production\Balancer.X.production.o
-_fputc 1D16 0 CODE 0 text4 dist/default/production\Balancer.X.production.o
-__end_of_AutoFox_INA226_WriteRegister 1E78 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
-_putch 186A 0 CODE 0 text5 dist/default/production\Balancer.X.production.o
+_fputc 14E6 0 CODE 0 text9 dist/default/production\Balancer.X.production.o
+__end_of_AutoFox_INA226_WriteRegister 1648 0 CODE 0 text28 dist/default/production\Balancer.X.production.o
+_putch 2EDA 0 CODE 0 text10 dist/default/production\Balancer.X.production.o
 _width 64 0 BANK0 1 bssBANK0 dist/default/production\Balancer.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\Balancer.X.production.o
 _g_timer_led_blink 7A 0 COMMON 1 bssCOMMON dist/default/production\Balancer.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Balancer.X.production.o
-_SendErrorStatus 2E8 0 CODE 0 text8 dist/default/production\Balancer.X.production.o
-_AutoFox_INA226_GetBusVoltage_V 1C7A 0 CODE 0 text16 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_850 59 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_851 5A 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_852 5B 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_853 5C 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_854 5D 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-AutoFox_INA226_Init@s_855 5E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+_SendErrorStatus 1896 0 CODE 0 text1 dist/default/production\Balancer.X.production.o
+_AutoFox_INA226_GetBusVoltage_V 139C 0 CODE 0 text22 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_865 59 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_866 5A 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_867 5B 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_868 5C 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_869 5D 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+AutoFox_INA226_Init@s_870 5E 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\Balancer.X.production.o
 __pbssBANK0 64 0 BANK0 1 bssBANK0 dist/default/production\Balancer.X.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\Balancer.X.production.o
+ReadVoltageAverage@i 43 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 AutoFox_INA226_setupCalibration@aShuntResistor_mOhms 35 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
 __Hstringtext 0 0 ABS 0 stringtext -
-__end_of_INA226_DIE_ID_K 470 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_cAlertPinModeMask 460 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_INA226_CONFIG_DEFAULT 46C 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
-__end_of_INA226_MANUFACTURER_ID 480 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+ReadVoltageAverage@sum 3F 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
+__end_of_INA226_DIE_ID_K 278 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_cAlertPinModeMask 268 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_CONFIG_DEFAULT 274 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
+__end_of_INA226_MANUFACTURER_ID 28A 0 STRCODE 0 stringtext dist/default/production\Balancer.X.production.o
 AutoFox_INA226_ReadRegister@this 20 0 BANK0 1 cstackBANK0 dist/default/production\Balancer.X.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driver_tmp_17.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAs5vg.\driver_tmp_17.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1026,35 +1243,44 @@ ___int_stack_lo 0 0 STACK 2 stack C:\Users\User\AppData\Local\Temp\xcAsaco.\driv
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 C7F 18FE 11 2
-text2 0 CAB 1956 25 2
-text4 0 E8B 1D16 57 2
-text5 0 C35 186A 8 2
-text6 0 D7F 1AFE 38 2
-text7 0 DB7 1B6E 42 2
-text9 0 C6F 18DE 10 2
-text10 0 C61 18C2 E 2
-text11 0 D21 1A42 2A 2
-text12 0 317 62E 4E6 2
-text13 0 DF9 1BF2 44 2
-text15 0 CD0 19A0 27 2
-text16 0 E3D 1C7A 4E 2
-text18 0 F9A 1F34 66 2
-text19 0 F3C 1E78 5E 2
-text22 0 EE2 1DC4 5A 2
-text24 0 C57 18AE A 2
-text25 0 C4E 189C 9 2
-text26 0 C45 188A 9 2
-text27 0 CF7 19EE 2A 2
-text28 0 C90 1920 1B 2
-text29 0 D4B 1A96 34 2
+text1 0 C4B 1896 85 2
+text2 0 179F 2F3E 10 2
+text3 0 1791 2F22 E 2
+text5 0 D5B 1AB6 8B 2
+text6 0 17AF 2F5E 11 2
+text7 0 81E 103C 25 2
+text8 0 EEE 1DDC 112 2
+text9 0 A73 14E6 57 2
+text10 0 176D 2EDA 8 2
+text11 0 17D2 2FA4 13 2
+text12 0 A1C 1438 57 2
+text13 0 B82 1704 63 2
+text14 0 8C8 1190 38 2
+text15 0 900 1200 42 2
+text17 0 17C0 2F80 12 2
+text18 0 DE6 1BCC 108 2
+text19 0 942 1284 44 2
+text21 0 843 1086 27 2
+text22 0 9CE 139C 4E 2
+text23 0 986 130C 48 2
+text24 0 BE5 17CA 66 2
+text25 0 B24 1648 5E 2
+text27 0 CD0 19A0 8B 2
+text28 0 ACA 1594 5A 2
+text30 0 1787 2F0E A 2
+text31 0 177E 2EFC 9 2
+text32 0 1775 2EEA 9 2
+text33 0 86A 10D4 2A 2
+text34 0 17E5 2FCA 1B 2
+text35 0 800 1000 1E 2
+text36 0 894 1128 34 2
+maintext 0 2D9 5B2 527 2
 cstackCOMMON 1 70 70 C 1
 cstackBANK0 1 20 20 4B 1
-intentry 0 4 8 1F5 2
+intentry 0 4 8 F6 2
 reset_vec 0 0 0 3 2
 bssBANK1 1 A0 A0 34 1
-stringtext 0 200 400 117 2
-clrtext 0 C3D 187A 8 2
+stringtext 0 100 200 1D9 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

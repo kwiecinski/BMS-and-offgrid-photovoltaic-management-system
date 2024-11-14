@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "adc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "adc.c" 2
+
 
 
 
@@ -2555,7 +2556,25 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 8 "main.c" 2
+# 9 "adc.c" 2
+
+# 1 "./main.h" 1
+# 13 "./main.h"
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+# 10 "adc.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
@@ -2709,252 +2728,55 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 9 "main.c" 2
-
-# 1 "./main.h" 1
-# 13 "./main.h"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = ON
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
+# 11 "adc.c" 2
 
 
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-# 10 "main.c" 2
-
-# 1 "./inits.h" 1
-# 11 "./inits.h"
-void Global_Init(void);
-# 11 "main.c" 2
-
-# 1 "./interrupts.h" 1
-# 18 "./interrupts.h"
-void Interrupt_Init(void);
-# 12 "main.c" 2
-
-# 1 "./hw_i2c.h" 1
-# 11 "./hw_i2c.h"
-void I2C_Init(void);
-void I2C_Master_Wait(void);
-void I2C_Master_Start(void);
-void I2C_Master_Stop(void);
-void I2C_Master_Write(unsigned data);
-unsigned char I2C_Master_Read(unsigned char ack);
-# 13 "main.c" 2
-
-# 1 "./hw_uart.h" 1
-# 11 "./hw_uart.h"
-void UART_Init(void);
-void SendUART(char data);
-# 14 "main.c" 2
-
-# 1 "./sw_uart.h" 1
-# 12 "./sw_uart.h"
-void SendUART_debug(unsigned char data);
-# 15 "main.c" 2
-
-# 1 "./ina226.h" 1
-# 42 "./ina226.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\inttypes.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\inttypes.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 14 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\inttypes.h" 2 3
-
-typedef struct { intmax_t quot, rem; } imaxdiv_t;
-
-intmax_t imaxabs(intmax_t);
-imaxdiv_t imaxdiv(intmax_t, intmax_t);
-
-intmax_t strtoimax(const char *restrict, char **restrict, int);
-uintmax_t strtoumax(const char *restrict, char **restrict, int);
-# 42 "./ina226.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdbool.h" 1 3
-# 43 "./ina226.h" 2
-
-
-
-static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
-
-
-struct AutoFox_INA226;
-struct INA226_Registers;
-struct INA226_HardCodedChipConst;
-struct INA226_DefaultSettings;
-
-static const int INA226_I2C_TIMEOUT = 1000;
-
-
-typedef enum {OK=0, FAIL=-1,
-    INA226_TI_ID_MISMATCH = -2,
-    INA226_DIE_ID_MISMATCH =-3,
-    CONFIG_ERROR = -4,
-    I2C_TRANSMISSION_ERROR = -5,
-    BAD_PARAMETER = -6,
-    NOT_INITIALIZED = -7,
-    INVALID_I2C_ADDRESS =-8} status;
-
-typedef struct AutoFox_INA226{
-    _Bool mInitialized;
-    uint8_t mI2C_Address;
-    uint16_t mConfigRegister;
-    uint16_t mCalibrationValue;
-    int32_t mCurrentMicroAmpsPerBit;
-    int32_t mPowerMicroWattPerBit;
-} AutoFox_INA226;
-
-
-
-enum eOperatingMode {
-                    ShuntVoltageTriggered = 1,
-                    BusVoltageTriggered = 2,
-                    ShuntAndBusTriggered = 3,
-                    Shutdown = 4,
-                    ShuntVoltageContinuous = 5,
-                    BusVoltageContinuous = 6,
-                    ShuntAndBusVoltageContinuous = 7};
-
-enum eAlertTrigger {ClearTriggers = 0x0000,
-                    ShuntVoltageOverLimit = 0x8000,
-                    ShuntVoltageUnderLimit = 0x4000,
-                    BusVoltageOverLimit = 0x2000,
-                    BusVoltageUnderLimit = 0x1000,
-                    PowerOverLimit = 0x0800,
-                    ConversionReady = 0x0400};
-
-enum eAlertTriggerCause{
-                    Unknown=0,
-                    AlertFunctionFlag = 0x10,
-                    ConversionReadyFlag = 0x08,
-                    MathOverflowFlag = 0x04,
-                    AlertPolarityBit = 0x02};
-
-
-
-void AutoFox_INA226_Constructor(AutoFox_INA226*);
-status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
-
-
-
-status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
-
-int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226*);
-uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
-int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226*);
-int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226*);
-
-status AutoFox_INA226_SetOperatingMode(AutoFox_INA226*,enum eOperatingMode aOpMode);
-status AutoFox_INA226_Hibernate(AutoFox_INA226*);
-status AutoFox_INA226_Wakeup(AutoFox_INA226*);
-
-
-status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226*,enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching);
-
-status AutoFox_INA226_ResetAlertPin(AutoFox_INA226*,enum eAlertTriggerCause* aAlertTriggerCause_p );
-
-
-
-status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226*,int aIndexToConversionTimeTable);
-status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226*,int aIndexToSampleAverageTable);
-status AutoFox_INA226_Debug_GetConfigRegister(AutoFox_INA226*,uint16_t* aConfigReg_p);
-
-
-
-status AutoFox_INA226_WriteRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t aValue);
-status AutoFox_INA226_ReadRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t* aValue_p);
-status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
-void SendErrorStatus(status err);
-# 16 "main.c" 2
-
-# 1 "./adc.h" 1
-
-
-
-
-
-
-void ADC_Init(void);
-unsigned int ADC_Read_ADC_Result(void);
-unsigned int DisplayVoltage(void) ;
-# 17 "main.c" 2
-
-
-
-
-void main(void)
+void ADC_Init(void)
 {
-    AutoFox_INA226 ina226;
 
-    AutoFox_INA226_Constructor(&ina226);
-    Global_Init();
-    Interrupt_Init();
-    I2C_Init();
-    PORTBbits.RB7=0;
-    PORTBbits.RB6=0;
-    PORTCbits.RC0=1;
-    PORTAbits.RA6=1;
-
-    SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
-    SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111));
-    SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
-
-    uint16_t bus_voltage, voltage_24V_diff, voltage_12V;
-    ADC_Init();
-
-    while(1)
-    {
-
-        bus_voltage=AutoFox_INA226_GetBusVoltage_V(&ina226);
-
-        if (bus_voltage%100 < 10)
-        {
-
-        } else
-        {
-
-        }
+    ADCON0bits.ADCS = 0b10;
 
 
-        voltage_24V_diff=bus_voltage - DisplayVoltage();
+    ADCON1bits.VCFG0 = 1;
+    ADCON1bits.VCFG1 = 0;
 
 
-        if (voltage_24V_diff%100 < 10)
-        {
-            printf("24V diff Batt Voltage: %d.0%dV \r\n", voltage_24V_diff / 100, voltage_24V_diff % 100);
-        } else
-        {
-            printf("24V diff voltage  Voltage: %d.%dV \r\n", voltage_24V_diff / 100, voltage_24V_diff % 100);
+    ADCON0bits.CHS = 0b0000;
 
-        }
+
+    ADCON1bits.ADFM = 1;
+
+
+    ADCON0bits.ADON = 1;
+}
+
+unsigned int ADC_ReadVoltage(void)
+{
+    unsigned int adcResult;
+    unsigned long scaledVoltage;
+
+
+    ADCON0bits.GO_nDONE = 1;
+        _delay((unsigned long)((20)*(8000000/4000000.0)));
+
+    while(ADCON0bits.GO_nDONE);
+
+
+    adcResult = ((ADRESH << 8) + ADRESL);
 
 
 
 
-    if (voltage_12V > (voltage_24V_diff + 100)) {
-        PORTBbits.RB4=1;
-        printf("balance on 12v \n\r");
-    } else {
-        PORTBbits.RB4=0;
-        printf("balance off 12v \n\r");
-    }
 
+    scaledVoltage = (adcResult * 51) / 10;
 
-    if (voltage_24V_diff > (voltage_12V + 100)) {
-        PORTBbits.RB5=1;
-         printf("balance on 24v \n\r");
-    } else {
-        PORTBbits.RB5=0;
-         printf("balance off 24v \n\r");
-    }
+    return (unsigned int)adcResult;
+}
 
+void DisplayVoltage(void)
+{
+    unsigned int voltage = ADC_ReadVoltage();
 
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
-    }
+    printf("adc result: %u \r\n", voltage);
+# 69 "adc.c"
 }

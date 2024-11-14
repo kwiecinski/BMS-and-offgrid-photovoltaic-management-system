@@ -889,7 +889,44 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
         prec = -1;
 # 1291 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
   cp = *fmt;
-# 1439 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
+# 1361 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
+  if (*cp == 'd' || *cp == 'i') {
+# 1404 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
+   convarg.sint = (vfpf_sint_t)(int)(*(int *)__va_arg(*(int **)ap, (int)0));
+
+   *fmt = cp+1;
+
+   c = sizeof(dbuf);
+   done = convarg.sint < 0;
+   do {
+    dbuf[--c] = abs(convarg.sint % 10) + '0';
+    convarg.sint /= 10;
+
+
+
+   } while (convarg.sint != 0 && c != 0);
+   if (c != 0 && done) {
+    dbuf[--c] = '-';
+
+
+
+   }
+   while (c != sizeof(dbuf)) {
+    fputc(dbuf[c++], fp);
+   }
+
+
+
+   return;
+
+
+
+
+  }
+
+
+
+
   if (0
 # 1450 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
     || *cp == 'u'

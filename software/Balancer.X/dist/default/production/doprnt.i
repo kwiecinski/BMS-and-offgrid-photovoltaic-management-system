@@ -889,37 +889,39 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
         prec = -1;
 # 1291 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
   cp = *fmt;
-# 1439 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
-  if (0
-# 1450 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
-    || *cp == 'u'
-
-    ) {
-# 1495 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
-   convarg.uint = (vfpf_uint_t)(unsigned int)(*(unsigned int *)__va_arg(*(unsigned int **)ap, (unsigned int)0));
+# 1361 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
+  if (*cp == 'd' || *cp == 'i') {
+# 1404 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
+   convarg.sint = (vfpf_sint_t)(int)(*(int *)__va_arg(*(int **)ap, (int)0));
 
    *fmt = cp+1;
-   switch (*cp) {
-# 1523 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
-    case 'u':
 
-     c = sizeof(dbuf);
-     do {
-      dbuf[--c] = (convarg.uint % 10) + '0';
-      convarg.uint /= 10;
+   c = sizeof(dbuf);
+   done = convarg.sint < 0;
+   do {
+    dbuf[--c] = abs(convarg.sint % 10) + '0';
+    convarg.sint /= 10;
 
 
 
-     } while (convarg.uint != 0 && c != 0);
-     while (c != sizeof(dbuf)) {
-      fputc(dbuf[c++], fp);
-     }
+   } while (convarg.sint != 0 && c != 0);
+   if (c != 0 && done) {
+    dbuf[--c] = '-';
 
 
 
-     return;
-# 1589 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
    }
+   while (c != sizeof(dbuf)) {
+    fputc(dbuf[c++], fp);
+   }
+
+
+
+   return;
+
+
+
+
   }
 # 1806 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\common\\doprnt.c"
         ++*fmt;
