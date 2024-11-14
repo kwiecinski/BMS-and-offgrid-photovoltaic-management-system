@@ -2573,7 +2573,7 @@ void Global_Init(void)
     TRISC0=0;
     TRISC1=0;
     TRISC2=0;
-    TRISC3=0;
+    TRISC3=1;
     TRISC4=1;
     TRISC5=0;
     TRISC6=0;

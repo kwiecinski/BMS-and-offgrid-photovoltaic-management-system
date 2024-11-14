@@ -1,24 +1,27 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"64 ./ina226.h
-[; ;./ina226.h: 64: typedef struct AutoFox_INA226{
+"66 ./ina226.h
+[; ;./ina226.h: 66: typedef struct AutoFox_INA226{
 [s S143 `a 1 `uc 1 `us 1 `us 1 `l 1 `l 1 ]
 [n S143 AutoFox_INA226 mInitialized mI2C_Address mConfigRegister mCalibrationValue mCurrentMicroAmpsPerBit mPowerMicroWattPerBit ]
 "108 ina226.c
 [; ;ina226.c: 108: status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
-[c E1802 0 -1 -2 -3 -4 -5 -6 -7 -8 .. ]
-[n E1802 . OK FAIL INA226_TI_ID_MISMATCH INA226_DIE_ID_MISMATCH CONFIG_ERROR I2C_TRANSMISSION_ERROR BAD_PARAMETER NOT_INITIALIZED INVALID_I2C_ADDRESS  ]
-"102 ./ina226.h
-[; ;./ina226.h: 102: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
-[v _AutoFox_INA226_CheckI2cAddress `(E1802 ~T0 @X0 0 ef1`uc ]
+[c E1803 0 -1 -2 -3 -4 -5 -6 -7 -8 .. ]
+[n E1803 . OK FAIL INA226_TI_ID_MISMATCH INA226_DIE_ID_MISMATCH CONFIG_ERROR I2C_TRANSMISSION_ERROR BAD_PARAMETER NOT_INITIALIZED INVALID_I2C_ADDRESS  ]
+"104 ./ina226.h
+[; ;./ina226.h: 104: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
+[v _AutoFox_INA226_CheckI2cAddress `(E1803 ~T0 @X0 0 ef1`uc ]
 "12 ./sw_uart.h
 [; ;./sw_uart.h: 12: void SendUART_debug(unsigned char data);
 [v _SendUART_debug `(v ~T0 @X0 0 ef1`uc ]
-"131 ./ina226.h
-[; ;./ina226.h: 131: status AutoFox_INA226_ReadRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t* aValue_p);
-[v _AutoFox_INA226_ReadRegister `(E1802 ~T0 @X0 0 ef3`*S143`uc`*us ]
-"130
-[; ;./ina226.h: 130: status AutoFox_INA226_WriteRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t aValue);
-[v _AutoFox_INA226_WriteRegister `(E1802 ~T0 @X0 0 ef3`*S143`uc`us ]
+"133 ./ina226.h
+[; ;./ina226.h: 133: status AutoFox_INA226_ReadRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t* aValue_p);
+[v _AutoFox_INA226_ReadRegister `(E1803 ~T0 @X0 0 ef3`*S143`uc`*us ]
+"132
+[; ;./ina226.h: 132: status AutoFox_INA226_WriteRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t aValue);
+[v _AutoFox_INA226_WriteRegister `(E1803 ~T0 @X0 0 ef3`*S143`uc`us ]
+"134
+[; ;./ina226.h: 134: status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
+[v _AutoFox_INA226_setupCalibration `(E1803 ~T0 @X0 0 ef3`*S143`us`ul ]
 "13 ./hw_i2c.h
 [; ;./hw_i2c.h: 13: void I2C_Master_Start(void);
 [v _I2C_Master_Start `(v ~T0 @X0 0 ef ]
@@ -34,18 +37,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;./hw_i2c.h: 16: unsigned char I2C_Master_Read(unsigned char ack);
 [v _I2C_Master_Read `(uc ~T0 @X0 0 ef1`uc ]
-"312 ina226.c
-[; ;ina226.c: 312:  if(theLastOperatingMode == Shutdown ||
-[c E1821 1 2 3 4 5 6 7 .. ]
-[n E1821 eOperatingMode ShuntVoltageTriggered BusVoltageTriggered ShuntAndBusTriggered Shutdown ShuntVoltageContinuous BusVoltageContinuous ShuntAndBusVoltageContinuous  ]
-"333
-[; ;ina226.c: 333: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
-[c E1829 0 32768 16384 8192 4096 2048 1024 .. ]
-[n E1829 eAlertTrigger ClearTriggers ShuntVoltageOverLimit ShuntVoltageUnderLimit BusVoltageOverLimit BusVoltageUnderLimit PowerOverLimit ConversionReady  ]
-"396
-[; ;ina226.c: 396: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
-[c E1837 0 16 8 4 2 .. ]
-[n E1837 eAlertTriggerCause Unknown AlertFunctionFlag ConversionReadyFlag MathOverflowFlag AlertPolarityBit  ]
+"294 ina226.c
+[; ;ina226.c: 294:  if(theLastOperatingMode == Shutdown ||
+[c E1822 1 2 3 4 5 6 7 .. ]
+[n E1822 eOperatingMode ShuntVoltageTriggered BusVoltageTriggered ShuntAndBusTriggered Shutdown ShuntVoltageContinuous BusVoltageContinuous ShuntAndBusVoltageContinuous  ]
+"315
+[; ;ina226.c: 315: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
+[c E1830 0 32768 16384 8192 4096 2048 1024 .. ]
+[n E1830 eAlertTrigger ClearTriggers ShuntVoltageOverLimit ShuntVoltageUnderLimit BusVoltageOverLimit BusVoltageUnderLimit PowerOverLimit ConversionReady  ]
+"380
+[; ;ina226.c: 380: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
+[c E1838 0 16 8 4 2 .. ]
+[n E1838 eAlertTriggerCause Unknown AlertFunctionFlag ConversionReadyFlag MathOverflowFlag AlertPolarityBit  ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -274,8 +277,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3370
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"52 ./ina226.h
-[; ;./ina226.h: 52: static const int INA226_I2C_TIMEOUT = 1000;
+"46 ./ina226.h
+[; ;./ina226.h: 46: static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
+[v _INA226_DEFAULT_I2C_ADDRESS `Cuc ~T0 @X0 1 s ]
+[i _INA226_DEFAULT_I2C_ADDRESS
+-> -> 64 `i `uc
+]
+"54
+[; ;./ina226.h: 54: static const int INA226_I2C_TIMEOUT = 1000;
 [v _INA226_I2C_TIMEOUT `Ci ~T0 @X0 1 s ]
 [i _INA226_I2C_TIMEOUT
 -> 1000 `i
@@ -341,10 +350,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 255 `i `uc
 ]
 "70
-[; ;ina226.c: 70: static const int32_t INA226_BUS_VOLTAGE_LSB = 1250;
+[; ;ina226.c: 70: static const int32_t INA226_BUS_VOLTAGE_LSB = 1231;
 [v _INA226_BUS_VOLTAGE_LSB `Cl ~T0 @X0 1 s ]
 [i _INA226_BUS_VOLTAGE_LSB
--> -> 1250 `i `l
+-> -> 1231 `i `l
 ]
 "72
 [; ;ina226.c: 72: static const int32_t INA226_POWER_LSB_FACTOR = 25;
@@ -363,12 +372,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _INA226_DIE_ID_K `Cus ~T0 @X0 1 s ]
 [i _INA226_DIE_ID_K
 -> -> 8800 `i `us
-]
-"79
-[; ;ina226.c: 79: static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
-[v _INA226_DEFAULT_I2C_ADDRESS `Cuc ~T0 @X0 1 s ]
-[i _INA226_DEFAULT_I2C_ADDRESS
--> -> 64 `i `uc
 ]
 "80
 [; ;ina226.c: 80: static const uint16_t INA226_CONFIG_DEFAULT = 0x4527;
@@ -491,7 +494,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "108
 [; ;ina226.c: 108: status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
-[v _AutoFox_INA226_Init `(E1802 ~T0 @X0 1 ef4`*S143`uc`us`ul ]
+[v _AutoFox_INA226_Init `(E1803 ~T0 @X0 1 ef4`*S143`uc`us`ul ]
 "109
 [; ;ina226.c: 109: {
 {
@@ -512,9 +515,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ina226.c: 113:     do { status s = (AutoFox_INA226_CheckI2cAddress(aI2C_Address)); if (s != OK) { return s; } } while (0);
 [e :U 148 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
+[v _s `E1803 ~T0 @X0 1 a ]
 [e = _s ( _AutoFox_INA226_CheckI2cAddress (1 _aI2C_Address ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 149  ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 149  ]
 {
 [e ) _s ]
 [e $UE 145  ]
@@ -532,9 +535,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ina226.c: 119:     do { status s = (AutoFox_INA226_ReadRegister(this, INA226_MANUFACTURER_ID, &theINA226_ID)); if (s != OK) { return s; } } while (0);
 [e :U 152 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
+[v _s `E1803 ~T0 @X0 1 a ]
 [e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_MANUFACTURER_ID &U _theINA226_ID ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 153  ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 153  ]
 {
 [e ) _s ]
 [e $UE 145  ]
@@ -542,993 +545,1109 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 153 ]
 }
 [e :U 151 ]
-"156
-[; ;ina226.c: 156: }
+"120
+[; ;ina226.c: 120:     if(theINA226_ID != INA226_MANUFACTURER_ID_K){
+[e $ ! != -> _theINA226_ID `ui -> _INA226_MANUFACTURER_ID_K `ui 154  ]
+{
+"121
+[; ;ina226.c: 121:         return INA226_TI_ID_MISMATCH;
+[e ) . `E1803 2 ]
+[e $UE 145  ]
+"122
+[; ;ina226.c: 122:     }
+}
+[e :U 154 ]
+"123
+[; ;ina226.c: 123:     do { status s = (AutoFox_INA226_ReadRegister(this, INA226_DIE_ID, &theINA226_ID)); if (s != OK) { return s; } } while (0);
+[e :U 157 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_DIE_ID &U _theINA226_ID ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 158  ]
+{
+[e ) _s ]
+[e $UE 145  ]
+}
+[e :U 158 ]
+}
+[e :U 156 ]
+"124
+[; ;ina226.c: 124:     if(theINA226_ID != INA226_DIE_ID_K){
+[e $ ! != -> _theINA226_ID `ui -> _INA226_DIE_ID_K `ui 159  ]
+{
+"125
+[; ;ina226.c: 125:         return INA226_DIE_ID_MISMATCH;
+[e ) . `E1803 3 ]
+[e $UE 145  ]
+"126
+[; ;ina226.c: 126:     }
+}
+[e :U 159 ]
+"127
+[; ;ina226.c: 127:     this->mI2C_Address = aI2C_Address;
+[e = . *U _this 1 _aI2C_Address ]
+"130
+[; ;ina226.c: 130:     do { status s = (AutoFox_INA226_WriteRegister(this, INA226_CONFIG, cResetCommand)); if (s != OK) { return s; } } while (0);
+[e :U 162 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG _cResetCommand ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 163  ]
+{
+[e ) _s ]
+[e $UE 145  ]
+}
+[e :U 163 ]
+}
+[e :U 161 ]
+"132
+[; ;ina226.c: 132:     do { status s = (AutoFox_INA226_WriteRegister(this, INA226_CONFIG, INA226_CONFIG_DEFAULT)); if (s != OK) { return s; } } while (0);
+[e :U 166 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG _INA226_CONFIG_DEFAULT ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 167  ]
+{
+[e ) _s ]
+[e $UE 145  ]
+}
+[e :U 167 ]
+}
+[e :U 165 ]
+"134
+[; ;ina226.c: 134:     do { status s = (AutoFox_INA226_ReadRegister(this, INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+[e :U 170 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 171  ]
+{
+[e ) _s ]
+[e $UE 145  ]
+}
+[e :U 171 ]
+}
+[e :U 169 ]
+"135
+[; ;ina226.c: 135:     if(this->mConfigRegister != INA226_CONFIG_DEFAULT){
+[e $ ! != -> . *U _this 2 `ui -> _INA226_CONFIG_DEFAULT `ui 172  ]
+{
+"136
+[; ;ina226.c: 136:         return CONFIG_ERROR;
+[e ) . `E1803 4 ]
+[e $UE 145  ]
+"137
+[; ;ina226.c: 137:     }
+}
+[e :U 172 ]
+"139
+[; ;ina226.c: 139:     do { status s = (AutoFox_INA226_setupCalibration(this, aShuntResistor_mOhms, aMaxCurrent_Amps)); if (s != OK) { return s; } } while (0);
+[e :U 175 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_setupCalibration (3 , , _this _aShuntResistor_mOhms _aMaxCurrent_Amps ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 176  ]
+{
+[e ) _s ]
+[e $UE 145  ]
+}
+[e :U 176 ]
+}
+[e :U 174 ]
+"141
+[; ;ina226.c: 141:     this->mInitialized = 1;
+[e = . *U _this 0 -> -> 1 `i `a ]
+"142
+[; ;ina226.c: 142:     return OK;
+[e ) . `E1803 0 ]
+[e $UE 145  ]
+"143
+[; ;ina226.c: 143: }
 [e :UE 145 ]
 }
-"160
-[; ;ina226.c: 160: status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
-[v _AutoFox_INA226_setupCalibration `(E1802 ~T0 @X0 1 ef3`*S143`us`ul ]
-"161
-[; ;ina226.c: 161: {
+"147
+[; ;ina226.c: 147: status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
+[v _AutoFox_INA226_setupCalibration `(E1803 ~T0 @X0 1 ef3`*S143`us`ul ]
+"148
+[; ;ina226.c: 148: {
 {
 [e :U _AutoFox_INA226_setupCalibration ]
-"160
-[; ;ina226.c: 160: status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
+"147
+[; ;ina226.c: 147: status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps)
 [v _this `*S143 ~T0 @X0 1 r1 ]
 [v _aShuntResistor_mOhms `us ~T0 @X0 1 r2 ]
 [v _aMaxCurrent_Amps `ul ~T0 @X0 1 r3 ]
-"161
-[; ;ina226.c: 161: {
+"148
+[; ;ina226.c: 148: {
 [f ]
-"165
-[; ;ina226.c: 165:     uint32_t theCurrentLSB_uA = (aMaxCurrent_Amps * 1000000 + 32766) / 32767;
+"152
+[; ;ina226.c: 152:     uint32_t theCurrentLSB_uA = (aMaxCurrent_Amps * 1000000 + 32766) / 32767;
 [v _theCurrentLSB_uA `ul ~T0 @X0 1 a ]
 [e = _theCurrentLSB_uA / + * _aMaxCurrent_Amps -> -> 1000000 `l `ul -> -> -> 32766 `i `l `ul -> -> -> 32767 `i `l `ul ]
-"170
-[; ;ina226.c: 170:     uint32_t theCal = (5120000 + (aShuntResistor_mOhms * theCurrentLSB_uA) / 2) /
+"157
+[; ;ina226.c: 157:     uint32_t theCal = (5120000 + (aShuntResistor_mOhms * theCurrentLSB_uA) / 2) /
 [v _theCal `ul ~T0 @X0 1 a ]
 [e = _theCal / + -> -> 5120000 `l `ul / * -> _aShuntResistor_mOhms `ul _theCurrentLSB_uA -> -> -> 2 `i `l `ul * -> _aShuntResistor_mOhms `ul _theCurrentLSB_uA ]
-"174
-[; ;ina226.c: 174:     this->mCurrentMicroAmpsPerBit = (int32_t)theCurrentLSB_uA;
+"161
+[; ;ina226.c: 161:     this->mCurrentMicroAmpsPerBit = (int32_t)theCurrentLSB_uA;
 [e = . *U _this 4 -> _theCurrentLSB_uA `l ]
-"175
-[; ;ina226.c: 175:     this->mCalibrationValue = (uint16_t)theCal;
+"162
+[; ;ina226.c: 162:     this->mCalibrationValue = (uint16_t)theCal;
 [e = . *U _this 3 -> _theCal `us ]
-"176
-[; ;ina226.c: 176:     this->mPowerMicroWattPerBit = this->mCurrentMicroAmpsPerBit * INA226_POWER_LSB_FACTOR;
+"163
+[; ;ina226.c: 163:     this->mPowerMicroWattPerBit = this->mCurrentMicroAmpsPerBit * INA226_POWER_LSB_FACTOR;
 [e = . *U _this 5 * . *U _this 4 _INA226_POWER_LSB_FACTOR ]
-"179
-[; ;ina226.c: 179:     return AutoFox_INA226_WriteRegister(this, INA226_CALIBRATION, this->mCalibrationValue);
+"166
+[; ;ina226.c: 166:     return AutoFox_INA226_WriteRegister(this, INA226_CALIBRATION, this->mCalibrationValue);
 [e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CALIBRATION . *U _this 3 ]
-[e $UE 154  ]
-"180
-[; ;ina226.c: 180: }
-[e :UE 154 ]
+[e $UE 177  ]
+"167
+[; ;ina226.c: 167: }
+[e :UE 177 ]
 }
-"185
-[; ;ina226.c: 185: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
-[v _AutoFox_INA226_CheckI2cAddress `(E1802 ~T0 @X0 1 ef1`uc ]
-"186
-[; ;ina226.c: 186: {
+"172
+[; ;ina226.c: 172: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
+[v _AutoFox_INA226_CheckI2cAddress `(E1803 ~T0 @X0 1 ef1`uc ]
+"173
+[; ;ina226.c: 173: {
 {
 [e :U _AutoFox_INA226_CheckI2cAddress ]
-"185
-[; ;ina226.c: 185: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
+"172
+[; ;ina226.c: 172: status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 [v _aI2C_Address `uc ~T0 @X0 1 r1 ]
-"186
-[; ;ina226.c: 186: {
+"173
+[; ;ina226.c: 173: {
 [f ]
-"188
-[; ;ina226.c: 188:     I2C_Master_Start();
+"174
+[; ;ina226.c: 174:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"191
-[; ;ina226.c: 191:     I2C_Master_Write((aI2C_Address << 1) | 0);
+"177
+[; ;ina226.c: 177:     I2C_Master_Write((aI2C_Address << 1) | 0);
 [e ( _I2C_Master_Write (1 -> | << -> _aI2C_Address `i -> 1 `i -> 0 `i `ui ]
+"179
+[; ;ina226.c: 179:     if (ACKSTAT == 0)
+[e $ ! == -> _ACKSTAT `i -> 0 `i 179  ]
+"180
+[; ;ina226.c: 180:     {
+{
+"181
+[; ;ina226.c: 181:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"182
+[; ;ina226.c: 182:         return OK;
+[e ) . `E1803 0 ]
+[e $UE 178  ]
+"183
+[; ;ina226.c: 183:     }
+}
+[e $U 180  ]
+"184
+[; ;ina226.c: 184:     else
+[e :U 179 ]
+"185
+[; ;ina226.c: 185:     {
+{
+"186
+[; ;ina226.c: 186:         I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"187
+[; ;ina226.c: 187:         return INVALID_I2C_ADDRESS;
+[e ) . `E1803 8 ]
+[e $UE 178  ]
+"188
+[; ;ina226.c: 188:     }
+}
+[e :U 180 ]
+"189
+[; ;ina226.c: 189: }
+[e :UE 178 ]
+}
+"193
+[; ;ina226.c: 193: status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
+[v _AutoFox_INA226_ReadRegister `(E1803 ~T0 @X0 1 ef3`*S143`uc`*us ]
 "194
-[; ;ina226.c: 194:     if (ACKSTAT == 0)
-[e $ ! == -> _ACKSTAT `i -> 0 `i 156  ]
-"195
-[; ;ina226.c: 195:     {
-{
-"196
-[; ;ina226.c: 196:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
-"197
-[; ;ina226.c: 197:         return OK;
-[e ) . `E1802 0 ]
-[e $UE 155  ]
-"198
-[; ;ina226.c: 198:     }
-}
-[e $U 157  ]
-"199
-[; ;ina226.c: 199:     else
-[e :U 156 ]
-"200
-[; ;ina226.c: 200:     {
-{
-"201
-[; ;ina226.c: 201:         I2C_Master_Stop();
-[e ( _I2C_Master_Stop ..  ]
-"202
-[; ;ina226.c: 202:         return INVALID_I2C_ADDRESS;
-[e ) . `E1802 8 ]
-[e $UE 155  ]
-"203
-[; ;ina226.c: 203:     }
-}
-[e :U 157 ]
-"204
-[; ;ina226.c: 204: }
-[e :UE 155 ]
-}
-"208
-[; ;ina226.c: 208: status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
-[v _AutoFox_INA226_ReadRegister `(E1802 ~T0 @X0 1 ef3`*S143`uc`*us ]
-"209
-[; ;ina226.c: 209: {
+[; ;ina226.c: 194: {
 {
 [e :U _AutoFox_INA226_ReadRegister ]
-"208
-[; ;ina226.c: 208: status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
+"193
+[; ;ina226.c: 193: status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
 [v _this `*S143 ~T0 @X0 1 r1 ]
 [v _aRegister `uc ~T0 @X0 1 r2 ]
 [v _aValue_p `*us ~T0 @X0 1 r3 ]
-"209
-[; ;ina226.c: 209: {
+"194
+[; ;ina226.c: 194: {
 [f ]
-"210
-[; ;ina226.c: 210:     *aValue_p = 0;
+"195
+[; ;ina226.c: 195:     *aValue_p = 0;
 [e = *U _aValue_p -> -> 0 `i `us ]
-"213
-[; ;ina226.c: 213:     I2C_Master_Start();
+"196
+[; ;ina226.c: 196:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"214
-[; ;ina226.c: 214:     I2C_Master_Write(this->mI2C_Address << 1);
+"197
+[; ;ina226.c: 197:     I2C_Master_Write(this->mI2C_Address << 1);
 [e ( _I2C_Master_Write (1 -> << -> . *U _this 1 `i -> 1 `i `ui ]
-"215
-[; ;ina226.c: 215:     I2C_Master_Write(aRegister);
+"198
+[; ;ina226.c: 198:     I2C_Master_Write(aRegister);
 [e ( _I2C_Master_Write (1 -> _aRegister `ui ]
-"216
-[; ;ina226.c: 216:     I2C_Master_Stop();
+"199
+[; ;ina226.c: 199:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"219
-[; ;ina226.c: 219:     I2C_Master_Start();
+"200
+[; ;ina226.c: 200:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"220
-[; ;ina226.c: 220:     I2C_Master_Write((this->mI2C_Address << 1) | 1);
+"201
+[; ;ina226.c: 201:     I2C_Master_Write((this->mI2C_Address << 1) | 1);
 [e ( _I2C_Master_Write (1 -> | << -> . *U _this 1 `i -> 1 `i -> 1 `i `ui ]
-"221
-[; ;ina226.c: 221:     *aValue_p = I2C_Master_Read(1);
+"203
+[; ;ina226.c: 203:     *aValue_p = I2C_Master_Read(1);
 [e = *U _aValue_p -> ( _I2C_Master_Read (1 -> -> 1 `i `uc `us ]
-"222
-[; ;ina226.c: 222:     *aValue_p = *aValue_p << 8;
+"204
+[; ;ina226.c: 204:     *aValue_p = *aValue_p << 8;
 [e = *U _aValue_p -> << -> *U _aValue_p `ui -> 8 `i `us ]
-"223
-[; ;ina226.c: 223:     *aValue_p |= I2C_Master_Read(0);
+"205
+[; ;ina226.c: 205:     *aValue_p |= I2C_Master_Read(0);
 [e =| *U _aValue_p -> ( _I2C_Master_Read (1 -> -> 0 `i `uc `us ]
-"224
-[; ;ina226.c: 224:     I2C_Master_Stop();
+"207
+[; ;ina226.c: 207:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"226
-[; ;ina226.c: 226:     return OK;
-[e ) . `E1802 0 ]
-[e $UE 158  ]
-"227
-[; ;ina226.c: 227: }
-[e :UE 158 ]
+"209
+[; ;ina226.c: 209:     return OK;
+[e ) . `E1803 0 ]
+[e $UE 181  ]
+"210
+[; ;ina226.c: 210: }
+[e :UE 181 ]
 }
-"230
-[; ;ina226.c: 230: status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t aValue)
-[v _AutoFox_INA226_WriteRegister `(E1802 ~T0 @X0 1 ef3`*S143`uc`us ]
-"231
-[; ;ina226.c: 231: {
+"213
+[; ;ina226.c: 213: status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t aValue)
+[v _AutoFox_INA226_WriteRegister `(E1803 ~T0 @X0 1 ef3`*S143`uc`us ]
+"214
+[; ;ina226.c: 214: {
 {
 [e :U _AutoFox_INA226_WriteRegister ]
-"230
-[; ;ina226.c: 230: status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t aValue)
+"213
+[; ;ina226.c: 213: status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t aValue)
 [v _this `*S143 ~T0 @X0 1 r1 ]
 [v _aRegister `uc ~T0 @X0 1 r2 ]
 [v _aValue `us ~T0 @X0 1 r3 ]
-"231
-[; ;ina226.c: 231: {
+"214
+[; ;ina226.c: 214: {
 [f ]
-"232
-[; ;ina226.c: 232:     uint8_t buffer[3];
+"215
+[; ;ina226.c: 215:     uint8_t buffer[3];
 [v _buffer `uc ~T0 @X0 -> 3 `i a ]
-"233
-[; ;ina226.c: 233:     buffer[0] = aRegister;
+"216
+[; ;ina226.c: 216:     buffer[0] = aRegister;
 [e = *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux _aRegister ]
-"234
-[; ;ina226.c: 234:     buffer[1] = (uint8_t)((aValue >> 8) & 0xFF);
+"217
+[; ;ina226.c: 217:     buffer[1] = (uint8_t)((aValue >> 8) & 0xFF);
 [e = *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> & >> -> _aValue `ui -> 8 `i -> -> 255 `i `ui `uc ]
-"235
-[; ;ina226.c: 235:     buffer[2] = (uint8_t)(aValue & 0xFF);
+"218
+[; ;ina226.c: 218:     buffer[2] = (uint8_t)(aValue & 0xFF);
 [e = *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> & -> _aValue `ui -> -> 255 `i `ui `uc ]
-"238
-[; ;ina226.c: 238:     I2C_Master_Start();
+"221
+[; ;ina226.c: 221:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
-"239
-[; ;ina226.c: 239:     I2C_Master_Write(this->mI2C_Address << 1);
+"222
+[; ;ina226.c: 222:     I2C_Master_Write(this->mI2C_Address << 1);
 [e ( _I2C_Master_Write (1 -> << -> . *U _this 1 `i -> 1 `i `ui ]
-"242
-[; ;ina226.c: 242:     I2C_Master_Write(buffer[0]);
+"224
+[; ;ina226.c: 224:     I2C_Master_Write(buffer[0]);
 [e ( _I2C_Master_Write (1 -> *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux `ui ]
-"243
-[; ;ina226.c: 243:     I2C_Master_Write(buffer[1]);
+"225
+[; ;ina226.c: 225:     I2C_Master_Write(buffer[1]);
 [e ( _I2C_Master_Write (1 -> *U + &U _buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux `ui ]
-"244
-[; ;ina226.c: 244:     I2C_Master_Write(buffer[2]);
+"226
+[; ;ina226.c: 226:     I2C_Master_Write(buffer[2]);
 [e ( _I2C_Master_Write (1 -> *U + &U _buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _buffer `ui `ux `ui ]
-"247
-[; ;ina226.c: 247:     I2C_Master_Stop();
+"228
+[; ;ina226.c: 228:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"249
-[; ;ina226.c: 249:     return OK;
-[e ) . `E1802 0 ]
-[e $UE 159  ]
-"250
-[; ;ina226.c: 250: }
-[e :UE 159 ]
+"230
+[; ;ina226.c: 230:     return OK;
+[e ) . `E1803 0 ]
+[e $UE 182  ]
+"231
+[; ;ina226.c: 231: }
+[e :UE 182 ]
 }
-"252
-[; ;ina226.c: 252: int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
+"233
+[; ;ina226.c: 233: int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
 [v _AutoFox_INA226_GetShuntVoltage_uV `(l ~T0 @X0 1 ef1`*S143 ]
-"253
-[; ;ina226.c: 253: {
+"234
+[; ;ina226.c: 234: {
 {
 [e :U _AutoFox_INA226_GetShuntVoltage_uV ]
-"252
-[; ;ina226.c: 252: int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
+"233
+[; ;ina226.c: 233: int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
 [v _this `*S143 ~T0 @X0 1 r1 ]
+"234
+[; ;ina226.c: 234: {
+[f ]
+"240
+[; ;ina226.c: 240:  int16_t theRegisterValue=0;
+[v _theRegisterValue `s ~T0 @X0 1 a ]
+[e = _theRegisterValue -> -> 0 `i `s ]
+"241
+[; ;ina226.c: 241:  int32_t theResult;
+[v _theResult `l ~T0 @X0 1 a ]
+"242
+[; ;ina226.c: 242:  AutoFox_INA226_ReadRegister(this,INA226_SHUNT_VOLTAGE, (uint16_t*)&theRegisterValue);
+[e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_SHUNT_VOLTAGE -> &U _theRegisterValue `*us ]
+"243
+[; ;ina226.c: 243:  theResult = (int32_t)theRegisterValue>>1;
+[e = _theResult >> -> _theRegisterValue `l -> 1 `i ]
+"244
+[; ;ina226.c: 244:  theResult+= (int32_t)theRegisterValue<<1;
+[e =+ _theResult << -> _theRegisterValue `l -> 1 `i ]
+"245
+[; ;ina226.c: 245:  return theResult;
+[e ) _theResult ]
+[e $UE 183  ]
+"246
+[; ;ina226.c: 246: }
+[e :UE 183 ]
+}
+"248
+[; ;ina226.c: 248: uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this)
+[v _AutoFox_INA226_GetBusVoltage_V `(us ~T0 @X0 1 ef1`*S143 ]
+"249
+[; ;ina226.c: 249: {
+{
+[e :U _AutoFox_INA226_GetBusVoltage_V ]
+"248
+[; ;ina226.c: 248: uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this)
+[v _this `*S143 ~T0 @X0 1 r1 ]
+"249
+[; ;ina226.c: 249: {
+[f ]
+"250
+[; ;ina226.c: 250:     uint32_t theRegisterValue = 0;
+[v _theRegisterValue `ul ~T0 @X0 1 a ]
+[e = _theRegisterValue -> -> -> 0 `i `l `ul ]
+"251
+[; ;ina226.c: 251:     AutoFox_INA226_ReadRegister(this, INA226_BUS_VOLTAGE, &theRegisterValue);
+[e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_BUS_VOLTAGE -> &U _theRegisterValue `*us ]
+"252
+[; ;ina226.c: 252:     return (uint16_t)((theRegisterValue * INA226_BUS_VOLTAGE_LSB)/10000);
+[e ) -> / * _theRegisterValue -> _INA226_BUS_VOLTAGE_LSB `ul -> -> -> 10000 `i `l `ul `us ]
+[e $UE 184  ]
 "253
-[; ;ina226.c: 253: {
+[; ;ina226.c: 253: }
+[e :UE 184 ]
+}
+"257
+[; ;ina226.c: 257: int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
+[v _AutoFox_INA226_GetCurrent_uA `(l ~T0 @X0 1 ef1`*S143 ]
+"258
+[; ;ina226.c: 258: {
+{
+[e :U _AutoFox_INA226_GetCurrent_uA ]
+"257
+[; ;ina226.c: 257: int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
+[v _this `*S143 ~T0 @X0 1 r1 ]
+"258
+[; ;ina226.c: 258: {
 [f ]
 "259
 [; ;ina226.c: 259:  int16_t theRegisterValue=0;
 [v _theRegisterValue `s ~T0 @X0 1 a ]
 [e = _theRegisterValue -> -> 0 `i `s ]
 "260
-[; ;ina226.c: 260:  int32_t theResult;
-[v _theResult `l ~T0 @X0 1 a ]
-"261
-[; ;ina226.c: 261:  AutoFox_INA226_ReadRegister(this,INA226_SHUNT_VOLTAGE, (uint16_t*)&theRegisterValue);
-[e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_SHUNT_VOLTAGE -> &U _theRegisterValue `*us ]
-"262
-[; ;ina226.c: 262:  theResult = (int32_t)theRegisterValue>>1;
-[e = _theResult >> -> _theRegisterValue `l -> 1 `i ]
-"263
-[; ;ina226.c: 263:  theResult+= (int32_t)theRegisterValue<<1;
-[e =+ _theResult << -> _theRegisterValue `l -> 1 `i ]
-"264
-[; ;ina226.c: 264:  return theResult;
-[e ) _theResult ]
-[e $UE 160  ]
-"265
-[; ;ina226.c: 265: }
-[e :UE 160 ]
-}
-"267
-[; ;ina226.c: 267: int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226* this)
-[v _AutoFox_INA226_GetBusVoltage_uV `(l ~T0 @X0 1 ef1`*S143 ]
-"268
-[; ;ina226.c: 268: {
-{
-[e :U _AutoFox_INA226_GetBusVoltage_uV ]
-"267
-[; ;ina226.c: 267: int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226* this)
-[v _this `*S143 ~T0 @X0 1 r1 ]
-"268
-[; ;ina226.c: 268: {
-[f ]
-"269
-[; ;ina226.c: 269:  uint16_t theRegisterValue=0;
-[v _theRegisterValue `us ~T0 @X0 1 a ]
-[e = _theRegisterValue -> -> 0 `i `us ]
-"270
-[; ;ina226.c: 270:  AutoFox_INA226_ReadRegister(this,INA226_BUS_VOLTAGE, &theRegisterValue);
-[e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_BUS_VOLTAGE &U _theRegisterValue ]
-"271
-[; ;ina226.c: 271:  return (int32_t)theRegisterValue * INA226_BUS_VOLTAGE_LSB;
-[e ) * -> _theRegisterValue `l _INA226_BUS_VOLTAGE_LSB ]
-[e $UE 161  ]
-"272
-[; ;ina226.c: 272: }
-[e :UE 161 ]
-}
-"275
-[; ;ina226.c: 275: int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
-[v _AutoFox_INA226_GetCurrent_uA `(l ~T0 @X0 1 ef1`*S143 ]
-"276
-[; ;ina226.c: 276: {
-{
-[e :U _AutoFox_INA226_GetCurrent_uA ]
-"275
-[; ;ina226.c: 275: int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
-[v _this `*S143 ~T0 @X0 1 r1 ]
-"276
-[; ;ina226.c: 276: {
-[f ]
-"277
-[; ;ina226.c: 277:  int16_t theRegisterValue=0;
-[v _theRegisterValue `s ~T0 @X0 1 a ]
-[e = _theRegisterValue -> -> 0 `i `s ]
-"278
-[; ;ina226.c: 278:  AutoFox_INA226_ReadRegister(this,INA226_CURRENT, (uint16_t*)&theRegisterValue);
+[; ;ina226.c: 260:  AutoFox_INA226_ReadRegister(this,INA226_CURRENT, (uint16_t*)&theRegisterValue);
 [e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CURRENT -> &U _theRegisterValue `*us ]
-"279
-[; ;ina226.c: 279:  return (int32_t)theRegisterValue * this->mCurrentMicroAmpsPerBit;
+"261
+[; ;ina226.c: 261:  return (int32_t)theRegisterValue * this->mCurrentMicroAmpsPerBit;
 [e ) * -> _theRegisterValue `l . *U _this 4 ]
-[e $UE 162  ]
-"280
-[; ;ina226.c: 280: }
-[e :UE 162 ]
+[e $UE 185  ]
+"262
+[; ;ina226.c: 262: }
+[e :UE 185 ]
 }
-"282
-[; ;ina226.c: 282: int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226* this)
+"264
+[; ;ina226.c: 264: int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226* this)
 [v _AutoFox_INA226_GetPower_uW `(l ~T0 @X0 1 ef1`*S143 ]
-"283
-[; ;ina226.c: 283: {
+"265
+[; ;ina226.c: 265: {
 {
 [e :U _AutoFox_INA226_GetPower_uW ]
-"282
-[; ;ina226.c: 282: int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226* this)
+"264
+[; ;ina226.c: 264: int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226* this)
 [v _this `*S143 ~T0 @X0 1 r1 ]
-"283
-[; ;ina226.c: 283: {
+"265
+[; ;ina226.c: 265: {
 [f ]
-"284
-[; ;ina226.c: 284:  uint16_t theRegisterValue=0;
+"266
+[; ;ina226.c: 266:  uint16_t theRegisterValue=0;
 [v _theRegisterValue `us ~T0 @X0 1 a ]
 [e = _theRegisterValue -> -> 0 `i `us ]
-"285
-[; ;ina226.c: 285:  int32_t theReturnValue;
+"267
+[; ;ina226.c: 267:  int32_t theReturnValue;
 [v _theReturnValue `l ~T0 @X0 1 a ]
-"286
-[; ;ina226.c: 286:  AutoFox_INA226_ReadRegister(this,INA226_POWER, &theRegisterValue);
+"268
+[; ;ina226.c: 268:  AutoFox_INA226_ReadRegister(this,INA226_POWER, &theRegisterValue);
 [e ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_POWER &U _theRegisterValue ]
-"287
-[; ;ina226.c: 287:  theReturnValue = (int32_t)theRegisterValue * this->mPowerMicroWattPerBit;
+"269
+[; ;ina226.c: 269:  theReturnValue = (int32_t)theRegisterValue * this->mPowerMicroWattPerBit;
 [e = _theReturnValue * -> _theRegisterValue `l . *U _this 5 ]
-"288
-[; ;ina226.c: 288:  return theReturnValue;
+"270
+[; ;ina226.c: 270:  return theReturnValue;
 [e ) _theReturnValue ]
-[e $UE 163  ]
-"289
-[; ;ina226.c: 289: }
-[e :UE 163 ]
+[e $UE 186  ]
+"271
+[; ;ina226.c: 271: }
+[e :UE 186 ]
 }
-"291
-[; ;ina226.c: 291: status AutoFox_INA226_Hibernate(AutoFox_INA226* this)
-[v _AutoFox_INA226_Hibernate `(E1802 ~T0 @X0 1 ef1`*S143 ]
-"292
-[; ;ina226.c: 292: {
+"273
+[; ;ina226.c: 273: status AutoFox_INA226_Hibernate(AutoFox_INA226* this)
+[v _AutoFox_INA226_Hibernate `(E1803 ~T0 @X0 1 ef1`*S143 ]
+"274
+[; ;ina226.c: 274: {
 {
 [e :U _AutoFox_INA226_Hibernate ]
-"291
-[; ;ina226.c: 291: status AutoFox_INA226_Hibernate(AutoFox_INA226* this)
+"273
+[; ;ina226.c: 273: status AutoFox_INA226_Hibernate(AutoFox_INA226* this)
 [v _this `*S143 ~T0 @X0 1 r1 ]
-"292
-[; ;ina226.c: 292: {
+"274
+[; ;ina226.c: 274: {
 [f ]
-"293
-[; ;ina226.c: 293:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 165  ]
-[e ) . `E1802 7 ]
-[e $UE 164  ]
-[e :U 165 ]
-"296
-[; ;ina226.c: 296:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
-[e :U 168 ]
+"275
+[; ;ina226.c: 275:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 188  ]
+[e ) . `E1803 7 ]
+[e $UE 187  ]
+[e :U 188 ]
+"278
+[; ;ina226.c: 278:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+[e :U 191 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
+[v _s `E1803 ~T0 @X0 1 a ]
 [e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 169  ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 192  ]
 {
 [e ) _s ]
-[e $UE 164  ]
+[e $UE 187  ]
 }
-[e :U 169 ]
+[e :U 192 ]
 }
-[e :U 167 ]
-"299
-[; ;ina226.c: 299:  uint16_t theTempConfigValue = this->mConfigRegister & ~(cOperatingModeMask);
+[e :U 190 ]
+"281
+[; ;ina226.c: 281:  uint16_t theTempConfigValue = this->mConfigRegister & ~(cOperatingModeMask);
 [v _theTempConfigValue `us ~T0 @X0 1 a ]
 [e = _theTempConfigValue -> & -> . *U _this 2 `ui ~ -> _cOperatingModeMask `ui `us ]
-"301
-[; ;ina226.c: 301:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, theTempConfigValue);
+"283
+[; ;ina226.c: 283:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, theTempConfigValue);
 [e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG _theTempConfigValue ]
-[e $UE 164  ]
-"302
-[; ;ina226.c: 302: }
-[e :UE 164 ]
+[e $UE 187  ]
+"284
+[; ;ina226.c: 284: }
+[e :UE 187 ]
 }
-"304
-[; ;ina226.c: 304: status AutoFox_INA226_Wakeup(AutoFox_INA226* this)
-[v _AutoFox_INA226_Wakeup `(E1802 ~T0 @X0 1 ef1`*S143 ]
-"305
-[; ;ina226.c: 305: {
+"286
+[; ;ina226.c: 286: status AutoFox_INA226_Wakeup(AutoFox_INA226* this)
+[v _AutoFox_INA226_Wakeup `(E1803 ~T0 @X0 1 ef1`*S143 ]
+"287
+[; ;ina226.c: 287: {
 {
 [e :U _AutoFox_INA226_Wakeup ]
-"304
-[; ;ina226.c: 304: status AutoFox_INA226_Wakeup(AutoFox_INA226* this)
+"286
+[; ;ina226.c: 286: status AutoFox_INA226_Wakeup(AutoFox_INA226* this)
 [v _this `*S143 ~T0 @X0 1 r1 ]
-"305
-[; ;ina226.c: 305: {
+"287
+[; ;ina226.c: 287: {
 [f ]
-"306
-[; ;ina226.c: 306:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 171  ]
-[e ) . `E1802 7 ]
-[e $UE 170  ]
-[e :U 171 ]
-"311
-[; ;ina226.c: 311:  uint16_t theLastOperatingMode = this->mConfigRegister & cOperatingModeMask;
+"288
+[; ;ina226.c: 288:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 194  ]
+[e ) . `E1803 7 ]
+[e $UE 193  ]
+[e :U 194 ]
+"293
+[; ;ina226.c: 293:  uint16_t theLastOperatingMode = this->mConfigRegister & cOperatingModeMask;
 [v _theLastOperatingMode `us ~T0 @X0 1 a ]
 [e = _theLastOperatingMode -> & -> . *U _this 2 `ui -> _cOperatingModeMask `ui `us ]
-"312
-[; ;ina226.c: 312:  if(theLastOperatingMode == Shutdown ||
-[e $ ! || == -> _theLastOperatingMode `ui -> . `E1821 3 `ui == -> _theLastOperatingMode `ui -> -> 0 `i `ui 172  ]
-"313
-[; ;ina226.c: 313:   theLastOperatingMode == 0){
+"294
+[; ;ina226.c: 294:  if(theLastOperatingMode == Shutdown ||
+[e $ ! || == -> _theLastOperatingMode `ui -> . `E1822 3 `ui == -> _theLastOperatingMode `ui -> -> 0 `i `ui 195  ]
+"295
+[; ;ina226.c: 295:   theLastOperatingMode == 0){
 {
-"314
-[; ;ina226.c: 314:    this->mConfigRegister &= ~cOperatingModeMask;
+"296
+[; ;ina226.c: 296:    this->mConfigRegister &= ~cOperatingModeMask;
 [e =& . *U _this 2 -> ~ -> _cOperatingModeMask `ui `us ]
-"315
-[; ;ina226.c: 315:    this->mConfigRegister |= ShuntAndBusVoltageContinuous;
-[e =| . *U _this 2 -> . `E1821 6 `us ]
-"316
-[; ;ina226.c: 316:  }
+"297
+[; ;ina226.c: 297:    this->mConfigRegister |= ShuntAndBusVoltageContinuous;
+[e =| . *U _this 2 -> . `E1822 6 `us ]
+"298
+[; ;ina226.c: 298:  }
 }
-[e :U 172 ]
-"318
-[; ;ina226.c: 318:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
+[e :U 195 ]
+"300
+[; ;ina226.c: 300:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
 [e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
-[e $UE 170  ]
-"319
-[; ;ina226.c: 319: }
-[e :UE 170 ]
+[e $UE 193  ]
+"301
+[; ;ina226.c: 301: }
+[e :UE 193 ]
 }
-"321
-[; ;ina226.c: 321: status AutoFox_INA226_SetOperatingMode(AutoFox_INA226* this, enum eOperatingMode aOpMode)
-[v _AutoFox_INA226_SetOperatingMode `(E1802 ~T0 @X0 1 ef2`*S143`E1821 ]
-"322
-[; ;ina226.c: 322: {
+"303
+[; ;ina226.c: 303: status AutoFox_INA226_SetOperatingMode(AutoFox_INA226* this, enum eOperatingMode aOpMode)
+[v _AutoFox_INA226_SetOperatingMode `(E1803 ~T0 @X0 1 ef2`*S143`E1822 ]
+"304
+[; ;ina226.c: 304: {
 {
 [e :U _AutoFox_INA226_SetOperatingMode ]
-"321
-[; ;ina226.c: 321: status AutoFox_INA226_SetOperatingMode(AutoFox_INA226* this, enum eOperatingMode aOpMode)
+"303
+[; ;ina226.c: 303: status AutoFox_INA226_SetOperatingMode(AutoFox_INA226* this, enum eOperatingMode aOpMode)
 [v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aOpMode `E1821 ~T0 @X0 1 r2 ]
-"322
-[; ;ina226.c: 322: {
+[v _aOpMode `E1822 ~T0 @X0 1 r2 ]
+"304
+[; ;ina226.c: 304: {
 [f ]
-"323
-[; ;ina226.c: 323:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 174  ]
-[e ) . `E1802 7 ]
-[e $UE 173  ]
-[e :U 174 ]
-"324
-[; ;ina226.c: 324:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
-[e :U 177 ]
+"305
+[; ;ina226.c: 305:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 197  ]
+[e ) . `E1803 7 ]
+[e $UE 196  ]
+[e :U 197 ]
+"306
+[; ;ina226.c: 306:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+[e :U 200 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
+[v _s `E1803 ~T0 @X0 1 a ]
 [e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 178  ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 201  ]
 {
 [e ) _s ]
-[e $UE 173  ]
+[e $UE 196  ]
 }
-[e :U 178 ]
-}
-[e :U 176 ]
-"327
-[; ;ina226.c: 327:  this->mConfigRegister &= ~(cOperatingModeMask);
-[e =& . *U _this 2 -> ~ -> _cOperatingModeMask `ui `us ]
-"328
-[; ;ina226.c: 328:  this->mConfigRegister |= (uint16_t)aOpMode;
-[e =| . *U _this 2 -> -> _aOpMode `us `us ]
-"330
-[; ;ina226.c: 330:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
-[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
-[e $UE 173  ]
-"331
-[; ;ina226.c: 331: }
-[e :UE 173 ]
-}
-"333
-[; ;ina226.c: 333: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
-[v _AutoFox_INA226_ConfigureAlertPinTrigger `(E1802 ~T0 @X0 1 ef4`*S143`E1829`l`a ]
-"334
-[; ;ina226.c: 334: {
-{
-[e :U _AutoFox_INA226_ConfigureAlertPinTrigger ]
-"333
-[; ;ina226.c: 333: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
-[v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aAlertTrigger `E1829 ~T0 @X0 1 r2 ]
-[v _aValue `l ~T0 @X0 1 r3 ]
-[v _aLatching `a ~T0 @X0 1 r4 ]
-"334
-[; ;ina226.c: 334: {
-[f ]
-"335
-[; ;ina226.c: 335:  uint16_t theMaskEnableRegister;
-[v _theMaskEnableRegister `us ~T0 @X0 1 a ]
-"337
-[; ;ina226.c: 337:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 180  ]
-[e ) . `E1802 7 ]
-[e $UE 179  ]
-[e :U 180 ]
-"338
-[; ;ina226.c: 338:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_MASK_ENABLE, &theMaskEnableRegister)); if (s != OK) { return s; } } while (0);
-[e :U 183 ]
-{
-[v _s `E1802 ~T0 @X0 1 a ]
-[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_MASK_ENABLE &U _theMaskEnableRegister ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 184  ]
-{
-[e ) _s ]
-[e $UE 179  ]
-}
-[e :U 184 ]
-}
-[e :U 182 ]
-"341
-[; ;ina226.c: 341:  theMaskEnableRegister &= ~ cAlertPinModeMask;
-[e =& _theMaskEnableRegister -> ~ -> _cAlertPinModeMask `ui `us ]
-"343
-[; ;ina226.c: 343:  theMaskEnableRegister |= (uint16_t)aAlertTrigger;
-[e =| _theMaskEnableRegister -> -> _aAlertTrigger `us `us ]
-"344
-[; ;ina226.c: 344:  if(aLatching){
-[e $ ! != -> _aLatching `i -> 0 `i 185  ]
-{
-"345
-[; ;ina226.c: 345:   theMaskEnableRegister |= cAlertLatchingMode;
-[e =| _theMaskEnableRegister -> _cAlertLatchingMode `us ]
-"346
-[; ;ina226.c: 346:  }
-}
-[e :U 185 ]
-"356
-[; ;ina226.c: 356:  int32_t theAlertValue=0;
-[v _theAlertValue `l ~T0 @X0 1 a ]
-[e = _theAlertValue -> -> 0 `i `l ]
-"358
-[; ;ina226.c: 358:  switch(aAlertTrigger){
-[e $U 187  ]
-{
-"359
-[; ;ina226.c: 359:  case PowerOverLimit:
-[e :U 188 ]
-"361
-[; ;ina226.c: 361:   theAlertValue = (aValue / this->mPowerMicroWattPerBit);
-[e = _theAlertValue / _aValue . *U _this 5 ]
-"362
-[; ;ina226.c: 362:   break;
-[e $U 186  ]
-"363
-[; ;ina226.c: 363:  case ClearTriggers:
-[e :U 189 ]
-"364
-[; ;ina226.c: 364:  case ConversionReady:
-[e :U 190 ]
-"366
-[; ;ina226.c: 366:   theAlertValue = 0;
-[e = _theAlertValue -> -> 0 `i `l ]
-"367
-[; ;ina226.c: 367:   break;
-[e $U 186  ]
-"368
-[; ;ina226.c: 368:  case ShuntVoltageOverLimit:
-[e :U 191 ]
-"369
-[; ;ina226.c: 369:  case ShuntVoltageUnderLimit:
-[e :U 192 ]
-"371
-[; ;ina226.c: 371:   theAlertValue = (aValue<<1)/5;
-[e = _theAlertValue / << _aValue -> 1 `i -> -> 5 `i `l ]
-"372
-[; ;ina226.c: 372:   break;
-[e $U 186  ]
-"373
-[; ;ina226.c: 373:  case BusVoltageOverLimit:
-[e :U 193 ]
-"374
-[; ;ina226.c: 374:  case BusVoltageUnderLimit:
-[e :U 194 ]
-"375
-[; ;ina226.c: 375:   theAlertValue = (aValue / INA226_BUS_VOLTAGE_LSB);
-[e = _theAlertValue / _aValue _INA226_BUS_VOLTAGE_LSB ]
-"376
-[; ;ina226.c: 376:   break;
-[e $U 186  ]
-"377
-[; ;ina226.c: 377:  default:
-[e :U 195 ]
-"378
-[; ;ina226.c: 378:   return BAD_PARAMETER;
-[e ) . `E1802 6 ]
-[e $UE 179  ]
-"379
-[; ;ina226.c: 379:  }
-}
-[e $U 186  ]
-[e :U 187 ]
-[e [\ -> _aAlertTrigger `ui , $ -> . `E1829 5 `ui 188
- , $ -> . `E1829 0 `ui 189
- , $ -> . `E1829 6 `ui 190
- , $ . `E1829 1 191
- , $ -> . `E1829 2 `ui 192
- , $ -> . `E1829 3 `ui 193
- , $ -> . `E1829 4 `ui 194
- 195 ]
-[e :U 186 ]
-"383
-[; ;ina226.c: 383:  do { status s = (AutoFox_INA226_WriteRegister(this,INA226_ALERT_LIMIT, (int16_t)theAlertValue)); if (s != OK) { return s; } } while (0);
-[e :U 198 ]
-{
-[v _s `E1802 ~T0 @X0 1 a ]
-[e = _s ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_ALERT_LIMIT -> -> _theAlertValue `s `us ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 199  ]
-{
-[e ) _s ]
-[e $UE 179  ]
+[e :U 201 ]
 }
 [e :U 199 ]
+"309
+[; ;ina226.c: 309:  this->mConfigRegister &= ~(cOperatingModeMask);
+[e =& . *U _this 2 -> ~ -> _cOperatingModeMask `ui `us ]
+"310
+[; ;ina226.c: 310:  this->mConfigRegister |= (uint16_t)aOpMode;
+[e =| . *U _this 2 -> -> _aOpMode `us `us ]
+"312
+[; ;ina226.c: 312:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
+[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
+[e $UE 196  ]
+"313
+[; ;ina226.c: 313: }
+[e :UE 196 ]
 }
-[e :U 197 ]
-"385
-[; ;ina226.c: 385:  return AutoFox_INA226_WriteRegister(this,INA226_MASK_ENABLE, theMaskEnableRegister);
-[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_MASK_ENABLE _theMaskEnableRegister ]
-[e $UE 179  ]
-"386
-[; ;ina226.c: 386: }
-[e :UE 179 ]
-}
-"396
-[; ;ina226.c: 396: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
-[v _AutoFox_INA226_ResetAlertPin `(E1802 ~T0 @X0 1 ef2`*S143`*E1837 ]
-"397
-[; ;ina226.c: 397: {
+"315
+[; ;ina226.c: 315: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
+[v _AutoFox_INA226_ConfigureAlertPinTrigger `(E1803 ~T0 @X0 1 ef4`*S143`E1830`l`a ]
+"316
+[; ;ina226.c: 316: {
 {
-[e :U _AutoFox_INA226_ResetAlertPin ]
-"396
-[; ;ina226.c: 396: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
+[e :U _AutoFox_INA226_ConfigureAlertPinTrigger ]
+"315
+[; ;ina226.c: 315: status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlertTrigger aAlertTrigger, int32_t aValue, _Bool aLatching)
 [v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aAlertTriggerCause_p `*E1837 ~T0 @X0 1 r2 ]
-"397
-[; ;ina226.c: 397: {
+[v _aAlertTrigger `E1830 ~T0 @X0 1 r2 ]
+[v _aValue `l ~T0 @X0 1 r3 ]
+[v _aLatching `a ~T0 @X0 1 r4 ]
+"316
+[; ;ina226.c: 316: {
 [f ]
-"399
-[; ;ina226.c: 399:  *aAlertTriggerCause_p = Unknown;
-[e = *U _aAlertTriggerCause_p . `E1837 0 ]
-"400
-[; ;ina226.c: 400:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 201  ]
-[e ) . `E1802 7 ]
-[e $UE 200  ]
-[e :U 201 ]
-"402
-[; ;ina226.c: 402:  uint16_t theTriggerCause;
-[v _theTriggerCause `us ~T0 @X0 1 a ]
-"405
-[; ;ina226.c: 405:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_MASK_ENABLE, &theTriggerCause)); if (s != OK) { return s; } } while (0);
-[e :U 204 ]
+"317
+[; ;ina226.c: 317:  uint16_t theMaskEnableRegister;
+[v _theMaskEnableRegister `us ~T0 @X0 1 a ]
+"319
+[; ;ina226.c: 319:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 203  ]
+[e ) . `E1803 7 ]
+[e $UE 202  ]
+[e :U 203 ]
+"320
+[; ;ina226.c: 320:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_MASK_ENABLE, &theMaskEnableRegister)); if (s != OK) { return s; } } while (0);
+[e :U 206 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
-[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_MASK_ENABLE &U _theTriggerCause ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 205  ]
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_MASK_ENABLE &U _theMaskEnableRegister ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 207  ]
 {
 [e ) _s ]
-[e $UE 200  ]
+[e $UE 202  ]
+}
+[e :U 207 ]
 }
 [e :U 205 ]
-}
-[e :U 203 ]
-"408
-[; ;ina226.c: 408:  theTriggerCause &= cAlertCauseMask;
-[e =& _theTriggerCause -> _cAlertCauseMask `us ]
-"411
-[; ;ina226.c: 411:  *aAlertTriggerCause_p = theTriggerCause;
-[e = *U _aAlertTriggerCause_p -> _theTriggerCause `E1837 ]
-"412
-[; ;ina226.c: 412:  return OK;
-[e ) . `E1802 0 ]
-[e $UE 200  ]
-"413
-[; ;ina226.c: 413: }
-[e :UE 200 ]
-}
-"415
-[; ;ina226.c: 415: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226* this, int aIndexToConversionTimeTable)
-[v _AutoFox_INA226_ConfigureVoltageConversionTime `(E1802 ~T0 @X0 1 ef2`*S143`i ]
-"416
-[; ;ina226.c: 416: {
+"323
+[; ;ina226.c: 323:  theMaskEnableRegister &= ~ cAlertPinModeMask;
+[e =& _theMaskEnableRegister -> ~ -> _cAlertPinModeMask `ui `us ]
+"325
+[; ;ina226.c: 325:  theMaskEnableRegister |= (uint16_t)aAlertTrigger;
+[e =| _theMaskEnableRegister -> -> _aAlertTrigger `us `us ]
+"326
+[; ;ina226.c: 326:  if(aLatching){
+[e $ ! != -> _aLatching `i -> 0 `i 208  ]
 {
-[e :U _AutoFox_INA226_ConfigureVoltageConversionTime ]
-"415
-[; ;ina226.c: 415: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226* this, int aIndexToConversionTimeTable)
-[v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aIndexToConversionTimeTable `i ~T0 @X0 1 r2 ]
-"416
-[; ;ina226.c: 416: {
-[f ]
-"417
-[; ;ina226.c: 417:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 207  ]
-[e ) . `E1802 7 ]
-[e $UE 206  ]
-[e :U 207 ]
-"419
-[; ;ina226.c: 419:  if(aIndexToConversionTimeTable < 0 || aIndexToConversionTimeTable > cMaxConvTimeTblIdx ){
-[e $ ! || < _aIndexToConversionTimeTable -> 0 `i > _aIndexToConversionTimeTable _cMaxConvTimeTblIdx 208  ]
-{
-"420
-[; ;ina226.c: 420:   return BAD_PARAMETER;
-[e ) . `E1802 6 ]
-[e $UE 206  ]
-"421
-[; ;ina226.c: 421:  }
+"327
+[; ;ina226.c: 327:   theMaskEnableRegister |= cAlertLatchingMode;
+[e =| _theMaskEnableRegister -> _cAlertLatchingMode `us ]
+"328
+[; ;ina226.c: 328:  }
 }
 [e :U 208 ]
-"424
-[; ;ina226.c: 424:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+"340
+[; ;ina226.c: 340:  int32_t theAlertValue=0;
+[v _theAlertValue `l ~T0 @X0 1 a ]
+[e = _theAlertValue -> -> 0 `i `l ]
+"342
+[; ;ina226.c: 342:  switch(aAlertTrigger){
+[e $U 210  ]
+{
+"343
+[; ;ina226.c: 343:  case PowerOverLimit:
 [e :U 211 ]
-{
-[v _s `E1802 ~T0 @X0 1 a ]
-[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 212  ]
-{
-[e ) _s ]
-[e $UE 206  ]
-}
+"345
+[; ;ina226.c: 345:   theAlertValue = (aValue / this->mPowerMicroWattPerBit);
+[e = _theAlertValue / _aValue . *U _this 5 ]
+"346
+[; ;ina226.c: 346:   break;
+[e $U 209  ]
+"347
+[; ;ina226.c: 347:  case ClearTriggers:
 [e :U 212 ]
-}
-[e :U 210 ]
-"426
-[; ;ina226.c: 426:  this->mConfigRegister &= ~(cBusVoltageConvTimeMask | cShuntVoltageConvTimeMask);
-[e =& . *U _this 2 -> ~ | -> _cBusVoltageConvTimeMask `ui -> _cShuntVoltageConvTimeMask `ui `us ]
-"428
-[; ;ina226.c: 428:  uint16_t theMergedBusAndShuntConvTimeIndicies =
-[v _theMergedBusAndShuntConvTimeIndicies `us ~T0 @X0 1 a ]
-[e = _theMergedBusAndShuntConvTimeIndicies -> | << -> -> _aIndexToConversionTimeTable `us `ui _cBusVoltConvTimeIdxShift << -> -> _aIndexToConversionTimeTable `us `ui _cShuntVoltConvTimeIdxShift `us ]
-"432
-[; ;ina226.c: 432:  this->mConfigRegister |= theMergedBusAndShuntConvTimeIndicies;
-[e =| . *U _this 2 -> _theMergedBusAndShuntConvTimeIndicies `us ]
-"434
-[; ;ina226.c: 434:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
-[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
-[e $UE 206  ]
-"435
-[; ;ina226.c: 435: }
-[e :UE 206 ]
-}
-"437
-[; ;ina226.c: 437: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226* this, int aIndexToSampleAverageTable)
-[v _AutoFox_INA226_ConfigureNumSampleAveraging `(E1802 ~T0 @X0 1 ef2`*S143`i ]
-"438
-[; ;ina226.c: 438: {
-{
-[e :U _AutoFox_INA226_ConfigureNumSampleAveraging ]
-"437
-[; ;ina226.c: 437: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226* this, int aIndexToSampleAverageTable)
-[v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aIndexToSampleAverageTable `i ~T0 @X0 1 r2 ]
-"438
-[; ;ina226.c: 438: {
-[f ]
-"439
-[; ;ina226.c: 439:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 214  ]
-[e ) . `E1802 7 ]
-[e $UE 213  ]
+"348
+[; ;ina226.c: 348:  case ConversionReady:
+[e :U 213 ]
+"350
+[; ;ina226.c: 350:   theAlertValue = 0;
+[e = _theAlertValue -> -> 0 `i `l ]
+"351
+[; ;ina226.c: 351:   break;
+[e $U 209  ]
+"352
+[; ;ina226.c: 352:  case ShuntVoltageOverLimit:
 [e :U 214 ]
-"441
-[; ;ina226.c: 441:  if(aIndexToSampleAverageTable < 0 || aIndexToSampleAverageTable > cMaxSampleAvgTblIdx ){
-[e $ ! || < _aIndexToSampleAverageTable -> 0 `i > _aIndexToSampleAverageTable _cMaxSampleAvgTblIdx 215  ]
-{
-"442
-[; ;ina226.c: 442:   return BAD_PARAMETER;
-[e ) . `E1802 6 ]
-[e $UE 213  ]
-"443
-[; ;ina226.c: 443:  }
-}
+"353
+[; ;ina226.c: 353:  case ShuntVoltageUnderLimit:
 [e :U 215 ]
-"446
-[; ;ina226.c: 446:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+"355
+[; ;ina226.c: 355:   theAlertValue = (aValue<<1)/5;
+[e = _theAlertValue / << _aValue -> 1 `i -> -> 5 `i `l ]
+"356
+[; ;ina226.c: 356:   break;
+[e $U 209  ]
+"357
+[; ;ina226.c: 357:  case BusVoltageOverLimit:
+[e :U 216 ]
+"358
+[; ;ina226.c: 358:  case BusVoltageUnderLimit:
+[e :U 217 ]
+"359
+[; ;ina226.c: 359:   theAlertValue = (aValue / INA226_BUS_VOLTAGE_LSB);
+[e = _theAlertValue / _aValue _INA226_BUS_VOLTAGE_LSB ]
+"360
+[; ;ina226.c: 360:   break;
+[e $U 209  ]
+"361
+[; ;ina226.c: 361:  default:
 [e :U 218 ]
+"362
+[; ;ina226.c: 362:   return BAD_PARAMETER;
+[e ) . `E1803 6 ]
+[e $UE 202  ]
+"363
+[; ;ina226.c: 363:  }
+}
+[e $U 209  ]
+[e :U 210 ]
+[e [\ -> _aAlertTrigger `ui , $ -> . `E1830 5 `ui 211
+ , $ -> . `E1830 0 `ui 212
+ , $ -> . `E1830 6 `ui 213
+ , $ . `E1830 1 214
+ , $ -> . `E1830 2 `ui 215
+ , $ -> . `E1830 3 `ui 216
+ , $ -> . `E1830 4 `ui 217
+ 218 ]
+[e :U 209 ]
+"367
+[; ;ina226.c: 367:  do { status s = (AutoFox_INA226_WriteRegister(this,INA226_ALERT_LIMIT, (int16_t)theAlertValue)); if (s != OK) { return s; } } while (0);
+[e :U 221 ]
 {
-[v _s `E1802 ~T0 @X0 1 a ]
-[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
-[e $ ! != -> _s `i -> . `E1802 0 `i 219  ]
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_ALERT_LIMIT -> -> _theAlertValue `s `us ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 222  ]
 {
 [e ) _s ]
-[e $UE 213  ]
+[e $UE 202  ]
 }
-[e :U 219 ]
+[e :U 222 ]
 }
-[e :U 217 ]
-"448
-[; ;ina226.c: 448:  this->mConfigRegister &= ~cSampleAvgMask;
-[e =& . *U _this 2 -> ~ -> _cSampleAvgMask `ui `us ]
-"450
-[; ;ina226.c: 450:  this->mConfigRegister |= (aIndexToSampleAverageTable<<cSampleAvgIdxShift);
-[e =| . *U _this 2 -> << _aIndexToSampleAverageTable _cSampleAvgIdxShift `us ]
-"452
-[; ;ina226.c: 452:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
-[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
-[e $UE 213  ]
-"453
-[; ;ina226.c: 453: }
-[e :UE 213 ]
+[e :U 220 ]
+"369
+[; ;ina226.c: 369:  return AutoFox_INA226_WriteRegister(this,INA226_MASK_ENABLE, theMaskEnableRegister);
+[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_MASK_ENABLE _theMaskEnableRegister ]
+[e $UE 202  ]
+"370
+[; ;ina226.c: 370: }
+[e :UE 202 ]
 }
-"455
-[; ;ina226.c: 455: status AutoFox_INA226_Debug_GetConfigRegister(AutoFox_INA226* this, uint16_t* aConfigReg_p)
-[v _AutoFox_INA226_Debug_GetConfigRegister `(E1802 ~T0 @X0 1 ef2`*S143`*us ]
-"456
-[; ;ina226.c: 456: {
+"380
+[; ;ina226.c: 380: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
+[v _AutoFox_INA226_ResetAlertPin `(E1803 ~T0 @X0 1 ef2`*S143`*E1838 ]
+"381
+[; ;ina226.c: 381: {
 {
-[e :U _AutoFox_INA226_Debug_GetConfigRegister ]
-"455
-[; ;ina226.c: 455: status AutoFox_INA226_Debug_GetConfigRegister(AutoFox_INA226* this, uint16_t* aConfigReg_p)
+[e :U _AutoFox_INA226_ResetAlertPin ]
+"380
+[; ;ina226.c: 380: status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
 [v _this `*S143 ~T0 @X0 1 r1 ]
-[v _aConfigReg_p `*us ~T0 @X0 1 r2 ]
-"456
-[; ;ina226.c: 456: {
+[v _aAlertTriggerCause_p `*E1838 ~T0 @X0 1 r2 ]
+"381
+[; ;ina226.c: 381: {
 [f ]
-"457
-[; ;ina226.c: 457:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
-[e $ ! ! != -> . *U _this 0 `i -> 0 `i 221  ]
-[e ) . `E1802 7 ]
-[e $UE 220  ]
-[e :U 221 ]
-"459
-[; ;ina226.c: 459:  return AutoFox_INA226_ReadRegister(this,INA226_CONFIG, aConfigReg_p);
-[e ) ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG _aConfigReg_p ]
-[e $UE 220  ]
-"460
-[; ;ina226.c: 460: }
-[e :UE 220 ]
-}
-"466
-[; ;ina226.c: 466: void SendErrorStatus(status err)
-[v _SendErrorStatus `(v ~T0 @X0 1 ef1`E1802 ]
-"467
-[; ;ina226.c: 467: {
-{
-[e :U _SendErrorStatus ]
-"466
-[; ;ina226.c: 466: void SendErrorStatus(status err)
-[v _err `E1802 ~T0 @X0 1 r1 ]
-"467
-[; ;ina226.c: 467: {
-[f ]
-"468
-[; ;ina226.c: 468:     unsigned char *errorMsg;
-[v _errorMsg `*uc ~T0 @X0 1 a ]
-"471
-[; ;ina226.c: 471:     switch(err)
-[e $U 224  ]
-"472
-[; ;ina226.c: 472:     {
-{
-"473
-[; ;ina226.c: 473:         case OK:
-[e :U 225 ]
-"474
-[; ;ina226.c: 474:             errorMsg = (unsigned char*)"OK \r\n";
-[e = _errorMsg -> :s 1C `*uc ]
-"475
-[; ;ina226.c: 475:             break;
-[e $U 223  ]
-"476
-[; ;ina226.c: 476:         case FAIL:
-[e :U 226 ]
-"477
-[; ;ina226.c: 477:             errorMsg = (unsigned char*)"FAIL \r\n";
-[e = _errorMsg -> :s 2C `*uc ]
-"478
-[; ;ina226.c: 478:             break;
-[e $U 223  ]
-"479
-[; ;ina226.c: 479:         case INA226_TI_ID_MISMATCH:
-[e :U 227 ]
-"480
-[; ;ina226.c: 480:             errorMsg = (unsigned char*)"INA226_TI_ID_MISMATCH \r\n";
-[e = _errorMsg -> :s 3C `*uc ]
-"481
-[; ;ina226.c: 481:             break;
-[e $U 223  ]
-"482
-[; ;ina226.c: 482:         case INA226_DIE_ID_MISMATCH:
-[e :U 228 ]
-"483
-[; ;ina226.c: 483:             errorMsg = (unsigned char*)"INA226_DIE_ID_MISMATCH \r\n";
-[e = _errorMsg -> :s 4C `*uc ]
-"484
-[; ;ina226.c: 484:             break;
-[e $U 223  ]
-"485
-[; ;ina226.c: 485:         case CONFIG_ERROR:
-[e :U 229 ]
-"486
-[; ;ina226.c: 486:             errorMsg = (unsigned char*)"CONFIG_ERROR \r\n";
-[e = _errorMsg -> :s 5C `*uc ]
-"487
-[; ;ina226.c: 487:             break;
-[e $U 223  ]
-"488
-[; ;ina226.c: 488:         case I2C_TRANSMISSION_ERROR:
-[e :U 230 ]
-"489
-[; ;ina226.c: 489:             errorMsg = (unsigned char*)"I2C_TRANSMISSION_ERROR \r\n";
-[e = _errorMsg -> :s 6C `*uc ]
-"490
-[; ;ina226.c: 490:             break;
-[e $U 223  ]
-"491
-[; ;ina226.c: 491:         case BAD_PARAMETER:
-[e :U 231 ]
-"492
-[; ;ina226.c: 492:             errorMsg = (unsigned char*)"BAD_PARAMETER \r\n";
-[e = _errorMsg -> :s 7C `*uc ]
-"493
-[; ;ina226.c: 493:             break;
-[e $U 223  ]
-"494
-[; ;ina226.c: 494:         case NOT_INITIALIZED:
-[e :U 232 ]
-"495
-[; ;ina226.c: 495:             errorMsg = (unsigned char*)"NOT_INITIALIZED \r\n";
-[e = _errorMsg -> :s 8C `*uc ]
-"496
-[; ;ina226.c: 496:             break;
-[e $U 223  ]
-"497
-[; ;ina226.c: 497:         case INVALID_I2C_ADDRESS:
-[e :U 233 ]
-"498
-[; ;ina226.c: 498:             errorMsg = (unsigned char*)"INVALID_I2C_ADDRESS \r\n";
-[e = _errorMsg -> :s 9C `*uc ]
-"499
-[; ;ina226.c: 499:             break;
-[e $U 223  ]
-"500
-[; ;ina226.c: 500:         default:
-[e :U 234 ]
-"501
-[; ;ina226.c: 501:             errorMsg = (unsigned char*)"UNKNOWN_ERROR \r\n";
-[e = _errorMsg -> :s 10C `*uc ]
-"502
-[; ;ina226.c: 502:             break;
-[e $U 223  ]
-"503
-[; ;ina226.c: 503:     }
-}
-[e $U 223  ]
+"383
+[; ;ina226.c: 383:  *aAlertTriggerCause_p = Unknown;
+[e = *U _aAlertTriggerCause_p . `E1838 0 ]
+"384
+[; ;ina226.c: 384:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 224  ]
+[e ) . `E1803 7 ]
+[e $UE 223  ]
 [e :U 224 ]
-[e [\ -> _err `i , $ . `E1802 0 225
- , $ . `E1802 1 226
- , $ . `E1802 2 227
- , $ . `E1802 3 228
- , $ . `E1802 4 229
- , $ . `E1802 5 230
- , $ . `E1802 6 231
- , $ . `E1802 7 232
- , $ . `E1802 8 233
- 234 ]
-[e :U 223 ]
-"506
-[; ;ina226.c: 506:     while (*errorMsg)
-[e $U 235  ]
-[e :U 236 ]
-"507
-[; ;ina226.c: 507:     {
+"386
+[; ;ina226.c: 386:  uint16_t theTriggerCause;
+[v _theTriggerCause `us ~T0 @X0 1 a ]
+"389
+[; ;ina226.c: 389:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_MASK_ENABLE, &theTriggerCause)); if (s != OK) { return s; } } while (0);
+[e :U 227 ]
 {
-"508
-[; ;ina226.c: 508:         SendUART_debug(*errorMsg);
-[e ( _SendUART_debug (1 *U _errorMsg ]
-"509
-[; ;ina226.c: 509:         errorMsg++;
-[e ++ _errorMsg * -> -> 1 `i `x -> -> # *U _errorMsg `i `x ]
-"510
-[; ;ina226.c: 510:     }
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_MASK_ENABLE &U _theTriggerCause ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 228  ]
+{
+[e ) _s ]
+[e $UE 223  ]
+}
+[e :U 228 ]
+}
+[e :U 226 ]
+"392
+[; ;ina226.c: 392:  theTriggerCause &= cAlertCauseMask;
+[e =& _theTriggerCause -> _cAlertCauseMask `us ]
+"395
+[; ;ina226.c: 395:  *aAlertTriggerCause_p = theTriggerCause;
+[e = *U _aAlertTriggerCause_p -> _theTriggerCause `E1838 ]
+"396
+[; ;ina226.c: 396:  return OK;
+[e ) . `E1803 0 ]
+[e $UE 223  ]
+"397
+[; ;ina226.c: 397: }
+[e :UE 223 ]
+}
+"399
+[; ;ina226.c: 399: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226* this, int aIndexToConversionTimeTable)
+[v _AutoFox_INA226_ConfigureVoltageConversionTime `(E1803 ~T0 @X0 1 ef2`*S143`i ]
+"400
+[; ;ina226.c: 400: {
+{
+[e :U _AutoFox_INA226_ConfigureVoltageConversionTime ]
+"399
+[; ;ina226.c: 399: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226* this, int aIndexToConversionTimeTable)
+[v _this `*S143 ~T0 @X0 1 r1 ]
+[v _aIndexToConversionTimeTable `i ~T0 @X0 1 r2 ]
+"400
+[; ;ina226.c: 400: {
+[f ]
+"401
+[; ;ina226.c: 401:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 230  ]
+[e ) . `E1803 7 ]
+[e $UE 229  ]
+[e :U 230 ]
+"403
+[; ;ina226.c: 403:  if(aIndexToConversionTimeTable < 0 || aIndexToConversionTimeTable > cMaxConvTimeTblIdx ){
+[e $ ! || < _aIndexToConversionTimeTable -> 0 `i > _aIndexToConversionTimeTable _cMaxConvTimeTblIdx 231  ]
+{
+"404
+[; ;ina226.c: 404:   return BAD_PARAMETER;
+[e ) . `E1803 6 ]
+[e $UE 229  ]
+"405
+[; ;ina226.c: 405:  }
+}
+[e :U 231 ]
+"408
+[; ;ina226.c: 408:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+[e :U 234 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 235  ]
+{
+[e ) _s ]
+[e $UE 229  ]
 }
 [e :U 235 ]
-"506
-[; ;ina226.c: 506:     while (*errorMsg)
-[e $ != -> *U _errorMsg `i -> 0 `i 236  ]
+}
+[e :U 233 ]
+"410
+[; ;ina226.c: 410:  this->mConfigRegister &= ~(cBusVoltageConvTimeMask | cShuntVoltageConvTimeMask);
+[e =& . *U _this 2 -> ~ | -> _cBusVoltageConvTimeMask `ui -> _cShuntVoltageConvTimeMask `ui `us ]
+"412
+[; ;ina226.c: 412:  uint16_t theMergedBusAndShuntConvTimeIndicies =
+[v _theMergedBusAndShuntConvTimeIndicies `us ~T0 @X0 1 a ]
+[e = _theMergedBusAndShuntConvTimeIndicies -> | << -> -> _aIndexToConversionTimeTable `us `ui _cBusVoltConvTimeIdxShift << -> -> _aIndexToConversionTimeTable `us `ui _cShuntVoltConvTimeIdxShift `us ]
+"416
+[; ;ina226.c: 416:  this->mConfigRegister |= theMergedBusAndShuntConvTimeIndicies;
+[e =| . *U _this 2 -> _theMergedBusAndShuntConvTimeIndicies `us ]
+"418
+[; ;ina226.c: 418:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
+[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
+[e $UE 229  ]
+"419
+[; ;ina226.c: 419: }
+[e :UE 229 ]
+}
+"421
+[; ;ina226.c: 421: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226* this, int aIndexToSampleAverageTable)
+[v _AutoFox_INA226_ConfigureNumSampleAveraging `(E1803 ~T0 @X0 1 ef2`*S143`i ]
+"422
+[; ;ina226.c: 422: {
+{
+[e :U _AutoFox_INA226_ConfigureNumSampleAveraging ]
+"421
+[; ;ina226.c: 421: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226* this, int aIndexToSampleAverageTable)
+[v _this `*S143 ~T0 @X0 1 r1 ]
+[v _aIndexToSampleAverageTable `i ~T0 @X0 1 r2 ]
+"422
+[; ;ina226.c: 422: {
+[f ]
+"423
+[; ;ina226.c: 423:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 237  ]
+[e ) . `E1803 7 ]
+[e $UE 236  ]
 [e :U 237 ]
-"511
-[; ;ina226.c: 511: }
-[e :UE 222 ]
+"425
+[; ;ina226.c: 425:  if(aIndexToSampleAverageTable < 0 || aIndexToSampleAverageTable > cMaxSampleAvgTblIdx ){
+[e $ ! || < _aIndexToSampleAverageTable -> 0 `i > _aIndexToSampleAverageTable _cMaxSampleAvgTblIdx 238  ]
+{
+"426
+[; ;ina226.c: 426:   return BAD_PARAMETER;
+[e ) . `E1803 6 ]
+[e $UE 236  ]
+"427
+[; ;ina226.c: 427:  }
+}
+[e :U 238 ]
+"430
+[; ;ina226.c: 430:  do { status s = (AutoFox_INA226_ReadRegister(this,INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+[e :U 241 ]
+{
+[v _s `E1803 ~T0 @X0 1 a ]
+[e = _s ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG &U . *U _this 2 ]
+[e $ ! != -> _s `i -> . `E1803 0 `i 242  ]
+{
+[e ) _s ]
+[e $UE 236  ]
+}
+[e :U 242 ]
+}
+[e :U 240 ]
+"432
+[; ;ina226.c: 432:  this->mConfigRegister &= ~cSampleAvgMask;
+[e =& . *U _this 2 -> ~ -> _cSampleAvgMask `ui `us ]
+"434
+[; ;ina226.c: 434:  this->mConfigRegister |= (aIndexToSampleAverageTable<<cSampleAvgIdxShift);
+[e =| . *U _this 2 -> << _aIndexToSampleAverageTable _cSampleAvgIdxShift `us ]
+"436
+[; ;ina226.c: 436:  return AutoFox_INA226_WriteRegister(this,INA226_CONFIG, this->mConfigRegister);
+[e ) ( _AutoFox_INA226_WriteRegister (3 , , _this _INA226_CONFIG . *U _this 2 ]
+[e $UE 236  ]
+"437
+[; ;ina226.c: 437: }
+[e :UE 236 ]
+}
+"439
+[; ;ina226.c: 439: status AutoFox_INA226_Debug_GetConfigRegister(AutoFox_INA226* this, uint16_t* aConfigReg_p)
+[v _AutoFox_INA226_Debug_GetConfigRegister `(E1803 ~T0 @X0 1 ef2`*S143`*us ]
+"440
+[; ;ina226.c: 440: {
+{
+[e :U _AutoFox_INA226_Debug_GetConfigRegister ]
+"439
+[; ;ina226.c: 439: status AutoFox_INA226_Debug_GetConfigRegister(AutoFox_INA226* this, uint16_t* aConfigReg_p)
+[v _this `*S143 ~T0 @X0 1 r1 ]
+[v _aConfigReg_p `*us ~T0 @X0 1 r2 ]
+"440
+[; ;ina226.c: 440: {
+[f ]
+"441
+[; ;ina226.c: 441:  ; if(!this->mInitialized) return NOT_INITIALIZED;;
+[e $ ! ! != -> . *U _this 0 `i -> 0 `i 244  ]
+[e ) . `E1803 7 ]
+[e $UE 243  ]
+[e :U 244 ]
+"443
+[; ;ina226.c: 443:  return AutoFox_INA226_ReadRegister(this,INA226_CONFIG, aConfigReg_p);
+[e ) ( _AutoFox_INA226_ReadRegister (3 , , _this _INA226_CONFIG _aConfigReg_p ]
+[e $UE 243  ]
+"444
+[; ;ina226.c: 444: }
+[e :UE 243 ]
+}
+"450
+[; ;ina226.c: 450: void SendErrorStatus(status err)
+[v _SendErrorStatus `(v ~T0 @X0 1 ef1`E1803 ]
+"451
+[; ;ina226.c: 451: {
+{
+[e :U _SendErrorStatus ]
+"450
+[; ;ina226.c: 450: void SendErrorStatus(status err)
+[v _err `E1803 ~T0 @X0 1 r1 ]
+"451
+[; ;ina226.c: 451: {
+[f ]
+"452
+[; ;ina226.c: 452:     unsigned char *errorMsg;
+[v _errorMsg `*uc ~T0 @X0 1 a ]
+"455
+[; ;ina226.c: 455:     switch(err)
+[e $U 247  ]
+"456
+[; ;ina226.c: 456:     {
+{
+"457
+[; ;ina226.c: 457:         case OK:
+[e :U 248 ]
+"458
+[; ;ina226.c: 458:             errorMsg = (unsigned char*)"OK \r\n";
+[e = _errorMsg -> :s 1C `*uc ]
+"459
+[; ;ina226.c: 459:             break;
+[e $U 246  ]
+"460
+[; ;ina226.c: 460:         case FAIL:
+[e :U 249 ]
+"461
+[; ;ina226.c: 461:             errorMsg = (unsigned char*)"FAIL \r\n";
+[e = _errorMsg -> :s 2C `*uc ]
+"462
+[; ;ina226.c: 462:             break;
+[e $U 246  ]
+"463
+[; ;ina226.c: 463:         case INA226_TI_ID_MISMATCH:
+[e :U 250 ]
+"464
+[; ;ina226.c: 464:             errorMsg = (unsigned char*)"INA226_TI_ID_MISMATCH \r\n";
+[e = _errorMsg -> :s 3C `*uc ]
+"465
+[; ;ina226.c: 465:             break;
+[e $U 246  ]
+"466
+[; ;ina226.c: 466:         case INA226_DIE_ID_MISMATCH:
+[e :U 251 ]
+"467
+[; ;ina226.c: 467:             errorMsg = (unsigned char*)"INA226_DIE_ID_MISMATCH \r\n";
+[e = _errorMsg -> :s 4C `*uc ]
+"468
+[; ;ina226.c: 468:             break;
+[e $U 246  ]
+"469
+[; ;ina226.c: 469:         case CONFIG_ERROR:
+[e :U 252 ]
+"470
+[; ;ina226.c: 470:             errorMsg = (unsigned char*)"CONFIG_ERROR \r\n";
+[e = _errorMsg -> :s 5C `*uc ]
+"471
+[; ;ina226.c: 471:             break;
+[e $U 246  ]
+"472
+[; ;ina226.c: 472:         case I2C_TRANSMISSION_ERROR:
+[e :U 253 ]
+"473
+[; ;ina226.c: 473:             errorMsg = (unsigned char*)"I2C_TRANSMISSION_ERROR \r\n";
+[e = _errorMsg -> :s 6C `*uc ]
+"474
+[; ;ina226.c: 474:             break;
+[e $U 246  ]
+"475
+[; ;ina226.c: 475:         case BAD_PARAMETER:
+[e :U 254 ]
+"476
+[; ;ina226.c: 476:             errorMsg = (unsigned char*)"BAD_PARAMETER \r\n";
+[e = _errorMsg -> :s 7C `*uc ]
+"477
+[; ;ina226.c: 477:             break;
+[e $U 246  ]
+"478
+[; ;ina226.c: 478:         case NOT_INITIALIZED:
+[e :U 255 ]
+"479
+[; ;ina226.c: 479:             errorMsg = (unsigned char*)"NOT_INITIALIZED \r\n";
+[e = _errorMsg -> :s 8C `*uc ]
+"480
+[; ;ina226.c: 480:             break;
+[e $U 246  ]
+"481
+[; ;ina226.c: 481:         case INVALID_I2C_ADDRESS:
+[e :U 256 ]
+"482
+[; ;ina226.c: 482:             errorMsg = (unsigned char*)"INVALID_I2C_ADDRESS \r\n";
+[e = _errorMsg -> :s 9C `*uc ]
+"483
+[; ;ina226.c: 483:             break;
+[e $U 246  ]
+"484
+[; ;ina226.c: 484:         default:
+[e :U 257 ]
+"485
+[; ;ina226.c: 485:             errorMsg = (unsigned char*)"UNKNOWN_ERROR \r\n";
+[e = _errorMsg -> :s 10C `*uc ]
+"486
+[; ;ina226.c: 486:             break;
+[e $U 246  ]
+"487
+[; ;ina226.c: 487:     }
+}
+[e $U 246  ]
+[e :U 247 ]
+[e [\ -> _err `i , $ . `E1803 0 248
+ , $ . `E1803 1 249
+ , $ . `E1803 2 250
+ , $ . `E1803 3 251
+ , $ . `E1803 4 252
+ , $ . `E1803 5 253
+ , $ . `E1803 6 254
+ , $ . `E1803 7 255
+ , $ . `E1803 8 256
+ 257 ]
+[e :U 246 ]
+"490
+[; ;ina226.c: 490:     while (*errorMsg)
+[e $U 258  ]
+[e :U 259 ]
+"491
+[; ;ina226.c: 491:     {
+{
+"492
+[; ;ina226.c: 492:         SendUART_debug(*errorMsg);
+[e ( _SendUART_debug (1 *U _errorMsg ]
+"493
+[; ;ina226.c: 493:         errorMsg++;
+[e ++ _errorMsg * -> -> 1 `i `x -> -> # *U _errorMsg `i `x ]
+"494
+[; ;ina226.c: 494:     }
+}
+[e :U 258 ]
+"490
+[; ;ina226.c: 490:     while (*errorMsg)
+[e $ != -> *U _errorMsg `i -> 0 `i 259  ]
+[e :U 260 ]
+"495
+[; ;ina226.c: 495: }
+[e :UE 245 ]
 }
 [a 9C 73 78 86 65 76 73 68 95 73 50 67 95 65 68 68 82 69 83 83 32 13 10 0 ]
 [a 10C 85 78 75 78 79 87 78 95 69 82 82 79 82 32 13 10 0 ]

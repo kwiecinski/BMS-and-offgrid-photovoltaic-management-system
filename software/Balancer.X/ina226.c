@@ -67,7 +67,7 @@ static const uint8_t    INA226_DIE_ID              = 0xFF; // readonly
 
 //=============================================================================
 
-static const int32_t    INA226_BUS_VOLTAGE_LSB     = 1250; //1250uV per bit
+static const int32_t    INA226_BUS_VOLTAGE_LSB     = 1231; //1250uV per bit
 //static const int32_t    INA226_SHUNT_VOLTAGE_LSB   = 2500;    //2500 nano volts per bit (=2.5uV)
 static const int32_t    INA226_POWER_LSB_FACTOR    = 25;
 static const uint16_t   INA226_MANUFACTURER_ID_K   = 0x5449;
@@ -76,7 +76,7 @@ static const uint16_t   INA226_DIE_ID_K            = 0x2260;
 
 //=============================================================================
 
-static const uint8_t    INA226_DEFAULT_I2C_ADDRESS  = 0b1000000;
+
 static const uint16_t   INA226_CONFIG_DEFAULT       = 0x4527; // Our default config reg settings
 //=============================================================================
 const uint16_t cResetCommand                = 0x8000;
@@ -117,42 +117,29 @@ SendUART_debug('a');
     // Good so far, check that it's an INA226 device atthe specified address.
     uint16_t theINA226_ID;
     CALL_FN( AutoFox_INA226_ReadRegister(this, INA226_MANUFACTURER_ID, &theINA226_ID) );
-    /*
     if(theINA226_ID != INA226_MANUFACTURER_ID_K){
-        SendUART_debug('k');
         return INA226_TI_ID_MISMATCH; // Expected to find TI manufacturer ID
     }
     CALL_FN( AutoFox_INA226_ReadRegister(this, INA226_DIE_ID, &theINA226_ID) );
-    if(theINA226_ID != INA226_DIE_ID_K){
-        SendUART_debug('e');
+    if(theINA226_ID != INA226_DIE_ID_K){ 
         return INA226_DIE_ID_MISMATCH; // Expected to find INA226 device ID
     }
-    
-    
-SendUART_debug('b');
-
     this->mI2C_Address = aI2C_Address;
 
     // Reset the INA226 device
     CALL_FN( AutoFox_INA226_WriteRegister(this, INA226_CONFIG, cResetCommand) );
-SendUART_debug('c');
     // Now set our own default configuration (you can redefine this constant in the header, as needed)
     CALL_FN( AutoFox_INA226_WriteRegister(this, INA226_CONFIG, INA226_CONFIG_DEFAULT) );
-SendUART_debug('d');
     // Read back the configuration register and check that it matches
-    CALL_FN( AutoFox_INA226_ReadRegister(this, INA226_CONFIG, &(this->mConfigRegister)) );
-    SendUART_debug('o');
-    if(this->mConfigRegister != INA226_CONFIG_DEFAULT){
-        SendUART_debug('r');
+    CALL_FN( AutoFox_INA226_ReadRegister(this, INA226_CONFIG, &(this->mConfigRegister)) );  
+    if(this->mConfigRegister != INA226_CONFIG_DEFAULT){       
         return CONFIG_ERROR;
     }
-
     // Set up the calibration register and calculate scaling factors
     CALL_FN( AutoFox_INA226_setupCalibration(this, aShuntResistor_mOhms, aMaxCurrent_Amps) );
 
     this->mInitialized = true;
     return OK;
- */
 }
 
 //----------------------------------------------------------------------------
@@ -184,19 +171,17 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 
 status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 {
- // Rozpoczynamy transmisj? I2C
     I2C_Master_Start();
     
-    // Wysy?amy adres urz?dzenia (adres przesuni?ty o jeden bit w lewo, aby uwzgl?dni? bit R/W)
-    I2C_Master_Write((aI2C_Address << 1) | 0);  // 0 oznacza operacj? zapisu
+    //Address is shifted one bit left becouse of R/W bit
+    I2C_Master_Write((aI2C_Address << 1) | 0);  // 0 is write operation
 
-    // Sprawdzamy, czy urz?dzenie odpowiedzia?o (czyli czy nie wyst?pi? b??d ACK)
-    if (ACKSTAT == 0)  // Je?li ACKSTAT jest 0, to urz?dzenie odpowiedzia?o poprawnie
+    if (ACKSTAT == 0) 
     {
         I2C_Master_Stop();
         return OK;
     }
-    else  // W przeciwnym razie brak odpowiedzi
+    else
     {
         I2C_Master_Stop();
         return INVALID_I2C_ADDRESS;
@@ -208,19 +193,17 @@ status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
 {
     *aValue_p = 0;
-
-    // Wys?anie adresu rejestru
     I2C_Master_Start();
     I2C_Master_Write(this->mI2C_Address << 1);  // Adres I2C z przesuni?ciem w lewo
     I2C_Master_Write(aRegister);                // Adres rejestru do odczytu
     I2C_Master_Stop();
-
-    // Odczyt danych (2 bajty)
     I2C_Master_Start();
     I2C_Master_Write((this->mI2C_Address << 1) | 1); // Adres I2C z ustawionym bitem odczytu
+   
     *aValue_p = I2C_Master_Read(1);  // Odczyt pierwszego bajtu (z potwierdzeniem ACK)
     *aValue_p = *aValue_p << 8;     // Przesuni?cie w lewo dla pierwszego bajtu
     *aValue_p |= I2C_Master_Read(0); // Odczyt drugiego bajtu (bez ACK)
+    
     I2C_Master_Stop();
 
     return OK;
@@ -231,19 +214,17 @@ status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uin
 {
     uint8_t buffer[3];
     buffer[0] = aRegister;
-    buffer[1] = (uint8_t)((aValue >> 8) & 0xFF);  // Wy?szy bajt warto?ci
-    buffer[2] = (uint8_t)(aValue & 0xFF);         // Ni?szy bajt warto?ci
+    buffer[1] = (uint8_t)((aValue >> 8) & 0xFF); 
+    buffer[2] = (uint8_t)(aValue & 0xFF);         
 
-    // Rozpocz?cie transmisji I2C
+   
     I2C_Master_Start();
-    I2C_Master_Write(this->mI2C_Address << 1);  // Adres I2C z przesuni?ciem w lewo (do zapisu)
-    
-    // Wysy?anie danych (adres rejestru i 2 bajty warto?ci)
-    I2C_Master_Write(buffer[0]);  // Adres rejestru
-    I2C_Master_Write(buffer[1]);  // Wy?szy bajt warto?ci
-    I2C_Master_Write(buffer[2]);  // Ni?szy bajt warto?ci
-    
-    // Zako?czenie transmisji I2C
+    I2C_Master_Write(this->mI2C_Address << 1);  
+  
+    I2C_Master_Write(buffer[0]);  
+    I2C_Master_Write(buffer[1]);  
+    I2C_Master_Write(buffer[2]);  
+ 
     I2C_Master_Stop();
 
     return OK;
@@ -264,12 +245,13 @@ int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
 	return theResult;
 }
 //----------------------------------------------------------------------------
-int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226* this)
+uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this)
 {
-	uint16_t theRegisterValue=0;
-	AutoFox_INA226_ReadRegister(this,INA226_BUS_VOLTAGE, &theRegisterValue);
-	return (int32_t)theRegisterValue * INA226_BUS_VOLTAGE_LSB;
+    uint32_t theRegisterValue = 0;
+    AutoFox_INA226_ReadRegister(this, INA226_BUS_VOLTAGE, &theRegisterValue);
+    return (uint16_t)((theRegisterValue * INA226_BUS_VOLTAGE_LSB)/10000);
 }
+
 
 //----------------------------------------------------------------------------
 int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
@@ -344,6 +326,8 @@ status  AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAler
 	if(aLatching){
 		theMaskEnableRegister |= cAlertLatchingMode;
 	}
+    
+    
 
 	//We need to convert the value supplied (parameter) for the trigger to an INA226 register value.
 	//The supplied value could be a shunt voltage, bus voltage or power reading.  All values are

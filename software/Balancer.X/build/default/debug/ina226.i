@@ -2930,6 +2930,8 @@ uintmax_t strtoumax(const char *restrict, char **restrict, int);
 
 
 
+static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
+
 
 struct AutoFox_INA226;
 struct INA226_Registers;
@@ -2993,7 +2995,7 @@ status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
 status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
 
 int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226*);
-int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226*);
+uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
 int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226*);
 int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226*);
 
@@ -3033,10 +3035,6 @@ unsigned char I2C_Master_Read(unsigned char ack);
 # 1 "./sw_uart.h" 1
 # 12 "./sw_uart.h"
 void SendUART_debug(unsigned char data);
-
-void SendArrayUART_debug(unsigned char *data, unsigned char size);
-void SendDigitUART_debug(unsigned int data);
-void SendInt32ToUART(int32_t value);
 # 37 "ina226.c" 2
 # 56 "ina226.c"
 static const uint8_t INA226_CONFIG = 0x00;
@@ -3053,7 +3051,7 @@ static const uint8_t INA226_DIE_ID = 0xFF;
 
 
 
-static const int32_t INA226_BUS_VOLTAGE_LSB = 1250;
+static const int32_t INA226_BUS_VOLTAGE_LSB = 1231;
 
 static const int32_t INA226_POWER_LSB_FACTOR = 25;
 static const uint16_t INA226_MANUFACTURER_ID_K = 0x5449;
@@ -3062,7 +3060,7 @@ static const uint16_t INA226_DIE_ID_K = 0x2260;
 
 
 
-static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
+
 static const uint16_t INA226_CONFIG_DEFAULT = 0x4527;
 
 const uint16_t cResetCommand = 0x8000;
@@ -3103,7 +3101,29 @@ SendUART_debug('a');
 
     uint16_t theINA226_ID;
     do { status s = (AutoFox_INA226_ReadRegister(this, INA226_MANUFACTURER_ID, &theINA226_ID)); if (s != OK) { return s; } } while (0);
-# 156 "ina226.c"
+    if(theINA226_ID != INA226_MANUFACTURER_ID_K){
+        return INA226_TI_ID_MISMATCH;
+    }
+    do { status s = (AutoFox_INA226_ReadRegister(this, INA226_DIE_ID, &theINA226_ID)); if (s != OK) { return s; } } while (0);
+    if(theINA226_ID != INA226_DIE_ID_K){
+        return INA226_DIE_ID_MISMATCH;
+    }
+    this->mI2C_Address = aI2C_Address;
+
+
+    do { status s = (AutoFox_INA226_WriteRegister(this, INA226_CONFIG, cResetCommand)); if (s != OK) { return s; } } while (0);
+
+    do { status s = (AutoFox_INA226_WriteRegister(this, INA226_CONFIG, INA226_CONFIG_DEFAULT)); if (s != OK) { return s; } } while (0);
+
+    do { status s = (AutoFox_INA226_ReadRegister(this, INA226_CONFIG, &(this->mConfigRegister))); if (s != OK) { return s; } } while (0);
+    if(this->mConfigRegister != INA226_CONFIG_DEFAULT){
+        return CONFIG_ERROR;
+    }
+
+    do { status s = (AutoFox_INA226_setupCalibration(this, aShuntResistor_mOhms, aMaxCurrent_Amps)); if (s != OK) { return s; } } while (0);
+
+    this->mInitialized = 1;
+    return OK;
 }
 
 
@@ -3135,12 +3155,10 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 
 status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 {
-
     I2C_Master_Start();
 
 
     I2C_Master_Write((aI2C_Address << 1) | 0);
-
 
     if (ACKSTAT == 0)
     {
@@ -3159,19 +3177,17 @@ status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t* aValue_p)
 {
     *aValue_p = 0;
-
-
     I2C_Master_Start();
     I2C_Master_Write(this->mI2C_Address << 1);
     I2C_Master_Write(aRegister);
     I2C_Master_Stop();
-
-
     I2C_Master_Start();
     I2C_Master_Write((this->mI2C_Address << 1) | 1);
+
     *aValue_p = I2C_Master_Read(1);
     *aValue_p = *aValue_p << 8;
     *aValue_p |= I2C_Master_Read(0);
+
     I2C_Master_Stop();
 
     return OK;
@@ -3189,11 +3205,9 @@ status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uin
     I2C_Master_Start();
     I2C_Master_Write(this->mI2C_Address << 1);
 
-
     I2C_Master_Write(buffer[0]);
     I2C_Master_Write(buffer[1]);
     I2C_Master_Write(buffer[2]);
-
 
     I2C_Master_Stop();
 
@@ -3215,12 +3229,13 @@ int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
  return theResult;
 }
 
-int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226* this)
+uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this)
 {
- uint16_t theRegisterValue=0;
- AutoFox_INA226_ReadRegister(this,INA226_BUS_VOLTAGE, &theRegisterValue);
- return (int32_t)theRegisterValue * INA226_BUS_VOLTAGE_LSB;
+    uint32_t theRegisterValue = 0;
+    AutoFox_INA226_ReadRegister(this, INA226_BUS_VOLTAGE, &theRegisterValue);
+    return (uint16_t)((theRegisterValue * INA226_BUS_VOLTAGE_LSB)/10000);
 }
+
 
 
 int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226* this)
@@ -3295,7 +3310,7 @@ status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlert
  if(aLatching){
   theMaskEnableRegister |= cAlertLatchingMode;
  }
-# 356 "ina226.c"
+# 340 "ina226.c"
  int32_t theAlertValue=0;
 
  switch(aAlertTrigger){
@@ -3327,7 +3342,7 @@ status AutoFox_INA226_ConfigureAlertPinTrigger(AutoFox_INA226* this, enum eAlert
 
  return AutoFox_INA226_WriteRegister(this,INA226_MASK_ENABLE, theMaskEnableRegister);
 }
-# 396 "ina226.c"
+# 380 "ina226.c"
 status AutoFox_INA226_ResetAlertPin(AutoFox_INA226* this, enum eAlertTriggerCause* aAlertTriggerCause_p )
 {
 

@@ -29,9 +29,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
 [v __delay `JF164 ~T0 @X0 0 e ]
 [p i __delay ]
-"15 ./hw_uart.h
-[; ;./hw_uart.h: 15: unsigned char DigitToString(unsigned char digit);
-[v _DigitToString `(uc ~T0 @X0 0 ef1`uc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -364,254 +361,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;sw_uart.c: 41: }
 [e :UE 140 ]
 }
+"43
+[; ;sw_uart.c: 43: void putch(char txData)
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
 "44
-[; ;sw_uart.c: 44: void SendArrayUART_debug(unsigned char *data, unsigned char size)
-[v _SendArrayUART_debug `(v ~T0 @X0 1 ef2`*uc`uc ]
-"45
-[; ;sw_uart.c: 45: {
+[; ;sw_uart.c: 44: {
 {
-[e :U _SendArrayUART_debug ]
+[e :U _putch ]
+"43
+[; ;sw_uart.c: 43: void putch(char txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
 "44
-[; ;sw_uart.c: 44: void SendArrayUART_debug(unsigned char *data, unsigned char size)
-[v _data `*uc ~T0 @X0 1 r1 ]
-[v _size `uc ~T0 @X0 1 r2 ]
-"45
-[; ;sw_uart.c: 45: {
+[; ;sw_uart.c: 44: {
 [f ]
+"45
+[; ;sw_uart.c: 45:      SendUART_debug(txData);
+[e ( _SendUART_debug (1 -> _txData `uc ]
 "46
-[; ;sw_uart.c: 46:     unsigned char i;
-[v _i `uc ~T0 @X0 1 a ]
-"48
-[; ;sw_uart.c: 48:     for(i=0;i<size;i++)
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 150  ]
-[e :U 147 ]
-"49
-[; ;sw_uart.c: 49:     {
-{
-"50
-[; ;sw_uart.c: 50:         SendUART_debug(*(data+i));
-[e ( _SendUART_debug (1 *U + _data * -> -> _i `i `x -> -> # *U _data `i `x ]
-"51
-[; ;sw_uart.c: 51:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 150 ]
-[e $ < -> _i `i -> _size `i 147  ]
-[e :U 148 ]
-}
-"53
-[; ;sw_uart.c: 53: }
+[; ;sw_uart.c: 46: }
 [e :UE 146 ]
-}
-"55
-[; ;sw_uart.c: 55: void SendDigitUART_debug(unsigned int data)
-[v _SendDigitUART_debug `(v ~T0 @X0 1 ef1`ui ]
-"56
-[; ;sw_uart.c: 56: {
-{
-[e :U _SendDigitUART_debug ]
-"55
-[; ;sw_uart.c: 55: void SendDigitUART_debug(unsigned int data)
-[v _data `ui ~T0 @X0 1 r1 ]
-"56
-[; ;sw_uart.c: 56: {
-[f ]
-"57
-[; ;sw_uart.c: 57:     if(data<=0xFF)
-[e $ ! <= _data -> -> 255 `i `ui 152  ]
-"58
-[; ;sw_uart.c: 58:     {
-{
-"59
-[; ;sw_uart.c: 59:         SendUART_debug(DigitToString(data%1000/100));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % _data -> -> 1000 `i `ui -> -> 100 `i `ui `uc ]
-"60
-[; ;sw_uart.c: 60:         SendUART_debug(DigitToString(data%100/10));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % _data -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"61
-[; ;sw_uart.c: 61:         SendUART_debug(DigitToString(data%10));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> % _data -> -> 10 `i `ui `uc ]
-"64
-[; ;sw_uart.c: 64:     }else if((data>0x00FF) && (data<=0xFFFF))
-}
-[e $U 153  ]
-[e :U 152 ]
-[e $ ! && > _data -> -> 255 `i `ui <= _data -> 65535 `ui 154  ]
-"65
-[; ;sw_uart.c: 65:     {
-{
-"66
-[; ;sw_uart.c: 66:         SendUART_debug(DigitToString(data%100000/10000));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % -> _data `l -> 100000 `l -> -> 10000 `i `l `uc ]
-"67
-[; ;sw_uart.c: 67:         SendUART_debug(DigitToString(data%10000/1000));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % _data -> -> 10000 `i `ui -> -> 1000 `i `ui `uc ]
-"68
-[; ;sw_uart.c: 68:         SendUART_debug(DigitToString(data%1000/100));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % _data -> -> 1000 `i `ui -> -> 100 `i `ui `uc ]
-"69
-[; ;sw_uart.c: 69:         SendUART_debug(DigitToString(data%100/10));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> / % _data -> -> 100 `i `ui -> -> 10 `i `ui `uc ]
-"70
-[; ;sw_uart.c: 70:         SendUART_debug(DigitToString(data%10));
-[e ( _SendUART_debug (1 ( _DigitToString (1 -> % _data -> -> 10 `i `ui `uc ]
-"72
-[; ;sw_uart.c: 72:     }
-}
-[e :U 154 ]
-[e :U 153 ]
-"73
-[; ;sw_uart.c: 73: }
-[e :UE 151 ]
-}
-"76
-[; ;sw_uart.c: 76: void itoa(int32_t value, char *str, int numeral_base)
-[v _itoa `(v ~T0 @X0 1 ef3`l`*uc`i ]
-"77
-[; ;sw_uart.c: 77: {
-{
-[e :U _itoa ]
-"76
-[; ;sw_uart.c: 76: void itoa(int32_t value, char *str, int numeral_base)
-[v _value `l ~T0 @X0 1 r1 ]
-[v _str `*uc ~T0 @X0 1 r2 ]
-[v _numeral_base `i ~T0 @X0 1 r3 ]
-"77
-[; ;sw_uart.c: 77: {
-[f ]
-"78
-[; ;sw_uart.c: 78:     int32_t i = 0;
-[v _i `l ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `l ]
-"79
-[; ;sw_uart.c: 79:     int32_t isNegative = 0;
-[v _isNegative `l ~T0 @X0 1 a ]
-[e = _isNegative -> -> 0 `i `l ]
-"82
-[; ;sw_uart.c: 82:     if (value < 0) {
-[e $ ! < _value -> -> 0 `i `l 156  ]
-{
-"83
-[; ;sw_uart.c: 83:         isNegative = 1;
-[e = _isNegative -> -> 1 `i `l ]
-"84
-[; ;sw_uart.c: 84:         value = -value;
-[e = _value -U _value ]
-"85
-[; ;sw_uart.c: 85:     }
-}
-[e :U 156 ]
-"88
-[; ;sw_uart.c: 88:     do {
-[e :U 159 ]
-{
-"89
-[; ;sw_uart.c: 89:         str[i++] = (value % numeral_base) + '0';
-[e = *U + _str * -> ++ _i -> -> 1 `i `l `x -> -> # *U _str `i `x -> + % _value -> _numeral_base `l -> -> 48 `ui `l `uc ]
-"90
-[; ;sw_uart.c: 90:         value = value / numeral_base;
-[e = _value / _value -> _numeral_base `l ]
-"91
-[; ;sw_uart.c: 91:     } while (value != 0);
-}
-[e $ != _value -> -> 0 `i `l 159  ]
-[e :U 158 ]
-"94
-[; ;sw_uart.c: 94:     if (isNegative) {
-[e $ ! != _isNegative -> -> 0 `i `l 160  ]
-{
-"95
-[; ;sw_uart.c: 95:         str[i++] = '-';
-[e = *U + _str * -> ++ _i -> -> 1 `i `l `x -> -> # *U _str `i `x -> -> 45 `ui `uc ]
-"96
-[; ;sw_uart.c: 96:     }
-}
-[e :U 160 ]
-"98
-[; ;sw_uart.c: 98:     str[i] = '\0';
-[e = *U + _str * -> _i `x -> -> # *U _str `i `x -> -> 0 `ui `uc ]
-"101
-[; ;sw_uart.c: 101:     int32_t start = 0;
-[v _start `l ~T0 @X0 1 a ]
-[e = _start -> -> 0 `i `l ]
-"102
-[; ;sw_uart.c: 102:     int32_t end = i - 1;
-[v _end `l ~T0 @X0 1 a ]
-[e = _end - _i -> -> 1 `i `l ]
-"103
-[; ;sw_uart.c: 103:     while (start < end) {
-[e $U 161  ]
-[e :U 162 ]
-{
-"104
-[; ;sw_uart.c: 104:         char temp = str[start];
-[v _temp `uc ~T0 @X0 1 a ]
-[e = _temp *U + _str * -> _start `x -> -> # *U _str `i `x ]
-"105
-[; ;sw_uart.c: 105:         str[start] = str[end];
-[e = *U + _str * -> _start `x -> -> # *U _str `i `x *U + _str * -> _end `x -> -> # *U _str `i `x ]
-"106
-[; ;sw_uart.c: 106:         str[end] = temp;
-[e = *U + _str * -> _end `x -> -> # *U _str `i `x _temp ]
-"107
-[; ;sw_uart.c: 107:         start++;
-[e ++ _start -> -> 1 `i `l ]
-"108
-[; ;sw_uart.c: 108:         end--;
-[e -- _end -> -> 1 `i `l ]
-"109
-[; ;sw_uart.c: 109:     }
-}
-[e :U 161 ]
-"103
-[; ;sw_uart.c: 103:     while (start < end) {
-[e $ < _start _end 162  ]
-[e :U 163 ]
-"110
-[; ;sw_uart.c: 110: }
-[e :UE 155 ]
-}
-"112
-[; ;sw_uart.c: 112: void SendInt32ToUART(int32_t value)
-[v _SendInt32ToUART `(v ~T0 @X0 1 ef1`l ]
-"113
-[; ;sw_uart.c: 113: {
-{
-[e :U _SendInt32ToUART ]
-"112
-[; ;sw_uart.c: 112: void SendInt32ToUART(int32_t value)
-[v _value `l ~T0 @X0 1 r1 ]
-"113
-[; ;sw_uart.c: 113: {
-[f ]
-"114
-[; ;sw_uart.c: 114:     char buffer[12];
-[v _buffer `uc ~T0 @X0 -> 12 `i a ]
-"117
-[; ;sw_uart.c: 117:     itoa(value, buffer, 10);
-[e ( _itoa (3 , , _value &U _buffer -> 10 `i ]
-"120
-[; ;sw_uart.c: 120:     for (int i = 0; buffer[i] != '\0'; i++) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $U 168  ]
-[e :U 165 ]
-{
-"121
-[; ;sw_uart.c: 121:         SendUART_debug(buffer[i]);
-[e ( _SendUART_debug (1 -> *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux `uc ]
-"122
-[; ;sw_uart.c: 122:     }
-}
-[e ++ _i -> 1 `i ]
-[e :U 168 ]
-[e $ != -> *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux `ui -> 0 `ui 165  ]
-[e :U 166 ]
-}
-"123
-[; ;sw_uart.c: 123: }
-[e :UE 164 ]
 }

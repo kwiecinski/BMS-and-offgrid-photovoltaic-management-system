@@ -2581,9 +2581,10 @@ void I2C_Init(void)
     SSPADD=19;
 # 49 "hw_i2c.c"
     SSPCON2=0;
-    SSPSTAT=0;
+
+    SSPSTATbits.SMP=1;
 }
-# 60 "hw_i2c.c"
+# 61 "hw_i2c.c"
 void I2C_Master_Wait(void)
 {
     while (SSPCON2bits.RCEN || SSPCON2bits.PEN || SSPCON2bits.RSEN ||
@@ -2591,25 +2592,25 @@ void I2C_Master_Wait(void)
     {
     };
 }
-# 76 "hw_i2c.c"
+# 77 "hw_i2c.c"
 void I2C_Master_Start(void)
 {
     I2C_Master_Wait();
     SSPCON2bits.SEN=1;
 }
-# 90 "hw_i2c.c"
+# 91 "hw_i2c.c"
 void I2C_Master_Stop(void)
 {
     I2C_Master_Wait();
     SSPCON2bits.PEN=1;
 }
-# 104 "hw_i2c.c"
+# 105 "hw_i2c.c"
 void I2C_Master_Write(unsigned data)
 {
     I2C_Master_Wait();
     SSPBUF=data;
 }
-# 118 "hw_i2c.c"
+# 119 "hw_i2c.c"
 unsigned char I2C_Master_Read(unsigned char ack)
 {
     unsigned short data;

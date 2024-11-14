@@ -47,7 +47,8 @@ void I2C_Init(void)
     
 
     SSPCON2=0;
-    SSPSTAT=0;
+    //SSPSTAT=0;
+    SSPSTATbits.SMP=1; //1 = Slew rate control disabled for standard speed mode (100 kHz and 1 MHz)
 }
 ///////////////////////////////////////////////////////////////////////////////
 ///

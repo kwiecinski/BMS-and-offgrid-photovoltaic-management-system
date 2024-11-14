@@ -2976,6 +2976,12 @@
 		(uuid "63392831-6e8a-429c-9e7b-cf065edf9914")
 	)
 	(junction
+		(at 83.82 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6357ea63-395c-4dc1-abb9-226a42078b03")
+	)
+	(junction
 		(at 128.27 276.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3040,6 +3046,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84c81cfb-90af-464b-b4ef-2fe0fff40faa")
+	)
+	(junction
+		(at 64.77 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88886cde-b3ee-429b-af00-9a1fe4686abd")
 	)
 	(junction
 		(at 190.5 209.55)
@@ -3310,6 +3322,16 @@
 			(type default)
 		)
 		(uuid "079d060c-85bd-4339-83de-080f2a07c9ce")
+	)
+	(wire
+		(pts
+			(xy 64.77 69.85) (xy 83.82 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07e141dd-c807-4888-939f-6de4dd74c289")
 	)
 	(wire
 		(pts
@@ -3940,6 +3962,16 @@
 			(type default)
 		)
 		(uuid "3c0b70b5-52f3-4b41-9d3b-f0996a2a5860")
+	)
+	(wire
+		(pts
+			(xy 64.77 80.01) (xy 64.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c150c44-ae30-4054-8cea-1e60d03c861a")
 	)
 	(wire
 		(pts
@@ -4733,7 +4765,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 68.58) (xy 83.82 72.39)
+			(xy 83.82 68.58) (xy 83.82 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5113,6 +5145,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 72.39) (xy 64.77 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b56ff2f1-09e6-4dac-b82c-849ca584588d")
+	)
+	(wire
+		(pts
 			(xy 212.09 91.44) (xy 212.09 97.79)
 		)
 		(stroke
@@ -5130,6 +5172,16 @@
 			(type default)
 		)
 		(uuid "b665045d-a770-4f36-93bb-1f4e92dc2aa4")
+	)
+	(wire
+		(pts
+			(xy 83.82 69.85) (xy 83.82 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b68aca34-3013-4291-8b7e-bf0fd8ed2d5d")
 	)
 	(wire
 		(pts
@@ -5903,6 +5955,16 @@
 	)
 	(wire
 		(pts
+			(xy 64.77 90.17) (xy 66.04 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8a30ad6-7bb9-4246-a5f0-e8dd3f708f7e")
+	)
+	(wire
+		(pts
 			(xy 212.09 68.58) (xy 212.09 76.2)
 		)
 		(stroke
@@ -5953,7 +6015,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 90.17) (xy 66.04 90.17)
+			(xy 63.5 90.17) (xy 64.77 90.17)
 		)
 		(stroke
 			(width 0)
@@ -7939,7 +8001,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "34ef03c7-0e4a-4a27-b15e-7df2ba85ece1")
 		(property "Reference" "C5"
 			(at 111.252 86.614 0)
@@ -7950,8 +8012,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
-			(at 109.22 88.9 0)
+		(property "Value" "1n"
+			(at 111.252 88.646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14866,6 +14928,75 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 64.77 76.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cf1f8c21-e38d-4eba-a5e7-6d41d7296b66")
+		(property "Reference" "R90"
+			(at 59.69 75.184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 58.42 76.962 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 66.548 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 64.77 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "29634518-fa12-4d02-a6cb-ff7228c5d5d3")
+		)
+		(pin "1"
+			(uuid "d7fc281d-e051-451f-82d7-ec3dcb8fe6f1")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
+					(reference "R90")
 					(unit 1)
 				)
 			)

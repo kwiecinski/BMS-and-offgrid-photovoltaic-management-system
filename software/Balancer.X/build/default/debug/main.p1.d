@@ -6,4 +6,5 @@ interrupts.h  \
 hw_i2c.h  \
 hw_uart.h  \
 sw_uart.h  \
-ina226.h 
+ina226.h  \
+tinyprintf.h 

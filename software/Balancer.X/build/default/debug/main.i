@@ -2557,6 +2557,159 @@ extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
 # 8 "main.c" 2
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short ssize_t;
+# 253 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 9 "main.c" 2
 
 # 1 "./main.h" 1
 # 13 "./main.h"
@@ -2600,18 +2753,11 @@ unsigned char I2C_Master_Read(unsigned char ack);
 # 11 "./hw_uart.h"
 void UART_Init(void);
 void SendUART(char data);
-void SendArrayUART(unsigned char *data, unsigned char size);
-void SendDigitUART(unsigned int data);
-unsigned char DigitToString(unsigned char digit);
 # 14 "main.c" 2
 
 # 1 "./sw_uart.h" 1
 # 12 "./sw_uart.h"
 void SendUART_debug(unsigned char data);
-
-void SendArrayUART_debug(unsigned char *data, unsigned char size);
-void SendDigitUART_debug(unsigned int data);
-void SendInt32ToUART(int32_t value);
 # 15 "main.c" 2
 
 # 1 "./ina226.h" 1
@@ -2634,6 +2780,8 @@ uintmax_t strtoumax(const char *restrict, char **restrict, int);
 # 43 "./ina226.h" 2
 
 
+
+static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
 
 
 struct AutoFox_INA226;
@@ -2698,7 +2846,7 @@ status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
 status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
 
 int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226*);
-int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226*);
+uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
 int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226*);
 int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226*);
 
@@ -2725,20 +2873,49 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 void SendErrorStatus(status err);
 # 16 "main.c" 2
 
+# 1 "./tinyprintf.h" 1
+# 104 "./tinyprintf.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdarg.h" 1 3
 
 
-AutoFox_INA226 device;
 
 
 
-void SendBusVoltage(void)
-{
-    int32_t busVoltage_uV = AutoFox_INA226_GetBusVoltage_uV(&device);
-    SendInt32ToUART(busVoltage_uV);
-}
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 9 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdarg.h" 2 3
+
+#pragma intrinsic(__va_start)
+#pragma intrinsic(__va_arg)
+
+extern void * __va_start(void);
+extern void * __va_arg(void *, ...);
+# 105 "./tinyprintf.h" 2
+# 129 "./tinyprintf.h"
+typedef unsigned int size_t;
+# 145 "./tinyprintf.h"
+typedef void (*putcf) (void *, char);
+# 157 "./tinyprintf.h"
+void tfp_format(void *putp, putcf putf, const char *fmt, va_list va);
+
+
+int tfp_vsnprintf(char *str, size_t size, const char *fmt, va_list ap);
+int tfp_snprintf(char *str, size_t size, const char *fmt, ...) ;
+
+int tfp_vsprintf(char *str, const char *fmt, va_list ap);
+int tfp_sprintf(char *str, const char *fmt, ...) ;
+# 175 "./tinyprintf.h"
+void init_printf(void *putp, putcf putf);
+void tfp_printf(char *fmt, ...) ;
+# 17 "main.c" 2
+
 
 void main(void)
 {
+    AutoFox_INA226 ina226;
+
+    AutoFox_INA226_Constructor(&ina226);
     Global_Init();
     Interrupt_Init();
     I2C_Init();
@@ -2747,18 +2924,21 @@ void main(void)
     PORTCbits.RC0=1;
     PORTAbits.RA6=1;
 
+    SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
+    SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111));
+    SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
 
-
+    uint16_t bus_voltage;
 
     while(1)
     {
 
+        bus_voltage=AutoFox_INA226_GetBusVoltage_V(&ina226);
 
 
-         uint16_t theINA226_ID;
-        SendErrorStatus(AutoFox_INA226_ReadRegister(&device, 0xFE, &theINA226_ID));
-        SendInt32ToUART(theINA226_ID);
+
+
+
         _delay((unsigned long)((1000)*(8000000/4000.0)));
-
     }
 }

@@ -40,7 +40,13 @@ void SendUART_debug(unsigned char data)
     INTCONbits.GIE=1;
 }
 
+void putch(char txData)
+{    
+     SendUART_debug(txData);
+}
 
+
+/*
 void SendArrayUART_debug(unsigned char *data, unsigned char size)
 {
     unsigned char i;
@@ -111,7 +117,7 @@ void itoa(int32_t value, char *str, int numeral_base)
 
 void SendInt32ToUART(int32_t value)
 {
-    char buffer[12];  // Bufer do przechowania tekstowej reprezentacji liczby, max 11 znaków + terminator
+    char buffer[12];  // Bufor do przechowania tekstowej reprezentacji liczby, max 11 znaków + terminator
 
     // Konwersja liczby ca?kowitej na tekst (ASCII)
     itoa(value, buffer, 10);  // Funkcja itoa() konwertuje liczb? ca?kowit? na ci?g znaków w systemie dziesi?tnym
@@ -120,4 +126,9 @@ void SendInt32ToUART(int32_t value)
     for (int i = 0; buffer[i] != '\0'; i++) {
         SendUART_debug(buffer[i]);  // Wysy?anie pojedynczego znaku
     }
+
+    // Wys?anie znaków ko?cz?cych \r\n
+    SendUART_debug('\r');
+    SendUART_debug('\n');
 }
+*/

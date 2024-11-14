@@ -20,7 +20,7 @@ void Global_Init(void)
     TRISC0=0;    //STATUS LED D23
     TRISC1=0;    //PWM out discharge battery 
     TRISC2=0;    //PWM out charge battery
-    TRISC3=0;    //SCL - INA226 clock
+    TRISC3=1;    //SCL - INA226 clock
     TRISC4=1;    //SDA - INA226 data
     TRISC5=0;    //RS485 output/input enable
     TRISC6=0;    //RS485 TX

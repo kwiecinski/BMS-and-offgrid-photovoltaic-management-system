@@ -2732,19 +2732,12 @@ char *tempnam(const char *, const char *);
 # 1 "./sw_uart.h" 1
 # 12 "./sw_uart.h"
 void SendUART_debug(unsigned char data);
-
-void SendArrayUART_debug(unsigned char *data, unsigned char size);
-void SendDigitUART_debug(unsigned int data);
-void SendInt32ToUART(int32_t value);
 # 11 "sw_uart.c" 2
 
 # 1 "./hw_uart.h" 1
 # 11 "./hw_uart.h"
 void UART_Init(void);
 void SendUART(char data);
-void SendArrayUART(unsigned char *data, unsigned char size);
-void SendDigitUART(unsigned int data);
-unsigned char DigitToString(unsigned char digit);
 # 12 "sw_uart.c" 2
 
 
@@ -2777,84 +2770,7 @@ void SendUART_debug(unsigned char data)
     INTCONbits.GIE=1;
 }
 
-
-void SendArrayUART_debug(unsigned char *data, unsigned char size)
+void putch(char txData)
 {
-    unsigned char i;
-
-    for(i=0;i<size;i++)
-    {
-        SendUART_debug(*(data+i));
-    }
-
-}
-
-void SendDigitUART_debug(unsigned int data)
-{
-    if(data<=0xFF)
-    {
-        SendUART_debug(DigitToString(data%1000/100));
-        SendUART_debug(DigitToString(data%100/10));
-        SendUART_debug(DigitToString(data%10));
-
-
-    }else if((data>0x00FF) && (data<=0xFFFF))
-    {
-        SendUART_debug(DigitToString(data%100000/10000));
-        SendUART_debug(DigitToString(data%10000/1000));
-        SendUART_debug(DigitToString(data%1000/100));
-        SendUART_debug(DigitToString(data%100/10));
-        SendUART_debug(DigitToString(data%10));
-
-    }
-}
-
-
-void itoa(int32_t value, char *str, int numeral_base)
-{
-    int32_t i = 0;
-    int32_t isNegative = 0;
-
-
-    if (value < 0) {
-        isNegative = 1;
-        value = -value;
-    }
-
-
-    do {
-        str[i++] = (value % numeral_base) + '0';
-        value = value / numeral_base;
-    } while (value != 0);
-
-
-    if (isNegative) {
-        str[i++] = '-';
-    }
-
-    str[i] = '\0';
-
-
-    int32_t start = 0;
-    int32_t end = i - 1;
-    while (start < end) {
-        char temp = str[start];
-        str[start] = str[end];
-        str[end] = temp;
-        start++;
-        end--;
-    }
-}
-
-void SendInt32ToUART(int32_t value)
-{
-    char buffer[12];
-
-
-    itoa(value, buffer, 10);
-
-
-    for (int i = 0; buffer[i] != '\0'; i++) {
-        SendUART_debug(buffer[i]);
-    }
+     SendUART_debug(txData);
 }

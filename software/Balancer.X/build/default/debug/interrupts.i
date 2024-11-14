@@ -2574,9 +2574,6 @@ void Interrupt_Init(void);
 # 11 "./hw_uart.h"
 void UART_Init(void);
 void SendUART(char data);
-void SendArrayUART(unsigned char *data, unsigned char size);
-void SendDigitUART(unsigned int data);
-unsigned char DigitToString(unsigned char digit);
 # 5 "interrupts.c" 2
 # 1 "./inits.h" 1
 # 11 "./inits.h"

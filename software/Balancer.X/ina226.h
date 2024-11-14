@@ -43,6 +43,8 @@
 #include <stdbool.h>
 
 
+static const uint8_t    INA226_DEFAULT_I2C_ADDRESS  = 0b1000000;
+
 //Heads up for the classes declared in this header
 struct AutoFox_INA226; //This is the one you will use directly
 struct INA226_Registers;
@@ -106,7 +108,7 @@ status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address);
 status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
 
 int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226*);
-int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226*);
+uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
 int32_t AutoFox_INA226_GetCurrent_uA(AutoFox_INA226*);
 int32_t AutoFox_INA226_GetPower_uW(AutoFox_INA226*);
 

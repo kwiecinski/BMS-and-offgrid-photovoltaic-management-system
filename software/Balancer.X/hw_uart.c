@@ -21,7 +21,7 @@ void SendUART(char data)
   TXREG = data;     // send data
 }
 
-
+/*
 
 unsigned char DigitToString(unsigned char digit)
 {
@@ -72,3 +72,4 @@ void SendDigitUART(unsigned int data)
     SendUART('\n');
     SendUART('\r');
 }
+*/

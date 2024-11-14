@@ -1,15 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"64 ./ina226.h
-[; ;./ina226.h: 64: typedef struct AutoFox_INA226{
-[s S143 `a 1 `uc 1 `us 1 `us 1 `l 1 `l 1 ]
-[n S143 AutoFox_INA226 mInitialized mI2C_Address mConfigRegister mCalibrationValue mCurrentMicroAmpsPerBit mPowerMicroWattPerBit ]
-"109
-[; ;./ina226.h: 109: int32_t AutoFox_INA226_GetBusVoltage_uV(AutoFox_INA226*);
-[v _AutoFox_INA226_GetBusVoltage_uV `(l ~T0 @X0 0 ef1`*S143 ]
-"16 ./sw_uart.h
-[; ;./sw_uart.h: 16: void SendInt32ToUART(int32_t value);
-[v _SendInt32ToUART `(v ~T0 @X0 0 ef1`l ]
 [p mainexit ]
+"66 ./ina226.h
+[; ;./ina226.h: 66: typedef struct AutoFox_INA226{
+[s S145 `a 1 `uc 1 `us 1 `us 1 `l 1 `l 1 ]
+[n S145 AutoFox_INA226 mInitialized mI2C_Address mConfigRegister mCalibrationValue mCurrentMicroAmpsPerBit mPowerMicroWattPerBit ]
+"103
+[; ;./ina226.h: 103: void AutoFox_INA226_Constructor(AutoFox_INA226*);
+[v _AutoFox_INA226_Constructor `(v ~T0 @X0 0 ef1`*S145 ]
 "11 ./inits.h
 [; ;./inits.h: 11: void Global_Init(void);
 [v _Global_Init `(v ~T0 @X0 0 ef ]
@@ -52,16 +49,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f886.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
 [v _PORTAbits `VS9 ~T0 @X0 0 e@5 ]
-"48 main.c
-[; ;main.c: 48:         SendErrorStatus(AutoFox_INA226_ReadRegister(&device, 0xFE, &theINA226_ID));
-[c E1419 0 -1 -2 -3 -4 -5 -6 -7 -8 .. ]
-[n E1419 . OK FAIL INA226_TI_ID_MISMATCH INA226_DIE_ID_MISMATCH CONFIG_ERROR I2C_TRANSMISSION_ERROR BAD_PARAMETER NOT_INITIALIZED INVALID_I2C_ADDRESS  ]
-"133 ./ina226.h
-[; ;./ina226.h: 133: void SendErrorStatus(status err);
-[v _SendErrorStatus `(v ~T0 @X0 0 ef1`E1419 ]
-"131
-[; ;./ina226.h: 131: status AutoFox_INA226_ReadRegister(AutoFox_INA226*,uint8_t aRegister, uint16_t* aValue_p);
-[v _AutoFox_INA226_ReadRegister `(E1419 ~T0 @X0 0 ef3`*S143`uc`*us ]
+"32 main.c
+[; ;main.c: 32:     SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
+[c E1727 0 -1 -2 -3 -4 -5 -6 -7 -8 .. ]
+[n E1727 . OK FAIL INA226_TI_ID_MISMATCH INA226_DIE_ID_MISMATCH CONFIG_ERROR I2C_TRANSMISSION_ERROR BAD_PARAMETER NOT_INITIALIZED INVALID_I2C_ADDRESS  ]
+"135 ./ina226.h
+[; ;./ina226.h: 135: void SendErrorStatus(status err);
+[v _SendErrorStatus `(v ~T0 @X0 0 ef1`E1727 ]
+"108
+[; ;./ina226.h: 108: status AutoFox_INA226_Init(AutoFox_INA226* this, uint8_t aI2C_Address, uint16_t aShuntResistor_mOhms, uint32_t aMaxCurrent_Amps);
+[v _AutoFox_INA226_Init `(E1727 ~T0 @X0 0 ef4`*S145`uc`us`ul ]
+"126
+[; ;./ina226.h: 126: status AutoFox_INA226_ConfigureVoltageConversionTime(AutoFox_INA226*,int aIndexToConversionTimeTable);
+[v _AutoFox_INA226_ConfigureVoltageConversionTime `(E1727 ~T0 @X0 0 ef2`*S145`i ]
+"127
+[; ;./ina226.h: 127: status AutoFox_INA226_ConfigureNumSampleAveraging(AutoFox_INA226*,int aIndexToSampleAverageTable);
+[v _AutoFox_INA226_ConfigureNumSampleAveraging `(E1727 ~T0 @X0 0 ef2`*S145`i ]
+"111
+[; ;./ina226.h: 111: uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this);
+[v _AutoFox_INA226_GetBusVoltage_V `(us ~T0 @X0 0 ef1`*S145 ]
 [v F164 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
 [v __delay `JF164 ~T0 @X0 0 e ]
@@ -318,89 +324,85 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V  =  BOR40V    ]
 "26
 [p x WRT  =  OFF         ]
-"52 ./ina226.h
-[; ;./ina226.h: 52: static const int INA226_I2C_TIMEOUT = 1000;
+"46 ./ina226.h
+[; ;./ina226.h: 46: static const uint8_t INA226_DEFAULT_I2C_ADDRESS = 0b1000000;
+[v _INA226_DEFAULT_I2C_ADDRESS `Cuc ~T0 @X0 1 s ]
+[i _INA226_DEFAULT_I2C_ADDRESS
+-> -> 64 `i `uc
+]
+"54
+[; ;./ina226.h: 54: static const int INA226_I2C_TIMEOUT = 1000;
 [v _INA226_I2C_TIMEOUT `Ci ~T0 @X0 1 s ]
 [i _INA226_I2C_TIMEOUT
 -> 1000 `i
 ]
-"19 main.c
-[; ;main.c: 19: AutoFox_INA226 device;
-[v _device `S143 ~T0 @X0 1 e ]
-"23
-[; ;main.c: 23: void SendBusVoltage(void)
-[v _SendBusVoltage `(v ~T0 @X0 1 ef ]
-"24
-[; ;main.c: 24: {
-{
-[e :U _SendBusVoltage ]
-[f ]
-"25
-[; ;main.c: 25:     int32_t busVoltage_uV = AutoFox_INA226_GetBusVoltage_uV(&device);
-[v _busVoltage_uV `l ~T0 @X0 1 a ]
-[e = _busVoltage_uV ( _AutoFox_INA226_GetBusVoltage_uV (1 &U _device ]
-"26
-[; ;main.c: 26:     SendInt32ToUART(busVoltage_uV);
-[e ( _SendInt32ToUART (1 _busVoltage_uV ]
-"27
-[; ;main.c: 27: }
-[e :UE 144 ]
-}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"29
-[; ;main.c: 29: void main(void)
+"19 main.c
+[; ;main.c: 19: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"30
-[; ;main.c: 30: {
+"20
+[; ;main.c: 20: {
 {
 [e :U _main ]
 [f ]
-"31
-[; ;main.c: 31:     Global_Init();
+"21
+[; ;main.c: 21:     AutoFox_INA226 ina226;
+[v _ina226 `S145 ~T0 @X0 1 a ]
+"23
+[; ;main.c: 23:     AutoFox_INA226_Constructor(&ina226);
+[e ( _AutoFox_INA226_Constructor (1 &U _ina226 ]
+"24
+[; ;main.c: 24:     Global_Init();
 [e ( _Global_Init ..  ]
-"32
-[; ;main.c: 32:     Interrupt_Init();
+"25
+[; ;main.c: 25:     Interrupt_Init();
 [e ( _Interrupt_Init ..  ]
-"33
-[; ;main.c: 33:     I2C_Init();
+"26
+[; ;main.c: 26:     I2C_Init();
 [e ( _I2C_Init ..  ]
-"34
-[; ;main.c: 34:     PORTBbits.RB7=0;
+"27
+[; ;main.c: 27:     PORTBbits.RB7=0;
 [e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
-"35
-[; ;main.c: 35:     PORTBbits.RB6=0;
+"28
+[; ;main.c: 28:     PORTBbits.RB6=0;
 [e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
-"36
-[; ;main.c: 36:     PORTCbits.RC0=1;
+"29
+[; ;main.c: 29:     PORTCbits.RC0=1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"37
-[; ;main.c: 37:     PORTAbits.RA6=1;
+"30
+[; ;main.c: 30:     PORTAbits.RA6=1;
 [e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
-"42
-[; ;main.c: 42:     while(1)
-[e :U 147 ]
-"43
-[; ;main.c: 43:     {
-{
-"47
-[; ;main.c: 47:          uint16_t theINA226_ID;
-[v _theINA226_ID `us ~T0 @X0 1 a ]
-"48
-[; ;main.c: 48:         SendErrorStatus(AutoFox_INA226_ReadRegister(&device, 0xFE, &theINA226_ID));
-[e ( _SendErrorStatus (1 ( _AutoFox_INA226_ReadRegister (3 , , &U _device -> -> 254 `i `uc &U _theINA226_ID ]
-"49
-[; ;main.c: 49:         SendInt32ToUART(theINA226_ID);
-[e ( _SendInt32ToUART (1 -> _theINA226_ID `l ]
-"50
-[; ;main.c: 50:         _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"52
-[; ;main.c: 52:     }
-}
-[e :U 146 ]
-[e $U 147  ]
+"32
+[; ;main.c: 32:     SendErrorStatus(AutoFox_INA226_Init(&ina226,INA226_DEFAULT_I2C_ADDRESS, 2,50));
+[e ( _SendErrorStatus (1 ( _AutoFox_INA226_Init (4 , , , &U _ina226 _INA226_DEFAULT_I2C_ADDRESS -> -> 2 `i `us -> -> -> 50 `i `l `ul ]
+"33
+[; ;main.c: 33:     SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111));
+[e ( _SendErrorStatus (1 ( _AutoFox_INA226_ConfigureVoltageConversionTime (2 , &U _ina226 -> 7 `i ]
+"34
+[; ;main.c: 34:     SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
+[e ( _SendErrorStatus (1 ( _AutoFox_INA226_ConfigureNumSampleAveraging (2 , &U _ina226 -> 2 `i ]
+"36
+[; ;main.c: 36:     uint16_t bus_voltage;
+[v _bus_voltage `us ~T0 @X0 1 a ]
+"38
+[; ;main.c: 38:     while(1)
 [e :U 148 ]
-"53
-[; ;main.c: 53: }
-[e :UE 145 ]
+"39
+[; ;main.c: 39:     {
+{
+"41
+[; ;main.c: 41:         bus_voltage=AutoFox_INA226_GetBusVoltage_V(&ina226);
+[e = _bus_voltage ( _AutoFox_INA226_GetBusVoltage_V (1 &U _ina226 ]
+"47
+[; ;main.c: 47:         _delay((unsigned long)((1000)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"48
+[; ;main.c: 48:     }
+}
+[e :U 147 ]
+[e $U 148  ]
+[e :U 149 ]
+"49
+[; ;main.c: 49: }
+[e :UE 146 ]
 }

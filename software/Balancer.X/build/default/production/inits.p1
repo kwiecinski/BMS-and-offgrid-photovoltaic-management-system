@@ -364,8 +364,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;inits.c: 22:     TRISC2=0;
 [e = _TRISC2 -> -> 0 `i `b ]
 "23
-[; ;inits.c: 23:     TRISC3=0;
-[e = _TRISC3 -> -> 0 `i `b ]
+[; ;inits.c: 23:     TRISC3=1;
+[e = _TRISC3 -> -> 1 `i `b ]
 "24
 [; ;inits.c: 24:     TRISC4=1;
 [e = _TRISC4 -> -> 1 `i `b ]
