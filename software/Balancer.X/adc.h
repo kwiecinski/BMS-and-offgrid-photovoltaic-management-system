@@ -6,7 +6,7 @@
 
 void ADC_Init(void);
 unsigned int ADC_Read_ADC_Result(void);
-unsigned int DisplayVoltage(void) ;
+unsigned int read_voltage(void) ;
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

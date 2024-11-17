@@ -11,7 +11,7 @@
 #include "sw_uart.h"
 #include "hw_uart.h"
 
-#define		BAUD_RATE_UART  	1200
+#define		BAUD_RATE_UART  	2400
 #define     TX_HIGH            PORTAbits.RA4=1
 #define     TX_LOW             PORTAbits.RA4=0
 #define     BIT_TIME_US      (1000000 / BAUD_RATE_UART) 
