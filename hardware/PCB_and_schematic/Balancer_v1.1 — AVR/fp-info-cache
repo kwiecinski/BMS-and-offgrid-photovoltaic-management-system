@@ -1,4 +1,4 @@
-23243499207683408
+23266909734323750
 ATI-ONE
 AMPHENOL_10132798-011100LF
 
@@ -6,6 +6,13 @@ AMPHENOL_10132798-011100LF
 0
 12
 12
+ATI-ONE
+BMP180
+
+
+0
+7
+7
 ATI-ONE
 BMP280 3D
 
@@ -62,6 +69,13 @@ SW-TACT-67NSMD - 3D
 0
 4
 2
+ATI-ONE
+USB_C_Receptacle_HRO_TYPE-C-31-M-12
+USB Type-C receptacle for USB 2.0 and PD, http://www.krhro.com/uploads/soft/180320/1-1P320120243.pdf
+usb usb-c 2.0 pd
+0
+20
+17
 ATI-ONE
 XF2M-FPC-20-LCD-only-con
 
@@ -66066,6 +66080,13 @@ My-Footprints
 3
 3
 My-Footprints
+B0505S
+
+
+0
+4
+4
+My-Footprints
 Buzzer
 
 
@@ -66199,6 +66220,13 @@ Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W le
 2
 2
 My-Footprints
+R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal
+Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=12.7mm, 1W, length*diameter=9.9*3.6mm^2
+Resistor Axial_DIN0411 series Axial Horizontal pin pitch 12.7mm 1W length 9.9mm diameter 3.6mm
+0
+2
+2
+My-Footprints
 Relay_29mm
 
 
@@ -66310,6 +66338,13 @@ high-voltage
 0
 0
 0
+My-Footprints
+inductor_10x10
+
+
+0
+2
+2
 My-Footprints
 kf301-5.0-2p_P5.08mm
 Terminal block, pitch 5.08mm
@@ -66514,6 +66549,27 @@ Through hole pin header THT 1x04 2.54mm single row
 4
 4
 My-Footprints-connectors
+PinHeader_1x06_P2.54mm_Vertical
+Through hole straight pin header, 1x06, 2.54mm pitch, single row
+Through hole pin header THT 1x06 2.54mm single row
+0
+6
+6
+My-Footprints-connectors
+PinHeader_2x04_P2.54mm_Vertical
+Through hole straight pin header, 2x04, 2.54mm pitch, double rows
+Through hole pin header THT 2x04 2.54mm double row
+0
+8
+8
+My-Footprints-connectors
+PinHeader_2x09_P2.54mm_Vertical
+Through hole straight pin header, 2x09, 2.54mm pitch, double rows
+Through hole pin header THT 2x09 2.54mm double row
+0
+18
+18
+My-Footprints-connectors
 PinSocket_1x06_P1.27mm_Vertical
 Through hole straight socket strip, 1x06, 1.27mm pitch, single row (from Kicad 4.0.7), script generated
 Through hole socket strip THT 1x06 1.27mm single row
@@ -66541,6 +66597,27 @@ Through hole pin header THT 1x06 2.54mm single row
 0
 6
 6
+My-Footprints-connectors
+RJ11_unnamed
+
+
+0
+4
+4
+My-Footprints-connectors
+RJ45-unnamed1
+
+
+0
+10
+9
+My-Footprints-connectors
+RJ45-unnamed2
+
+
+0
+8
+8
 My-Footprints-connectors
 SOL-18
 
@@ -95220,3 +95297,24 @@ Varistor VF
 0
 2
 2
+promicro
+ProMicro
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
+promicro
+ProMicro-EnforcedTop
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
+promicro
+ProMicro-NoSilk
+Pro Micro footprint
+promicro ProMicro
+0
+24
+24
