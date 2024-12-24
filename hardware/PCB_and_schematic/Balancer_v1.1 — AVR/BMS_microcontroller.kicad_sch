@@ -6271,6 +6271,16 @@
 		)
 		(uuid "ff9bf7d0-9d88-4f09-9f80-a1408a280c2b")
 	)
+	(text "6k8  1k\n1,92V @ 15V"
+		(exclude_from_sim no)
+		(at 92.71 212.852 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "28692e5c-17e4-4a56-aabe-82b7edcf6bea")
+	)
 	(text "INA226\n"
 		(exclude_from_sim no)
 		(at 184.15 34.036 0)
@@ -9176,7 +9186,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k5"
+		(property "Value" "1k"
 			(at 85.09 219.7099 0)
 			(effects
 				(font
@@ -11172,7 +11182,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "470n"
 			(at 68.58 219.71 0)
 			(effects
 				(font

@@ -5943,6 +5943,17 @@
 		)
 		(uuid "025f0d12-9986-4df0-b1ce-04ea7a0d72f4")
 	)
+	(text "V divider\n33k 2k2\nVout=206mV\nI=93uA"
+		(exclude_from_sim no)
+		(at 169.672 93.472 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "613a8236-2908-409d-83d9-7f6d772ca535")
+	)
 	(text "PWM_freq=10kHz"
 		(exclude_from_sim no)
 		(at 165.608 282.956 0)
@@ -5952,6 +5963,16 @@
 			)
 		)
 		(uuid "71bf0cbd-be7e-45f6-9fe4-5cd4ab3ca75e")
+	)
+	(text "Iz=7mA"
+		(exclude_from_sim no)
+		(at 181.864 76.962 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "74636967-761b-4af8-b0ec-e280ed1be1f5")
 	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
@@ -6280,7 +6301,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 59.69 86.36 90)
 			(effects
 				(font
@@ -7772,7 +7793,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1n"
+		(property "Value" "1n5"
 			(at 111.506 88.9 0)
 			(effects
 				(font
@@ -10118,7 +10139,7 @@
 				)
 			)
 		)
-		(property "Value" "4,7k"
+		(property "Value" "1k"
 			(at 165.1 59.69 90)
 			(effects
 				(font
@@ -11897,7 +11918,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "120R"
+		(property "Value" "2k2"
 			(at 189.23 103.632 0)
 			(effects
 				(font
@@ -12306,7 +12327,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1n"
+		(property "Value" "1n5"
 			(at 216.662 88.9 0)
 			(effects
 				(font
@@ -13020,7 +13041,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "120R"
+		(property "Value" "33k"
 			(at 189.23 91.186 0)
 			(effects
 				(font
@@ -14055,7 +14076,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4k7"
+		(property "Value" "2k2"
 			(at 71.12 78.7399 0)
 			(effects
 				(font
@@ -14363,7 +14384,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "120R"
+		(property "Value" "220R"
 			(at 189.484 76.962 0)
 			(effects
 				(font
@@ -16454,7 +16475,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1n"
+		(property "Value" "1n5"
 			(at 110.236 149.86 0)
 			(effects
 				(font
