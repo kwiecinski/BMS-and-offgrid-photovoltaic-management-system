@@ -1,4 +1,4 @@
- /*
+/*
  * MAIN Generated Driver File
  * 
  * @file main.c
@@ -8,10 +8,10 @@
  * @brief This is the generated driver implementation file for the MAIN driver.
  *
  * @version MAIN Driver Version 1.0.0
-*/
+ */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -29,19 +29,42 @@
     TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
-*/
+ */
+#include <stdio.h>
+#include <string.h>
 #include "mcc_generated_files/system/system.h"
+#include "mcc_generated_files/timer/delay.h"
+#include "uart_remap.h"
+#include "adc_conv.h"
 
 /*
     Main application
-*/
+ */
+
+void TCB_ISR_handler(void);
+void TCB_ISRc_handler(void);
 
 int main(void)
 {
     SYSTEM_Initialize();
-
-
-    while(1)
+    stdout = stdout_ptr;
+ 
+    while (1)
     {
-    }    
+        Get_ADC_Voltage(ADC_CHANNEL_12V_BATT);
+       // Get_ADC_Voltage(ADC_CHANNEL_VDD_DIV10);
+     //   Get_ADC_Voltage(ADC_CHANNEL_VDD_DIV10);
+        
+        //Get_ADC_Voltage(ADC_CHANNEL_VREF);
+        DELAY_milliseconds(100);
+
+
+    }
 }
+
+void TCB_ISR_handler(void)
+{
+}
+
+
+

@@ -10,7 +10,7 @@
   * version CLKCTRL Driver Version 1.1.3
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -49,8 +49,8 @@ void CLOCK_Initialize(void)
     //RUNSTDBY disabled; 
     ccp_write_io((void*)&(CLKCTRL.OSC32KCTRLA),0x0);
 
-    //AUTOTUNE disabled; FRQSEL 16 MHz system clock; RUNSTDBY disabled; 
-    ccp_write_io((void*)&(CLKCTRL.OSCHFCTRLA),0x1C);
+    //AUTOTUNE disabled; FRQSEL 24 MHz system clock; RUNSTDBY disabled; 
+    ccp_write_io((void*)&(CLKCTRL.OSCHFCTRLA),0x24);
 
     //TUNE 0x0; 
     ccp_write_io((void*)&(CLKCTRL.OSCHFTUNE),0x0);

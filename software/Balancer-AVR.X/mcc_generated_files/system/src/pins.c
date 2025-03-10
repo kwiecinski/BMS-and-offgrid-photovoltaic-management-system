@@ -12,7 +12,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -45,7 +45,6 @@ static void (*PD1_InterruptHandler)(void);
 static void (*PD2_InterruptHandler)(void);
 static void (*PD3_InterruptHandler)(void);
 static void (*PD6_InterruptHandler)(void);
-static void (*PD7_InterruptHandler)(void);
 static void (*PC3_InterruptHandler)(void);
 static void (*PC2_InterruptHandler)(void);
 static void (*PC0_InterruptHandler)(void);
@@ -126,7 +125,6 @@ void PIN_MANAGER_Initialize()
     PD2_SetInterruptHandler(PD2_DefaultInterruptHandler);
     PD3_SetInterruptHandler(PD3_DefaultInterruptHandler);
     PD6_SetInterruptHandler(PD6_DefaultInterruptHandler);
-    PD7_SetInterruptHandler(PD7_DefaultInterruptHandler);
     PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
     PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
     PC0_SetInterruptHandler(PC0_DefaultInterruptHandler);
@@ -280,19 +278,6 @@ void PD6_DefaultInterruptHandler(void)
 {
     // add your PD6 interrupt custom code
     // or set custom function using PD6_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for PD7 at application runtime
-*/
-void PD7_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PD7_InterruptHandler = interruptHandler;
-}
-
-void PD7_DefaultInterruptHandler(void)
-{
-    // add your PD7 interrupt custom code
-    // or set custom function using PD7_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for PC3 at application runtime
@@ -499,10 +484,6 @@ ISR(PORTD_PORT_vect)
     if(VPORTD.INTFLAGS & PORT_INT6_bm)
     {
        PD6_InterruptHandler(); 
-    }
-    if(VPORTD.INTFLAGS & PORT_INT7_bm)
-    {
-       PD7_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTD.INTFLAGS = 0xff;

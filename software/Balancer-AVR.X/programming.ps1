@@ -1,0 +1,1 @@
+avrdude.exe -C "$(Get-Command avrdude | Select-Object -ExpandProperty Path | Split-Path)\avrdude.conf" -p AVR64DD28 -c serialUPDI -P COM11 -x rtsdtr=high -U flash:w:d:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer-AVR.X\dist\default\production\Balancer-AVR.X.production.hex:i

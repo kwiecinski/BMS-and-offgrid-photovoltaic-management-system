@@ -10,7 +10,7 @@
   * @version TCD0 Driver Version 2.0.3
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -119,8 +119,8 @@ void TCD0_Initialize(void)
     //PWMACTA disabled; PWMACTB disabled; 
     TCD0.STATUS = 0x0;
 
-    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV1; ENABLE enabled; SYNCPRES DIV1; 
-    TCD0.CTRLA = 0x1;
+    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV1; ENABLE disabled; SYNCPRES DIV1; 
+    TCD0.CTRLA = 0x0;
 
 }
 

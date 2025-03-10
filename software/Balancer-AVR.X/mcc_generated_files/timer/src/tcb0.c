@@ -10,7 +10,7 @@
   * @version TCB0 Driver Version 1.1.2
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -37,23 +37,52 @@ const struct TMR_INTERFACE TCB0_Interface = {
     .Start = TCB0_Start,
     .Stop = TCB0_Stop,
     .PeriodCountSet = TCB0_Write,
-    .TimeoutCallbackRegister = NULL,
+    .TimeoutCallbackRegister = TCB0_OverflowCallbackRegister,
     .Tasks = NULL
 };
 
 
+void (*TCB0_OVF_isr_cb)(void) = NULL;
 
+void TCB0_OverflowCallbackRegister(TCB0_cb_t cb)
+{
+	TCB0_OVF_isr_cb = cb;
+}
+
+
+ISR(TCB0_INT_vect)
+{
+	/* Insert your TCB interrupt handling code */
+
+    /**
+	 * The Overflow interrupt flag is cleared by writing 1 to it.
+	 */
+
+
+	 if(TCB0.INTFLAGS & TCB_OVF_bm)
+        {
+            if (TCB0_OVF_isr_cb != NULL)
+            {
+                (*TCB0_OVF_isr_cb)();
+            }
+
+            TCB0.INTFLAGS = TCB_OVF_bm;
+        }
+
+
+	 
+}
 
 void TCB0_Initialize(void)
 {
     //Compare or Capture
-    TCB0.CCMP = 0xBB80;
+    TCB0.CCMP = 0x2;
 
     //Count
     TCB0.CNT = 0x0;
 
-    //ASYNC disabled; CCMPEN disabled; CCMPINIT disabled; CNTMODE INT; 
-    TCB0.CTRLB = 0x0;
+    //ASYNC disabled; CCMPEN disabled; CCMPINIT disabled; CNTMODE TIMEOUT; 
+    TCB0.CTRLB = 0x1;
     
     //DBGRUN disabled; 
     TCB0.DBGCTRL = 0x0;
@@ -61,8 +90,8 @@ void TCB0_Initialize(void)
     //CAPTEI disabled; EDGE disabled; FILTER disabled; 
     TCB0.EVCTRL = 0x0;
 
-    //CAPT disabled; OVF disabled; 
-    TCB0.INTCTRL = 0x0;
+    //CAPT disabled; OVF enabled; 
+    TCB0.INTCTRL = 0x2;
 
     //CAPT disabled; OVF disabled; 
     TCB0.INTFLAGS = 0x0;
@@ -70,8 +99,8 @@ void TCB0_Initialize(void)
     //Temporary Value
     TCB0.TEMP = 0x0;
 
-    //CASCADE disabled; CLKSEL DIV1; ENABLE enabled; RUNSTDBY disabled; SYNCUPD disabled; 
-    TCB0.CTRLA = 0x1;
+    //CASCADE disabled; CLKSEL DIV1; ENABLE disabled; RUNSTDBY disabled; SYNCUPD disabled; 
+    TCB0.CTRLA = 0x0;
 
 }
 

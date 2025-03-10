@@ -10,7 +10,7 @@
  * @version USART1 Driver Version 2.0.3
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -50,37 +50,37 @@
 #endif
 
 /* Normal Mode, Baud register value */
-#define USART1_BAUD_RATE(BAUD_RATE) (((float)16000000 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
+#define USART1_BAUD_RATE(BAUD_RATE) (((float)24000000 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
 
-#define RS485_MODBUS_interface RS485_MODBUS
+#define DEBUG_UARAT_interface DEBUG_UARAT
 
 
-#define RS485_MODBUS_Initialize     USART1_Initialize
-#define RS485_MODBUS_Deinitialize   USART1_Deinitialize
-#define RS485_MODBUS_Write          USART1_Write
-#define RS485_MODBUS_Read           USART1_Read
-#define RS485_MODBUS__IsRxReady     USART1_IsRxReady
-#define RS485_MODBUS_IsTxReady      USART1_IsTxReady
-#define RS485_MODBUS_IsTxDone       USART1_IsTxDone
+#define DEBUG_UARAT_Initialize     USART1_Initialize
+#define DEBUG_UARAT_Deinitialize   USART1_Deinitialize
+#define DEBUG_UARAT_Write          USART1_Write
+#define DEBUG_UARAT_Read           USART1_Read
+#define DEBUG_UARAT__IsRxReady     USART1_IsRxReady
+#define DEBUG_UARAT_IsTxReady      USART1_IsTxReady
+#define DEBUG_UARAT_IsTxDone       USART1_IsTxDone
 
-#define RS485_MODBUS_TransmitEnable       USART1_TransmitEnable
-#define RS485_MODBUS_TransmitDisable      USART1_TransmitDisable
-#define RS485_MODBUS_AutoBaudSet          USART1_AutoBaudSet
-#define RS485_MODBUS_AutoBaudQuery        USART1_AutoBaudQuery
-#define RS485_MODBUS_BRGCountSet               (NULL)
-#define RS485_MODBUS_BRGCountGet               (NULL)
-#define RS485_MODBUS_BaudRateSet               (NULL)
-#define RS485_MODBUS_BaudRateGet               (NULL)
-#define RS485_MODBUS__AutoBaudEventEnableGet   (NULL)
-#define RS485_MODBUS_ErrorGet             USART1_ErrorGet
+#define DEBUG_UARAT_TransmitEnable       USART1_TransmitEnable
+#define DEBUG_UARAT_TransmitDisable      USART1_TransmitDisable
+#define DEBUG_UARAT_AutoBaudSet          USART1_AutoBaudSet
+#define DEBUG_UARAT_AutoBaudQuery        USART1_AutoBaudQuery
+#define DEBUG_UARAT_BRGCountSet               (NULL)
+#define DEBUG_UARAT_BRGCountGet               (NULL)
+#define DEBUG_UARAT_BaudRateSet               (NULL)
+#define DEBUG_UARAT_BaudRateGet               (NULL)
+#define DEBUG_UARAT__AutoBaudEventEnableGet   (NULL)
+#define DEBUG_UARAT_ErrorGet             USART1_ErrorGet
 
-#define RS485_MODBUS_TxCompleteCallbackRegister     (NULL)
-#define RS485_MODBUS_RxCompleteCallbackRegister      (NULL)
-#define RS485_MODBUS_TxCollisionCallbackRegister  (NULL)
-#define RS485_MODBUS_FramingErrorCallbackRegister USART1_FramingErrorCallbackRegister
-#define RS485_MODBUS_OverrunErrorCallbackRegister USART1_OverrunErrorCallbackRegister
-#define RS485_MODBUS_ParityErrorCallbackRegister  USART1_ParityErrorCallbackRegister
-#define RS485_MODBUS_EventCallbackRegister        (NULL)
+#define DEBUG_UARAT_TxCompleteCallbackRegister     (NULL)
+#define DEBUG_UARAT_RxCompleteCallbackRegister      (NULL)
+#define DEBUG_UARAT_TxCollisionCallbackRegister  (NULL)
+#define DEBUG_UARAT_FramingErrorCallbackRegister USART1_FramingErrorCallbackRegister
+#define DEBUG_UARAT_OverrunErrorCallbackRegister USART1_OverrunErrorCallbackRegister
+#define DEBUG_UARAT_ParityErrorCallbackRegister  USART1_ParityErrorCallbackRegister
+#define DEBUG_UARAT_EventCallbackRegister        (NULL)
 
 
 /**
@@ -108,7 +108,7 @@ typedef union {
  * @ingroup usart1
  * @brief External object for usart1_interface.
  */
-extern const uart_drv_interface_t RS485_MODBUS;
+extern const uart_drv_interface_t DEBUG_UARAT;
 
 /**
  * @ingroup usart1

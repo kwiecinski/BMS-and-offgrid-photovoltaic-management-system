@@ -12,7 +12,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -235,24 +235,6 @@
 #define TEMP_SMPS_EnableInterruptForFallingEdge() do { PORTD.PIN6CTRL = (PORTD.PIN6CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
 #define TEMP_SMPS_DisableDigitalInputBuffer() do { PORTD.PIN6CTRL = (PORTD.PIN6CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
 #define TEMP_SMPS_EnableInterruptForLowLevelSensing() do { PORTD.PIN6CTRL = (PORTD.PIN6CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
-
-//get/set VREF aliases
-#define VREF_SetHigh() do { PORTD_OUTSET = 0x80; } while(0)
-#define VREF_SetLow() do { PORTD_OUTCLR = 0x80; } while(0)
-#define VREF_Toggle() do { PORTD_OUTTGL = 0x80; } while(0)
-#define VREF_GetValue() (VPORTD.IN & (0x1 << 7))
-#define VREF_SetDigitalInput() do { PORTD_DIRCLR = 0x80; } while(0)
-#define VREF_SetDigitalOutput() do { PORTD_DIRSET = 0x80; } while(0)
-#define VREF_SetPullUp() do { PORTD_PIN7CTRL  |= PORT_PULLUPEN_bm; } while(0)
-#define VREF_ResetPullUp() do { PORTD_PIN7CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
-#define VREF_SetInverted() do { PORTD_PIN7CTRL  |= PORT_INVEN_bm; } while(0)
-#define VREF_ResetInverted() do { PORTD_PIN7CTRL  &= ~PORT_INVEN_bm; } while(0)
-#define VREF_DisableInterruptOnChange() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
-#define VREF_EnableInterruptForBothEdges() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
-#define VREF_EnableInterruptForRisingEdge() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
-#define VREF_EnableInterruptForFallingEdge() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
-#define VREF_DisableDigitalInputBuffer() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
-#define VREF_EnableInterruptForLowLevelSensing() do { PORTD.PIN7CTRL = (PORTD.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 
 //get/set I2C_CLOCK aliases
 #define I2C_CLOCK_SetHigh() do { PORTC_OUTSET = 0x8; } while(0)
@@ -654,27 +636,6 @@ void PD6_DefaultInterruptHandler(void);
  * @return none
  */
 void PD6_SetInterruptHandler(void (* interruptHandler)(void)) ; 
-
-/**
- * @ingroup  pinsdriver
- * @brief Default Interrupt Handler for PD7 pin. 
- *        This is a predefined interrupt handler to be used together with the PD7_SetInterruptHandler() method.
- *        This handler is called every time the PD7 ISR is executed. 
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param none
- * @return none
- */
-void PD7_DefaultInterruptHandler(void);
-
-/**
- * @ingroup  pinsdriver
- * @brief Interrupt Handler Setter for PD7 pin input-sense-config functionality.
- *        Allows selecting an interrupt handler for PD7 at application runtime
- * @pre PIN_MANAGER_Initialize() has been called at least once
- * @param InterruptHandler function pointer.
- * @return none
- */
-void PD7_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver

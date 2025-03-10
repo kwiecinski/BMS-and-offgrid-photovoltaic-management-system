@@ -10,7 +10,7 @@
  * @version TCB0 Driver Version 1.1.2
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -43,6 +43,19 @@ extern "C" {
 
 extern const struct TMR_INTERFACE TCB0_Interface;
 
+/**
+ * @ingroup tcb0
+ * @typedef void *TCB0_cb_t
+ * @brief Function pointer to callback function called by the TCB. The default value is set to NULL which means that no callback function will be used.
+ */
+typedef void (*TCB0_cb_t)(void);
+/**
+ * @ingroup tcb0
+ * @brief Registers a callback function to be called at overflow event.
+ * @param TCB0_cb_t cb - Callback function for overflow event.
+ * @return None.
+ */
+void TCB0_OverflowCallbackRegister(TCB0_cb_t cb);
 /**
  * @ingroup tcb0
  * @brief Initializes the TCB module

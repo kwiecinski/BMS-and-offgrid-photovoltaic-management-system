@@ -11,7 +11,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -121,7 +121,7 @@ void TWI0_Initialize(void)
     TWI0.DBGCTRL = 0x0;
     
     //Host Baud Rate Control
-    TWI0.MBAUD = (uint8_t)TWI0_BAUD(100250, 0.1);
+    TWI0.MBAUD = (uint8_t)TWI0_BAUD(100671, 0.1);
     
     //ENABLE enabled; QCEN disabled; RIEN false; SMEN disabled; TIMEOUT DISABLED; WIEN false; 
     TWI0.MCTRLA = 0x1;
@@ -154,7 +154,7 @@ void TWI0_Deinitialize(void)
     TWI0.DBGCTRL = 0x00;
     
     //Host Baud Rate Control
-    TWI0.MBAUD = (uint8_t)TWI0_BAUD(100250, 0.1);
+    TWI0.MBAUD = (uint8_t)TWI0_BAUD(100671, 0.1);
     
     //ENABLE enabled; QCEN disabled; RIEN false; SMEN disabled; TIMEOUT DISABLED; WIEN false; 
     TWI0.MCTRLA = 0x00;

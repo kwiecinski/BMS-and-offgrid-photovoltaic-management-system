@@ -11,7 +11,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -40,14 +40,14 @@ adc_irq_cb_t ADC0_resrdy_cb = NULL;
 int8_t ADC0_Initialize(void)
 {
      
-    // SAMPNUM No accumulation; 
-    ADC0.CTRLB = 0x0;
+    // SAMPNUM 128 results accumulated; 
+    ADC0.CTRLB = 0x7;
 
     // PRESC CLK_PER divided by 2; 
     ADC0.CTRLC = 0x0;
 
-    // INITDLY DLY0; SAMPDLY DLY0; 
-    ADC0.CTRLD = 0x0;
+    // INITDLY DLY16; SAMPDLY DLY15; 
+    ADC0.CTRLD = 0x2F;
 
     // WINCM No Window Comparison; 
     ADC0.CTRLE = 0x0;
@@ -67,17 +67,17 @@ int8_t ADC0_Initialize(void)
     // MUXNEG Ground; 
     ADC0.MUXNEG = 0x40;
 
-    // SAMPLEN 0; 
-    ADC0.SAMPCTRL = 0x0;
+    // SAMPLEN 20; 
+    ADC0.SAMPCTRL = 0x14;
 
     // Window comparator high threshold 
-    ADC0.WINHT = 0xFFF0;
+    ADC0.WINHT = 0x1FF;
 
     // Window comparator low threshold 
     ADC0.WINLT = 0x0;
 
-    // ENABLE enabled; FREERUN disabled; RESSEL 12-bit mode; RUNSTBY disabled; CONVMODE disabled; LEFTADJ enabled; 
-    ADC0.CTRLA = 0x11;
+    // ENABLE enabled; FREERUN disabled; RESSEL 12-bit mode; RUNSTBY disabled; CONVMODE disabled; LEFTADJ disabled; 
+    ADC0.CTRLA = 0x1;
 
 
     return 0;

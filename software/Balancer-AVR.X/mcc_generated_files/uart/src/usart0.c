@@ -11,7 +11,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -47,7 +47,7 @@
   Section: Driver Interface
  */
 
-const uart_drv_interface_t DEBUG_URAT = {
+const uart_drv_interface_t RS485_MODBUS = {
     .Initialize = &USART0_Initialize,
     .Deinitialize = &USART0_Deinitialize,
     .Read = &USART0_Read,
@@ -100,7 +100,7 @@ void USART0_Initialize(void)
 {
     // Set the USART0 module to the options selected in the user interface.
 
-    //BAUD 6666; 
+    //BAUD 10000; 
     USART0.BAUD = (uint16_t)USART0_BAUD_RATE(9600);
 	
     // ABEIE disabled; DREIE disabled; LBME disabled; RS485 DISABLE; RXCIE disabled; RXSIE disabled; TXCIE disabled; 

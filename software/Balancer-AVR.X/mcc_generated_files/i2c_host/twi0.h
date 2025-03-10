@@ -11,7 +11,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -61,7 +61,7 @@
 extern const i2c_host_interface_t I2C0_Host;
 
 #define TWI0_BAUD(F_SCL, T_RISE)    \
-    ((((((float)16000000 / (float)F_SCL)) - 10 - ((float)16000000 * T_RISE / 1000000))) / 2)
+    ((((((float)24000000 / (float)F_SCL)) - 10 - ((float)24000000 * T_RISE / 1000000))) / 2)
 
 
 /**

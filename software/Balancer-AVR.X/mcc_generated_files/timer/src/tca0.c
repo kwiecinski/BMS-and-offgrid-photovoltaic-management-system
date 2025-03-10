@@ -10,7 +10,7 @@
   * @version TCA0 Driver Version 2.1.1
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -126,13 +126,13 @@ ISR(TCA0_OVF_vect)
 
 void TCA0_Initialize(void) {
     // Compare 0
-    TCA0.SINGLE.CMP0 = 0x2F;
+    TCA0.SINGLE.CMP0 = 0x47;
         
     // Compare 1
-    TCA0.SINGLE.CMP1 = 0x2F;
+    TCA0.SINGLE.CMP1 = 0x47;
     
     // Compare 2
-    TCA0.SINGLE.CMP2 = 0x2F;
+    TCA0.SINGLE.CMP2 = 0x47;
         
     // Count
     TCA0.SINGLE.CNT = 0x0;
@@ -164,14 +164,14 @@ void TCA0_Initialize(void) {
     // CNTAEI disabled; CNTBEI disabled; EVACTA CNT_POSEDGE; EVACTB NONE; 
     TCA0.SINGLE.EVCTRL = 0x0;
     
-    // CMP0 enabled; CMP1 disabled; CMP2 disabled; OVF disabled; 
-    TCA0.SINGLE.INTCTRL = 0x10;
+    // CMP0 disabled; CMP1 disabled; CMP2 disabled; OVF disabled; 
+    TCA0.SINGLE.INTCTRL = 0x0;
     
     // CMP0 disabled; CMP1 disabled; CMP2 disabled; OVF disabled; 
     TCA0.SINGLE.INTFLAGS = 0x0;
     
     // Period
-    TCA0.SINGLE.PER = 0x2F;
+    TCA0.SINGLE.PER = 0x47;
     
     // Temporary data for 16-bit Access
     TCA0.SINGLE.TEMP = 0x0;

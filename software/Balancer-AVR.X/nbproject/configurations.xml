@@ -42,6 +42,7 @@
           <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
           <itemPath>mcc_generated_files/timer/tcd0.h</itemPath>
           <itemPath>mcc_generated_files/timer/tcb0.h</itemPath>
+          <itemPath>mcc_generated_files/timer/delay.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
           <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
@@ -53,6 +54,8 @@
           <itemPath>mcc_generated_files/vref/vref.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <itemPath>uart_remap.h</itemPath>
+      <itemPath>adc_conv.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -75,6 +78,9 @@
             <itemPath>mcc_generated_files/adc/src/adc0.c</itemPath>
           </logicalFolder>
         </logicalFolder>
+        <logicalFolder name="docs" displayName="docs" projectFiles="true">
+          <itemPath>mcc_generated_files/docs/delay.dox</itemPath>
+        </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/i2c_host/src/twi0.c</itemPath>
@@ -95,6 +101,7 @@
             <itemPath>mcc_generated_files/timer/src/tca0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tcd0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tcb0.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/delay.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
@@ -110,8 +117,13 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>uart_remap.c</itemPath>
+      <itemPath>adc_conv.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -122,11 +134,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="AVR-Dx_DFP" vendor="Microchip" version="2.4.286"/>
+        <pack name="AVR-Dx_DFP" vendor="Microchip" version="2.7.321"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

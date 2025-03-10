@@ -10,7 +10,7 @@
  * @version USART0 Driver Version 2.0.3
 */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -50,37 +50,37 @@
 #endif
 
 /* Normal Mode, Baud register value */
-#define USART0_BAUD_RATE(BAUD_RATE) (((float)16000000 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
+#define USART0_BAUD_RATE(BAUD_RATE) (((float)24000000 * 64 / (16 * (float)BAUD_RATE)) + 0.5)
 
-#define DEBUG_URAT_interface DEBUG_URAT
+#define RS485_MODBUS_interface RS485_MODBUS
 
 
-#define DEBUG_URAT_Initialize     USART0_Initialize
-#define DEBUG_URAT_Deinitialize   USART0_Deinitialize
-#define DEBUG_URAT_Write          USART0_Write
-#define DEBUG_URAT_Read           USART0_Read
-#define DEBUG_URAT__IsRxReady     USART0_IsRxReady
-#define DEBUG_URAT_IsTxReady      USART0_IsTxReady
-#define DEBUG_URAT_IsTxDone       USART0_IsTxDone
+#define RS485_MODBUS_Initialize     USART0_Initialize
+#define RS485_MODBUS_Deinitialize   USART0_Deinitialize
+#define RS485_MODBUS_Write          USART0_Write
+#define RS485_MODBUS_Read           USART0_Read
+#define RS485_MODBUS__IsRxReady     USART0_IsRxReady
+#define RS485_MODBUS_IsTxReady      USART0_IsTxReady
+#define RS485_MODBUS_IsTxDone       USART0_IsTxDone
 
-#define DEBUG_URAT_TransmitEnable       USART0_TransmitEnable
-#define DEBUG_URAT_TransmitDisable      USART0_TransmitDisable
-#define DEBUG_URAT_AutoBaudSet          USART0_AutoBaudSet
-#define DEBUG_URAT_AutoBaudQuery        USART0_AutoBaudQuery
-#define DEBUG_URAT_BRGCountSet               (NULL)
-#define DEBUG_URAT_BRGCountGet               (NULL)
-#define DEBUG_URAT_BaudRateSet               (NULL)
-#define DEBUG_URAT_BaudRateGet               (NULL)
-#define DEBUG_URAT__AutoBaudEventEnableGet   (NULL)
-#define DEBUG_URAT_ErrorGet             USART0_ErrorGet
+#define RS485_MODBUS_TransmitEnable       USART0_TransmitEnable
+#define RS485_MODBUS_TransmitDisable      USART0_TransmitDisable
+#define RS485_MODBUS_AutoBaudSet          USART0_AutoBaudSet
+#define RS485_MODBUS_AutoBaudQuery        USART0_AutoBaudQuery
+#define RS485_MODBUS_BRGCountSet               (NULL)
+#define RS485_MODBUS_BRGCountGet               (NULL)
+#define RS485_MODBUS_BaudRateSet               (NULL)
+#define RS485_MODBUS_BaudRateGet               (NULL)
+#define RS485_MODBUS__AutoBaudEventEnableGet   (NULL)
+#define RS485_MODBUS_ErrorGet             USART0_ErrorGet
 
-#define DEBUG_URAT_TxCompleteCallbackRegister     (NULL)
-#define DEBUG_URAT_RxCompleteCallbackRegister      (NULL)
-#define DEBUG_URAT_TxCollisionCallbackRegister  (NULL)
-#define DEBUG_URAT_FramingErrorCallbackRegister USART0_FramingErrorCallbackRegister
-#define DEBUG_URAT_OverrunErrorCallbackRegister USART0_OverrunErrorCallbackRegister
-#define DEBUG_URAT_ParityErrorCallbackRegister  USART0_ParityErrorCallbackRegister
-#define DEBUG_URAT_EventCallbackRegister        (NULL)
+#define RS485_MODBUS_TxCompleteCallbackRegister     (NULL)
+#define RS485_MODBUS_RxCompleteCallbackRegister      (NULL)
+#define RS485_MODBUS_TxCollisionCallbackRegister  (NULL)
+#define RS485_MODBUS_FramingErrorCallbackRegister USART0_FramingErrorCallbackRegister
+#define RS485_MODBUS_OverrunErrorCallbackRegister USART0_OverrunErrorCallbackRegister
+#define RS485_MODBUS_ParityErrorCallbackRegister  USART0_ParityErrorCallbackRegister
+#define RS485_MODBUS_EventCallbackRegister        (NULL)
 
 
 /**
@@ -108,7 +108,7 @@ typedef union {
  * @ingroup usart0
  * @brief External object for usart0_interface.
  */
-extern const uart_drv_interface_t DEBUG_URAT;
+extern const uart_drv_interface_t RS485_MODBUS;
 
 /**
  * @ingroup usart0
