@@ -2,9 +2,8 @@
 !/simulation/*.asc
 !/simulation/models/
 /hardware/PCB_and_schematic/**/production/*
-software\Balancer-AVR.X\dist\
-software\Balancer-AVR.X\build\
-software\Balancer-AVR.X\.generated_files\
-software\Balancer.X\dist\
-software\Balancer.X\build\
-software\Balancer.X\.generated_files\
+software/**/dist/*
+software/**/build/*
+software/**/.generated_files/*
+
+
