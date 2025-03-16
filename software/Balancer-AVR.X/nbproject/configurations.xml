@@ -10,6 +10,9 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <itemPath>mcc_generated_files/adc/adc0.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="dac" displayName="dac" projectFiles="true">
+          <itemPath>mcc_generated_files/dac/dac0.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/twi0.h</itemPath>
@@ -56,6 +59,7 @@
       </logicalFolder>
       <itemPath>uart_remap.h</itemPath>
       <itemPath>adc_conv.h</itemPath>
+      <itemPath>ina226.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -76,6 +80,11 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/adc/src/adc0.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
+        <logicalFolder name="dac" displayName="dac" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/dac/src/dac0.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
@@ -119,6 +128,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>uart_remap.c</itemPath>
       <itemPath>adc_conv.c</itemPath>
+      <itemPath>ina226.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

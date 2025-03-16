@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: Balancer-AVR
-creation_date: 2025-03-10T20:53:17.284+01:00[Europe/Belgrade]
+creation_date: 2025-03-15T20:05:13.267+01:00[Europe/Belgrade]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -26,6 +26,7 @@ modules:
 - {name: '@mchp-mcc/pin-content-processor', type: MELODY, version: 3.4.0}
 - {name: '@mchp-mcc/scf-avr8-adc-v1', type: MELODY, version: 4.2.5}
 - {name: '@mchp-mcc/scf-avr8-clkctrl-v3', type: MELODY, version: 2.0.7}
+- {name: '@mchp-mcc/scf-avr8-dac-v1', type: MELODY, version: 4.0.10}
 - {name: '@mchp-mcc/scf-avr8-interrupt-v1', type: MELODY, version: 5.0.10}
 - {name: '@mchp-mcc/scf-avr8-tca-v1', type: MELODY, version: 6.0.7}
 - {name: '@mchp-mcc/scf-avr8-tcb-v1', type: MELODY, version: 5.0.7}

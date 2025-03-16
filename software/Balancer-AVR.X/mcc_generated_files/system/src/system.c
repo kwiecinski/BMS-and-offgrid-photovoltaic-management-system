@@ -45,6 +45,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     ADC0_Initialize();
     CLOCK_Initialize();
+    DAC0_Initialize();
     I2C0_Host_Initialize();
     TCA0_Initialize();
     TCB0_Initialize();

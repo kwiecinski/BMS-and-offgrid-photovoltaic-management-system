@@ -1,13 +1,13 @@
 /**
- * System Driver Header File
+ * DAC0 Generated Driver File
  * 
- * @file system.h
+ * @file dac0.c
  * 
- * @defgroup systemdriver System Driver
+ * @ingroup dac0
  * 
- * @brief This is the generated header file for the System Driver.
+ * @brief Contains the API implementations for the DAC0 driver.
  *
- * @version Driver Version 1.0.1
+ * @version DAC0 Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -31,43 +31,37 @@
 */
 
 
-#ifndef MCC_H
-#define	MCC_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "../dac0.h"
 
-/**
-  Section: Included Files
-*/
-#include "../system/utils/compiler.h"
-#include "../system/clock.h"
-#include "../system/pins.h"
-#include "../adc/adc0.h"
-#include "../system/clock.h"
-#include "../dac/dac0.h"
-#include "../i2c_host/twi0.h"
-#include "../timer/tca0.h"
-#include "../timer/tcb0.h"
-#include "../timer/tcd0.h"
-#include "../uart/usart0.h"
-#include "../uart/usart1.h"
-#include "../vref/vref.h"
-#include "../system/interrupt.h"
-/**
- * @ingroup systemdriver
- * @brief This initializes the system module and must be called before any other API is called.
- * This routine should only be called once during system initialization.
- * @param None
- * @return None
-*/
-void SYSTEM_Initialize(void);
+int8_t DAC0_Initialize(void)
+{
+    // DATA Register 
+	DAC0.DATA = 0x0;
+    // ENABLE enabled; OUTEN enabled; RUNSTDBY disabled; 
+	DAC0.CTRLA = 0x41;
 
-#ifdef __cplusplus
+    return 0;
 }
-#endif
-#endif	/* MCC_H */
-/**
- End of File
-*/
+
+void DAC0_Enable(void)
+{
+    DAC0.CTRLA |= DAC_ENABLE_bm;
+}
+
+void DAC0_Disable(void)
+{
+    DAC0.CTRLA &= ~DAC_ENABLE_bm;
+}
+
+void DAC0_SetOutput(dac_resolution_t value)
+{
+    value     = value << DAC_DATA_gp;
+	value     = value & 0xFFC0;
+    DAC0.DATA = value;
+}
+
+uint8_t DAC0_GetResolution(void)
+{
+    return 10;
+}

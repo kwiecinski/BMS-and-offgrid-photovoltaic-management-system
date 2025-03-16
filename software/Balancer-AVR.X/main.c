@@ -36,7 +36,7 @@
 #include "mcc_generated_files/timer/delay.h"
 #include "uart_remap.h"
 #include "adc_conv.h"
-
+#include "ina226.h"
 /*
     Main application
  */
@@ -46,17 +46,38 @@ void TCB_ISRc_handler(void);
 
 int main(void)
 {
+    
+    
+    uint16_t voltage_bus_24V, voltage_batt_12V_high, voltage_batt_12V_low;
+    
+    
     SYSTEM_Initialize();
     stdout = stdout_ptr;
- 
+    AutoFox_INA226 ina226;
+    AutoFox_INA226_Constructor(&ina226);
+    SendErrorStatus(AutoFox_INA226_Init(&ina226, INA226_DEFAULT_I2C_ADDRESS, 2, 50));
+    SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111)); //sample time 8.244ms
+    SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
+    
     while (1)
     {
-        Get_ADC_Voltage(ADC_CHANNEL_12V_BATT);
+        
+   
+            //voltage_bus_24V = AutoFox_INA226_GetBusVoltage_V(&ina226);
+            //voltage_batt_12V_low = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT);
+           // voltage_batt_12V_high = voltage_bus_24V - voltage_batt_12V_low;
+        
+           // printf("24V:%u \r\n", voltage_batt_12V_high);
+           // printf("12V:%u \r\n", voltage_batt_12V_low);
+           // printf("BUS:%u \r\n\r\n", voltage_bus_24V);
+ SendErrorStatus(AutoFox_INA226_Init(&ina226, INA226_DEFAULT_I2C_ADDRESS, 2, 50));
+      //  SendErrorStatus(AutoFox_INA226_CheckI2cAddress(INA226_DEFAULT_I2C_ADDRESS));
+        
        // Get_ADC_Voltage(ADC_CHANNEL_VDD_DIV10);
      //   Get_ADC_Voltage(ADC_CHANNEL_VDD_DIV10);
         
         //Get_ADC_Voltage(ADC_CHANNEL_VREF);
-        DELAY_milliseconds(100);
+        DELAY_milliseconds(2000);
 
 
     }
