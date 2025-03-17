@@ -34,6 +34,8 @@
 
 #include "../pins.h"
 
+static void (*PC3_InterruptHandler)(void);
+static void (*PC2_InterruptHandler)(void);
 static void (*PF0_InterruptHandler)(void);
 static void (*PF1_InterruptHandler)(void);
 static void (*PA4_InterruptHandler)(void);
@@ -45,8 +47,6 @@ static void (*PC1_InterruptHandler)(void);
 static void (*PD1_InterruptHandler)(void);
 static void (*PD2_InterruptHandler)(void);
 static void (*PD3_InterruptHandler)(void);
-static void (*PC3_InterruptHandler)(void);
-static void (*PC2_InterruptHandler)(void);
 static void (*PC0_InterruptHandler)(void);
 static void (*PA1_InterruptHandler)(void);
 static void (*PA0_InterruptHandler)(void);
@@ -114,6 +114,8 @@ void PIN_MANAGER_Initialize()
     PORTMUX.USARTROUTEA = 0x0;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
+    PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
+    PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
     PF0_SetInterruptHandler(PF0_DefaultInterruptHandler);
     PF1_SetInterruptHandler(PF1_DefaultInterruptHandler);
     PA4_SetInterruptHandler(PA4_DefaultInterruptHandler);
@@ -125,8 +127,6 @@ void PIN_MANAGER_Initialize()
     PD1_SetInterruptHandler(PD1_DefaultInterruptHandler);
     PD2_SetInterruptHandler(PD2_DefaultInterruptHandler);
     PD3_SetInterruptHandler(PD3_DefaultInterruptHandler);
-    PC3_SetInterruptHandler(PC3_DefaultInterruptHandler);
-    PC2_SetInterruptHandler(PC2_DefaultInterruptHandler);
     PC0_SetInterruptHandler(PC0_DefaultInterruptHandler);
     PA1_SetInterruptHandler(PA1_DefaultInterruptHandler);
     PA0_SetInterruptHandler(PA0_DefaultInterruptHandler);
@@ -136,6 +136,32 @@ void PIN_MANAGER_Initialize()
     PA7_SetInterruptHandler(PA7_DefaultInterruptHandler);
 }
 
+/**
+  Allows selecting an interrupt handler for PC3 at application runtime
+*/
+void PC3_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PC3_InterruptHandler = interruptHandler;
+}
+
+void PC3_DefaultInterruptHandler(void)
+{
+    // add your PC3 interrupt custom code
+    // or set custom function using PC3_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for PC2 at application runtime
+*/
+void PC2_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PC2_InterruptHandler = interruptHandler;
+}
+
+void PC2_DefaultInterruptHandler(void)
+{
+    // add your PC2 interrupt custom code
+    // or set custom function using PC2_SetInterruptHandler()
+}
 /**
   Allows selecting an interrupt handler for PF0 at application runtime
 */
@@ -280,32 +306,6 @@ void PD3_DefaultInterruptHandler(void)
     // or set custom function using PD3_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for PC3 at application runtime
-*/
-void PC3_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PC3_InterruptHandler = interruptHandler;
-}
-
-void PC3_DefaultInterruptHandler(void)
-{
-    // add your PC3 interrupt custom code
-    // or set custom function using PC3_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for PC2 at application runtime
-*/
-void PC2_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    PC2_InterruptHandler = interruptHandler;
-}
-
-void PC2_DefaultInterruptHandler(void)
-{
-    // add your PC2 interrupt custom code
-    // or set custom function using PC2_SetInterruptHandler()
-}
-/**
   Allows selecting an interrupt handler for PC0 at application runtime
 */
 void PC0_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -438,10 +438,6 @@ ISR(PORTA_PORT_vect)
 ISR(PORTC_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
-    if(VPORTC.INTFLAGS & PORT_INT1_bm)
-    {
-       PC1_InterruptHandler(); 
-    }
     if(VPORTC.INTFLAGS & PORT_INT3_bm)
     {
        PC3_InterruptHandler(); 
@@ -449,6 +445,10 @@ ISR(PORTC_PORT_vect)
     if(VPORTC.INTFLAGS & PORT_INT2_bm)
     {
        PC2_InterruptHandler(); 
+    }
+    if(VPORTC.INTFLAGS & PORT_INT1_bm)
+    {
+       PC1_InterruptHandler(); 
     }
     if(VPORTC.INTFLAGS & PORT_INT0_bm)
     {

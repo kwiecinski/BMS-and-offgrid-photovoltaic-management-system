@@ -36,6 +36,7 @@ Embodied in 3 functions related to I2C reading/writing
 #include <string.h>
 #include "mcc_generated_files/system/system.h"
 #include "ina226.h"
+#include "mcc_generated_files/timer/delay.h"
 
 
 
@@ -172,18 +173,19 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 
 status AutoFox_INA226_CheckI2cAddress(uint8_t aI2C_Address)
 {
-    //Address is shifted one bit left becouse of R/W bit
+    //Address is shifted one bit left because of R/W bit
 
-    uint8_t buffer;
     TWI0_Write(aI2C_Address,NULL,0);
-    
-    if (I2C0_Host_ErrorGet() == I2C_ERROR_NONE)  // 0 is write operation == 0) 
+    while (TWI0_IsBusy())
     {
-        printf("ADDR OK \n");
-        return OK;
-        
+        TWI0_Tasks();
     }
-     printf("ADDR NOT OK \n");
+    
+    if (TWI0_ErrorGet() == I2C_ERROR_NONE)
+    {
+        return OK;
+    }
+
     return INVALID_I2C_ADDRESS;
 }
 
@@ -193,29 +195,39 @@ status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint
 {
     *aValue_p = 0;
 
-    uint8_t buffer[3], output[3] = {0,0,0};
+    uint8_t buffer[3], output[3] = {0, 0, 0};
 
     TWI0_Write(this->mI2C_Address, &aRegister, 1);
+    
+    while (TWI0_IsBusy())
+    {
+        TWI0_Tasks();
+    }
+    
     TWI0_Read(this->mI2C_Address, &output[0], 2);
 
-    *aValue_p = (output[0] << 8) | output[1];
+    while (TWI0_IsBusy())
+    {
+        TWI0_Tasks();
+    }
     
-    printf("%x \n", output[0]);
-    printf("%x \n", output[1]);
+    *aValue_p = (output[0] << 8) | output[1];
     return OK;
 }
 
 //----------------------------------------------------------------------------
 status AutoFox_INA226_WriteRegister(AutoFox_INA226* this, uint8_t aRegister, uint16_t aValue)
 {
-    uint8_t buffer[4];
-    buffer[0] = this->mI2C_Address << 1;
-    buffer[1] = aRegister;
-    buffer[2] = (uint8_t)((aValue >> 8) & 0xFF); 
-    buffer[3] = (uint8_t)(aValue & 0xFF);         
+    uint8_t buffer[3];
+    buffer[0] = aRegister;
+    buffer[1] = (uint8_t)((aValue >> 8) & 0xFF); 
+    buffer[2] = (uint8_t)(aValue & 0xFF);         
 
-    TWI0_Write(0,&buffer[0],4);
- 
+    TWI0_Write(this->mI2C_Address,&buffer[0],3);
+   while (TWI0_IsBusy())
+    {
+        TWI0_Tasks();
+    }
     return OK;
 }
 //----------------------------------------------------------------------------
