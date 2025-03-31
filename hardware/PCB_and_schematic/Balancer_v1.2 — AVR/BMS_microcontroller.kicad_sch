@@ -6901,7 +6901,7 @@
 			)
 		)
 	)
-	(global_label "TEMP_HEAT_SINK_12V"
+	(global_label "DAC"
 		(shape input)
 		(at 72.39 86.36 180)
 		(fields_autoplaced yes)
@@ -6913,7 +6913,7 @@
 		)
 		(uuid "9557f1dd-3c02-4327-b90a-d9cc745a300c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 49.2059 86.36 0)
+			(at 65.7762 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)

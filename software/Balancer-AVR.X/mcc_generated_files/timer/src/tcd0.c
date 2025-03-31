@@ -58,16 +58,16 @@ void TCD0_SetOVFIsrCallback(TCD0_cb_t cb)
 void TCD0_Initialize(void)
 {
     //Clear A
-    TCD0.CMPACLR = 0xFFE;
+    TCD0.CMPACLR = 0x176;
 
     //SET A
-    TCD0.CMPASET = 0xFFE;
+    TCD0.CMPASET = 0x172;
 
     //Clear B
-    TCD0.CMPBCLR = 0xFFE;
+    TCD0.CMPBCLR = 0x176;
 
     //SET B
-    TCD0.CMPBSET = 0xFFE;
+    TCD0.CMPBSET = 0x172;
 
     //WGMODE One ramp mode; 
     TCD0.CTRLB = 0x0;
@@ -102,8 +102,8 @@ void TCD0_Initialize(void)
     //ACTION Event trigger a fault; CFG Neither Filter nor Asynchronous Event is enabled; EDGE The falling edge or low level of event generates retrigger or fault action; TRIGEI disabled; 
     TCD0.EVCTRLB = 0x0;
 
-    //CMPA disabled; CMPAEN disabled; CMPB disabled; CMPBEN disabled; CMPC disabled; CMPCEN disabled; CMPD disabled; CMPDEN disabled; 
-    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x0);
+    //CMPA disabled; CMPAEN enabled; CMPB disabled; CMPBEN enabled; CMPC disabled; CMPCEN disabled; CMPD disabled; CMPDEN disabled; 
+    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x30);
 
     //INPUTMODE Input has no actions; 
     TCD0.INPUTCTRLA = 0x0;
@@ -119,8 +119,8 @@ void TCD0_Initialize(void)
     //PWMACTA disabled; PWMACTB disabled; 
     TCD0.STATUS = 0x0;
 
-    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV1; ENABLE disabled; SYNCPRES DIV1; 
-    TCD0.CTRLA = 0x0;
+    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV32; ENABLE enabled; SYNCPRES DIV1; 
+    TCD0.CTRLA = 0x11;
 
 }
 

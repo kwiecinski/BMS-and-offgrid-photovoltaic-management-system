@@ -40,8 +40,8 @@ int8_t VREF_Initialize(void)
     // ALWAYSON disabled; REFSEL External reference on VREFA pin; 
     VREF.ADC0REF = 0x6;
     
-    // ALWAYSON disabled; REFSEL Internal 1.024V reference; 
-    VREF.DAC0REF = 0x0;
+    // ALWAYSON disabled; REFSEL External reference on VREFA pin; 
+    VREF.DAC0REF = 0x6;
     
 	return 0;
 }

@@ -55,25 +55,36 @@ int main(void)
     //INA266 INIT -----------------------------------------------------------------------------------------------
     AutoFox_INA226 ina226;
     AutoFox_INA226_Constructor(&ina226);
-    SendErrorStatus(AutoFox_INA226_Init(&ina226, INA226_DEFAULT_I2C_ADDRESS, 2, 50));
+    SendErrorStatus(AutoFox_INA226_Init(&ina226, INA226_DEFAULT_I2C_ADDRESS, 100, 5));
     SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111)); //sample time 8.244ms
     SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
     //-----------------------------------------------------------------------------------------------------------
+    DAC0_SetOutput(1);
+    
+    TCD0_Start();
     
     while (1)
     {
         uint16_t voltage_bus_24V, voltage_batt_12V_high, voltage_batt_12V_low;
 
-        voltage_bus_24V = AutoFox_INA226_GetBusVoltage_V(&ina226);
-        voltage_batt_12V_low = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT) / 10;
-        voltage_batt_12V_high = voltage_bus_24V - voltage_batt_12V_low;
+        //voltage_bus_24V = AutoFox_INA226_GetBusVoltage_V(&ina226);
+        //voltage_batt_12V_low = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT) / 1000;
+        //voltage_batt_12V_high = voltage_bus_24V - voltage_batt_12V_low;
 
-        printf("24V:%u \r\n", voltage_batt_12V_high);
-        printf("12V:%u \r\n", voltage_batt_12V_low);
-        printf("BUS:%u \r\n\r\n", voltage_bus_24V);
-
+       // printf("24V:%u \r\n", voltage_batt_12V_high);
+       // printf("12V:%u \r\n", voltage_batt_12V_low);
+       // printf("BUS:%u \r\n", voltage_bus_24V);
+        printf("GetBusVoltage:%u mV \r\n", AutoFox_INA226_GetBusVoltage_V(&ina226));
+        printf("GetShuntVoltage:%ld mV \r\n", AutoFox_INA226_GetShuntVoltage_uV(&ina226) / 1000);
+        printf("GetCurrent:%ld mA \r\n\r\n", AutoFox_INA226_GetCurrent_uA(&ina226) / 1000);
         DELAY_milliseconds(2000);
-
+        
+       // BALANCE_12V_SetHigh();
+       //  BALANCE_24V_SetHigh();
+DELAY_milliseconds(2000);
+       // BALANCE_12V_SetLow();
+       // BALANCE_24V_SetLow();
+       
 
     }
 }
