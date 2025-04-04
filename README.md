@@ -1,7 +1,8 @@
 # Offgrid Photovoltaic Management System 
  ### Project contains:
  #### Power and mechanical part:
- - PV panels connection and DIY Ground Mount structure 
+ - [PV panels connection and DIY Ground Mount structure](#pv-panels-connection-and-diy-ground-mount-structure) 
+
  - Installation and wiring of the EASUN inverter
 #### Managemenet system part:
 - [BMS for lead-acid batteries](#bms-for-lead-acid-batteries) - equalize battery, protect from large charge/discharge currents, montors battery state (temp, voltage)
@@ -12,13 +13,8 @@
 
 
 
-# Management System diagram:
-
-<a href="docs\PV_management_system_diagram.png"><img src="docs\PV_management_system_diagram.png" alt="System Diagram" style="width:400px"></a>
-
-
 ## PV panels connection and DIY Ground Mount structure 
-Moduły fotowoltaiczne które użyłem do budowy mojej instalacji PV to Trina Solar TSM-245. Są to panele używane które kupiłem za ok 40$
+The photovoltaic modules I used in my PV installation are Trina Solar TSM-245. These are used panels that I purchased for around $40 each. The installation consists of 8 modules connected in series.
 
 [📄 **Trina Solar TSM-245 datasheet**](docs/datasheets/TSM-PC05_trinasolar.pdf)
 
@@ -59,6 +55,54 @@ Moduły fotowoltaiczne które użyłem do budowy mojej instalacji PV to Trina So
 </table>
 
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - front</sub>
+    </td>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - back</sub>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\concrete-fixing-with-reinforcement.jpg">
+        <img src="docs\photos\ground-mount-structure\concrete-fixing-with-reinforcement.jpg" width="410">
+      </a><br />
+      <sub>Concrete base with reinforcement</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="docs/photos/ground-mount-structure/concrete_base.jpg">
+        <img src="docs/photos/ground-mount-structure/concrete_base.jpg" width="200">
+      </a><br />
+      <sub>Concrete base with mounting thread</sub>
+    </td>
+    <td align="center">
+      <a href="docs/photos/ground-mount-structure/concreete-with-bitumen.jpg">
+        <img src="docs/photos/ground-mount-structure/concreete-with-bitumen.jpg" width="200">
+      </a><br />
+      <sub>Concrete base with bitumen</sub>
+    </td>
+  </tr>
+</table>
+
+
+
+# Management System diagram:
+
+<a href="docs\PV_management_system_diagram.png"><img src="docs\PV_management_system_diagram.png" alt="System Diagram" style="width:400px"></a>
+
 
 ## BMS for lead-acid batteries
 BMS have several tasks:
@@ -66,21 +110,28 @@ BMS have several tasks:
 - Bidirectional DC-DC converter - protect battery from too much discharge or charge current
 - Battery monitoring - measurment of temperature of each battery and voltage.
 
-BMS steruje mikrokontorler AVR64DD28. Aby go zaprogramować niezbędny jest programator obsługujący UPDI.
-Ja korzystam z SerialUPDI (jego zmodyfikowaną wersje z możlością programowania HV oraz izolacją znajdziesz tutaj: SerialUPDI link)
-Środowisko programowania: MPLAB X IDE v6.20 oraz komilator XC8 v0.00
+The BMS is controlled by an AVR64DD28 microcontroller. To program it, you need a programmer that supports UPDI.
+I'm using SerialUPDI (a modified version with high-voltage programming capability and galvanic isolation, which you can find here: SerialUPDI link).
 
-Do pomiaru napiecia i prądu akumulatorów wykorzystuje INA226 oraz przetwornik ADC wbudowany w mikrokontoler.
-INA226 mierzy napięcie całego pakietu czyli akumulatora dolnego (BATT_LOW) oraz górnego (BATT_HIGH). 
-Wykonuje również pomiar na rezystorze pomiarowym który odpowiada prądowi całego pakietu. 
-INA226 jest dwukierunkowa dlatego jest możliwy pomiar prądu ładowania i rozładowania.
-ADC mierzy napięcie tylko BATT_LOW. Różnica napięć z INA226 oraz z ADC daje napięcie BATT_HIGH.
+To measure battery voltage and current, I use the INA226 sensor along with the built-in ADC of the microcontroller.
 
-Blanansowanie ogniw jest dokonywane z użyciem rezystorów dużej mocy.
-Każdy z rezystorów jest wpięty równolegle do akumulatora i załączany tranzystorem mosfet sterowanym z MCU.
-MCU steruje tranzystorami z wykorzystaniem PWM który jest generowany sprzętowo za pomocą Timera TCD. 
-Timer obsługuje dwa wyjścia WOA oraz WOB, które sa przypisane do odpowiednich pinów MCU.
-TCD mam możliwość generowania
+The INA226 measures:
+
+- The voltage of the entire battery pack, split into BATT_LOW (bottom battery) and BATT_HIGH (top battery)
+
+- The voltage across a shunt resistor, used to measure the current flowing through the entire pack
+
+Since the INA226 is bidirectional, it allows both charging and discharging current measurements.
+
+The microcontroller’s ADC measures only BATT_LOW voltage.
+By subtracting the ADC reading from the INA226’s total voltage reading, I can calculate the BATT_HIGH voltage.
+
+Cell balancing is performed using high-power resistors, each connected in parallel with a battery cell.
+Each resistor is switched by a MOSFET, which is controlled by the MCU using PWM.
+
+PWM is hardware-generated using the TCD timer, which controls two outputs: WOA and WOB, each assigned to a specific MCU pin.
+
+The TCD timer is capable of generating...
 
 
 
