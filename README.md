@@ -18,55 +18,47 @@
 
 
 ## PV panels connection and DIY Ground Mount structure 
-Moduły fotowoltaiczne które użyłem do budowy mojej instalacji PV to Trina Solar TSM-245. Są to panele używane które kupiłem za ok
+Moduły fotowoltaiczne które użyłem do budowy mojej instalacji PV to Trina Solar TSM-245. Są to panele używane które kupiłem za ok 40$
 
-[📄 **Trina Solar TSM-245 datasheet**](docs\datasheets\TSM-PC05_trinasolar.pdf)
-
-Paramtery techniczne :
+[📄 **Trina Solar TSM-245 datasheet**](docs/datasheets/TSM-PC05_trinasolar.pdf)
 
 
-  <a href="docs\photos\ground-mount-structure\solar-panel-technical-data.jpg"><img src="docs\photos\ground-mount-structure\solar-panel-technical-data.jpg" alt="System Diagram" style="width:200px"></a>
+<table>
+  <tr>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-technical-data.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-technical-data.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - technical data</sub>
+    </td>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-diodes.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-diodes.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - internal diode wiring</sub>
+    </td>
+  </tr>
+</table>
 
 
-<p float="left">
-  <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="150" style="margin-right: 10px;" />
-  </a>
-  <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="150" />
-  </a>
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - front</sub>
+    </td>
+    <td align="center">
+      <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
+        <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="200">
+      </a><br />
+      <sub>PV module TSM-245 - back</sub>
+    </td>
+  </tr>
+</table>
 
 
-<figure style="display:inline-block; text-align:center; margin-right:20px;">
-  <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="150">
-  </a>
-  <figcaption>Obrazek 1 – opis</figcaption>
-</figure>
-
-<figure style="display:inline-block; text-align:center;">
-  <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="150">
-  </a>
-  <figcaption>Obrazek 2 – opis</figcaption>
-</figure>
-
-
-<p float="left" align="center">
-  <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="150" />
-  </a>
-  <br />
-  <sub>Obrazek 1 – coś ważnego</sub>
-</p>
-<p float="left" align="center" style="margin-left: 20px;">
-  <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
-    <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="150" />
-  </a>
-  <br />
-  <sub>Obrazek 2 – coś innego</sub>
-</p>
 
 ## BMS for lead-acid batteries
 BMS have several tasks:
