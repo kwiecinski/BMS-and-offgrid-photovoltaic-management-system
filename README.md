@@ -1,9 +1,17 @@
 # Offgrid Photovoltaic Management System 
  ### Project contains:
  #### Power and mechanical part:
- - [PV panels connection and DIY Ground Mount structure](#pv-panels-connection-and-diy-ground-mount-structure) 
-
- - Installation and wiring of the EASUN inverter
+ - PV panels connection and DIY Ground Mount structure
+    1. [Photovoltaic modules](#1-photovoltaic-modules)  
+    2. [Concrete base mounting](#2-concrete-base-mounting)  
+    3. [Metalworking and welding mounting bases and angle bar](#3-metalworking-and-welding-mounting-bases-and-angle-bar)  
+    4. [Painting mounting base, angle bars and perforated profiles](#4-painting-mounting-base-angle-bars-and-perforated-profiles)  
+    5. [PV mountings to perforated profiles](#5-pv-mountings-to-perforated-profiles)  
+    6. [Assembly of PV installation](#6-assembly-of-pv-installation)  
+    7. [Fully assembled PV installation](#7-fully-assembled-pv-installation)
+    8. [Underground Cable Installation and Connection to the Building](#8-underground-cable-installation-and-connection-to-the-building)
+ 
+- Installation and wiring of the EASUN inverter
 #### Managemenet system part:
 - [BMS for lead-acid batteries](#bms-for-lead-acid-batteries) - equalize battery, protect from large charge/discharge currents, montors battery state (temp, voltage)
 - [ESP32 Master module](#esp32-master-module) - it communicate with EASUN  converter, BMS, Homa Assistant, Energy Meters and sensor. Supervise all system work propertly.
@@ -14,6 +22,8 @@
 
 
 ## PV panels connection and DIY Ground Mount structure 
+
+### 1. Photovoltaic modules
 The photovoltaic modules I used in my PV installation are Trina Solar TSM-245. These are used panels that I purchased for around $40 each. The installation consists of 8 modules connected in series.
 
 [📄 **Trina Solar TSM-245 datasheet**](docs/datasheets/TSM-PC05_trinasolar.pdf)
@@ -55,22 +65,13 @@ The photovoltaic modules I used in my PV installation are Trina Solar TSM-245. T
 </table>
 
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="docs\photos\ground-mount-structure\solar-panel-front.jpg">
-        <img src="docs\photos\ground-mount-structure\solar-panel-front.jpg" width="200">
-      </a><br />
-      <sub>PV module TSM-245 - front</sub>
-    </td>
-    <td align="center">
-      <a href="docs\photos\ground-mount-structure\solar-panel-back.jpg">
-        <img src="docs\photos\ground-mount-structure\solar-panel-back.jpg" width="200">
-      </a><br />
-      <sub>PV module TSM-245 - back</sub>
-    </td>
-  </tr>
-</table>
+The first stage was marking the mounting points for the mouting base structure. The entire construction has eight support points. After digging holes in the ground, they were filled with concrete, and concrete bases with reinforcement were embedded in them. I had plenty of these as production waste from the company where I work. They are typically used for mounting lightning protection masts on flat building roofs.
+
+Inside each base, there is reinforcement and four M16 threads. I modified the bases by drilling holes on the opposite side, and I welded additional reinforcement to the bottom using scrap metal, which helps to improve the structural stability.
+
+Before mounting the structure to the concrete bases, the contact surfaces were coated with a bituminous compound to prevent corrosion.
+
+### 2. Concrete base mouting
 
 <table>
   <tr>
@@ -96,6 +97,200 @@ The photovoltaic modules I used in my PV installation are Trina Solar TSM-245. T
     </td>
   </tr>
 </table>
+<br>
+
+Visible in the photo below is a set of four steel mounting bases of varying heights, with welded pipes and mounting plates. Each element was made with consideration for uneven ground, that is why there are different pipe lengths. Each base has a bottom plate with holes for M16 bolts, intended for anchoring to a concrete base. On the table next to them lies a long steel angle bar, which was welded from several sections. After welding, the elements were ground down. The photo was taken after the mechanical work was completed, during surface preparation for painting. 
+All the steel used for building the PV mouting structure comes from scrap yard.
+
+### 3. Metalworking and welding mounting bases and angle bar
+<br>
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-12.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-12.jpg" width="410">
+      </a><br />
+      <sub>Metalworking and welding mounting bases and angle bar</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-13.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-13.jpg" width="410">
+      </a><br />
+      <sub>Steel angle bar before painting</sub>
+    </td>
+  </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-14.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-14.jpg" width="410">
+      </a><br />
+      <sub>Longer mounting base  while painting</sub>
+    </td>
+  </tr>
+</table>
+
+Longer mounting base are responsible for the solar incidence angle which in this case is 40 degrees
+### 4. Painting mouting base, angle bars and perforated profiles
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-11.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-11.jpg" width="200">
+      </a><br />
+      <sub>Shorter and logner mouting base after painting</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-10.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-10.jpg" width="410">
+      </a><br />
+      <sub>Shorter mouting base after painting</sub>
+    </td>
+  </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-01.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-01.jpg" width="410">
+      </a><br />
+      <sub>Perforated profiles, often used for fixing cable tray systems, turned out to be ideal as internal panel brackets. Since they are galvanized, they must be painted with zinc-compatible paint.</sub>
+    </td>
+  </tr>
+    </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-02.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-02.jpg" width="410">
+      </a><br />
+      <sub>Longer mounting bases drying after painting<sub>
+    </td>
+  </tr>
+</table>
+
+### 5. PV Moutings to perforated profiles
+
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-03.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-03.jpg" width="410">
+      </a><br />
+      <sub>Sheet metal used to prepare panel mounts for perforated profiles</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-04.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-04.jpg" width="410">
+      </a><br />
+      <sub>Panel mounts for perforated profiles before welding and drilling</sub>
+    </td>
+  </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-05.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-05.jpg" width="410">
+      </a><br />
+      <sub>Panel mounts for perforated profiles. The central M10 bolt is used to attach to the perforated profile, and the two M8 holes are for screwing PV panels</sub>
+    </td>
+  </tr>
+    </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-06.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-06.jpg" width="410">
+      </a><br />
+      <sub>Solar panel mounting elements after painting, drying in progress<sub>
+    </td>
+  </tr>
+  </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-07.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-07.jpg" width="410">
+      </a><br />
+      <sub>Spacer for mounting solar panels to the perforated panels which are on the outer side of mouting structure<sub>
+    </td>
+    </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg" width="410">
+      </a><br />
+      <sub>Solar panel mounts for perforated profiles – painted and drying<sub>
+    </td>
+       <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg">
+        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg" width="410">
+      </a><br />
+      <sub>Solar panel mounts for perforated profiles<sub>
+    </td>
+</table>
+
+
+
+### 6. Assembly of PV installation
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\assembly-01.jpg">
+        <img src="docs\photos\ground-mount-structure\assembly-01.jpg" width="410">
+      </a><br />
+      <sub>Shorter mounting bases and angle bar mounted on concrete bases. Thanks to the height difference of the mounting bases, the angle bar remains level</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\assembly-02.jpg">
+        <img src="docs\photos\ground-mount-structure\assembly-02.jpg" width="410">
+      </a><br />
+      <sub>Shorter mounting base mounted on a concrete base. Before installation, the base was coated with a bituminous compound. Stainless steel bolts were used for assembly </sub>
+    </td>
+  </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\assembly-03.jpg">
+        <img src="docs\photos\ground-mount-structure\assembly-03.jpg" width="410">
+      </a><br />
+      <sub>Ground mouting structure ready for PV panel installation</sub>
+    </td>
+  </tr>
+    </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\assembly-04.jpg">
+        <img src="docs\photos\ground-mount-structure\assembly-04.jpg" width="200">
+      </a><br />
+      <sub>Here you can see how the panel mounts are used to connect solar panel with perforated profile<sub>
+    </td>
+  </tr>
+</table>
+
+### 7. Fully assembled PV installation
+<table>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\full-assembled-panel-front.jpg">
+        <img src="docs\photos\ground-mount-structure\full-assembled-panel-front.jpg" width="410">
+      </a><br />
+      <sub>Fully assembled PV installation - front</sub>
+    </td>
+  </tr>
+    </tr>
+    <tr>
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\full-assembled-panel-back.jpg">
+        <img src="docs\photos\ground-mount-structure\full-assembled-panel-back.jpg" width="410">
+      </a><br />
+      <sub>Fully assembled PV installation - back<sub>
+    </td>
+  </tr>
+</table>
+
+### 8. Underground Cable Installation and Connection to the Building
 
 
 
