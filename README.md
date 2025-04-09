@@ -71,7 +71,7 @@ Inside each base, there is reinforcement and four M16 threads. I modified the ba
 
 Before mounting the structure to the concrete bases, the contact surfaces were coated with a bituminous compound to prevent corrosion.
 
-### 2. Concrete base mouting
+### 2. Concrete base mounting
 
 <table>
   <tr>
@@ -132,7 +132,7 @@ All the steel used for building the PV mouting structure comes from scrap yard.
 </table>
 
 Longer mounting base are responsible for the solar incidence angle which in this case is 40 degrees
-### 4. Painting mouting base, angle bars and perforated profiles
+### 4. Painting mounting base, angle bars and perforated profiles
 <table>
   <tr>
     <td align="center" colspan="2">
@@ -169,7 +169,7 @@ Longer mounting base are responsible for the solar incidence angle which in this
   </tr>
 </table>
 
-### 5. PV Moutings to perforated profiles
+### 5. PV Mountings to perforated profiles
 
 <table>
   <tr>
@@ -291,6 +291,101 @@ Longer mounting base are responsible for the solar incidence angle which in this
 </table>
 
 ### 8. Underground Cable Installation and Connection to the Building
+To connect the panels, I used AsXSn 4x35 cable and additionally laid an AsXSn 4x25 cable. I found these cables at a scrapyard at a good price, which is why I chose this somewhat unconventional option. Additionally, I installed a gel-filled Ethernet twisted pair cable to allow for potential data transmission if needed.
+
+<table>
+  <tr>
+    <td align="center" colspan="1">
+      <a href="docs\photos\ground-mount-structure\cable-routes-02.jpg">
+        <img src="docs\photos\ground-mount-structure\cable-routes-02.jpg" width="200">
+      </a><br />
+        <sub>The cable trench was dug manually (20m long), containing two cables inside a protective pipes</sub>
+    </td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top" style="width: 400px;">
+      <a href="docs/photos/ground-mount-structure/cable-routes-05.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-05.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+        <sub>Cable entry into the building</sub>
+      </div>
+    </td>
+    <td align="center" valign="top" style="width: 400px;">
+      <a href="docs/photos/ground-mount-structure/cable-routes-06.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-06.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+          <sub>Close-up of the adapter between protective pipes. The additional gray pipe is for grounding</sub>
+      </div>
+    </td>
+  </tr>
+</table>
+
+To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I created an adapter using a 3D printer. PETG material was chosen for its weather resistance. The opening in adapter was designed to fit the protective pipe only after heating the adapter. Once cooled, the adapter holds the pipe in place.
+
+<table>
+</tr>
+  </tr>
+  <tr>
+  <td align="center" colspan="2">
+    <a href="docs\photos\ground-mount-structure\cable-routes-connector.jpg">
+    <img src="docs\photos\ground-mount-structure\cable-routes-connector.jpg" width="210">
+    </a><br/>
+    <sub>Adapter 3D model <br><br></sub>
+  </td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="top" style="width: 420px;">
+      <a href="docs/photos/ground-mount-structure/3.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-03.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+        <sub>Adapter after printing</sub>
+      </div>
+    </td>
+    <td align="center" valign="top" style="width: 420px;">
+      <a href="docs/photos/ground-mount-structure/cable-routes-04.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-04.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+      <sub>Adapter mounted on protective pipe</sub>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" valign="top" style="width: 420px;">
+      <a href="docs/photos/ground-mount-structure/cable-routes-08.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-08.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+        <sub>Junction box inside the building. Visible screw terminals for two cables, twisted pair Ethernet connection, and additional grounding.<br><br></sub>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="width: 420px;">
+      <a href="docs/photos/ground-mount-structure/cable-routes-10.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-10.jpg" width="400">
+      </a><br />
+      <div style="max-width: 400px;">
+        <sub>Junction box at the PV installation site.</sub>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
 
 
 
