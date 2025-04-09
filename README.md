@@ -1,17 +1,18 @@
 # Offgrid Photovoltaic Management System 
  ### Project contains:
  #### Power and mechanical part:
- - PV panels connection and DIY Ground Mount structure
-    1. [Photovoltaic modules](#1-photovoltaic-modules)  
-    2. [Concrete base mounting](#2-concrete-base-mounting)  
-    3. [Metalworking and welding mounting bases and angle bar](#3-metalworking-and-welding-mounting-bases-and-angle-bar)  
-    4. [Painting mounting base, angle bars and perforated profiles](#4-painting-mounting-base-angle-bars-and-perforated-profiles)  
-    5. [PV mountings to perforated profiles](#5-pv-mountings-to-perforated-profiles)  
-    6. [Assembly of PV installation](#6-assembly-of-pv-installation)  
-    7. [Fully assembled PV installation](#7-fully-assembled-pv-installation)
-    8. [Underground Cable Installation and Connection to the Building](#8-underground-cable-installation-and-connection-to-the-building)
+- PV panels connection and DIY Ground Mount structure
+
+  1.[ Photovoltaic modules](#1-photovoltaic-modules)  
+  2.[ Concrete base mounting](#2-concrete-base-mounting)  
+  3.[ Metalworking and welding mounting bases and angle bar](#3-metalworking-and-welding-mounting-bases-and-angle-bar)  
+  4.[ Painting mounting base, angle bars and perforated profiles](#4-painting-mounting-base-angle-bars-and-perforated-profiles)  
+  5.[ PV mountings to perforated profiles](#5-pv-mountings-to-perforated-profiles)  
+  6.[ Assembly of PV installation](#6-assembly-of-pv-installation)  
+  7.[ Fully assembled PV installation](#7-fully-assembled-pv-installation)<br>
+  8.[ Underground Cable Installation and Connection to the Building](#8-underground-cable-installation-and-connection-to-the-building)
  
-- Installation and wiring of the EASUN inverter
+ - Installation and wiring of the EASUN inverter
 #### Managemenet system part:
 - [BMS for lead-acid batteries](#bms-for-lead-acid-batteries) - equalize battery, protect from large charge/discharge currents, montors battery state (temp, voltage)
 - [ESP32 Master module](#esp32-master-module) - it communicate with EASUN  converter, BMS, Homa Assistant, Energy Meters and sensor. Supervise all system work propertly.
@@ -135,7 +136,9 @@ Longer mounting base are responsible for the solar incidence angle which in this
 ### 4. Painting mounting base, angle bars and perforated profiles
 <table>
   <tr>
-    <td colspan="2" style="text-align: left;">
+    <td align="center" colspan="2">
+      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-11.jpg">
+        <img s    <td colspan="2" style="text-align: left;">
       <div style="width: 200px;">
         <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-11.jpg">
           <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-11.jpg" width="200" style="display: block;">
@@ -420,19 +423,7 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
       </div>
     </td>
     <td align="center" valign="top">
-      <a href="docs/photos/ground-mount-structure/cable-routes-04.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-04.jpg" width="200">
-      </a><br />
-      <div>
-      <sub>Adapter mounted on protective pipe</sub>
-      </div>
-    </td>
-  </tr>
-</table>
 
-<table>
-  <tr>
-    <td align="center" valign="top" style="width: 420px;">
       <a href="docs/photos/ground-mount-structure/cable-routes-08.jpg">
         <img src="docs/photos/ground-mount-structure/cable-routes-08.jpg" width="400">
       </a><br />
