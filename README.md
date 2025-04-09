@@ -168,7 +168,7 @@ Longer mounting base are responsible for the solar incidence angle which in this
           <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-01.jpg" width="410" style="display: block;">
         </a>
         <div style="text-align: center;">
-          <sub>Perforated profiles, often used for fixing cable tray systems, turned out to be ideal as internal panel brackets. Since they are galvanized, they must be painted with zinc-compatible paint.</sub>
+          <sub>Perforated profiles, often used for fixing cable tray systems, <br>turned out to be ideal as internal panel brackets. <br>Since they are galvanized, they must be painted <br>with zinc-compatible paint.</sub>
         </div>
       </div>
     </td>
@@ -402,47 +402,48 @@ To connect the panels, I used AsXSn 4x35 cable and additionally laid an AsXSn 4x
 To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I created an adapter using a 3D printer. PETG material was chosen for its weather resistance. The opening in adapter was designed to fit the protective pipe only after heating the adapter. Once cooled, the adapter holds the pipe in place.
 
 <table>
-</tr>
-  </tr>
   <tr>
-  <td align="center" colspan="2">
-    <a href="docs\photos\ground-mount-structure\cable-routes-connector.jpg">
-    <img src="docs\photos\ground-mount-structure\cable-routes-connector.jpg" width="210">
-    </a><br/>
-    <sub>Adapter 3D model <br><br></sub>
-  </td>
-  </tr>
-
-  <tr>
-    <td align="center" valign="top">
-      <a href="docs/photos/ground-mount-structure/3.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-03.jpg" width="200">
-      </a><br />
-      <div>
-        <sub>Adapter after printing</sub>
-      </div>
+    <td align="center" colspan="2">
+      <a href="docs/photos/ground-mount-structure/cable-routes-connector.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-connector.jpg" width="210">
+      </a><br/>
+      <sub>Adapter 3D model</sub>
     </td>
-    <td align="center" valign="top">
+  </tr>
 
+  <tr>
+    <td align="center">
+      <a href="docs/photos/ground-mount-structure/cable-routes-03.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-03.jpg" width="200">
+      </a><br/>
+      <sub>Adapter after printing</sub>
+    </td>
+    <td align="center ">
+      <a href="docs/photos/ground-mount-structure/cable-routes-04.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-04.jpg" width="200">
+      </a><br/>
+      <sub>Adapter mounted on protective pipe</sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" colspan="2">
       <a href="docs/photos/ground-mount-structure/cable-routes-08.jpg">
         <img src="docs/photos/ground-mount-structure/cable-routes-08.jpg" width="400">
       </a><br />
-      <div style="max-width: 400px;">
-        <sub>Junction box inside the building. Visible screw terminals for two cables, twisted pair Ethernet connection, and additional grounding.<br><br></sub>
-      </div>
+      <sub>Junction box inside the building.<br> Visible screw terminals for two cables, twisted pair Ethernet connection, <br>and additional grounding.</sub>
     </td>
   </tr>
-  <tr>
-    <td align="center" valign="top" style="width: 420px;">
+    <tr>
+    <td align="center" colspan="2">
       <a href="docs/photos/ground-mount-structure/cable-routes-10.jpg">
         <img src="docs/photos/ground-mount-structure/cable-routes-10.jpg" width="400">
       </a><br />
-      <div style="max-width: 400px;">
-        <sub>Junction box at the PV installation site.</sub>
-      </div>
+      <sub>Junction box at the PV installation site.</sub>
     </td>
   </tr>
 </table>
+
 
 
 # Management System diagram:
