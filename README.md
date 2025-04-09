@@ -135,139 +135,207 @@ Longer mounting base are responsible for the solar incidence angle which in this
 ### 4. Painting mounting base, angle bars and perforated profiles
 <table>
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-11.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-11.jpg" width="200">
-      </a><br />
-      <sub>Shorter and logner mouting base after painting</sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 200px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-11.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-11.jpg" width="200" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Shorter and longer mounting base after painting</sub>
+        </div>
+      </div>
     </td>
   </tr>
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-10.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-10.jpg" width="410">
-      </a><br />
-      <sub>Shorter mouting base after painting</sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-10.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-10.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Shorter mounting base after painting</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-01.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-01.jpg" width="410">
-      </a><br />
-      <sub>Perforated profiles, often used for fixing cable tray systems, turned out to be ideal as internal panel brackets. Since they are galvanized, they must be painted with zinc-compatible paint.</sub>
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-01.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-01.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Perforated profiles, often used for fixing cable tray systems, turned out to be ideal as internal panel brackets. Since they are galvanized, they must be painted with zinc-compatible paint.</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-02.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-02.jpg" width="410">
-      </a><br />
-      <sub>Longer mounting bases drying after painting<sub>
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-02.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-02.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Longer mounting bases drying after painting</sub>
+        </div>
+      </div>
     </td>
   </tr>
 </table>
+
+
 
 ### 5. PV Mountings to perforated profiles
 
 <table>
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-03.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-03.jpg" width="410">
-      </a><br />
-      <sub>Sheet metal used to prepare panel mounts for perforated profiles</sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-03.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-03.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Sheet metal used to prepare panel mounts for perforated profiles</sub>
+        </div>
+      </div>
     </td>
   </tr>
+
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-04.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-04.jpg" width="410">
-      </a><br />
-      <sub>Panel mounts for perforated profiles before welding and drilling</sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-04.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-04.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Panel mounts for perforated profiles before welding and drilling</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-05.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-05.jpg" width="410">
-      </a><br />
-      <sub>Panel mounts for perforated profiles. The central M10 bolt is used to attach to the perforated profile, and the two M8 holes are for screwing PV panels</sub>
+
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-05.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-05.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Panel mounts for perforated profiles. The central M10 bolt is used to attach to the perforated profile, and the two M8 holes are for screwing PV panels</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-06.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-06.jpg" width="410">
-      </a><br />
-      <sub>Solar panel mounting elements after painting, drying in progress<sub>
+
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-06.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-06.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Solar panel mounting elements after painting, drying in progress</sub>
+        </div>
+      </div>
     </td>
   </tr>
+
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-07.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-07.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Spacer for mounting solar panels to the perforated panels which are on the outer side of mounting structure</sub>
+        </div>
+      </div>
+    </td>
   </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-07.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-07.jpg" width="410">
-      </a><br />
-      <sub>Spacer for mounting solar panels to the perforated panels which are on the outer side of mouting structure<sub>
+
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-08.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-08.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Solar panel mounts for perforated profiles – painted and drying</sub>
+        </div>
+      </div>
     </td>
-    </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg" width="410">
-      </a><br />
-      <sub>Solar panel mounts for perforated profiles – painted and drying<sub>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/steel-workshop-and-painting-08.jpg">
+          <img src="docs/photos/ground-mount-structure/steel-workshop-and-painting-08.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Solar panel mounts for perforated profiles</sub>
+        </div>
+      </div>
     </td>
-       <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg">
-        <img src="docs\photos\ground-mount-structure\steel-workshop-and-painting-08.jpg" width="410">
-      </a><br />
-      <sub>Solar panel mounts for perforated profiles<sub>
-    </td>
+  </tr>
 </table>
+
 
 
 
 ### 6. Assembly of PV installation
 <table>
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\assembly-01.jpg">
-        <img src="docs\photos\ground-mount-structure\assembly-01.jpg" width="410">
-      </a><br />
-      <sub>Shorter mounting bases and angle bar mounted on concrete bases. Thanks to the height difference of the mounting bases, the angle bar remains level</sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/assembly-01.jpg">
+          <img src="docs/photos/ground-mount-structure/assembly-01.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Shorter mounting bases and angle bar mounted on concrete bases. Thanks to the height difference of the mounting bases, the angle bar remains level</sub>
+        </div>
+      </div>
     </td>
   </tr>
   <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\assembly-02.jpg">
-        <img src="docs\photos\ground-mount-structure\assembly-02.jpg" width="410">
-      </a><br />
-      <sub>Shorter mounting base mounted on a concrete base. Before installation, the base was coated with a bituminous compound. Stainless steel bolts were used for assembly </sub>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/assembly-02.jpg">
+          <img src="docs/photos/ground-mount-structure/assembly-02.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Shorter mounting base mounted on a concrete base. Before installation, the base was coated with a bituminous compound. Stainless steel bolts were used for assembly</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\assembly-03.jpg">
-        <img src="docs\photos\ground-mount-structure\assembly-03.jpg" width="410">
-      </a><br />
-      <sub>Ground mouting structure ready for PV panel installation</sub>
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 410px;">
+        <a href="docs/photos/ground-mount-structure/assembly-03.jpg">
+          <img src="docs/photos/ground-mount-structure/assembly-03.jpg" width="410" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Ground mounting structure ready for PV panel installation</sub>
+        </div>
+      </div>
     </td>
   </tr>
-    </tr>
-    <tr>
-    <td align="center" colspan="2">
-      <a href="docs\photos\ground-mount-structure\assembly-04.jpg">
-        <img src="docs\photos\ground-mount-structure\assembly-04.jpg" width="200">
-      </a><br />
-      <sub>Here you can see how the panel mounts are used to connect solar panel with perforated profile<sub>
+  <tr>
+    <td colspan="2" style="text-align: left;">
+      <div style="width: 200px;">
+        <a href="docs/photos/ground-mount-structure/assembly-04.jpg">
+          <img src="docs/photos/ground-mount-structure/assembly-04.jpg" width="200" style="display: block;">
+        </a>
+        <div style="text-align: center;">
+          <sub>Here you can see how the panel mounts are used to connect solar panel with perforated profile</sub>
+        </div>
+      </div>
     </td>
   </tr>
 </table>
+
 
 ### 7. Fully assembled PV installation
 <table>
@@ -295,33 +363,38 @@ To connect the panels, I used AsXSn 4x35 cable and additionally laid an AsXSn 4x
 
 <table>
   <tr>
-    <td align="center" colspan="1">
-      <a href="docs\photos\ground-mount-structure\cable-routes-02.jpg">
-        <img src="docs\photos\ground-mount-structure\cable-routes-02.jpg" width="200">
+    <td align="center">
+      <a href="docs/photos/ground-mount-structure/cable-routes-02.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-02.jpg" width="200">
       </a><br />
-        <sub>The cable trench was dug manually (20m long), containing two cables inside a protective pipes</sub>
-    </td>
-  </tr>
-  
-  <tr>
-    <td align="center" valign="top" style="width: 400px;">
-      <a href="docs/photos/ground-mount-structure/cable-routes-05.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-05.jpg" width="400">
-      </a><br />
-      <div style="max-width: 400px;">
-        <sub>Cable entry into the building</sub>
+      <div style="max-width: 200px; text-align: center;">
+        <sub>Underground cable entry to the building</sub>
       </div>
     </td>
-    <td align="center" valign="top" style="width: 400px;">
-      <a href="docs/photos/ground-mount-structure/cable-routes-06.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-06.jpg" width="400">
+  </tr>
+
+  <tr>
+    <td align="center" valign="top">
+      <a href="docs/photos/ground-mount-structure/cable-routes-05.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-05.jpg" width="200">
       </a><br />
-      <div style="max-width: 400px;">
-          <sub>Close-up of the adapter between protective pipes. The additional gray pipe is for grounding</sub>
+      <div style="max-width: 200px; text-align: center;">
+        <sub>Cable entry point inside the building</sub>
+      </div>
+    </td>
+    <td align="center" valign="top">
+      <a href="docs/photos/ground-mount-structure/cable-routes-06.jpg">
+        <img src="docs/photos/ground-mount-structure/cable-routes-06.jpg" width="200">
+      </a><br />
+      <div style="max-width: 200px; text-align: center;">
+        <sub>Close-up of the conduit connection and grounding wire</sub>
       </div>
     </td>
   </tr>
 </table>
+
+
+
 
 To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I created an adapter using a 3D printer. PETG material was chosen for its weather resistance. The opening in adapter was designed to fit the protective pipe only after heating the adapter. Once cooled, the adapter holds the pipe in place.
 
@@ -338,19 +411,19 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
   </tr>
 
   <tr>
-    <td align="center" valign="top" style="width: 420px;">
+    <td align="center" valign="top">
       <a href="docs/photos/ground-mount-structure/3.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-03.jpg" width="400">
+        <img src="docs/photos/ground-mount-structure/cable-routes-03.jpg" width="200">
       </a><br />
-      <div style="max-width: 400px;">
+      <div>
         <sub>Adapter after printing</sub>
       </div>
     </td>
-    <td align="center" valign="top" style="width: 420px;">
+    <td align="center" valign="top">
       <a href="docs/photos/ground-mount-structure/cable-routes-04.jpg">
-        <img src="docs/photos/ground-mount-structure/cable-routes-04.jpg" width="400">
+        <img src="docs/photos/ground-mount-structure/cable-routes-04.jpg" width="200">
       </a><br />
-      <div style="max-width: 400px;">
+      <div>
       <sub>Adapter mounted on protective pipe</sub>
       </div>
     </td>
@@ -379,14 +452,6 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
     </td>
   </tr>
 </table>
-
-
-
-
-
-
-
-
 
 
 # Management System diagram:
