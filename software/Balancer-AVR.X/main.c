@@ -40,9 +40,52 @@
 /*
     Main application
  */
+#define INCREASE 1
+#define DECREASE 0
 
 void TCB_ISR_handler(void);
 void TCB_ISRc_handler(void);
+
+void set_pwm_frequency(uint16_t frequency, uint8_t prescaler)
+{
+    frequency = (F_CPU/prescaler)/frequency;
+    printf("frequency: %d \n\r", frequency);
+    TCD0.CMPACLR = frequency;
+    TCD0.CMPBCLR = frequency;
+}
+
+void disable_balancer_12V_WOB_output(void)
+{
+    TCD0.FAULTCTRL &= ~TCD_CMPBEN_bm; //zero bit disable WOB
+    BALANCE_24V_SetHigh();
+}
+void enable_balancer_12V_WOB_output(void)
+{
+    TCD0.CMPASET =  TCD0.CMPACLR;
+    TCD0.FAULTCTRL |= TCD_CMPBEN_bm;
+}
+void set_PWM_WOB(bool operation)
+{
+    if (operation == INCREASE)
+    {
+        if(TCD0.CMPASET<TCD0.CMPACLR)
+        {
+            TCD0.CMPASET++;
+        }
+    }
+    
+    if (operation == DECREASE)
+    {
+        if((TCD0.CMPASET-1)!=0)
+        {
+            TCD0.CMPASET--;
+        }
+    }
+    
+    printf("TCD0.CMPASET: %d \n\r", TCD0.CMPASET);
+}
+
+
 
 int main(void)
 {
@@ -60,7 +103,7 @@ int main(void)
     SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
     //-----------------------------------------------------------------------------------------------------------
     DAC0_SetOutput(1);
-    
+    set_pwm_frequency(3000,4);
     TCD0_Start();
     
     while (1)
