@@ -58,19 +58,19 @@ void TCD0_SetOVFIsrCallback(TCD0_cb_t cb)
 void TCD0_Initialize(void)
 {
     //Clear A
-    TCD0.CMPACLR = 0x176;
+    TCD0.CMPACLR = 0xBB7;
 
     //SET A
-    TCD0.CMPASET = 0x172;
+    TCD0.CMPASET = 0x5DB;
 
     //Clear B
-    TCD0.CMPBCLR = 0x176;
+    TCD0.CMPBCLR = 0xBB7;
 
     //SET B
-    TCD0.CMPBSET = 0x172;
+    TCD0.CMPBSET = 0x5DB;
 
-    //WGMODE One ramp mode; 
-    TCD0.CTRLB = 0x0;
+    //WGMODE Two ramp mode; 
+    TCD0.CTRLB = 0x1;
 
     //AUPDATE disabled; CMPCSEL PWM A output; CMPDSEL PWM A output; CMPOVR disabled; FIFTY disabled; 
     TCD0.CTRLC = 0x0;
@@ -119,8 +119,8 @@ void TCD0_Initialize(void)
     //PWMACTA disabled; PWMACTB disabled; 
     TCD0.STATUS = 0x0;
 
-    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV32; ENABLE enabled; SYNCPRES DIV1; 
-    TCD0.CTRLA = 0x11;
+    //CLKSEL Internal High-Frequency oscillator; CNTPRES DIV4; ENABLE enabled; SYNCPRES DIV1; 
+    TCD0.CTRLA = 0x9;
 
 }
 
