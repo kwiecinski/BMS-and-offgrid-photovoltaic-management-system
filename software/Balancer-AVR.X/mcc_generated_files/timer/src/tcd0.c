@@ -58,19 +58,19 @@ void TCD0_SetOVFIsrCallback(TCD0_cb_t cb)
 void TCD0_Initialize(void)
 {
     //Clear A
-    TCD0.CMPACLR = 0xBB7;
+    TCD0.CMPACLR = 0x383;
 
     //SET A
-    TCD0.CMPASET = 0x5DB;
+    TCD0.CMPASET = 0x383;
 
     //Clear B
-    TCD0.CMPBCLR = 0xBB7;
+    TCD0.CMPBCLR = 0x707;
 
     //SET B
-    TCD0.CMPBSET = 0x5DB;
+    TCD0.CMPBSET = 0x383;
 
-    //WGMODE Two ramp mode; 
-    TCD0.CTRLB = 0x1;
+    //WGMODE Dual slope mode; 
+    TCD0.CTRLB = 0x3;
 
     //AUPDATE disabled; CMPCSEL PWM A output; CMPDSEL PWM A output; CMPOVR disabled; FIFTY disabled; 
     TCD0.CTRLC = 0x0;
@@ -102,8 +102,8 @@ void TCD0_Initialize(void)
     //ACTION Event trigger a fault; CFG Neither Filter nor Asynchronous Event is enabled; EDGE The falling edge or low level of event generates retrigger or fault action; TRIGEI disabled; 
     TCD0.EVCTRLB = 0x0;
 
-    //CMPA disabled; CMPAEN enabled; CMPB disabled; CMPBEN enabled; CMPC disabled; CMPCEN disabled; CMPD disabled; CMPDEN disabled; 
-    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x30);
+    //CMPA disabled; CMPAEN disabled; CMPB disabled; CMPBEN enabled; CMPC disabled; CMPCEN enabled; CMPD disabled; CMPDEN disabled; 
+    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x60);
 
     //INPUTMODE Input has no actions; 
     TCD0.INPUTCTRLA = 0x0;
