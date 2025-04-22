@@ -1,0 +1,8 @@
+$path = [System.Environment]::GetEnvironmentVariable("PATH", "Machine")
+$newPath = "$path;C:\Users\User\avrdude\avrdude-v8.0-windows-x64"
+[System.Environment]::SetEnvironmentVariable("PATH", $newPath, "Machine")
+$env:PATH = $newPath
+
+
+
+avrdude.exe -C "$(Get-Command avrdude | Select-Object -ExpandProperty Path | Split-Path)\avrdude.conf" -p AVR64DD28 -c serialUPDI -P COM11 -x rtsdtr=high -U flash:w:d:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer-AVR.X\dist\default\production\Balancer-AVR.X.production.hex:i

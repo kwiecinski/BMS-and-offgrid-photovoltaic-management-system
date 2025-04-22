@@ -3,7 +3,7 @@ import subprocess
 import time
 
 # Stałe
-TARGET_SN = "6"
+TARGET_SN = "5"
 HEX_PATH = r"d:\Projekty\BMS-and-offgrid-photovoltaic-management-system\software\Balancer-AVR.X\dist\default\production\Balancer-AVR.X.production.hex"
 AVRDUDE_CONF = r"c:\Users\User\avrdude\avrdude-v8.0-windows-x64\avrdude.conf"
 
