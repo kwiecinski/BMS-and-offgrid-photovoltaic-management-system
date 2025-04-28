@@ -1,19 +1,18 @@
 # Offgrid Photovoltaic Management System 
  ### Project contains:
- #### Power and mechanical part:
-- PV panels connection and DIY Ground Mount structure
+ #### A. Power and mechanical part:
 
-  1.[ Photovoltaic modules](#1-photovoltaic-modules)  
-  2.[ Concrete base mounting](#2-concrete-base-mounting)  
-  3.[ Metalworking and welding mounting bases and angle bar](#3-metalworking-and-welding-mounting-bases-and-angle-bar)  
-  4.[ Painting mounting base, angle bars and perforated profiles](#4-painting-mounting-base-angle-bars-and-perforated-profiles)  
-  5.[ PV mountings to perforated profiles](#5-pv-mountings-to-perforated-profiles)  
-  6.[ Assembly of PV installation](#6-assembly-of-pv-installation)  
-  7.[ Fully assembled PV installation](#7-fully-assembled-pv-installation)<br>
-  8.[ Underground Cable Installation and Connection to the Building](#8-underground-cable-installation-and-connection-to-the-building)
+  1. [ Photovoltaic modules](#1-photovoltaic-modules)  
+  2. [ Concrete base mounting](#2-concrete-base-mounting)  
+  3. [ Metalworking and welding mounting bases and angle bar](#3-metalworking-and-welding-mounting-bases-and-angle-bar)  
+  4. [ Painting mounting base, angle bars and perforated profiles](#4-painting-mounting-base-angle-bars-and-perforated-profiles)  
+  5. [ PV mountings to perforated profiles](#5-pv-mountings-to-perforated-profiles)  
+  6. [ Assembly of PV installation](#6-assembly-of-pv-installation)  
+  7. [ Fully assembled PV installation](#7-fully-assembled-pv-installation)<br>
+  8. [ Underground Cable Installation and Connection to the Building](#8-underground-cable-installation-and-connection-to-the-building)
  
- - Installation and wiring of the EASUN inverter
-#### Managemenet system part:
+B. [EASUN inverter - description, installation schematic and wiring](#easun-inverter---description-installation-and-wiring)
+#### C. Managemenet system part:
 - [BMS for lead-acid batteries](#bms-for-lead-acid-batteries) - equalize battery, protect from large charge/discharge currents, montors battery state (temp, voltage)
 - [ESP32 Master module](#esp32-master-module) - it communicate with EASUN  converter, BMS, Homa Assistant, Energy Meters and sensor. Supervise all system work propertly.
 - [Home Assistant integration](#home-assistant-integration) - integrate ESP Master module with HA for easy and compact managment (local and remote access)
@@ -444,6 +443,13 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
   </tr>
 </table>
 
+
+## EASUN inverter - Description, installation and wiring
+
+[📄 **EASUN ISolar SMG II 4kW datasheet**](docs/ISolar-SMG-II-4KW-WiFi.pdf)
+
+<a href="electrical/schematic.png">
+        <img src="electrical/schematic.png" width="500"></a>
 
 
 # Management System diagram:
