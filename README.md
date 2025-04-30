@@ -446,6 +446,21 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
 
 ## EASUN inverter - Description, installation and wiring
 
+The EASUN ISolar SMG II 4kW is an off-grid inverter. It does not have the capability to synchronize with the power grid.
+
+Inverter specifications:
+- Input voltage from PV array: 60-500V DC
+- Input current from PV array: 15A
+- Output voltage: 230V/50Hz
+- Battery voltage: 24V
+- Battery current: max 100A
+
+In my case, 12 PV were connected, each with a maximum voltage of 37V, resulting in a maximum voltage of approximately 440V.
+
+The maximum current of the PV array is 8A.  
+Connected PV array meet the inverter's specifications.
+
+
 [📄 **EASUN ISolar SMG II 4kW datasheet**](docs/ISolar-SMG-II-4KW-WiFi.pdf)
 
 <a href="electrical/schematic.png">
