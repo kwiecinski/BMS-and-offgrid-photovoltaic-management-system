@@ -446,6 +446,7 @@ To connect the AROT 50 (blue) protective pipe with the RL50 pipe (white), I crea
 
 ## EASUN inverter - Description, installation and wiring
 
+[📄 **EASUN ISolar SMG II 4kW datasheet**](docs/ISolar-SMG-II-4KW-WiFi.pdf) <br><br>
 The EASUN ISolar SMG II 4kW is an off-grid inverter. It does not have the capability to synchronize with the power grid.
 
 Inverter specifications:
@@ -460,8 +461,25 @@ In my case, 12 PV were connected, each with a maximum voltage of 37V, resulting 
 The maximum current of the PV array is 8A.  
 Connected PV array meet the inverter's specifications.
 
+Power Source Priority
 
-[📄 **EASUN ISolar SMG II 4kW datasheet**](docs/ISolar-SMG-II-4KW-WiFi.pdf)
+| Option       | Description       |
+|-----------------|-----------------|
+| SOL | The inverter uses solar energy to power the loads. If solar energy is insufficient to meet the load demand, the battery **only supplements** the power. The grid supplies power to the loads only when: Solar energy is unavailable (e.g., at night or during heavy cloud cover). Battery voltage drops to the low-level warning voltage or the threshold set in Program 12.|
+| UFI  | Utility will provide power to the loads as first priority. Solar and battery energy will provide power to the loads only when utility power is notavailable.|
+| SBU  | The inverter uses solar energy to power the loads. If solar energy is insufficient, the battery provides power to the loads.​ The grid supplies power to the loads only when the battery voltage drops to the low-level warning voltage or the threshold set in Program 12. |
+| SUB  | Solar energy is charged first and then power to the loads. If solar energy is not sufficient to power all connected loads, Utility energy will supply power to the loads at the same time. <br>**Attention**: I found that there is an idle power (about 150W) that must be drawn from the grid before parallel operation of the grid + solar energy can occur. This means that if the power consumption is up to 150W, it will not be supplied by solar energy but by the grid. If power consumption is over 150W eg. 500W then 350W will we drawn from solar and still 150W will be drawn from grid.|
+
+
+Key Differences between SOL and SBU is battery usage:
+
+SOL Mode: The battery assists only when solar energy is insufficient, and the grid is used if both solar and battery cannot meet the load. 
+
+SBU Mode: The battery is used after solar, and the grid is used only when the battery is depleted.​
+
+
+
+
 
 <a href="electrical/schematic.png">
         <img src="electrical/schematic.png" width="500"></a>
