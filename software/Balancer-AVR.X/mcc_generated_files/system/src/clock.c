@@ -55,8 +55,8 @@ void CLOCK_Initialize(void)
     //TUNE 0x0; 
     ccp_write_io((void*)&(CLKCTRL.OSCHFTUNE),0x0);
 
-    //MULFAC PLL is disabled; RUNSTDBY disabled; SOURCE OSCHF; 
-    ccp_write_io((void*)&(CLKCTRL.PLLCTRLA),0x0);
+    //MULFAC 2 x multiplication factor; RUNSTDBY disabled; SOURCE OSCHF; 
+    ccp_write_io((void*)&(CLKCTRL.PLLCTRLA),0x1);
 
     //CSUT 1k cycles; ENABLE disabled; LPMODE disabled; RUNSTDBY disabled; SEL disabled; 
     ccp_write_io((void*)&(CLKCTRL.XOSC32KCTRLA),0x0);

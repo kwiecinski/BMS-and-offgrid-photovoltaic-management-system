@@ -144,12 +144,22 @@ int main(void)
     //set_pwm_frequency(3000);
 
 
+    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
+    TCD0.CMPBCLR = 950;    //main tcd counter in dual slope
+    TCD0.CMPBSET = 0000;
+    TCD0.CMPASET = 950;    //WOA is cleared when the TCD counter counts up and matches the CMPASET value.
 
-    TCD0.CMPBCLR = 4095;
-    TCD0.CMPBSET = 0;
-    TCD0.CMPASET = 0;
 
-
+    /*
+The WOA output is set when the TCD counter counts down and matches the CMPASET value. WOA is cleared when
+the TCD counter counts up and matches the CMPASET value.
+The WOB output is set when the TCD counter counts up and matches the CMPBSET value. WOB is cleared when
+the TCD counter counts down and matches the CMPBSET value.
+     * 
+     * The outputs will overlap if CMPASET > CMPBSET.
+CMPACLR is not used in Dual Slope mode. Writing a value to CMPACLR has no effect.
+     * 
+     */ 
     //disable_balancer_24V_WOB_output();
     //disable_balancer_12V_WOB_output();
     while (1)
@@ -169,9 +179,10 @@ int main(void)
         //printf("GetShuntVoltage:%ld mV \r\n", AutoFox_INA226_GetShuntVoltage_uV(&ina226) / 1000);
         // printf("GetCurrent:%ld mA \r\n\r\n", AutoFox_INA226_GetCurrent_uA(&ina226) / 1000);
         
+        set_PWM_WOA_24V(DECREASE);
         DELAY_milliseconds(10000);
-        set_PWM_WOA_24V(INCREASE);
-        set_PWM_WOB_12V(INCREASE);
+     
+        //set_PWM_WOB_12V(DECREASE);
         //set_pwm_frequency(3000);
         //set_PWM_WOB(DECREASE);
         //set_PWM_WOA(DECREASE);
@@ -180,7 +191,7 @@ int main(void)
         // BALANCE_24V_SetHigh();
         // BALANCE_12V_SetLow();
         // BALANCE_24V_SetLow();
-
+  
 
     }
 }
