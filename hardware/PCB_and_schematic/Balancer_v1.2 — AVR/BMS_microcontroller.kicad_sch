@@ -11883,6 +11883,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 273.05 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "615462a8-f79c-4162-9376-3fb6ec6f80ea")
+		(property "Reference" "C32"
+			(at 265.43 101.854 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 265.43 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 274.0152 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 273.05 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "afbe332b-af5c-4e2b-af20-428d9e1d300c")
+		)
+		(pin "1"
+			(uuid "f7f3f853-5aa7-45a5-9ddb-1e71b3c64b94")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 34.29 123.19 0)
 		(unit 1)
@@ -12307,6 +12376,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 273.05 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70d056c4-6464-4129-a7a6-ce6ab7d86eaa")
+		(property "Reference" "#PWR072"
+			(at 273.05 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_RS485"
+			(at 273.05 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 273.05 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5add736-0469-4471-b943-09aadb13fd1e")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "My-Lib:ADUM3211ARZ")
 		(at 219.71 54.61 0)
 		(unit 1)
@@ -12331,7 +12466,7 @@
 				)
 			)
 		)
-		(property "Footprint" "R_8_ADI"
+		(property "Footprint" "Package_SO:SO-8_3.9x4.9mm_P1.27mm"
 			(at 223.266 53.34 0)
 			(effects
 				(font
@@ -12868,72 +13003,6 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "#PWR0106")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 273.05 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8126d548-a3dc-4b2d-8cff-2d87a28551f4")
-		(property "Reference" "#PWR072"
-			(at 273.05 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 273.05 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 273.05 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 273.05 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 273.05 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "92a9826f-8d11-44fc-8972-f12dc17c8ba3")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
-					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -14666,6 +14735,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 273.05 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6f37324-a1b7-4be0-8580-26e206f836c6")
+		(property "Reference" "#PWR0115"
+			(at 273.05 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND_RS485"
+			(at 273.05 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 273.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebd9c5c0-8888-4b1f-aa9c-7ed1eaafe2ba")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR0115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 90.17 374.65 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15270,6 +15405,72 @@
 			(project "Balancer"
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
 					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 273.05 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3dab585-c267-4893-9bcc-c0909a32e8e5")
+		(property "Reference" "#PWR0114"
+			(at 273.05 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_RS485"
+			(at 273.05 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 273.05 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05ab2414-92cc-45e1-ba6c-8990eda23e3a")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)

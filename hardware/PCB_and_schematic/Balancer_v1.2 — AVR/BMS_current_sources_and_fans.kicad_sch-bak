@@ -10415,6 +10415,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:BAT86")
+		(at 171.45 120.65 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b09dcf1-7285-43c7-8f7f-1c9b34dafc87")
+		(property "Reference" "D28"
+			(at 173.482 119.1203 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BAT86"
+			(at 173.482 121.5446 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 167.005 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT86.pdf"
+			(at 171.45 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "50V 0.2A Small Signal Schottky Diode, DO-35"
+			(at 171.45 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0967c7e-51d8-4dca-a06b-a150854a4311")
+		)
+		(pin "2"
+			(uuid "f01920e2-260c-46c0-88be-5c28a0e72a6c")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
+					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 313.69 195.58 0)
 		(unit 1)
@@ -12729,75 +12799,6 @@
 				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
 					(reference "U3")
 					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:SM6T15A")
-		(at 171.45 120.65 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8c5ab52f-c3de-46b9-8e5c-9ece48499805")
-		(property "Reference" "D28"
-			(at 173.482 119.4378 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BAT86"
-			(at 173.736 121.666 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF"
-			(at 166.37 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/sm6t.pdf"
-			(at 171.45 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "600W unidirectional Transil Transient Voltage Suppressor, 15Vrwm, DO-214AA"
-			(at 171.45 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ea47cf89-03a1-4e3d-bdb7-7343a76092ec")
-		)
-		(pin "1"
-			(uuid "365a37cf-886a-4c97-81dc-8d4751e09267")
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/918b88dd-8c9a-4153-9aaf-3fa336d7bf39"
-					(reference "D28")
-					(unit 1)
 				)
 			)
 		)
