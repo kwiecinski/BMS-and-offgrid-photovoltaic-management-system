@@ -1,39 +1,56 @@
 import serial
-import serial.tools.list_ports
-import time
+import threading
+import sys
+import msvcrt  # tylko na Windows
 
-TARGET_SN = "A5XK3RJTA"  # Możesz też wpisać fragment np. "VID_0403+PID_6001+..."
-BAUDRATE = 9600
+def read_serial(port_name='COM1', baudrate=9600):
+    try:
+        ser = serial.Serial(port_name, baudrate, timeout=0.1)
+        print(f"Połączono z {port_name} @ {baudrate} baud.")
+    except serial.SerialException as e:
+        print(f"Błąd połączenia: {e}")
+        return
 
-def find_target_port():
-    ports = serial.tools.list_ports.comports()
-    for port in ports:
-        if TARGET_SN in port.hwid or TARGET_SN in (port.serial_number or "") or TARGET_SN in port.device:
-            return port.device
-    return None
+    paused = threading.Event()  # jeśli ustawiony: działa normalnie; jeśli cleared — pauza
+    paused.set()
 
-def main():
-    ser = None
-    while True:
-        if ser is None or not ser.is_open:
-            port = find_target_port()
-            if port:
-                try:
-                    print(f"[INFO] Łączenie z {port}...")
-                    ser = serial.Serial(port, BAUDRATE, timeout=1)
-                    print("[INFO] Połączono.")
-                except serial.SerialException as e:
-                    print(f"[ERROR] Nie udało się połączyć: {e}")
-                    ser = None
-        else:
-            try:
-                line = ser.readline()
-                if line:
-                    print("[RX]", line.decode(errors='replace').strip())
-            except serial.SerialException:
-                print("[WARN] Port utracony.")
-                ser = None
-        time.sleep(0.5)
+    def read_loop():
+        try:
+            while True:
+                if paused.is_set() and ser.in_waiting:
+                    data = ser.read(ser.in_waiting)
+                    print(data.decode(errors='replace'), end='', flush=True)
+        except Exception as e:
+            print(f"\nBłąd odczytu: {e}")
+        finally:
+            ser.close()
+            print("\nPort zamknięty.")
+
+    def keyboard_loop():
+        print("Naciśnij [P] aby zapauzować, [R] aby wznowić, [Q] aby wyjść.")
+        while True:
+            if msvcrt.kbhit():
+                key = msvcrt.getch().lower()
+                if key == b'p':
+                    paused.clear()
+                    print("\n[Pauza]")
+                elif key == b'r':
+                    paused.set()
+                    print("\n[Wznowiono]")
+                elif key == b'q':
+                    print("\n[Kończę]")
+                    break
+
+    reader = threading.Thread(target=read_loop, daemon=True)
+    reader.start()
+
+    try:
+        keyboard_loop()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        paused.clear()
+        ser.close()
 
 if __name__ == "__main__":
-    main()
+    read_serial()

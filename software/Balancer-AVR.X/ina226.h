@@ -43,6 +43,7 @@
 #include <stdbool.h>
 
 
+
 static const uint8_t    INA226_DEFAULT_I2C_ADDRESS  = 0b1000000;
 
 //Heads up for the classes declared in this header
@@ -135,5 +136,5 @@ status AutoFox_INA226_setupCalibration(AutoFox_INA226* this, uint16_t aShuntResi
 void SendErrorStatus(status err);
 
 
-
+extern AutoFox_INA226 ina226; 
 #endif //__AUTOFOX_INA226_H__

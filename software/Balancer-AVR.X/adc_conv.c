@@ -23,7 +23,7 @@ uint16_t Get_ADC_Voltage(adc_0_channel_t channel)
     result = (result * REFRENCE_VOLTAGE * 100) / ADC_RESOLUTION_12BIT;
     result = result / 100;
     // result after calculations: 2462 = 2,462V
-    printf("RAW RESULT: %u \n",  result); 
+    //printf("RAW RESULT: %u \n",  result); 
     if (channel == ADC_CHANNEL_VDD_DIV10)   
     {
         result = result*INTERNAL_VDD_CHANNEL_DIVIDER;
@@ -32,7 +32,7 @@ uint16_t Get_ADC_Voltage(adc_0_channel_t channel)
     {
       
         result = (result*BATT_12V_VOLTAGE_DIVIDER)/100;
-        print_voltage("BATT_12V", result);
+        //print_voltage("BATT_12V", result);
         
     } else if (channel == ADC_CHANNEL_VREF)
     {

@@ -60,6 +60,7 @@
       <itemPath>uart_remap.h</itemPath>
       <itemPath>adc_conv.h</itemPath>
       <itemPath>ina226.h</itemPath>
+      <itemPath>balance_cells.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -129,6 +130,7 @@
       <itemPath>uart_remap.c</itemPath>
       <itemPath>adc_conv.c</itemPath>
       <itemPath>ina226.c</itemPath>
+      <itemPath>balance_cells.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
