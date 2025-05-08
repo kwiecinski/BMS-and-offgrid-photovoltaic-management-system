@@ -248,9 +248,9 @@ int32_t AutoFox_INA226_GetShuntVoltage_uV(AutoFox_INA226* this)
 //----------------------------------------------------------------------------
 uint16_t AutoFox_INA226_GetBusVoltage_V(AutoFox_INA226* this)
 {
-    uint32_t theRegisterValue = 0;
+    uint16_t theRegisterValue = 0;
     AutoFox_INA226_ReadRegister(this, INA226_BUS_VOLTAGE, &theRegisterValue);
-    return (uint16_t)((theRegisterValue * INA226_BUS_VOLTAGE_LSB)/10000);
+    return (uint16_t)(((uint32_t)theRegisterValue * INA226_BUS_VOLTAGE_LSB)/10000);
 }
 
 

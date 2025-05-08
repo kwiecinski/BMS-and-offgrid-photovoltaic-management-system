@@ -9,11 +9,7 @@
 
 #define MAX_CMP_VALUE               4000   
 
-void initialize(void)
-{
-    ina266_init();
-    balancer_timer_tcd_init();
-}
+
 
 void ina266_init(void)
 {
@@ -46,4 +42,10 @@ void balancer_timer_tcd_init(void)
 
     TCD0.CTRLE |= TCD_SYNC_bm;
     while (!(TCD0.STATUS & TCD_CMDRDY_bm));
+}
+
+void initialize(void)
+{
+    ina266_init();
+    balancer_timer_tcd_init();
 }
