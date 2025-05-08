@@ -195,7 +195,7 @@ status AutoFox_INA226_ReadRegister(AutoFox_INA226* this, uint8_t aRegister, uint
 {
     *aValue_p = 0;
 
-    uint8_t buffer[3], output[3] = {0, 0, 0};
+    uint8_t output[3] = {0, 0, 0};
 
     TWI0_Write(this->mI2C_Address, &aRegister, 1);
     

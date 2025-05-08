@@ -34,7 +34,8 @@
 //#include <xc.h> // include processor files - each processor file is guarded.  
 
 void balance_cells(void);
-
+#define INCREASE 1
+#define DECREASE 0
 
 #endif
 

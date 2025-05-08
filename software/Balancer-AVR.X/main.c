@@ -43,92 +43,12 @@
 /*
     Main application
  */
-#define INCREASE 1
-#define DECREASE 0
+
 
 void TCB_ISR_handler(void);
 void TCB_ISRc_handler(void);
 
-#define TCD_precaler 4
-
-void set_pwm_frequency(uint16_t frequency)
-{
-    frequency = (F_CPU / TCD_precaler) / frequency;
-    printf("frequency: %d \n\r", frequency);
-    TCD0.CMPACLR = 700;
-    TCD0.CMPBCLR = 700;
-}
-
-void disable_balancer_12V_WOB_output(void)
-{
-    TCD0.FAULTCTRL &= ~TCD_CMPBEN_bm; //zero bit disable WOB
-    BALANCE_12V_SetHigh();
-}
-
-void disable_balancer_24V_WOB_output(void)
-{
-    TCD0.FAULTCTRL &= ~TCD_CMPAEN_bm; //zero bit disable WOB
-    BALANCE_24V_SetHigh();
-}
-
-void enable_balancer_12V_WOB_output(void)
-{
-    TCD0.CMPBSET = TCD0.CMPBCLR;
-    TCD0.FAULTCTRL |= TCD_CMPBEN_bm;
-}
-
-void set_PWM_WOB_12V(bool operation)
-{
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm)); // CMDRDY == 1
-    if (operation == INCREASE)
-    {
-        if (TCD0.CMPBSET < TCD0.CMPBCLR)
-        {
-            TCD0.CMPBSET++;
-        }
-    }
-
-    if (operation == DECREASE)
-    {
-        if ((TCD0.CMPBSET - 1) != 0)
-        {
-            TCD0.CMPBSET--;
-        }
-    }
-    TCD0.CTRLE |= TCD_SYNC_bm; // Ustaw bit SYNC
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
-    printf("TCD0.CMPBSETb: %d \n\r", TCD0.CMPBSET);
-
-}
-
-void set_PWM_WOA_24V(bool operation)
-{
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
-
-    if (operation == INCREASE)
-    {
-        if (TCD0.CMPASET < TCD0.CMPBCLR)
-        {
-            TCD0.CMPASET++;
-        }
-        
-    }
-
-    if (operation == DECREASE)
-    {
-        if ((TCD0.CMPASET - 1) != 0)
-        {
-            TCD0.CMPASET--;
-        }
-    }
-
-    TCD0.CTRLE |= TCD_SYNC_bm;
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
-
-    printf("TCD0.CMPASET: %d \n\r", TCD0.CMPASET);
-}
-
-    AutoFox_INA226 ina226;
+AutoFox_INA226 ina226;
 
 int main(void)
 {
@@ -138,34 +58,6 @@ int main(void)
     stdout = stdout_ptr;
     // ------------------------------------------------------------------------
 
-    //INA266 INIT -----------------------------------------------------------------------------------------------
-
-    AutoFox_INA226_Constructor(&ina226);
-    SendErrorStatus(AutoFox_INA226_Init(&ina226, INA226_DEFAULT_I2C_ADDRESS, 100, 5));
-    SendErrorStatus(AutoFox_INA226_ConfigureVoltageConversionTime(&ina226, 0b111)); //sample time 8.244ms
-    SendErrorStatus(AutoFox_INA226_ConfigureNumSampleAveraging(&ina226, 0b010));
-    //-----------------------------------------------------------------------------------------------------------
-
-    //set_pwm_frequency(3000);
-
-
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
-    TCD0.CMPBCLR = 4000;    //main tcd counter in dual slope
-    TCD0.CMPBSET = 0;
-    TCD0.CMPASET = 4000;    //WOA is cleared when the TCD counter counts up and matches the CMPASET value.
-    TCD0.CTRLE |= TCD_SYNC_bm; // Ustaw bit SYNC
-    while (!(TCD0.STATUS & TCD_CMDRDY_bm));
-
-    /*
-The WOA output is set when the TCD counter counts down and matches the CMPASET value. WOA is cleared when
-the TCD counter counts up and matches the CMPASET value.
-The WOB output is set when the TCD counter counts up and matches the CMPBSET value. WOB is cleared when
-the TCD counter counts down and matches the CMPBSET value.
-     * 
-     * The outputs will overlap if CMPASET > CMPBSET.
-CMPACLR is not used in Dual Slope mode. Writing a value to CMPACLR has no effect.
-     * 
-     */ 
     //disable_balancer_24V_WOB_output();
     //disable_balancer_12V_WOB_output();
     while (1)
