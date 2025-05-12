@@ -37,37 +37,49 @@ const struct TMR_INTERFACE TCB0_Interface = {
     .Start = TCB0_Start,
     .Stop = TCB0_Stop,
     .PeriodCountSet = TCB0_Write,
-    .TimeoutCallbackRegister = TCB0_OverflowCallbackRegister,
+    .TimeoutCallbackRegister = NULL,
     .Tasks = NULL
 };
 
 
-void (*TCB0_OVF_isr_cb)(void) = NULL;
 
-void TCB0_OverflowCallbackRegister(TCB0_cb_t cb)
+void (*TCB0_CAPT_isr_cb)(void) = NULL;
+
+void TCB0_CaptureCallbackRegister(TCB0_cb_t cb)
 {
-	TCB0_OVF_isr_cb = cb;
+	TCB0_CAPT_isr_cb = cb;
 }
-
-
+volatile int16_t balancer_12V_timer = 0, balancer_24V_timer = 0, balance_time, test;
 ISR(TCB0_INT_vect)
 {
 	/* Insert your TCB interrupt handling code */
-
-    /**
-	 * The Overflow interrupt flag is cleared by writing 1 to it.
+	/**
+	 * The interrupt flag is cleared by writing 1 to it, or when the Capture register
+	 * is read in Capture mode
 	 */
+    test++;
+    balancer_12V_timer--;
+    if (balancer_12V_timer < 0)
+    {
+        balancer_12V_timer = 0;
+    }
 
-
-	 if(TCB0.INTFLAGS & TCB_OVF_bm)
+    balancer_24V_timer--;
+    if (balancer_24V_timer < 0)
+    {
+        balancer_24V_timer = 0;
+    }
+	 if(TCB0.INTFLAGS & TCB_CAPT_bm)
         {
-            if (TCB0_OVF_isr_cb != NULL)
+            if (TCB0_CAPT_isr_cb != NULL)
             {
-                (*TCB0_OVF_isr_cb)();
+                (*TCB0_CAPT_isr_cb)();
             }
 
-            TCB0.INTFLAGS = TCB_OVF_bm;
+            TCB0.INTFLAGS = TCB_CAPT_bm;
         }
+
+
 
 
 	 
@@ -76,13 +88,13 @@ ISR(TCB0_INT_vect)
 void TCB0_Initialize(void)
 {
     //Compare or Capture
-    TCB0.CCMP = 0x2;
+    TCB0.CCMP = 0x2EE0;
 
     //Count
     TCB0.CNT = 0x0;
 
-    //ASYNC disabled; CCMPEN disabled; CCMPINIT disabled; CNTMODE TIMEOUT; 
-    TCB0.CTRLB = 0x1;
+    //ASYNC disabled; CCMPEN disabled; CCMPINIT disabled; CNTMODE INT; 
+    TCB0.CTRLB = 0x0;
     
     //DBGRUN disabled; 
     TCB0.DBGCTRL = 0x0;
@@ -90,8 +102,8 @@ void TCB0_Initialize(void)
     //CAPTEI disabled; EDGE disabled; FILTER disabled; 
     TCB0.EVCTRL = 0x0;
 
-    //CAPT disabled; OVF enabled; 
-    TCB0.INTCTRL = 0x2;
+    //CAPT enabled; OVF disabled; 
+    TCB0.INTCTRL = 0x1;
 
     //CAPT disabled; OVF disabled; 
     TCB0.INTFLAGS = 0x0;
@@ -99,8 +111,8 @@ void TCB0_Initialize(void)
     //Temporary Value
     TCB0.TEMP = 0x0;
 
-    //CASCADE disabled; CLKSEL DIV1; ENABLE disabled; RUNSTDBY disabled; SYNCUPD disabled; 
-    TCB0.CTRLA = 0x0;
+    //CASCADE disabled; CLKSEL DIV2; ENABLE enabled; RUNSTDBY disabled; SYNCUPD disabled; 
+    TCB0.CTRLA = 0x3;
 
 }
 

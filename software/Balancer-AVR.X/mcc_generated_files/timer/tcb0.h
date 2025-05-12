@@ -51,11 +51,11 @@ extern const struct TMR_INTERFACE TCB0_Interface;
 typedef void (*TCB0_cb_t)(void);
 /**
  * @ingroup tcb0
- * @brief Registers a callback function to be called at overflow event.
- * @param TCB0_cb_t cb - Callback function for overflow event.
+ * @brief Registers a callback function to be called at capture event.
+ * @param TCB0_cb_t cb - Callback function for capture event.
  * @return None.
  */
-void TCB0_OverflowCallbackRegister(TCB0_cb_t cb);
+void TCB0_CaptureCallbackRegister(TCB0_cb_t cb);
 /**
  * @ingroup tcb0
  * @brief Initializes the TCB module
