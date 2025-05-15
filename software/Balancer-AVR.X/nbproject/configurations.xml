@@ -46,6 +46,7 @@
           <itemPath>mcc_generated_files/timer/tcd0.h</itemPath>
           <itemPath>mcc_generated_files/timer/tcb0.h</itemPath>
           <itemPath>mcc_generated_files/timer/delay.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tcb1.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
           <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
@@ -63,6 +64,8 @@
       <itemPath>balance_cells.h</itemPath>
       <itemPath>inits.h</itemPath>
       <itemPath>main.h</itemPath>
+      <itemPath>current_limiter.h</itemPath>
+      <itemPath>temp_regulator.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -114,6 +117,7 @@
             <itemPath>mcc_generated_files/timer/src/tcd0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tcb0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/delay.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/tcb1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
@@ -134,6 +138,8 @@
       <itemPath>ina226.c</itemPath>
       <itemPath>balance_cells.c</itemPath>
       <itemPath>inits.c</itemPath>
+      <itemPath>current_limiter.c</itemPath>
+      <itemPath>temp_regulator.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

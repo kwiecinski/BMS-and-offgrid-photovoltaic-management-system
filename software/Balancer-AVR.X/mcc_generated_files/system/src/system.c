@@ -49,6 +49,7 @@ void SYSTEM_Initialize(void)
     I2C0_Host_Initialize();
     TCA0_Initialize();
     TCB0_Initialize();
+    TCB1_Initialize();
     TCD0_Initialize();
     USART0_Initialize();
     USART1_Initialize();

@@ -8,7 +8,7 @@
 #include "ina226.h"
 #include "balance_cells.h"
 #include "inits.h"
-
+#include "temp_regulator.h"
 
 AutoFox_INA226 ina226;
 
@@ -28,6 +28,8 @@ int main(void)
     {
 
         balance_cells();
+        
+        printf("%d \n\r", Get_NTC_Temperature(calculate_temp(TEMP_BALANCER)));
 /*
         if (test > 1000)
         {

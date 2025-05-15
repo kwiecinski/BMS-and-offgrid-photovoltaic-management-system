@@ -102,8 +102,8 @@ void TCD0_Initialize(void)
     //ACTION Event trigger a fault; CFG Neither Filter nor Asynchronous Event is enabled; EDGE The falling edge or low level of event generates retrigger or fault action; TRIGEI disabled; 
     TCD0.EVCTRLB = 0x0;
 
-    //CMPA disabled; CMPAEN enabled; CMPB disabled; CMPBEN enabled; CMPC disabled; CMPCEN enabled; CMPD disabled; CMPDEN disabled; 
-    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x70);
+    //CMPA disabled; CMPAEN enabled; CMPB disabled; CMPBEN enabled; CMPC disabled; CMPCEN disabled; CMPD disabled; CMPDEN disabled; 
+    ccp_write_io((void*)&(TCD0.FAULTCTRL),0x30);
 
     //INPUTMODE Input has no actions; 
     TCD0.INPUTCTRLA = 0x0;

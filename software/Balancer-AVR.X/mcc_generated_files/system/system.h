@@ -50,6 +50,7 @@ extern "C" {
 #include "../i2c_host/twi0.h"
 #include "../timer/tca0.h"
 #include "../timer/tcb0.h"
+#include "../timer/tcb1.h"
 #include "../timer/tcd0.h"
 #include "../uart/usart0.h"
 #include "../uart/usart1.h"

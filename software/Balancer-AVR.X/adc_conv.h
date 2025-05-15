@@ -15,10 +15,15 @@ extern "C" {
 
 #define ADC_CHANNEL_VDD_DIV10           ADC_MUXPOS_VDDDIV10_gc
 #define ADC_CHANNEL_12V_BATT            01
+#define ADC_CHANNEL_VREF                07
+#define ADC_CHANNEL_GND_VOLTAGE_DROP    26
+    
+#define ADC_CHANNEL_TEMP_BALANCER       03
 #define ADC_CHANNEL_TEMP_BATT_12V       29
 #define ADC_CHANNEL_TEMP_BATT_24V       02
-#define ADC_CHANNEL_TEMP_SMPS           06
-#define ADC_CHANNEL_VREF                07
+#define ADC_CHANNEL_TEMP_SMPS           04
+
+    
     
 uint16_t Get_ADC_Voltage(adc_0_channel_t channel);
     
