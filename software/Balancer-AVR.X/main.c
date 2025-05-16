@@ -29,7 +29,7 @@ int main(void)
 
         balance_cells();
         
-        printf("%d \n\r", Get_NTC_Temperature(calculate_temp(TEMP_BALANCER)));
+        printf("%d \n\r", calculate_temp(TEMP_BALANCER));
 /*
         if (test > 1000)
         {

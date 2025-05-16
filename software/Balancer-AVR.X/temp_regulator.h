@@ -12,7 +12,6 @@
 extern "C" {
 #endif
 
-int8_t Get_NTC_Temperature(uint16_t voltage_mv);
 enum
 {
     TEMP_WARNING_BALANCER,
@@ -27,9 +26,9 @@ enum
     TEMP_SMPS,
     TEMP_BATT_12V,
     TEMP_BATT_24V,
-} typedef temperature;
+} typedef temp_sensor;
 
-uint16_t calculate_temp(temperature temp);
+uint16_t calculate_temp(temp_sensor temp);
 
 #ifdef	__cplusplus
 }
