@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 
-    void initialize(void);
+void initialize(void);
 
     
     

@@ -49,7 +49,7 @@ void TCB0_CaptureCallbackRegister(TCB0_cb_t cb)
 {
 	TCB0_CAPT_isr_cb = cb;
 }
-volatile int16_t balancer_12V_timer = 0, balancer_24V_timer = 0, balance_time, test;
+
 ISR(TCB0_INT_vect)
 {
 	/* Insert your TCB interrupt handling code */
@@ -57,18 +57,7 @@ ISR(TCB0_INT_vect)
 	 * The interrupt flag is cleared by writing 1 to it, or when the Capture register
 	 * is read in Capture mode
 	 */
-    test++;
-    balancer_12V_timer--;
-    if (balancer_12V_timer < 0)
-    {
-        balancer_12V_timer = 0;
-    }
 
-    balancer_24V_timer--;
-    if (balancer_24V_timer < 0)
-    {
-        balancer_24V_timer = 0;
-    }
 	 if(TCB0.INTFLAGS & TCB_CAPT_bm)
         {
             if (TCB0_CAPT_isr_cb != NULL)
@@ -78,11 +67,6 @@ ISR(TCB0_INT_vect)
 
             TCB0.INTFLAGS = TCB_CAPT_bm;
         }
-
-
-
-
-	 
 }
 
 void TCB0_Initialize(void)

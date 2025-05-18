@@ -9,8 +9,11 @@
 #include "balance_cells.h"
 #include "inits.h"
 #include "temp_regulator.h"
+#include <util/atomic.h>
+
 
 AutoFox_INA226 ina226;
+
 
 
 int main(void)
@@ -22,14 +25,12 @@ int main(void)
     stdout = stdout_ptr;
     // ------------------------------------------------------------------------
 
-
-
     while (1)
     {
 
         balance_cells();
         
-        printf("%d \n\r", calculate_temp(TEMP_BALANCER));
+        //printf("%d \n\r", calculate_temp(TEMP_BALANCER));
 /*
         if (test > 1000)
         {
@@ -40,7 +41,3 @@ int main(void)
         //DELAY_milliseconds(1);
     }
 }
-
-
-
-

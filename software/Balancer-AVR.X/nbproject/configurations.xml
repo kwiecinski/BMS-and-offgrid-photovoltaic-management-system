@@ -66,6 +66,7 @@
       <itemPath>main.h</itemPath>
       <itemPath>current_limiter.h</itemPath>
       <itemPath>temp_regulator.h</itemPath>
+      <itemPath>interrupts.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -140,6 +141,7 @@
       <itemPath>inits.c</itemPath>
       <itemPath>current_limiter.c</itemPath>
       <itemPath>temp_regulator.c</itemPath>
+      <itemPath>interrupts.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

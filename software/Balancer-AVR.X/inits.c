@@ -6,6 +6,7 @@
 #include "adc_conv.h"
 #include "ina226.h"
 #include "balance_cells.h"
+#include "interrupts.h"
 
 #define MAX_CMP_VALUE               4000   
 
@@ -48,4 +49,6 @@ void initialize(void)
 {
     ina266_init();
     balancer_timer_tcd_init();
+    
+    TCB0_CaptureCallbackRegister(tcb0_handler);
 }

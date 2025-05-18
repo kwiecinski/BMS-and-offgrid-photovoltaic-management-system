@@ -20,7 +20,7 @@
 #define MAX_CELL_VOLTAGE_ERROR_DIFFERENCE   300             //i.e 300 -> 3.00V
 #define PWM_STEP                            10
 #define TIMEOUT                             5000
-#define GND_VOLTAGE_DROP_BIAS_VOLTAGE       1250            //REFRENCE_VOLTAGE/2 but measured using multimeter
+#define GND_VOLTAGE_DROP_BIAS_VOLTAGE       1246            //REFRENCE_VOLTAGE/2 but measured using multimeter
 
 
 void set_pwm(uint16_t set_12V_batt_pwm, uint16_t set_24V_batt_pwm);
@@ -38,8 +38,11 @@ void balance_cells(void)
     uint16_t voltage_batt_12V = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT) / 10; //devide by 10 to get desired resolution, the same as voltage_bus
     uint16_t voltage_batt_24V = voltage_bus - voltage_batt_12V;
 
+      uint16_t voltage_drop = Get_ADC_Voltage(ADC_CHANNEL_GND_VOLTAGE_DROP);
+    
     printf("24V:%u mV \r\n", voltage_batt_24V);
     printf("12V:%u mV \r\n", voltage_batt_12V);
+    printf("GND_V_DROP:%d mV \r\n", GND_VOLTAGE_DROP_BIAS_VOLTAGE-voltage_drop);
     printf("BUS INA:%u   \r\n\r\n", voltage_bus);
 
     int16_t cell_voltage_diffrence = (int16_t) voltage_batt_12V - (int16_t) voltage_batt_24V; //calculating voltage difference between batteries
@@ -102,7 +105,7 @@ void balance_cells(void)
 
     if (abs(cell_voltage_diffrence) < MAX_CELL_VOLTAGE_ERROR_DIFFERENCE)
     {
-        if (voltage_batt_12V > (MINIMUM_CELL_VOLTAGE - 20) && voltage_batt_24V > (MINIMUM_CELL_VOLTAGE - 20))
+        if (voltage_batt_12V > (MINIMUM_CELL_VOLTAGE - 20) || voltage_batt_24V > (MINIMUM_CELL_VOLTAGE - 20))
         {
             if ((cell_voltage_diffrence < -DEAD_VOLTAGE_DIFFRENCE) && balancer_24V_timer == 0) //if true then voltage for battery 24V has higher voltage, and we need to load this cell
             {
@@ -125,7 +128,7 @@ void balance_cells(void)
         }
         else
         {
-            //set_pwm(0, 0);
+            set_pwm(0, 0);
             //current_pwm = 0;
             printf("no balancing - minimum cell voltage not true\n\r");
         }
