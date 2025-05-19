@@ -7,6 +7,7 @@
 #include "ina226.h"
 #include "balance_cells.h"
 #include "inits.h"
+#include "interrupts.h"
 
 
 #define MAX_CELL_VOLTAGE_DIFFRENCE          10
@@ -21,6 +22,8 @@
 #define PWM_STEP                            10
 #define TIMEOUT                             5000
 #define GND_VOLTAGE_DROP_BIAS_VOLTAGE       1246            //REFRENCE_VOLTAGE/2 but measured using multimeter
+
+uint8_t printf_flag = 0;
 
 
 void set_pwm(uint16_t set_12V_batt_pwm, uint16_t set_24V_batt_pwm);
@@ -38,70 +41,118 @@ void balance_cells(void)
     uint16_t voltage_batt_12V = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT) / 10; //devide by 10 to get desired resolution, the same as voltage_bus
     uint16_t voltage_batt_24V = voltage_bus - voltage_batt_12V;
 
-      uint16_t voltage_drop = Get_ADC_Voltage(ADC_CHANNEL_GND_VOLTAGE_DROP);
-    
-    printf("24V:%u mV \r\n", voltage_batt_24V);
-    printf("12V:%u mV \r\n", voltage_batt_12V);
-    printf("GND_V_DROP:%d mV \r\n", GND_VOLTAGE_DROP_BIAS_VOLTAGE-voltage_drop);
-    printf("BUS INA:%u   \r\n\r\n", voltage_bus);
+    uint16_t voltage_drop = Get_ADC_Voltage(ADC_CHANNEL_GND_VOLTAGE_DROP);
+
+    static uint32_t last_print_time = 0;
+    uint32_t now = millis();
+    printf_flag = 0;
+    if ((now - last_print_time) >= 1000)
+    {
+        last_print_time = now;
+        printf_flag = 1;
+    }
+
+    if (printf_flag == 1)
+    {
+        printf("\x1b[2J\x1b[H");
+        printf("24V:%u mV \r\n", voltage_batt_24V);
+        printf("12V:%u mV \r\n", voltage_batt_12V);
+        printf("GND_V_DROP:%d mV \r\n", GND_VOLTAGE_DROP_BIAS_VOLTAGE - voltage_drop);
+        printf("BUS INA:%u   \r\n\r\n", voltage_bus);
+    }
+
+
+
 
     int16_t cell_voltage_diffrence = (int16_t) voltage_batt_12V - (int16_t) voltage_batt_24V; //calculating voltage difference between batteries
 
     uint16_t target_pwm = 0;
+    uint8_t soft_start_flag = 0;
 
-
+    soft_start_flag = 1;
     if ((voltage_batt_12V >= MINIMUM_CELL_VOLTAGE && voltage_batt_24V >= MINIMUM_CELL_VOLTAGE))
     {
         if (cell_voltage_diffrence < 0)
         {
             target_pwm = KP_24V * abs(cell_voltage_diffrence);
-        }
-        else
+
+        } else
         {
             target_pwm = KP_12V * abs(cell_voltage_diffrence);
+
         }
-    }
-    else
+    } else
     {
         if ((voltage_batt_12V >= MINIMUM_CELL_VOLTAGE && voltage_batt_24V < MINIMUM_CELL_VOLTAGE))
         {
-            target_pwm = KP_12V * (MINIMUM_CELL_VOLTAGE - voltage_batt_24V);
+            target_pwm =  600 * abs(MINIMUM_CELL_VOLTAGE - voltage_batt_12V);
+              if (printf_flag == 1) printf("minimum cell - 12V batt: %i \n\r", MINIMUM_CELL_VOLTAGE - voltage_batt_12V);
+
+
+        } else if (voltage_batt_12V < MINIMUM_CELL_VOLTAGE && voltage_batt_24V >= MINIMUM_CELL_VOLTAGE)
+        {
+            target_pwm = 600 * abs(MINIMUM_CELL_VOLTAGE - voltage_batt_24V);
+            if (printf_flag == 1) printf("minimum cell - 24V batt: %i \n\r", MINIMUM_CELL_VOLTAGE - voltage_batt_24V);
+
+        } else
+        {
+ 
+            if(target_pwm==0)
+            {
+                soft_start_flag = 0;
+            }else
+            {
+                 target_pwm = -PWM_STEP;
+                 if (printf_flag == 1) printf("correct");
+            }
+
 
         }
-        else if (voltage_batt_12V < MINIMUM_CELL_VOLTAGE && voltage_batt_24V >= MINIMUM_CELL_VOLTAGE)
-        {
-            target_pwm = KP_24V * (MINIMUM_CELL_VOLTAGE - voltage_batt_12V);
-        }
+
 
     }
 
-
-    printf("cell_voltage_diffrence: %i \n\r", abs(cell_voltage_diffrence));
-    printf("current_pwm: %u \n\r", current_pwm);
+    if (printf_flag == 1)
+    {
+        printf("cell_voltage_diffrence: %i \n\r", abs(cell_voltage_diffrence));
+       
+        printf("target_pwm: %u \n\r", target_pwm);
+    }
 
     if (target_pwm > MAX_CMP_VALUE)
     {
         target_pwm = MAX_CMP_VALUE;
     }
 
-    if (target_pwm > current_pwm)
+    if (soft_start_flag == 1)
     {
-        current_pwm += PWM_STEP;
-        if (current_pwm > target_pwm)
+        if ((target_pwm > current_pwm))
         {
-            current_pwm = target_pwm;
+            current_pwm += PWM_STEP;
+            if (current_pwm > target_pwm)
+            {
+                current_pwm = target_pwm;
+            }
+        } else
+        {
+            current_pwm -= PWM_STEP;
+            if (current_pwm < target_pwm)
+            {
+                current_pwm = target_pwm;
+            }
         }
-    }
-    else
+    }else
     {
-        current_pwm -= PWM_STEP;
-        if (current_pwm < target_pwm)
-        {
-            current_pwm = target_pwm;
-        }
+        current_pwm = 0; 
+        
     }
-
-    printf("timer12, timer24: %u, %u \n\r", balancer_12V_timer, balancer_24V_timer);
+        
+            
+    if (printf_flag == 1)
+    {
+        printf("timer12, timer24: %u, %u \n\r", balancer_12V_timer, balancer_24V_timer);
+        printf("current_pwm: %u \n\r", current_pwm);
+    }
 
     if (abs(cell_voltage_diffrence) < MAX_CELL_VOLTAGE_ERROR_DIFFERENCE)
     {
@@ -111,34 +162,48 @@ void balance_cells(void)
             {
                 balancer_12V_timer = TIMEOUT;
                 set_pwm(0, current_pwm);
-                printf("load 24V \n\r");
+                if (printf_flag == 1)
+                {
+                    printf("load 24V \n\r");
+                }
 
-            }
-            else if ((cell_voltage_diffrence > DEAD_VOLTAGE_DIFFRENCE) && balancer_12V_timer == 0)
+            } else if ((cell_voltage_diffrence > DEAD_VOLTAGE_DIFFRENCE) && balancer_12V_timer == 0)
             {
                 balancer_24V_timer = TIMEOUT;
                 set_pwm(current_pwm, 0);
-                printf("load 12V \n\r");
-            }
-            else
+                if (printf_flag == 1)
+                {
+                    printf("load 12V \n\r");
+                }
+            } else
             {
                 set_pwm(0, 0);
-                printf("no balancing - dead zone\n\r");
+                if (printf_flag == 1)
+                {
+                    printf("no balancing - dead zone\n\r");
+                }
             }
-        }
-        else
+        } else
         {
             set_pwm(0, 0);
             //current_pwm = 0;
-            printf("no balancing - minimum cell voltage not true\n\r");
+            if (printf_flag == 1)
+            {
+                printf("no balancing - minimum cell voltage not true\n\r");
+            }
         }
-    }
-    else
+    } else
     {
         set_pwm(0, 0);
-        printf("no balancing - too much cell voltage diffrence\n\r");
+        if (printf_flag == 1)
+        {
+            printf("no balancing - too much cell voltage diffrence\n\r");
+        }
         // TODO: add error return code    
+
+
     }
+
 }
 
 void disable_balancer_12V_WOB_output(void)
@@ -166,8 +231,7 @@ int16_t calculate_gnd_voltage_drop(void)
     if (voltage_drop > GND_VOLTAGE_DROP_BIAS_VOLTAGE) //discharging
     {
         voltage_drop = voltage_drop - GND_VOLTAGE_DROP_BIAS_VOLTAGE;
-    }
-    else //charging
+    } else //charging
     {
         voltage_drop = GND_VOLTAGE_DROP_BIAS_VOLTAGE - voltage_drop;
     }
@@ -189,11 +253,19 @@ void set_pwm(uint16_t set_12V_batt_pwm, uint16_t set_24V_batt_pwm)
         set_24V_batt_pwm = MAX_CMP_VALUE;
     }
 
+
+    if (printf_flag == 1)
+    {
+
+
+        printf("set_24V_batt_pwm: %u \n\r", set_24V_batt_pwm);
+        printf("set_12V_batt_pwm: %u \n\r", set_12V_batt_pwm);
+    }
+
+
     while (!(TCD0.STATUS & TCD_CMDRDY_bm)); // CMDRDY == 1
 
 
-    printf("set_24V_batt_pwm: %u \n\r", set_24V_batt_pwm);
-    printf("set_12V_batt_pwm: %u \n\r", set_12V_batt_pwm);
     PWM_24V_CMP_REGISTER = MAX_CMP_VALUE - set_24V_batt_pwm;
     PWM_12V_CMP_REGISTER = set_12V_batt_pwm;
 
