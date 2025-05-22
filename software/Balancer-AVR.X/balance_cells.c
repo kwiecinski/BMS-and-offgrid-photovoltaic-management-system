@@ -71,8 +71,11 @@ void pid_init(struct PID *pid, float T) {
 
 // G?ówna funkcja PID
 uint16_t pid_step(struct PID *pid, int16_t voltage_batt_12V, int16_t setpoint) {
-    float err = (float)(setpoint - voltage_batt_12V); // jednostka: setne V
+    float err = (float)(voltage_batt_12V - setpoint); // jednostka: setne V
+       if (printf_flag == 1)  printf("err:%f \r\n", err);
+    
     float deriv_filt = (err - pid->err_prev + pid->T_C * pid->deriv_prev) / (pid->T + pid->T_C);
+     if (printf_flag == 1)  printf("deriv_filt:%f \r\n", deriv_filt);
     pid->err_prev = err;
     pid->deriv_prev = deriv_filt;
 
@@ -80,6 +83,7 @@ uint16_t pid_step(struct PID *pid, int16_t voltage_batt_12V, int16_t setpoint) {
 
     float command = pid->Kp * err + pid->integral + pid->Kd * deriv_filt;
     pid->command_prev = command;
+    if (printf_flag == 1)  printf("command:%f \r\n", command);
 
     // Saturacja
     float command_sat = command;
@@ -109,12 +113,20 @@ struct PID my_pid;
 
 void balance_cells(void)
 {
+    static uint8_t init_once_flag=0;
     //voltages are in format i.e: 1253 -> 12.53V, 546 -> 5,46V
     uint16_t voltage_bus = AutoFox_INA226_GetBusVoltage_V(&ina226);
     uint16_t voltage_batt_12V = Get_ADC_Voltage(ADC_CHANNEL_12V_BATT) / 10; //devide by 10 to get desired resolution, the same as voltage_bus
     uint16_t voltage_batt_24V = voltage_bus - voltage_batt_12V;
     uint16_t voltage_drop = Get_ADC_Voltage(ADC_CHANNEL_GND_VOLTAGE_DROP);
 
+    if(init_once_flag==0)
+    {
+     pid_init(&my_pid,0.1);
+     init_once_flag=1;
+    }
+    
+    
     //////////////////////////////////////////////////////////////////////////
     ///DEBUG PRINTF///////////////////////////////////////////////////////////
     static uint32_t last_print_time = 0;
@@ -141,23 +153,9 @@ void balance_cells(void)
     int16_t cell_voltage_diffrence = (int16_t) voltage_batt_12V - (int16_t) voltage_batt_24V; 
     uint16_t target_pwm = 0;
     static uint16_t current_pwm = 0;
-    //uint8_t soft_start_flag = 0;
-    bool balancing_active = false;
     
-        // Histereza: 30 mV górna, 10 mV dolna
-    if (!balancing_active && voltage_batt_12V > (MINIMUM_CELL_VOLTAGE + 30)) {
-        balancing_active = true;
-    } else if (balancing_active && voltage_batt_12V < (MINIMUM_CELL_VOLTAGE - 10)) {
-        balancing_active = false;
-    }
-
-    if (balancing_active) {
-        target_pwm = pid_step(&my_pid, voltage_batt_12V, MINIMUM_CELL_VOLTAGE);
-    } else {
-        target_pwm = 0;
-        my_pid.integral = 0; // reset integral term (zapobiega windupowi)
-    }
-    
+    target_pwm = pid_step(&my_pid, voltage_batt_12V, MINIMUM_CELL_VOLTAGE);
+    set_pwm(current_pwm, 0);
     
 /*
     soft_start_flag = 1;
@@ -212,8 +210,10 @@ void balance_cells(void)
         target_pwm = MAX_CMP_VALUE;
     }else if(NO_SOFTSTART==1)
     {
-        current_pwm=target_pwm
+        current_pwm=target_pwm;
     }
+    
+          set_pwm(current_pwm, 0);
 /*
     if (soft_start_flag == 1)
     {
@@ -241,10 +241,10 @@ void balance_cells(void)
      */       
     if (printf_flag == 1)
     {
-        printf("timer12, timer24: %u, %u \n\r", balancer_12V_timer, balancer_24V_timer);
+       // printf("timer12, timer24: %u, %u \n\r", balancer_12V_timer, balancer_24V_timer);
         printf("current_pwm: %u \n\r", current_pwm);
     }
-
+/*
     if (abs(cell_voltage_diffrence) < MAX_CELL_VOLTAGE_ERROR_DIFFERENCE)
     {
         if (voltage_batt_12V > (MINIMUM_CELL_VOLTAGE - 20) || voltage_batt_24V > (MINIMUM_CELL_VOLTAGE - 20))
@@ -294,6 +294,7 @@ void balance_cells(void)
 
 
     }
+ * */
 
 }
 
