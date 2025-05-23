@@ -34,4 +34,3 @@ MP_CC_DIR="C:\Program Files\Microchip\xc8\v3.00\bin"
 MP_AS_DIR="C:\Program Files\Microchip\xc8\v3.00\bin"
 MP_LD_DIR="C:\Program Files\Microchip\xc8\v3.00\bin"
 MP_AR_DIR="C:\Program Files\Microchip\xc8\v3.00\bin"
-DFP_DIR=C:/Users/User/.mchp_packs/Microchip/AVR-Dx_DFP/2.7.321

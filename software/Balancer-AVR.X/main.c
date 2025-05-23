@@ -9,35 +9,45 @@
 #include "balance_cells.h"
 #include "inits.h"
 #include "temp_regulator.h"
-#include <util/atomic.h>
+#include "interrupts.h"
+#include "debug.h"
 
 
 AutoFox_INA226 ina226;
-
-
 
 int main(void)
 {
     SYSTEM_Initialize();
     initialize();
-
+    
+    balancer_struct balancer;
+    balancer_struct_init(&balancer);
+    
+    PID balancer_pid;
+    pid_init(&balancer_pid);
+     
+     
     //Printf init -------------------------------------------------------------
     stdout = stdout_ptr;
     // ------------------------------------------------------------------------
 
+    uint32_t last_balance_time = 0, last_printf_time = 0;
+    
     while (1)
     {
-
-        balance_cells();
+        uint32_t now = millis();
         
-        //printf("%d \n\r", calculate_temp(TEMP_BALANCER));
-/*
-        if (test > 1000)
+        if ((now - last_balance_time) >= 100)
         {
-            printf("test ok \n\r");
-            test = 0;
+            last_balance_time = now;
+            balance_cells(&balancer, &balancer_pid);
         }
-  */
-        //DELAY_milliseconds(1);
+        
+        if ((now - last_printf_time) >= 1000)
+        {
+            last_printf_time = now;
+            printf_debug(&balancer, &balancer_pid);
+        }
+        
     }
 }
