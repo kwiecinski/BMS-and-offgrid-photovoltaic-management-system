@@ -68,6 +68,7 @@
       <itemPath>temp_regulator.h</itemPath>
       <itemPath>interrupts.h</itemPath>
       <itemPath>debug.h</itemPath>
+      <itemPath>nanomodbus.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -144,6 +145,7 @@
       <itemPath>temp_regulator.c</itemPath>
       <itemPath>interrupts.c</itemPath>
       <itemPath>debug.c</itemPath>
+      <itemPath>nanomodbus.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
