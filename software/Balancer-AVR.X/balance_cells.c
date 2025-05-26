@@ -17,7 +17,8 @@
 #define MAX_CELL_VOLTAGE_DIFFRENCE          10
 #define DEAD_VOLTAGE_DIFFRENCE              2
 #define MAX_CMP_VALUE                       4000    
-#define MINIMUM_CELL_VOLTAGE                1380 
+#define MINIMUM_CELL_VOLTAGE                1270
+#define MINIMUM_CELL_VOLTAGE_LOW            1250
 #define MAX_CELL_VOLTAGE_ERROR_DIFFERENCE   300             //i.e 300 -> 3.00V
 #define TIMEOUT                             5000
 #define GND_VOLTAGE_DROP_BIAS_VOLTAGE       1246            //REFRENCE_VOLTAGE/2 but measured using multimeter
@@ -25,7 +26,7 @@
 void measure_voltages(balancer_struct *ptr);
 void set_pwm(balancer_struct *ptr);
 int16_t calculate_gnd_voltage_drop(void);
-uint16_t pid_step(PID *pid, int16_t voltage_batt_12V, int16_t setpoint);
+uint16_t pid_step(PID *pid, int16_t measurement, int16_t setpoint);
 void balancer_struct_init(balancer_struct *ptr);
 void pid_init(PID *pid);
 
@@ -33,26 +34,48 @@ void pid_init(PID *pid);
 void balance_cells(balancer_struct *ptr, PID *pid)
 {
     measure_voltages(ptr);
-
+    int16_t cell_voltage_diff = ptr->voltage_batt_12V - ptr->voltage_batt_24V;     //iff cell diff negative then need to load 24V batt
     
-    ptr->pwm_12V = pid_step(pid,  ptr->voltage_batt_12V,  ptr->minimum_cell_voltage);
-    set_pwm(ptr);
+    if(ptr->voltage_batt_12V >= MINIMUM_CELL_VOLTAGE && ptr->voltage_batt_24V >= MINIMUM_CELL_VOLTAGE)
+    {
+        if(cell_voltage_diff>0)
+        {
+            ptr->pwm_12V = pid_step(pid,  abs(cell_voltage_diff),  0);
+         
+        }else
+        {
+            ptr->pwm_24V = pid_step(pid,  abs(cell_voltage_diff),  0);
+        }
+        
+    }else if(ptr->voltage_batt_12V >= MINIMUM_CELL_VOLTAGE )
+    {
+        ptr->pwm_12V = pid_step(pid,  ptr->voltage_batt_12V,   MINIMUM_CELL_VOLTAGE );
+    
+    }else if(ptr->voltage_batt_24V >= MINIMUM_CELL_VOLTAGE)
+    {
+         ptr->pwm_24V = pid_step(pid,  ptr->voltage_batt_24V,   MINIMUM_CELL_VOLTAGE );
+         
+    }else if(ptr->voltage_batt_12V < MINIMUM_CELL_VOLTAGE_LOW && ptr->voltage_batt_24V < MINIMUM_CELL_VOLTAGE_LOW)
+    {
+        ptr->pwm_12V=0;
+        ptr->pwm_24V=0;
+    }
+    
+       set_pwm(ptr);
 }
-
-
 
 
 void pid_init(PID *pid)
 {
-    pid->Kp = 1.0f;
-    pid->Ki = 0.5f;
-    pid->Kd = 0.0f; // mo?na zacz?? od 0
-    pid->Kaw = 0.2f;
-    pid->T_C = 1.0f;
-    pid->T = 0.1f;
+    pid->Kp = 10.0f;    // Proportional gain constant
+    pid->Ki = 0.7f;     // Integral gain constant
+    pid->Kd = 2.5f;     // Derivative gain constant
+    pid->Kaw = 0.3f;    // Anti-windup gain constant
+    pid->T_C = 1.0f;    // Time constant for derivative filtering
+    pid->T = 0.05f;     // Time step
     pid->max = PWM_MAX;
     pid->min = PWM_MIN;
-    pid->max_rate = 1000.0f; // max wzrost/spadek PWM na krok
+    pid->max_rate = 5000.0f;     // Max rate of change of the command
     pid->integral = 0;
     pid->err_prev = 0;
     pid->deriv_prev = 0;
@@ -62,9 +85,9 @@ void pid_init(PID *pid)
 
 // G?ówna funkcja PID
 
-uint16_t pid_step(PID *pid, int16_t voltage_batt_12V, int16_t setpoint)
+uint16_t pid_step(PID *pid, int16_t measurement, int16_t setpoint)
 {
-    float err = (float) (voltage_batt_12V - setpoint); // jednostka: setne V
+    float err = (float) (measurement - setpoint); // jednostka: setne V
 
 
     float deriv_filt = (err - pid->err_prev + pid->T_C * pid->deriv_prev) / (pid->T + pid->T_C);

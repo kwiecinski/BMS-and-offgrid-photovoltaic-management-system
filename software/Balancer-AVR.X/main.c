@@ -37,10 +37,11 @@ int main(void)
     {
         uint32_t now = millis();
         
-        if ((now - last_balance_time) >= 100)
+        if ((now - last_balance_time) >= 50)
         {
             last_balance_time = now;
             balance_cells(&balancer, &balancer_pid);
+          
         }
         
         if ((now - last_printf_time) >= 1000)
