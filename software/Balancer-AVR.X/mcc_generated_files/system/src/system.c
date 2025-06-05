@@ -50,6 +50,7 @@ void SYSTEM_Initialize(void)
     TCA0_Initialize();
     TCB0_Initialize();
     TCB1_Initialize();
+    TCB2_Initialize();
     TCD0_Initialize();
     USART0_Initialize();
     USART1_Initialize();

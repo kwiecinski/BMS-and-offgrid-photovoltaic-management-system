@@ -52,6 +52,7 @@
           <itemPath>mcc_generated_files/timer/tcb0.h</itemPath>
           <itemPath>mcc_generated_files/timer/delay.h</itemPath>
           <itemPath>mcc_generated_files/timer/tcb1.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tcb2.h</itemPath>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">
           <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
@@ -129,6 +130,7 @@
             <itemPath>mcc_generated_files/timer/src/tcb0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/delay.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tcb1.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/tcb2.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="uart" displayName="uart" projectFiles="true">

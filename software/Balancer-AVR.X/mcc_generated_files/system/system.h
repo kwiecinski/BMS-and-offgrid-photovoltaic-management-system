@@ -51,6 +51,7 @@ extern "C" {
 #include "../timer/tca0.h"
 #include "../timer/tcb0.h"
 #include "../timer/tcb1.h"
+#include "../timer/tcb2.h"
 #include "../timer/tcd0.h"
 #include "../uart/usart0.h"
 #include "../uart/usart1.h"

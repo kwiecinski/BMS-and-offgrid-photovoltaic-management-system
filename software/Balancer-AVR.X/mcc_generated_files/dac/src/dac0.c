@@ -38,8 +38,8 @@ int8_t DAC0_Initialize(void)
 {
     // DATA Register 
 	DAC0.DATA = 0x0;
-    // ENABLE enabled; OUTEN enabled; RUNSTDBY disabled; 
-	DAC0.CTRLA = 0x41;
+    // ENABLE enabled; OUTEN disabled; RUNSTDBY disabled; 
+	DAC0.CTRLA = 0x1;
 
     return 0;
 }

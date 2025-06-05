@@ -1476,6 +1476,168 @@
 				)
 			)
 		)
+		(symbol "Diode:1N4148"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "100V 0.15A standard switching diode, DO-35"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?35*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4148_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Diode:PTVS5V0Z1USK"
 			(pin_numbers hide)
 			(pin_names hide)
@@ -4888,6 +5050,12 @@
 		(uuid "b71a549b-0fc6-4a1a-b705-d1f376995fe2")
 	)
 	(junction
+		(at 147.32 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c4a23ff1-56a5-4bac-a7cc-2c1783e13fa1")
+	)
+	(junction
 		(at 72.39 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4910,6 +5078,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d85d59bd-95e8-4a82-971e-2dcf7b203ca9")
+	)
+	(junction
+		(at 121.92 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "daa7ad3a-070e-438d-aa66-dc750ba9b062")
 	)
 	(junction
 		(at 302.26 57.15)
@@ -5105,7 +5279,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 171.45) (xy 147.32 166.37)
+			(xy 147.32 171.45) (xy 147.32 161.29)
 		)
 		(stroke
 			(width 0)
@@ -5815,6 +5989,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 161.29) (xy 130.81 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5719775e-d7a0-4040-827d-86f06d6cac8f")
+	)
+	(wire
+		(pts
 			(xy 34.29 127) (xy 34.29 129.54)
 		)
 		(stroke
@@ -5902,6 +6086,16 @@
 			(type default)
 		)
 		(uuid "62be967f-d38c-499d-a865-283e0ad84ffd")
+	)
+	(wire
+		(pts
+			(xy 138.43 161.29) (xy 147.32 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63485ebd-154a-4062-a885-390ac34c9f05")
 	)
 	(wire
 		(pts
@@ -6815,7 +7009,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 171.45) (xy 121.92 166.37)
+			(xy 121.92 171.45) (xy 121.92 161.29)
 		)
 		(stroke
 			(width 0)
@@ -6962,6 +7156,16 @@
 			(type default)
 		)
 		(uuid "c53f5bef-3c05-4946-86ce-26c93e10adc0")
+	)
+	(wire
+		(pts
+			(xy 147.32 161.29) (xy 147.32 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7490dab-8ed9-4e02-b6c1-158fc978f44e")
 	)
 	(wire
 		(pts
@@ -7445,6 +7649,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 161.29) (xy 121.92 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9587d3c-d76c-445e-b42f-d6ba76f48645")
+	)
+	(wire
+		(pts
 			(xy 114.3 58.42) (xy 105.41 58.42)
 		)
 		(stroke
@@ -7700,7 +7914,7 @@
 	)
 	(global_label "TEMP_AKU_12V"
 		(shape input)
-		(at 72.39 63.5 180)
+		(at 72.39 76.2 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7710,7 +7924,7 @@
 		)
 		(uuid "10dbe325-038a-46e9-96e5-618e5a1f04e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4349 63.5 0)
+			(at 55.4349 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7720,24 +7934,24 @@
 			)
 		)
 	)
-	(global_label "PWM_OUT1"
+	(global_label "PWM_FAN_SMPS"
 		(shape input)
-		(at 72.39 83.82 180)
+		(at 114.3 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "1b2b9684-44e6-4323-8d14-3116f008b0a0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.4263 83.82 0)
+			(at 132.0413 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7764,7 +7978,7 @@
 			)
 		)
 	)
-	(global_label "LED3_PA7"
+	(global_label "ADC_I_FAN1"
 		(shape input)
 		(at 72.39 58.42 180)
 		(fields_autoplaced yes)
@@ -7776,7 +7990,7 @@
 		)
 		(uuid "2afba49c-7b1e-4cf4-bfc3-4e7ee5d2bd3c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.2125 58.42 0)
+			(at 58.519 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7788,7 +8002,7 @@
 	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
-		(at 72.39 76.2 180)
+		(at 72.39 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7798,7 +8012,7 @@
 		)
 		(uuid "3bfae411-ca5a-4c8b-bf68-c51f5e5db045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.4349 76.2 0)
+			(at 55.4349 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7940,7 +8154,7 @@
 			)
 		)
 	)
-	(global_label "LED1_PF6"
+	(global_label "LED1_PF6_RST"
 		(shape input)
 		(at 39.37 278.13 180)
 		(fields_autoplaced yes)
@@ -7952,7 +8166,7 @@
 		)
 		(uuid "58a11c35-ed04-49fe-8116-f51ba79bb7be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.1925 278.13 0)
+			(at 22.7778 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8006,29 +8220,7 @@
 			)
 		)
 	)
-	(global_label "LED3_PA7"
-		(shape input)
-		(at 39.37 285.75 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "600a218b-a5c1-4e12-9cc2-dc9a35b5931d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.1925 285.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "LED1_PF6"
+	(global_label "LED1_PF6_RST"
 		(shape input)
 		(at 114.3 83.82 0)
 		(fields_autoplaced yes)
@@ -8040,12 +8232,34 @@
 		)
 		(uuid "621d8ac5-3579-4bdc-9e09-8e462b14254d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.4775 83.82 0)
+			(at 130.8922 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TEMP_SMPS"
+		(shape input)
+		(at 72.39 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6240183f-8d3f-4aa4-8875-a4487943aca6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 58.4588 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -8182,9 +8396,9 @@
 			)
 		)
 	)
-	(global_label "LED3_PD6"
+	(global_label "ADC_I_FAN2"
 		(shape input)
-		(at 72.39 86.36 180)
+		(at 72.39 63.5 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8194,7 +8408,7 @@
 		)
 		(uuid "9b95f3c7-b4bd-44dd-9c81-c6c2f0730feb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.0311 86.36 0)
+			(at 58.519 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8468,53 +8682,9 @@
 			)
 		)
 	)
-	(global_label "PWM_OUT2"
+	(global_label "PWM_FAN_BALANCER"
 		(shape input)
-		(at 72.39 81.28 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e434bafc-3e27-431b-ab77-8b8e9fac02f3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.4263 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TEMP_HEAT_SINK_24V"
-		(shape input)
-		(at 72.39 78.74 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e7fe1883-ff89-4180-8cbe-cc277cb49d97")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 49.2059 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "LED2_PA3"
-		(shape input)
-		(at 114.3 66.04 0)
+		(at 114.3 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8522,9 +8692,9 @@
 			)
 			(justify left)
 		)
-		(uuid "eebbfecd-9ae8-42ae-b601-69cc88481448")
+		(uuid "e434bafc-3e27-431b-ab77-8b8e9fac02f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.4775 66.04 0)
+			(at 136.3957 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8534,9 +8704,9 @@
 			)
 		)
 	)
-	(global_label "LED2_PA3"
+	(global_label "TEMP_BALANCER"
 		(shape input)
-		(at 39.37 283.21 180)
+		(at 72.39 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8544,9 +8714,9 @@
 			)
 			(justify right)
 		)
-		(uuid "f4c1da84-112c-438e-a2aa-4608d1b4d198")
+		(uuid "e7fe1883-ff89-4180-8cbe-cc277cb49d97")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.1925 283.21 0)
+			(at 54.1044 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8580,22 +8750,22 @@
 	)
 	(global_label "RS485_OUTPUT_ENABLE"
 		(shape input)
-		(at 114.3 68.58 0)
+		(at 72.39 86.36 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "ff40c415-9cfe-4f86-a4d8-a437000bc455")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.5403 68.58 0)
+			(at 47.1497 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -9867,7 +10037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 102.87 127 0)
 			(effects
 				(font
@@ -10471,7 +10641,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 147.32 166.37 0)
+		(at 147.32 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10480,7 +10650,7 @@
 		(fields_autoplaced yes)
 		(uuid "39401709-37a0-41fd-9adf-0aaba405bbb1")
 		(property "Reference" "#PWR070"
-			(at 147.32 170.18 0)
+			(at 147.32 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10489,7 +10659,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 147.32 161.29 0)
+			(at 147.32 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10497,7 +10667,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 166.37 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10506,7 +10676,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 166.37 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10515,7 +10685,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 147.32 166.37 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11149,7 +11319,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 121.92 166.37 0)
+		(at 121.92 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11158,7 +11328,7 @@
 		(fields_autoplaced yes)
 		(uuid "53e0a0e7-fbea-466d-9012-ebbc700028fe")
 		(property "Reference" "#PWR083"
-			(at 121.92 170.18 0)
+			(at 121.92 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11167,7 +11337,7 @@
 			)
 		)
 		(property "Value" "+12V_LOCAL"
-			(at 121.92 161.29 0)
+			(at 121.92 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11175,7 +11345,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 166.37 0)
+			(at 121.92 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11184,7 +11354,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 166.37 0)
+			(at 121.92 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11193,7 +11363,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 121.92 166.37 0)
+			(at 121.92 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12799,6 +12969,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N4148")
+		(at 134.62 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d365433-8170-4a7b-95eb-d31302453a4c")
+		(property "Reference" "D10"
+			(at 134.62 155.8755 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 134.62 158.2998 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(at 134.62 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 134.62 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 134.62 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 134.62 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 134.62 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd641b20-f3cd-4158-86e6-f6de3a8aace7")
+		)
+		(pin "2"
+			(uuid "22f8adae-ca1f-4053-a952-1836d176ed9d")
+		)
+		(instances
+			(project "Balancer"
+				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd/3b90ff07-e5cb-404b-939d-de320e975ba1"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 209.55 49.53 0)
 		(unit 1)
@@ -14062,7 +14318,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "My-Footprints-connectors:JST_XA_1x03_P2.54mm_Vertical"
 			(at 33.02 200.66 0)
 			(effects
 				(font
