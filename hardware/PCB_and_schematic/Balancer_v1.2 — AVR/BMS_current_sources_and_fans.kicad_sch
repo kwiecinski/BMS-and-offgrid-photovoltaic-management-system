@@ -6834,7 +6834,7 @@
 			)
 		)
 	)
-	(global_label "PWM_OUT1"
+	(global_label "PWM_FAN_SMPS"
 		(shape input)
 		(at 194.31 217.17 180)
 		(fields_autoplaced yes)
@@ -6846,7 +6846,7 @@
 		)
 		(uuid "570f071a-3fc0-4eb5-9866-617a513b9522")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.3463 217.17 0)
+			(at 176.5687 217.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6944,7 +6944,7 @@
 			)
 		)
 	)
-	(global_label "PWM_OUT2"
+	(global_label "PWM_FAN_BALANCER"
 		(shape input)
 		(at 181.61 279.4 180)
 		(fields_autoplaced yes)
@@ -6956,7 +6956,7 @@
 		)
 		(uuid "96bee0b9-fe79-47b3-81e3-3a6dfb1a1bb0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.6463 279.4 0)
+			(at 159.5143 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9614,7 +9614,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" "My-Footprints:TO-220-3_Vertical-little-bigger pads"
 			(at 195.58 116.205 0)
 			(effects
 				(font
@@ -15163,7 +15163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" "My-Footprints:TO-220-3_Vertical-little-bigger pads"
 			(at 430.53 118.745 0)
 			(effects
 				(font
