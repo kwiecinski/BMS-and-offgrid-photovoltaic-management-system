@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 
-
+void current_limiter(void);
 
 #ifdef	__cplusplus
 }

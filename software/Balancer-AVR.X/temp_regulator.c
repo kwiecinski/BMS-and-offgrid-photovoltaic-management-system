@@ -61,17 +61,17 @@ void temperature_regulator(void)
     switch (fan_state)
     {
         case FAN_OFF:
-            DAC0_SetOutput(0);  // Safety
+            //DAC0_SetOutput(0);  // Safety
             if (temp >= MINIMUM_FAN_ENABLE_TEMPERATURE)
             {
                 fan_kick_start_time = millis();
-                DAC0_SetOutput(DAC_MAX_OUTPUT);  // Kick fan
+                //DAC0_SetOutput(DAC_MAX_OUTPUT);  // Kick fan
                 fan_state = FAN_KICK;
             }
             break;
 
         case FAN_KICK:
-            DAC0_SetOutput(DAC_MAX_OUTPUT);  // Keep full power
+            //DAC0_SetOutput(DAC_MAX_OUTPUT);  // Keep full power
             if (millis() - fan_kick_start_time >= 3000)
             {
                 fan_state = FAN_AUTO;
@@ -98,7 +98,7 @@ void temperature_regulator(void)
                     dac_value = DAC_MAX_OUTPUT;
                 }
 
-                DAC0_SetOutput(dac_value);
+                //DAC0_SetOutput(dac_value);
             }
             break;
     }

@@ -15,9 +15,6 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <itemPath>mcc_generated_files/adc/adc0.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="dac" displayName="dac" projectFiles="true">
-          <itemPath>mcc_generated_files/dac/dac0.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
@@ -98,11 +95,6 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/adc/src/adc0.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="dac" displayName="dac" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/dac/src/dac0.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
@@ -303,6 +295,10 @@
         <property key="user-pack-device-support" value=""/>
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
+      <item path="modbus_rtu.c" ex="true" overriding="false">
+      </item>
+      <item path="modbus_rtu.h" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>
