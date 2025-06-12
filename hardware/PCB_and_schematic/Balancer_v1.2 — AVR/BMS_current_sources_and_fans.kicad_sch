@@ -6812,6 +6812,26 @@
 		)
 		(uuid "134421be-a5e1-419d-8871-4f6e5bf6a50f")
 	)
+	(text "TEMP-12V"
+		(exclude_from_sim no)
+		(at 68.072 213.614 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "96d59e30-e84f-4899-b32b-c57d01d01ebb")
+	)
+	(text "TEMP-24V"
+		(exclude_from_sim no)
+		(at 68.072 216.408 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "af891025-c42a-4213-9c92-108aa81d58d7")
+	)
 	(global_label "TEMP_AKU_24V"
 		(shape input)
 		(at 129.54 236.22 0)
@@ -9535,7 +9555,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "FAN1"
+		(property "Value" "FAN_BALANCER"
 			(at 255.27 265.4299 0)
 			(effects
 				(font
@@ -11618,7 +11638,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "FAN1"
+		(property "Value" "FAN_SMPS"
 			(at 261.62 203.1999 0)
 			(effects
 				(font
@@ -11964,7 +11984,7 @@
 				)
 			)
 		)
-		(property "Value" "HEATSINK_TEMP1"
+		(property "Value" "TMP_BALANCER"
 			(at 52.07 271.78 0)
 			(effects
 				(font
@@ -15286,18 +15306,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cef6712e-1eb0-44d9-83ae-95bbb500d8f1")
 		(property "Reference" "J3"
-			(at 58.42 209.55 0)
+			(at 58.166 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_01x03"
-			(at 58.42 212.09 0)
+		(property "Value" "THERMISTOR_BATT"
+			(at 55.118 217.17 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15565,7 +15584,7 @@
 				)
 			)
 		)
-		(property "Value" "HEATSINK_TEMP1"
+		(property "Value" "TMP_SMPS"
 			(at 52.07 279.4 0)
 			(effects
 				(font
