@@ -54,6 +54,7 @@ static void (*PC0_InterruptHandler)(void);
 static void (*PA1_InterruptHandler)(void);
 static void (*PA0_InterruptHandler)(void);
 static void (*PD6_InterruptHandler)(void);
+static void (*PF6_InterruptHandler)(void);
 
 void PIN_MANAGER_Initialize()
 {
@@ -61,7 +62,7 @@ void PIN_MANAGER_Initialize()
     PORTA.DIR = 0x3D;
     PORTC.DIR = 0xD;
     PORTD.DIR = 0x70;
-    PORTF.DIR = 0x3;
+    PORTF.DIR = 0x43;
 
   /* OUT Registers Initialization */
     PORTA.OUT = 0x31;
@@ -134,6 +135,7 @@ void PIN_MANAGER_Initialize()
     PA1_SetInterruptHandler(PA1_DefaultInterruptHandler);
     PA0_SetInterruptHandler(PA0_DefaultInterruptHandler);
     PD6_SetInterruptHandler(PD6_DefaultInterruptHandler);
+    PF6_SetInterruptHandler(PF6_DefaultInterruptHandler);
 }
 
 /**
@@ -396,6 +398,19 @@ void PD6_DefaultInterruptHandler(void)
     // add your PD6 interrupt custom code
     // or set custom function using PD6_SetInterruptHandler()
 }
+/**
+  Allows selecting an interrupt handler for PF6 at application runtime
+*/
+void PF6_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    PF6_InterruptHandler = interruptHandler;
+}
+
+void PF6_DefaultInterruptHandler(void)
+{
+    // add your PF6 interrupt custom code
+    // or set custom function using PF6_SetInterruptHandler()
+}
 ISR(PORTA_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
@@ -499,6 +514,10 @@ ISR(PORTF_PORT_vect)
     if(VPORTF.INTFLAGS & PORT_INT1_bm)
     {
        PF1_InterruptHandler(); 
+    }
+    if(VPORTF.INTFLAGS & PORT_INT6_bm)
+    {
+       PF6_InterruptHandler(); 
     }
     /* Clear interrupt flags */
     VPORTF.INTFLAGS = 0xff;
