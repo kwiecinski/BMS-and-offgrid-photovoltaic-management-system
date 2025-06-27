@@ -132,13 +132,13 @@ void TCA0_Initialize(void) {
     TCA0.SINGLE.CMP1 = 0x47;
     
     // Compare 2
-    TCA0.SINGLE.CMP2 = 0x47;
+    TCA0.SINGLE.CMP2 = 0x0;
         
     // Count
     TCA0.SINGLE.CNT = 0x0;
     
-    // ALUPD disabled; CMP0EN enabled; CMP1EN enabled; CMP2EN enabled; WGMODE SINGLESLOPE; 
-    TCA0.SINGLE.CTRLB = 0x73;
+    // ALUPD disabled; CMP0EN enabled; CMP1EN enabled; CMP2EN disabled; WGMODE SINGLESLOPE; 
+    TCA0.SINGLE.CTRLB = 0x33;
     
     // CMP0OV disabled; CMP1OV disabled; CMP2OV disabled; 
     TCA0.SINGLE.CTRLC = 0x0;

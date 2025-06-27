@@ -398,6 +398,24 @@
 #define RS485_OE_DisableDigitalInputBuffer() do { PORTD.PIN6CTRL = (PORTD.PIN6CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
 #define RS485_OE_EnableInterruptForLowLevelSensing() do { PORTD.PIN6CTRL = (PORTD.PIN6CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 
+//get/set LED aliases
+#define LED_SetHigh() do { PORTF_OUTSET = 0x40; } while(0)
+#define LED_SetLow() do { PORTF_OUTCLR = 0x40; } while(0)
+#define LED_Toggle() do { PORTF_OUTTGL = 0x40; } while(0)
+#define LED_GetValue() (VPORTF.IN & (0x1 << 6))
+#define LED_SetDigitalInput() do { PORTF_DIRCLR = 0x40; } while(0)
+#define LED_SetDigitalOutput() do { PORTF_DIRSET = 0x40; } while(0)
+#define LED_SetPullUp() do { PORTF_PIN6CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define LED_ResetPullUp() do { PORTF_PIN6CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define LED_SetInverted() do { PORTF_PIN6CTRL  |= PORT_INVEN_bm; } while(0)
+#define LED_ResetInverted() do { PORTF_PIN6CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define LED_DisableInterruptOnChange() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define LED_EnableInterruptForBothEdges() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define LED_EnableInterruptForRisingEdge() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define LED_EnableInterruptForFallingEdge() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define LED_DisableDigitalInputBuffer() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define LED_EnableInterruptForLowLevelSensing() do { PORTF.PIN6CTRL = (PORTF.PIN6CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization
@@ -825,4 +843,25 @@ void PD6_DefaultInterruptHandler(void);
  * @return none
  */
 void PD6_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for PF6 pin. 
+ *        This is a predefined interrupt handler to be used together with the PF6_SetInterruptHandler() method.
+ *        This handler is called every time the PF6 ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void PF6_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for PF6 pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for PF6 at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void PF6_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 #endif /* PINS_H_INCLUDED */

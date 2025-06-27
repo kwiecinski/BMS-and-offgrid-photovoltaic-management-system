@@ -11,7 +11,7 @@
 #include "temp_regulator.h"
 #include "interrupts.h"
 #include "debug.h"
-
+#include "current_limiter.h"
 
 AutoFox_INA226 ina226;
 
@@ -32,7 +32,7 @@ int main(void)
     // ------------------------------------------------------------------------
 
     uint32_t last_balance_time = 0, last_printf_time = 0;
-    
+    current_limiter();
     while (1)
     {
         uint32_t now = millis();
@@ -40,7 +40,7 @@ int main(void)
         if ((now - last_balance_time) >= 50)
         {
             last_balance_time = now;
-            balance_cells(&balancer, &balancer_pid);
+           //balance_cells(&balancer, &balancer_pid);
           
         }
         

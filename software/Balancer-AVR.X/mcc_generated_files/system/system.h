@@ -46,7 +46,6 @@ extern "C" {
 #include "../system/pins.h"
 #include "../adc/adc0.h"
 #include "../system/clock.h"
-#include "../dac/dac0.h"
 #include "../i2c_host/twi0.h"
 #include "../timer/tca0.h"
 #include "../timer/tcb0.h"
