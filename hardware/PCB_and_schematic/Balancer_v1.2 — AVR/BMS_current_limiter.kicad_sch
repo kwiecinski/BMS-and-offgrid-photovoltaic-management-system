@@ -3152,6 +3152,12 @@
 		(uuid "980b5d93-cfbb-4ada-917a-c89033ad048b")
 	)
 	(junction
+		(at 194.31 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6899746-92a4-4dbd-8ddc-7eccf94deaee")
+	)
+	(junction
 		(at 92.71 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3349,7 +3355,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 57.15) (xy 218.44 57.15)
+			(xy 190.5 57.15) (xy 194.31 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3469,6 +3475,16 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 57.15) (xy 218.44 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36a4ff20-47d2-4a84-a06f-b3d9cc464793")
+	)
+	(wire
+		(pts
 			(xy 270.51 111.76) (xy 270.51 125.73)
 		)
 		(stroke
@@ -3529,7 +3545,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 57.15) (xy 190.5 68.58)
+			(xy 194.31 57.15) (xy 194.31 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3799,7 +3815,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 90.17) (xy 190.5 90.17)
+			(xy 163.83 90.17) (xy 194.31 90.17)
 		)
 		(stroke
 			(width 0)
@@ -4409,7 +4425,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 90.17) (xy 190.5 76.2)
+			(xy 194.31 90.17) (xy 194.31 76.2)
 		)
 		(stroke
 			(width 0)
@@ -5389,10 +5405,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "31ab5a21-9b0a-419d-99ea-d9ad7f3aded5")
 		(property "Reference" "D3"
-			(at 154.94 74.3584 90)
+			(at 151.638 81.9149 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5400,8 +5415,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "~"
-			(at 154.94 76.2635 90)
+		(property "Value" "YM3045"
+			(at 151.638 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6288,7 +6303,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 190.5 72.39 0)
+		(at 194.31 72.39 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6297,7 +6312,7 @@
 		(dnp no)
 		(uuid "723db9c4-2dda-4b27-b607-d4da0ca3e9b3")
 		(property "Reference" "C4"
-			(at 196.088 71.12 0)
+			(at 199.898 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6306,7 +6321,7 @@
 			)
 		)
 		(property "Value" "100u/35V"
-			(at 203.2 73.406 0)
+			(at 207.01 73.406 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6315,7 +6330,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
-			(at 189.5348 76.2 0)
+			(at 193.3448 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6324,7 +6339,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 190.5 72.39 0)
+			(at 194.31 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6333,7 +6348,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 190.5 72.39 0)
+			(at 194.31 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6990,10 +7005,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "99c5317f-0937-4bc9-a77b-f0f8647accc6")
 		(property "Reference" "D4"
-			(at 168.91 74.3584 90)
+			(at 166.624 81.1529 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7001,8 +7015,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "~"
-			(at 168.91 76.2635 90)
+		(property "Value" "YM3045"
+			(at 166.624 83.058 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7630,10 +7644,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b17556e4-494f-4642-8826-38f756cf1b94")
 		(property "Reference" "D6"
-			(at 184.15 69.8499 90)
+			(at 183.134 70.612 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7642,7 +7655,7 @@
 			)
 		)
 		(property "Value" "SM6T15A"
-			(at 184.15 72.3899 90)
+			(at 183.134 73.152 90)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -46,6 +46,7 @@ int main(void)
         
         if ((now - last_printf_time) >= 1000)
         {
+            TCA0.SINGLE.CMP0++;
             last_printf_time = now;
             printf_debug(&balancer, &balancer_pid);
         }

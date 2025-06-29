@@ -13,5 +13,7 @@
 void current_limiter(void)
 {
     TCA0.SINGLE.PER = 479;
-    TCA0.SINGLE.CMP0 = 240;
+    TCA0.SINGLE.CMP0 = 20;
+    TCA0.SINGLE.CMP1 = 100;
+
 }
