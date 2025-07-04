@@ -205,7 +205,17 @@ typedef struct{
 }EasunData;
 
 
-fault code (100), warning code (108), regusters 201-220, regusters, 223-227, reguster 229, 232,301
+// Modbus requests to read data from Easun inverter
+uint8_t requests[] = {
+        {100, 1},        // fault code
+        {108, 1},        // warning code
+        {201, 20},       // 201–220
+        {223, 5},        // 223–227
+        {229, 1},        // battery state of charge
+        {232, 1},        // battery average current
+        {301, 1}         // output priority
+    };
+
 
 static const ModbusRegister easun_registers[] = {
   { "Fault code",                        100, RegisterType::Holding, ValueType::U_WORD, 1.0f,   "",    false, nullptr },
