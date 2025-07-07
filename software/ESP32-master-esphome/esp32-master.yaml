@@ -34,6 +34,16 @@ globals:
     restore_value: no
     initial_value: '0'
 
+  - id: MODE_UTI
+    type: int
+    restore_value: no
+    initial_value: '0'
+
+  - id: MODE_SOL
+    type: int
+    restore_value: no
+    initial_value: '1'
+
   #- id: output_priority
   #  type: int
    # restore_value: no
@@ -250,6 +260,7 @@ sensor:
     device_class: power
     state_class: measurement
     accuracy_decimals: 0
+    id: output_active_power
 
   # Output apparent power                                1VA      Int   214 1 R
   - platform: modbus_controller
@@ -276,6 +287,48 @@ sensor:
     accuracy_decimals: 1
     filters:
       - multiply: 0.1
+    id: battery_average_voltage
+    on_value:
+    then:
+      - lambda: |-
+          const float battery_voltage = x*0.1f;
+          const int pv_power = id(pv_average_power);
+          const int load_power = id(output_active_power);
+
+          const unsigned long now = millis();
+
+          if (battery_voltage < 26.0f) {
+            // Natychmiast wracamy do UTI
+            if (id(priority_mode) != MODE_UTI) {
+              ESP_LOGI("priority", "Spadek napięcia baterii <26V → przełączam na UTI");
+              id(output_priority).publish_state("Utility-PV-Battery (UTI)");
+              id(priority_mode) = MODE_UTI;
+            }
+            id(last_sol_candidate_ms) = 0;  // resetuj licznik
+            return;
+          }
+
+          // Warunek do rozważenia trybu SOL
+          if (pv_power > load_power) {
+            if (id(priority_mode) == MODE_UTI) {
+              if (id(last_sol_candidate_ms) == 0) {
+                id(last_sol_candidate_ms) = now;
+                ESP_LOGD("priority", "Rozpoczynam odliczanie do SOL...");
+              } else if (now - id(last_sol_candidate_ms) > 30 * 1000) {
+                ESP_LOGI("priority", "PV > load przez 30s → przełączam na SOL");
+                id(output_priority).publish_state("PV-Utility-Battery (SOL)");
+                id(priority_mode) = MODE_SOL;
+                id(last_sol_candidate_ms) = 0;
+              }
+            }
+          } else {
+            // Nie spełniamy warunków SOL → resetuj licznik
+            if (id(last_sol_candidate_ms) != 0) {
+              ESP_LOGD("priority", "Warunki SOL nie są spełnione – resetuję licznik.");
+              id(last_sol_candidate_ms) = 0;
+            }
+          }
+
 
   # Battery average Current                              0.1A     Int   216 1 R
   - platform: modbus_controller
@@ -320,20 +373,28 @@ sensor:
     on_value:
       then:
         - lambda: |-
-              float pv = x;
-              ESP_LOGI("pv_avg", "PV average voltage: %.1f V", pv);
+            float pv = x;
+            ESP_LOGI("pv_avg", "PV average voltage: %.1f V", pv);
 
-              if (pv < 80.0 && id(priority_mode) != 0) {
-                ESP_LOGI("pv_avg", "PV < 80V, UTI mode");
-                id(output_priority).publish_state("Utility-PV-Battery (UTI)"); // UTI
-                id(priority_mode) = 0;
-              } else if (pv > 100.0 && id(priority_mode) != 1) {
-                ESP_LOGI("pv_avg", "PV > 100V, ustawiam tryb SOL");
-                id(output_priority).publish_state("PV-Utility-Battery (SOL)"); // SOL
-                id(priority_mode) = 1;
+            if (id(priority_mode) == id(MODE_UTI)) {
+              if (pv > 100.0) {
+                ESP_LOGI("pv_avg", "Zmieniam UTI → SOL");
+                id(output_priority).publish_state("PV-Utility-Battery (SOL)");
+                id(priority_mode) = id(MODE_SOL);
               } else {
-                ESP_LOGI("pv_avg", "W zakresie histerezy, brak zmian trybu");
+                ESP_LOGI("pv_avg", "UTI aktywny, PV <= 100V – brak zmian");
               }
+            } else if (id(priority_mode) == id(MODE_SOL)) {
+              if (pv < 80.0) {
+                ESP_LOGI("pv_avg", "Zmieniam SOL → UTI");
+                id(output_priority).publish_state("Utility-PV-Battery (UTI)");
+                id(priority_mode) = id(MODE_UTI);
+              } else {
+                ESP_LOGI("pv_avg", "SOL aktywny, PV >= 80V – brak zmian");
+              }
+            } else {
+              ESP_LOGW("pv_avg", "Nieznany priority_mode = %d", id(priority_mode));
+            }
 
 
   # PV average current                                   0.1A     Int   220 1 R
@@ -362,6 +423,7 @@ sensor:
     device_class: power
     state_class: measurement
     accuracy_decimals: 0
+    id: pv_average_power
 
   # PV charging average power                            1W       Int   224 1 R
   - platform: modbus_controller
