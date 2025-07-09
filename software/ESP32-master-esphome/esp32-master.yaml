@@ -309,26 +309,42 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 100.0 &&
+                return (id(pv_average_voltage).state > 200.0 &&
                         id(battery_average_voltage).state < 26.0 &&
-                        id(output_active_power).state > id(pv_average_power).state) &&
-                        id(output_priority).state != "PV-Utility-Battery (SUB)";
+                        id(output_active_power).state > id(pv_average_power).state &&
+                        id(output_priority).state != "PV-Utility-Battery (SUB)");
             then:
               - select.set:
                   id: output_priority
                   option: "PV-Utility-Battery (SUB)"
+              - lambda: |-
+                  ESP_LOGI("pv_avg", "Power logic state (1) changed from: (%s) to SUB", id(output_priority).state.c_str());
 
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 100.0 &&
+                return (id(pv_average_voltage).state > 200.0 &&
                         id(battery_average_voltage).state >= 26.0 &&
-                        id(output_active_power).state < id(pv_average_power).state) &&
-                        id(output_priority).state != "PV-Utility-Battery (SOL)";
+                        id(output_active_power).state < id(pv_average_power).state &&
+                        id(output_priority).state != "PV-Utility-Battery (SOL)");
             then:
               - select.set:
                   id: output_priority
                   option: "PV-Utility-Battery (SOL)"
+              - lambda: |-
+                  ESP_LOGI("pv_avg", "Power logic state (2) changed from: (%s) to SOL", id(output_priority).state.c_str());
+        - if:
+            condition:
+              lambda: |-
+                return (id(pv_average_voltage).state < 120.0 &&
+                        id(output_priority).state != "Utility-PV-Battery (UTI)");
+            then:
+              - select.set:
+                  id: output_priority
+                  option: "Utility-PV-Battery (UTI)"
+              - lambda: |-
+                  ESP_LOGI("pv_avg", "Power logic state (3) changed from: (%s) to UTI", id(output_priority).state.c_str());
+
 
 
   # Battery average Current                              0.1A     Int   216 1 R
@@ -371,50 +387,7 @@ sensor:
     filters:
       - multiply: 0.1
     id: pv_average_voltage
-    on_value:
-      then:
-        - lambda: |-
-            float pv = x;
-            ESP_LOGI("pv_avg", "PV average voltage: %.1f V", pv);
 
-            if (id(output_priority).state != "PV-Utility-Battery (SOL)")  {
-              if (pv > 100.0) {
-                ESP_LOGI("pv_avg", "Zmieniam UTI → SOL");
-                id(priority_mode) = id(MODE_SOL);
-              } else {
-                ESP_LOGI("pv_avg", "PV <= 100V – brak zmian (%s)", id(output_priority).state.c_str());
-              } 
-            } else if (id(priority_mode) == id(MODE_SOL)) {
-              if (pv < 80.0) {
-                ESP_LOGI("pv_avg", "Zmieniam SOL → UTI");
-                id(priority_mode) = id(MODE_UTI);
-              } else {
-                ESP_LOGI("pv_avg", "PV >= 80V – brak zmian (%s)", id(output_priority).state.c_str());
-              }
-            } else {
-              ESP_LOGW("pv_avg", "Nieznany priority_mode = %d", id(priority_mode));
-            }
-
-        # ustaw tylko jeśli trzeba
-        - if:
-            condition:
-              lambda: |-
-                return id(priority_mode) == id(MODE_SOL) &&
-                      id(output_priority).state != "PV-Utility-Battery (SOL)";
-            then:
-              - select.set:
-                  id: output_priority
-                  option: "PV-Utility-Battery (SOL)"
-
-        - if:
-            condition:
-              lambda: |-
-                return id(priority_mode) == id(MODE_UTI) &&
-                      id(output_priority).state != "Utility-PV-Battery (UTI)";
-            then:
-              - select.set:
-                  id: output_priority
-                  option: "Utility-PV-Battery (UTI)"
 
 
 
