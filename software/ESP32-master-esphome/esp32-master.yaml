@@ -50,16 +50,15 @@ globals:
     restore_value: no
     initial_value: '0'
     
-      
   - id: power_sw_sol_flag
     type: int
     restore_value: no
     initial_value: '1'
 
-  - id: power_sw_sol_flag
+  - id: power_sw_uti_flag
     type: int
     restore_value: no
-    initial_value: '1'
+    initial_value: '0'
 
   #- id: output_priority
   #  type: int
@@ -291,7 +290,7 @@ sensor:
     state_class: measurement
     accuracy_decimals: 0
 
-  # Battery average voltage                              0.1V     Int   215 1 R
+  # Battery average voltage                                   0.1V     Int   215 1 R
   - platform: modbus_controller
     modbus_controller_id: smg0
     name: "battery average voltage"
@@ -306,38 +305,30 @@ sensor:
       - multiply: 0.1
     id: battery_average_voltage
     on_value:
-    then:
-      - lambda: |-
-          float bv = x;
-          ESP_LOGI("pv_avg", "PV average voltage: %.1f V", bv);
-          if (id(pv_average_voltage).state > 100.0 && bv < 26.0 && id(output_active_power).state > id (pv_average_power).state)
-          {
-              //switch to sub
-          }else if (id(pv_average_voltage).state > 100.0 && bv >= 26.0 && id(output_active_power).state < id(pv_average_power).state)
-          {
-          //switch to sol
-          }
+      then:
+        - if:
+            condition:
+              lambda: |-
+                return (id(pv_average_voltage).state > 100.0 &&
+                        id(battery_average_voltage).state < 26.0 &&
+                        id(output_active_power).state > id(pv_average_power).state) &&
+                        id(output_priority).state != "PV-Utility-Battery (SUB)";
+            then:
+              - select.set:
+                  id: output_priority
+                  option: "PV-Utility-Battery (SUB)"
 
-      - if:
-          condition:
-            lambda: |-
-              return id(priority_mode) == id(MODE_SOL) &&
-                    id(output_priority).state != "PV-Utility-Battery (SOL)";
-          then:
-            - select.set:
-                id: output_priority
-                option: "PV-Utility-Battery (SOL)"
-
-      - if:
-          condition:
-            lambda: |-
-              return id(priority_mode) == id(MODE_UTI) &&
-                    id(output_priority).state != "Utility-PV-Battery (UTI)";
-          then:
-            - select.set:
-                id: output_priority
-                option: "Utility-PV-Battery (UTI)"
-
+        - if:
+            condition:
+              lambda: |-
+                return (id(pv_average_voltage).state > 100.0 &&
+                        id(battery_average_voltage).state >= 26.0 &&
+                        id(output_active_power).state < id(pv_average_power).state) &&
+                        id(output_priority).state != "PV-Utility-Battery (SOL)";
+            then:
+              - select.set:
+                  id: output_priority
+                  option: "PV-Utility-Battery (SOL)"
 
 
   # Battery average Current                              0.1A     Int   216 1 R
