@@ -16,7 +16,7 @@ api:
 
 ota:
   - platform: esphome
-    password: ""
+    password: "zerowanie"
 
 wifi:
   ssid: "komandor_shepard"
@@ -49,6 +49,17 @@ globals:
     type: unsigned long
     restore_value: no
     initial_value: '0'
+    
+      
+  - id: power_sw_sol_flag
+    type: int
+    restore_value: no
+    initial_value: '1'
+
+  - id: power_sw_sol_flag
+    type: int
+    restore_value: no
+    initial_value: '1'
 
   #- id: output_priority
   #  type: int
@@ -294,6 +305,40 @@ sensor:
     filters:
       - multiply: 0.1
     id: battery_average_voltage
+    on_value:
+    then:
+      - lambda: |-
+          float bv = x;
+          ESP_LOGI("pv_avg", "PV average voltage: %.1f V", bv);
+          if (id(pv_average_voltage).state > 100.0 && bv < 26.0 && id(output_active_power).state > id (pv_average_power).state)
+          {
+              //switch to sub
+          }else if (id(pv_average_voltage).state > 100.0 && bv >= 26.0 && id(output_active_power).state < id(pv_average_power).state)
+          {
+          //switch to sol
+          }
+
+      - if:
+          condition:
+            lambda: |-
+              return id(priority_mode) == id(MODE_SOL) &&
+                    id(output_priority).state != "PV-Utility-Battery (SOL)";
+          then:
+            - select.set:
+                id: output_priority
+                option: "PV-Utility-Battery (SOL)"
+
+      - if:
+          condition:
+            lambda: |-
+              return id(priority_mode) == id(MODE_UTI) &&
+                    id(output_priority).state != "Utility-PV-Battery (UTI)";
+          then:
+            - select.set:
+                id: output_priority
+                option: "Utility-PV-Battery (UTI)"
+
+
 
   # Battery average Current                              0.1A     Int   216 1 R
   - platform: modbus_controller
@@ -341,25 +386,45 @@ sensor:
             float pv = x;
             ESP_LOGI("pv_avg", "PV average voltage: %.1f V", pv);
 
-            if (id(priority_mode) == id(MODE_UTI)) {
+            if (id(output_priority).state != "PV-Utility-Battery (SOL)")  {
               if (pv > 100.0) {
                 ESP_LOGI("pv_avg", "Zmieniam UTI → SOL");
-                id(output_priority).publish_state("PV-Utility-Battery (SOL)");
                 id(priority_mode) = id(MODE_SOL);
               } else {
-                ESP_LOGI("pv_avg", "UTI aktywny, PV <= 100V – brak zmian");
-              }
+                ESP_LOGI("pv_avg", "PV <= 100V – brak zmian (%s)", id(output_priority).state.c_str());
+              } 
             } else if (id(priority_mode) == id(MODE_SOL)) {
               if (pv < 80.0) {
                 ESP_LOGI("pv_avg", "Zmieniam SOL → UTI");
-                id(output_priority).publish_state("Utility-PV-Battery (UTI)");
                 id(priority_mode) = id(MODE_UTI);
               } else {
-                ESP_LOGI("pv_avg", "SOL aktywny, PV >= 80V – brak zmian");
+                ESP_LOGI("pv_avg", "PV >= 80V – brak zmian (%s)", id(output_priority).state.c_str());
               }
             } else {
               ESP_LOGW("pv_avg", "Nieznany priority_mode = %d", id(priority_mode));
             }
+
+        # ustaw tylko jeśli trzeba
+        - if:
+            condition:
+              lambda: |-
+                return id(priority_mode) == id(MODE_SOL) &&
+                      id(output_priority).state != "PV-Utility-Battery (SOL)";
+            then:
+              - select.set:
+                  id: output_priority
+                  option: "PV-Utility-Battery (SOL)"
+
+        - if:
+            condition:
+              lambda: |-
+                return id(priority_mode) == id(MODE_UTI) &&
+                      id(output_priority).state != "Utility-PV-Battery (UTI)";
+            then:
+              - select.set:
+                  id: output_priority
+                  option: "Utility-PV-Battery (UTI)"
+
 
 
   # PV average current                                   0.1A     Int   220 1 R
@@ -388,6 +453,9 @@ sensor:
     state_class: measurement
     accuracy_decimals: 0
     id: pv_average_power
+
+
+
 
   # PV charging average power                            1W       Int   224 1 R
   - platform: modbus_controller
