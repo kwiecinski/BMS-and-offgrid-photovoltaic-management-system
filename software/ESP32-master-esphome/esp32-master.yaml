@@ -309,9 +309,9 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 200.0 &&
-                        id(battery_average_voltage).state < 26.0 &&
-                        id(output_active_power).state > id(pv_average_power).state &&
+                return (id(pv_average_voltage).state > 160.0 &&
+                        id(output_active_power).state > 500.0 &&
+                        (id(operation_mode).state == "Mains" || id(battery_average_voltage).state < 25.5) &&    //operation_mode = 3 - offgrid
                         id(output_priority).state != "PV-Utility-Battery (SUB)");
             then:
               - select.set:
@@ -323,9 +323,9 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 200.0 &&
-                        id(battery_average_voltage).state >= 26.0 &&
-                        id(output_active_power).state < id(pv_average_power).state &&
+                return (id(pv_average_voltage).state > 160.0 &&
+                        id(battery_average_voltage).state >= 26.5 &&
+                        id(output_active_power).state <=500.0 &&
                         id(output_priority).state != "PV-Utility-Battery (SOL)");
             then:
               - select.set:
@@ -726,6 +726,7 @@ text_sensor:
     address: 201
     register_type: holding
     raw_encode: HEXBYTES
+    id: operation_mode
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
       switch (value) {
@@ -738,6 +739,7 @@ text_sensor:
         case 6: return std::string("Fault");
       }
       return std::string("Unknown");
+      
 
 number:
   # Output voltage                                                0.1V    Uint  320 1 R/W
