@@ -60,6 +60,12 @@ globals:
     restore_value: no
     initial_value: '0'
 
+  - id: last_mode_change
+    type: unsigned long
+    restore_value: no
+    initial_value: '0'
+
+
   #- id: output_priority
   #  type: int
    # restore_value: no
@@ -310,7 +316,7 @@ sensor:
             condition:
               lambda: |-
                 return (id(pv_average_voltage).state > 160.0 &&
-                        id(output_active_power).state > 500.0 &&
+                        id(output_active_power).state > 1000.0 &&
                         (id(operation_mode).state == "Mains" || id(battery_average_voltage).state < 25.5) &&    //operation_mode = 3 - offgrid
                         id(output_priority).state != "PV-Utility-Battery (SUB)");
             then:
@@ -318,6 +324,7 @@ sensor:
                   id: output_priority
                   option: "PV-Utility-Battery (SUB)"
               - lambda: |-
+                  id(last_mode_change) = millis();
                   ESP_LOGI("pv_avg", "Power logic state (1) changed from: (%s) to SUB", id(output_priority).state.c_str());
 
         - if:
@@ -325,13 +332,15 @@ sensor:
               lambda: |-
                 return (id(pv_average_voltage).state > 160.0 &&
                         id(battery_average_voltage).state >= 26.5 &&
-                        id(output_active_power).state <=500.0 &&
-                        id(output_priority).state != "PV-Utility-Battery (SOL)");
+                        id(output_active_power).state <=1000.0 &&
+                        id(output_priority).state != "PV-Utility-Battery (SOL)" &&
+                        (millis() - id(last_mode_change)) > 300000);  // 5 minutes
             then:
               - select.set:
                   id: output_priority
                   option: "PV-Utility-Battery (SOL)"
               - lambda: |-
+              
                   ESP_LOGI("pv_avg", "Power logic state (2) changed from: (%s) to SOL", id(output_priority).state.c_str());
         - if:
             condition:
@@ -343,8 +352,8 @@ sensor:
                   id: output_priority
                   option: "Utility-PV-Battery (UTI)"
               - lambda: |-
+                  id(last_mode_change) = millis();
                   ESP_LOGI("pv_avg", "Power logic state (3) changed from: (%s) to UTI", id(output_priority).state.c_str());
-
 
 
   # Battery average Current                              0.1A     Int   216 1 R
