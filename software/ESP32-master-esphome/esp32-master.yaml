@@ -29,6 +29,14 @@ wifi:
 
 captive_portal:
 
+time:
+  - platform: sntp
+    id: sntp_time
+
+sun:
+  latitude: 50.0413
+  longitude: 21.9990
+  id: sun_sun
 
 globals:
   - id: priority_mode
@@ -77,17 +85,6 @@ uart:
     baud_rate: 9600
     tx_pin: GPIO5
     rx_pin: GPIO4
-  - id: meter_uart
-    tx_pin: 
-      number: GPIO33
-      inverted: true
-    rx_pin:
-      number: GPIO32
-      inverted: true
-    baud_rate: 300
-    data_bits: 7
-    parity: EVEN
-    stop_bits: 1
 
 
 modbus:
@@ -102,19 +99,35 @@ modbus_controller:
     command_throttle: 200ms
     update_interval: 10s
 
-external_components:
-  - source: github://aquaticus/esphome-iec62056  #https://aquaticus.info/iec62056.html
-
-iec62056:
-  update_interval: 60s
-  uart_id: meter_uart
-  baud_rate_max: 9600  # maksymalna prędkość jaką zgłasza licznik
-  battery_meter: false
-
-
+binary_sensor:
+  - platform: template
+    name: "Allow Solar Mode"
+    id: allow_solar_mode
+    lambda: |-
+      static bool allow = false;
+      if (id(sun_elevation).state > 12.0)
+        allow = true;
+      else if (id(sun_elevation).state < 6.0)
+        allow = false;
+      return allow;
 
 
 sensor:
+  - platform: sun
+    name: "Sun Elevation"
+    type: elevation
+    id: sun_elevation
+
+  - platform: template
+    name: "Sun Elevation Angle"
+    id: sun_elevation_angle
+    unit_of_measurement: "°"
+    update_interval: 60s
+    accuracy_decimals: 1
+    lambda: |-
+      return id(sun_elevation).state;
+
+
     # Fault code                                                    ULong 100 2 R
   - platform: modbus_controller
     modbus_controller_id: smg0
@@ -359,7 +372,8 @@ sensor:
                         id(battery_average_voltage).state >= 26.5 &&
                         id(output_active_power).state <=1000.0 &&
                         id(output_priority).state != "PV-Utility-Battery (SOL)" &&
-                        (millis() - id(last_mode_change)) > (30*60000));  // 5 minutes
+                        (millis() - id(last_mode_change)) > (30*60000) &&
+                        id(allow_solar_mode).state); // 5 minutes
             then:
               - select.set:
                   id: output_priority
@@ -649,16 +663,6 @@ select:
 
 
 text_sensor:
-  - platform: iec62056
-    name: "Licznik Itron numer licznika"
-    obis: "0.0.0"
-  - platform: iec62056
-    name: "Total active energy"
-    obis: "1.8.0"
-  - platform: iec62056
-    name: "Instantaneous active power"
-    obis: "1.6.0"
-
   # Fault code                                                    ULong 100 2 R
   - platform: modbus_controller
     modbus_controller_id: smg0
