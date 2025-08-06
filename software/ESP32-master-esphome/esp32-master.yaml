@@ -28,7 +28,8 @@ wifi:
     password: "DjaE8peyASsA"
 
 captive_portal:
-    
+
+
 globals:
   - id: priority_mode
     type: int
@@ -72,14 +73,26 @@ globals:
   #  initial_value: '0'
 
 uart:
-  - id: uart_1
+  - id: easun_uart
     baud_rate: 9600
     tx_pin: GPIO5
     rx_pin: GPIO4
+  - id: meter_uart
+    tx_pin: 
+      number: GPIO33
+      inverted: true
+    rx_pin:
+      number: GPIO32
+      inverted: true
+    baud_rate: 300
+    data_bits: 7
+    parity: EVEN
+    stop_bits: 1
+
 
 modbus:
   - id: modbus0
-    uart_id: uart_1
+    uart_id: easun_uart
     send_wait_time: 200ms
 
 modbus_controller:
@@ -88,6 +101,18 @@ modbus_controller:
     modbus_id: modbus0
     command_throttle: 200ms
     update_interval: 10s
+
+external_components:
+  - source: github://aquaticus/esphome-iec62056  #https://aquaticus.info/iec62056.html
+
+iec62056:
+  update_interval: 60s
+  uart_id: meter_uart
+  baud_rate_max: 9600  # maksymalna prędkość jaką zgłasza licznik
+  battery_meter: false
+
+
+
 
 sensor:
     # Fault code                                                    ULong 100 2 R
@@ -315,7 +340,7 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 160.0 &&
+                return (id(pv_average_voltage).state > 200.0 &&
                         id(output_active_power).state > 1000.0 &&
                         (id(operation_mode).state == "Mains" || id(battery_average_voltage).state < 25.5) &&    //operation_mode = 3 - offgrid
                         id(output_priority).state != "PV-Utility-Battery (SUB)");
@@ -330,11 +355,11 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state > 160.0 &&
+                return (id(pv_average_voltage).state > 200.0 &&
                         id(battery_average_voltage).state >= 26.5 &&
                         id(output_active_power).state <=1000.0 &&
                         id(output_priority).state != "PV-Utility-Battery (SOL)" &&
-                        (millis() - id(last_mode_change)) > 300000);  // 5 minutes
+                        (millis() - id(last_mode_change)) > (30*60000));  // 5 minutes
             then:
               - select.set:
                   id: output_priority
@@ -345,7 +370,7 @@ sensor:
         - if:
             condition:
               lambda: |-
-                return (id(pv_average_voltage).state < 120.0 &&
+                return (id(pv_average_voltage).state < 180.0 &&
                         id(output_priority).state != "Utility-PV-Battery (UTI)");
             then:
               - select.set:
@@ -624,6 +649,16 @@ select:
 
 
 text_sensor:
+  - platform: iec62056
+    name: "Licznik Itron numer licznika"
+    obis: "0.0.0"
+  - platform: iec62056
+    name: "Total active energy"
+    obis: "1.8.0"
+  - platform: iec62056
+    name: "Instantaneous active power"
+    obis: "1.6.0"
+
   # Fault code                                                    ULong 100 2 R
   - platform: modbus_controller
     modbus_controller_id: smg0
