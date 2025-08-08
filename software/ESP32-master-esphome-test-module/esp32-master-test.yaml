@@ -1,0 +1,66 @@
+esphome:
+  name: esp32-master-test
+
+esp32:
+  board: az-delivery-devkit-v4
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+web_server:
+  port: 80
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  - platform: esphome
+    password: ""
+
+wifi:
+  networks:
+    - ssid: "Mb-ht"
+      password: "zerowanie"
+    - ssid: "komandor"
+      password: "uziemienie poprzez zerowanie"
+    - ssid: "ANS"
+      password: "orw-els-2000!?"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp32-Master-Test"
+    password: "3wlz0W77fMh5"
+
+captive_portal:
+    
+
+external_components:
+  - source: github://aquaticus/esphome-iec62056
+
+uart:
+  id: meter_uart
+  tx_pin: GPIO33
+  rx_pin: GPIO32
+  baud_rate: 300
+  data_bits: 7
+  parity: EVEN
+  stop_bits: 1
+
+iec62056:
+  update_interval: 60s
+  uart_id: meter_uart
+  baud_rate_max: 9600  # maksymalna prędkość jaką zgłasza licznik
+  battery_meter: false
+
+text_sensor:
+  - platform: iec62056
+    name: "Licznik Itron numer licznika"
+    obis: "0.0.0"
+  - platform: iec62056
+    name: "Total active energy"
+    obis: "1.8.0"
+  - platform: iec62056
+    name: "Instantaneous active power"
+    obis: "1.6.0"
