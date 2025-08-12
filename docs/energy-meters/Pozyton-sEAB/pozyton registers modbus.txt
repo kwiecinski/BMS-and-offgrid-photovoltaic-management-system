@@ -1,0 +1,28 @@
+Domyślnie stosowane są następujące parametry:
+•
+Adres Modbus: adres stanowią dwie ostatnie cyfry numeru seryjnego licznika (jeśli
+dwie ostatnie cyfry mają wartość 00, to wtedy adres przyjmuje wartość 100);
+•
+Typ parzystości:ramka 8E1 ( 1 bit startu, 8 bitów danych, bit parzystości typu „Even”, 1 bit stopu;);
+•
+Prędkość łącza: 19200 bit/s.
+
+04h Odczyt rejestru (rejestrów) tylko do odczytu 30001–39999
+
+10h Zapis grupy rejestrów  40001–49999
+
+Licznik jest urządzeniem, w którym wielu wielkości metrologicznych nie da się
+zaprezentować przy użyciu pojedynczego 16-bitowego rejestru (zgodnie z tym co
+oryginalnie proponuje specyfikacja Modbus). Na przykład liczydła energii stanowią
+wartości z zakresu 00000000–99999999. Wielkości te reprezentowane są w postaci liczby
+32-bitowej, zapisywanej w dwóch sąsiednich 16-bitowych rejestrach. W liczniku przy
+rozdzielaniu wielkości na wiele rejestrów obowiązuje reguła Big-Endian tj. bardziej
+znacząca część zapisywana jest jako pierwsza (tj. w rejestrze o mniejszym adresie).
+
+
+U16 16-bitowa liczba bez znaku – standardowy rejestr Modbus
+S16 16-bitowa liczba ze znakiem3 – standardowy rejestr Modbus
+U08 8-bitowa liczba bez znaku4
+U32 32-bitowa liczba bez znaku
+ch[N] Łańcuch znaków o długości N; znaki ASCII przechowywane są po dwa w 16-bitowym rejestrze Modbus; niewykorzystane miejsca uzupełniane są znakami NUL (0x00).
+

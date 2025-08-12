@@ -40,13 +40,21 @@ external_components:
   - source: github://aquaticus/esphome-iec62056
 
 uart:
-  id: meter_uart
-  tx_pin: GPIO33
-  rx_pin: GPIO32
-  baud_rate: 300
-  data_bits: 7
-  parity: EVEN
-  stop_bits: 1
+  - id: meter_uart
+    tx_pin: GPIO33
+    rx_pin: GPIO32
+    baud_rate: 300
+    data_bits: 7
+    parity: EVEN
+    stop_bits: 1
+
+  - id: modbus_uart
+    tx_pin: 14        # DI1
+    rx_pin: 16        # DO1
+    baud_rate: 19200
+    parity: EVEN
+    stop_bits: 1
+    
 
 iec62056:
   update_interval: 60s
@@ -64,3 +72,37 @@ text_sensor:
   - platform: iec62056
     name: "Instantaneous active power"
     obis: "1.6.0"
+
+#DI1: GPIO14
+#DO1: GPIO12
+#RE1: GPIO13 //Output HIGH, Input LOW
+
+#DI2: GPIO27
+#DO2: GPIO25
+#RE2: GPIO26
+
+modbus:
+  id: modbus_bus
+  uart_id: modbus_uart
+  send_wait_time: 200ms
+  flow_control_pin: 13 # RE1
+
+modbus_controller:
+  - id: seab_meter
+    address: 45         # Adres licznika (ostatnie dwie cyfry numeru seryjnego)
+    modbus_id: modbus_bus
+    update_interval: 10s
+
+
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: seab_meter
+    name: "SEAB L1 Active Power"
+    register_type: holding    # dla 3xxxx i 4xxxx w ESPHome używamy 'holding'
+    address: 112              # 30113 -> offset 112
+    value_type: S_WORD        # 16-bit signed
+    unit_of_measurement: "W"
+    accuracy_decimals: 1
+    filters:
+      - multiply: 0.1         # skala 10 => dzielimy przez 10
+

@@ -1,0 +1,67 @@
+Urządzenie odczytowe przesyła sekwencję ustalenia trybu pracy:
+[ACK]0B1[CR][LF]
+
+Po odmierzeniu zwłoki, licznik wysyła sekwencję żądania autoryzacyjnego 
+
+[SOH]P0[STX](0000)[ETX][BCC]
+Urządzenie odczytowe odpowiada sekwencją 
+
+[SOH]P1[STX](yyyyyyyyyy)[ETX][BCC]
+Gdzie:
+yyyyyyyyyy
+hasło zabezpieczające.
+Jeżeli licznik prawidłowo zdekoduje sekwencję i zaakceptuje hasło, odpowiada znakiem [ACK]. Na
+wyświetlaczu licznika sygnalizowany jest również stan zezwolenia na zmianę parametrów licznika
+(„programowanie licznika”) – pulsowanie na ekranie napisu: PPPPPPPP.
+W przypadku podania niepoprawnego hasła licznik odpowiada znakiem [NAK] i zrywa połączenie.
+Możliwe jest również podanie odpowiedzi bez hasła 
+
+[SOH]P1[STX]()[ETX][BCC]
+
+Nie jest jednak wówczas możliwe programowanie licznika – rozkazy zapisu są ignorowane.
+
+Jeżeli licznik prawidłowo zdekoduje sekwencję odpowiada znakiem [ACK].
+Licznik po wysłaniu znaku [ACK] gotowy jest na przyjęcie rozkazów trybu rejestrowego. 
+
+Liczydła energii:
+Rozkaz odczytowy R1: Eezx()
+Odpowiedz licznika:
+
+y.8.x.(nnnnnn.nnnn)[CR][LF]
+
+Gdzie:
+e energia: P – czynna, Q – bierna;
+z kierunek przepływu energii: P – dodatni (pobór), M – ujemny (oddawanie);
+x numer strefy:
+0 – liczydło sumaryczne,
+1 – strefa 1,
+2 – strefa 2,
+3 – strefa 3,
+4 – strefa 4;
+y
+rodzaj energii i kierunek:
+0 – P+ (czynna, kierunek pobór),
+1 – P− (czynna, kierunek oddawanie),
+2 – Q+ (bierna indukcyjna),
+3 – Q− (bierna pojemnościowa);
+nn...n
+wartość energii w kWh lub kvarh.
+
+
+
+
+Częstotliwość
+Rozkaz odczytowy R1: F()
+
+Bieżąca moc czynna
+Rozkaz odczytowy R1: P()
+
+Moc chwilowa bierna
+Rozkaz odczytowy R1: Q()
+Napięcie fazowe
+Rozkaz odczytowy R1: U()
+
+Prąd w fazach
+Rozkaz odczytowy R1: I()
+
+
