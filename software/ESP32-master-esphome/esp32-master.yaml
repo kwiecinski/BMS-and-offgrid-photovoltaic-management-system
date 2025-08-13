@@ -105,9 +105,9 @@ binary_sensor:
     id: allow_solar_mode
     lambda: |-
       static bool allow = false;
-      if (id(sun_elevation).state > 12.0)
+      if (id(sun_elevation).state > 15.0)
         allow = true;
-      else if (id(sun_elevation).state < 6.0)
+      else if (id(sun_elevation).state < 8.0)
         allow = false;
       return allow;
 
@@ -354,9 +354,10 @@ sensor:
             condition:
               lambda: |-
                 return (id(pv_average_voltage).state > 200.0 &&
-                        id(output_active_power).state > 1000.0 &&
-                        (id(operation_mode).state == "Mains" || id(battery_average_voltage).state < 25.5) &&    //operation_mode = 3 - offgrid
-                        id(output_priority).state != "PV-Utility-Battery (SUB)");
+                        //id(output_active_power).state > 1000.0 &&
+                        id(operation_mode).state == "Mains" &&   
+                        id(output_priority).state != "PV-Utility-Battery (SUB)" &&
+                        id(output_priority).state == "PV-Utility-Battery (SOL)");
             then:
               - select.set:
                   id: output_priority
@@ -370,10 +371,10 @@ sensor:
               lambda: |-
                 return (id(pv_average_voltage).state > 200.0 &&
                         id(battery_average_voltage).state >= 26.5 &&
-                        id(output_active_power).state <=1000.0 &&
+                        //id(output_active_power).state <=1000.0 &&
                         id(output_priority).state != "PV-Utility-Battery (SOL)" &&
-                        (millis() - id(last_mode_change)) > (30*60000) &&
-                        id(allow_solar_mode).state); // 5 minutes
+                        (millis() - id(last_mode_change)) > (15*60000) &&
+                        id(allow_solar_mode).state);
             then:
               - select.set:
                   id: output_priority
