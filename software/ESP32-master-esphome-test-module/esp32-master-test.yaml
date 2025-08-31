@@ -1,5 +1,7 @@
 esphome:
   name: esp32-master-test
+  includes:
+    - custom_components/itron/itron.h
 
 esp32:
   board: az-delivery-devkit-v4
@@ -8,7 +10,6 @@ esp32:
 
 # Enable logging
 logger:
-  baud_rate: 0
 
 web_server:
   port: 80
@@ -24,7 +25,7 @@ wifi:
   networks:
     - ssid: "Mb-ht"
       password: "zerowanie"
-    - ssid: "komandor"
+    - ssid: "komandor_shepard"
       password: "uziemienie poprzez zerowanie"
     - ssid: "ANS"
       password: "orw-els-2000!?"
@@ -36,77 +37,24 @@ wifi:
 
 captive_portal:
     
-
-# external_components:
-#   - source: github://aquaticus/esphome-iec62056
-
-uart:
-  - id: itron_uart
-    tx_pin: GPIO33
-    rx_pin: GPIO32
-    baud_rate: 300
-    data_bits: 7
-    parity: EVEN
-    stop_bits: 1
+external_components:
+  - source: 
+      type: local
+      path: custom_components
 
 
-# Pierwsze zapytanie /?!\r\n
-interval:
-  - interval: 5s
-    then:
-      - lambda: |-
-          const char init_cmd[] = "/?!\r\n";
-          ESP_LOGI("ITRON", "Wysyłam: /?!");
-          id(itron_uart).write_array((const uint8_t*)init_cmd, sizeof(init_cmd)-1);
-
-  - interval: 100ms
-    then:
-      - lambda: |-
-          while (id(itron_uart).available()) {
-            uint8_t b;
-            id(itron_uart).read_byte(&b);
-            ESP_LOGV("ITRON_RX", %c", b, (b >= 32 && b < 127) ? b : '.');
-
-            // Sprawdzamy czy linia identyfikacyjna się skończyła znakiem LF (0x0A)
-            static bool ack_sent = false;
-            static std::string buffer;
-            buffer.push_back((char)b);
-
-            if (!ack_sent && b == '\n') {
-              // wysyłamy ACK 000\r\n
-              const uint8_t ack_cmd[] = {0x06, '0', '0', '0', '\r', '\n'};
-              ESP_LOGI("ITRON", "Wysyłam ACK000");
-              id(itron_uart).write_array(ack_cmd, sizeof(ack_cmd));
-              ack_sent = true;
-            }
-          }
+  # - id: itron_uart
+  #   tx_pin: GPIO33
+  #   rx_pin: GPIO32
+  #   baud_rate: 300
+  #   data_bits: 7
+  #   parity: EVEN
+  #   stop_bits: 1
+  #   #debug:
+  #   #  direction: BOTH
+  #   #  dummy_receiver: true
 
 
-
-#   - id: modbus_uart
-#     tx_pin: 14        # DI1
-#     rx_pin: 16        # DO1
-#     baud_rate: 19200
-#     parity: EVEN
-#     stop_bits: 1
-    
-
-# iec62056:
-#   update_interval: 60s
-#   uart_id: meter_uart
-#   baud_rate_max: 9600  # maksymalna prędkość jaką zgłasza licznik
-#   battery_meter: false
-
-# text_sensor:
-#   - platform: iec62056
-#     name: "Licznik Itron numer licznika"
-#     obis: "0.0.0"
-#   - platform: iec62056
-#     name: "Total active energy"
-#     obis: "1.8.0"
-#   - platform: iec62056
-#     name: "Instantaneous active power"
-#     obis: "1.6.0"
 
 #DI1: GPIO14
 #DO1: GPIO12
@@ -116,28 +64,18 @@ interval:
 #DO2: GPIO25
 #RE2: GPIO26
 
-# modbus:
-#   id: modbus_bus
-#   uart_id: modbus_uart
-#   send_wait_time: 200ms
-#   flow_control_pin: 13 # RE1
+uart:
+  id: uart_bus
+  tx_pin: 14        # DI1
+  rx_pin: 16        # DO1
+  baud_rate: 4800
+  data_bits: 7
+  parity: EVEN
+  stop_bits: 1
 
-# modbus_controller:
-#   - id: seab_meter
-#     address: 45         # Adres licznika (ostatnie dwie cyfry numeru seryjnego)
-#     modbus_id: modbus_bus
-#     update_interval: 10s
-
-
-# sensor:
-#   - platform: modbus_controller
-#     modbus_controller_id: seab_meter
-#     name: "SEAB L1 Active Power"
-#     register_type: holding    # dla 3xxxx i 4xxxx w ESPHome używamy 'holding'
-#     address: 112              # 30113 -> offset 112
-#     value_type: S_WORD        # 16-bit signed
-#     unit_of_measurement: "W"
-#     accuracy_decimals: 1
-#     filters:
-#       - multiply: 0.1         # skala 10 => dzielimy przez 10
-
+pozyton_energy_meters:
+  id: my_meter
+  meter_type: EABM
+  dir_pin: GPIO13
+  update_interval: 10s
+  debug: true
