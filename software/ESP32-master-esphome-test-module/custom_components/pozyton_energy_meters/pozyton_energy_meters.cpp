@@ -1,86 +1,158 @@
 #include "pozyton_energy_meters.h"
 #include "esphome/core/log.h"
+#include <string>
+#include <vector>
 
-namespace esphome {
-namespace pozyton_energy_meters {
+#define SOH 0x01
+#define STX 0x02
+#define ETX 0x03
+#define EOT 0x04
+#define ENQ 0x05
+#define ACK 0x06
+#define NAK 0x15
+#define CR 0x0D
+#define LF 0x0A
 
-static const char *const TAG = "pozyton_energy_meters";
+class FrameBuilder
+{
+  std::string frame_;
 
-void PozytonEnergyMeters::setup() {
-  if (this->dir_pin_ != nullptr) {
-    this->dir_pin_->setup();      // configure pin as output
-    this->dir_pin_->digital_write(false);  // default = RX
-  }
+public:
+  void clear() { frame_.clear(); }
+  void add_byte(uint8_t b) { frame_.push_back(b); }
+  void add_ascii(const char *s) { frame_ += s; }
+
+  const uint8_t *data() const { return reinterpret_cast<const uint8_t *>(frame_.data()); }
+  size_t size() const { return frame_.size(); }
+};
+
+FrameBuilder make_handshake()
+{
+  FrameBuilder fb;
+  fb.add_ascii("/?000 0000000!\r\n");
+  return fb;
 }
 
-void PozytonEnergyMeters::update() {
-  // Example: send init sequence every update interval
-  this->send_init_sequence_();
-  this->handle_rx_();
+FrameBuilder make_work_mode()
+{
+  FrameBuilder fb;
+  fb.add_byte(ACK);
+  fb.add_ascii("041");
+  fb.add_byte(CR);
+  fb.add_byte(LF);
+  return fb;
 }
 
-void PozytonEnergyMeters::send_init_sequence_() {
-
-  const char *cmd = nullptr;
-
-  if (this->meter_type_ == METER_SEAB) {
-    cmd = "/A000.0000000\r\n";
-  } else if(this->meter_type_ == METER_EABM){
-    cmd = "/?000 0000000!\r\n";
-  }
-
-  if (this->dir_pin_ != nullptr) {
-    this->dir_pin_->digital_write(true);   // TX mode
-    delay(1);
-  }
-
-  this->write_str(cmd);
-  ESP_LOGD(TAG, "Sent request: %s", cmd);
-
-   if (this->parent_ != nullptr) {
-    this->parent_->flush();  // ensure TX buffer is empty
-  }
-
-  if (this->dir_pin_ != nullptr) {
-    delay(1);
-    this->dir_pin_->digital_write(false);  // back to RX
-  }
-  ESP_LOGI(TAG, "Init sequence sent");
+FrameBuilder make_register_mode()
+{
+  FrameBuilder fb;
+  fb.add_byte(SOH);
+  fb.add_ascii("P1");
+  fb.add_byte(STX);
+  fb.add_ascii("()");
+  fb.add_byte(ETX);
+  return fb;
 }
 
-void PozytonEnergyMeters::handle_rx_() {
-  while (this->available()) {
-    uint8_t c;
-    this->read_byte(&c);
+FrameBuilder make_active_energy_consumed()
+{
+  FrameBuilder fb;
+  fb.add_byte(SOH);
+  fb.add_ascii("R1");
+  fb.add_byte(STX);
+  fb.add_ascii("EPP0()");
+  fb.add_byte(ETX);
+  return fb;
+}
 
-    // Add byte to buffer
-    rx_buffer_.push_back(c);
+FrameBuilder make_exit_register_mode()
+{
+  FrameBuilder fb;
+  fb.add_byte(SOH);
+  fb.add_ascii("B0");
+  fb.add_byte(ETX);
+  return fb;
+}
 
-    // Check for end of frame
-    if (c == '\n') {  // or '\r' depending on meter
-      if (this->debug_) {
-        std::string s;
-        for (auto b : rx_buffer_) {
-          if (b >= 32 && b <= 126) {
-            s += (char)b;   // printable ASCII
-          } else {
-            s += '.';       // non-printable -> .
-          }
-        }
-        ESP_LOGI(TAG, "RX frame: %s", s.c_str());
+namespace esphome
+{
+  namespace pozyton_energy_meters
+  {
+
+    static const char *const TAG = "pozyton_energy_meters";
+
+    void PozytonEnergyMeters::setup()
+    {
+      if (this->dir_pin_ != nullptr)
+      {
+        this->dir_pin_->setup();              // configure pin as output
+        this->dir_pin_->digital_write(false); // default = RX
       }
-      rx_buffer_.clear();
     }
 
-    // Prevent buffer overflow
-    if (rx_buffer_.size() > 512) {
-      rx_buffer_.clear();
-      ESP_LOGW(TAG, "RX buffer overflow, cleared");
+    void PozytonEnergyMeters::update()
+    {
+      // Example: send init sequence every update interval
+      this->send_init_sequence_();
+    }
+
+    void PozytonEnergyMeters::send_frame(const uint8_t *frame, size_t length)
+    {
+      if (this->dir_pin_ != nullptr)
+      {
+        this->dir_pin_->digital_write(true);
+      }
+
+      this->write_array(frame, length);
+      this->parent_->flush();
+
+      if (this->dir_pin_ != nullptr)
+      {
+        this->dir_pin_->digital_write(false);
+      }
+    }
+
+    void PozytonEnergyMeters::calculate_bcc(FrameBuilder &fb)
+    {
+      uint8_t bcc = 0;
+      const uint8_t *data = fb.data();
+      size_t len = fb.size();
+
+      for (size_t i = 1; i < len; i++)
+        bcc ^= data[i]; // XOR wszystkich bajtów
+
+      fb.add_byte(bcc); // dodajemy BCC na końcu ramki
+    }
+
+    void PozytonEnergyMeters::send_init_sequence_()
+    {
+
+      FrameBuilder fb_handshake = make_handshake();
+      send_frame(fb_handshake.data(), fb_handshake.size());
+      delay(300);  // wait for meter to process
+
+
+      FrameBuilder fb_work = make_work_mode();
+      calculate_bcc(fb_work); 
+      send_frame(fb_work.data(), fb_work.size());
+      delay(300);
+
+      FrameBuilder fb_register_mode = make_register_mode();
+      calculate_bcc(fb_register_mode);                     // add BCC
+      send_frame(fb_register_mode.data(), fb_register_mode.size());
+      delay(300);
+
+
+      FrameBuilder fb_active_energy = make_active_energy_consumed();
+      calculate_bcc(fb_active_energy);                     // add BCC
+      send_frame(fb_active_energy.data(), fb_active_energy.size());
+      delay(300);
+
+      FrameBuilder fb_exit_register = make_exit_register_mode();
+      calculate_bcc(fb_exit_register);                     // add BCC
+      send_frame(fb_exit_register.data(), fb_exit_register.size());
+
+      ESP_LOGI(TAG, "Send request to energy meter");
     }
   }
 }
-
-
-
-}  // namespace pozyton_energy_meters
-}  // namespace esphome
