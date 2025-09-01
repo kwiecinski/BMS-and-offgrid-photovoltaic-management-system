@@ -1,5 +1,4 @@
 #pragma once
-
 #include "esphome/core/component.h"
 #include "esphome/components/uart/uart.h"
 #include "esphome/core/hal.h"
@@ -12,6 +11,17 @@ namespace esphome
 {
   namespace pozyton_energy_meters
   {
+
+    struct ObisData
+    {
+      bool valid;        // true jeśli parsowanie się udało
+      std::string obis;  // np. "1.8.0"
+      std::string value; // np. "004418.49"
+      std::string unit;  // np. "kWh"
+    };
+
+
+    ObisData parse_measurment(const std::vector<uint8_t> &buffer);
 
     enum MeterType
     {
@@ -51,6 +61,7 @@ namespace esphome
 
       void send_init_sequence_();
       std::vector<uint8_t> rx_buffer_;
+    
     };
 
   } // namespace pozyton_energy_meters
