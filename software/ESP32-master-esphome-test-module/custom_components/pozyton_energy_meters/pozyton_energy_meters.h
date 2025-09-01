@@ -1,6 +1,7 @@
 #pragma once
 #include "esphome/core/component.h"
 #include "esphome/components/uart/uart.h"
+#include "esphome/components/sensor/sensor.h"
 #include "esphome/core/hal.h"
 #include <string>
 #include <vector>
@@ -29,9 +30,33 @@ namespace esphome
       METER_EABM,
     };
 
+    class PozytonOBISSensor : public sensor::Sensor
+    {
+    public:
+      void set_obis(const std::string &obis_code) { this->obis_ = obis_code; }
+
+      void publish_measurement(const std::string &value, const std::string &unit)
+      {
+        this->publish_state(std::stod(value)); // publish numeric value
+        this->unit_ = unit;
+      }
+
+    private:
+      std::string obis_;
+      std::string unit_;
+    };
+
+
+
     class PozytonEnergyMeters : public PollingComponent, public uart::UARTDevice
     {
     public:
+
+      void register_sensor(PozytonOBISSensor *sensor, const std::string &obis) {
+    sensor->set_obis(obis);          // ustawienie OBIS w sensorze
+    this->sensors_.push_back(sensor); // dodanie do listy hub’a
+
+      }
       void set_meter_type(MeterType type) { meter_type_ = type; }
       void set_dir_pin(InternalGPIOPin *pin) { dir_pin_ = pin; }
       void set_debug(bool debug) { debug_ = debug; }
@@ -60,7 +85,8 @@ namespace esphome
       bool debug_{false};
 
       void send_init_sequence_();
-      std::vector<uint8_t> rx_buffer_;
+
+     std::vector<PozytonOBISSensor*> sensors_;
     
     };
 

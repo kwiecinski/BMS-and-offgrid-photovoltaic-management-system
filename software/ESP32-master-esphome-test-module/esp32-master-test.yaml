@@ -1,7 +1,5 @@
 esphome:
   name: esp32-master-test
-  includes:
-    - custom_components/itron/itron.h
 
 esp32:
   board: az-delivery-devkit-v4
@@ -79,3 +77,8 @@ pozyton_energy_meters:
   dir_pin: GPIO13
   update_interval: 10s
   debug: true
+sensor:
+  - platform: pozyton_energy_meters
+    pozyton_id: my_meter
+    obis: "1.8.0"
+    name: "Positive Active Energy"

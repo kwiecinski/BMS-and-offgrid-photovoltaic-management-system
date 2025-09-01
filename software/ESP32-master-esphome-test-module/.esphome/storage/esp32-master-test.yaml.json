@@ -8,8 +8,8 @@
   "address": "esp32-master-test.local",
   "web_port": 80,
   "esp_platform": "ESP32",
-  "build_path": "C:\\Projects\\BMS-and-offgrid-photovoltaic-management-system\\software\\ESP32-master-esphome-test-module\\.esphome\\build\\esp32-master-test",
-  "firmware_bin_path": "C:\\Projects\\BMS-and-offgrid-photovoltaic-management-system\\software\\ESP32-master-esphome-test-module\\.esphome\\build\\esp32-master-test\\.pioenvs\\esp32-master-test\\firmware.bin",
+  "build_path": "D:\\Projekty\\BMS-and-offgrid-photovoltaic-management-system\\software\\ESP32-master-esphome-test-module\\.esphome\\build\\esp32-master-test",
+  "firmware_bin_path": "D:\\Projekty\\BMS-and-offgrid-photovoltaic-management-system\\software\\ESP32-master-esphome-test-module\\.esphome\\build\\esp32-master-test\\.pioenvs\\esp32-master-test\\firmware.bin",
   "loaded_integrations": [
     "api",
     "async_tcp",
@@ -34,7 +34,8 @@
     "wifi"
   ],
   "loaded_platforms": [
-    "ota/esphome"
+    "ota/esphome",
+    "sensor/pozyton_energy_meters"
   ],
   "no_mdns": false,
   "framework": "arduino",

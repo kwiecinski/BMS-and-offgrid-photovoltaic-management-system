@@ -1,30 +1,34 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import sensor
-from . import CONF_POZYTON_ID, CONF_OBIS, pozyton_ns, validate_obis
-
-# Tworzymy klasę sensora w namespace Pozyton
-PozytonOBISSensor = pozyton_ns.class_("PozytonOBISSensor", sensor.Sensor)
-
-# Schemat konfiguracji sensora
-CONFIG_SCHEMA = cv.All(
-    sensor.sensor_schema(
-        PozytonOBISSensor,
-    ).extend(
-        {
-            cv.GenerateID(CONF_POZYTON_ID): cv.use_id(PozytonEnergyMeter),
-            cv.Required(CONF_OBIS): validate_obis,  # OBIS code validator
-        }
-    ),
-    cv.has_exactly_one_key(CONF_OBIS),
+from esphome.const import (
+    CONF_ID,
+    UNIT_VOLT,
+    DEVICE_CLASS_VOLTAGE,
+    STATE_CLASS_MEASUREMENT,
 )
 
-# Funkcja tworząca sensor w C++ i rejestrująca go w komponencie
+from .const import (
+    CONF_POZYTON_ID,
+    CONF_OBIS,
+    pozyton_energy_meters_ns,
+)
+
+# Klasa sensora w C++
+PozytonOBISSensor = pozyton_energy_meters_ns.class_("PozytonOBISSensor", sensor.Sensor)
+
+CONFIG_SCHEMA = sensor.sensor_schema(
+    unit_of_measurement=UNIT_VOLT,
+    accuracy_decimals=1,
+    device_class=DEVICE_CLASS_VOLTAGE,
+    state_class=STATE_CLASS_MEASUREMENT,
+).extend({
+    cv.GenerateID(CONF_POZYTON_ID): cv.use_id(pozyton_energy_meters_ns.class_("PozytonEnergyMeters")),
+    cv.Required(CONF_OBIS): cv.string,
+})
+
 async def to_code(config):
-    component = await cg.get_variable(config[CONF_POZYTON_ID])
-    var = await sensor.new_sensor(config)
-
-    if CONF_OBIS in config:
-        cg.add(var.set_obis(config[CONF_OBIS]))
-
-    cg.add(component.register_sensor(var))
+    hub = await cg.get_variable(config[CONF_POZYTON_ID])
+    var = cg.new_Pvariable(config[CONF_ID], PozytonOBISSensor)  # typ C++ sensora
+    await sensor.register_sensor(var, config)
+    cg.add(hub.register_sensor(var, config[CONF_OBIS]))

@@ -1,7 +1,9 @@
-#include "pozyton_energy_meters.h"
-#include "esphome/core/log.h"
 #include <string>
 #include <vector>
+#include "pozyton_energy_meters.h"
+#include "esphome/core/log.h"
+#include "esphome/components/sensor/sensor.h"
+
 
 #define SOH 0x01
 #define STX 0x02
@@ -75,10 +77,15 @@ FrameBuilder make_exit_register_mode()
 }
 
 
+
+
+
+
 namespace esphome
 {
   namespace pozyton_energy_meters
   {
+
 
     static const char *const TAG = "pozyton_energy_meters";
 
@@ -116,6 +123,8 @@ namespace esphome
       }
     }
 
+
+    
     void PozytonEnergyMeters::update()
     {
       // Example: send init sequence every update interval
@@ -389,6 +398,7 @@ namespace esphome
           {
             ESP_LOGI("OBIS", "Code: %s, Value: %s, Unit: %s",
                      result.obis.c_str(), result.value.c_str(), result.unit.c_str());
+                      
           }
           else
           {
