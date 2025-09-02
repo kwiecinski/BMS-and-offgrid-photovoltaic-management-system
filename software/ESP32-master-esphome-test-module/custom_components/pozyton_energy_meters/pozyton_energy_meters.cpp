@@ -404,11 +404,18 @@ namespace esphome
           ESP_LOGI(TAG, "Data OK");
 
           auto result = pozyton_energy_meters::parse_measurment(rx_buf);
+
           if (result.valid)
           {
             ESP_LOGI("OBIS", "Code: %s, Value: %s, Unit: %s",
                      result.obis.c_str(), result.value.c_str(), result.unit.c_str());
-                      
+
+            for (auto sensor : sensors_)
+            {
+              std::string obis_code = sensor->get_obis(); // odwołanie do getter'a PozytonOBISSensor
+              ESP_LOGI("Pozyton", "OBIS: %s", obis_code.c_str());
+              sensor->publish_measurement(result.value.c_str(), result.unit.c_str());
+            }
           }
           else
           {

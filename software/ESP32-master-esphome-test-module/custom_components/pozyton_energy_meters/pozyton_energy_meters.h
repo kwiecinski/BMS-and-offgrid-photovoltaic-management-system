@@ -33,7 +33,7 @@ namespace esphome
     {
     public:
       void set_obis(const std::string &obis_code) { this->obis_ = obis_code; }
-
+      const std::string &get_obis() const { return obis_; }
       void publish_measurement(const std::string &value, const std::string &unit)
       {
         this->publish_state(std::stod(value)); // publish numeric value
@@ -48,13 +48,14 @@ namespace esphome
     class PozytonEnergyMeters : public PollingComponent, public uart::UARTDevice
     {
     public:
-    
+
       void register_sensor(sensor::Sensor *sensor, const std::string &obis)
       {
-        auto obis_sensor = static_cast<PozytonOBISSensor *>(sensor); // rzutowanie do pochodnej
+        auto obis_sensor = static_cast<PozytonOBISSensor *>(sensor);
         obis_sensor->set_obis(obis);
         this->sensors_.push_back(obis_sensor);
       }
+     
       void set_meter_type(MeterType type) { meter_type_ = type; } // setter function
       MeterType get_meter_type() const { return meter_type_; }
       void set_dir_pin(InternalGPIOPin *pin) { dir_pin_ = pin; }

@@ -83,3 +83,7 @@ sensor:
     pozyton_id: my_meter
     obis: "1.8.0"
     name: "Positive Active Energy"
+  - platform: pozyton_energy_meters
+    pozyton_id: my_meter
+    obis: "5.8.0"
+    name: "Positive Reactive Energy"
