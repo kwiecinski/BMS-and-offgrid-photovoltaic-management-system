@@ -77,6 +77,7 @@ pozyton_energy_meters:
   dir_pin: GPIO13
   update_interval: 10s
   debug: true
+
 sensor:
   - platform: pozyton_energy_meters
     pozyton_id: my_meter

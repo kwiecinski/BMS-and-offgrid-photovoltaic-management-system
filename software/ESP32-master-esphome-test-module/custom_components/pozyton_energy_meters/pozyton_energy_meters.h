@@ -15,12 +15,11 @@ namespace esphome
 
     struct ObisData
     {
-      bool valid;        // true jeśli parsowanie się udało
-      std::string obis;  // np. "1.8.0"
-      std::string value; // np. "004418.49"
-      std::string unit;  // np. "kWh"
+      bool valid;        
+      std::string obis; 
+      std::string value;
+      std::string unit; 
     };
-
 
     ObisData parse_measurment(const std::vector<uint8_t> &buffer);
 
@@ -46,31 +45,31 @@ namespace esphome
       std::string unit_;
     };
 
-
-
     class PozytonEnergyMeters : public PollingComponent, public uart::UARTDevice
     {
     public:
-
-      void register_sensor(PozytonOBISSensor *sensor, const std::string &obis) {
-    sensor->set_obis(obis);          // ustawienie OBIS w sensorze
-    this->sensors_.push_back(sensor); // dodanie do listy hub’a
-
+    
+      void register_sensor(sensor::Sensor *sensor, const std::string &obis)
+      {
+        auto obis_sensor = static_cast<PozytonOBISSensor *>(sensor); // rzutowanie do pochodnej
+        obis_sensor->set_obis(obis);
+        this->sensors_.push_back(obis_sensor);
       }
-      void set_meter_type(MeterType type) { meter_type_ = type; }
+      void set_meter_type(MeterType type) { meter_type_ = type; } // setter function
+      MeterType get_meter_type() const { return meter_type_; }
       void set_dir_pin(InternalGPIOPin *pin) { dir_pin_ = pin; }
       void set_debug(bool debug) { debug_ = debug; }
 
       void setup() override;
       void update() override;
 
-    enum FrameType
-    {
-      FRAME_HANDSHAKE,
-      FRAME_WORK_MODE,
-      FRAME_REGISTER_MODE,
-      FRAME_DATA
-    };
+      enum FrameType
+      {
+        FRAME_HANDSHAKE,
+        FRAME_WORK_MODE,
+        FRAME_REGISTER_MODE,
+        FRAME_DATA
+      };
 
       // --- added void return type ---
       void send_frame(const uint8_t *frame, size_t length);
@@ -86,8 +85,7 @@ namespace esphome
 
       void send_init_sequence_();
 
-     std::vector<PozytonOBISSensor*> sensors_;
-    
+      std::vector<PozytonOBISSensor *> sensors_;
     };
 
   } // namespace pozyton_energy_meters

@@ -1,3 +1,7 @@
+# https://developers.esphome.io/architecture/components/
+# https://pypi.org/project/voluptuous/
+
+
 import esphome.config_validation as cv
 import esphome.codegen as cg
 import esphome.pins as pins
@@ -42,6 +46,5 @@ async def to_code(config):
 
     dir_pin = await cg.gpio_pin_expression(config[CONF_DIR_PIN])
     cg.add(var.set_dir_pin(dir_pin))
-
     cg.add(var.set_debug(config[CONF_DEBUG]))
     cg.add(var.set_update_interval(config[CONF_UPDATE_INTERVAL]))

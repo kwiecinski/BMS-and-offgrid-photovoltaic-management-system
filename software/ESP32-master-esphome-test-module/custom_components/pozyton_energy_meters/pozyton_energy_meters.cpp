@@ -96,14 +96,14 @@ namespace esphome
 
       std::string response(buffer.begin(), buffer.end());
 
-      // znajdź pierwszą kropkę, zamykający nawias i gwiazdkę
+     
       auto obis_end = response.find('(');
       auto value_end = response.find('*', obis_end);
       auto unit_end = response.find(')', value_end);
 
       if (obis_end == std::string::npos || value_end == std::string::npos || unit_end == std::string::npos)
       {
-        return data; // nie udało się sparsować
+        return data; 
       }
 
       data.obis = response.substr(0, obis_end);
@@ -127,7 +127,7 @@ namespace esphome
     
     void PozytonEnergyMeters::update()
     {
-      // Example: send init sequence every update interval
+      //send init sequence every update interval
       this->send_init_sequence_();
     }
 
@@ -154,16 +154,16 @@ namespace esphome
       size_t len = fb.size();
 
       for (size_t i = 1; i < len; i++)
-        bcc ^= data[i]; // XOR wszystkich bajtów
+        bcc ^= data[i];
 
-      fb.add_byte(bcc); // dodajemy BCC na końcu ramki
+      fb.add_byte(bcc); 
     }
 
     bool PozytonEnergyMeters::read_raw_frame(std::vector<uint8_t> &buffer, uint32_t timeout_ms = 500)
     {
       buffer.clear();
       uint32_t start = millis();
-      bool started = false; // czy zaczęliśmy odbierać dane
+      bool started = false; 
 
       while (millis() - start < timeout_ms)
       {
@@ -174,7 +174,7 @@ namespace esphome
           if (!started)
           {
             if (c == 0x00)
-              continue; // ignorujemy wiodące zero
+              continue; 
             else
               started = true;
           }
@@ -262,7 +262,7 @@ namespace esphome
           return false;
         }
 
-        // oblicz BCC: od bajtu 1 (po SOH) do ETX włącznie
+        // bcc calculation without STX and including ETX
         uint8_t bcc_calc = 0;
         for (size_t i = 1; i <= etx_index; i++)
           bcc_calc ^= buffer[i];
@@ -330,6 +330,16 @@ namespace esphome
 
     void PozytonEnergyMeters::send_init_sequence_()
     {
+
+      MeterType t = this->get_meter_type();
+      if (t == METER_SEAB)
+      {
+        ESP_LOGI("pozyton", "Meter A");
+      }
+      else if (t == METER_EABM)
+      {
+        ESP_LOGI("pozyton", "Meter B");
+      }
 
       std::vector<uint8_t> rx_buf;
 

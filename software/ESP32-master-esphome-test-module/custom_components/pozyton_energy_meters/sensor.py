@@ -14,7 +14,6 @@ from .const import (
     pozyton_energy_meters_ns,
 )
 
-# Klasa sensora w C++
 PozytonOBISSensor = pozyton_energy_meters_ns.class_("PozytonOBISSensor", sensor.Sensor)
 
 CONFIG_SCHEMA = sensor.sensor_schema(
@@ -29,6 +28,6 @@ CONFIG_SCHEMA = sensor.sensor_schema(
 
 async def to_code(config):
     hub = await cg.get_variable(config[CONF_POZYTON_ID])
-    var = cg.new_Pvariable(config[CONF_ID], PozytonOBISSensor)  # typ C++ sensora
+    var = cg.new_Pvariable(config[CONF_ID]) 
     await sensor.register_sensor(var, config)
     cg.add(hub.register_sensor(var, config[CONF_OBIS]))
