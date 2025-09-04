@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "d:/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
+            "executable": "c:/Projects/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
             "projectEnvName": "esp32-master",
-            "toolchainBinDir": "C:/Users/RaD/.platformio/packages/toolchain-xtensa-esp32@8.4.0+2021r2-patch5/bin",
+            "toolchainBinDir": "C:/Users/LPC-user/.platformio/packages/toolchain-xtensa-esp-elf/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +25,18 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "d:/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
+            "executable": "c:/Projects/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
             "projectEnvName": "esp32-master",
-            "toolchainBinDir": "C:/Users/RaD/.platformio/packages/toolchain-xtensa-esp32@8.4.0+2021r2-patch5/bin",
+            "toolchainBinDir": "C:/Users/LPC-user/.platformio/packages/toolchain-xtensa-esp-elf/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "d:/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
+            "executable": "c:/Projects/BMS-and-offgrid-photovoltaic-management-system/software/ESP32-master-esphome/.pio/build/esp32-master/firmware.elf",
             "projectEnvName": "esp32-master",
-            "toolchainBinDir": "C:/Users/RaD/.platformio/packages/toolchain-xtensa-esp32@8.4.0+2021r2-patch5/bin",
+            "toolchainBinDir": "C:/Users/LPC-user/.platformio/packages/toolchain-xtensa-esp-elf/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }
