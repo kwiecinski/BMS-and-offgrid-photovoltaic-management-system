@@ -2485,7 +2485,7 @@
 		)
 	)
 	(junction
-		(at 254 88.9)
+		(at 251.46 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10edfbf8-ec38-4dc4-9b5b-a78a36941c9d")
@@ -2635,7 +2635,7 @@
 		(uuid "97242ac7-44cf-453c-9b6b-97e839a0edbb")
 	)
 	(junction
-		(at 254 59.69)
+		(at 251.46 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "99df8ee6-b99d-4f39-b418-ac8dd4f2f70c")
@@ -3028,7 +3028,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 88.9) (xy 254 86.36)
+			(xy 251.46 106.68) (xy 251.46 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3228,7 +3228,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 59.69) (xy 264.16 59.69)
+			(xy 251.46 77.47) (xy 261.62 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3368,7 +3368,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 77.47) (xy 264.16 88.9)
+			(xy 261.62 95.25) (xy 261.62 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3588,7 +3588,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 91.44) (xy 254 88.9)
+			(xy 251.46 109.22) (xy 251.46 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3648,7 +3648,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 59.69) (xy 264.16 69.85)
+			(xy 261.62 77.47) (xy 261.62 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3718,7 +3718,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 59.69) (xy 254 60.96)
+			(xy 251.46 77.47) (xy 251.46 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3768,7 +3768,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 88.9) (xy 264.16 88.9)
+			(xy 251.46 106.68) (xy 261.62 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3898,7 +3898,7 @@
 	)
 	(wire
 		(pts
-			(xy 254 58.42) (xy 254 59.69)
+			(xy 251.46 76.2) (xy 251.46 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4196,9 +4196,9 @@
 		)
 		(uuid "fc139877-fdcf-48d5-bf36-5ce04993986f")
 	)
-	(text "Pozyton meters - RS485 interface"
+	(text "Pozyton SEAB and EABM meters - RS485 interface"
 		(exclude_from_sim no)
-		(at 66.04 2.286 0)
+		(at 81.534 21.082 0)
 		(effects
 			(font
 				(size 3 3)
@@ -4220,7 +4220,7 @@
 		)
 		(uuid "65cf8e96-c1e8-4a69-bad2-9286d8218458")
 	)
-	(text "SCHMITT TRIGGER FOR GAMMA METER"
+	(text "SCHMITT TRIGGER FOR ITRON METER"
 		(exclude_from_sim no)
 		(at 195.326 22.352 0)
 		(effects
@@ -4731,7 +4731,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "1k"
 			(at 124.714 61.214 90)
 			(effects
 				(font
@@ -5462,7 +5462,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "1k"
 			(at 125.984 106.934 90)
 			(effects
 				(font
@@ -5650,7 +5650,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 264.16 73.66 0)
+		(at 261.62 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5658,7 +5658,7 @@
 		(dnp no)
 		(uuid "3cc1acc7-ca68-4f68-b545-524897dabe6a")
 		(property "Reference" "C20"
-			(at 269.748 72.898 0)
+			(at 267.208 90.678 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5667,7 +5667,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 267.716 75.184 0)
+			(at 265.176 92.964 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5676,7 +5676,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 265.1252 77.47 0)
+			(at 262.5852 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5685,7 +5685,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 264.16 73.66 0)
+			(at 261.62 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5694,7 +5694,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 264.16 73.66 0)
+			(at 261.62 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6056,7 +6056,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 91.44 0)
+		(at 251.46 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6065,7 +6065,7 @@
 		(fields_autoplaced yes)
 		(uuid "537774e9-6b7a-4e0a-a164-ae1b63157ff6")
 		(property "Reference" "#PWR087"
-			(at 254 97.79 0)
+			(at 251.46 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6074,7 +6074,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254 96.52 0)
+			(at 251.46 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6082,7 +6082,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 91.44 0)
+			(at 251.46 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6091,7 +6091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 91.44 0)
+			(at 251.46 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6100,7 +6100,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 91.44 0)
+			(at 251.46 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6847,7 +6847,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "1k"
 			(at 125.984 91.694 90)
 			(effects
 				(font
@@ -7367,7 +7367,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 254 58.42 0)
+		(at 251.46 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7376,7 +7376,7 @@
 		(fields_autoplaced yes)
 		(uuid "8487c269-465b-446e-8acf-d9a3ce5d7664")
 		(property "Reference" "#PWR086"
-			(at 254 62.23 0)
+			(at 251.46 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7385,7 +7385,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 254 53.34 0)
+			(at 251.46 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7393,7 +7393,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 58.42 0)
+			(at 251.46 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7402,7 +7402,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 58.42 0)
+			(at 251.46 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7411,7 +7411,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 254 58.42 0)
+			(at 251.46 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7748,15 +7748,15 @@
 		(dnp no)
 		(uuid "8e039cc6-884a-464f-adf1-579234548ba2")
 		(property "Reference" "J13"
-			(at 222.25 134.62 0)
+			(at 221.488 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_02x05_Counter_Clockwise"
-			(at 232.918 125.73 0)
+		(property "Value" "METER_INTERFACES"
+			(at 228.6 137.414 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10014,7 +10014,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "1k"
 			(at 124.714 45.974 90)
 			(effects
 				(font
@@ -10066,7 +10066,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 254 73.66 0)
+		(at 251.46 91.44 0)
 		(unit 7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10074,7 +10074,7 @@
 		(dnp no)
 		(uuid "f065b01a-1a09-4be3-ac3d-071c9e4268c4")
 		(property "Reference" "U9"
-			(at 244.348 64.77 0)
+			(at 241.808 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10083,7 +10083,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 241.046 62.23 0)
+			(at 238.506 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10092,7 +10092,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 254 73.66 0)
+			(at 251.46 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10101,7 +10101,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 254 73.66 0)
+			(at 251.46 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10110,7 +10110,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 254 73.66 0)
+			(at 251.46 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
