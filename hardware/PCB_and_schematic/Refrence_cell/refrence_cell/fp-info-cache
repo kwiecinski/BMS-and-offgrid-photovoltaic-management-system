@@ -1,4 +1,4 @@
-23320422008417324
+23303769078746027
 ATI-ONE
 AMPHENOL_10132798-011100LF
 
@@ -66206,6 +66206,13 @@ HF3FD
 5
 5
 My-Footprints
+Inductor_Toroidal
+Inductor, Axial series, Axial, Horizontal, pin pitch=30.48mm, , length*diameter=26*11mm^2, Fastron, 77A, http://cdn-reichelt.de/documents/datenblatt/B400/DS_77A.pdf
+Inductor Axial series Axial Horizontal pin pitch 30.48mm  length 26mm diameter 11mm Fastron 77A
+0
+2
+2
+My-Footprints
 JST_XA_1x05_P2.50mm_Vertical
 JST XA series connector, B05B-XASK-1 (http://www.jst-mfg.com/product/pdf/eng/eXA1.pdf), generated with kicad-footprint-generator
 connector JST XA vertical
@@ -66375,6 +66382,13 @@ Slide-switch-dpdt-8.5x7-r2x2.5mm
 6
 My-Footprints
 Slide-switch-spdt-9x4,5-r2mm
+
+
+0
+5
+3
+My-Footprints
+Slide-switch-spdt-11x5.5-r2mm
 
 
 0
@@ -66791,8 +66805,8 @@ Screw-Terminal-5.00mm-4pin
 
 
 0
-4
-4
+0
+0
 My-Footprints-connectors
 Screw-Terminal-5.00mm-5pin
 
@@ -66899,21 +66913,7 @@ JZG_E5627BRG-1_7_SEGMENT_DISPLAY
 15
 15
 My-Footprints-orw-els
-0805-modul
-
-
-0
-2
-2
-My-Footprints-orw-els
 1206-mediana
-
-
-0
-2
-2
-My-Footprints-orw-els
-1206-module
 
 
 0
@@ -66975,34 +66975,6 @@ MINI-FLAT
 0
 4
 4
-My-Footprints-orw-els
-MINI-FLAT-modul
-
-
-0
-4
-4
-My-Footprints-orw-els
-RELAY-MEDULE
-
-
-0
-10
-9
-My-Footprints-orw-els
-SIZE_B-modul
-
-
-0
-2
-2
-My-Footprints-orw-els
-SIZE_C-module
-
-
-0
-2
-2
 My-Footprints-orw-els
 SO-8
 
@@ -67067,47 +67039,12 @@ SOL-28W
 28
 28
 My-Footprints-orw-els
-SOP8-modul
-
-
-0
-8
-8
-My-Footprints-orw-els
-SOP16-modul
-
-
-0
-16
-16
-My-Footprints-orw-els
-SOP18W-modul
-
-
-0
-18
-18
-My-Footprints-orw-els
 SOT23-JLCPCB-Oriented
 SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
 SOT TO_SOT_SMD
 0
 3
 3
-My-Footprints-orw-els
-SOT23-jlcpcb-modul
-
-
-0
-3
-3
-My-Footprints-orw-els
-SSOP28-modul
-
-
-0
-28
-28
 My-Footprints-orw-els
 TACTILE_SWITCH_PTH_12MM
 MOMENTARY SWITCH (PUSHBUTTON) - SPST - PTH, 12MM SQUARE
