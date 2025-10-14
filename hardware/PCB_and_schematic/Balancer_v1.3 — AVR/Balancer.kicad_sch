@@ -496,44 +496,6 @@
 			)
 		)
 	)
-	(sheet
-		(at 17.018 112.522)
-		(size 42.672 26.924)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "f65ef685-3e95-4f8a-97fe-0688761539e6")
-		(property "Sheetname" "BMS_current_limiter"
-			(at 17.018 109.9454 0)
-			(effects
-				(font
-					(size 5 5)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "BMS_current_limiter.kicad_sch"
-			(at 17.018 140.0306 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "Balancer"
-				(path "/555ba40f-9abb-4b99-82c6-07e888fda9fd"
-					(page "2")
-				)
-			)
-		)
-	)
 	(sheet_instances
 		(path "/"
 			(page "1")

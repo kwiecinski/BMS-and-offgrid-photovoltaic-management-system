@@ -5626,7 +5626,7 @@
 			)
 		)
 	)
-	(global_label "PWM_OUT_DISCH"
+	(global_label "PWM_OUT_CHRG"
 		(shape input)
 		(at 311.15 133.35 0)
 		(fields_autoplaced yes)
@@ -5636,9 +5636,9 @@
 			)
 			(justify left)
 		)
-		(uuid "3ddd4884-57b7-4987-bb33-697033294249")
+		(uuid "3aa7d24f-f70c-4045-b34d-6c68347d37cf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 329.5566 133.35 0)
+			(at 329.0123 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
