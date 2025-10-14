@@ -6,44 +6,6 @@
 	(paper "A5")
 	(lib_symbols)
 	(sheet
-		(at 16.51 23.495)
-		(size 42.545 27.94)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "4b1e638f-6a81-4470-a624-c51bdaefbd0c")
-		(property "Sheetname" "Reference Cell"
-			(at 16.51 21.9184 0)
-			(effects
-				(font
-					(size 3 3)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "reference_cell_schematic.kicad_sch"
-			(at 16.51 52.0196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "refrence_cell"
-				(path "/1700b202-8f4f-48fb-8169-decdd6437413"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 80.01 20.32)
 		(size 43.815 33.655)
 		(fields_autoplaced yes)

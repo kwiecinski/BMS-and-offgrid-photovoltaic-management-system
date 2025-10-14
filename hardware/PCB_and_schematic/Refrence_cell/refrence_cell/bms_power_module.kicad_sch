@@ -5759,6 +5759,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 149.86 251.46 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e24d1f1-6d3a-44d9-9040-5ced3015ab47")
+		(property "Reference" "H5"
+			(at 152.4 250.1899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 152.4 252.7299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "My-Footprints:Mount-Hole-3mm"
+			(at 149.86 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 149.86 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "refrence_cell"
+				(path "/1700b202-8f4f-48fb-8169-decdd6437413/6f350c8f-b7cc-4068-b161-177c6dcf4e5f"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 67.31 168.91 270)
 		(unit 1)
@@ -6080,7 +6144,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(property "Footprint" "My-Footprints-connectors:PinHeader_1x04_P2.54mm_Vertical_littleBigger"
 			(at 60.96 222.25 0)
 			(effects
 				(font
@@ -7142,6 +7206,70 @@
 			(project "refrence_cell"
 				(path "/1700b202-8f4f-48fb-8169-decdd6437413/6f350c8f-b7cc-4068-b161-177c6dcf4e5f"
 					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 149.86 256.54 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "420a97ab-873a-4db2-9e31-1f1ad3249e01")
+		(property "Reference" "H6"
+			(at 152.4 255.2699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 152.4 257.8099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "My-Footprints:Mount-Hole-3mm"
+			(at 149.86 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 149.86 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "refrence_cell"
+				(path "/1700b202-8f4f-48fb-8169-decdd6437413/6f350c8f-b7cc-4068-b161-177c6dcf4e5f"
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -11429,7 +11557,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(property "Footprint" "My-Footprints-connectors:PinHeader_1x04_P2.54mm_Vertical_littleBigger"
 			(at 19.05 224.79 0)
 			(effects
 				(font
