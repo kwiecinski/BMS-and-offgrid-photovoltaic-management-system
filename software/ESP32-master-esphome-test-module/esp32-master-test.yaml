@@ -64,8 +64,8 @@ external_components:
 
 uart:
   id: uart_bus
-  tx_pin: 14        # DI1
-  rx_pin: 16        # DO1
+  tx_pin: 13        # DI1
+  rx_pin: 14        # DO1
   baud_rate: 4800
   data_bits: 7
   parity: EVEN
@@ -74,7 +74,7 @@ uart:
 pozyton_energy_meters:
   id: my_meter
   meter_type: EABM
-  dir_pin: GPIO13
+  dir_pin: GPIO02
   update_interval: 10s
   debug: true
 

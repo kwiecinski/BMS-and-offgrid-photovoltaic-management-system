@@ -11,6 +11,7 @@ from esphome.const import (
     CONF_UPDATE_INTERVAL,
 )
 
+
 from .const import (
     CONF_METER_TYPE,
     CONF_DIR_PIN,
@@ -20,7 +21,6 @@ from .const import (
     MeterType,
 )
 
-AUTO_LOAD = ["sensor"]
 
 # Klasa główna w C++
 PozytonEnergyMeters = pozyton_energy_meters_ns.class_(

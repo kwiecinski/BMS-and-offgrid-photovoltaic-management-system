@@ -83,8 +83,8 @@ globals:
 uart:
   - id: easun_uart
     baud_rate: 9600
-    tx_pin: GPIO5
-    rx_pin: GPIO4
+    tx_pin: GPIO32
+    rx_pin: GPIO33
 
 
 modbus:
