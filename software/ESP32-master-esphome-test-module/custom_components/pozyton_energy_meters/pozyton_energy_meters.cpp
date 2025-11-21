@@ -56,13 +56,14 @@ FrameBuilder make_register_mode()
   return fb;
 }
 
-FrameBuilder make_active_energy_consumed()
+FrameBuilder make_r1_command(const char *cmd)
 {
   FrameBuilder fb;
   fb.add_byte(SOH);
   fb.add_ascii("R1");
   fb.add_byte(STX);
-  fb.add_ascii("EPP0()");
+  fb.add_ascii(cmd);
+  fb.add_ascii("()");
   fb.add_byte(ETX);
   return fb;
 }
@@ -78,7 +79,27 @@ FrameBuilder make_exit_register_mode()
 
 
 
+FrameBuilder make_command(CommandType t, int zone = 0)
+{
+  switch(t) {
 
+    case CMD_ENERGY_P_PLUS:    return make_energy_request("P","P", zone);
+    case CMD_ENERGY_P_MINUS:   return make_energy_request("P","M", zone);
+    case CMD_ENERGY_Q_PLUS:    return make_energy_request("Q","P", zone);
+    case CMD_ENERGY_Q_MINUS:   return make_energy_request("Q","M", zone);
+
+    case CMD_FREQ:             return make_frequency_request();
+    case CMD_METER_NO:         return make_meter_number_request();
+    case CMD_VI:               return make_vi_request();
+    case CMD_P:                return make_active_power_request();
+    case CMD_Q:                return make_reactive_power_request();
+    case CMD_U:                return make_voltage_request();
+    case CMD_I:                return make_current_request();
+    case CMD_TF:               return make_tangens_request();
+  }
+
+  return FrameBuilder(); // fallback
+}
 
 
 namespace esphome
@@ -410,12 +431,7 @@ namespace esphome
             ESP_LOGI("OBIS", "Code: %s, Value: %s, Unit: %s",
                      result.obis.c_str(), result.value.c_str(), result.unit.c_str());
 
-            for (auto sensor : sensors_)
-            {
-              std::string obis_code = sensor->get_obis(); // odwołanie do getter'a PozytonOBISSensor
-              ESP_LOGI("Pozyton", "OBIS: %s", obis_code.c_str());
-              sensor->publish_measurement(result.value.c_str(), result.unit.c_str());
-            }
+
           }
           else
           {

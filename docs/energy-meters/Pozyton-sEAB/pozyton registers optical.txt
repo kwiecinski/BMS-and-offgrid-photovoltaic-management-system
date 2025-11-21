@@ -23,6 +23,10 @@ Nie jest jednak wówczas możliwe programowanie licznika – rozkazy zapisu są 
 Jeżeli licznik prawidłowo zdekoduje sekwencję odpowiada znakiem [ACK].
 Licznik po wysłaniu znaku [ACK] gotowy jest na przyjęcie rozkazów trybu rejestrowego. 
 
+W załączniku znajduje się kod który odczytuje dane z licznika energii pozyton eabm. aktualnie działa on tak że pyta EPP0() czyli energie czynną, pobór, sumaryczną. Przerób kod tak aby wspierał parsowanie innych wiadomości. Tutaj jest lista rozkazów i odpowiedzi licznika. 
+
+EABM------------------------------------------------------------------------------------------------------------
+
 Liczydła energii:
 Rozkaz odczytowy R1: Eezx()
 Odpowiedz licznika:
@@ -30,38 +34,102 @@ Odpowiedz licznika:
 y.8.x.(nnnnnn.nnnn)[CR][LF]
 
 Gdzie:
-e energia: P – czynna, Q – bierna;
-z kierunek przepływu energii: P – dodatni (pobór), M – ujemny (oddawanie);
-x numer strefy:
-0 – liczydło sumaryczne,
-1 – strefa 1,
-2 – strefa 2,
-3 – strefa 3,
-4 – strefa 4;
-y
-rodzaj energii i kierunek:
-0 – P+ (czynna, kierunek pobór),
-1 – P− (czynna, kierunek oddawanie),
-2 – Q+ (bierna indukcyjna),
-3 – Q− (bierna pojemnościowa);
-nn...n
-wartość energii w kWh lub kvarh.
+ROZKAZ:
+e - energia: 
+	P – czynna, 
+	Q – bierna;
 
+z - kierunek przepływu energii: 
+	P – dodatni (pobór), 
+	M – ujemny (oddawanie);
+ODP:
+x - numer strefy: 
+	0 – liczydło sumaryczne, 
+
+y - rodzaj energii i kierunek: 
+	0 – P+ (czynna, kierunek pobór), 
+	1 – P− (czynna, kierunek oddawanie), 
+	2 – Q+ (bierna indukcyjna),
+	3 – Q− (bierna pojemnościowa);
+
+nn...n - wartość energii w kWh lub kvarh.
+
+
+Czynna pobór: EPP0()	
+Positive active energy total 	nnnnnn.nnnn
+ 
+Czynna oddwawanie: EPM0()	
+Negative active energy total	nnnnnn.nnnn
+
+Bierna indukcyjna: EQP0()	
+Positive reactive energy total	nnnnnn.nnnn
+
+Bierna pojemnościowa: EQM0()	
+Negative reactive energy total	nnnnnn.nnnn 
+
+Typ licznika
+Rozkaz odczytowy R1: VI()
+Odpowiedź licznika: 27.(p;u;i)[CR][LF]
+Gdzie:
+p - współczynnik profilu w Wh (możliwe wartości: 0.1(bezpośredni), 0.01(półpośredni), 0.001(pośredni));
+u - napięcie nominalne licznika (możliwe wartości: 58(pośredni), 100(pośredni Aron), 230(półpośredni, bezpośredni));
+i - prąd maksymalny licznika (możliwe wartości: 10(półpośredni, pośredni), 60(bezpośredni)).
+
+Numer licznika
+Rozkaz odczytowy R1: L()
+Odpowiedź licznika: 0.0.2(nnn.nnnnnnn)[CR][LF]
+Gdzie:
+nnn.nnnnnnn - numer licznika.
 
 
 
 Częstotliwość
 Rozkaz odczytowy R1: F()
+Odpowiedź z licznika: 97.6.0(ff.ff)[CR][LF]
+ff.ff wartość bieżącej częstotliwości (w Hz).
 
 Bieżąca moc czynna
 Rozkaz odczytowy R1: P()
+Odpowiedź z licznika: 107(zpp.pp;zpp.pp;zpp.pp;zpp.pp)[CR][LF]
+z - kierunek przepływu energii:
+	„ ” (spacja) – moc pobierana,
+	„−” – moc oddawana;
+pp.pp - wartość bieżącej mocy czynnej w kW – kolejno dla L1, L2, L3 i sumaryczna,
 
 Moc chwilowa bierna
 Rozkaz odczytowy R1: Q()
+Odpowiedź licznika: 109(zqq.qq;zqq.qq;zqq.qq;zqq.qq)[CR][LF]
+z - kierunek przepływu energii:
+„ ” (spacja) – moc bierna indukcyjna,
+„−” – moc bierna pojemnościowa;
+qq.qq wartość bieżącej mocy biernej w kvar – kolejno dla L1, L2, L3 i sumaryczna
+
+
 Napięcie fazowe
 Rozkaz odczytowy R1: U()
+Odpowiedź licznika: - 97.5.6(uuu.uu;uuu.uu;uuu.uu;s;s;s;w)[CR][LF]
+uuu.uu - wartość napięcia fazowego w V (kolejno L1, L2, L3);
+s - sygnalizacja przekroczenia progu obecności fazy (kolejno L1, L2, L3):
+	1 – napięcie fazowe wyższe od zadanego progu,
+	0 – napięcie fazowe niższe od zadanego progu;
+w - sygnalizacja kolejności wirowania faz:
+	1 – kolejność faz prawidłowa,
+	0 – kolejność faz nieprawidłowa,
+	x – nie można ustalić kolejności faz.
+
+
+
 
 Prąd w fazach
 Rozkaz odczytowy R1: I()
+Odpowiedź licznika: 97.4.4(ii.ii;ii.ii;ii.ii)[CR][LF]
+ii.ii - wartość prądu w A (kolejno L1, L2, L3)
+
+
+Tangens neutralny
+Rozkaz odczytowy R1: TF()
+Odpowiedź licznika: 103.3(f.ff)[CR][LF]
+Gdzie:
+f.ff - wartość tangensa neutralnego.
 
 
