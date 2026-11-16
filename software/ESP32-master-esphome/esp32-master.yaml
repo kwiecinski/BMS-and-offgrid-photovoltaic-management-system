@@ -1,6 +1,11 @@
 esphome:
   name: photovoltaic-master
 
+external_components:
+  - source:
+      type: local
+      path: custom_components
+
 esp32:
   board: esp32doit-devkit-v1
   framework:
@@ -16,16 +21,16 @@ api:
 
 ota:
   - platform: esphome
-    password: "zerowanie"
+    password: !secret ota_password
 
 wifi:
-  ssid: "komandor_shepard"
-  password: "uziemienie poprzez zerowanie"
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Photovoltaic-Master"
-    password: "DjaE8peyASsA"
+    ssid: !secret fallback_ap_ssid
+    password: !secret fallback_ap_password
 
 captive_portal:
 
@@ -85,6 +90,81 @@ uart:
     baud_rate: 9600
     tx_pin: GPIO32
     rx_pin: GPIO33
+
+  # Placeholder pins: replace these three with the verified PCB assignments before compiling.
+  - id: pozyton_uart
+    baud_rate: 4800
+    data_bits: 7
+    parity: EVEN
+    stop_bits: 1
+    tx_pin: GPIO25
+    rx_pin: GPIO26
+
+pozyton_energy_meters:
+  id: pozyton_bus
+  uart_id: pozyton_uart
+  direction_pin: GPIO27  # Placeholder pin; replace with the verified MAX3485 direction GPIO.
+  baud_rate: 4800
+  response_timeout: 500ms
+  meters:
+    - meter_name: seab
+      model: SEAB
+      address: "123.4567890"  # Placeholder factory number; replace before compiling.
+      update_interval: 10s
+      sensors:
+        voltage_l1: {name: "SEAB Voltage L1"}
+        voltage_l2: {name: "SEAB Voltage L2"}
+        voltage_l3: {name: "SEAB Voltage L3"}
+        current_l1: {name: "SEAB Current L1"}
+        current_l2: {name: "SEAB Current L2"}
+        current_l3: {name: "SEAB Current L3"}
+        active_power_l1: {name: "SEAB Active Power L1"}
+        active_power_l2: {name: "SEAB Active Power L2"}
+        active_power_l3: {name: "SEAB Active Power L3"}
+        active_power_total: {name: "SEAB Active Power Total"}
+        reactive_power_l1: {name: "SEAB Reactive Power L1"}
+        reactive_power_l2: {name: "SEAB Reactive Power L2"}
+        reactive_power_l3: {name: "SEAB Reactive Power L3"}
+        reactive_power_total: {name: "SEAB Reactive Power Total"}
+        active_energy_import: {name: "SEAB Active Energy Import"}
+        active_energy_export: {name: "SEAB Active Energy Export"}
+        reactive_energy_positive: {name: "SEAB Reactive Energy Positive"}
+        reactive_energy_negative: {name: "SEAB Reactive Energy Negative"}
+        frequency: {name: "SEAB Frequency"}
+      diagnostics:
+        connection: {name: "SEAB Communication Connected"}
+        last_success: {name: "SEAB Last Successful Reading"}
+        communication_errors: {name: "SEAB Communication Errors"}
+
+    - meter_name: eabm
+      model: EABM
+      address: "456 1234567"  # Placeholder factory number; replace before compiling.
+      update_interval: 10s
+      sensors:
+        voltage_l1: {name: "EABM Voltage L1"}
+        voltage_l2: {name: "EABM Voltage L2"}
+        voltage_l3: {name: "EABM Voltage L3"}
+        current_l1: {name: "EABM Current L1"}
+        current_l2: {name: "EABM Current L2"}
+        current_l3: {name: "EABM Current L3"}
+        active_power_l1: {name: "EABM Active Power L1"}
+        active_power_l2: {name: "EABM Active Power L2"}
+        active_power_l3: {name: "EABM Active Power L3"}
+        active_power_total: {name: "EABM Active Power Total"}
+        reactive_power_l1: {name: "EABM Reactive Power L1"}
+        reactive_power_l2: {name: "EABM Reactive Power L2"}
+        reactive_power_l3: {name: "EABM Reactive Power L3"}
+        reactive_power_total: {name: "EABM Reactive Power Total"}
+        active_energy_import: {name: "EABM Active Energy Import"}
+        active_energy_export: {name: "EABM Active Energy Export"}
+        reactive_energy_positive: {name: "EABM Reactive Energy Positive"}
+        reactive_energy_negative: {name: "EABM Reactive Energy Negative"}
+        frequency: {name: "EABM Frequency"}
+        neutral_tangent: {name: "EABM Neutral Tangent"}
+      diagnostics:
+        connection: {name: "EABM Communication Connected"}
+        last_success: {name: "EABM Last Successful Reading"}
+        communication_errors: {name: "EABM Communication Errors"}
 
 
 modbus:

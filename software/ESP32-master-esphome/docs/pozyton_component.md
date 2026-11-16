@@ -1,0 +1,118 @@
+# Pozyton SEAB and EABM ESPHome component
+
+## Purpose and scope
+
+This local ESPHome external component polls one SEAB meter and one EABM meter on a shared half-duplex RS485 bus. The component owns the UART reader, serializes meter sessions, and publishes only measurements whose response frame and numeric data have passed validation.
+
+The MAX3485 direction pin is HIGH while transmitting and LOW while receiving. ESP32 TX/RX pins and the direction pin are configured in YAML. The example pin values and meter addresses in `esp32-master.yaml` are placeholders; replace them with the confirmed wiring and individual factory serial numbers before compiling firmware for the device.
+
+RS485 describes the electrical interface. The meter messages use the manufacturer's text protocol with control bytes and XOR BCC, not Modbus RTU.
+
+## Serial settings and addressing
+
+Both meters use 7 data bits, even parity, and one stop bit. The included example configures 4800 baud on the UART and in the component timing settings. If the meters are configured for another RS485 speed, update both `uart.baud_rate` and `pozyton_energy_meters.baud_rate` to the same value. The supported setting range in this component is 300–19200 baud.
+
+Address formats are model-specific:
+
+- SEAB: `ttt.nnnnnnn`, initialized with `/Attt.nnnnnnn\r\n`.
+- EABM: `nnn nnnnnnn`, initialized with `/?nnn nnnnnnn!\r\n`.
+
+The configured address must be each meter's individual factory serial number. Do not poll either device at the shared zero address.
+
+## Session startup and framing
+
+SEAB responds to its addressed `/A` request with `/g` and the same address. The component then sends `/?!\r\n` and checks the identification line for the SEAB product marker. EABM receives its addressed `/?...!` identification request and the component checks for `EABM` in the response.
+
+The component selects read-only register mode with the tested EABM `ACK 041` sequence and the documented SEAB `ACK 0B1` sequence. On the fixed-speed RS485 interface, the speed identifier does not change the UART speed. After register mode selection, the component waits cooperatively for the meter's `SOH P0 STX (0000) ETX BCC` authorization request and replies with `SOH P1 STX () ETX BCC`. It then reads all requested registers in that session and sends `SOH B0 ETX BCC` to close it.
+
+Register requests use `SOH R1 STX <register>() ETX BCC`; a response uses `STX <data> ETX BCC`. The BCC is the XOR of bytes after SOH, or after STX when SOH is absent, through ETX inclusive. The implementation checks the frame terminator and BCC before parsing the payload.
+
+## Supported measurements
+
+Every sensor entry is optional. The polling scheduler skips a register when none of its associated sensors is configured. One response updates all configured entities for that register.
+
+| Register request | SEAB response format | EABM response format | Sensors updated |
+|---|---|---|---|
+| `EPP0()` | `0.8.0.(value)` | `0.8.0.(value)` | Active energy import, kWh, total-increasing |
+| `EPM0()` | `1.8.0.(value)` | `1.8.0.(value)` | Active energy export, kWh, total-increasing |
+| `EQP0()` | `2.8.0.(value)` | `2.8.0.(value)` | Reactive energy positive, kvarh, total-increasing |
+| `EQM0()` | `3.8.0.(value)` | `3.8.0.(value)` | Reactive energy negative, kvarh, total-increasing |
+| `F()` | `97.6.0(value)` | `14.7.0(value*Hz)` | Frequency, Hz |
+| `P()` | `107(L1;L2;L3;total)` | Per-phase and total OBIS records | Active power by phase and total, W |
+| `Q()` | `109(L1;L2;L3;total)` | Per-phase and total OBIS records | Reactive power by phase and total, var |
+| `U()` | `97.5.6(L1;L2;L3;phase flags)` | `32.7.0`, `52.7.0`, `72.7.0` | Voltage L1, L2, L3, V |
+| `I()` | `97.4.4(L1;L2;L3)` | `31.7.0`, `51.7.0`, `71.7.0` | Current L1, L2, L3, A |
+| `TF()` | Not enabled; not assumed supported | `103.3(value)` | EABM neutral tangent |
+
+The four energy identifiers above follow the user-confirmed register notes. Trailing decimal precision is accepted as sent by the meter; units are assigned from the register definition rather than parsed from the response. EABM multi-record power responses are normalized from kW/kvar to W/var. SEAB grouped readings expressed with decimal kW/kvar are converted to W/var; integer-valued grouped readings are treated as W/var as described by the SEAB protocol.
+
+There is no total voltage or total current entity because the documented measurement requests do not provide those totals. Phase and total active/reactive power entities are populated from the same `P()` or `Q()` request.
+
+## Non-blocking scheduling, timeouts, and recovery
+
+UART receive and protocol work runs in the ESPHome component loop. The TX-to-RX transition is scheduled from the configured baud rate and frame length; the loop does not busy-wait for transmission or response. The response timeout defaults to 500 ms. Register-mode startup uses a cooperative deadline long enough for the documented one-second SEAB delay.
+
+Each request is retried at most once. A failed initialization ends that meter's current poll cycle; a failed measurement is logged and the remaining requested registers are attempted. The scheduler then services the other meter. Subsequent cycles retry offline meters. Receive frames are bounded to 512 bytes, and malformed, incomplete, unsupported, or invalid numeric data is not published.
+
+Each meter can use a different poll interval. The default is 10 seconds. The shared bus prevents concurrent sessions. A complete session is ended explicitly, and meter-specific idle termination remains the protocol fallback after communication loss.
+
+## YAML configuration
+
+The project example defines every requested entity for both meters. Remove any unneeded sensor key to disable that entity; the component will also skip its register if no associated entity is configured. The direction GPIO, UART TX/RX pins, baud rate, meter addresses, response timeout, and per-meter polling intervals are configurable.
+
+```yaml
+uart:
+  - id: pozyton_uart
+    baud_rate: 4800
+    data_bits: 7
+    parity: EVEN
+    stop_bits: 1
+    tx_pin: GPIO25  # Placeholder
+    rx_pin: GPIO26  # Placeholder
+
+pozyton_energy_meters:
+  id: pozyton_bus
+  uart_id: pozyton_uart
+  direction_pin: GPIO27  # Placeholder
+  baud_rate: 4800
+  response_timeout: 500ms
+  meters:
+    - meter_name: eabm
+      model: EABM
+      address: "456 1234567"  # Placeholder factory number
+      sensors:
+        active_power_total:
+          name: "EABM Active Power Total"
+        neutral_tangent:
+          name: "EABM Neutral Tangent"
+      diagnostics:
+        connection:
+          name: "EABM Communication Connected"
+        last_success:
+          name: "EABM Last Successful Reading"
+        communication_errors:
+          name: "EABM Communication Errors"
+```
+
+The `neutral_tangent` option is rejected for SEAB because it is not established as supported by the supplied SEAB documentation.
+
+## Diagnostics and logs
+
+Diagnostics are independently optional per meter:
+
+- `connection`: binary sensor; becomes ON after a poll cycle successfully reads at least one configured register.
+- `last_success`: text sensor with uptime seconds for the latest successful poll cycle.
+- `communication_errors`: cumulative count of retries and failed protocol/measurement stages.
+
+Protocol stages and failures are logged with model, configured meter name/address, stage or register, and reason. Periodic measurement logs are emitted every 10 seconds at INFO level; transaction details are DEBUG and raw frames are VERBOSE. Warnings identify timeouts, NAKs, bad BCC, malformed values, and receive buffer overflow.
+
+## Troubleshooting
+
+1. Replace all placeholder UART and direction pins with the verified PCB pinout.
+2. Replace the sample addresses with the individual serial numbers in the model-specific formats.
+3. Match the YAML UART and component baud rates to the meter's fixed RS485 speed; retain 7E1.
+4. Check that the MAX3485 direction line is HIGH only during TX and returns LOW before the response window.
+5. Enable DEBUG logs for periodic values and VERBOSE logs for frame traces.
+6. Check the reported protocol stage before investigating parser values. The component rejects invalid BCC and malformed numeric data rather than publishing it.
+
+The local environment currently contains ESPHome 2025.6.3, while the project target is 2026.10.2. A build with the target release and physical meter verification remain necessary before deployment. No firmware has been flashed by this change.
