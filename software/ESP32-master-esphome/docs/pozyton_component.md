@@ -115,4 +115,27 @@ Protocol stages and failures are logged with model, configured meter name/addres
 5. Enable DEBUG logs for periodic values and VERBOSE logs for frame traces.
 6. Check the reported protocol stage before investigating parser values. The component rejects invalid BCC and malformed numeric data rather than publishing it.
 
-The local environment currently contains ESPHome 2025.6.3, while the project target is 2026.10.2. A build with the target release and physical meter verification remain necessary before deployment. No firmware has been flashed by this change.
+## Building on Windows
+
+Use ESPHome 2026.10.2. Run `esphome compile esp32-master.yaml` from the project directory.
+If Windows path lengths prevent dependency extraction or compilation, run
+`./compile-windows.ps1` in PowerShell. This uses short physical directories
+`C:\eh-idf`, `C:\eh-data`, and `C:\eh-build` for the toolchain, dependency cache,
+and build output. The script restores the process environment afterwards.
+Override its `-IdfPath`, `-DataPath`, and `-BuildPath` parameters if needed; use
+short physical paths outside another Git repository. ESPHome resolves toolchain
+drive mappings and junctions to their original paths, so those do not reliably
+avoid Windows path limits. The first build downloads the required dependencies.
+
+Run the schema regression checks with `python -m unittest discover -s tests -v`
+using the Python environment that contains ESPHome 2026.10.2.
+
+Verified on 2026-11-17: ESPHome 2026.10.2 compiled the complete configuration
+using `compile-windows.ps1`, producing factory and OTA images. All three schema
+regression tests passed. Nonfatal warnings remain for legacy Modbus
+`command_throttle`/`register_count` options and password-based OTA; these do not
+prevent compilation. The IDF component-mirror timeout also did not prevent the
+build from completing with the downloaded dependencies.
+
+Physical meter verification remains necessary before deployment. No firmware has
+been flashed by this change.

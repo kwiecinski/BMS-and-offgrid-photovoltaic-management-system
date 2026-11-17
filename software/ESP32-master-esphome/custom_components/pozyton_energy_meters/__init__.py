@@ -66,7 +66,7 @@ MEASUREMENTS = {
     "reactive_energy_positive": ("reactive_energy_positive", "kvarh", DEVICE_CLASS_REACTIVE_ENERGY, STATE_CLASS_TOTAL_INCREASING, 6),
     "reactive_energy_negative": ("reactive_energy_negative", "kvarh", DEVICE_CLASS_REACTIVE_ENERGY, STATE_CLASS_TOTAL_INCREASING, 6),
     "frequency": ("frequency", UNIT_HERTZ, DEVICE_CLASS_FREQUENCY, STATE_CLASS_MEASUREMENT, 2),
-    "neutral_tangent": ("neutral_tangent", None, None, STATE_CLASS_MEASUREMENT, 2),
+    "neutral_tangent": ("neutral_tangent", cv.UNDEFINED, cv.UNDEFINED, STATE_CLASS_MEASUREMENT, 2),
 }
 
 SENSOR_SCHEMAS = {}
@@ -102,12 +102,12 @@ def _diagnostic_sensor_schema():
 
 
 def _validate_meter(config):
-    if config[CONF_MODEL] == MODEL_OPTIONS["SEAB"] and CONF_SENSORS in config and "neutral_tangent" in config[CONF_SENSORS]:
+    if config[CONF_MODEL] == "SEAB" and CONF_SENSORS in config and "neutral_tangent" in config[CONF_SENSORS]:
         raise cv.Invalid("neutral_tangent is documented for EABM only")
-    address_pattern = r"\d{3}\.\d{7}" if config[CONF_MODEL] == MODEL_OPTIONS["SEAB"] else r"\d{3} \d{7}"
+    address_pattern = r"\d{3}\.\d{7}" if config[CONF_MODEL] == "SEAB" else r"\d{3} \d{7}"
     if re.fullmatch(address_pattern, config[CONF_ADDRESS]) is None:
-        expected = "ttt.nnnnnnn" if config[CONF_MODEL] == MODEL_OPTIONS["SEAB"] else "nnn nnnnnnn"
-        model_name = "SEAB" if config[CONF_MODEL] == MODEL_OPTIONS["SEAB"] else "EABM"
+        expected = "ttt.nnnnnnn" if config[CONF_MODEL] == "SEAB" else "nnn nnnnnnn"
+        model_name = config[CONF_MODEL]
         raise cv.Invalid(f"{model_name} address must use format {expected}")
     return config
 

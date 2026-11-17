@@ -69,17 +69,17 @@ void PozytonBus::setup() {
     this->direction_pin_->digital_write(false);
   }
   this->next_log_ms_ = millis() + 10000;
-  ESP_LOGI(TAG, "Shared Pozyton bus ready at %u baud; %u meter(s) configured", this->baud_rate_,
+  ESP_LOGI(TAG, "Shared Pozyton bus ready at %u baud; %u meter(s) configured", static_cast<unsigned>(this->baud_rate_),
            static_cast<unsigned>(this->meters_.size()));
 }
 
 void PozytonBus::dump_config() {
   ESP_LOGCONFIG(TAG, "Pozyton shared RS485 bus:");
-  ESP_LOGCONFIG(TAG, "  Baud rate: %u", this->baud_rate_);
-  ESP_LOGCONFIG(TAG, "  Response timeout: %u ms", this->response_timeout_ms_);
+  ESP_LOGCONFIG(TAG, "  Baud rate: %u", static_cast<unsigned>(this->baud_rate_));
+  ESP_LOGCONFIG(TAG, "  Response timeout: %u ms", static_cast<unsigned>(this->response_timeout_ms_));
   for (const auto &meter : this->meters_) {
     ESP_LOGCONFIG(TAG, "  %s '%s', address '%s', poll interval %u ms", model_name_(meter.model),
-                  meter.name.c_str(), meter.address.c_str(), meter.update_interval_ms);
+                  meter.name.c_str(), meter.address.c_str(), static_cast<unsigned>(meter.update_interval_ms));
   }
 }
 
@@ -452,8 +452,9 @@ void PozytonBus::finish_meter_(bool successful) {
     snprintf(uptime, sizeof(uptime), "uptime +%lu s", static_cast<unsigned long>(millis() / 1000UL));
     meter.last_success_sensor->publish_state(uptime);
   }
-  if (successful)
+  if (successful) {
     ESP_LOGD(TAG, "%s: poll cycle completed", current_meter_label_().c_str());
+  }
 }
 
 void PozytonBus::set_online_(Meter &meter, bool online) {
@@ -573,7 +574,7 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
         std::vector<float> parsed;
         const bool has_fraction = payload.find('.') != std::string::npos;
         const float unit_scale = has_fraction ? 1000.0f : 1.0f;
-        if (!parse_grouped(payload, active ? "107" : "109", &parsed, unit_scale) || parsed.size() < 4)
+        if (!parse_grouped(active ? "107" : "109", &parsed, unit_scale) || parsed.size() < 4)
           return false;
         for (size_t i = 0; i < 4; i++) values[i] = parsed[i];
       } else {
@@ -603,7 +604,7 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
       std::array<float, 3> values{};
       if (meter.model == METER_SEAB) {
         std::vector<float> parsed;
-        if (!parse_grouped(payload, voltage ? "97.5.6" : "97.4.4", &parsed, 1.0f, 3) || parsed.size() < 3)
+        if (!parse_grouped(voltage ? "97.5.6" : "97.4.4", &parsed, 1.0f, 3) || parsed.size() < 3)
           return false;
         for (size_t i = 0; i < 3; i++) values[i] = parsed[i];
       } else {
