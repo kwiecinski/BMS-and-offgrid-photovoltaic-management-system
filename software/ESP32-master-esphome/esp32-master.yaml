@@ -1,6 +1,6 @@
 esphome:
   name: photovoltaic-master
-  build_path: C:/ebuild/photovoltaic-master
+
 
 external_components:
   - source:
@@ -99,19 +99,19 @@ uart:
     data_bits: 7
     parity: EVEN
     stop_bits: 1
-    tx_pin: GPIO25
-    rx_pin: GPIO26
+    tx_pin: GPIO13
+    rx_pin: GPIO14
 
 pozyton_energy_meters:
   id: pozyton_bus
   uart_id: pozyton_uart
-  direction_pin: GPIO27  # Placeholder pin; replace with the verified MAX3485 direction GPIO.
+  direction_pin: GPIO2  # Placeholder pin; replace with the verified MAX3485 direction GPIO.
   baud_rate: 4800
   response_timeout: 500ms
   meters:
     - meter_name: seab
       model: SEAB
-      address: "123.4567890"  # Placeholder factory number; replace before compiling.
+      address: "523.0012230"  # Placeholder factory number; replace before compiling.
       update_interval: 10s
       sensors:
         voltage_l1: {name: "SEAB Voltage L1"}
@@ -140,7 +140,7 @@ pozyton_energy_meters:
 
     - meter_name: eabm
       model: EABM
-      address: "456 1234567"  # Placeholder factory number; replace before compiling.
+      address: "825 0001275"  # Placeholder factory number; replace before compiling.
       update_interval: 10s
       sensors:
         voltage_l1: {name: "EABM Voltage L1"}
