@@ -45,6 +45,7 @@ class PozytonBus : public Component, public uart::UARTDevice {
   void set_direction_pin(InternalGPIOPin *pin) { this->direction_pin_ = pin; }
   void set_baud_rate(uint32_t baud_rate) { this->baud_rate_ = baud_rate; }
   void set_response_timeout(uint32_t timeout_ms) { this->response_timeout_ms_ = timeout_ms; }
+  void set_debug_first_response(bool enabled) { this->debug_first_response_ = enabled; }
   void add_meter(MeterModel model, const std::string &name, const std::string &address, uint32_t update_interval_ms);
   void set_sensor(uint8_t meter_index, Measurement measurement, sensor::Sensor *entity);
   void set_connection_sensor(uint8_t meter_index, binary_sensor::BinarySensor *entity);
@@ -76,6 +77,7 @@ class PozytonBus : public Component, public uart::UARTDevice {
     uint32_t error_count{0};
     bool online{false};
     bool reading_succeeded{false};
+    bool first_response_logged{false};
     uint8_t request_index{0};
     uint8_t retry_count{0};
     std::array<Request, MAX_REQUESTS> requests{};
@@ -92,6 +94,8 @@ class PozytonBus : public Component, public uart::UARTDevice {
   void send_buffer_();
   void handle_tx_drain_();
   void read_uart_();
+  bool capturing_first_response_() const;
+  void log_first_response_(const char *result);
   void handle_response_();
   void handle_timeout_();
   void retry_or_fail_(const char *reason);
@@ -125,6 +129,9 @@ class PozytonBus : public Component, public uart::UARTDevice {
   std::string active_stage_;
   std::array<uint8_t, RX_BUFFER_SIZE> rx_buffer_{};
   size_t rx_length_{0};
+  bool debug_first_response_{false};
+  std::array<uint8_t, RX_BUFFER_SIZE> debug_rx_buffer_{};
+  size_t debug_rx_length_{0};
   std::array<uint8_t, 80> tx_buffer_{};
   size_t tx_length_{0};
   uint32_t tx_done_at_{0};

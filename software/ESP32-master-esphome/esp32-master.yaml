@@ -93,7 +93,7 @@ uart:
     tx_pin: GPIO32
     rx_pin: GPIO33
 
-  # Placeholder pins: replace these three with the verified PCB assignments before compiling.
+  # Shared Pozyton RS485 bus, 4800 bit/s, 7E1.
   - id: pozyton_uart
     baud_rate: 4800
     data_bits: 7
@@ -105,13 +105,14 @@ uart:
 pozyton_energy_meters:
   id: pozyton_bus
   uart_id: pozyton_uart
-  direction_pin: GPIO2  # Placeholder pin; replace with the verified MAX3485 direction GPIO.
+  direction_pin: GPIO2
   baud_rate: 4800
   response_timeout: 500ms
+  debug_first_response: true
   meters:
     - meter_name: seab
       model: SEAB
-      address: "523.0012230"  # Placeholder factory number; replace before compiling.
+      address: "523.0012230"
       update_interval: 10s
       sensors:
         voltage_l1: {name: "SEAB Voltage L1"}
@@ -140,7 +141,7 @@ pozyton_energy_meters:
 
     - meter_name: eabm
       model: EABM
-      address: "825 0001275"  # Placeholder factory number; replace before compiling.
+      address: "825 0001275"
       update_interval: 10s
       sensors:
         voltage_l1: {name: "EABM Voltage L1"}

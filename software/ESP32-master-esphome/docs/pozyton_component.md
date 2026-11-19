@@ -4,7 +4,7 @@
 
 This local ESPHome external component polls one SEAB meter and one EABM meter on a shared half-duplex RS485 bus. The component owns the UART reader, serializes meter sessions, and publishes only measurements whose response frame and numeric data have passed validation.
 
-The MAX3485 direction pin is HIGH while transmitting and LOW while receiving. ESP32 TX/RX pins and the direction pin are configured in YAML. The example pin values and meter addresses in `esp32-master.yaml` are placeholders; replace them with the confirmed wiring and individual factory serial numbers before compiling firmware for the device.
+The MAX3485 direction pin is HIGH while transmitting and LOW while receiving. The current `esp32-master.yaml` uses TX GPIO13, RX GPIO14, and direction GPIO2, with SEAB address `523.0012230` and EABM address `825 0001275`.
 
 RS485 describes the electrical interface. The meter messages use the manufacturer's text protocol with control bytes and XOR BCC, not Modbus RTU.
 
@@ -23,7 +23,20 @@ The configured address must be each meter's individual factory serial number. Do
 
 SEAB responds to its addressed `/A` request with `/g` and the same address. The component then sends `/?!\r\n` and checks the identification line for the SEAB product marker. EABM receives its addressed `/?...!` identification request and the component checks for `EABM` in the response.
 
-The component selects read-only register mode with the tested EABM `ACK 041` sequence and the documented SEAB `ACK 0B1` sequence. On the fixed-speed RS485 interface, the speed identifier does not change the UART speed. After register mode selection, the component waits cooperatively for the meter's `SOH P0 STX (0000) ETX BCC` authorization request and replies with `SOH P1 STX () ETX BCC`. It then reads all requested registers in that session and sends `SOH B0 ETX BCC` to close it.
+The component selects read-only register mode with `ACK 041 CR LF` for both models. The manuals' `B`/`b` is a placeholder for a speed identifier, not a literal letter; `4` denotes 4800 bit/s. On the fixed-speed RS485 interface, the speed identifier does not change the UART speed. After register mode selection, the component waits cooperatively for the meter's `SOH P0 STX (0000) ETX BCC` authorization request and replies with `SOH P1 STX () ETX BCC`. It then reads all requested registers in that session and sends `SOH B0 ETX BCC` to close it.
+
+### First frames with the current configuration
+
+All frames below use 4800 bit/s, 7E1 (one start bit, seven data bits LSB first, even parity, one stop bit), with no initial 300 bit/s phase and no baud switching. RS485 speed must match the value programmed in each meter.
+
+| Meter | First TX (control characters shown in brackets) | Hexadecimal bytes | Expected first RX |
+|---|---|---|---|
+| SEAB | `/A523.0012230[CR][LF]` | `2F 41 35 32 33 2E 30 30 31 32 32 33 30 0D 0A` | `/g523.0012230[CR][LF]` |
+| EABM | `/?825 0001275![CR][LF]` | `2F 3F 38 32 35 20 30 30 30 31 32 37 35 21 0D 0A` | `/POZbEABM-VPvv.vv*[CR][LF]` (b and vv.vv depend on the meter) |
+
+The space in the EABM address is an actual `0x20` byte. Neither initial request has a BCC. SEAB's first frame is 15 characters (31.25 ms on wire), EABM's is 16 (33.33 ms). A bit lasts approximately 208.33 microseconds. After TX the component schedules DIR LOW after `ceil(characters * 10 * 1000 / baud) + 3 ms`: 35 ms for SEAB and 37 ms for EABM, plus component loop scheduling latency. This is a software estimate, not hardware TX-completion feedback.
+
+After SEAB's address reply the next TX is `/?![CR][LF]`, then the meter returns its identification. After identification both models receive `[ACK]041[CR][LF]` (`06 30 34 31 0D 0A`). SEAB register-mode authorization allows at least 1300 ms for the documented 1000 ms delay; initial replies use the configured 500 ms timeout. A timeout retries the same frame once before moving on to the other meter.
 
 Register requests use `SOH R1 STX <register>() ETX BCC`; a response uses `STX <data> ETX BCC`. The BCC is the XOR of bytes after SOH, or after STX when SOH is absent, through ETX inclusive. The implementation checks the frame terminator and BCC before parsing the payload.
 
@@ -106,6 +119,8 @@ Diagnostics are independently optional per meter:
 
 Protocol stages and failures are logged with model, configured meter name/address, stage or register, and reason. Periodic measurement logs are emitted every 10 seconds at INFO level; transaction details are DEBUG and raw frames are VERBOSE. Warnings identify timeouts, NAKs, bad BCC, malformed values, and receive buffer overflow.
 
+`debug_first_response: true` under `pozyton_energy_meters` enables an additional INFO-level dump (enabled in the current YAML). `FIRST TX` shows the request and UART parameters; `FIRST RX` shows the first nonempty received response per meter after each reboot in HEX and readable ASCII. Capture happens before NUL filtering, frame validation, or BCC validation. An incomplete reply is dumped at timeout; overflow dumps are limited to 512 raw bytes. Empty timeouts explicitly show `timeout, no bytes received` and keep capture armed for the first actual reply. After a nonempty dump, further raw dumps for that meter require a restart. Set the option to `false` to disable this diagnostic. Bytes are attributed to the currently addressed meter; this does not distinguish meter replies from local echo or bus noise.
+
 ## Troubleshooting
 
 1. Replace all placeholder UART and direction pins with the verified PCB pinout.
@@ -117,8 +132,8 @@ Protocol stages and failures are logged with model, configured meter name/addres
 
 ## Building on Windows
 
-Use ESPHome 2026.10.2. Run `esphome compile esp32-master.yaml` from the project directory.
-If Windows path lengths prevent dependency extraction or compilation, run
+Use ESPHome 2026.10.2. With the shortened project path, run `esphome compile esp32-master.yaml` directly from the project directory; no PowerShell wrapper is needed.
+The older fallback for Windows path length failures is
 `./compile-windows.ps1` in PowerShell. This uses short physical directories
 `C:\eh-idf`, `C:\eh-data`, and `C:\eh-build` for the toolchain, dependency cache,
 and build output. The script restores the process environment afterwards.

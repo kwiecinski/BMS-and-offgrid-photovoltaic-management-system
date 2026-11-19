@@ -15,6 +15,39 @@ static constexpr uint8_t ETX = 0x03;
 static constexpr uint8_t ACK = 0x06;
 static constexpr uint8_t NAK = 0x15;
 
+// Bounded chunks keep the complete dump visible with the default logger buffer.
+static void log_debug_frame(const char *direction, const char *label, const uint8_t *data, size_t length) {
+  constexpr size_t CHUNK_SIZE = 16;
+  for (size_t offset = 0; offset < length; offset += CHUNK_SIZE) {
+    std::string hex, text;
+    const size_t count = std::min(CHUNK_SIZE, length - offset);
+    for (size_t i = 0; i < count; i++) {
+      const uint8_t value = data[offset + i];
+      char byte[8];
+      snprintf(byte, sizeof(byte), "%02X ", value);
+      hex += byte;
+      switch (value) {
+        case '\r': text += "[CR]"; break;
+        case '\n': text += "[LF]"; break;
+        case SOH: text += "[SOH]"; break;
+        case STX: text += "[STX]"; break;
+        case ETX: text += "[ETX]"; break;
+        case ACK: text += "[ACK]"; break;
+        case NAK: text += "[NAK]"; break;
+        default:
+          if (value >= 0x20 && value <= 0x7E)
+            text += static_cast<char>(value);
+          else {
+            snprintf(byte, sizeof(byte), "[0x%02X]", value);
+            text += byte;
+          }
+      }
+    }
+    ESP_LOGI(TAG, "%s %s [%u]: HEX=%s ASCII=%s", label, direction, static_cast<unsigned>(offset),
+             hex.c_str(), text.c_str());
+  }
+}
+
 static void log_hex_frame(const char *direction, const char *label, const uint8_t *data, size_t length) {
   constexpr size_t CHUNK_SIZE = 32;
   char hex[CHUNK_SIZE * 3 + 1];
@@ -77,6 +110,7 @@ void PozytonBus::dump_config() {
   ESP_LOGCONFIG(TAG, "Pozyton shared RS485 bus:");
   ESP_LOGCONFIG(TAG, "  Baud rate: %u", static_cast<unsigned>(this->baud_rate_));
   ESP_LOGCONFIG(TAG, "  Response timeout: %u ms", static_cast<unsigned>(this->response_timeout_ms_));
+  ESP_LOGCONFIG(TAG, "  First response debug: %s", this->debug_first_response_ ? "ON" : "OFF");
   for (const auto &meter : this->meters_) {
     ESP_LOGCONFIG(TAG, "  %s '%s', address '%s', poll interval %u ms", model_name_(meter.model),
                   meter.name.c_str(), meter.address.c_str(), static_cast<unsigned>(meter.update_interval_ms));
@@ -246,18 +280,17 @@ void PozytonBus::send_buffer_() {
     return;
   }
   this->rx_length_ = 0;
+  this->debug_rx_length_ = 0;
   for (size_t i = 0; i < this->last_tx_frame_.size(); i++)
     this->tx_buffer_[i] = static_cast<uint8_t>(this->last_tx_frame_[i]);
   this->tx_length_ = this->last_tx_frame_.size();
   if (this->direction_pin_ != nullptr)
     this->direction_pin_->digital_write(true);
   this->write_array(this->tx_buffer_.data(), this->tx_length_);
-  log_hex_frame("TX", current_meter_label_().c_str(), this->tx_buffer_.data(), this->tx_length_);
-  const uint32_t wire_time_ms = (this->tx_length_ * 11000U + this->baud_rate_ - 1U) / this->baud_rate_;
+  // 7E1 = one start + seven data + one parity + one stop = ten bits.
+  const uint32_t wire_time_ms = (this->tx_length_ * 10000U + this->baud_rate_ - 1U) / this->baud_rate_;
   this->tx_done_at_ = millis() + wire_time_ms + 3U;
   this->state_ = State::TX_DRAIN;
-  ESP_LOGV(TAG, "%s %s: TX %u byte(s)", current_meter_label_().c_str(), this->active_stage_.c_str(),
-           static_cast<unsigned>(this->tx_length_));
 }
 
 void PozytonBus::handle_tx_drain_() {
@@ -269,6 +302,34 @@ void PozytonBus::handle_tx_drain_() {
       this->meters_[this->active_meter_index_].model == METER_SEAB)
     timeout = std::max<uint32_t>(timeout, 1300U);
   this->response_deadline_ = millis() + timeout;
+  // Log only after switching back to RX, so logging does not hold DIR high.
+  log_hex_frame("TX", current_meter_label_().c_str(), this->tx_buffer_.data(), this->tx_length_);
+  ESP_LOGV(TAG, "%s %s: TX %u byte(s)", current_meter_label_().c_str(), this->active_stage_.c_str(),
+           static_cast<unsigned>(this->tx_length_));
+  if (this->capturing_first_response_()) {
+    ESP_LOGI(TAG, "%s FIRST TX: %s, %u baud 7E1, %u byte(s); DIR=RX, timeout=%u ms",
+             current_meter_label_().c_str(), this->active_stage_.c_str(), static_cast<unsigned>(this->baud_rate_),
+             static_cast<unsigned>(this->tx_length_), static_cast<unsigned>(timeout));
+    log_debug_frame("FIRST TX", this->meters_[this->active_meter_index_].name.c_str(),
+                    this->tx_buffer_.data(), this->tx_length_);
+  }
+}
+
+bool PozytonBus::capturing_first_response_() const {
+  return this->debug_first_response_ && this->has_active_meter_ &&
+         !this->meters_[this->active_meter_index_].first_response_logged;
+}
+
+void PozytonBus::log_first_response_(const char *result) {
+  if (!this->capturing_first_response_())
+    return;
+  Meter &meter = this->meters_[this->active_meter_index_];
+  ESP_LOGI(TAG, "%s FIRST RX: %s, stage=%s, %u raw byte(s)", current_meter_label_().c_str(), result,
+           this->active_stage_.c_str(), static_cast<unsigned>(this->debug_rx_length_));
+  log_debug_frame("FIRST RX", meter.name.c_str(), this->debug_rx_buffer_.data(), this->debug_rx_length_);
+  // A timeout with no bytes must not consume the first actual reply dump.
+  if (this->debug_rx_length_ != 0)
+    meter.first_response_logged = true;
 }
 
 void PozytonBus::read_uart_() {
@@ -276,9 +337,13 @@ void PozytonBus::read_uart_() {
   while (this->available()) {
     if (!this->read_byte(&value))
       break;
+    // Capture before filtering NULs or validating framing/BCC.
+    if (this->capturing_first_response_() && this->debug_rx_length_ < this->debug_rx_buffer_.size())
+      this->debug_rx_buffer_[this->debug_rx_length_++] = value;
     if (this->rx_length_ == 0 && value == 0x00)
       continue;
     if (this->rx_length_ >= this->rx_buffer_.size()) {
+      this->log_first_response_("receive buffer overflow; dump limited to 512 bytes");
       this->record_error_(this->meters_[this->active_meter_index_], this->active_stage_.c_str(), "receive buffer overflow");
       this->retry_or_fail_("receive buffer overflow");
       return;
@@ -322,6 +387,7 @@ bool PozytonBus::validate_bcc_(const std::string &frame) const {
 }
 
 void PozytonBus::handle_response_() {
+  this->log_first_response_("frame complete, before validation");
   std::string response(this->rx_buffer_.begin(), this->rx_buffer_.begin() + this->rx_length_);
   this->rx_length_ = 0;
   Meter &meter = this->meters_[this->active_meter_index_];
@@ -357,7 +423,9 @@ void PozytonBus::handle_response_() {
       return;
     }
     meter.retry_count = 0;
-    const std::string mode = std::string(1, ACK) + (meter.model == METER_EABM ? "041\r\n" : "0B1\r\n");
+    // B/b in the manuals is a speed placeholder, not a literal 'B'.
+    // Both RS485 interfaces ignore this speed selector and retain their fixed baud rate.
+    const std::string mode = std::string(1, ACK) + "041\r\n";
     this->send_text_(mode, Expect::MODE_REQUEST, "register mode selection");
     return;
   }
@@ -403,7 +471,10 @@ void PozytonBus::handle_response_() {
   }
 }
 
-void PozytonBus::handle_timeout_() { this->retry_or_fail_("response timeout"); }
+void PozytonBus::handle_timeout_() {
+  this->log_first_response_(this->debug_rx_length_ == 0 ? "timeout, no bytes received" : "timeout, incomplete/filtered response");
+  this->retry_or_fail_("response timeout");
+}
 
 void PozytonBus::retry_or_fail_(const char *reason) {
   Meter &meter = this->meters_[this->active_meter_index_];

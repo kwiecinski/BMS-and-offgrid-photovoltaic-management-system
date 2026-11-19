@@ -38,6 +38,7 @@ CONF_BAUD_RATE = "baud_rate"
 CONF_RESPONSE_TIMEOUT = "response_timeout"
 CONF_UPDATE_INTERVAL = "update_interval"
 CONF_METER_NAME = "meter_name"
+CONF_DEBUG_FIRST_RESPONSE = "debug_first_response"
 
 pozyton_ns = cg.esphome_ns.namespace("pozyton_energy_meters")
 PozytonBus = pozyton_ns.class_("PozytonBus", cg.Component, uart.UARTDevice)
@@ -133,6 +134,7 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Required(CONF_METERS): cv.All(cv.ensure_list(METER_SCHEMA), cv.Length(min=1, max=2)),
         cv.Optional(CONF_BAUD_RATE, default=4800): cv.int_range(min=300, max=19200),
         cv.Optional(CONF_RESPONSE_TIMEOUT, default="500ms"): cv.positive_time_period_milliseconds,
+        cv.Optional(CONF_DEBUG_FIRST_RESPONSE, default=False): cv.boolean,
     }
 ).extend(cv.COMPONENT_SCHEMA).extend(uart.UART_DEVICE_SCHEMA)
 
@@ -161,6 +163,7 @@ async def to_code(config):
     cg.add(var.set_direction_pin(direction_pin))
     cg.add(var.set_baud_rate(config[CONF_BAUD_RATE]))
     cg.add(var.set_response_timeout(config[CONF_RESPONSE_TIMEOUT]))
+    cg.add(var.set_debug_first_response(config[CONF_DEBUG_FIRST_RESPONSE]))
 
     for meter_index, meter in enumerate(config[CONF_METERS]):
         cg.add(
