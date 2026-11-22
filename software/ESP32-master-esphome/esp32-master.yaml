@@ -154,16 +154,12 @@ pozyton_energy_meters:
         active_power_l2: {name: "EABM Active Power L2"}
         active_power_l3: {name: "EABM Active Power L3"}
         active_power_total: {name: "EABM Active Power Total"}
-        reactive_power_l1: {name: "EABM Reactive Power L1"}
-        reactive_power_l2: {name: "EABM Reactive Power L2"}
-        reactive_power_l3: {name: "EABM Reactive Power L3"}
         reactive_power_total: {name: "EABM Reactive Power Total"}
         active_energy_import: {name: "EABM Active Energy Import"}
         active_energy_export: {name: "EABM Active Energy Export"}
         reactive_energy_positive: {name: "EABM Reactive Energy Positive"}
         reactive_energy_negative: {name: "EABM Reactive Energy Negative"}
         frequency: {name: "EABM Frequency"}
-        neutral_tangent: {name: "EABM Neutral Tangent"}
       diagnostics:
         connection: {name: "EABM Communication Connected"}
         last_success: {name: "EABM Last Successful Reading"}

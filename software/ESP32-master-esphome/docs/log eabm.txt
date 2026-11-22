@@ -1,0 +1,190 @@
+[00:34:35.396][S][number]: 'output voltage' >> 230.00
+[00:34:36.021][S][select]: 'battery charging priority' >> PV priority
+[00:34:39.353][I][pozyton:137]: SEAB 'seab' (523.0012230) latest readings:
+[00:34:39.360][I][pozyton:146]:   measurement[0] = 229.679993
+[00:34:39.360][I][pozyton:146]:   measurement[1] = 229.660004
+[00:34:39.361][I][pozyton:146]:   measurement[2] = 229.699997
+[00:34:39.366][I][pozyton:146]:   measurement[3] = 1.380000
+[00:34:39.372][I][pozyton:146]:   measurement[4] = 0.000000
+[00:34:39.373][I][pozyton:146]:   measurement[5] = 0.000000
+[00:34:39.373][I][pozyton:146]:   measurement[6] = 200.000000
+[00:34:39.378][I][pozyton:146]:   measurement[7] = 0.000000
+[00:34:39.383][I][pozyton:146]:   measurement[8] = 0.000000
+[00:34:39.384][I][pozyton:146]:   measurement[9] = 200.000000
+[00:34:39.384][I][pozyton:146]:   measurement[10] = 0.000000
+[00:34:39.389][I][pozyton:146]:   measurement[11] = 0.000000
+[00:34:39.395][I][pozyton:146]:   measurement[12] = 0.000000
+[00:34:39.395][I][pozyton:146]:   measurement[13] = 0.000000
+[00:34:39.395][I][pozyton:146]:   measurement[14] = 66759.789062
+[00:34:39.406][I][pozyton:146]:   measurement[15] = 1.680000
+[00:34:39.419][I][pozyton:146]:   measurement[16] = 511.350006
+[00:34:39.419][I][pozyton:146]:   measurement[17] = 11472.639648
+[00:34:39.419][I][pozyton:146]:   measurement[18] = 49.939999
+[00:34:39.430][I][pozyton:137]: EABM 'eabm' (825 0001275) latest readings:
+[00:34:39.439][I][pozyton:146]:   measurement[0] = 230.000000
+[00:34:39.439][I][pozyton:146]:   measurement[1] = 230.399994
+[00:34:39.440][I][pozyton:146]:   measurement[2] = 229.699997
+[00:34:39.450][I][pozyton:146]:   measurement[3] = 1.830000
+[00:34:39.462][I][pozyton:146]:   measurement[4] = 0.000000
+[00:34:39.462][I][pozyton:146]:   measurement[5] = 0.000000
+[00:34:39.462][I][pozyton:146]:   measurement[6] = 240.000000
+[00:34:39.472][I][pozyton:146]:   measurement[7] = 0.000000
+[00:34:39.484][I][pozyton:146]:   measurement[8] = 0.000000
+[00:34:39.484][I][pozyton:146]:   measurement[9] = 240.000000
+[00:34:39.485][I][pozyton:146]:   measurement[10] = 260.000000
+[00:34:39.496][I][pozyton:146]:   measurement[11] = 0.000000
+[00:34:39.504][I][pozyton:146]:   measurement[12] = 0.000000
+[00:34:39.504][I][pozyton:146]:   measurement[13] = 260.000000
+[00:34:39.504][I][pozyton:148]:   measurement[14] = not available
+[00:34:39.510][I][pozyton:148]:   measurement[15] = not available
+[00:34:39.529][I][pozyton:148]:   measurement[16] = not available
+[00:34:39.542][I][pozyton:148]:   measurement[17] = not available
+[00:34:39.542][I][pozyton:146]:   measurement[18] = 49.959999
+[00:34:39.543][I][pozyton:148]:   measurement[19] = not available
+[00:34:39.698][S][text_sensor]: 'fault' >> ''
+[00:34:39.699][S][sensor]: 'fault code' >> 0 
+[00:34:40.326][S][text_sensor]: 'warning' >> 'PV low voltage'
+[00:34:40.327][S][sensor]: 'warning code' >> 64 
+[00:34:40.987][S][text_sensor]: 'operation mode' >> 'Mains'
+[00:34:40.987][S][sensor]: 'ac voltage' >> 229.9 V
+[00:34:40.987][S][sensor]: 'ac frequency' >> 49.97 Hz
+[00:34:40.988][S][sensor]: 'average mains power' >> 309 W
+[00:34:40.988][S][sensor]: 'effective inverter voltage' >> 230.0 V
+[00:34:40.988][S][sensor]: 'effective inverter current' >> 0.2 A
+[00:34:40.988][S][sensor]: 'inverter frequency' >> 49.98 Hz
+[00:34:40.988][S][sensor]: 'average inverter power' >> -12 W
+[00:34:40.988][S][sensor]: 'inverter charging power' >> 12 W
+[00:34:40.988][S][sensor]: 'output effective voltage' >> 230.0 V
+[00:34:40.988][S][sensor]: 'output effective Current' >> 1.4 A
+[00:34:40.988][S][sensor]: 'output frequency' >> 49.98 Hz
+[00:34:40.988][S][sensor]: 'output active power' >> 296 W
+[00:34:40.989][S][sensor]: 'output apparent power' >> 322 VA
+[00:34:40.989][S][sensor]: 'battery average voltage' >> 27.6 V
+[00:34:40.989][S][sensor]: 'battery average current' >> 0.0 A
+[00:34:40.989][S][sensor]: 'battery average power' >> 0 W
+[00:34:41.612][S][sensor]: 'pv average voltage' >> 91.3 V
+[00:34:41.612][S][sensor]: 'pv average current' >> 0.0 A
+[00:34:42.245][S][sensor]: 'pv average power' >> 0 W
+[00:34:42.245][S][sensor]: 'pv charging average power' >> 0 W
+[00:34:42.245][S][sensor]: 'load percentage' >> 7 %
+[00:34:42.245][S][sensor]: 'dcdc temperature' >> 16 °C
+[00:34:42.245][S][sensor]: 'inverter temperature' >> 18 °C
+[00:34:42.872][S][sensor]: 'battery state of charge' >> 100 %
+[00:34:43.158][W][pozyton:485]: EABM 'eabm' (825 0001275) EPP0: invalid measurement format or response identifier; retry 1/1
+[00:34:43.263][S][sensor]: 'EABM Communication Errors' >> 11303 errors
+[00:34:43.478][W][pozyton:542]: EABM 'eabm' (825 0001275) EPP0 failed: invalid measurement format or response identifier
+[00:34:43.478][S][sensor]: 'EABM Communication Errors' >> 11304 errors
+[00:34:43.479][S][binary_sensor]: 'EABM Communication Connected' >> OFF
+[00:34:43.479][S][sensor]: 'battery average current2' >> 0.0 A
+[00:34:43.479][S][sensor]: 'inverter charging average current' >> 1.7 A
+[00:34:43.479][S][sensor]: 'pv charging average current' >> 0.0 A
+[00:34:43.575][W][pozyton:485]: EABM 'eabm' (825 0001275) EPM0: invalid measurement format or response identifier; retry 1/1
+[00:34:43.682][S][sensor]: 'EABM Communication Errors' >> 11305 errors
+[00:34:43.774][W][pozyton:542]: EABM 'eabm' (825 0001275) EPM0 failed: invalid measurement format or response identifier
+[00:34:43.882][S][sensor]: 'EABM Communication Errors' >> 11306 errors
+[00:34:43.985][W][pozyton:485]: EABM 'eabm' (825 0001275) EQP0: invalid measurement format or response identifier; retry 1/1
+[00:34:44.088][S][sensor]: 'EABM Communication Errors' >> 11307 errors
+[00:34:44.088][S][select]: 'output mode' >> Single
+[00:34:44.088][S][select]: 'output priority' >> Utility-PV-Battery (UTI)
+[00:34:44.088][S][select]: 'input voltage range' >> Wide range
+[00:34:44.088][S][select]: 'buzzer mode' >> Beep on faults
+[00:34:44.196][W][pozyton:542]: EABM 'eabm' (825 0001275) EQP0 failed: invalid measurement format or response identifier
+[00:34:44.309][S][sensor]: 'EABM Communication Errors' >> 11308 errors
+[00:34:44.412][W][pozyton:485]: EABM 'eabm' (825 0001275) EQM0: invalid measurement format or response identifier; retry 1/1
+[00:34:44.520][S][sensor]: 'EABM Communication Errors' >> 11309 errors
+[00:34:44.646][W][pozyton:542]: EABM 'eabm' (825 0001275) EQM0 failed: invalid measurement format or response identifier
+[00:34:44.749][S][sensor]: 'EABM Communication Errors' >> 11310 errors
+[00:34:44.749][S][select]: 'lcd backlight' >> Always on
+[00:34:44.966][S][sensor]: 'EABM Frequency' >> 49.97 Hz
+[00:34:45.383][W][pozyton:485]: EABM 'eabm' (825 0001275) P: response timeout; retry 1/1
+[00:34:45.389][S][number]: 'output voltage' >> 230.00
+[00:34:45.389][S][sensor]: 'EABM Communication Errors' >> 11311 errors
+[00:34:45.455][W][pozyton:542]: EABM 'eabm' (825 0001275) P failed: invalid BCC on register response
+[00:34:45.568][S][sensor]: 'EABM Communication Errors' >> 11312 errors
+[00:34:45.997][W][pozyton:485]: EABM 'eabm' (825 0001275) Q: response timeout; retry 1/1
+[00:34:46.034][S][select]: 'battery charging priority' >> PV priority
+[00:34:46.034][S][sensor]: 'EABM Communication Errors' >> 11313 errors
+[00:34:46.097][W][pozyton:542]: EABM 'eabm' (825 0001275) Q failed: invalid BCC on register response
+[00:34:46.208][S][sensor]: 'EABM Communication Errors' >> 11314 errors
+[00:34:46.530][S][sensor]: 'EABM Voltage L1' >> 230.0 V
+[00:34:46.531][S][sensor]: 'EABM Voltage L2' >> 230.9 V
+[00:34:46.532][S][sensor]: 'EABM Voltage L3' >> 229.5 V
+[00:34:46.870][S][sensor]: 'EABM Current L1' >> 1.84 A
+[00:34:46.870][S][sensor]: 'EABM Current L2' >> 0.00 A
+[00:34:46.870][S][sensor]: 'EABM Current L3' >> 0.00 A
+[00:34:47.308][W][pozyton:485]: EABM 'eabm' (825 0001275) TF: response timeout; retry 1/1
+[00:34:47.421][S][sensor]: 'EABM Communication Errors' >> 11315 errors
+[00:34:47.854][W][pozyton:542]: EABM 'eabm' (825 0001275) TF failed: response timeout
+[00:34:47.960][S][sensor]: 'EABM Communication Errors' >> 11316 errors
+[00:34:48.381][W][pozyton:485]: EABM 'eabm' (825 0001275) register mode exit: response timeout; retry 1/1
+[00:34:48.490][S][sensor]: 'EABM Communication Errors' >> 11317 errors
+[00:34:48.909][W][pozyton:542]: EABM 'eabm' (825 0001275) register mode exit failed: response timeout
+[00:34:49.028][S][sensor]: 'EABM Communication Errors' >> 11318 errors
+[00:34:49.028][S][binary_sensor]: 'EABM Communication Connected' >> ON
+[00:34:49.028][S][text_sensor]: 'EABM Last Successful Reading' >> 'uptime +11557 s'
+[00:34:49.360][I][pozyton:137]: SEAB 'seab' (523.0012230) latest readings:
+[00:34:49.367][I][pozyton:146]:   measurement[0] = 229.679993
+[00:34:49.367][I][pozyton:146]:   measurement[1] = 229.660004
+[00:34:49.367][I][pozyton:146]:   measurement[2] = 229.699997
+[00:34:49.378][I][pozyton:146]:   measurement[3] = 1.380000
+[00:34:49.378][I][pozyton:146]:   measurement[4] = 0.000000
+[00:34:49.378][I][pozyton:146]:   measurement[5] = 0.000000
+[00:34:49.378][I][pozyton:146]:   measurement[6] = 200.000000
+[00:34:49.383][I][pozyton:146]:   measurement[7] = 0.000000
+[00:34:49.389][I][pozyton:146]:   measurement[8] = 0.000000
+[00:34:49.389][I][pozyton:146]:   measurement[9] = 200.000000
+[00:34:49.389][I][pozyton:146]:   measurement[10] = 0.000000
+[00:34:49.394][I][pozyton:146]:   measurement[11] = 0.000000
+[00:34:49.412][I][pozyton:146]:   measurement[12] = 0.000000
+[00:34:49.412][I][pozyton:146]:   measurement[13] = 0.000000
+[00:34:49.412][I][pozyton:146]:   measurement[14] = 66759.789062
+[00:34:49.418][I][pozyton:146]:   measurement[15] = 1.680000
+[00:34:49.426][I][pozyton:146]:   measurement[16] = 511.350006
+[00:34:49.426][I][pozyton:146]:   measurement[17] = 11472.639648
+[00:34:49.426][I][pozyton:146]:   measurement[18] = 49.939999
+[00:34:49.434][I][pozyton:137]: EABM 'eabm' (825 0001275) latest readings:
+[00:34:49.446][I][pozyton:146]:   measurement[0] = 230.000000
+[00:34:49.446][I][pozyton:146]:   measurement[1] = 230.899994
+[00:34:49.446][I][pozyton:146]:   measurement[2] = 229.500000
+[00:34:49.461][I][pozyton:146]:   measurement[3] = 1.840000
+[00:34:49.469][I][pozyton:146]:   measurement[4] = 0.000000
+[00:34:49.470][I][pozyton:146]:   measurement[5] = 0.000000
+[00:34:49.470][I][pozyton:146]:   measurement[6] = 240.000000
+[00:34:49.479][I][pozyton:146]:   measurement[7] = 0.000000
+[00:34:49.490][I][pozyton:146]:   measurement[8] = 0.000000
+[00:34:49.491][I][pozyton:146]:   measurement[9] = 240.000000
+[00:34:49.491][I][pozyton:146]:   measurement[10] = 260.000000
+[00:34:49.502][I][pozyton:146]:   measurement[11] = 0.000000
+[00:34:49.518][I][pozyton:146]:   measurement[12] = 0.000000
+[00:34:49.518][I][pozyton:146]:   measurement[13] = 260.000000
+[00:34:49.518][I][pozyton:148]:   measurement[14] = not available
+[00:34:49.521][I][pozyton:148]:   measurement[15] = not available
+[00:34:49.541][I][pozyton:148]:   measurement[16] = not available
+[00:34:49.565][I][pozyton:148]:   measurement[17] = not available
+[00:34:49.565][I][pozyton:146]:   measurement[18] = 49.970001
+[00:34:49.565][I][pozyton:148]:   measurement[19] = not available
+[00:34:49.710][S][text_sensor]: 'fault' >> ''
+[00:34:49.711][S][sensor]: 'fault code' >> 0 
+[00:34:50.323][S][text_sensor]: 'warning' >> 'PV low voltage'
+[00:34:50.323][S][sensor]: 'warning code' >> 64 
+[00:34:50.586][S][sensor]: 'SEAB Active Energy Import' >> 66759.796875 kWh
+[00:34:50.714][S][sensor]: 'SEAB Active Energy Export' >> 1.680000 kWh
+[00:34:50.846][S][sensor]: 'SEAB Reactive Energy Positive' >> 511.350006 kvarh
+[00:34:50.976][S][sensor]: 'SEAB Reactive Energy Negative' >> 11472.639648 kvarh
+[00:34:50.976][S][text_sensor]: 'operation mode' >> 'Mains'
+[00:34:50.976][S][sensor]: 'ac voltage' >> 230.0 V
+[00:34:50.976][S][sensor]: 'ac frequency' >> 49.97 Hz
+[00:34:50.976][S][sensor]: 'average mains power' >> 312 W
+[00:34:50.977][S][sensor]: 'effective inverter voltage' >> 230.3 V
+[00:34:50.977][S][sensor]: 'effective inverter current' >> 0.2 A
+[00:34:50.977][S][sensor]: 'inverter frequency' >> 49.98 Hz
+[00:34:50.977][S][sensor]: 'average inverter power' >> -30 W
+[00:34:50.977][S][sensor]: 'inverter charging power' >> 11 W
+[00:34:50.978][S][sensor]: 'output effective voltage' >> 230.3 V
+[00:34:50.978][S][sensor]: 'output effective Current' >> 1.3 A
+[00:34:50.978][S][sensor]: 'output frequency' >> 49.99 Hz
+[00:34:50.978][S][sensor]: 'output active power' >> 282 W
+[00:34:50.978][S][sensor]: 'output apparent power' >> 299 VA
+[00:34:50.978][S][sensor]: 'battery average voltage' >> 27.7 V
+[00:34:50.978][S][sensor]: 'battery average current' >> 0.0 A
+[00:34:50.979][S][sensor]: 'battery average power' >> 0 W

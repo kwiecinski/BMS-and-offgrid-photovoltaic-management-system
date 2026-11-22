@@ -36,7 +36,6 @@ enum Measurement : uint8_t {
   MEASUREMENT_REACTIVE_ENERGY_POSITIVE,
   MEASUREMENT_REACTIVE_ENERGY_NEGATIVE,
   MEASUREMENT_FREQUENCY,
-  MEASUREMENT_NEUTRAL_TANGENT,
   MEASUREMENT_COUNT
 };
 
@@ -58,11 +57,11 @@ class PozytonBus : public Component, public uart::UARTDevice {
 
  protected:
   static constexpr size_t RX_BUFFER_SIZE = 512;
-  static constexpr size_t MAX_REQUESTS = 10;
+  static constexpr size_t MAX_REQUESTS = 9;
 
   enum class State : uint8_t { IDLE, TX_DRAIN, WAIT_RESPONSE };
   enum class Expect : uint8_t { ADDRESS, IDENTIFICATION, MODE_REQUEST, AUTH_ACK, MEASUREMENT, EXIT_ACK };
-  enum class Request : uint8_t { ENERGY_PP, ENERGY_PM, ENERGY_QP, ENERGY_QM, FREQUENCY, ACTIVE_POWER, REACTIVE_POWER, VOLTAGE, CURRENT, TANGENT };
+  enum class Request : uint8_t { ENERGY_PP, ENERGY_PM, ENERGY_QP, ENERGY_QM, FREQUENCY, ACTIVE_POWER, REACTIVE_POWER, VOLTAGE, CURRENT };
 
   struct Meter {
     MeterModel model{METER_SEAB};

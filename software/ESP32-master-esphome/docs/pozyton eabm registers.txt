@@ -1,0 +1,61 @@
+Odczyt wielkości mierzonych
+----------------------------------------------------------------------
+Liczydła energii czynnej:
+Rozkaz odczytowy R1:
+
+Czynna pobór (Positive active energy total ): EPP0()	
+1.8.0(eeeeee.ee*kWh)[CR][LF]
+ 
+Czynna oddwawanie (Negative active energy total): EPM0()	
+2.8.0(eeeeee.ee*kWh)[CR][LF]
+ 
+Bierna indukcyjna (Positive reactive energy total): EQP0()	
+3.8.0(eeeeee.ee*kWh)[CR][LF]
+
+Bierna pojemnościowa (Negative reactive energy total): EQM0()	
+4.8.0(eeeeee.ee*kWh)[CR][LF]
+
+------------------------------------------------------------------
+
+
+Moc chwilowa czynna:
+Rozkaz odczytowy R1 (sumaryczna) : P()
+odpowiedź licznika:
+1.7.0(ppp.pp*kW)[CR][LF]  (sumaryczna)
+21.7.0(ppp.pp*kW)[CR][LF] (faza L1) 
+41.7.0(ppp.pp*kW)[CR][LF] (faza L2) 
+61.7.0(ppp.pp*kW)[CR][LF] (faza L3) 
+
+------------------------------------------------------------------
+Moc chwilowa bierna
+Rozkaz odczytowy R1: Q(0)
+odpowiedź licznika:
+3.7.0(ppp.pp*kW)[CR][LF]
+------------------------------------------------------------------
+
+Prądy w fazach:
+rozkaz odczytowy R1: I()
+odpowiedź licznika:
+31.7.0(iii.ii*A)[CR][LF] - L1
+51.7.0(iii.ii*A)[CR][LF] - L2
+71.7.0(iii.ii*A)[CR][LF] - L3
+------------------------------------------------------------------
+Częstotliwość:
+rozkaz odczytowy R1:
+(117) F()
+odpowiedź licznika:
+(118) 14.7.0(ff.ff*Hz)[CR][LF]
+------------------------------------------------------------------
+Napięcie fazowe:
+rozkazy odczytowe R1 (pytania ogólne o wszystkie wartości fazowe):
+U()
+odpowiedź licznika:
+32.7.0(uuu.u*V)(abcd)[CR][LF]
+52.7.0(uuu.u*V)(abcd)[CR][LF]
+72.7.0(uuu.u*V)(abcd)[CR][LF]
+
+a,b,c – wskaźnik obecności odpowiedniej fazy wartość '1' oznacza obecność, a '0' zanik
+napięcia pomiarowego na odpowiedniej fazie (faza L1 {a}, faza L2 {b} i faza L3 {c})
+d – wskaźnik kierunku wirowania wartość '1' oznacza właściwy, a '0' niewłaściwy kierunek
+wirowania, natomiast 'x' oznacza że nie ma możliwości określenia kierunku wirowania
+przyjmijmy że wartości abcd mogą być dowolne i parsuj tylko napiecie na każdej z faz

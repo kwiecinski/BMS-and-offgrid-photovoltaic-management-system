@@ -200,8 +200,6 @@ void PozytonBus::build_request_list_() {
     add(Request::VOLTAGE);
   if (has_any_sensor_(meter, {MEASUREMENT_CURRENT_L1, MEASUREMENT_CURRENT_L2, MEASUREMENT_CURRENT_L3}))
     add(Request::CURRENT);
-  if (meter.model == METER_EABM && meter.sensors[MEASUREMENT_NEUTRAL_TANGENT] != nullptr)
-    add(Request::TANGENT);
 }
 
 void PozytonBus::start_session_() {
@@ -242,10 +240,9 @@ void PozytonBus::start_next_request_() {
     case Request::ENERGY_QM: code = "EQM0()"; break;
     case Request::FREQUENCY: code = "F()"; break;
     case Request::ACTIVE_POWER: code = "P()"; break;
-    case Request::REACTIVE_POWER: code = "Q()"; break;
+    case Request::REACTIVE_POWER: code = meter.model == METER_EABM ? "Q(0)" : "Q()"; break;
     case Request::VOLTAGE: code = "U()"; break;
     case Request::CURRENT: code = "I()"; break;
-    case Request::TANGENT: code = "TF()"; break;
   }
   const std::string body = std::string(1, SOH) + "R1" + static_cast<char>(STX) + code + static_cast<char>(ETX);
   this->send_binary_(body, Expect::MEASUREMENT, request_name_(this->active_request_), true);
@@ -298,9 +295,12 @@ void PozytonBus::handle_tx_drain_() {
     this->direction_pin_->digital_write(false);
   this->state_ = State::WAIT_RESPONSE;
   uint32_t timeout = this->response_timeout_ms_;
-  if (this->expect_ == Expect::MODE_REQUEST &&
-      this->meters_[this->active_meter_index_].model == METER_SEAB)
+  const MeterModel model = this->meters_[this->active_meter_index_].model;
+  if (this->expect_ == Expect::MODE_REQUEST && model == METER_SEAB)
     timeout = std::max<uint32_t>(timeout, 1300U);
+  // EABM P() can return eight records at 4800 baud.
+  if (this->expect_ == Expect::MEASUREMENT && this->active_request_ == Request::ACTIVE_POWER && model == METER_EABM)
+    timeout = std::max<uint32_t>(timeout, 1000U);
   this->response_deadline_ = millis() + timeout;
   // Log only after switching back to RX, so logging does not hold DIR high.
   log_hex_frame("TX", current_meter_label_().c_str(), this->tx_buffer_.data(), this->tx_length_);
@@ -451,8 +451,8 @@ void PozytonBus::handle_response_() {
     return;
   }
   if (this->expect_ == Expect::MEASUREMENT) {
-    if (!this->validate_bcc_(response)) {
-      this->retry_or_fail_("invalid BCC on register response");
+    if (response[0] != static_cast<char>(STX) || !this->validate_bcc_(response)) {
+      this->retry_or_fail_("invalid frame or BCC on register response");
       return;
     }
     const std::string payload = response.substr(1, response.size() - 3);
@@ -472,6 +472,12 @@ void PozytonBus::handle_response_() {
 }
 
 void PozytonBus::handle_timeout_() {
+  Meter &meter = this->meters_[this->active_meter_index_];
+  // The captured EABM firmware closes the session without acknowledging B0.
+  if (this->expect_ == Expect::EXIT_ACK && meter.model == METER_EABM && this->rx_length_ == 0) {
+    this->finish_meter_(meter.reading_succeeded);
+    return;
+  }
   this->log_first_response_(this->debug_rx_length_ == 0 ? "timeout, no bytes received" : "timeout, incomplete/filtered response");
   this->retry_or_fail_("response timeout");
 }
@@ -552,33 +558,31 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
     if (meter.sensors[key] != nullptr)
       this->publish_(meter, key, value);
   };
-  auto get_record = [&payload](const std::string &wanted, float *value, float *scale) -> bool {
-    size_t line_start = 0;
-    while (line_start < payload.size()) {
-      size_t line_end = payload.find('\n', line_start);
-      if (line_end == std::string::npos)
-        line_end = payload.size();
-      std::string line = payload.substr(line_start, line_end - line_start);
-      line_start = line_end + 1;
-      while (!line.empty() && (line.back() == '\r' || line.back() == ' ')) line.pop_back();
+  const bool eabm = meter.model == METER_EABM;
+  auto get_record = [&payload, eabm](const std::string &wanted, const char *expected_unit, float *value) -> bool {
+    for (size_t start = 0; start < payload.size();) {
+      const size_t newline = payload.find('\n', start);
+      const std::string line = payload.substr(start, newline == std::string::npos ? newline : newline - start);
+      start = newline == std::string::npos ? payload.size() : newline + 1;
       const size_t open = line.find('(');
       if (open == std::string::npos)
         continue;
       std::string id = line.substr(0, open);
-      while (!id.empty() && id.back() == '.') id.pop_back();
-      std::string field = line.substr(open + 1, line.find(')', open) == std::string::npos
-                                                   ? std::string::npos
-                                                   : line.find(')', open) - open - 1);
-      const size_t unit = field.find('*');
-      *scale = 1.0f;
-      if (unit != std::string::npos) {
-        const std::string unit_text = field.substr(unit + 1);
-        if (unit_text.find("kW") != std::string::npos || unit_text.find("kvar") != std::string::npos)
-          *scale = 1000.0f;
-        field.resize(unit);
-      }
-      if (id == wanted && parse_number_(field, value))
-        return true;
+      if (!eabm && !id.empty() && id.back() == '.')
+        id.pop_back();
+      if (id != wanted)
+        continue;
+      const size_t close = line.find(')', open + 1);
+      if (close == std::string::npos)
+        return false;
+      std::string field = line.substr(open + 1, close - open - 1);
+      const size_t separator = field.find('*');
+      if (expected_unit != nullptr &&
+          (separator == std::string::npos || field.compare(separator + 1, std::string::npos, expected_unit) != 0))
+        return false;
+      if (separator != std::string::npos)
+        field.resize(separator);
+      return parse_number_(field, value);
     }
     return false;
   };
@@ -610,15 +614,17 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
   };
 
   float value = 0.0f;
-  float scale = 1.0f;
   switch (request) {
     case Request::ENERGY_PP:
     case Request::ENERGY_PM:
     case Request::ENERGY_QP:
     case Request::ENERGY_QM: {
-      const char *wanted = request == Request::ENERGY_PP ? "0.8.0" : request == Request::ENERGY_PM ? "1.8.0" :
-                           request == Request::ENERGY_QP ? "2.8.0" : "3.8.0";
-      if (!get_record(wanted, &value, &scale)) return false;
+      const bool active = request == Request::ENERGY_PP || request == Request::ENERGY_PM;
+      const char *wanted = request == Request::ENERGY_PP ? (eabm ? "1.8.0" : "0.8.0") :
+                           request == Request::ENERGY_PM ? (eabm ? "2.8.0" : "1.8.0") :
+                           request == Request::ENERGY_QP ? (eabm ? "3.8.0" : "2.8.0") : (eabm ? "4.8.0" : "3.8.0");
+      if (!get_record(wanted, eabm ? (active ? "kWh" : "kvarh") : nullptr, &value))
+        return false;
       const Measurement key = request == Request::ENERGY_PP ? MEASUREMENT_ACTIVE_ENERGY_IMPORT :
                               request == Request::ENERGY_PM ? MEASUREMENT_ACTIVE_ENERGY_EXPORT :
                               request == Request::ENERGY_QP ? MEASUREMENT_REACTIVE_ENERGY_POSITIVE :
@@ -627,42 +633,34 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
       return true;
     }
     case Request::FREQUENCY: {
-      const char *wanted = meter.model == METER_EABM ? "14.7.0" : "97.6.0";
-      if (!get_record(wanted, &value, &scale)) return false;
+      if (!get_record(eabm ? "14.7.0" : "97.6.0", eabm ? "Hz" : nullptr, &value))
+        return false;
       publish_if_configured(MEASUREMENT_FREQUENCY, value);
       return true;
     }
-    case Request::TANGENT:
-      if (!get_record("103.3", &value, &scale)) return false;
-      publish_if_configured(MEASUREMENT_NEUTRAL_TANGENT, value);
-      return true;
     case Request::ACTIVE_POWER:
     case Request::REACTIVE_POWER: {
       const bool active = request == Request::ACTIVE_POWER;
       std::array<float, 4> values{};
-      std::array<bool, 4> found{};
-      if (meter.model == METER_SEAB) {
+      if (!eabm) {
         std::vector<float> parsed;
         const bool has_fraction = payload.find('.') != std::string::npos;
         const float unit_scale = has_fraction ? 1000.0f : 1.0f;
         if (!parse_grouped(active ? "107" : "109", &parsed, unit_scale) || parsed.size() < 4)
           return false;
-        for (size_t i = 0; i < 4; i++) values[i] = parsed[i];
-      } else {
-        const std::array<std::array<const char *, 2>, 4> active_ids{{
-            {{"21.7.0", "22.7.0"}}, {{"41.7.0", "42.7.0"}}, {{"61.7.0", "62.7.0"}}, {{"1.7.0", "2.7.0"}}}};
-        const std::array<std::array<const char *, 2>, 4> reactive_ids{{
-            {{"23.7.0", "24.7.0"}}, {{"43.7.0", "44.7.0"}}, {{"63.7.0", "64.7.0"}}, {{"3.7.0", "4.7.0"}}}};
-        const auto &ids = active ? active_ids : reactive_ids;
+        std::copy_n(parsed.begin(), values.size(), values.begin());
+      } else if (active) {
+        const std::array<const char *, 4> ids{{"21.7.0", "41.7.0", "61.7.0", "1.7.0"}};
         for (size_t i = 0; i < ids.size(); i++) {
-          for (size_t j = 0; j < ids[i].size(); j++) {
-            if (get_record(ids[i][j], &value, &scale)) {
-              values[i] += value * scale;
-              found[i] = true;
-            }
-          }
+          if (!get_record(ids[i], "kW", &value))
+            return false;
+          values[i] = value * 1000.0f;
         }
-        if (std::find(found.begin(), found.end(), true) == found.end()) return false;
+      } else {
+        if (!get_record("3.7.0", "kvar", &value))
+          return false;
+        publish_if_configured(MEASUREMENT_REACTIVE_POWER_TOTAL, value * 1000.0f);
+        return true;
       }
       const Measurement base = active ? MEASUREMENT_ACTIVE_POWER_L1 : MEASUREMENT_REACTIVE_POWER_L1;
       for (size_t i = 0; i < 3; i++) publish_if_configured(static_cast<Measurement>(base + i), values[i]);
@@ -683,8 +681,8 @@ bool PozytonBus::process_measurement_(Meter &meter, Request request, const std::
         const std::array<const char *, 3> current_ids{{"31.7.0", "51.7.0", "71.7.0"}};
         const auto &ids = voltage ? voltage_ids : current_ids;
         for (size_t i = 0; i < ids.size(); i++) {
-          if (!get_record(ids[i], &values[i], &scale)) return false;
-          values[i] *= scale;
+          if (!get_record(ids[i], voltage ? "V" : "A", &values[i]))
+            return false;
         }
       }
       const Measurement base = voltage ? MEASUREMENT_VOLTAGE_L1 : MEASUREMENT_CURRENT_L1;
@@ -749,7 +747,6 @@ const char *PozytonBus::request_name_(Request request) {
     case Request::REACTIVE_POWER: return "Q";
     case Request::VOLTAGE: return "U";
     case Request::CURRENT: return "I";
-    case Request::TANGENT: return "TF";
   }
   return "unknown";
 }

@@ -38,7 +38,7 @@ The space in the EABM address is an actual `0x20` byte. Neither initial request 
 
 After SEAB's address reply the next TX is `/?![CR][LF]`, then the meter returns its identification. After identification both models receive `[ACK]041[CR][LF]` (`06 30 34 31 0D 0A`). SEAB register-mode authorization allows at least 1300 ms for the documented 1000 ms delay; initial replies use the configured 500 ms timeout. A timeout retries the same frame once before moving on to the other meter.
 
-Register requests use `SOH R1 STX <register>() ETX BCC`; a response uses `STX <data> ETX BCC`. The BCC is the XOR of bytes after SOH, or after STX when SOH is absent, through ETX inclusive. The implementation checks the frame terminator and BCC before parsing the payload.
+Register requests use `SOH R1 STX <register>(<argument>) ETX BCC`; a response uses `STX <data> ETX BCC`. The BCC is the XOR of bytes after SOH, or after STX when SOH is absent, through ETX inclusive. The implementation checks the frame terminator and BCC before parsing the payload.
 
 ## Supported measurements
 
@@ -46,28 +46,25 @@ Every sensor entry is optional. The polling scheduler skips a register when none
 
 | Register request | SEAB response format | EABM response format | Sensors updated |
 |---|---|---|---|
-| `EPP0()` | `0.8.0.(value)` | `0.8.0.(value)` | Active energy import, kWh, total-increasing |
-| `EPM0()` | `1.8.0.(value)` | `1.8.0.(value)` | Active energy export, kWh, total-increasing |
-| `EQP0()` | `2.8.0.(value)` | `2.8.0.(value)` | Reactive energy positive, kvarh, total-increasing |
-| `EQM0()` | `3.8.0.(value)` | `3.8.0.(value)` | Reactive energy negative, kvarh, total-increasing |
+| `EPP0()` | `0.8.0(value)` | `1.8.0(value*kWh)` | Active energy import, kWh, total-increasing |
+| `EPM0()` | `1.8.0(value)` | `2.8.0(value*kWh)` | Active energy export, kWh, total-increasing |
+| `EQP0()` | `2.8.0(value)` | `3.8.0(value*kvarh)` | Reactive energy positive, kvarh, total-increasing |
+| `EQM0()` | `3.8.0(value)` | `4.8.0(value*kvarh)` | Reactive energy negative, kvarh, total-increasing |
 | `F()` | `97.6.0(value)` | `14.7.0(value*Hz)` | Frequency, Hz |
-| `P()` | `107(L1;L2;L3;total)` | Per-phase and total OBIS records | Active power by phase and total, W |
-| `Q()` | `109(L1;L2;L3;total)` | Per-phase and total OBIS records | Reactive power by phase and total, var |
+| `P()` | `107(L1;L2;L3;total)` | `21.7.0`, `41.7.0`, `61.7.0`, `1.7.0` in kW | Active power by phase and total, W |
+| `Q()` (SEAB), `Q(0)` (EABM) | `109(L1;L2;L3;total)` | `3.7.0(value*kvar)` | Reactive power in var, SEAB phases and total, EABM total |
 | `U()` | `97.5.6(L1;L2;L3;phase flags)` | `32.7.0`, `52.7.0`, `72.7.0` | Voltage L1, L2, L3, V |
 | `I()` | `97.4.4(L1;L2;L3)` | `31.7.0`, `51.7.0`, `71.7.0` | Current L1, L2, L3, A |
-| `TF()` | Not enabled; not assumed supported | `103.3(value)` | EABM neutral tangent |
 
-The four energy identifiers above follow the user-confirmed register notes. Trailing decimal precision is accepted as sent by the meter; units are assigned from the register definition rather than parsed from the response. EABM multi-record power responses are normalized from kW/kvar to W/var. SEAB grouped readings expressed with decimal kW/kvar are converted to W/var; integer-valued grouped readings are treated as W/var as described by the SEAB protocol.
-
-There is no total voltage or total current entity because the documented measurement requests do not provide those totals. Phase and total active/reactive power entities are populated from the same `P()` or `Q()` request.
+The EABM parser checks the unit in each record. Energy counters retain their kWh or kvarh values. Power is converted from kW and kvar to W and var. EABM power sensors use the identifiers in the table for the requested direction. The parser reads voltage from the first parenthesized field and skips the following phase flags. SEAB grouped readings expressed with decimal kW/kvar are converted to W/var. Integer-valued grouped readings are treated as W/var.
 
 ## Non-blocking scheduling, timeouts, and recovery
 
-UART receive and protocol work runs in the ESPHome component loop. The TX-to-RX transition is scheduled from the configured baud rate and frame length; the loop does not busy-wait for transmission or response. The response timeout defaults to 500 ms. Register-mode startup uses a cooperative deadline long enough for the documented one-second SEAB delay.
+UART receive and protocol work runs in the ESPHome component loop. The TX-to-RX transition is scheduled from the configured baud rate and frame length; the loop does not busy-wait for transmission or response. The response timeout defaults to 500 ms. The SEAB register-mode handshake allows at least 1300 ms. EABM `P()` allows at least 1000 ms for the eight-record response.
 
 Each request is retried at most once. A failed initialization ends that meter's current poll cycle; a failed measurement is logged and the remaining requested registers are attempted. The scheduler then services the other meter. Subsequent cycles retry offline meters. Receive frames are bounded to 512 bytes, and malformed, incomplete, unsupported, or invalid numeric data is not published.
 
-Each meter can use a different poll interval. The default is 10 seconds. The shared bus prevents concurrent sessions. A complete session is ended explicitly, and meter-specific idle termination remains the protocol fallback after communication loss.
+Each meter can use a different poll interval. The default is 10 seconds. The shared bus prevents concurrent sessions. The component sends `B0` to close each session. SEAB acknowledges it. With the captured EABM firmware, the component also accepts silence through the response deadline.
 
 ## YAML configuration
 
@@ -96,8 +93,8 @@ pozyton_energy_meters:
       sensors:
         active_power_total:
           name: "EABM Active Power Total"
-        neutral_tangent:
-          name: "EABM Neutral Tangent"
+        reactive_power_total:
+          name: "EABM Reactive Power Total"
       diagnostics:
         connection:
           name: "EABM Communication Connected"
@@ -106,8 +103,6 @@ pozyton_energy_meters:
         communication_errors:
           name: "EABM Communication Errors"
 ```
-
-The `neutral_tangent` option is rejected for SEAB because it is not established as supported by the supplied SEAB documentation.
 
 ## Diagnostics and logs
 

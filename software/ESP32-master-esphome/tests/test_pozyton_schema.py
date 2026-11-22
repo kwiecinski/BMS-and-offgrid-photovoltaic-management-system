@@ -26,22 +26,19 @@ class MeterSchemaTest(unittest.TestCase):
             ):
                 self.meter(model, address)
 
-    def test_eabm_tangent_has_no_default_unit_or_device_class(self):
-        config = self.meter(
-            "EABM", "456 1234567",
-            sensors={"neutral_tangent": {"name": "EABM Neutral Tangent"}},
-        )
-        tangent = config["sensors"]["neutral_tangent"]
-        self.assertNotIn("unit_of_measurement", tangent)
-        self.assertNotIn("device_class", tangent)
-        self.assertEqual(tangent["state_class"], "measurement")
+    def test_neutral_tangent_is_unsupported(self):
+        for model, address in [("SEAB", "123.4567890"), ("EABM", "456 1234567")]:
+            with self.subTest(model=model), self.assertRaises(cv.Invalid):
+                self.meter(model, address, sensors={"neutral_tangent": {"name": "Neutral Tangent"}})
 
-    def test_seab_tangent_is_rejected(self):
-        with self.assertRaisesRegex(cv.Invalid, "documented for EABM only"):
-            self.meter(
-                "SEAB", "123.4567890",
-                sensors={"neutral_tangent": {"name": "SEAB Neutral Tangent"}},
-            )
+    def test_reactive_power_configuration_depends_on_model(self):
+        total = {"reactive_power_total": {"name": "Reactive Power Total"}}
+        phases = {f"reactive_power_l{phase}": {"name": f"Reactive Power L{phase}"} for phase in range(1, 4)}
+        self.meter("EABM", "456 1234567", sensors=total)
+        self.meter("SEAB", "123.4567890", sensors=phases)
+        for key, sensor in phases.items():
+            with self.subTest(key=key), self.assertRaisesRegex(cv.Invalid, "reactive_power_total"):
+                self.meter("EABM", "456 1234567", sensors={key: {"name": "EABM " + sensor["name"]}})
 
 
 if __name__ == "__main__":
