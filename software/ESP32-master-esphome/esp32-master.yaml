@@ -18,6 +18,7 @@ logger:
 
 # Enable Home Assistant API
 api:
+  reboot_timeout: 0s
   encryption:
     key: !secret api_encryption_key
 
@@ -26,6 +27,7 @@ ota:
     password: !secret ota_password
 
 wifi:
+  reboot_timeout: 0s
   ssid: !secret wifi_ssid
   password: !secret wifi_password
 
@@ -46,46 +48,165 @@ sun:
   id: sun_sun
 
 globals:
-  - id: priority_mode
-    type: int
+  # Indices: battery voltage, PV voltage, operation mode, output priority.
+  - id: inverter_read_ms
+    type: std::array<uint32_t, 4>
+    restore_value: no
+    initial_value: '{0, 0, 0, 0}'
+  - id: inverter_seen
+    type: uint8_t
     restore_value: no
     initial_value: '0'
-
-  - id: MODE_UTI
-    type: int
+  - id: inverter_priority_sequence
+    type: uint32_t
     restore_value: no
     initial_value: '0'
-
-  - id: MODE_SOL
-    type: int
-    restore_value: no
-    initial_value: '1'
-
-  - id: last_sol_candidate_ms
-    type: unsigned long
-    restore_value: no
-    initial_value: '0'
-    
-  - id: power_sw_sol_flag
-    type: int
-    restore_value: no
-    initial_value: '1'
-
-  - id: power_sw_uti_flag
-    type: int
-    restore_value: no
-    initial_value: '0'
-
   - id: last_mode_change
-    type: unsigned long
+    type: uint32_t
     restore_value: no
     initial_value: '0'
 
-
-  #- id: output_priority
-  #  type: int
-   # restore_value: no
-  #  initial_value: '0'
+interval:
+  - interval: 1s
+    then:
+      - lambda: |-
+          // Stage 1: voltage-only decisions. All durations use monotonic time.
+          constexpr uint32_t MAX_AGE_MS = 30000;
+          constexpr uint32_t SOL_STABLE_MS = 120000;
+          constexpr uint32_t SOL_COOLDOWN_MS = 15 * 60000;
+          constexpr uint32_t CONFIRM_MS = 30000;
+          constexpr uint32_t REQUEST_SPACING_MS = 60000;
+          const uint32_t now = millis();
+          static bool candidate = false;
+          static uint32_t candidate_since = 0;
+          static int pending = -1;  // -1: none, 0: SUB, 1: SOL
+          static uint32_t request_ms = 0;
+          static uint32_t request_sequence = 0;
+          static bool requested_before = false;
+          static int last_requested = -1;
+          const auto status = [&](const char *message) {
+            if (id(inverter_control_status).state != message) {
+              id(inverter_control_status).publish_state(message);
+              ESP_LOGI("inverter_control", "%s", message);
+            }
+          };
+          bool fresh[4];
+          bool all_fresh = true;
+          bool link_recent = false;
+          for (size_t index = 0; index < 4; ++index) {
+            fresh[index] = (id(inverter_seen) & (1U << index)) &&
+                uint32_t(now - id(inverter_read_ms)[index]) <= MAX_AGE_MS;
+            all_fresh = all_fresh && fresh[index];
+            link_recent = link_recent || fresh[index];
+          }
+          const auto current = id(output_priority).current_option();
+          const bool is_sol = current == "PV-Utility-Battery (SOL)";
+          const bool is_sub = current == "PV-Utility-Battery (SUB)";
+          const bool valid = all_fresh &&
+              std::isfinite(id(battery_average_voltage).state) &&
+              id(battery_average_voltage).state > 0.0f &&
+              std::isfinite(id(pv_average_voltage).state) &&
+              id(pv_average_voltage).state >= 0.0f &&
+              id(operation_mode).state != "Unknown";
+          int desired = is_sol ? 1 : 0;
+          const char *reason = "SUB: voltage conditions not met";
+          if (fresh[2] && id(operation_mode).state == "Fault") {
+            candidate = false;
+            pending = -1;
+            status("Inverter fault: automatic writes suspended");
+            return;
+          } else if (!valid) {
+            candidate = false;
+            desired = 0;
+            reason = "SUB: missing, invalid or stale inverter data";
+          } else if (id(pv_average_voltage).state < 180.0f ||
+                     (is_sol && id(operation_mode).state == "Mains" &&
+                      uint32_t(now - id(inverter_read_ms)[2]) <
+                          uint32_t(now - id(last_mode_change)))) {
+            // Do not mistake a pre-switch Mains sample for a failed SOL entry.
+            candidate = false;
+            desired = 0;
+            reason = "SUB: low PV voltage or SOL operating on mains";
+          } else if (is_sol) {
+            candidate = false;
+            reason = "SOL: monitoring";
+          } else {
+            // Astronomy gates entry only. Without valid time, use voltages.
+            const bool solar_allowed = !id(sntp_time).now().is_valid() ||
+                id(allow_solar_mode).state;
+            const bool running = id(operation_mode).state == "Mains" ||
+                id(operation_mode).state == "Off-Grid" ||
+                id(operation_mode).state == "Bypass";
+            const bool good = running && solar_allowed &&
+                id(pv_average_voltage).state > 200.0f &&
+                id(battery_average_voltage).state >= 26.5f;
+            if (!good) {
+              candidate = false;
+            } else {
+              if (!candidate) {
+                candidate = true;
+                candidate_since = now;
+              }
+              if (pending == 1) {
+                desired = 1;
+                reason = "Waiting for SOL priority readback";
+              } else if (uint32_t(now - candidate_since) >= SOL_STABLE_MS &&
+                  uint32_t(now - id(last_mode_change)) > SOL_COOLDOWN_MS) {
+                desired = 1;
+                reason = "SOL requested: stable voltages and cooldown complete";
+              } else {
+                reason = "SUB: waiting for stable voltages or SOL cooldown";
+              }
+            }
+          }
+          // A fresh readback, not a write request, confirms the priority.
+          if (pending >= 0) {
+            if (fresh[3] && id(inverter_priority_sequence) != request_sequence &&
+                ((pending == 1 && is_sol) || (pending == 0 && is_sub))) {
+              ESP_LOGI("inverter_control", "Priority confirmed: %s", pending == 1 ? "SOL" : "SUB");
+              pending = -1;
+            } else if (desired == 0 && pending == 1) {
+              // A protective SUB request may supersede an unconfirmed SOL write.
+              pending = -1;
+            } else if (uint32_t(now - request_ms) >= CONFIRM_MS) {
+              ESP_LOGW("inverter_control", "Priority %s not confirmed within 30 s", pending == 1 ? "SOL" : "SUB");
+              pending = -1;
+              candidate = false;
+              status("Priority write unconfirmed: waiting before retry");
+              return;
+            } else {
+              status("Waiting for priority readback");
+              return;
+            }
+          }
+          if (!link_recent || !(id(inverter_seen) & 8U)) {
+            status("No inverter communication: cannot deliver SUB request");
+            return;
+          }
+          // If a SOL write was sent but has not appeared in readback, explicitly
+          // supersede it with SUB even while the cached priority still says SUB.
+          const bool cancel_sol = desired == 0 && last_requested == 1;
+          if (fresh[3] && ((desired == 1 && is_sol) || (desired == 0 && is_sub)) && !cancel_sol) {
+            status(reason);
+            return;
+          }
+          if (requested_before && uint32_t(now - request_ms) < REQUEST_SPACING_MS && !cancel_sol) {
+            status("Waiting before another priority request");
+            return;
+          }
+          const char *target = desired == 1 ? "PV-Utility-Battery (SOL)" : "PV-Utility-Battery (SUB)";
+          auto call = id(output_priority).make_call();
+          call.set_option(target);
+          call.perform();
+          pending = desired;
+          last_requested = desired;
+          requested_before = true;
+          request_ms = now;
+          request_sequence = id(inverter_priority_sequence);
+          id(last_mode_change) = now;
+          candidate = false;
+          status(reason);
+          ESP_LOGI("inverter_control", "Priority requested: %s", target);
 
 uart:
   - id: easun_uart
@@ -184,11 +305,34 @@ binary_sensor:
     id: allow_solar_mode
     lambda: |-
       static bool allow = false;
-      if (id(sun_elevation).state > 15.0)
+      static bool evaluated = false;
+      static uint32_t evaluated_ms = 0;
+      if (!id(sntp_time).now().is_valid()) {
+        allow = false;
+        evaluated = false;
+        return true;
+      }
+      if (evaluated && uint32_t(millis() - evaluated_ms) < 1000U)
+        return allow;
+      const double elevation = id(sun_sun).elevation();
+      if (!std::isfinite(elevation)) {
+        allow = false;
+        evaluated = false;
+        return true;
+      }
+      evaluated = true;
+      evaluated_ms = millis();
+      if (elevation > 15.0)
         allow = true;
-      else if (id(sun_elevation).state < 8.0)
+      else if (elevation < 8.0)
         allow = false;
       return allow;
+
+  - platform: template
+    name: "Inverter Clock Valid"
+    entity_category: diagnostic
+    lambda: |-
+      return id(sntp_time).now().is_valid();
 
 
 sensor:
@@ -429,50 +573,9 @@ sensor:
     id: battery_average_voltage
     on_value:
       then:
-        - if:
-            condition:
-              lambda: |-
-                return (id(pv_average_voltage).state > 200.0 &&
-                        //id(output_active_power).state > 1000.0 &&
-                        id(operation_mode).state == "Mains" &&   
-                        id(output_priority).current_option() != "PV-Utility-Battery (SUB)" &&
-                        id(output_priority).current_option() == "PV-Utility-Battery (SOL)");
-            then:
-              - select.set:
-                  id: output_priority
-                  option: "PV-Utility-Battery (SUB)"
-              - lambda: |-
-                  id(last_mode_change) = millis();
-                  ESP_LOGI("pv_avg", "Power logic state (1) changed from: (%s) to SUB", id(output_priority).current_option().c_str());
-
-        - if:
-            condition:
-              lambda: |-
-                return (id(pv_average_voltage).state > 200.0 &&
-                        id(battery_average_voltage).state >= 26.5 &&
-                        //id(output_active_power).state <=1000.0 &&
-                        id(output_priority).current_option() != "PV-Utility-Battery (SOL)" &&
-                        (millis() - id(last_mode_change)) > (15*60000) &&
-                        id(allow_solar_mode).state);
-            then:
-              - select.set:
-                  id: output_priority
-                  option: "PV-Utility-Battery (SOL)"
-              - lambda: |-
-              
-                  ESP_LOGI("pv_avg", "Power logic state (2) changed from: (%s) to SOL", id(output_priority).current_option().c_str());
-        - if:
-            condition:
-              lambda: |-
-                return (id(pv_average_voltage).state < 180.0 &&
-                        id(output_priority).current_option() != "Utility-PV-Battery (UTI)");
-            then:
-              - select.set:
-                  id: output_priority
-                  option: "Utility-PV-Battery (UTI)"
-              - lambda: |-
-                  id(last_mode_change) = millis();
-                  ESP_LOGI("pv_avg", "Power logic state (3) changed from: (%s) to UTI", id(output_priority).current_option().c_str());
+        - lambda: |-
+            id(inverter_read_ms)[0] = millis();
+            id(inverter_seen) |= 1U;
 
 
   # Battery average Current                              0.1A     Int   216 1 R
@@ -515,6 +618,11 @@ sensor:
     filters:
       - multiply: 0.1
     id: pv_average_voltage
+    on_value:
+      then:
+        - lambda: |-
+            id(inverter_read_ms)[1] = millis();
+            id(inverter_seen) |= 2U;
 
 
 
@@ -691,6 +799,18 @@ select:
       "PV-Battery-Utility (SBU)": 2
       "PV-Utility-Battery (SUB)": 3
     id: output_priority
+    optimistic: false
+    on_value:
+      then:
+        - lambda: |-
+            id(inverter_read_ms)[3] = millis();
+            id(inverter_seen) |= 8U;
+            ++id(inverter_priority_sequence);
+            static size_t previous_index = SIZE_MAX;
+            if (previous_index != i) {
+              previous_index = i;
+              id(last_mode_change) = millis();
+            }
 
   # Input voltage range                                           Uint  302 1 R/W 0: Wide range, 1: Narrow range
   - platform: modbus_controller
@@ -743,6 +863,12 @@ select:
 
 
 text_sensor:
+  - platform: template
+    name: "Inverter Control Status"
+    id: inverter_control_status
+    entity_category: diagnostic
+    update_interval: never
+
   # Fault code                                                    ULong 100 2 R
   - platform: modbus_controller
     modbus_controller_id: smg0
@@ -855,6 +981,11 @@ text_sensor:
     register_type: holding
     raw_encode: HEXBYTES
     id: operation_mode
+    on_value:
+      then:
+        - lambda: |-
+            id(inverter_read_ms)[2] = millis();
+            id(inverter_seen) |= 4U;
     lambda: |-
       uint16_t value = modbus::helpers::word_from_hex_str(x, 0);
       switch (value) {
