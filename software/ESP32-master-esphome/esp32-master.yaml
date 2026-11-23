@@ -1,6 +1,8 @@
 esphome:
   name: photovoltaic-master
 
+packages:
+  fire_panel: !include fire-panel.yaml
 
 external_components:
   - source:

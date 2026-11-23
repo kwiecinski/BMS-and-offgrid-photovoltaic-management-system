@@ -1,0 +1,114 @@
+# PCF8574, A2:A0 = 111. High bits release the quasi-bidirectional inputs.
+i2c:
+  id: fire_bus
+  sda: GPIO21
+  scl: GPIO22
+  frequency: 100kHz
+  scan: false
+
+globals:
+  - id: fire_panel_ready
+    type: bool
+    initial_value: 'false'
+  - id: fire_phase_started
+    type: uint32_t
+    initial_value: '0'
+
+esphome:
+  on_boot:
+    - priority: -100
+      then:
+        - lambda: |-
+            uint8_t inputs;
+            // P2 high (smoke detector powered), P3 low (5 V), P4 high (MQ-7 on).
+            const uint8_t initial_outputs = 0xF7;
+            if (id(fire_bus).read(0x27, &inputs, 1) != i2c::ERROR_OK ||
+                id(fire_bus).write(0x27, &initial_outputs, 1) != i2c::ERROR_OK) {
+              ESP_LOGW("fire_panel", "PCF8574 at 0x27 unavailable; panel disabled until reboot");
+              return;
+            }
+            id(fire_phase_started) = millis();
+            id(fire_panel_ready) = true;
+
+binary_sensor:
+  - platform: template
+    id: smoke_alarm
+    name: "Alarm czujki dymu"
+    device_class: smoke
+
+sensor:
+  - platform: adc
+    pin: GPIO34
+    id: mq7_co
+    name: "CO MQ-7"
+    attenuation: 2.5db
+    samples: 16
+    update_interval: never
+    accuracy_decimals: 3
+    # Reconstruct sensor output from the 7.8 kOhm / 2.2 kOhm divider.
+    filters:
+      - multiply: 4.545454545
+  - platform: adc
+    pin: GPIO35
+    id: mq8_h2
+    name: "H2 MQ-8"
+    attenuation: 2.5db
+    samples: 16
+    update_interval: never
+    accuracy_decimals: 3
+    filters:
+      - multiply: 4.545454545
+
+interval:
+  - interval: 10s
+    then:
+      - if:
+          condition:
+            lambda: return id(fire_panel_ready);
+          then:
+            - component.update: mq8_h2
+  - interval: 25ms
+    then:
+      - lambda: |-
+          if (!id(fire_panel_ready)) return;
+          constexpr uint8_t button = 1U << 0, smoke = 1U << 1;
+          constexpr uint8_t detector_power = 1U << 2, low_heat = 1U << 3;
+          static uint8_t outputs = 0xF7;
+          static uint32_t reset_started = 0, button_changed = 0;
+          static bool raw_pressed = false, stable_pressed = false;
+          static bool reset_requested = false;
+          const uint32_t now = millis();
+          uint8_t desired = outputs;
+
+          uint8_t inputs;
+          const bool read_ok = id(fire_bus).read(0x27, &inputs, 1) == i2c::ERROR_OK;
+          if (read_ok) {
+            const bool pressed = (inputs & button) == 0;
+            if (pressed != raw_pressed) {
+              raw_pressed = pressed;
+              button_changed = now;
+            }
+            if (now - button_changed >= 50 && stable_pressed != raw_pressed) {
+              stable_pressed = raw_pressed;
+              if (stable_pressed && (outputs & detector_power)) reset_requested = true;
+            }
+            // Preserve the last real alarm state while the detector is unpowered.
+            if (outputs & detector_power) id(smoke_alarm).publish_state((inputs & smoke) == 0);
+          }
+          if (reset_requested) desired &= ~detector_power;
+          if (!(outputs & detector_power) && now - reset_started >= 5000)
+            desired |= detector_power;
+
+          const bool measuring = (outputs & low_heat) != 0;
+          float co_voltage = NAN;
+          if (now - id(fire_phase_started) >= (measuring ? 90000U : 60000U)) {
+            if (measuring) co_voltage = id(mq7_co).sample();  // Still at low heat.
+            desired ^= low_heat;
+          }
+          if (desired == outputs || id(fire_bus).write(0x27, &desired, 1) != i2c::ERROR_OK)
+            return;
+          if ((desired ^ outputs) & low_heat) id(fire_phase_started) = now;
+          if ((desired ^ outputs) & detector_power) reset_started = now;
+          outputs = desired;
+          reset_requested = false;
+          if (!isnan(co_voltage)) id(mq7_co).publish_state(co_voltage);
