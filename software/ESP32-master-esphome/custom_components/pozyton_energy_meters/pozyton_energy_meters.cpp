@@ -101,7 +101,6 @@ void PozytonBus::setup() {
     this->direction_pin_->setup();
     this->direction_pin_->digital_write(false);
   }
-  this->next_log_ms_ = millis() + 10000;
   ESP_LOGI(TAG, "Shared Pozyton bus ready at %u baud; %u meter(s) configured", static_cast<unsigned>(this->baud_rate_),
            static_cast<unsigned>(this->meters_.size()));
 }
@@ -130,27 +129,6 @@ void PozytonBus::loop() {
 
   if (this->state_ == State::IDLE && !this->has_active_meter_)
     this->start_next_meter_();
-
-  if (static_cast<int32_t>(now - this->next_log_ms_) >= 0) {
-    this->next_log_ms_ = now + 10000;
-    for (const auto &meter : this->meters_) {
-      ESP_LOGI(TAG, "%s '%s' (%s) latest readings:", model_name_(meter.model), meter.name.c_str(),
-               meter.address.c_str());
-      bool logged = false;
-      for (size_t i = 0; i < meter.sensors.size(); i++) {
-        const auto *entity = meter.sensors[i];
-        if (entity == nullptr)
-          continue;
-        logged = true;
-        if (entity->has_state())
-          ESP_LOGI(TAG, "  measurement[%u] = %.6f", static_cast<unsigned>(i), entity->get_state());
-        else
-          ESP_LOGI(TAG, "  measurement[%u] = not available", static_cast<unsigned>(i));
-      }
-      if (!logged)
-        ESP_LOGI(TAG, "  no measurement entities configured");
-    }
-  }
 }
 
 void PozytonBus::start_next_meter_() {

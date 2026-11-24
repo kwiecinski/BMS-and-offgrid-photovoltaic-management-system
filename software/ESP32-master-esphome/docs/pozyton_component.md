@@ -112,7 +112,7 @@ Diagnostics are independently optional per meter:
 - `last_success`: text sensor with uptime seconds for the latest successful poll cycle.
 - `communication_errors`: cumulative count of retries and failed protocol/measurement stages.
 
-Protocol stages and failures are logged with model, configured meter name/address, stage or register, and reason. Periodic measurement logs are emitted every 10 seconds at INFO level; transaction details are DEBUG and raw frames are VERBOSE. Warnings identify timeouts, NAKs, bad BCC, malformed values, and receive buffer overflow.
+Protocol stages and failures are logged with model, configured meter name/address, stage or register, and reason. Transaction details are DEBUG and raw frames are VERBOSE. Warnings identify timeouts, NAKs, bad BCC, malformed values, and receive buffer overflow.
 
 `debug_first_response: true` under `pozyton_energy_meters` enables an additional INFO-level dump (enabled in the current YAML). `FIRST TX` shows the request and UART parameters; `FIRST RX` shows the first nonempty received response per meter after each reboot in HEX and readable ASCII. Capture happens before NUL filtering, frame validation, or BCC validation. An incomplete reply is dumped at timeout; overflow dumps are limited to 512 raw bytes. Empty timeouts explicitly show `timeout, no bytes received` and keep capture armed for the first actual reply. After a nonempty dump, further raw dumps for that meter require a restart. Set the option to `false` to disable this diagnostic. Bytes are attributed to the currently addressed meter; this does not distinguish meter replies from local echo or bus noise.
 

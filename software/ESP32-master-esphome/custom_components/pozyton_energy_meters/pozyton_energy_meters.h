@@ -119,7 +119,6 @@ class PozytonBus : public Component, public uart::UARTDevice {
   std::vector<Meter> meters_;
   uint32_t baud_rate_{4800};
   uint32_t response_timeout_ms_{500};
-  uint32_t next_log_ms_{0};
   uint8_t active_meter_index_{0};
   bool has_active_meter_{false};
   State state_{State::IDLE};

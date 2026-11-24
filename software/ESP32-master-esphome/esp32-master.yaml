@@ -231,7 +231,7 @@ pozyton_energy_meters:
   direction_pin: GPIO2
   baud_rate: 4800
   response_timeout: 500ms
-  debug_first_response: true
+  debug_first_response: false
   meters:
     - meter_name: seab
       model: SEAB
