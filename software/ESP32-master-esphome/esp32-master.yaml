@@ -1,5 +1,12 @@
 esphome:
   name: photovoltaic-master
+  includes:
+    - wifi_diagnostics.h
+  on_boot:
+    # The ESP-IDF event loop is ready at 300, and ESPHome starts Wi-Fi at 250.
+    priority: 275.0
+    then:
+      - lambda: wifi_diagnostics::setup();
 
 packages:
   fire_panel: !include fire-panel.yaml
@@ -14,9 +21,14 @@ esp32:
   framework:
     type: arduino
 
-# Enable logging
 logger:
-  level: INFO
+  baud_rate: 115200
+  hardware_uart: UART0
+  level: DEBUG
+  initial_level: INFO
+  logs:
+    wifi: DEBUG
+    wifi_esp32: DEBUG
 
 # Enable Home Assistant API
 api:
@@ -69,6 +81,10 @@ globals:
     initial_value: '0'
 
 interval:
+  - interval: 30s
+    then:
+      - lambda: wifi_diagnostics::log_status();
+
   - interval: 1s
     then:
       - lambda: |-
