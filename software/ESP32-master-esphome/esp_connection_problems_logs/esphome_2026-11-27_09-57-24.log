@@ -1,0 +1,125 @@
+INFO ESPHome 2026.11.0
+INFO Loaded validated config cache for esp32-master.yaml, skipping validation.
+INFO Starting log output from /dev/ttyUSB0 with baud rate 115200
+[09:57:53.675][I][wifi_diag:056]: STATUS up_ms=34143014 sta=associated rssi=-30 channel=1 bssid=0a:96:d7:59:f8:1b heap=155516 heap_min=114248 heap_largest=110592
+[09:58:23.676][I][wifi_diag:056]: STATUS up_ms=34173014 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152804 heap_min=114248 heap_largest=110592
+[09:58:53.676][I][wifi_diag:056]: STATUS up_ms=34203015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154052 heap_min=114248 heap_largest=110592
+[09:59:23.637][W][pozyton:469]: SEAB 'seab' (523.0012230) EPM0: response timeout; retry 1/1
+[09:59:23.676][I][wifi_diag:056]: STATUS up_ms=34233014 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154556 heap_min=114248 heap_largest=110592
+[09:59:24.176][W][pozyton:526]: SEAB 'seab' (523.0012230) EPM0 failed: response timeout
+[09:59:24.724][W][pozyton:469]: SEAB 'seab' (523.0012230) EQP0: response timeout; retry 1/1
+[09:59:25.274][W][pozyton:526]: SEAB 'seab' (523.0012230) EQP0 failed: response timeout
+[09:59:25.821][W][pozyton:469]: SEAB 'seab' (523.0012230) EQM0: response timeout; retry 1/1
+[09:59:26.355][W][pozyton:526]: SEAB 'seab' (523.0012230) EQM0 failed: response timeout
+[09:59:26.898][W][pozyton:469]: SEAB 'seab' (523.0012230) F: response timeout; retry 1/1
+[09:59:27.446][W][pozyton:526]: SEAB 'seab' (523.0012230) F failed: response timeout
+[09:59:27.984][W][pozyton:469]: SEAB 'seab' (523.0012230) P: response timeout; retry 1/1
+[09:59:28.521][W][pozyton:526]: SEAB 'seab' (523.0012230) P failed: response timeout
+[09:59:29.067][W][pozyton:469]: SEAB 'seab' (523.0012230) Q: response timeout; retry 1/1
+[09:59:29.613][W][pozyton:526]: SEAB 'seab' (523.0012230) Q failed: response timeout
+[09:59:30.154][W][pozyton:469]: SEAB 'seab' (523.0012230) U: response timeout; retry 1/1
+[09:59:30.704][W][pozyton:526]: SEAB 'seab' (523.0012230) U failed: response timeout
+[09:59:31.248][W][pozyton:469]: SEAB 'seab' (523.0012230) I: response timeout; retry 1/1
+[09:59:31.798][W][pozyton:526]: SEAB 'seab' (523.0012230) I failed: response timeout
+[09:59:32.321][W][pozyton:469]: SEAB 'seab' (523.0012230) register mode exit: response timeout; retry 1/1
+[09:59:32.853][W][pozyton:526]: SEAB 'seab' (523.0012230) register mode exit failed: response timeout
+[09:59:53.676][I][wifi_diag:056]: STATUS up_ms=34263014 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=160280 heap_min=114248 heap_largest=110592
+[10:00:23.675][I][wifi_diag:056]: STATUS up_ms=34293015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=151420 heap_min=114248 heap_largest=110592
+[10:00:53.676][I][wifi_diag:056]: STATUS up_ms=34323015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=174452 heap_min=114248 heap_largest=110592
+[10:01:23.676][I][wifi_diag:056]: STATUS up_ms=34353015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=157544 heap_min=114248 heap_largest=110592
+[10:01:43.859][W][api.connection:387]: Buffer full, ping queued
+[10:01:53.676][I][wifi_diag:056]: STATUS up_ms=34383015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=172068 heap_min=114248 heap_largest=110592
+[10:02:23.677][I][wifi_diag:056]: STATUS up_ms=34413016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=156604 heap_min=114248 heap_largest=110592
+[10:02:53.678][I][wifi_diag:056]: STATUS up_ms=34443016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=176836 heap_min=114248 heap_largest=110592
+[10:03:23.677][I][wifi_diag:056]: STATUS up_ms=34473016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152556 heap_min=114248 heap_largest=110592
+[10:03:52.457][W][api.connection:387]: Buffer full, ping queued
+[10:03:53.677][I][wifi_diag:056]: STATUS up_ms=34503016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=149900 heap_min=114248 heap_largest=110592
+[10:04:23.677][I][wifi_diag:056]: STATUS up_ms=34533016 sta=associated rssi=-30 channel=1 bssid=0a:96:d7:59:f8:1b heap=152160 heap_min=114248 heap_largest=110592
+[10:04:53.678][I][wifi_diag:056]: STATUS up_ms=34563015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=175052 heap_min=114248 heap_largest=110592
+[10:05:23.676][I][wifi_diag:056]: STATUS up_ms=34593015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=165576 heap_min=114248 heap_largest=110592
+[10:05:38.584][W][api.connection:387]: Buffer full, ping queued
+[10:05:53.677][I][wifi_diag:056]: STATUS up_ms=34623016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=151400 heap_min=114248 heap_largest=110592
+[10:06:23.676][I][wifi_diag:056]: STATUS up_ms=34653015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=151628 heap_min=114248 heap_largest=110592
+[10:06:53.677][I][wifi_diag:056]: STATUS up_ms=34683015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=151112 heap_min=114248 heap_largest=110592
+[10:07:20.174][W][pozyton:469]: SEAB 'seab' (523.0012230) Q: response timeout; retry 1/1
+[10:07:20.724][W][pozyton:526]: SEAB 'seab' (523.0012230) Q failed: response timeout
+[10:07:21.271][W][pozyton:469]: SEAB 'seab' (523.0012230) U: response timeout; retry 1/1
+[10:07:21.819][W][pozyton:526]: SEAB 'seab' (523.0012230) U failed: response timeout
+[10:07:22.360][W][pozyton:469]: SEAB 'seab' (523.0012230) I: response timeout; retry 1/1
+[10:07:22.908][W][pozyton:526]: SEAB 'seab' (523.0012230) I failed: response timeout
+[10:07:23.441][W][pozyton:469]: SEAB 'seab' (523.0012230) register mode exit: response timeout; retry 1/1
+[10:07:23.677][I][wifi_diag:056]: STATUS up_ms=34713015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154044 heap_min=114248 heap_largest=110592
+[10:07:23.969][W][pozyton:526]: SEAB 'seab' (523.0012230) register mode exit failed: response timeout
+[10:07:47.467][W][pozyton:469]: SEAB 'seab' (523.0012230) SEAB identification: response timeout; retry 1/1
+[10:07:47.984][W][pozyton:526]: SEAB 'seab' (523.0012230) SEAB identification failed: response timeout
+[10:07:53.677][I][wifi_diag:056]: STATUS up_ms=34743016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151144 heap_min=114248 heap_largest=110592
+[10:08:23.677][I][wifi_diag:056]: STATUS up_ms=34773015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=151020 heap_min=114248 heap_largest=110592
+[10:08:25.203][W][api.connection:387]: Buffer full, ping queued
+[10:08:53.677][I][wifi_diag:056]: STATUS up_ms=34803016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151144 heap_min=114248 heap_largest=110592
+[10:09:23.677][I][wifi_diag:056]: STATUS up_ms=34833015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=151124 heap_min=114248 heap_largest=110592
+[10:09:53.677][I][wifi_diag:056]: STATUS up_ms=34863015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=154056 heap_min=114248 heap_largest=110592
+[10:10:23.676][I][wifi_diag:056]: STATUS up_ms=34893015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154372 heap_min=114248 heap_largest=110592
+[10:10:53.677][I][wifi_diag:056]: STATUS up_ms=34923016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=151144 heap_min=114248 heap_largest=110592
+[10:11:06.459][W][api.connection:387]: Buffer full, ping queued
+[10:11:23.677][I][wifi_diag:056]: STATUS up_ms=34953015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=176100 heap_min=114248 heap_largest=110592
+[10:11:53.675][I][wifi_diag:056]: STATUS up_ms=34983015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154056 heap_min=114248 heap_largest=110592
+[10:12:23.676][I][wifi_diag:056]: STATUS up_ms=35013016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152120 heap_min=114248 heap_largest=110592
+[10:12:53.675][I][wifi_diag:056]: STATUS up_ms=35043015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=152168 heap_min=114248 heap_largest=110592
+[10:13:23.675][I][wifi_diag:056]: STATUS up_ms=35073015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151124 heap_min=114248 heap_largest=110592
+[10:13:53.675][I][wifi_diag:056]: STATUS up_ms=35103015 sta=associated rssi=-30 channel=1 bssid=0a:96:d7:59:f8:1b heap=174804 heap_min=114248 heap_largest=110592
+[10:14:23.675][I][wifi_diag:056]: STATUS up_ms=35133015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154632 heap_min=114248 heap_largest=110592
+[10:14:53.675][I][wifi_diag:056]: STATUS up_ms=35163015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=154040 heap_min=114248 heap_largest=110592
+[10:15:23.675][I][wifi_diag:056]: STATUS up_ms=35193016 sta=associated rssi=-30 channel=1 bssid=0a:96:d7:59:f8:1b heap=160360 heap_min=114248 heap_largest=110592
+[10:15:53.674][I][wifi_diag:056]: STATUS up_ms=35223016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152160 heap_min=114248 heap_largest=110592
+[10:16:23.674][I][wifi_diag:056]: STATUS up_ms=35253015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=156092 heap_min=114248 heap_largest=110592
+[10:16:53.674][I][wifi_diag:056]: STATUS up_ms=35283016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151928 heap_min=114248 heap_largest=110592
+[10:17:06.288][W][api.connection:387]: Buffer full, ping queued
+[10:17:23.674][I][wifi_diag:056]: STATUS up_ms=35313015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151416 heap_min=114248 heap_largest=110592
+[10:17:53.673][I][wifi_diag:056]: STATUS up_ms=35343016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=150876 heap_min=114248 heap_largest=110592
+[10:18:23.673][I][wifi_diag:056]: STATUS up_ms=35373016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151108 heap_min=114248 heap_largest=110592
+[10:18:53.672][I][wifi_diag:056]: STATUS up_ms=35403015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=160300 heap_min=114248 heap_largest=110592
+[10:19:23.673][I][wifi_diag:056]: STATUS up_ms=35433015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154640 heap_min=114248 heap_largest=110592
+[10:19:53.673][I][wifi_diag:056]: STATUS up_ms=35463016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152676 heap_min=114248 heap_largest=110592
+[10:20:23.672][I][wifi_diag:056]: STATUS up_ms=35493015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=161256 heap_min=114248 heap_largest=110592
+[10:20:53.673][I][wifi_diag:056]: STATUS up_ms=35523016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=150988 heap_min=114248 heap_largest=110592
+[10:21:10.677][W][api.connection:387]: Buffer full, ping queued
+[10:21:23.673][I][wifi_diag:056]: STATUS up_ms=35553015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=151112 heap_min=114248 heap_largest=110592
+[10:21:53.673][I][wifi_diag:056]: STATUS up_ms=35583015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=155788 heap_min=114248 heap_largest=110592
+[10:22:23.674][I][wifi_diag:056]: STATUS up_ms=35613015 sta=associated rssi=-30 channel=1 bssid=0a:96:d7:59:f8:1b heap=162048 heap_min=114248 heap_largest=110592
+[10:22:28.849][W][api.connection:387]: Buffer full, ping queued
+[10:22:53.672][I][wifi_diag:056]: STATUS up_ms=35643015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=157068 heap_min=114248 heap_largest=110592
+[10:23:23.674][I][wifi_diag:056]: STATUS up_ms=35673016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152720 heap_min=114248 heap_largest=110592
+[10:23:53.673][I][wifi_diag:056]: STATUS up_ms=35703015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=158180 heap_min=114248 heap_largest=110592
+[10:24:23.673][I][wifi_diag:056]: STATUS up_ms=35733015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=153500 heap_min=114248 heap_largest=110592
+[10:24:53.673][I][wifi_diag:056]: STATUS up_ms=35763015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=155792 heap_min=114248 heap_largest=110592
+[10:25:23.673][I][wifi_diag:056]: STATUS up_ms=35793015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=158748 heap_min=114248 heap_largest=110592
+[10:25:53.673][I][wifi_diag:056]: STATUS up_ms=35823015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=167780 heap_min=114248 heap_largest=110592
+[10:26:23.673][I][wifi_diag:056]: STATUS up_ms=35853016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152156 heap_min=114248 heap_largest=110592
+[10:26:53.672][I][wifi_diag:056]: STATUS up_ms=35883015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=166192 heap_min=114248 heap_largest=110592
+[10:27:23.673][I][wifi_diag:056]: STATUS up_ms=35913016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=155808 heap_min=114248 heap_largest=110592
+[10:27:53.672][I][wifi_diag:056]: STATUS up_ms=35943015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=159200 heap_min=114248 heap_largest=110592
+[10:28:23.673][I][wifi_diag:056]: STATUS up_ms=35973015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=161892 heap_min=114248 heap_largest=110592
+[10:28:53.672][I][wifi_diag:056]: STATUS up_ms=36003015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=176628 heap_min=114248 heap_largest=110592
+[10:29:23.673][I][wifi_diag:056]: STATUS up_ms=36033016 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=152640 heap_min=114248 heap_largest=110592
+[10:29:53.671][I][wifi_diag:056]: STATUS up_ms=36063015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154052 heap_min=114248 heap_largest=110592
+[10:30:23.672][I][wifi_diag:056]: STATUS up_ms=36093015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=162556 heap_min=114248 heap_largest=110592
+[10:30:53.672][I][wifi_diag:056]: STATUS up_ms=36123015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=156628 heap_min=114248 heap_largest=110592
+[10:31:09.433][W][api.connection:387]: Buffer full, ping queued
+[10:31:23.671][I][wifi_diag:056]: STATUS up_ms=36153015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=155268 heap_min=114248 heap_largest=110592
+[10:31:53.672][I][wifi_diag:056]: STATUS up_ms=36183015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=154108 heap_min=114248 heap_largest=110592
+[10:32:19.141][W][api.connection:387]: Buffer full, ping queued
+[10:32:23.672][I][wifi_diag:056]: STATUS up_ms=36213016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151132 heap_min=114248 heap_largest=110592
+[10:32:53.671][I][wifi_diag:056]: STATUS up_ms=36243016 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=155804 heap_min=114248 heap_largest=110592
+[10:33:23.672][I][wifi_diag:056]: STATUS up_ms=36273015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=158752 heap_min=114248 heap_largest=110592
+[10:33:53.671][I][wifi_diag:056]: STATUS up_ms=36303015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=158752 heap_min=114248 heap_largest=110592
+[10:34:23.672][I][wifi_diag:056]: STATUS up_ms=36333015 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=162552 heap_min=114248 heap_largest=110592
+[10:34:53.672][I][wifi_diag:056]: STATUS up_ms=36363016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152800 heap_min=114248 heap_largest=110592
+[10:35:23.671][I][wifi_diag:056]: STATUS up_ms=36393015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=153696 heap_min=114248 heap_largest=110592
+[10:35:53.671][I][wifi_diag:056]: STATUS up_ms=36423016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=153568 heap_min=114248 heap_largest=110592
+[10:36:23.672][I][wifi_diag:056]: STATUS up_ms=36453016 sta=associated rssi=-32 channel=1 bssid=0a:96:d7:59:f8:1b heap=155616 heap_min=114248 heap_largest=110592
+[10:36:53.670][I][wifi_diag:056]: STATUS up_ms=36483015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152156 heap_min=114248 heap_largest=110592
+[10:37:23.672][I][wifi_diag:056]: STATUS up_ms=36513015 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=158744 heap_min=114248 heap_largest=110592
+[10:37:53.670][I][wifi_diag:056]: STATUS up_ms=36543016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=152708 heap_min=114248 heap_largest=110592
+[10:38:23.672][I][wifi_diag:056]: STATUS up_ms=36573015 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=151948 heap_min=114248 heap_largest=110592
+[10:38:53.671][I][wifi_diag:056]: STATUS up_ms=36603016 sta=associated rssi=-33 channel=1 bssid=0a:96:d7:59:f8:1b heap=168980 heap_min=114248 heap_largest=110592
+[10:39:23.670][I][wifi_diag:056]: STATUS up_ms=36633016 sta=associated rssi=-31 channel=1 bssid=0a:96:d7:59:f8:1b heap=151484 heap_min=114248 heap_largest=110592

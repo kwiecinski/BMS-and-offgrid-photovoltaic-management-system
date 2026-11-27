@@ -110,6 +110,7 @@ void PozytonBus::dump_config() {
   ESP_LOGCONFIG(TAG, "  Baud rate: %u", static_cast<unsigned>(this->baud_rate_));
   ESP_LOGCONFIG(TAG, "  Response timeout: %u ms", static_cast<unsigned>(this->response_timeout_ms_));
   ESP_LOGCONFIG(TAG, "  First response debug: %s", this->debug_first_response_ ? "ON" : "OFF");
+  ESP_LOGCONFIG(TAG, "  SEAB timeout debug: %s", this->debug_seab_timeout_ ? "ON" : "OFF");
   for (const auto &meter : this->meters_) {
     ESP_LOGCONFIG(TAG, "  %s '%s', address '%s', poll interval %u ms", model_name_(meter.model),
                   meter.name.c_str(), meter.address.c_str(), static_cast<unsigned>(meter.update_interval_ms));
@@ -194,6 +195,7 @@ void PozytonBus::start_session_() {
     return;
   }
   this->rx_length_ = 0;
+  this->capture_seab_timeout_ = this->debug_seab_timeout_ && meter.model == METER_SEAB;
   if (meter.model == METER_EABM) {
     this->send_text_("/?" + meter.address + "!\r\n", Expect::IDENTIFICATION, "EABM identification");
   } else {
@@ -271,6 +273,7 @@ void PozytonBus::send_buffer_() {
 void PozytonBus::handle_tx_drain_() {
   if (this->direction_pin_ != nullptr)
     this->direction_pin_->digital_write(false);
+  this->rx_enabled_at_ = millis();
   this->state_ = State::WAIT_RESPONSE;
   uint32_t timeout = this->response_timeout_ms_;
   const MeterModel model = this->meters_[this->active_meter_index_].model;
@@ -279,7 +282,7 @@ void PozytonBus::handle_tx_drain_() {
   // EABM P() can return eight records at 4800 baud.
   if (this->expect_ == Expect::MEASUREMENT && this->active_request_ == Request::ACTIVE_POWER && model == METER_EABM)
     timeout = std::max<uint32_t>(timeout, 1000U);
-  this->response_deadline_ = millis() + timeout;
+  this->response_deadline_ = this->rx_enabled_at_ + timeout;
   // Log only after switching back to RX, so logging does not hold DIR high.
   log_hex_frame("TX", current_meter_label_().c_str(), this->tx_buffer_.data(), this->tx_length_);
   ESP_LOGV(TAG, "%s %s: TX %u byte(s)", current_meter_label_().c_str(), this->active_stage_.c_str(),
@@ -304,20 +307,25 @@ void PozytonBus::log_first_response_(const char *result) {
   Meter &meter = this->meters_[this->active_meter_index_];
   ESP_LOGI(TAG, "%s FIRST RX: %s, stage=%s, %u raw byte(s)", current_meter_label_().c_str(), result,
            this->active_stage_.c_str(), static_cast<unsigned>(this->debug_rx_length_));
-  log_debug_frame("FIRST RX", meter.name.c_str(), this->debug_rx_buffer_.data(), this->debug_rx_length_);
+  log_debug_frame("FIRST RX", meter.name.c_str(), this->debug_rx_buffer_.data(),
+                  std::min(this->debug_rx_length_, this->debug_rx_buffer_.size()));
   // A timeout with no bytes must not consume the first actual reply dump.
   if (this->debug_rx_length_ != 0)
     meter.first_response_logged = true;
 }
 
 void PozytonBus::read_uart_() {
+  const bool capture_raw = this->capture_seab_timeout_ || this->capturing_first_response_();
   uint8_t value;
   while (this->available()) {
     if (!this->read_byte(&value))
       break;
     // Capture before filtering NULs or validating framing/BCC.
-    if (this->capturing_first_response_() && this->debug_rx_length_ < this->debug_rx_buffer_.size())
-      this->debug_rx_buffer_[this->debug_rx_length_++] = value;
+    if (capture_raw) {
+      if (this->debug_rx_length_ < this->debug_rx_buffer_.size())
+        this->debug_rx_buffer_[this->debug_rx_length_] = value;
+      this->debug_rx_length_++;
+    }
     if (this->rx_length_ == 0 && value == 0x00)
       continue;
     if (this->rx_length_ >= this->rx_buffer_.size()) {
@@ -457,7 +465,22 @@ void PozytonBus::handle_timeout_() {
     return;
   }
   this->log_first_response_(this->debug_rx_length_ == 0 ? "timeout, no bytes received" : "timeout, incomplete/filtered response");
+  if (this->capture_seab_timeout_)
+    this->log_seab_timeout_();
   this->retry_or_fail_("response timeout");
+}
+
+void PozytonBus::log_seab_timeout_() {
+  this->capture_seab_timeout_ = false;
+  const Meter &meter = this->meters_[this->active_meter_index_];
+  constexpr size_t MAX_DUMP_BYTES = 64;
+  const size_t dump_length = std::min(this->debug_rx_length_, MAX_DUMP_BYTES);
+  ESP_LOGW(TAG, "%s TIMEOUT DIAG stage=%s attempt=%u rx_raw=%u rx_buffered=%u dump=%u dir_late_ms=%u timeout_ms=%u",
+           current_meter_label_().c_str(), this->active_stage_.c_str(), static_cast<unsigned>(meter.retry_count) + 1U,
+           static_cast<unsigned>(this->debug_rx_length_), static_cast<unsigned>(this->rx_length_),
+           static_cast<unsigned>(dump_length), static_cast<unsigned>(this->rx_enabled_at_ - this->tx_done_at_),
+           static_cast<unsigned>(this->response_deadline_ - this->rx_enabled_at_));
+  log_debug_frame("TIMEOUT RX", meter.name.c_str(), this->debug_rx_buffer_.data(), dump_length);
 }
 
 void PozytonBus::retry_or_fail_(const char *reason) {

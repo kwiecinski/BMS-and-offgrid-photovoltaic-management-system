@@ -248,6 +248,7 @@ pozyton_energy_meters:
   baud_rate: 4800
   response_timeout: 500ms
   debug_first_response: false
+  debug_seab_timeout: true
   meters:
     - meter_name: seab
       model: SEAB

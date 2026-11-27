@@ -116,6 +116,8 @@ Protocol stages and failures are logged with model, configured meter name/addres
 
 `debug_first_response: true` under `pozyton_energy_meters` enables an additional INFO-level dump (enabled in the current YAML). `FIRST TX` shows the request and UART parameters; `FIRST RX` shows the first nonempty received response per meter after each reboot in HEX and readable ASCII. Capture happens before NUL filtering, frame validation, or BCC validation. An incomplete reply is dumped at timeout; overflow dumps are limited to 512 raw bytes. Empty timeouts explicitly show `timeout, no bytes received` and keep capture armed for the first actual reply. After a nonempty dump, further raw dumps for that meter require a restart. Set the option to `false` to disable this diagnostic. Bytes are attributed to the currently addressed meter; this does not distinguish meter replies from local echo or bus noise.
 
+`debug_seab_timeout: true` logs the first SEAB response timeout in each poll cycle. The warning reports the stage, attempt, UART byte count before filtering (`rx_raw`), bytes retained by the parser (`rx_buffered`), and time budget. `dir_late_ms` measures how late the firmware switched to receive relative to its scheduled switch, which includes the 3 ms guard. It uses the firmware clock and the estimated transmit time. At INFO level, `TIMEOUT RX` shows up to the first 64 raw bytes in HEX and ASCII. The option defaults to `false` and is enabled in `esp32-master.yaml`.
+
 ## Troubleshooting
 
 1. Replace all placeholder UART and direction pins with the verified PCB pinout.

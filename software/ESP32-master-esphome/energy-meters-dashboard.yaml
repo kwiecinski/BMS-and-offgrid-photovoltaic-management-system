@@ -1,0 +1,292 @@
+# Home Assistant Lovelace dashboard. Paste into the Raw configuration editor.
+title: Energy Meters
+views:
+  - title: Pozyton SEAB
+    path: pozyton-seab
+    type: sections
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Current
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_current_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_current_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_current_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Voltage
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_voltage_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_voltage_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_voltage_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Frequency
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_frequency
+            name: Line Frequency
+            grid_options:
+              columns: 12
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Active Power
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_power_total
+            name: Total Active Power
+            features:
+              - type: trend-graph
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_power_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_power_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_power_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Reactive Power
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_power_total
+            name: Total Reactive Power
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_power_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_power_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_power_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Active Energy
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_energy_import
+            name: Import
+            grid_options:
+              columns: 6
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_active_energy_export
+            name: Export
+            grid_options:
+              columns: 6
+          - type: heading
+            heading: Reactive Energy
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_energy_positive
+            name: Positive
+            grid_options:
+              columns: 6
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_reactive_energy_negative
+            name: Negative
+            grid_options:
+              columns: 6
+          - type: heading
+            heading: Diagnostics
+          - type: tile
+            entity: binary_sensor.pokoj_warsztat_photovoltaic_master_seab_communication_connected
+            name: Connection
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_last_successful_reading
+            name: Last Successful Reading
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_seab_communication_errors
+            name: Communication Errors
+            grid_options:
+              columns: 12
+
+  - title: Pozyton EABM
+    path: pozyton-eabm
+    type: sections
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Current
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_current_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_current_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_current_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Voltage
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_voltage_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_voltage_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_voltage_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Frequency
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_frequency
+            name: Line Frequency
+            grid_options:
+              columns: 12
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Active Power
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_power_total
+            name: Total Active Power
+            features:
+              - type: trend-graph
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_power_l1
+            name: L1
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_power_l2
+            name: L2
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_power_l3
+            name: L3
+            vertical: true
+            grid_options:
+              columns: 4
+          - type: heading
+            heading: Reactive Power
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_reactive_power_total
+            name: Total Reactive Power
+            grid_options:
+              columns: 12
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Active Energy
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_energy_import
+            name: Import
+            grid_options:
+              columns: 6
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_active_energy_export
+            name: Export
+            grid_options:
+              columns: 6
+          - type: heading
+            heading: Reactive Energy
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_reactive_energy_positive
+            name: Positive
+            grid_options:
+              columns: 6
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_reactive_energy_negative
+            name: Negative
+            grid_options:
+              columns: 6
+          - type: heading
+            heading: Diagnostics
+          - type: tile
+            entity: binary_sensor.pokoj_warsztat_photovoltaic_master_eabm_communication_connected
+            name: Connection
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_last_successful_reading
+            name: Last Successful Reading
+            grid_options:
+              columns: 12
+          - type: tile
+            entity: sensor.pokoj_warsztat_photovoltaic_master_eabm_communication_errors
+            name: Communication Errors
+            grid_options:
+              columns: 12
